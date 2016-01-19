@@ -1,0 +1,14 @@
+Jira Notes Searches
+
+
+--------------------------------------------------------------------------------
+1/19/16 
+Jira query: project = MPAY and Sprint = "Sprint 12" And Status = Closed
+	conversely
+Jira query: project = MPAY and Sprint = "Sprint 12" And Status != Closed
+
+
+--------------------------------------------------------------------------------
+before
+1/16/16
+Jira query  project = MPAY AND type = Bug and status = Closed
