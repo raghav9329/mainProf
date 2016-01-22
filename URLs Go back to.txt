@@ -1,1 +1,18 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">URLs Go back to<div><br></div><div>Text Editors</div><div>google:&nbsp;<a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=free+text+editors+for+mac+os+x">https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=free+text+editors+for+mac+os+x</a></div><div><a href="http://www.imore.com/best-free-and-paid-text-editors-mac">http://www.imore.com/best-free-and-paid-text-editors-mac</a></div><div><br></div><div><h1 style="box-sizing: border-box; margin-right: 0px; margin-bottom: 16px; margin-left: 0px; line-height: 1.2; padding-bottom: 0.3em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin-top: 0px !important;"><font face="Arial"><span style="font-size: 12px; font-weight: normal;">Setup Mac OS X Mountain Lion or Mavericks</span></font></h1></div><div><a href="https://gist.github.com/millermedeiros/6615994">https://gist.github.com/millermedeiros/6615994</a></div><div><br></div><div>1/14/16� just logged into STASH � getting started...</div><div><a href="http://sal-dvs-mstash1.dev.svbank.com:7990/getting-started?next=/projects/MUR/repos/svb-web-payments/pull-requests/179/overview">http://sal-dvs-mstash1.dev.svbank.com:7990/getting-started?next=/projects/MUR/repos/svb-web-payments/pull-requests/179/overview</a></div><div><br></div><div>1/15/16</div><div>Looking at how to configure Sublime Text and the Package manager.</div><div>Google:&nbsp;sublime text 3 how to use package control</div><div><a href="https://packagecontrol.io/docs/usage">https://packagecontrol.io/docs/usage</a></div><div><a href="http://www.granneman.com/webdev/editors/sublime-text/packages/how-to-install-and-use-package-control/">http://www.granneman.com/webdev/editors/sublime-text/packages/how-to-install-and-use-package-control/</a></div><div><a href="https://packagecontrol.io/installation#st3">https://packagecontrol.io/installation#st3</a></div></body></html>
+URLs Go back to
+
+Text Editors
+google: https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=free+text+editors+for+mac+os+x
+http://www.imore.com/best-free-and-paid-text-editors-mac
+
+Setup Mac OS X Mountain Lion or Mavericks
+https://gist.github.com/millermedeiros/6615994
+
+1/14/16Ñ just logged into STASH Ñ getting started...
+http://sal-dvs-mstash1.dev.svbank.com:7990/getting-started?next=/projects/MUR/repos/svb-web-payments/pull-requests/179/overview
+
+1/15/16
+Looking at how to configure Sublime Text and the Package manager.
+Google: sublime text 3 how to use package control
+https://packagecontrol.io/docs/usage
+http://www.granneman.com/webdev/editors/sublime-text/packages/how-to-install-and-use-package-control/
+https://packagecontrol.io/installation#st3
