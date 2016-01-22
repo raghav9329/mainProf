@@ -1,1 +1,22 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">Work Hours<div><br></div><div>8.0<span class="Apple-tab-span" style="white-space:pre">	</span>1/4/16 &nbsp;9 - 5:30. &nbsp;checkin at Tasman, Checkin At SF office. 30 min lunch</div><div>8.0<span class="Apple-tab-span" style="white-space:pre">	</span>1/5/16 &nbsp;9 - 5:00 &nbsp; Did not take any lunch. &nbsp;Moved to RocketSpace 2:00 Pm</div><div>8.5<span class="Apple-tab-span" style="white-space:pre">	</span>1/6/16 &nbsp;9 - 6:00 &nbsp; took 15 Min for lunch</div><div>8.0<span class="Apple-tab-span" style="white-space:pre">	</span>1/7/16 &nbsp;9:15- 5:30 &nbsp; 15 min lunch</div><div><span class="Apple-tab-span" style="white-space:pre">	</span>1/8/16 &nbsp; &nbsp; Will be 4.0</div><div><br></div><div><br></div><div><br></div><div>1/11/16 9:00 - 5:00 No lunch break taken<span class="Apple-tab-span" style="white-space:pre">		</span>8</div><div>1/12/16 9:00 - 5:00 No lunch break taken<span class="Apple-tab-span" style="white-space:pre">		</span>8</div><div>1/13/16 9:20 - 5:00 or earlier, but not by 9:00��<span class="Apple-tab-span" style="white-space:pre">	</span>8</div><div>1/14/15 8:40 - 5:00<span class="Apple-tab-span" style="white-space:pre">							</span>8</div><div>1/15/16 8:45 - 5:00<span class="Apple-tab-span" style="white-space:pre">							</span>8</div><div><br></div><div>1/18/16 Holiday : (</div><div>1/19/16 9:00 - 5:00</div><div>1/20/16 9:30 - 5:30</div><div>1/21/16&nbsp;</div><div>1/22/16&nbsp;</div><div><br></div></body></html>
+Work Hours
+
+8.0	1/4/16  9 - 5:30.  checkin at Tasman, Checkin At SF office. 30 min lunch
+8.0	1/5/16  9 - 5:00   Did not take any lunch.  Moved to RocketSpace 2:00 Pm
+8.5	1/6/16  9 - 6:00   took 15 Min for lunch
+8.0	1/7/16  9:15- 5:30   15 min lunch
+	1/8/16     Will be 4.0
+
+
+
+1/11/16 9:00 - 5:00 No lunch break taken		8
+1/12/16 9:00 - 5:00 No lunch break taken		8
+1/13/16 9:20 - 5:00 or earlier, but not by 9:00ÉÉ	8
+1/14/15 8:40 - 5:00							8
+1/15/16 8:45 - 5:00							8
+
+1/18/16 Holiday : (
+1/19/16 9:00 - 5:00
+1/20/16 9:30 - 5:30
+1/21/16 
+1/22/16 
+

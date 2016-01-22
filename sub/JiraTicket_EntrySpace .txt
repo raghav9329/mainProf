@@ -1,2 +1,93 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">JiraTicket_EntrySpace&nbsp;<div>------- Oldest Ticket on the bottom ����</div><div><br></div><div><br></div><div>----------------------------------------------------------------------------------------------------<div>Ticket#:&nbsp;MPAY-</div></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div>----------------------------------------------------------------------------------------------------<br><div><br></div><div>Ticket#:&nbsp;MPAY-854 &nbsp;1/21/16</div><div><span style="color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; widows: 1; background-color: rgb(255, 255, 255);">Summary: Make Payment Form | Payee NickName Creation Dialog is being shown incorrectly</span></div><div><br></div><div><dt style="display: table-cell; color: rgb(112, 112, 112); text-align: right; vertical-align: top; width: 140px; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; widows: 1; background-color: rgb(255, 255, 255);">description</dt><dd>While using a Saved Payee with a Nick Name already in place the current implementation on QA 1/21/16 is forcing the Success Confirmation Dialog at the end of the payment process asking the user to add a NickName.<br><br><br>Login as adbrain_fps or as _CHAPS&nbsp;</dd><dd>Use the Payees in place, Morty Smith or Rick Sanchez&nbsp;</dd><dd>Execute a standard payment workflow Submit the payment&nbsp;</dd><dd><br></dd><dd>Expect: Get the Confirm Payment Details only.&nbsp;</dd><dd>Actual: Get the Confirm Payment Details and then get the Success ( with payee NN add field)</dd></div><div><br></div><div>----------------------------------------------------------------------------------------------------</div><div><br></div><div>Ticket #: MPAY-819</div><div>Summary: &nbsp;Make Payment Form | Confirm Payment Modal | Large string field Internal Reference over runs modal controls or runs off page</div><div>Pri : Major</div><div><br></div><div><br></div><div>Description</div><div>The make payments work flow text fields Payee Reference ( Optional ) and Internal Reference ( Optional ) allow 18 and 140 chars. &nbsp;</div><div><br></div><div>Enter your data to make a payment.</div><div><br></div><div><div>Expect: The confirmation modal dialog to elegantly display the data there is limited room for.</div><div><br></div><div>Actual: &nbsp;After committing data to these fields and submitting payment, the display in the Confirm Payment Modal Dialog is misaligned. &nbsp;Payee ref 18 chars display the last char on the boundary separator. &nbsp;The Internal Reference 140 chars will run off the page if there are no spaces in the 140 chars, or it will write over the �Edit� &amp; �Submit� controls to complete the form.</div></div><div><br></div><div>See the attached screen shots&nbsp;</div><div><br></div><div><br></div><div>Test Data used:</div><div><br></div><div><p style="margin: 0px; line-height: normal; font-family: Times; -webkit-text-stroke-color: rgb(0, 0, 0); -webkit-text-stroke-width: initial;">atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh</p></div><div><p>ABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJ&nbsp;</p>
-<p>ABCDEFG HIJABCDEF GHIJA BCDEFGHIJABCDEFG HIJABCDEFGHIJAB CDEFGHIJABCDEFG HIJABCDEFGHI JABCDEFGHIJABC DEFGHIJABCD EFGHIJABCDEFG HIJABCDEFGHIJ</p></div><div><br></div><div>----------------------------------------------------------------------------------------------------</div><div>Ticket #:&nbsp;<a class="js-issue-link" href="http://sal-dvs-matla01.dev.svbank.com:8080/browse/MPAY-817" style="color: rgb(59, 115, 175); cursor: pointer; font-family: Arial, sans-serif; font-size: 14.4444446563721px; line-height: 20px;">MPAY-817</a>&nbsp; &nbsp;Eric Pratt Edited a couple of fields on 817.&nbsp;</div><div>Use 817 as he basic bug entry template.</div><div><br></div><div>Summary:</div><div>Invalid payment form state can be submitted</div><div><br></div><div>Description:</div><div>Launch https://qa4.svbconnect.com/auth/ &nbsp;</div><div>&nbsp;Login as adbrain_(all,fps,back,chaps) and complete MFA</div><div>Navigate to URL �./payment/</div><div>Open Make payment form.</div><div>Enter valid date in the following fields.</div><div>Payee, Payment Type, Pay From Account,</div><div>Payment Amount, Payee Reference, Internal Reference.</div><div><br></div><div>With the Mouse Return to the Payment Amount field and put the cursor somewhere in the Amount field.</div><div>Enter a char, Sigh, digit. &nbsp;&nbsp;</div><div><div>Immediately commit with the Enter / Return Key.</div><div><br></div><div>Expect: The invalid value to be caught and the form to be left in the �you must correct this error state"</div><div>Actual: &nbsp;The Final Confirm Modal Dialog is displayed as if Success, and the error can be seen behind it.</div><div><br></div><div><br></div><div>Clicking either Edit or Submit in the Modal Confirm Dialog takes you back to the form for correction.</div><div><br></div><div>If during the creation of the error condition, the user tabs out of the erred Amount Field&nbsp;</div><div>or if the user used the mouse and clicks the form Submit button, the Initial ERROR is caught.</div></div><div><br></div><div>This is a minor bug</div><div>This error condition is never sent to the back end. &nbsp;The problem is cosmetic.</div><div><br></div><div><br></div><div>Environment:</div><div><div>https://qa4.svbconnect.com/auth/</div><div>Mac: Chrome 38.0.2125.104 &nbsp;, Firefox 43.0.4 &nbsp; , Safari 8.0.7 (10600.7.12)</div></div></body></html>
+JiraTicket_EntrySpace 
+------- Oldest Ticket on the bottom ÑÑÑÑ
+
+
+----------------------------------------------------------------------------------------------------
+Ticket#: MPAY-
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------
+
+Ticket#: MPAY-854  1/21/16
+Summary: Make Payment Form | Payee NickName Creation Dialog is being shown incorrectly
+
+description
+While using a Saved Payee with a Nick Name already in place the current implementation on QA 1/21/16 is forcing the Success Confirmation Dialog at the end of the payment process asking the user to add a NickName.
+
+
+Login as adbrain_fps or as _CHAPS 
+Use the Payees in place, Morty Smith or Rick Sanchez 
+Execute a standard payment workflow Submit the payment 
+
+Expect: Get the Confirm Payment Details only. 
+Actual: Get the Confirm Payment Details and then get the Success ( with payee NN add field)
+
+----------------------------------------------------------------------------------------------------
+
+Ticket #: MPAY-819
+Summary:  Make Payment Form | Confirm Payment Modal | Large string field Internal Reference over runs modal controls or runs off page
+Pri : Major
+
+
+Description
+The make payments work flow text fields Payee Reference ( Optional ) and Internal Reference ( Optional ) allow 18 and 140 chars.  
+
+Enter your data to make a payment.
+
+Expect: The confirmation modal dialog to elegantly display the data there is limited room for.
+
+Actual:  After committing data to these fields and submitting payment, the display in the Confirm Payment Modal Dialog is misaligned.  Payee ref 18 chars display the last char on the boundary separator.  The Internal Reference 140 chars will run off the page if there are no spaces in the 140 chars, or it will write over the ÒEditÓ & ÒSubmitÓ controls to complete the form.
+
+See the attached screen shots 
+
+
+Test Data used:
+
+atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh
+ABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJ 
+ABCDEFG HIJABCDEF GHIJA BCDEFGHIJABCDEFG HIJABCDEFGHIJAB CDEFGHIJABCDEFG HIJABCDEFGHI JABCDEFGHIJABC DEFGHIJABCD EFGHIJABCDEFG HIJABCDEFGHIJ
+
+----------------------------------------------------------------------------------------------------
+Ticket #: MPAY-817   Eric Pratt Edited a couple of fields on 817. 
+Use 817 as he basic bug entry template.
+
+Summary:
+Invalid payment form state can be submitted
+
+Description:
+Launch https://qa4.svbconnect.com/auth/  
+ Login as adbrain_(all,fps,back,chaps) and complete MFA
+Navigate to URL É./payment/
+Open Make payment form.
+Enter valid date in the following fields.
+Payee, Payment Type, Pay From Account,
+Payment Amount, Payee Reference, Internal Reference.
+
+With the Mouse Return to the Payment Amount field and put the cursor somewhere in the Amount field.
+Enter a char, Sigh, digit.   
+Immediately commit with the Enter / Return Key.
+
+Expect: The invalid value to be caught and the form to be left in the Òyou must correct this error state"
+Actual:  The Final Confirm Modal Dialog is displayed as if Success, and the error can be seen behind it.
+
+
+Clicking either Edit or Submit in the Modal Confirm Dialog takes you back to the form for correction.
+
+If during the creation of the error condition, the user tabs out of the erred Amount Field 
+or if the user used the mouse and clicks the form Submit button, the Initial ERROR is caught.
+
+This is a minor bug
+This error condition is never sent to the back end.  The problem is cosmetic.
+
+
+Environment:
+https://qa4.svbconnect.com/auth/
+Mac: Chrome 38.0.2125.104  , Firefox 43.0.4   , Safari 8.0.7 (10600.7.12)

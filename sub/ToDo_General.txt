@@ -1,1 +1,71 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">ToDo_General<div><br></div><div>Get all music off old phone</div><div>Review remaining old phone contents for xfer</div><div><div>What are all the URL Apps that were sent to me by Aditi staffing. &nbsp; What are they for.</div></div><div>+++ &nbsp;Personal above this line</div><div><br></div><div>On 1/21/16 Do tickets 806, 107, 807 in that order&nbsp;</div><div>Build environment like Dave�s</div><div>Start on the entire list of tickets / stories in Sprint 12</div><div><br></div><div>--------------------------------------------------------------</div><div>Get Mac Slack App Done 1/21/16</div><div><br></div><div><br></div><div>1/14/16 IntelliJ installed</div><div>1/13/16 Win7 VMs for IE 9, 10, 11 installed</div><div><br></div><div><br></div><div><div>1/11/16 Worked MPAY-817 ( my entry )</div></div><div><br></div><div>1/13/16 � Not Done: &nbsp;Refactor this list.</div><div><br></div><div>Should be:&nbsp;</div><div>Not Done</div><div>------------</div><div>Done</div><div><br><div>�����������.. ( dot dot dot means current/today )</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br><div><br></div><div>1/7/16</div><div>---------------------------------------------------------------------------</div><div>1/6/16 &nbsp;</div><div><br></div><div>Eric wants me to get Vbox installed and get IE for MAC..</div><div><ul><li>Requires Admin Rights � DONE ! &nbsp;1/13/16</li></ul></div><div><br></div><div>Install Eclipse</div><div><ul><li>Must have Java SE 6 Runtime first &nbsp;� Done earlier than 1/13/16</li><li>Probably should install Java ** Requires Admin Rights ! - Done</li></ul><div><br></div></div><div>Looking at Zephyr Test Cases Started</div><div>VPN Must Have !! - DONE !</div><div><br></div><div>---------------------------------------------------------------------------</div><div>1/5/16</div><div>Need email from Payroll� - Not Done ! &nbsp;Asked Again</div><div><br></div><div>Download the DotFiles.zip -Not done</div><div><br></div><div>What are all the URL Apps that were sent to me by Aditi staffing.</div><div>What are they for.</div><div><br></div><div><br></div><div><br></div><div>---------------------------------------------------------------------------</div><div><div>1/4/16</div><div>Get a list of the build machines &nbsp;- Not done</div><div>Get a list of the test machines &nbsp;- Not done</div><div>Learn how to do builds &nbsp;- Not done</div><div>Learn how to deploy &nbsp;- Not done</div></div><div><br></div><div><br></div><div>Getting a handle on email sent to me from Corporate</div><div><br></div></div></div></body></html>
+ToDo_General
+
+Get all music off old phone
+Review remaining old phone contents for xfer
+What are all the URL Apps that were sent to me by Aditi staffing.   What are they for.
++++  Personal above this line
+
+On 1/21/16 Do tickets 806, 107, 807 in that order 
+Build environment like DaveÕs
+Start on the entire list of tickets / stories in Sprint 12
+
+--------------------------------------------------------------
+Get Mac Slack App Done 1/21/16
+
+
+1/14/16 IntelliJ installed
+1/13/16 Win7 VMs for IE 9, 10, 11 installed
+
+
+1/11/16 Worked MPAY-817 ( my entry )
+
+1/13/16 Ñ Not Done:  Refactor this list.
+
+Should be: 
+Not Done
+------------
+Done
+
+ÉÉÉÉÉÉÉÉÉÉÉ.. ( dot dot dot means current/today )
+
+
+
+
+
+
+
+1/7/16
+---------------------------------------------------------------------------
+1/6/16  
+
+Eric wants me to get Vbox installed and get IE for MAC..
+	•	Requires Admin Rights Ñ DONE !  1/13/16
+
+Install Eclipse
+	•	Must have Java SE 6 Runtime first  Ñ Done earlier than 1/13/16
+	•	Probably should install Java ** Requires Admin Rights ! - Done
+
+Looking at Zephyr Test Cases Started
+VPN Must Have !! - DONE !
+
+---------------------------------------------------------------------------
+1/5/16
+Need email from PayrollÉ - Not Done !  Asked Again
+
+Download the DotFiles.zip -Not done
+
+What are all the URL Apps that were sent to me by Aditi staffing.
+What are they for.
+
+
+
+---------------------------------------------------------------------------
+1/4/16
+Get a list of the build machines  - Not done
+Get a list of the test machines  - Not done
+Learn how to do builds  - Not done
+Learn how to deploy  - Not done
+
+
+Getting a handle on email sent to me from Corporate
+

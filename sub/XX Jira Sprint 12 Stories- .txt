@@ -1,1 +1,40 @@
-<html><head></head><body>XX Jira Sprint 12 Stories:&nbsp;<div><br></div><div><div>--------------------------------------------------------------------------------</div><div><br></div></div><div>NOTE: &nbsp;Remember to use the Period �.� and the Enter Key to open a Link creation dialog</div><div>Set Relates to</div><div>Set Issue and you are done</div><div><br></div><div>--------------------------------------------------------------------------------</div><div>1/19/16</div><div><br></div><div>731</div><div>422 Story is closed due to things and to 822</div><div><br></div><div>1/21/16 &nbsp;Her�s the order Eric asked me to prioritize in</div><div><br></div><div><br></div><div><div>806&nbsp;Make Payment Form | Style Payment Date Field</div></div><div><ul><li>mpay-850&nbsp;Make Payment Form | Style Payment Date Field &nbsp;Icon &nbsp;is removed for Beta</li></ul></div><div><br></div><div><br></div><div><div>107&nbsp;Save payee after making payment</div><div><div>Acceptance criteria:</div><div>- I can view the payee details on the confirmation overlay.</div><div>- I can enter a unique nickname for the payee.</div><div>- I can save the payee.</div><div>- I can see if I've already saved a payee with the same nickname.</div><div>- I can confirm the payee was saved by viewing the payee list in the make payment form.</div></div><div><ul><li>Test:&nbsp;</li></ul><div><br></div></div></div><div><br></div><div><br></div><div><div>807 &nbsp;Make sure a saved payee has a nickname in the make pay form payee dropdown</div><div><ul><li>mpay-846 is a test in support of this&nbsp;</li></ul></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div></div></body></html>
+XX Jira Sprint 12 Stories: 
+
+--------------------------------------------------------------------------------
+
+NOTE:  Remember to use the Period Ô.Õ and the Enter Key to open a Link creation dialog
+Set Relates to
+Set Issue and you are done
+
+--------------------------------------------------------------------------------
+1/19/16
+
+731
+422 Story is closed due to things and to 822
+
+1/21/16  HerÕs the order Eric asked me to prioritize in
+
+
+806 Make Payment Form | Style Payment Date Field
+	•	mpay-850 Make Payment Form | Style Payment Date Field  Icon  is removed for Beta
+
+
+107 Save payee after making payment
+Acceptance criteria:
+- I can view the payee details on the confirmation overlay.
+- I can enter a unique nickname for the payee.
+- I can save the payee.
+- I can see if I've already saved a payee with the same nickname.
+- I can confirm the payee was saved by viewing the payee list in the make payment form.
+	•	Test: 
+
+
+
+807  Make sure a saved payee has a nickname in the make pay form payee dropdown
+	•	mpay-846 is a test in support of this 
+
+
+
+
+
+
