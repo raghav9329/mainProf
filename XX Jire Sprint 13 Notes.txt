@@ -1,1 +1,26 @@
 XX Jire Sprint 13 Notes
+
+
+
+
+Tickets are:
+ 873, 617, 852, 819A,
+513, 874, 853, 855A,
+863, 829A, 851A
+Ones *A are in qa at start of 13 1/25/16
+
+Working these first.
+851 misalignment of cancel submit on small screens : looks fixed:  This one will await final confirmation on where to test
+829  Where do I  or when during the workflow do we encounter the payee detail header:  I put a screen shot in ticket
+855 Proper size of the font in payee dropdown 
+819:  checked with a wide range of PR and IR char strings all working well
+
+
+
+Stories are 
+
+731
+
+306
+
+225

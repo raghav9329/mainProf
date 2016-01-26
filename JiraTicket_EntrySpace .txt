@@ -3,11 +3,29 @@ JiraTicket_EntrySpace 
 
 
 ----------------------------------------------------------------------------------------------------
-Ticket#: MPAY-
+Ticket#: MPAY-865                     TestString: Atkmh007
 
+Summary:  Make Payment Form | New Payee work flow duplicate NN warning is not showing
 
+Description:
+make payment , Add New Payee work flow.
+first make note of one of the existing payee Nicknames.  Copy it , save it.
 
+Click the +add Icon 
+Execute through the standard new payee work flow.
+Submit the Payment
+See the Confirmation dialog.  Commit from confirmation, get the Success Dialog
 
+In the Payee Nickname field enter the value first made note of (existing nickname string value) 
+Tab out of the Nickname field, see the Save Payee Button be come active
+
+Click the Save Payee Button
+
+Expect:  An alert or warning of some kind.  Since this scenario was to exercise the uniqueness test, I would expect a notification in the dialog on this detail.
+
+Actual:  Nothing on the Success dialog changes.  The Save Payee Button remains active after the click and the dialog does not close.
+
+Assumption:  Alert or warning about failing Uniqueness of Payee Nickname is not getting through to the Success dialog
 
 
 
