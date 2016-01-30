@@ -1,12 +1,13 @@
 Work Hours
 
-1/25/16 9:
-1/26/16 9; 8:
-1/27/16 9;
-1/28/16 9; 8:
-1/29/16 9;
+1/25/16 9:00 - 5:00   8.0
+1/26/16 8:45 - 500    8.0   
+1/27/16 9:20 - 6:30   8.5  12:30 - 1:00 lunch
+1/28/16 8:30 - 5:00   8.0   12:30  - 1:00 lunch
+1/29/16 9:30 - 5:00
 
-
+Following Dotted Line should mean submitted and approved.
+---------------------------------------------------------------------
 
 1/18/16 Holiday : (  2 extra hours I cannot book )
 1/19/16 9:00 - 5:00
@@ -14,7 +15,8 @@ Work Hours
 1/21/16 9:20 - 5:30
 1/22/16 9:00 - 5:00
 
-
+Asterisk meas pay period separation - paid
+****************************************************************************
 8.0 1/4/16  9 - 5:30.  checkin at Tasman, Checkin At SF office. 30 min lunch
 8.0 1/5/16  9 - 5:00   Did not take any lunch.  Moved to RocketSpace 2:00 Pm
 8.5 1/6/16  9 - 6:00   took 15 Min for lunch

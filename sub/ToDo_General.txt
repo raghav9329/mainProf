@@ -1,5 +1,6 @@
 ToDo_General
 
+Properly organize DotFiles __ All Unix Configs
 Get all music off old phone
 Review remaining old phone contents for xfer
 What are all the URL Apps that were sent to me by Aditi staffing.   What are they for.
@@ -10,6 +11,7 @@ Build environment like DaveÕs
 Start on the entire list of tickets / stories in Sprint 12
 
 --------------------------------------------------------------
+
 Get Mac Slack App Done 1/21/16
 
 
@@ -27,9 +29,6 @@ Not Done
 Done
 
 ÉÉÉÉÉÉÉÉÉÉÉ.. ( dot dot dot means current/today )
-
-
-
 
 
 
