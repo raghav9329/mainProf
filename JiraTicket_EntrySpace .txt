@@ -1,6 +1,12 @@
 JiraTicket_EntrySpace 
 ------- Oldest Ticket on the bottom ÑÑÑÑ
 
+----------------------------------------------------------------------------------------------------
+
+1/29/16
+Sprint 13 Looking at bugs concluded 
+Here are some that doneÕt have any QA É.. ???? Hummmm.
+852, 873 which is an opinion
 
 ----------------------------------------------------------------------------------------------------
 Ticket#: MPAY-865                     TestString: Atkmh007

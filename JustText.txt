@@ -3,4 +3,28 @@ JustText
 
 
 
+http://sal-dvs-mnexus1.dev.svbank.com:8081/nexus/service/local/repositories/thirdparty/content/misc/opscode_centos/6.5_chef/opscode_centos-6.5_chef-provisionerless.box
 
+
+
+ssh://git@sal-dvs-mstash1.dev.svbank.com:7999/mur/svb-web-payments.git
+
+
+
+mpay 822
+
+	▪	Clustered Quartz scheduler with JDBC Store enabled.
+	◦	write and see it in the local db
+	◦	with consumer running see the entered pmts changed from queued to sent to SOA
+	◦	see the send to SOA get logged. assumed it does
+	◦	see who (which cluster consumer) represents the consumer in the local cluster jdbc store (db)
+	◦	asdf
+	◦	asdf
+	▪	Scheduler should post payments to SOA within specified cut off times in PAYMENT_TYPES table.
+	◦	try the different pay types .  
+	▪	See the different times associated with diff types
+	◦	set pmts of specific types after their time 
+	▪	See it get advanced to next time
+	◦	 
+	▪	Same code base as Payments service, however keep code modularity as much as possible.
+	▪	Deploy as part of the Payments webapp in Tomcat.
