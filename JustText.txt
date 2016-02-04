@@ -1,7 +1,48 @@
 JustText
 
 
+the formatted overlay in svb input text fields  and the underlying text are appearing at the same time on IE
+also it appears the formatted input is not changing in real time as we change the value of the field.
 
+
+
+
+
+
+
+
+2/1/16 Backlog grooming Notes:
+Are we going to have a responsive presentation for Beta ?
+	•	Tom. weÕre currently MVP
+	•	Responsive is not Absolutely necessary for Beta
+	◦	Its a nice to have
+
+We may open a story and all responsive tickets get
+Or we will just open std tickets and make sure they are labled "Responsive"
+
+Open story for payment home
+Payee name then nickname  these are likely to swap
+
+Nickname first and display if its there otherwise show payee name
+This will be interesting because there are a couple of places where there is no NN ,  In the free form entry
+
+Next sprint capturing audits
+	•	This story is about capturing data from what we see as an autidable event
+	◦	edit payee or some other eventsÉ..
+	•	subsequent story will begin to capture the data 
+
+
+
+Filter for creation date
+	•	begin and end calendar windows
+
+ 
+
+
+
+
+
+*********************************************************************************************************
 
 http://sal-dvs-mnexus1.dev.svbank.com:8081/nexus/service/local/repositories/thirdparty/content/misc/opscode_centos/6.5_chef/opscode_centos-6.5_chef-provisionerless.box
 
