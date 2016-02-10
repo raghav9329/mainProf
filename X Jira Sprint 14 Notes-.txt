@@ -1,0 +1,72 @@
+X Jira Sprint 14 Notes:
+
+731 Validate all the bugs and do a cursory look at the test cases.
+
+306: Asked Gary what the cumulative limit is right now and where stored.
+====================
+938: Capture Audit Events | Include Name and Login Name in session entitlements response
+As a fraud analyst, I want name and login name available from the session entitlement response when I view Murano payment activity by clients.
+
+	Acceptance Criteria:
+- I can see that the login name of the user is captured at time of session in Murano.
+- I can see that the person name of the user is captured at time of session in Murano.
+- Filter to add user agent string and cookie
+
+
+*** TEST
+Capt Audit Evnt | Includ Name, LName, Sees Entltmnts rspns  | Login session details and statistics are captured and persisted
+
+
+====================
+794: Payment Home | Sort payment transactions
+As a user entitled to create payments, I want to view our payment transactions in a specific order on the Payment Home so I can reconcile our payment activity.
+
+	Acceptance criteria:
+- I can see our payment transactions defaulted to the sort order of descending by scheduled date when I land on the Payment Home.
+- I can sort our payment transactions either by scheduled date, payee or payment amount.
+- I can click on the arrow next to each column heading to sort payment transactions in descending order first.  
+- I can click on the same arrow heading again in that column to sort payment transactions in ascending order.
+
+****Test  
+Pmt Home | Sort Pmt xactions | Default sort criteria is Scheduled payments descending 
+	1.	PayHome sort order defaults to dec scheduled date.
+	1.	Change the Sort order and criteria.  Logout, logbook in as same user.  Verify Sort order Dec Scheduled Pay
+	2.	Note:  Need to ask questions:  what are they ?
+	3.	 
+	2.	PayHome Sort Criteria can be switched among the Payee, Payment Amount or Scheduled date
+	1.	Reverse the sort order by clicking the little arrow on all three criteria
+	2.	Reset the sort order by rechecking the same little arrow on all three criteria
+	
+
+====================
+941: Status and payment ID in payment details
+
+As a user, I want to see critical information for each payment transaction so that I can reconcile our payment activity.
+	Acceptance criteria:
+	▪	I can see the payment ID (number) for a selected payment transaction on the Payment Homepage in the payment details area.
+	▪	I can always see the status for a selected payment transaction on the Payment Homepage in the payment details area.
+	▪	I can see that the payment status is "Scheduled" when a payment has been submitted by the user but hasn't yet been sent and accepted by SOA.
+	▪	I can see that the payment status is "Sent" once the payment has been accepted by SOA.
+
+
+****Test Ñ this feels weak
+
+	1.	Status & Payment ID , payment details | Status & ID in the details area 
+	1.	Make a complete payment.  confirm receipt of the Payment ID as it is reviewable in the payment details.
+	2.	Make another complete payment. See the status of the payment change from Scheduled to Sent after SOA accepts the payment
+
+
+====================
+930: Payee field change on Make Payment form
+As a user making a payment, I want to view our saved payee's information on the make payment form so that I can select the right saved payee for a payment.
+
+	Acceptance criteria:
+- I can see the payee nickname first followed by the payee name below when I select the payee field on the Make Payment form and see all of my saved payees in the dropdown menu.
+
+***Test
+Payee field change on Make Payment form | Nickname followed by Payee Name
+
+
+
+
+

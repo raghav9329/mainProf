@@ -1,25 +1,33 @@
 ToDo_General
 
-Properly organize DotFiles __ All Unix Configs
+
+2/4/16 I need a tips and tricks place to make entries
+for now will be in a general loc and will need to get movedÉ.
+
+Properly organize DotFiles __ All Unix Configs  2/9/16 mostly done
+
 Get all music off old phone
+
 Review remaining old phone contents for xfer
+
 What are all the URL Apps that were sent to me by Aditi staffing.   What are they for.
+
 +++  Personal above this line
 
-On 1/21/16 Do tickets 806, 107, 807 in that order 
-Build environment like DaveÕs
-Start on the entire list of tickets / stories in Sprint 12
+
+
 
 --------------------------------------------------------------
 
+Build environment like DaveÕs 2/9/16 Back some time ago THEY said not to.
 Get Mac Slack App Done 1/21/16
 
-
+1/21/16 Do tickets 806, 107, 807 in that order 
 1/14/16 IntelliJ installed
 1/13/16 Win7 VMs for IE 9, 10, 11 installed
-
-
 1/11/16 Worked MPAY-817 ( my entry )
+
+Start on the entire list of tickets / stories in Sprint 12 2/9/16 completed some time back
 
 1/13/16 Ñ Not Done:  Refactor this list.
 
@@ -29,8 +37,6 @@ Not Done
 Done
 
 ÉÉÉÉÉÉÉÉÉÉÉ.. ( dot dot dot means current/today )
-
-
 
 
 1/7/16
