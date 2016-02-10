@@ -1,5 +1,9 @@
 General Notes 1/4/16
 
+2/4/16  nice tip
+How to diff common files between two directories
+diff -srq dir1 dir2 | grep identical
+
 1/20/16
 Notes live at 
 ~/Library/Containers/com.apple.Notes/Data/Library/Notes

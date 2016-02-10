@@ -1,5 +1,14 @@
 Testing Notes:
 
+
+
+
+--------------------------------------------------------------------------------
+
+2/4/16
+Trying to test out 731 additions to make pay form.
+Right now looking at  editing a new user, or trying...
+
 --------------------------------------------------------------------------------
 1/19/16
 so, IÕm using the Jira query: MPAY and Sprint = "Sprint 12" And Status = Closed
@@ -43,10 +52,7 @@ Here is the list of what is != Closed in Sprint 12
 
 +=+=+=+=+=+=+=+=+=+=+
 
-
-
 --------------------------------------------------------------------------------
-
 
 mpay 397 Funding account numbers.  no longer a user input in the pay form
 by that I mean itÕs a user Pick from drop down.
@@ -56,31 +62,11 @@ MPAY 396
 
 pay amount Leading zeros is okÉ. 
 
-
 payee act num is now a pick, sort code  ?, pay amount scientific notation no longer works.
 
 
-
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 MPAY 396
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
