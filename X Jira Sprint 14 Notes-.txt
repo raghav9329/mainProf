@@ -65,8 +65,63 @@ As a user making a payment, I want to view our saved payee's information on the 
 
 ***Test
 Payee field change on Make Payment form | Nickname followed by Payee Name
+/**************************
+** Create a new Payee-Payment:  
+** In make payments click on Plus sign Head/Shoulders
+** In payee name use a naming convention that identifies PayeeName. e.g.: JimSmith-PayeeName-PN
+** Enter common details in the other fields to successfully complete the payment. -  Submit from payment form-
+** Review the submission in Confirm payment Dialog  - Submit -
+** In the Success Dialog enter a distinctly Similar NickName to Pay Name.  Use the naming convention to designate as ***-NickName.  -  Save Payee -
+** Select Return to Payment Home.
+** RESULT: Payee Name  become editable and , Account # and Sort code fields are deployed editable
+** RESULT: Common detail entry allows for form completion
+** RESULT:
+** Reopen the make payment form.
+** Select your recently made New Payee.
+** Confirm in Payee Dropdown the following
+** NickName is above the payee Name.
+*************************/
+
+ ***** ***** ***** ***** ***** ***** ***** *****
+Create a new Payee.  Clearly specify Payee Name and Nick name as distinctly descriptive
+Eg:  Willson Athletic Corporation - PN    WilsonGym-NN
+Complete the payment.  See the payment in the payment home page.
+
+Reopen the Make payment form.
+Select the the WilsonGym-NN entry and observe the NN entry above the PN entry ( this is a must )
+
+
+ ***** ***** ***** ***** ***** ***** ***** ***** *****
+Open the Make payments form
+Select an entry :  Click on Edit Payee.
+
+Change the Payee Name. 
+Change the Nick Name.
+
+Save the Changes made 
+
+Your pages and return to the Make Payment form.
+Click on Payee  and locate the entry you edited
+
+RESULT:  The changes were persisted and are now displayed as you had edited them.
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
