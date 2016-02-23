@@ -1,10 +1,13 @@
 URLs Go back to
 
+
+
 Text Editors
-google: https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=free+text+editors+for+mac+os+x
+google: https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=free+text+editors+for+mac+os+x
 http://www.imore.com/best-free-and-paid-text-editors-mac
 
 Setup Mac OS X Mountain Lion or Mavericks
+
 https://gist.github.com/millermedeiros/6615994
 
 1/14/16Ñ just logged into STASH Ñ getting started...
@@ -12,7 +15,9 @@ http://sal-dvs-mstash1.dev.svbank.com:7990/getting-started?next=/projects/MUR/re
 
 1/15/16
 Looking at how to configure Sublime Text and the Package manager.
-Google: sublime text 3 how to use package control
+Google: sublime text 3 how to use package control
 https://packagecontrol.io/docs/usage
 http://www.granneman.com/webdev/editors/sublime-text/packages/how-to-install-and-use-package-control/
 https://packagecontrol.io/installation#st3
+
+
