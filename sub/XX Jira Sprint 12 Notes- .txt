@@ -74,9 +74,71 @@ Set Issue and you are done
 731
 422 Story is closed due to things and to 822
 
+/**************************************************
+/**  == 2/17/16 ==
+/** Formerly the following
+/** text was in the Testing Notes: file
+/** Moved here in order to align notes
+/** more clearlyÉÉÉÉÉÉÉÉÉÉÉ..
+/***************************************************
+
+1/19/16
+so, IÕm using the Jira query: MPAY and Sprint = "Sprint 12" And Status = Closed
+Going through what is closed in this sprint so far.  Mostly tasks for development.  a couple of bugs for me.
+Can see there are interesting things that have been done already for Schedule Pay, at a low level.
+These tickets below are listed because of today, they are closed.
+all the other Open tickets will get a comment from me before the end of the day ( hopefullyÉ.. )
+
+505 added asserts for testing Quartz
+779 Jessie setup a message logging to file on a schedule : config file
+780 New db fields.  leads me to Falgu and the dbManagement tool Ip address or other configsÉ. ToDo !É.Not done
+783 payments obtain a lock on db. ( field, row, table ? )  area to test:É.. ToDo !É.NotDone
+784 SOA Payment Submission:  ThereÕs an area to test hereÉ.
+785 Handle Response from SOA(?)  ThereÕs somethi here to test as well :  ToDo ! É..NotDone
+788 Made a note to the description ( discussed with Aniz as well ) Her comment is specific to beta only
+802 makes enters into the 788 discussion as well 
+810 Leads me to state: Ò I need a demo / Intro / something Ò  É.ToDo!ÉNotDone
+813 Wha is this saying ???  
+814 Question to GaryÉ  How is this being tested ?    É.ToDo !ÉNotDone
+815 Same Q as 814  É.ToDo !ÉNotDone
+816 Test Point  É.ToDo !ÉNotDone
+817 this is my ticket(author) and I still need to write an automated test for this É.ToDo !ÉNotDone
+823 Sams as 810 É.ToDo !ÉNotDone
+
+Interesting items worthy of looking at , but not saying so here,
+787, 804, 818, 821, 827, 
+
+Here is the list of what is != Closed in Sprint 12
+107, 176, 462, 473, 513, 536, 537, 538, 544, 545, 613, 649, 731, 763bug, 806, 807, 812, 819Bug, 831, 833, 835, 836
+
+107 Product Story| save payee after payment É.. ?
+176 has some interesting implications, but I bet its not recent
+195 is just a followup kind of ticket
+473 is just hanging with an external dependency
+731 is a Product Story Payment | Edit Saved payeeÉ.
+806 Product story | Date Picket Style necessary for Beta
+807 Product Story Nickname is payee Dropdown
+833 edit payee sub/lower level details .  edit a saved entity
+835  
+836 handling overlapping SOA Post windowsÉ. Aziz is fixingÉ.
+
++=+=+=+=+=+=+=+=+=+=+
+
+--------------------------------------------------------------------------------
+
+mpay 397 Funding account numbers.  no longer a user input in the pay form
+by that I mean itÕs a user Pick from drop down.
+
+--------------------------------------------------------------------------------
+MPAY 396
+
+pay amount Leading zeros is okÉ. 
+
+payee act num is now a pick, sort code  ?, pay amount scientific notation no longer works.
 
 
-
+-------------------------------------------------------------------------------
+MPAY 396
 
 
 

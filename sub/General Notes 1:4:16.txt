@@ -1,5 +1,15 @@
 General Notes 1/4/16
 
+2/17/16
+
+
+2/11 or 2/12  Very interesting.  I pulled all of them.
+I also hacked the maze app creating 80x80 matrix.
+did that in two places . html and in Js.  it just worked.
+Microsoft Demos
+github.com/MicrosoftEdge/Demos
+
+
 2/4/16  nice tip
 How to diff common files between two directories
 diff -srq dir1 dir2 | grep identical
@@ -23,6 +33,7 @@ Now this morning I downloaded the MS IE [9,10,10] Win7 VMs
 so that I can run IE for testing.
 
 Eric sent me in SLACK  on 1/6/16 a link to 
+
 http://osxdaily.com/2011/09/04/internet-explorer-for-mac-ie7-ie8-ie-9-free/
 
 giving me complete access to lotsÉ.
@@ -48,6 +59,7 @@ Note:  1/8/16
 Confluence:  Remember there are 2 Murano spaces
 
 https://qa4.svbconnect.com/auth/
+
 usser adbrain_all    passwd     newpas1*
 
 actor childhood restaurant
@@ -62,8 +74,13 @@ Note:  not going to https
 Placed this help desk ticket to get started with Good uid / pid in order to download the VPN app
 
 Order Placed: 01-04-2016 14:57:43   
-Request Number:  REQ0180633    Bookmark request
-Estimated Delivery Date of Complete Order:   01-09-2016
+Request Number:  REQ0180633   
+
+Bookmark request
+https://svb.service-now.com/nav_to.do?uri=com.glideapp.servicecatalog_checkout_view.do?v=1%26sysparm_sys_id=8e2f7fb44fbc9a8027a3ab99f110c736%26sysparm_catalog=e0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view=catalog_default
+
+
+Estimated Delivery Date of Complete Order: 01-09-2016  
 
 ----------------------------------------------------------------------------------------------------
 Nothing yet. 

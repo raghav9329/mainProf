@@ -1,14 +1,14 @@
 JiraTicket_EntrySpace 
-------- Oldest Ticket on the bottom ÑÑÑÑ
+------- Oldest Ticket on the bottom --------
 
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 1/29/16
 Sprint 13 Looking at bugs concluded 
 Here are some that doneÕt have any QA É.. ???? Hummmm.
 852, 873 which is an opinion
 
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Ticket#: MPAY-865                     TestString: Atkmh007
 
 Summary:  Make Payment Form | New Payee work flow duplicate NN warning is not showing
@@ -34,11 +34,7 @@ Actual:  Nothing on the Success dialog changes.  The Save Payee Button remains
 Assumption:  Alert or warning about failing Uniqueness of Payee Nickname is not getting through to the Success dialog
 
 
-
-
-
-
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Ticket#: MPAY-854  1/21/16
 Summary: Make Payment Form | Payee NickName Creation Dialog is being shown incorrectly
@@ -54,7 +50,7 @@ Execute a standard payment workflow Submit the payment 
 Expect: Get the Confirm Payment Details only. 
 Actual: Get the Confirm Payment Details and then get the Success ( with payee NN add field)
 
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Ticket #: MPAY-819
 Summary:  Make Payment Form | Confirm Payment Modal | Large string field Internal Reference over runs modal controls or runs off page
@@ -79,8 +75,8 @@ atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkmh--atkmh-atkmh atkm
 ABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJABCDEFGHIJ 
 ABCDEFG HIJABCDEF GHIJA BCDEFGHIJABCDEFG HIJABCDEFGHIJAB CDEFGHIJABCDEFG HIJABCDEFGHI JABCDEFGHIJABC DEFGHIJABCD EFGHIJABCDEFG HIJABCDEFGHIJ
 
-----------------------------------------------------------------------------------------------------
-Ticket #: MPAY-817   Eric Pratt Edited a couple of fields on 817. 
+-------------------------------------------------------------------------------
+Ticket #: MPAT-817 Eric Pratt Edited a couple of fields on 817. 
 Use 817 as he basic bug entry template.
 
 Summary:

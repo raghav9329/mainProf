@@ -8,7 +8,7 @@ Beginning of every sprint I need to make an execution and tie it to the sprint.
 That way we can mark the tests as executed against the sprint  and later in a regression
 make another regression_Execution and capture running the tests again.
 
-
+ 
 --------------------------------------------------------------------------------
 1/19/16 
 Jira query: project = MPAY and Sprint = "Sprint 12" And Status = Closed

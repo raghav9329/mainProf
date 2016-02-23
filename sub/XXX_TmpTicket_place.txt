@@ -1,10 +1,10 @@
 XXX_TmpTicket_place
 1/13/16 I think I will deprecate this
 
---------------------------------------------------------------------------------------------------
+———————————————————————————————————————∑
 
 Ok,
-going through     MPAY-396
+going through  MPAY-396
 Testing negative numbers.
 Steps:
 	•	I had successfully navigated 0.001 fail 
@@ -19,6 +19,6 @@ act on active button return , click and it takes the older valid amount.
 
 Any time the form is re edited after the submit button become valid should invalidate the form.
 
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 

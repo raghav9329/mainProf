@@ -8,13 +8,17 @@ Properly organize DotFiles __ All Unix Configs  2/9/16 mostly done
 
 Get all music off old phone
 
-Review remaining old phone contents for xfer
-
 What are all the URL Apps that were sent to me by Aditi staffing.   What are they for.
+
 
 +++  Personal above this line
 
 
+2/17/16  Need to go back over 306 : Max Daily by client ID
+There are two tests that werenÕt run, and I didnÕt run the others that were passes.  
+This fell on last Friday.
+
+2/17/16  Eric:  test infrastructure process : EXECUTION SETUP
 
 
 --------------------------------------------------------------
