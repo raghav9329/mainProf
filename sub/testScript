@@ -3,28 +3,20 @@
  varDateNow=$(date +%m-%d-%Y_%H:%M:%S)
 # commit -m nowVar *.txt *.pdf
 #
-git status
-echo sleeping for 5 sec
+#git status
+echo echoing git status
+echo Sleeping 5 sec
+sleep 5
 
-sleep 7
+#git add *
+echo echoing "add *  -all"
+echo Sleeping 5 sec
+sleep 5
 
-echo "adding all (*)   "
 
-sleep 3
-
-git add *
-
-echo 
-echo "sleeping 5 sec"
-
-echo "commiting ......"
-
-git commit -m $varDateNow 
-
-echo "sleeping 5 sec"
-
+#git commit -m $varDateNow 
+echo echoing commit -m $varDateNow
+echo Sleeping 5 sec
 sleep 5
 
 echo $varDateNow
-
-git push
