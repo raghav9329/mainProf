@@ -1,14 +1,11 @@
-#! /bin/bash
+#! /bin/bash # # So the idea here is to updae the Notes directory wrt git # will do git add, git commit, git push   acp # commit will use a date string
 #
-# So the idea here is to updae the Notes directory wrt git
-# will do git add, git commit, git push   acp
-# commit will use a date string
-#
- nowVar=$(date +%m-%d-%Y_%H:%M:%S)
+ varDateNow=$(date +%m-%d-%Y_%H:%M:%S)
 # commit -m nowVar *.txt *.pdf
 #
-echo $nowVar
+#git status
+git add *
+git commit -m varDateNow 
 
 
-
-
+#echo $varDateNow

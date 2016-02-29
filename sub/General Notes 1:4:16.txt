@@ -1,7 +1,14 @@
 General Notes 1/4/16
 
-2/17/16
+2/19/16
+Late:  Turns out this didnÕt work:  So, I did sysPrefs Dock: Automatically hide dock
+Keeping the Dock on one screen in a multiple monitor system.
+google: mac multipe monitors dock moves
+http://superuser.com/questions/665004/how-do-you-prevent-the-dock-from-switching-monitors-in-osx-mavericks
+$ defaults write com.apple.Dock position-immutable -bool yes then, just do a $ killall Dock to reset
 
+
+2/17/16
 
 2/11 or 2/12  Very interesting.  I pulled all of them.
 I also hacked the maze app creating 80x80 matrix.

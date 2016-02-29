@@ -40,6 +40,29 @@ select count(*) from payment where client_id = 5163756 AND PAYMENT_DATE = TRUNC(
 
 https://murano.qa4.svbconnect.com/entitlement/service/rest/private/entitlement/v1/sessionEntitlements?entitlements=PAYMENT_FREE_FORM
 REST Interface :  this tells you the currently logged in UID, ClientID xaction limits, etc.
+
+**** The 302 query is É.
+
+
+// adbrain_fps user
+SELECT SUM(P.AMOUNT)
+              FROM PAYMENT P
+              WHERE P.CREATOR_ID = 1460520 AND P.PAYMENT_DATE = TRUNC(SYSDATE)
+              AND P.FUNDING_ACCOUNT_IDENTIFIER = 18998239;
+
+adbrain_fps UserID == Creator_ID == 1460520
+adbrainfps2 UserID == Creator_ID == 1460576
+
+Funding_account_id == 2011[2181] == 18998239
+Funding_account_id == 2010[5436] == 7391192
+Funding_account_id == 2011[2203] == 18998240
+Funding_account_id == 2011[3714] == 21707232
+Funding_account_id == 2011[2211] == 18998241
+    
+
+[3:49] 
+CREATOR_ID = user id
+
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 end.

@@ -18,3 +18,49 @@ IE 11
 941
 CH Mac
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Having ALL the Bright Ideas has never been what I strive for, but recognizing ALL for them exposed or not gets my attention.
+ 
+I would like to discuss with your management staff my drive and qualifications to lead / manage your Software Quality Engineering team.
+ 
+* Background is in Software development 
+* Quality Assurance 
+* * Broad coverage of Technologies, Industries, and roles 
+* Do get excited when finding Ugly or Embarrassing bugs , because the customer wont
+* More than two years of Test Automation, mine mostly hand written JAVA frameworks for Selenium WebDriver
+* Currently learning Protractor for AngularJS Integration and WebFrontEnd test automation.
+* Multiple team building opportunities, Off shore & Local staff.
+* 
+ 
+If finding an obscure bug doesnÕt make you all giddy inside, then this probably isnÕt the right position for you. We want someone who 
+ 
+ 
+relishes in the hunt and feels truly rewarded once theyÕve uncovered something Ð doubly so if itÕs reaaallly nasty. . ..
+ 
+ 
+2+ years experience writing automated test cases for web apps with sophisticated UI and 100s of features
+Experience setting up test environments from scratch using Selenium or similar
+Strong sofware programming skills
+Extensive experience using Agile methodologies
+2+ years experience building and leading a lean QA team with both Manual and Automation responsibilities, preferably in a small fast paced company or environment
+Strong desire and experience in owning and driving process changes, especially cross-departmentally
+Experience creating test cases that include both happy path and all manner of edge case
+Excellent written and verbal communication skills, including the ability to summarize and explain complex and technical concepts to executives
+Ability to leverage metrics and data to drive goals and priorities
+Excellent reporting skills and fluent in Excel
+
+Hands on Mobile, both manual and automated QA experience a plus
