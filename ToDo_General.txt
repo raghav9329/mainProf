@@ -13,6 +13,8 @@ What are all the URL Apps that were sent to me by Aditi staffing.   What are th
 
 +++  Personal above this line
 
+2/23/16  I need to rewrite / add to my max daily cumulative and 
+spread my testing over a number of funding accounts.
 
 2/17/16  Need to go back over 306 : Max Daily by client ID
 There are two tests that werenÕt run, and I didnÕt run the others that were passes.  

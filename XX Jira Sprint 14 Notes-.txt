@@ -1,5 +1,8 @@
 XX Jira Sprint 14 Notes:
 
+This Search Query help me finish
+project = "Murano Payments" and type = Story  AND Sprint = "Sprint 14"
+
 2/22/16  Sprint Cleanup / Follow up
 IÕm going through Jira and making sure IÕve got my stories organized, test cases accounted for and marked correctly
 Stories in Sprint 14:  941, 939, 935, 930, 794, 731, 306.
