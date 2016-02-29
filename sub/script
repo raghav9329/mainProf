@@ -25,6 +25,9 @@ echo "sleeping 5 sec"
 
 sleep 5
 
+echo
 echo $varDateNow
+echo "pushing ................."
+sleep 3
 
 git push
