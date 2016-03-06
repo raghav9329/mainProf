@@ -3,6 +3,16 @@ IN_Work
 Add and delete
 
 --------------------------------------------------------------------------------
+What do I want in a current Work Repo ???
+sounds
+Images
+dotfiles
+notes
+sourceCode_MarkDev
+???
+???
+???
+
 
 Cleanup 889
 
