@@ -1,0 +1,21 @@
+xxxxx
+
+
+
+JavaScript:
+var command = "npm install --cache-min 99999999 " + depsToInstall;
+console.log("Executing shell command: " + command);
+shell.exec(command); 
+ 
+ 
+~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l  183
+~/svb-web-payments/app/src$ find . *.test.js -type f -print0 | xargs -0 grep  "expect"  | wc -l  307
+ 
+Need to resolve
+:~/svb-web-payments/integration/scenarios$ find . *.test.js  -type f -print0 | xargs -0 grep "expect" | wc -l  315
+vs
+:~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l 183
+ 
+/u01/murano/apps/tomcat/logs
+catalina.out
+
