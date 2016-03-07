@@ -4,32 +4,34 @@
 # commit -m nowVar *.txt *.pdf
 #
 git status
-echo sleeping for 5 sec
+echo sleeping for 4 sec
 
-sleep 7
+sleep 3
 
 echo "adding all (*)   "
 
-sleep 3
+sleep 2
 
 git add *
 
 echo 
 echo "sleeping 5 sec"
 
+sleep 1
+
 echo "commiting ......"
 
 git commit -m $varDateNow 
 
-echo "sleeping 5 sec"
+echo "sleeping 3 sec"
 
-sleep 5
+sleep 2
 
 echo
 echo $varDateNow
 echo "pushing ................."
 echo 
 echo 
-sleep 3
+sleep 2
 
 git push
