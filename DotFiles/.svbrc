@@ -1,0 +1,29 @@
+# set -o vi
+
+alias svbhow='cat ~/.svbrc | grep how '
+alias s.c='source ~/.bashrc'
+alias visvb='vi ~/.svbrc'
+alias cpDotFiles='cp ~/.atkmhrc ~/Mark/Dotfiles ; cp ~/.bash_profile ~/Mark/Dotfiles ;cp ~/.svbrc ~/Mark/Dotfiles'
+alias runprotonqa='npm run protractor -- --params.env=qa'
+alias protractqa='npm run protractor -- --params.env=qa'
+
+########################
+# 
+# Go cd to directories
+# 
+# 
+#######################
+alias gosvb='cd ~/svb-web-payments'
+alias marknotes='cd ~/Mark/Notes'
+alias gonotes='cd ~/Mark/Notes'
+alias gotmp='echo this is just here to prove a point '
+
+########################
+# 
+#  How to Section
+# 
+# 
+#######################
+alias how_showHiddenHow='echo defaults write com.apple.finder AppleShowAllFiles YES '
+alias how_HideFielsw='echo defaults write com.apple.finder AppleShowAllFiles NO '
+alias how_runProtractor=' echo npm run protractor -- --prams.env=qa'

@@ -1,0 +1,46 @@
+# ***************************
+# Begin of GF aliases
+#
+alias gh='cd /home/gfuser/gm/cp/'
+alias gcb='gh; cd ./build/custom/'
+alias gopt='cd /opt'
+alias godc='cd /home/matkinson/dc30_dev'
+alias gocd='godc'
+alias gocy='cd /home/matkinson/dc30_cycle2'
+alias goprov='cd ~/dc30_dev/deployment/vagrant/provisioning'
+
+
+
+# ***************************
+# Begin of DC cluster aliases
+#
+alias clusterlist=' echo "goclient1,  goconsole1, godatasrv1, gomaster1, goproxy1, go wuserv1, gos
+alias goclient1='ssh gfuser@qa_DC30_client1.qa.geneticfinance.com'
+alias goconsole1='ssh gfuser@qa_DC30_console1.qa.geneticfinance.com'
+alias godatasrv1='ssh gfuser@qa_DC30_datasrv1.qa.geneticfinance.com'
+alias gomaster1='ssh gfuser@qa_DC30_master1.qa.geneticfinance.com'
+alias goproxy1='ssh gfuser@qa_DC30_proxy1.qa.geneticfinance.com'
+alias gowuserv1='ssh gfuser@qa_DC30_wuserv1.qa.geneticfinance.com'
+alias gosingle1='ssh gfuser@qa_DC30_single1.qa.geneticfinance.com'
+alias gogmdev='ssh gmdev'
+alias gogmqe='ssh gmqe'
+
+
+
+
+alias isAggServRun='echo sudo service aggregator status '
+alias aggServStat='sudo service aggregator status'
+
+###################################
+# Begin ssh aliases
+#
+######################################
+alias godev1='ssh gfuser@qa-dev1.qa.geneticfinance.com'
+
+
+
+alias playbookHow='echo ansible-playbook \-vvvv \-i machines file.yml \-u username \--ask-pass \--ask-sudo-pass'
+alias scpBinHow='echo "On mark-Mac-Vm: dc30bin, scp * matkinson@mark-mbp.geneticfinance.com:/Users/matkinson/dc30_dev/bin" '
+alias gitCloneHow='echo "git clone -b dev ssh://git@stash.geneticfinance.com:7999/dc/dc.git <dir name> " '
+alias repoXgmqe='rsync -az -e "ssh -o StrictHostKeyChecking=no -o UserKnowHostsFile=/dev/null" --progress /home/matkinson/dc30_dev matkinson@gmqe:/
+alias repo2gmqe='rsync -az  --progress /home/matkinson/dc30_dev/*  matkinson@gmqe:/home/matkinson/dc30_devcpy'

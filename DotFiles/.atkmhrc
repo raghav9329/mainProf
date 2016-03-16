@@ -1,0 +1,86 @@
+# Mark Atkinson's aliases and settings
+# One thing I could do is put an incrimental
+# number up here to determine version
+# every time I alter the file
+
+# turn on vi command line functionality
+set -o vi
+
+if [ "$TERM" != "dumb" ]; then
+    [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
+
+fi
+
+#export CONSOLEUIDEST=mark@gmqe:/home/mark
+export CONSOLEUIDEST=matkinson@gmqe:/home/matkinson
+
+alias  h='history'
+alias  hl='h|less'
+alias  hm='h|less'
+#alias s.c='source /Users/maatkins/.atkmhrc'
+#alias s.c='source /home/matkinson/.atkmhrc'
+alias vial='vi /Users/maatkins/.atkmhrc'
+#alias vial='vi /home/matkinson/.atkmhrc'
+#alias grep='grep -n'
+alias md='mkdir'
+alias grep='grep -n --color'
+alias less='less --LINE-NUMBERS'
+alias ll='ls -alF'
+alias llm='ls -alF|less'
+alias llr='ll -R'
+alias llrm='ll -R |less'
+alias lll='ls -alFtr'
+alias lld='ls -alF | grep /'
+#alias mld='ls -lF | grep /'
+alias mld='ls -F | grep /'
+alias ldm='mld | less'
+alias lldm='lld | less'
+alias llh='ll -h'
+alias lltr='ll -tr'
+alias zap='rm -rf $1 '
+
+#alias lldm='ls -alf | grep \ | less'
+alias cls='clear'
+alias   x='exit'
+
+
+
+alias psef='ps -ef'
+alias psefm='ps -ef|less'
+alias psefg='ps -ef|grep $1'
+alias tailf='tail -f $1'
+alias tf='tail -f $1'
+#alias count='echo need to implement'
+alias count=''
+#
+#
+alias grepal='cat ~/.atkmhrc | grep -i $1'
+#alias lookalias='cat ~/.atkmhrc | grep $1'
+#alias aliaslook='cat ~/.atkmhrc | grep $1'
+#alias        wa='cat ~/.atkmhrc | grep $1'
+alias aliasgrep='cat ~/.atkmhrc | grep $1'
+
+
+alias echoTrickyCmd='echo "svn status pipe2 cut -dsinglQuot singlQot -f8 pipe2 grep src pipe2 xargs rm" '
+
+#################################
+# **************************
+# Some How to commands
+#
+# alias playbookHow='echo "ansible-playbook -vvvv -i machines file.yml -u username --ask-pass --ask-sudo-pass"  '
+#################################
+
+alias tarGzHow='echo tar -zxvf file.tar'
+alias viewTar='echo tar -tvf file.tar'
+alias viewGZ='echo zcat file.gz pipe2 less'
+alias viewtargz='viewTar; viewGZ; echo "or you can less <tar|GZ> file"'
+alias whileHow='echo "while true; do foo; sleep some;done "'
+alias whileHowMore='echo "http://stackoverflow.com/questions/1289026/syntax-for-a-single-line-bash-infinite-while-loop"'
+alias getBigFileHow='echo www.thegeekstuff.com/2012/04/curl-examples : curl -O http://www.gnu.org/software/gettext/manual/gettext.html or wget \<same\> '
+alias wondershaperClearHow='echo; echo  wondershaper clear eth0 '
+alias wondershaperSetHow='echo; echo wondershaper eth0 DownLoad Upload  -- As measured in KB'
+alias showStatusAll='sudo service --status-all'
+alias how2getStdErrOut=' echo do_Something.exe > captureOut.txt 2>&1 putting stream 2 with stream 1'
+alias linuxCloneFollou=' echo etc_hosts, etc_hostname, etc_udev_rules.d_70-persistent-net.rules'
+alias listPkgHow='echo dpkg --get-selections  | puts out a long list for less or grep '
+alias lookInArcFiles=' echo " tar -tvf *.tar | tar -ztvf *.tar.gz  | tar -jtvf *.tar.bz2 | or... less tarfile" '

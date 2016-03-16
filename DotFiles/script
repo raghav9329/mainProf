@@ -1,0 +1,36 @@
+#! /bin/bash # # So the idea here is to updae the Notes directory wrt git # will do git add, git commit, git push   acp # commit will use a date string
+#
+ varDateNow=$(date +%m-%d-%Y_%H:%M:%S)
+# commit -m nowVar *.txt *.pdf
+#
+git status
+echo sleeping for 5 sec
+
+sleep 7
+
+echo "adding all (*)   "
+
+sleep 3
+
+git add *
+git add ./.*
+
+echo 
+echo "sleeping 5 sec"
+
+echo "commiting ......"
+
+git commit -m $varDateNow 
+
+echo "sleeping 5 sec"
+
+sleep 5
+
+echo
+echo $varDateNow
+echo "pushing ................."
+echo 
+echo 
+sleep 3
+
+git push
