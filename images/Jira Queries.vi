@@ -1,0 +1,14 @@
+project = NIT AND issuetype = Bug And Reporter = "Mark Atkinson"
+
+
+1.
+project = NIT AND fixVersion = "Second Release" AND "Smart Client Release" != "BlackBerry First Release (<12/5)" AND status in ("Ready for QA","In QA","To Verify") ORDER BY priority DESC, status ASC, reporter DESC
+
+
+2.
+project = NIT AND "Smart Client Release" = "BlackBerry First Release (<12/5)" AND status in ("Ready for QA","In QA","To Verify") ORDER BY  priority DESC, status ASC, reporter DESC
+
+
+Jaunary 23, 2012 Patch release
+
+project = SE and "Patch Release" = "January 23, 2012" and status!=Done order by status asc,issuetype 
