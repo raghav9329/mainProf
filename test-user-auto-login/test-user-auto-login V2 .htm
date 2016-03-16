@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<script type="text/javascript"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#auto-submit-form a').click(function(){
+					var $this = $(this);
+					$('#EMAIL').val($this.text());
+					$('#PASSWORDCS').val($('#test-pass').text());
+
+					$('form').first().submit();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="test-user-sign-in">
+
+			<div id="prequal" class="content">
+				<h1>Not for PROD use only test users!</h1>
+
+				Click to login as user: (change the password in html for current env:  see id="test-pass"&lt;value&gt;) <br />
+
+				password:
+				<span id="test-pass">password1</span>
+				<ul id="auto-submit-form">
+				<table>
+				<tr><td>
+				    <li><a href="#">matkinson.030614_2+BREITENBACH@credit.com</a> 4/4/14</li>
+					<li><a href="#">matkinson.030614_3+BREITENBACH@credit.com</a></li>
+				<!--	<li><a href="#">matkinson.030614_4+BREITENBACH@credit.com</a>  Something is wrong </li>  -->
+					<li><a href="#">matkinson.030614_5+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030614_6+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030614_7+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030714_8+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030714_9+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030714_10+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030714_11+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030714_12+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030714_13+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030714_14+BREITENBACH@credit.com</a></li>
+					<li><a href="#">matkinson.030714_15+BREITENBACH@credit.com</a></li>
+					<li><a href="#"> </a></li>
+					<li><a href="#">matkinson+031914_1Beauchamp@credit.com</a></li>
+					<li><a href="#"> </a></li>
+					
+					<li><a href="#"> </a></li>
+					<li><a href="#">matkinson.031014_1testBergmann@credit.com</a></li>
+					<li><a href="#">matkinson.031014_2testBergmann@credit.com</a></li>
+					<li><a href="#">matkinson.031014_3testBergmann@credit.com</a></li>
+					<li><a href="#">matkinson.031014_4testBergmann@credit.com</a></li>
+					<li><a href="#">matkinson.031014_5testBergmann@credit.com</a></li>
+					</td>  
+					<td>
+					
+
+					<li><a href="#"> </a></li>
+					<li><a href="#"> </a></li>
+					<li><a href="#">matkinson.031114_1+1Beauchamp@credit.com</a></li>
+					<li><a href="#">matkinson.031114_2+1Beauchamp@credit.com</a></li>
+					<li><a href="#">matkinson.031114_3Beauchamp@credit.com </a></li>
+					<li><a href="#">matkinson.031114_4Beauchamp@credit.com </a></li>
+					<li><a href="#">matkinson.031114_5Beauchamp@credit.com </a></li>
+					<li><a href="#">matkinson.031114_6Beauchamp@credit.com </a></li>
+					<li><a href="#"> </a></li>
+					<li><a href="#"> matkinson+031114_6A-Beauchamp@credit.com </a></li>
+					<li><a href="#"> </a></li>
+					<li><a href="#"> matkinson+031214_1berkbigler@credit.com </a></li>
+					<li><a href="#"> </a></li>
+					<li><a href="#">matkinson.031114_7Beauchamp@credit.com </a></li>
+					<li><a href="#">matkinson.031114_8Beauchamp@credit.com </a></li>
+					<li><a href="#">matkinson.031114_9Beauchamp@credit.com </a></li>
+					<li><a href="#">matkinson.031114_10Beauchamp@credit.com </a></li>
+					<li><a href="#">matkinson.031114_11Beauchamp@credit.com </a></li>
+					<li><a href="#">matkinson.031114_12Beauchamp@credit.com </a></li>
+					<li><a href="#">matkinson.031114_13Beauchamp@credit.com </a></li>
+					<li><a href="#"> </a></li>
+					<li><a href="#">matkinson.031114_3+1bailey@credit.com</a></li>
+					<li><a href="#"> matkinson.031114_4+1bailey@credit.com</a></li>
+					
+				<!--	<li><a href="#">  </a></li>
+					<li><a href="#">  </a></li>
+					<li><a href="#">  </a></li>
+					<li><a href="#">  </a></li>
+					<li><a href="#">  </a></li>
+					<li><a href="#">  </a></li>
+					</td>
+				-->	
+					
+					
+					
+					
+					<!-- 	<td> 
+         	
+					<a href="#">matkinson.022014+21@credit.com </a>
+					<a href="#">matkinson.022614+56@credit.com </a>
+					</td><td>
+					   <a href="#">022814-2.BEESON_STEPHEN@credit.com </a>
+					   <a href="#">matkinson.022614+56@credit.com </a>
+				   was commented   </a>  </a>  </a>  </a>    was commented
+					<a href="#"> matkinson.030414_1+Barras@credit.com  </a>
+					<a href="#"> matkinson.030414_7+Barras@credit.com  </a>
+					</td><td>
+					<a href="#"> matkinson.030514_1+NesPos@credit.com </a>
+					<a href="#">   matkinson.030514_25+inqpos@credit.com  </a>
+				
+					</td> 		
+					</tr> -->
+			
+				</table>
+				</ul>
+
+				<form action="http://qa6.sf.credit.com/login/" method="POST" target="_blank">
+					<input type="HIDDEN" value="MAIN" name="CURRENT_DETAIL" /> <input
+						type="HIDDEN" value="FINAL" name="NEXT_DETAIL" /> <input
+						type="hidden" value="ccom_user_login.MAIN"
+						name="partition-submit-id"> <input type="hidden" value=""
+						placeholder="Email Address" name="EMAIL" text="Email" required=""
+						id="EMAIL"> <input type="hidden" value=""
+						placeholder="Password" name="PASSWORDCS" required=""
+						id="PASSWORDCS">
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</body>
+</html>

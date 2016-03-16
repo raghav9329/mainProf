@@ -1,0 +1,14 @@
+Mar 1, `12
+Curiously I don't find my code in this directory.
+Its running in outlook.  I thought I had copied it in here.
+
+So, I do it today before looking elsewhere for where I might have done it earlier.
+
+............................................................
+
+4/26/12  Finishing up changes.
+Module 2 contains all the original calls and is removed from the project.  
+Notes about where this code came from Module 1 is now the three calls with 
+strings calling the main movement proc.  Project is being renamed and the 
+three calls are being renamed so that is all looks reasonable and is -very- 
+explainable to the non-initiated macro programmer.

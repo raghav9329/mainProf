@@ -1,0 +1,24 @@
+-- two dashes is a comment
+-- but this text editor pulls them together
+-- Functionality:
+-- There are two versions of the script
+-- One to Open all Chrome windows, One to Close them
+-- ..." Set Minimized to true "  is the call to Close/Minimize Windows
+-- ...Converseley " .. minimized to false" Opens ALL Chrome windoes.
+-- Origin of this technology: Google Search: apple script examples open minimized windows
+-- https://books.google.com/books?id=QHpBLi5hJcIC&pg=PA772&lpg=PA772&dq=apple+script+examples+open+minimized+windows&source=bl&ots=xEeTua2F0x&sig=mP9OvgUlO7cOI2PLzDN4JN7XKlo&hl=en&sa=X&ved=0ahUKEwiSutbGhsjKAhVBymMKHZH7CzI4ChDoAQgiMAE#v=onepage&q=apple%20script%20examples%20open%20minimized%20windows&f=false
+--
+--
+tell application "Google Chrome"
+	activate
+	set windowList to every window -- save list of open windows
+	repeat with theWindow in windowList
+		tell theWindow
+			if minimized is true then
+				-- Do Nothing 
+			else
+				set minimized to true
+			end if
+		end tell
+	end repeat
+end tell
