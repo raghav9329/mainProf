@@ -1,1 +1,98 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><font face="PT Mono">ToDo_General</font><div><font face="PT Mono"><br></font></div><div><span style="font-family: 'PT Mono';">3/16/16 &nbsp;Sort of a reboot&nbsp;</span></div><div><font face="PT Mono"><br></font></div><div>Move the Mark Repos into MarkGit</div><div>Rename MarkGit</div><div>Rest desktop Image links after MarGit rename</div><div><br></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">++++ Personal Above this line</font></div><div><font face="PT Mono">++++ Professional below line</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">/* end of 3/16/16 reboot</font></div><div><font face="PT Mono">-------------------------------</font></div><div><font face="PT Mono">2/4/16 I need a tips and tricks place to make entries</font></div><div><font face="PT Mono">for now will be in a general loc and will need to get moved�.</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">Properly organize DotFiles __ All Unix Configs &nbsp;2/9/16 mostly done</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">Get all music off old phone</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">What are all the URL Apps that were sent to me by Aditi staffing. &nbsp; What are they for.</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">+++ &nbsp;Personal above this line</font></div><div><font face="PT Mono"><br></font></div><div><div><font face="PT Mono">2/23/16 &nbsp;I need to rewrite / add to my max daily cumulative and&nbsp;</font></div><div><font face="PT Mono">spread my&nbsp;testing over a number of funding accounts.</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">2/17/16 &nbsp;Need to go back over 306 : Max Daily by client ID</font></div><div><font face="PT Mono">There are two tests that weren�t run, and I didn�t run the others that were passes. &nbsp;</font></div><div><font face="PT Mono">This fell on last Friday. &nbsp;3/16/16 follow up. &nbsp;This was done and the feature completed</font></div></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">2/17/16 &nbsp;Eric: &nbsp;test infrastructure process : EXECUTION SETUP</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">--------------------------------------------------------------</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">Build environment like Dave�s 2/9/16 Back some time ago THEY said not to.</font></div><div><font face="PT Mono">Get Mac Slack App Done 1/21/16</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">1/21/16 Do tickets 806, 107, 807 in that order&nbsp;</font></div><div><font face="PT Mono">1/14/16 IntelliJ installed</font></div><div><font face="PT Mono">1/13/16 Win7 VMs for IE 9, 10, 11 installed</font></div><div><font face="PT Mono">1/11/16 Worked MPAY-817 ( my entry )</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">Start on the entire list of tickets / stories in Sprint 12 2/9/16 completed some time back</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">1/13/16 � Not Done: &nbsp;Refactor this list.</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">Should be:&nbsp;</font></div><div><font face="PT Mono">Not Done</font></div><div><font face="PT Mono">------------</font></div><div><font face="PT Mono">Done</font></div><div><font face="PT Mono"><br></font><div><font face="PT Mono">�����������.. ( dot dot dot means current/today )</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><div><font face="PT Mono">1/7/16</font></div><div><font face="PT Mono">---------------------------------------------------------------------------</font></div><div><font face="PT Mono">1/6/16 &nbsp;</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">Eric wants me to get Vbox installed and get IE for MAC..</font></div><div><ul><li><font face="PT Mono">Requires Admin Rights � DONE ! &nbsp;1/13/16</font></li></ul></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">Install Eclipse</font></div><div><ul><li><font face="PT Mono">Must have Java SE 6 Runtime first &nbsp;� Done earlier than 1/13/16</font></li><li><font face="PT Mono">Probably should install Java ** Requires Admin Rights ! - Done</font></li></ul><div><font face="PT Mono"><br></font></div></div><div><font face="PT Mono">Looking at Zephyr Test Cases Started</font></div><div><font face="PT Mono">VPN Must Have !! - DONE !</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">---------------------------------------------------------------------------</font></div><div><font face="PT Mono">1/5/16</font></div><div><font face="PT Mono">Need email from Payroll� - Not Done ! &nbsp;Asked Again</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">Download the DotFiles.zip -Not done</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">What are all the URL Apps that were sent to me by Aditi staffing.</font></div><div><font face="PT Mono">What are they for.</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">---------------------------------------------------------------------------</font></div><div><div><font face="PT Mono">1/4/16</font></div><div><font face="PT Mono">Get a list of the build machines &nbsp;- Not done</font></div><div><font face="PT Mono">Get a list of the test machines &nbsp;- Not done</font></div><div><font face="PT Mono">Learn how to do builds &nbsp;- Not done</font></div><div><font face="PT Mono">Learn how to deploy &nbsp;- Not done</font></div></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">Getting a handle on email sent to me from Corporate</font></div><div><br></div></div></div></body></html>
+ToDo_General
+
+3/16/16  Sort of a reboot 
+
+Move the Mark Repos into MarkGit
+Rename MarkGit
+Rest desktop Image links after MarGit rename
+
+
+
+++++ Personal Above this line
+++++ Professional below line
+
+
+
+
+
+/* end of 3/16/16 reboot
+-------------------------------
+2/4/16 I need a tips and tricks place to make entries
+for now will be in a general loc and will need to get movedÉ.
+
+Properly organize DotFiles __ All Unix Configs  2/9/16 mostly done
+
+Get all music off old phone
+
+What are all the URL Apps that were sent to me by Aditi staffing.   What are they for.
+
+
++++  Personal above this line
+
+2/23/16  I need to rewrite / add to my max daily cumulative and 
+spread my testing over a number of funding accounts.
+
+2/17/16  Need to go back over 306 : Max Daily by client ID
+There are two tests that werenÕt run, and I didnÕt run the others that were passes.  
+This fell on last Friday.  3/16/16 follow up.  This was done and the feature completed
+
+2/17/16  Eric:  test infrastructure process : EXECUTION SETUP
+
+
+--------------------------------------------------------------
+
+Build environment like DaveÕs 2/9/16 Back some time ago THEY said not to.
+Get Mac Slack App Done 1/21/16
+
+1/21/16 Do tickets 806, 107, 807 in that order 
+1/14/16 IntelliJ installed
+1/13/16 Win7 VMs for IE 9, 10, 11 installed
+1/11/16 Worked MPAY-817 ( my entry )
+
+Start on the entire list of tickets / stories in Sprint 12 2/9/16 completed some time back
+
+1/13/16 Ñ Not Done:  Refactor this list.
+
+Should be: 
+Not Done
+------------
+Done
+
+ÉÉÉÉÉÉÉÉÉÉÉ.. ( dot dot dot means current/today )
+
+
+1/7/16
+---------------------------------------------------------------------------
+1/6/16  
+
+Eric wants me to get Vbox installed and get IE for MAC..
+	•	Requires Admin Rights Ñ DONE !  1/13/16
+
+Install Eclipse
+	•	Must have Java SE 6 Runtime first  Ñ Done earlier than 1/13/16
+	•	Probably should install Java ** Requires Admin Rights ! - Done
+
+Looking at Zephyr Test Cases Started
+VPN Must Have !! - DONE !
+
+---------------------------------------------------------------------------
+1/5/16
+Need email from PayrollÉ - Not Done !  Asked Again
+
+Download the DotFiles.zip -Not done
+
+What are all the URL Apps that were sent to me by Aditi staffing.
+What are they for.
+
+
+
+---------------------------------------------------------------------------
+1/4/16
+Get a list of the build machines  - Not done
+Get a list of the test machines  - Not done
+Learn how to do builds  - Not done
+Learn how to deploy  - Not done
+
+
+Getting a handle on email sent to me from Corporate
+
