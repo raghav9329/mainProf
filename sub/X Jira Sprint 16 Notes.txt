@@ -1,1 +1,175 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">X Jira Sprint 16 Notes<div><br></div><div>Initial Feature Set 3/7/2016</div><div>347 &nbsp;Finish up</div><div><br></div><div>697 Update our header to key off the correct entitlement to show UnionJack Flag</div><div><br></div><div>1046 Paymenty Home Client Side filtering</div><div><br></div><div>937 Capture Audit Events | Save to DB when Triggered</div><div><br></div><div>1200 Entitlement change to only show Make Pay link in Nav</div><div><br></div><div>610 Time Zone Changes</div><div><br></div><div>953 what�s left on IE</div><div><br></div><div>*************</div><div>Tickets that in general need validation</div><div><br></div><div>/*************</div><div>&nbsp;* &nbsp; 1092 - in work -</div><div>&nbsp;* &nbsp; &nbsp; &nbsp; this is the Funding account description and #</div><div>&nbsp;* &nbsp; &nbsp; &nbsp; that is displayable in payment home pay list</div><div>&nbsp;* &nbsp;******</div><div><br></div><div><br></div><div><div>/***************</div><div>/* &nbsp; &nbsp;TESTS</div><div>/*</div><div>/*</div><div><br></div><div><br></div><div>/*******************************************************</div><div>/* Test End</div><div>/*******************************************************</div></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div></body></html>
+X Jira Sprint 16 Notes
+
+3/16/16 Sprint reboot
+
+Stories, 1200, 1239, 705, 697
+Rudimentary tc started
+
+
+
+
+/*  Spint 16 reboot end */
+
+Initial Feature Set 3/7/2016
+347  Finish up
+
+697 Update our header to key off the correct entitlement to show UnionJack Flag
+
+1046 Paymenty Home Client Side filtering  
+
+937 Capture Audit Events | Save to DB when Triggered
+
+1200 Entitlement change to only show Make Pay link in Nav
+
+610 Time Zone Changes
+
+953 whatÕs left on IE
+
+*************
+Tickets that in general need validation
+
+/*************
+ *   1092 - in work -
+ *       this is the Funding account description and #
+ *       that is displayable in payment home pay list
+ *  ******
+
+/*************
+ *   1182 - in work -
+ *       deals with the Entitlement flag that comes from
+ *       e-connect
+ *  ******
+
+
+****************
+Feature Stories
+***************
+
+347 Payment processing days ( scheduled pay )
+from Last Sprint
+
+This is a finish up getting the schedule day into
+the payment form.
+
+Acceptance criteria:
+- I can see the next valid payment date on the make payment form based on the UK branch schedule for processing payments.
+- I can confirm the date for this payment once it has been submitted in the payments list on the payments home page.
+
+Assumptions:
+- Needs to work along with the cutoff times MPAY-102.
+- Does not include recurring payments.
+- No localization; assumes the user is sitting in London (GMT / UTC time zone).
+- Validation for cutoff time will be based on server time at time page was loaded and when submitted.
+- No messaging when user passes the cutoff time while sitting on page; this change is a separate story in backlog MPAY-845.
+- Payments are automatically set to the next valid payment date when the cutoff time has passed during the payment submission workflow. 
+
+/***************
+/*    TESTS
+/*
+/*
+
+
+/*******************************************************
+/* Test End
+/*******************************************************
+
+
+
+1046 Paymenty Home Client Side filtering  
+
+As a user, I want to view specific transactions within a date range so I can reconcile payment activity for the payments currently displayed on the payment home. 
+
+Acceptance criteria:
+- I can select a start and end date range to view payment activity for the payments displayed.
+
+
+
+
+/***************
+/*    TESTS
+/*
+/*
+Click and open a calendar for a starting date: default to current date
+
+Click and open a calendar for the ending date: default to current date
+
+Move blue dot to select a date value
+
+select dates begin and end. Click on Clear Filters 
+
+Open a begin cal.  Click on X closes calendar
+Open ending cal .  click on x closes calendar
+
+/*******************************************************
+/* Test Pulled from the original test before it closed
+/*******************************************************
+
+1 
+Filter from beginning date with No Ending entry
+With entire list of payments displayed create a calendar entry at beginning Ð the date at the top of the list
+Assumes default sorting by date Descending
+one by one the dates from the top of the list are removed from the display
+2 
+Fliter ending date with no beginning entry
+Assumes default date payment home sorting
+one by one the dates from the bottom of the list are removed from the display
+3 
+Enter Steps
+range with begin captureing the earliest and end short
+4 
+Enter Steps
+range with begin short and end capturing beyond end
+5 
+Enter Steps
+6 
+Enter Steps
+Now incorporate changing the sorting order
+
+
+/*******************************************************
+/* Test End
+/*******************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************
+/*    TESTS
+/*
+/*
+
+
+/*******************************************************
+/* Test End
+/*******************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
