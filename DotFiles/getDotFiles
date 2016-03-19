@@ -1,0 +1,20 @@
+#!/bin/bash
+echo "copying bash_profile, bashrc, dircolors"
+echo "        getconfig, sentientrc, svbrc, viminfo"
+echo "        vimrc, theColors, vimrc_MasterCopy"
+sleep 4
+
+cp ~/.bash_profile .
+cp ~/.bashrc .
+cp ~/.dircolors .
+cp ~/.gitconfig .
+cp ~/.sentientrc .
+cp ~/.svbrc .
+cp ~/.viminfo .
+cp ~/.vimrc .
+cp ~/theColors .
+cp ~/vimrc__MasterCopy .
+
+echo "Done. now doing a git status to check what's changed "
+sleep 3
+git status

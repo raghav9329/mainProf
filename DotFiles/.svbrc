@@ -6,6 +6,7 @@ alias visvb='vi ~/.svbrc'
 alias cpDotFiles='cp ~/.atkmhrc ~/Mark/Dotfiles ; cp ~/.bash_profile ~/Mark/Dotfiles ;cp ~/.svbrc ~/Mark/Dotfiles'
 alias runprotonqa='npm run protractor -- --params.env=qa'
 alias protractqa='npm run protractor -- --params.env=qa'
+alias datestr=' date +%m-%d-%Y_%H:%M:%S'
 
 ########################
 # 
@@ -16,7 +17,26 @@ alias protractqa='npm run protractor -- --params.env=qa'
 alias gosvb='cd ~/svb-web-payments'
 alias marknotes='cd ~/Mark/Notes'
 alias gonotes='cd ~/Mark/Notes'
+alias gobooks='cd ~/Books'
 alias gotmp='echo this is just here to prove a point '
+########################
+# 
+# SSH to QA Hosts
+# 
+# 
+#######################
+
+alias listqahosts='hostaqapache1; hostqaapache2; hostqatom1; hostqatom2  ; hostqqecpapp1 ; hostqaeccoh1 ; hostqaecoracle1 ; hostqaapp1 ; hostqaapp2 '
+alias hostaqapache1='echo  10.138.10.54 hostqaapache1'
+alias hostqaapache2='echo  10.138.10.55 hostqaapache2'
+alias hostqatom1='echo  10.138.10.56  hostqatom1'
+alias hostqatom2='echo  10.138.10.57  hostqatom2'
+alias hostqqecpapp1='echo  10.138.10.58 hostqaecapp1'
+alias hostqaeccoh1='echo   10.138.10.59 hostqaecapp2'
+alias hostqaecoracle1='echo  10.138.14.55 hostqaecoracle1'
+alias hostqaapp1='echo   10.138.30.40 hostqaapp1'
+alias hostqaapp2='echo   10.138.30.41 hostqaapp2 '
+
 
 ########################
 # 
@@ -24,6 +44,7 @@ alias gotmp='echo this is just here to prove a point '
 # 
 # 
 #######################
-alias how_showHiddenHow='echo defaults write com.apple.finder AppleShowAllFiles YES '
-alias how_HideFielsw='echo defaults write com.apple.finder AppleShowAllFiles NO '
+alias how_showHiddenFiles='echo defaults write com.apple.finder AppleShowAllFiles YES '
+alias how_HideFiles='echo defaults write com.apple.finder AppleShowAllFiles NO '
 alias how_runProtractor=' echo npm run protractor -- --prams.env=qa'
+alias how_toBecomeRoot='echo $sudo su - <ent> then supply the sudo password  '

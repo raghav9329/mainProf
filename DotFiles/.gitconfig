@@ -1,0 +1,5 @@
+[user]
+	email = atkmh@sonic.net
+	name = Mark Atkinson
+[core]
+	excludefiles = /Users/maatkins/.gitignore

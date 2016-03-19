@@ -8,3 +8,4 @@ export CLICOLOR=1
 #export LSCOLORS=GxFxCxDxBxegedabagaced
 #export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd   // emulate Linux but the purple is too dark
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+source ~/.bashrc
