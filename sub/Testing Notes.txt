@@ -1,5 +1,28 @@
 Testing Notes
 
+
+3/21/16
+The CSRF service issues one token per session, so we would like the webapp to only request a token once and then re use it if it is still within the same session. This seems to be working in the local environment but not in dev
+
+Open the MakePayment form and open the inspection tool.
+open the Network-tab in the inspection tool
+Make a payment, click the submit button on the Review dialog
+Immediately find an entry in the network tab <chrome> token/  <firefox> 200 POST /csrf/services/rest/ssrf/vi/token/   
+On either [ ch | ff ] view the Network Response tab ( within Networks )  
+Copy te string  that follows 'token:'    This string is the token.
+
+copy this down.
+
+Log out and log back in make a payment and reveiw the token response.  
+
+Expect:  It must be different
+
+From within the same session, make another payment.
+
+Expect: it should be the same value since the last login and same recent payment.
+
+
+
 3-1-2016
 Protractor test in the Integration/scenarios directorygrep 
 
