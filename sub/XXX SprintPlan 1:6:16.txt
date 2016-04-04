@@ -1,0 +1,45 @@
+XXX SprintPlan 1/6/16
+2/23/15 Renaming to XXX SprintPlan 1/6/16 cuz I havent touched this 
+note since initially writing it
+
+Had to go back to finishing VPN enable.
+Back:
+
+Story MPAY-731   is a three (3)
+
+Popup to enter data. Pop up goes away. validation fails, you are no longer looking at your data.
+Some NickName for the form 
+
+-------------------------------------------------------------------------------- 
+
+(  there is a race condition on background jobs that wake up on timers. )
+Jessie wants to break down the scheduler
+Background payment submitter
+
+Back ground process wakes up and polls payment ids
+with right type of new or retry supposed to go out today or earlier
+can we use db record blocking
+lock pay  make sure it has status necessary 
+
+
+Recovery case where we have set the example retry back to zero
+Max fail count 60 
+Lock is grabbed only for 5 min
+
+
+{{ Backend will be able to submit future payments }}
+
+
+--------------------------------------------------------------------------------
+
+Some new job being discussed 
+DB specific  
+
+
+
+.
+
+
+
+
+

@@ -1,0 +1,61 @@
+X Jira Sprint 17 Notes
+
+
+
+
+
+
+
+
+
+
+Mpay-1239  ReWorking the requirements  Done 3/25/2016
+
+Acceptance criteria:
+X - I can see placeholder text (Select Date or Date Range) in the date range box prior to inputing a date.  Ã
+X - I can click on the start date field to see a calendar without any date selected.   Ã
+X - I can select one start date and it will filter only on that date (not an open ended filter from that date). 
+- I can select another date to filter by a date range within the same calendar. 
+  ** Upon selection, the date picker closes. 
+  00 This date must be after the start date or the same date as the start date.
+
+Nope - Once two dates have been selected on the calendar I can see the date range highlighted on the calendar.  
+
+X - Once a date is selected, the calendar icon will turn into an X and remain an X when the date picker is closed. 
+
+- I can change the start date by clicking the left most field in the date picker input area. 
+  ** My new start date must be the same day as the end date or earlier. I cannot select a date after my end date.
+
+- I can change the end date by clicking the right most field in the date picker input area. 
+  ** My new end date must be the same day as the start date or later. I cannot select a date before my start date.
+
+- I can clear the date range that I've selected (with the X button).
+- I can click anywhere outside the date picker to close the date picker.   Ã
+
+=====================================================================================================================================
+
+I can see the Place holder text in the date field prior to clicking in the field: (Select Date or Date Range)
+I can click in the date field to see a calendar displayed without any date selected. 
+Once the calendar is displayed the Date field Calendar Icon changes to an X inside a circle
+I can exit the calendar with no date entered by the following, Click away, Escape key, or Click the X. The cal tool closes.
+
+
+I can click in the date field, open a calendar and select a begin date value. The begin date is entered in the date field on the LEFT
+
+I can create a single day filter selecting a start date value and exiting the calendar tool.  Both dates are properly entered into the date field. Using the X is not appropriate in this action.  User can use the Enter Key, or the other methods of escape or Click away.
+
+
+I can create a single day filter process for TODAY opening the calendar and using the enter key twice to select TODAY as begin and end. Both dates are properly entered into the date field.
+I can create a single day filter by selecting the day to filter on and use the enter key. Both dates are properly entered into the date field.
+I can create a single day filter by clicking twice on the day to filter on ( NOT Double Click )(Some browsers will recognize the double click)
+
+I can create a date range filter by selecting a begin date and selecting an end date AFTER the begin date. Both dates are properly entered into the date field.
+
+I CANNOT crate a date range with the second value earlier than the first value.
+
+I can change the date filter start date by clicking the left most field in the date field ( with both dates ). The new start date cannot be after the end date, but can be equal to the end date or earlier
+
+
+I can change the date filter start date by clicking the right most field in the date field ( with both dates ). The new end date cannot be before the start date, but can be equal to the start date or after
+
+I can clear the date range that I've selected (with the X button).

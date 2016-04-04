@@ -1,0 +1,46 @@
+devNotes
+
+
+
+JavaScript:
+var command = "npm install --cache-min 99999999 " + depsToInstall;
+console.log("Executing shell command: " + command);
+shell.exec(command); 
+ 
+ 
+~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l  183
+~/svb-web-payments/app/src$ find . *.test.js -type f -print0 | xargs -0 grep  "expect"  | wc -l  307
+ 
+Need to resolve
+:~/svb-web-payments/integration/scenarios$ find . *.test.js  -type f -print0 | xargs -0 grep "expect" | wc -l  315
+vs
+:~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l 183
+ 
+/u01/murano/apps/tomcat/logs
+catalina.out
+
+
+3/7/16
+From an earlier web search on JS automatically creating HTML page elements
+http://jsfiddle.net/t656N/1/
+
+<input type="text" id="member" name="member" value="">Number of members: (max. 10)<br />
+<a href="#" id="filldetails" onclick="addFields()">Fill Details</a>
+    <div id="containerÓ/>
+    
+-------------------
+   
+        function addFields(){
+            var number = document.getElementById("member").value;
+            var container = document.getElementById("container");
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){
+                container.appendChild(document.createTextNode("Member " + (i+1)));
+                var input = document.createElement("input");
+                input.type = "text";
+                container.appendChild(input);
+                container.appendChild(document.createElement("br"));
+            }
+        }

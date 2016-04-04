@@ -1,0 +1,47 @@
+XX Jira Sprint 13 Notes
+See Special note at bottom of 
+
+
+
+
+--------------------------------------------------------------------------------
+
+2/4/16
+Trying to test out 731 additions to make pay form.
+Right now looking at  editing a new user, or trying...
+
+--------------------------------------------------------------------------------
+
+Tickets are:
+ 873, 617, 852, 819A,
+513, 874, 853A, 855A,
+863, 829A, 851A
+Ones *A are in qa at start of 13 1/25/16
+
+Working these first. 1/25/16
+851 misalignment of cancel submit on small screens : looks fixed:  This one will await final confirmation on where to test
+829  Where do I  or when during the workflow do we encounter the payee detail header:  I put a screen shot in ticket
+855 Proper size of the font in payee dropdown 
+819:  checked with a wide range of PR and IR char strings all working well
+
+1/26/16
+853 13:12 Question out to Aniz.  screen shot ?
+
+
+Stories are 
+
+731 : Story Tests roughed out  1/26/16
+
+306 : Story Tests roughed out  1/26/16
+
+225 : Story Tests roughed out  1/26/16
+
+617  Working will finish   1/27/16
+
+
+Should be copied elsewhere as well
+Special Note:  A Jira entry that is of the wrong type: bug, story, test ! can be changed 
+Early in the creation	I was shown by E.P. to use the MORE dropdown selection and pick MOVE.  this allows you to MOVE in place ( as if moving to diff proj ) and reset the Type detail to TEST !   Saved! woot woot !
+
+
+
