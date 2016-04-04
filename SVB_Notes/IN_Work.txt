@@ -1,14 +1,17 @@
 IN_Work
+
+
+
 2/9/16 This is not an ongoing list.  
 Add and delete
 
 --------------------------------------------------------------------------------
 What do I want in a current Work Repo ???
-sounds
-Images
-dotfiles
-notes
-sourceCode_MarkDev
+sounds - Done
+Images - Done
+dotfiles - Done
+notes - Open
+sourceCode_MarkDev - Open
 ???
 ???
 ???
