@@ -1,2 +1,10 @@
 Unix_Linux-Tips
 
+in order to get rid of the .DS_Store entry
+in Git hub even when you have that entered
+into ./.gitignore you need to do the following
+git rm Ñcached .DS_Store
+
+then commit and push
+git status will no longer report it
+

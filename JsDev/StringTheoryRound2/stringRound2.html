@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1> String Theory - Personal Exercise in JS, etc.</h1><h2> <br/> See & Say Algorithm</h2>
+<p id="demo" >
+
+<FORM NAME="myform" ACTION="" METHOD="GET"> 
+Start from 1 </br>Loop this many times:  
+<br/>	
+
+<INPUT type="text" Name="loopThisMany" VALUE="" id="myLoopControl" style="width:30px"/>
+
+<button type="button" onclick="startFromOne()" > Loop this Many </button>
+ <input type="checkbox" name="NthIteration" value="" id="nthIterChkBox" >  Nth Only 
+
+<br/>
+----------------------------------------------------------<br/>
+Alternate method: You supply numerical string and number of times to iterate
+
+<br/>
+
+Iterate this many.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gen from this string. 
+<br/>
+
+
+<INPUT type="text" NAME="loopHowMany" VALUE="" id="loopHowMany" style="width:30px" /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT type="text" NAME="myRandInputStr" VALUE="" id="myRandInputStr" /> 
+
+
+
+<br/>
+
+
+<button type="button" onclick="startFromInputStr()" > Start The String  </button> 
+<!-- <button type="button" onclick="genAString()" > Start The String  </button> -->
+ <input type="checkbox" name="nthIterChkBox2" value="" id="nthIterChkBox2"> Nth Only
+<br/> <br/>
+
+Output:  &nbsp; &nbsp; 
+<input type="radio" name="outBox" value="def" CHECKED id="defId"onclick="myOutputSize()" >Default
+&nbsp; &nbsp;
+
+  <!--   The following is CSS that will disable the text area grabber
+  		textarea{
+        resize:none;
+    } -->
+    <td><textarea style="resize:none" name="countOfChars" id="countOfChars" rows="1" cols="8" VALUE="" >  </textarea></td> Number of digits
+
+
+<br/>
+<td>
+<textarea name="comments" id="myOutArea" rows="4" cols="51" placeholder="Results Out Here"></textarea>
+<textarea name="stats" id="myStatArea" rows="4" cols="6" ></textarea>
+
+</td>
+
+<br/>
+<button type="button" onclick="clearOutPut()"> - Clear - </button> <br/><p>
+<!--     <input type="radio" name="outBox" value="def" CHECKED id="defId"onclick="myOutputSize()" >Default<br/>  -->
+ <input type="radio" name="outBox" value="small" id="smallId" onclick="myOutputSize()"  > Small <br/>
+ <input type="radio" name="outBox" value="medium" id="mediumId" onclick="myOutputSize()"  > Medium <br/>
+ <input type="radio" name="outBox" value="large" id="largeId" onclick="myOutputSize()"   > Large <br/>
+ 
+ 
+</FORM>
+ <script type="text/javascript" src="myjsRound2.js" ></script>
+
+
+ </body>
+</html>
+
+
+
+<!--     
+in here be comments
+This is old archived code
+
+ <INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)"/> 
+
+ <form> Example string: <input type="text" name="inputString" /> 
+-->
