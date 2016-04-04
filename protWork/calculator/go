@@ -1,0 +1,2 @@
+cd ~/svb-web-paymens
+npm run protractor conf.js --harmony
