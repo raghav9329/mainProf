@@ -1,0 +1,42 @@
+IN_Work
+2/9/16 This is not an ongoing list.  
+Add and delete
+
+--------------------------------------------------------------------------------
+What do I want in a current Work Repo ???
+sounds
+Images
+dotfiles
+notes
+sourceCode_MarkDev
+???
+???
+???
+
+
+Cleanup 889
+
+2/9/16 Story review Sprint 14
+
+Books Opened:
+
+2/8/16:
+Learning PHP MySQL & JavaScript
+JavaScript & AJAX for Dummies
+Javaotes6.pdf  David J. Eck
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

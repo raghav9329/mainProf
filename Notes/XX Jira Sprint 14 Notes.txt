@@ -1,0 +1,229 @@
+XX Jira Sprint 14 Notes
+
+This Search Query help me finish
+project = "Murano Payments" and type = Story  AND Sprint = "Sprint 14"
+
+2/22/16  Sprint Cleanup / Follow up
+IÕm going through Jira and making sure IÕve got my stories organized, test cases accounted for and marked correctly
+Stories in Sprint 14:  941, 939, 935, 930, 794, 731, 306.
+
+Test cases by Story.
+	•	306: 
+	◦	891Pass, 
+	◦	890 Pass Un_blocked by 1066, 
+	◦	889 really needs a cleanup !
+	•	731: 
+	◦	882 pass
+	◦	883 pass
+	◦	884 pass
+	•	794
+	◦	1052 pass
+	◦	1054 pass
+	•	930  
+	◦	1003 pass
+	•	935 Capture Audit Events | Audit4J tool chain investigation:  Dropped from farther investigation
+	•	938
+	◦	998 pass
+	•	941
+	◦	1025 pass
+	◦	1026 pass
+	◦	1028 pass
+With this complete, I am done with the basics of test case management and administration.
+Bug 1066  is still blocking 890
+
+
+2/17/16
+Stories check-up:  do I have all my duck lined up and ready to go ?
+
+
+794:  Sort payment Transactions
+As a user entitled to create payments, I want to view our payment transactions in a specific order on the Payment Home so I can reconcile our payment activity.
+
+Acceptance criteria:
+- I can see our payment transactions defaulted to the sort order of descending by scheduled date when I land on the Payment Home.
+- I can sort our payment transactions either by scheduled date, payee or payment amount.
+- I can click on the arrow next to each column heading to sort payment transactions in descending order first.  
+- I can click on the same arrow heading again in that column to sort payment transactions in ascending order.
+- I can only sort by one column at a time.
+- The column which is sorted would have the sort icon displayed alongside the column name.
+
+
+
+302:  Cumulative max
+
+As a user, I want to make a payment within the daily limit that has been set for me at a SVB account level so that my company can control our payment volume.
+Acceptance criteria:
+	▪	I can enter a payment amount in GBP for the payment.
+	▪	I can only submit a payment amount that when combined with other payments I've created that day for the same SVB account is equal to or less than my maximum cumulative daily payment limit for that account.
+	▪	I can see a message stating that my payment can't be submitted when I try submit a payment that has exceeded the limit.
+	▪	I can edit the payment amount or cancel the payment when I try submit a payment that has exceeded the limit.
+	▪	I can confirm the amount for this payment in the Review overlay in the make payment workflow.
+Miscellaneous
+	▪	All payments that are flagged for that payments scheduled day are included in the sum.
+	▪	For each account the user is entitled to, they can reach this limit. It is not summed across all accounts they are entitled to.
+
+***** Test
+	1.	Navigate to the make payment form
+	1.	.
+	2.	.
+	3.	.
+	2.	sadf
+	3.	asdf
+	1.	.
+	2.	 
+
+
+
+========================================================
+2/17/16 Noon
+
+731 : Closed - all qa work done
+
+306 : Closed - all qa work done. No, not all done.  there were two test cases that were never done
+Leads me to think I need to re run everythingÉ..
+
+938: Closed - all qa work done
+
+794 : In Dev : Probably close to delivery:  NO QA Work DONE
+
+941: Closed - all qa work done
+
+930:  Incomplete:  Was completely finished except for a look in IE.  Re opened.
+
+935: Closed, Failed to move past research stage. 
+
+302: In Dev: max Cumulative:  NO QA Work Done.
+
+
+
+
+======================================================
+----------------------------------------------------------------------------------
+731 Validate all the bugs and do a cursory look at the test cases.
+
+306: Asked Gary what the cumulative limit is right now and where stored.
+====================
+938: Capture Audit Events | Include Name and Login Name in session entitlements response
+As a fraud analyst, I want name and login name available from the session entitlement response when I view Murano payment activity by clients.
+
+	Acceptance Criteria:
+- I can see that the login name of the user is captured at time of session in Murano.
+- I can see that the person name of the user is captured at time of session in Murano.
+- Filter to add user agent string and cookie
+
+
+*** TEST
+Capt Audit Evnt | Includ Name, LName, Sees Entltmnts rspns  | Login session details and statistics are captured and persisted
+
+
+====================
+794: Payment Home | Sort payment transactions
+As a user entitled to create payments, I want to view our payment transactions in a specific order on the Payment Home so I can reconcile our payment activity.
+
+	Acceptance criteria:
+- I can see our payment transactions defaulted to the sort order of descending by scheduled date when I land on the Payment Home.
+- I can sort our payment transactions either by scheduled date, payee or payment amount.
+- I can click on the arrow next to each column heading to sort payment transactions in descending order first.  
+- I can click on the same arrow heading again in that column to sort payment transactions in ascending order.
+
+****Test  
+Pmt Home | Sort Pmt xactions | Default sort criteria is Scheduled payments descending 
+
+	1.	Default sort order
+	2.	can change to any of the other columns for sort order
+	3.	All columns 
+	1.	can be ascend or descend
+	2.	can be resorted by clicking the same control - reversing the sort
+	3.	will show the arrow change direction on repetitive clicking  - For all columns
+	4.	there is no way to combine sorts.  They are non combineable
+	4.	 
+
+
+
+====================
+941: Status and payment ID in payment details
+
+As a user, I want to see critical information for each payment transaction so that I can reconcile our payment activity.
+	Acceptance criteria:
+	▪	I can see the payment ID (number) for a selected payment transaction on the Payment Homepage in the payment details area.
+	▪	I can always see the status for a selected payment transaction on the Payment Homepage in the payment details area.
+	▪	I can see that the payment status is "Scheduled" when a payment has been submitted by the user but hasn't yet been sent and accepted by SOA.
+	▪	I can see that the payment status is "Sent" once the payment has been accepted by SOA.
+
+
+****Test Ñ this feels weak
+
+	1.	Status & Payment ID , payment details | Status & ID in the details area 
+	1.	Make a complete payment.  confirm receipt of the Payment ID as it is reviewable in the payment details.
+	2.	Make another complete payment. See the status of the payment change from Scheduled to Sent after SOA accepts the payment
+
+
+====================
+930: Payee field change on Make Payment form
+As a user making a payment, I want to view our saved payee's information on the make payment form so that I can select the right saved payee for a payment.
+
+	Acceptance criteria:
+- I can see the payee nickname first followed by the payee name below when I select the payee field on the Make Payment form and see all of my saved payees in the dropdown menu.
+
+***Test
+Payee field change on Make Payment form | Nickname followed by Payee Name
+/**************************
+** Create a new Payee-Payment:  
+** In make payments click on Plus sign Head/Shoulders
+** In payee name use a naming convention that identifies PayeeName. e.g.: JimSmith-PayeeName-PN
+** Enter common details in the other fields to successfully complete the payment. -  Submit from payment form-
+** Review the submission in Confirm payment Dialog  - Submit -
+** In the Success Dialog enter a distinctly Similar NickName to Pay Name.  Use the naming convention to designate as ***-NickName.  -  Save Payee -
+** Select Return to Payment Home.
+** RESULT: Payee Name  become editable and , Account # and Sort code fields are deployed editable
+** RESULT: Common detail entry allows for form completion
+** RESULT:
+** Reopen the make payment form.
+** Select your recently made New Payee.
+** Confirm in Payee Dropdown the following
+** NickName is above the payee Name.
+*************************/
+
+ ***** ***** ***** ***** ***** ***** ***** *****
+Create a new Payee.  Clearly specify Payee Name and Nick name as distinctly descriptive
+Eg:  Willson Athletic Corporation - PN    WilsonGym-NN
+Complete the payment.  See the payment in the payment home page.
+
+Reopen the Make payment form.
+Select the the WilsonGym-NN entry and observe the NN entry above the PN entry ( this is a must )
+
+
+ ***** ***** ***** ***** ***** ***** ***** ***** *****
+Open the Make payments form
+Select an entry :  Click on Edit Payee.
+
+Change the Payee Name. 
+Change the Nick Name.
+
+Save the Changes made 
+
+Your pages and return to the Make Payment form.
+Click on Payee  and locate the entry you edited
+
+RESULT:  The changes were persisted and are now displayed as you had edited them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.

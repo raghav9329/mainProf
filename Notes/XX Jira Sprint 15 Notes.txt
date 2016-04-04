@@ -1,0 +1,367 @@
+XX Jira Sprint 15 Notes
+
+Features in the list as of 2/24/16
+Still in As of 3/1 302, 1045, 936, 347, 953, 1046, + Issues
+Newly in As of 3/1 1046
+
+Done 302  Max daily cumulative payment limit per account per user
+Done 1045 Payment Home UI | Client side filter by keyword
+936  Capture Audit Events | Attach to all methods that trigger audits.
+347  Payment processing days
+953  IE 9-11 Support for Make Payment form and Payments Home
+1046 Payment Home | Client side date filtering
+
+out 993  Capture Audie Events | Trustee rapport data
+out 803  Basic authentication for SOA and private endpoints   ( Pulled cuz E-connect must do first )
+out 959  CTV | Obtain list of devices used for verification   ( moved to own team )
+out 943  CTV | Change eC Endpoint                            ( moved to own team )
+
+
+/*******  DONE
+ **302: Max daily cumulative payment limit per account per user   DONE
+ **
+ **As a user, I want to make a payment within the daily limit that has been set for me at a SVB account 
+ **level so that my company can control our payment volume.
+ **
+ **Acceptance criteria:
+ **
+ ***  I can enter a payment amount in GBP for the payment.    - Un necessary to write tc 
+ ***  I can only submit a payment amount that when combined with other payments I've created that day for 
+ **   the same SVB account is equal to or         
+ **less than my maximum cumulative daily payment limit for that account.
+ **  I can see a message stating that my payment can't be submitted when I try submit a payment that has exceeded the limit.
+ **  I can edit the payment amount or cancel the payment when I try submit a payment that has exceeded the limit.
+ **  I can confirm the amount for this payment in the Review overlay in the make payment workflow.
+ **  
+ **  Miscellaneous      
+ **  *  All payments that are flagged for that payments scheduled day are included in the sum.
+ **  *  For each account the user is entitled to, they can reach this limit. It is not summed across all accounts they are entitled to.
+
+
+
+/***************
+/*    TESTS
+/*
+/*
+Test users currently employed on qa, adbrain_fps & adbrainfps2
+Each have 4 funding accounts
+*_fps limits at $30K per funding account
+*fps2 limits at $60K per funding account
+Current funding accounts for each of these users is *2203, *2211, *2181, *5436
+Additionally there are Max Transaction limits that can come into play as well
+If they are lower than the funding account limit you will not be able to meet
+the funding account limit all in one payment.  This may be ok.
+
+As *_fps try to submit payment for 30,005.00 for each of the accounts.   FAIL
+As *_fps reset each payment to each account for $5K                      PASS
+1.   AS *_fps make payment to each account for $28K	              1. FAIL
+2.   AS *_fps InPlace RE EDIT each payment to under $24K              2. PASS
+
+As *_fps make a payment on any account for exactly $1K                   PASS
+AS *_fps make a payment for the smallest amount possible $0.01		FAIL
+
+Run the same tests for user adbrainfps2
+Change all payment amounts to acknowledge for a Max of $60K fund acct limit
+use $60,005.00, $5K, $58K, $54K 1K and 0.01 
+
+
+/*******************************************************
+/* Test End   302 is done
+/*******************************************************
+
+
+/*******  DONE
+ 1045 Payment Home UI | Client side filter by keyword   DONE
+
+ As a user, I would like to filter the payments currently displayed on payments home by a nickname or payee name. 
+
+ Acceptance Criteria:
+
+ /*******************************************************
+ /** This set of Criteria were updated
+ /**
+ /**  * User can type in the search box a search term 
+ /**  * Should not filter till 3 character 
+ /**  * Should wait a half second between search term entry before attempting search
+ /**  * Should search for payee name or nickname
+ /**
+ /********************************************************
+
+ *   I can enter alpha-numeric text to filter transactions.  
+ *   I can enter text and see that the filter is case insensitive.
+ *   I can search against the payee field (either payee name or payee nickname).  
+ *   I can delete one or more characters in the search term I've entered to update the filtering.
+ *   I can delete the entire search term I've entered to eliminate the filtering.
+ *   *****
+ *   Should wait a half second between search term entry before attempting search
+
+
+
+/***************
+/*    TESTS
+/*
+/*  Can probably get this covered in one test
+
+
+1  The search box will take keyboard input
+
+2  There is some limit to the number of chars that the input field can take
+2.2 try to filter < = > than the field length
+2.3 < should work  = should work.  > should give some complaint
+
+3  By the third input char the filtering feature should begin to execute
+
+4  The filtering on new input criteria should be delayed by 500 sec
+
+5  The filtering criteria is on payee name or payee NickName 
+
+
+/*******************************************************
+/* Test End  1045 is DONE.
+/*******************************************************
+
+/**************  This has been removed from sprint 15 ****
+**
+** 993  Capture Audie Events | Trusteer rapport data
+** 2/24 Status READY FOR DEVÉ.. So, I canÕt ask Aniz about this yet
+** 
+** As a fraud analyst, I want security context available for audit purposes on the request context so that 
+** I can audit Murano payment activity by clients. 
+** 
+**  Acceptance Criteria:
+**  - I can see that the state of Trusteer Rapport is being captured at the time of session in Murano.
+
+/***************
+/*    TESTS
+/*  Install Trusteer
+/*  First test I didnÕt see the X-Trusteer wrapper 
+Select Inspect tool, networks and refresh
+v0V.js  select this file and look for the request headers ÒX-Turstee-RapportÓ
+Seeing this X-Trustee-Rapport: < cooking like string >  is an indication the software is installed and we are setup of capturing audit info.
+
+the actual autdit info will be put in an Audit table in the Payments DB
+What we actually store int he DB is moderately known but somewhat up for guesses.
+
+/*******************************************************
+/* Test End
+/*******************************************************
+
+
+/*******************************************************
+936  Capture Audit Events | Attach to all methods that trigger audits.
+2/24/16 Status IN DEV
+
+As a fraud analyst, I want to capture all required audit data in the audit log for each of the audit event that occurs.
+Acceptance Criteria:
+ *  For each audit trigger event, log a JSON string with all required audit fields using audit framework.
+
+Audit Trigger Events:
+ * Create Faster Payment (success or failure): 
+ * Create Payee (success)
+ * Edit Payee (success): 
+ * View User Activity Report (success)  {{ This one is going to be delayed  this report does not yet exist  }}
+
+Core data for all these events:
+ *  Client ID: Client name: User ID: User name: Actor ID: Actor name: Date of activity: Time of activity: 
+ *  Audit event (client friendly): Audit event (GA name): 
+ *   Audit event ID (per GA): eConnect security context: Status (success vs. failure)
+
+Additional fields for Create Faster Payment audit events:
+ * SVB account number: Payee name: Payee nickname: Payee account number: 
+ * Payee sort code: Amount: Transaction ID:  Payment type (free-form or saved payee)
+
+Additional fields for Create Payee and Edit Payee audit events:
+ * Payee name: Payee nickname: Payee account number: Payee sort code
+
+
+/***************
+/*    TESTS
+/*
+/*
+
+Get attached to the log files grep on the key operations ( how ever its logged )
+1 Create Faster Payment (success or failure):
+  *  Observe a Create Faster payment Json Object get logged with all the stuff specified
+ 
+2 Create Payee (success)
+  *  Observe a Create Payee json objecdt logged
+
+3 Edit Payee (success): 
+  *  Observe the proper logging for Edit Payee
+
+4 View User Activity Report (success) {{ This one is going to be delayed  this report does not yet exist  }}
+
+
+/*******************************************************
+/* Test End
+/*******************************************************
+
+
+
+
+
+
+347  Payment processing days
+
+As a user, I want to initiate a payment on a date when a payment can be processed so that I know the day the payment will be sent.
+
+Acceptance criteria:
+- I can see the next valid payment date on the make payment form based on the UK branch schedule for processing payments.
+- I can confirm the date for this payment once it has been submitted in the payments list on the payments home page.
+
+Assumptions:
+- Needs to work along with the cutoff times MPAY-102.
+- Does not include recurring payments.
+- No localization; assumes the user is sitting in London (GMT / UTC time zone).
+- Validation for cutoff time will be based on server time at time page was loaded and when submitted.
+- No messaging when user passes the cutoff time while sitting on page; this change is a separate story in backlog MPAY-845.
+- Payments are automatically set to the next valid payment date when the cutoff time has passed during the payment submission workflow. 
+
+/***************
+/*    TESTS
+/*
+/*
+Open the Make Payment form.
+Initiate the payment process after cutoff times 
+Ans: The Next available Bank Open day will be the Scheduled date, and displayed to the user on the Make Payment form.
+
+Complete another payment after the cutoff time.
+Review (now two ) payment make.  The most recent two made after the cutoff time will show as scheduled for the next 
+bank open day for the payment time.
+
+Open and initiate the make payment process.  Do not submit until after the cutoff time.
+Open and initiate the make payment process.  Initiate the Submit but wait on the Confirmation until after cutoff
+Open and initiate the make payment process.  Initiate the Submit and acknowledge the Confirmation dialog.  Sit on the success dialog until after the cutoff time passes.
+
+/*******************************************************
+/* Test End
+/*******************************************************
+
+
+
+953  IE 9-11 Support for Make Payment form and Payments Home
+
+These Are IE bug fixes.  Not a story in the agile sense.
+
+
+/***************
+/*    TESTS
+/*
+/*
+
+
+/*******************************************************
+/* Test End
+/*******************************************************
+
+
+
+
+
+/*******************************************************
+1046 Payment Home | Client side date filtering
+
+As a user, I want to view specific transactions within a date range so I can reconcile payment activity for the payments currently displayed on the payment home. 
+
+Acceptance criteria:
+- I can select a start and end date range to view payment activity for the payments displayed.
+
+
+/***************
+/*    TESTS
+/*
+/*
+Test Areas:
+
+Individual Date Selector control
+** Set Two dates to create a range
+** Mess with this graphics tool  Recored what I discover 
+
+
+Range filtering
+
+/*******************************************************
+/* Test End
+/*******************************************************
+
+
+
+
+
+
+Adbrain_fps
+30K limit per funding account
+adbrainfps2
+60K limit per funding account
+1MM for the client cumulative daily limit
+Max transaction limit at client level is 65K per transaction
+Same account...each user can only submit up to their account limit
+Go through multiple accounts
+
+adbrain_fps
+Select account x2211
+Submit payment for 20000.00 and success
+Submit payment for 10000.01 and failure
+Submit payment for 10000.00 and success
+Submit payment for 0.01 and failure
+Select account x5436
+Submit payment for 20000.00 and success
+Submit payment for 10000.01 and failure
+Submit payment for 10000.00 and success
+Submit payment for 0.01 and failure
+adbrainfps2
+account x2211
+Submit payment for 40000.00 and success
+Submit payment for 20000.01 and failure
+Submit payment for 20000.00 and success
+Submit payment for 0.01 and failure
+Select account x5436
+Submit payment for 20000.00 and success
+Submit payment for 10000.01 and failure
+Submit payment for 10000.00 and success
+Submit payment for 0.01 and failure
+
+
+/**************************
+/* Moved out of the sprint 
+/* CTV has their own team
+/* So says Eric
+959  CTV | Obtain list of devices used for verification
+
+As an eFraud analyst, I want to view the Authenticate contact details for a user to confirm the user has the right contact information to use the Authenticate service.
+
+Acceptance criteria:
+- I can get the list of devices and their contact information used for verification.
+
+
+/**************************
+/* Moved out of the sprint 
+/* CTV has their own team
+/* So says Eric
+943  CTV | Change eC Endpoint
+
+As an eFraud analyst, I want to ensure that the Authenticate OOBA service is triggered for each payment event so that the client's risk of payment fraud is reduced.
+
+Acceptance Criteria:
+- I can confirm that a call to the Authenticate service is made for each payment event when a user tries to submit a payment from the payment review overlay.
+- I can confirm that a payment is not going to be able to be processed unless the Authenticate service has been completed. 
+
+Miscellaneous:
+* Endpoint should be modified to accept multiple CTV calls per session.  THIS NEEDS TO BE ITS OWN STORY
+* CTV initiation endpoint should return a transaction ID.
+* CTV polling endpoint should take a transaction ID as a parameter. 
+
+/**************************
+/* Moved out of the sprint 
+803  Basic authentication for SOA and private endpoints
+As a user, I want my payment details to be secure so that my payments are processed and stored successfully and accurately.   
+
+Acceptance Criteria:
+- I can confirm that my payment details aren't modified without proper credentials.  
+
+Miscellaneous:
+* SOA can only call update status endpoint when providing proper credentials.
+* All private apis can be invoked only after providing proper credentials
+
+...
+
