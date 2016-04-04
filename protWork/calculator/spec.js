@@ -70,19 +70,19 @@ describe('Protractor Demo App', function() {
  });
 
 // [ 'AC', '±', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '—', '1', '2', '3', '+', '0', '.', '=' ] 
-
+//    0     1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18 
  it('Binary Operation: Evaluate the Multiplication of two digits', function(){
 	 element.all(by.css('.calculator-keypad')).all(by.css('.key')); 
 	// expect(keyPadList.get(4).getText()).toBe('7'); 
-	 var myOperation = keyPadList.get(7); // multiply
-	 var myDigit = keyPadList.get(4); // '7'
-	 var myEvaluation = keyPadList.get(18);
-	 myDigit.click();
-	 myOperation.click();
-	 myDigit.click();
-	 myEvaluation.click();
+	 var myOperation = keyPadList.get(7); //char 'x'  multiply
+	 var myDigit = keyPadList.get(4); // 'digit 7'
+	 var myEvaluation = keyPadList.get(18); // equals Sign
+	 myDigit.click(); // submit dig 7
+	 myOperation.click(); // submit multiply operation
+	 myDigit.click();  // submit dig 7
+	 myEvaluation.click(); // call evaluation equals sign
 	 
-     expect(outPutDisplay.get(0).getText()).toBe('49');
+	 expect(outPutDisplay.get(0).getText()).toBe('49');
 	 console.log("Multiplication Result should be 49");
 	 browser.sleep(800);
  }); 
@@ -99,7 +99,7 @@ describe('Protractor Demo App', function() {
  it('Generate the Error Condition', function(){
 	 var myClearAction = keyPadList.get(0); // AC Key action, Clear
 	 myClearAction.click();
-	 var myEvaluation = keyPadList.get(18);
+	 var myEvaluation = keyPadList.get(18); // put in Note what 18 means
 	 myEvaluation.click();
      expect(outPutDisplay.get(0).getText()).toBe('ERROR');
 
@@ -107,4 +107,42 @@ describe('Protractor Demo App', function() {
 
 	 
 	 
+
+// [ 'AC', '±', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '—', '1', '2', '3', '+', '0', '.', '=' ] 
+//    0     1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18 
+it('Activate the Clear Function', function(){
+          var myClearAction = keyPadList.get(0); // AC Key action, Clear
+          myClearAction.click();
+          console.log("Clear Function should show '0' in display");
+          browser.sleep(280);
 });
+
+
+// [ 'AC', '±', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '—', '1', '2', '3', '+', '0', '.', '=' ] 
+//    0     1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18 
+it('Add a succession of digits equaling a sum', function(){
+	 var myOperation = keyPadList.get(15); //char '+' Addition
+	 var myDigit = keyPadList.get(4); // 'digit 7'
+	 var myEvaluation = keyPadList.get(18); // equals Sign
+	 
+	 var myDigit = keyPadList.get(12); // 'digit 1'
+	 myDigit.click(); // submit dig 1
+	 myOperation.click(); // submit Addition operation
+
+	 var myDigit = keyPadList.get(13); // 'digit 2'
+	 myDigit.click();  // submit dig 2
+	 myOperation.click(); // submit Addition operation
+
+	 var myDigit = keyPadList.get(14); // 'digit 3'
+	 myDigit.click();  // submit dig 3
+	 myOperation.click(); // submit Addition operation
+
+	 myEvaluation.click(); // call evaluation equals sign
+	 browser.sleep(3800);
+	 
+	 expect(outPutDisplay.get(0).getText()).toBe('6');
+	 console.log("Formula 1 + 2 + 3  Result should be 6");
+	 browser.sleep(3800);
+});// End of Add a succession
+
+});// end of main Describe Protractor Demo App
