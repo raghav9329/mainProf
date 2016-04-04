@@ -1,25 +1,5 @@
 IN_Work
 
-Acceptance Criteria:
-XX - I can see the Place holder text in the date field prior to clicking in the field: (Select Date or Date Range)
-XX - I can click in the date field to see a calendar displayed without any date selected. 
-XX Once the calendar is displayed the Date field Calendar Icon changes to an X inside a circle
-
-XX - I can exit the calendar with no date entered by the following, Click away, Escape key, or Click the X. The cal tool closes.
-XX - I can click in the date field, open a calendar and select a begin date value. The begin date is entered in the date field on the LEFT
-XX - I can create a single day filter selecting a start date value and exiting the calendar tool.  Both dates are properly entered into the date field. Using the X is not appropriate in this action.  User can use the Enter Key, or the other methods of escape or Click away.
-
-XX - I can create a single day filter process for TODAY opening the calendar and using the enter key twice to select TODAY as begin and end. Both dates are properly entered into the date field.
-XX - I can create a single day filter by selecting the day to filter on and use the enter key. Both dates are properly entered into the date field.
-XX - I can create a single day filter by clicking twice on the day to filter on ( NOT Double Click )(Some browsers will recognize the double click)
-XX - I can create a date range filter by selecting a begin date and selecting an end date AFTER the begin date. Both dates are properly entered into the date field.
-XX - I CANNOT crate a date range with the second value earlier than the first value.
-XX - I can change the date filter START date by clicking the left most field in the date field ( with both dates ). The new start date cannot be after the end date, but can be equal to the end date or earlier
-
-XX - I can change the date filter END date by clicking the right most field in the date field ( with both dates ). The new end date cannot be before the start date, but can be equal to the start date or after
-
-XX - I can clear the date range that I've selected (with the X button).
-
 
 
 2/9/16 This is not an ongoing list.  
