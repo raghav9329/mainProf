@@ -1,4 +1,4 @@
-http://product.moveline.com/testing-angular-apps-end-to-end-with-protractor.html
+http://product.moveline.com/testing-angular-apps-end-to-end-with-protractor.html 
 
 
 Testing Angular Apps End-to-End with Protractor
@@ -107,7 +107,7 @@ describe('Authentication capabilities', function() {
     expect(browser.getCurrentUrl()).not.toEqual(loginURL);
   });
 
-  it('should return to the login page after logout', function() {
+  it('should return to the login page after logout', function() { 
     var logoutButton = $('a.logout');
     logoutButton.click();
     expect(browser.getCurrentUrl()).toEqual(loginURL);
