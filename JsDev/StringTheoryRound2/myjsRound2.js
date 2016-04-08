@@ -5,11 +5,12 @@
 
 	var	textOutputArea = document.getElementById('myOutArea');
 	var chkBoxSelection = document.getElementsByName("outputSize").value;
-	var statsOut = document.getElementsById("myStatArea");
+	var statsOut = document.getElementById("myStatArea");
 	//var loopThisMany = document.getElementById('myLoopControl').value
 	var loopThisMany ;
 	var loopHowMany ;
 	var digitsByLine;
+
 	
 
 	function displayResult(passedValue, howManyLoops){ 
@@ -26,12 +27,14 @@
 	
 	function startFromOne(){// get the number of times to iterate and 
 							// start working from 1..N output all or just N
+		var timeStamp_begin = new Date();
 		this.loopThisMany = document.getElementById('myLoopControl').value
 		var textOutputArea = document.getElementById('myOutArea');
 		var tempOutputString = "";
 	
 		var catchThis = 1;
-
+		document.getElementById("myStatArea").value = "1"; // + "\n";
+		
 		if( ! ( document.getElementById("nthIterChkBox").checked ) ){
 			//tempOutputString = "1, "
 			tempOutputString = "1\n"
@@ -41,6 +44,9 @@
 				//tempOutputString = tempOutputString + catchThis + ", "
 				tempOutputString = tempOutputString + catchThis + "\n";
 			}
+				var timeStamp_endIterateAll = new Date();
+				var time_diffA =  timeStamp_endIterateAll - timeStamp_begin ;
+				console.log(time_diffA +"\n");
 				displayResult(tempOutputString,loopThisMany );
 		}else {
 			for (var x=1; x <= loopThisMany ; x++){
@@ -49,6 +55,9 @@
 			//tempOutputString = tempOutputString + catchThis + ", "
 			tempOutputString = tempOutputString + catchThis + "\n";
 		}
+		var timeStamp_endIterateLast = new Date();
+		var time_diffB =  timeStamp_endIterateLast - timeStamp_begin ;
+		console.log(time_diffB +"\n");
 		displayResult( tempOutputString,loopThisMany );
 	}// END Of Function STARTFROMONE
 
@@ -58,6 +67,7 @@
 		this.loopHowMany = document.getElementById('loopHowMany').value
 		var catchThis = document.getElementById('myRandInputStr').value;
 		var	tempOutputString = catchThis + "\n";
+		document.getElementById("myStatArea").value = "1"; // + "\n";
 		
 		if( ! ( document.getElementById("nthIterChkBox2").checked ) ){	
 			for (var x=0; x < loopHowMany ; x++){
@@ -102,13 +112,14 @@
 
   var outputLine = "";
   var currInputCharAsIndex;
+
   for ( var x = 0 ; x < myString.length; x++) { // eg: input string 312211 Len is 6  [0..5]
 
-    // Look at char at x
-    currInputCharAsIndex = myString.charAt(x);
+	  // Look at char at x                        //       v----- where x is pointing at the 2
+	  currInputCharAsIndex = myString.charAt(x);  // ex: 112231
 
-   modelArray[ currInputCharAsIndex ] += 1;  //  I would liket to use a[x]++
-  //  modelArray[ currInputCharAsIndex ] ++;  //  I would liket to use a[x]++
+  // modelArray[ currInputCharAsIndex ] += 1;  //  I would liket to use a[x]++
+    modelArray[ currInputCharAsIndex ] ++;  //  I would liket to use a[x]++
 
     // Ending Decision Check
     if (  currInputCharAsIndex != myString.charAt(x+1)  ){ // we are done recording consectutive chars: Go record the count and Char
@@ -127,30 +138,31 @@
         else{                                       			// We did not find value > 0 at index
             localIndex++;                           			// Increment Index
             if (localIndex > 9 ){                    			// problem, I went through the entire array and only 
-            													// found zeros, now index is array out of bounds
+            // can I make this secion a little more elegant		// found zeros, now index is array out of bounds
             	if(inputValRslt==false){
             	// do Nothin	
             	}
             	else {
             		alert("ERROR: Array Out of bounds problem: localIndex = " + localIndex);
 	            return(false);
-            	} 
-            }
-        }
+            	}
+            }// if local > 9
+        }// end else
     }// end While
 
     outputLine = outputLine + tempString;
-  
-   /* Reset & Initialize the array: Inside the ending decision check */
+
+    /* Reset & Initialize the array: Inside the ending decision check */
      initModelArray(modelArray);
-    } // end of what ???  fix this
+   
+    } // end if two chars together check : consecutive chars 
+ 
   }// end for x < myString.length loop
   
   
-  digitsByLine = outputLine.length;
-// statsOut = document.getElementById("myStatArea");
-  statsOut = document.getElementById("myStatArea").value + "\n";
-  document.getElementById("myStatArea").value = statsOut + digitsByLine;
+//  digitsByLine = outputLine.length;
+//  statsOut = document.getElementById("myStatArea").value + "\n";
+//  document.getElementById("myStatArea").value = statsOut + digitsByLine;
   
   /* Ok: We all done.  */
 
@@ -163,6 +175,10 @@
   }
   else {
 	  // From external call return generated stirng
+	  digitsByLine = outputLine.length;
+	  statsOut = document.getElementById("myStatArea").value + "\n";
+	  document.getElementById("myStatArea").value = statsOut + digitsByLine;
+
 	  return( outputLine );
   }
 }// end of function genASTring(){}
@@ -184,8 +200,11 @@
 
 
 	function clearOutPut(){
-		textOutputArea.value = "";
-		statsOut.value = "";
+		document.getElementById('myOutArea').value = "";
+		document.getElementById("myStatArea").value = "";
+		document.getElementById("countOfChars").value = "";
+//		textOutputArea.value = "";
+//		statsOut.value = "";
 		//location.reload();
 	}
 

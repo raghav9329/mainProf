@@ -3,7 +3,8 @@
 <head>
 </head>
 <body>
-<h1> String Theory - Personal Exercise in JS, etc.</h1><h2> <br/> See & Say Algorithm</h2>
+<h1><nobr> String Theory - Personal Exercise in JS, etc.</nobr></h1><h2> <br/>
+<a href="https://www.rosettacode.org/wiki/Look-and-say_sequence" Title="See&Say" > See & Say Algorithm<a/></h2>
 <p id="demo" >
 
 <FORM NAME="myform" ACTION="" METHOD="GET"> 
@@ -43,17 +44,15 @@ Output:  &nbsp; &nbsp;
 <input type="radio" name="outBox" value="def" CHECKED id="defId"onclick="myOutputSize()" >Default
 &nbsp; &nbsp;
 
-  <!--   The following is CSS that will disable the text area grabber
-  		textarea{
-        resize:none;
-    } -->
-    <td><textarea style="resize:none" name="countOfChars" id="countOfChars" rows="1" cols="8" VALUE="" >  </textarea></td> Number of digits
+<td><textarea style="resize:none" name="countOfChars" id="countOfChars" rows="1" cols="8" VALUE="" >  </textarea></td> Number of digits
 
 
 <br/>
 <td>
-<textarea name="comments" id="myOutArea" rows="4" cols="51" placeholder="Results Out Here"></textarea>
-<textarea name="stats" id="myStatArea" rows="4" cols="6" ></textarea>
+
+<textarea name="comments" id="myOutArea"    rows="4" cols="51" placeholder="Results Out Here"></textarea> 
+<textarea name="stats"    id="myStatArea"   rows="4" cols="6"  placeholder="Statistics Here" ></textarea>
+<textarea name="stats2"   id="myStatArea2"  rows="4" cols="6"  placeholder="Loop Duration Here" ></textarea>
 
 </td>
 
@@ -62,6 +61,7 @@ Output:  &nbsp; &nbsp;
 <!--     <input type="radio" name="outBox" value="def" CHECKED id="defId"onclick="myOutputSize()" >Default<br/>  -->
  <input type="radio" name="outBox" value="small" id="smallId" onclick="myOutputSize()"  > Small <br/>
  <input type="radio" name="outBox" value="medium" id="mediumId" onclick="myOutputSize()"  > Medium <br/>
+
  <input type="radio" name="outBox" value="large" id="largeId" onclick="myOutputSize()"   > Large <br/>
  
  

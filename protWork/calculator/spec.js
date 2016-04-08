@@ -1,4 +1,4 @@
-// spec.js
+// spec.jsG
 
 describe('Protractor Demo App', function() {
 
@@ -121,28 +121,28 @@ it('Activate the Clear Function', function(){
 // [ 'AC', '±', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '—', '1', '2', '3', '+', '0', '.', '=' ] 
 //    0     1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18 
 it('Add a succession of digits equaling a sum', function(){
-	 var myOperation = keyPadList.get(15); //char '+' Addition
-	 var myDigit = keyPadList.get(4); // 'digit 7'
-	 var myEvaluation = keyPadList.get(18); // equals Sign
+	var myOperation = keyPadList.get(15); //char '+' Addition
+	var myDigit = keyPadList.get(4); // 'digit 7'
+	var myEvaluation = keyPadList.get(18); // equals Sign
+	var clearAllEntry = keyPadList.get(0); // AC,  Clear the machine
+	
+	clearAllEntry.click(); // Clear the machine	  
+	var myDigit = keyPadList.get(12); // 'digit 1'
+	myDigit.click(); // submit dig 1
+	myOperation.click(); // submit Addition operation
+
+	var myDigit = keyPadList.get(13); // 'digit 2'
+	myDigit.click();  // submit dig 2
+	myOperation.click(); // submit Addition operation
+
+	var myDigit = keyPadList.get(14); // 'digit 3'
+	myDigit.click();  // submit dig 3
+	myEvaluation.click(); // call evaluation equals sign
 	 
-	 var myDigit = keyPadList.get(12); // 'digit 1'
-	 myDigit.click(); // submit dig 1
-	 myOperation.click(); // submit Addition operation
-
-	 var myDigit = keyPadList.get(13); // 'digit 2'
-	 myDigit.click();  // submit dig 2
-	 myOperation.click(); // submit Addition operation
-
-	 var myDigit = keyPadList.get(14); // 'digit 3'
-	 myDigit.click();  // submit dig 3
-	 myOperation.click(); // submit Addition operation
-
-	 myEvaluation.click(); // call evaluation equals sign
-	 browser.sleep(3800);
 	 
-	 expect(outPutDisplay.get(0).getText()).toBe('6');
-	 console.log("Formula 1 + 2 + 3  Result should be 6");
-	 browser.sleep(3800);
+	expect(outPutDisplay.get(0).getText()).toBe('6');
+	console.log("Formula 1 + 2 + 3  Result should be 6");
+	browser.sleep(3800);
 });// End of Add a succession
 
 });// end of main Describe Protractor Demo App
