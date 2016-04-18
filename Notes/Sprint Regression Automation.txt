@@ -1,0 +1,64 @@
+Sprint Regression Automation
+No Testcases until Sprint 3
+Test will be identified by MPAY value.Test step
+Ex: Sprint 3 212.1,2,3 thatÕs all there are
+Ex: Sprint 3 216.1..4   There are four test steps
+
+Sprint 2016-07
+
+Old Sprint naming format
+
+Sprint  
+Sprint  
+Sprint 15 
+Sprint 14 
+
+Sprint 13 
+Sprint 12 
+
+Sprint 11 
+
+Sprint 10
+
+Sprint 9
+
+Sprint 8
+
+Sprint 7
+
+Sprint 6
+
+Sprint 5
+
+
+Sprint 4 
+
+Sprint 3 Stories are 97, 98, 161, 166
+352
+278
+277
+276
+266
+259
+257 Login as a specific user and view the payment home list of payments 
+  -1.0  will need to search for specifics
+243 Not sure these test apply to the store criteria
+217 login & nav to make payment. make a payment.  No Nickname given at the end.  
+  -1.0 ricksanchez newpas1*  Does this user have links .  ThatÕs what the test is about
+  -1.1 Are there other users who can meet the same requirement showing links ??
+
+216 Security Questions(?? actor Resturant Childhood ??) correct landing page on success  :  This stuff already happens
+
+214.1 Negative test with user who cannot get to MPay.  but is the user UK ok ?
+
+213
+	•	1 UK legit Login, but NO LINK for payments  An un entitled user  LetÕs try adbrainfps2016   Vishal just gave me this user on 4-14-16
+	•	2 User: paulsulyok / newpas1*. Interesting UK user
+	•	 
+212.1 negative Login test
+	•	1 login page commit with non UK uid pid
+	•	1.1 The key may be related to UK login but not UK payment  letÕs use one of the auditReport logins ttoller is the audit user
+	•	 
+	•	1.2 Because the third test gets a login b no Payment
+
+Any tests that do not have the security questions are no longer valid in the std workflow

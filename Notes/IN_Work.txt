@@ -2,6 +2,12 @@ IN_Work
 
 
 
+4/7/16 I need a Note to capture Regression Automation
+
+4/4/16 Starting entry into the Service Api Layer test investigation.  This may become itÕs own note.
+
+
+
 2/9/16 This is not an ongoing list.  
 Add and delete
 

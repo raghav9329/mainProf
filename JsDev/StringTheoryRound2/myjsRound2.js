@@ -6,7 +6,6 @@
 var	textOutputArea = document.getElementById('myOutArea');
 var chkBoxSelection = document.getElementsByName("outputSize").value;
 var statsOut = document.getElementById("myStatArea");
-//var loopThisMany = document.getElementById('myLoopControl').value
 var loopThisMany ;
 var loopHowMany ;
 var digitsByLine;
@@ -28,7 +27,7 @@ function displayResult(displayString, howManyLoops){
 	}
 }// end DISPLAYRESULT
 
-	
+//TODO: Swap the bigger If else block for better readability	
 function startFromOne(){// get the number of times to iterate and 
 						// start working from 1..N output all or just N
 		
@@ -37,11 +36,10 @@ function startFromOne(){// get the number of times to iterate and
 	var tempOutputString = "";
 
 	var catchThis = 1;
-	document.getElementById("myStatArea").value = "1"; // + "\n";
+	var statsOut = document.getElementById("myStatArea").value = "1"; // + "\n";
 	
 	if( ! ( document.getElementById("nthIterChkBox").checked ) ){
-		//tempOutputString = "1, "
-		tempOutputString = "1\n"
+		tempOutputString = "1\n"						// previously was ="1, "
 		
 		for (var x=0; x < loopThisMany ; x++){
 			catchThis = genAString( catchThis, "internal");
@@ -61,9 +59,11 @@ function startFromOne(){// get the number of times to iterate and
 
 }// END Of Function STARTFROMONE
 
+//TODO: Swap the bigger If else block for better readability	
 function startFromInputStr(){// Get the number of times to iterate
 							 // then start generating from the Input String given
-
+	var testDateStart = new Date();
+	var testDateEnd ;
 	this.loopHowMany = document.getElementById('loopHowMany').value
 	var catchThis = document.getElementById('myRandInputStr').value;
 	var	tempOutputString = catchThis + "\n";
@@ -80,6 +80,11 @@ function startFromInputStr(){// Get the number of times to iterate
 			catchThis = genAString( catchThis, "internal");	
 		}
 
+	testDateEnd = new Date();
+	
+	var Difference = testDateEnd - testDateStart ;
+		
+		
 		displayResult(catchThis,loopHowMany);
 
 	}// end if  .... else
@@ -96,96 +101,77 @@ function startFromInputStr(){// Get the number of times to iterate
 	 *  if the call is external then I user the ability to get the document element value
 	 *  ELSE I use the value passed in
 	 */ 	
-function genAString(fcnInput, inputLocation){
+//function genAString(fcnInput, inputLocation){
+function genAString(fcnInput){
 	var modelArray = new Array(10);
-	var myString;
+	var myString = fcnInput.toString();
 	var timeStamp_begin = new Date();		// start the duration counter	
-	var currInputCharAsIndex;
+	var timeStamp_endIterateLast;			// prep to end he duration counter
+	var inputCharAsIndex;
 	var outputLine = "";
 
 	initModelArray(modelArray);
 
-		/* I also need to try this as !=    */
-	if (fcnInput == null){  // is this the right check
-		myString = document.getElementById('myRandInputStr').value;
-	}
-	else
-		myString = fcnInput.toString();
 
 	/* RUN TIME CHECK  Validate input
 	 *                                            */
 	var inputValRslt = validateIntInput(myString);	// So brain-i-ack  what are you
 														// doing with inputValRslt ????
 
-	for ( var x = 0 ; x < myString.length; x++){	// eg: input string 312211 Len is 6  [0..5]
-
+	for ( var x = 0 ; x < myString.length; x++)	// eg: input string 312211 Len is 6  [0..5]
+	{
 	// Look at char at x  set a value           	//       v----- where x is pointing at the 2
-	currInputCharAsIndex = myString.charAt(x);  	// ex: 312211
+		inputCharAsIndex = myString.charAt(x);  	// ex: 312211
 
-	// modelArray[ currInputCharAsIndex ] += 1;		//  I would like to use a[x]++
-	modelArray[ currInputCharAsIndex ] ++;			//  I would like to use a[x]++
+		// modelArray[ inputCharAsIndex ] += 1;		//  I would like to use a[x]++
+		modelArray[ inputCharAsIndex ] ++;			//  I would like to use a[x]++
 
-   // Ending Decision Check
-	if (  currInputCharAsIndex != myString.charAt(x+1)  ){ // we are done recording consectutive chars: Go record the count and Char
-		var myBoolean = true;
-		var localIndex = 0;     // Start at zero
+		if (inputCharAsIndex != myString.charAt(x+1)  ) // we are done recording consectutive chars: Go record the count and Char
+		{	var localIndex = 0;     // Start at zero
+			var myBoolean = true;
 
-		while (myBoolean === true) { // ( get count of specific char ).toString();
+			while (myBoolean === true)  // ( get count of specific char ).toString();
+			{	var tempString = "";
+				
+				if (modelArray[localIndex] > 0 ) 						// Ok we found value > 0 at index
+				{	tempString = (modelArray[localIndex]).toString();	// recored the count at the index
+					tempString = tempString + localIndex.toString();	// string conversions
+					myBoolean = false ;									// Having found the val > 0 at inedex, 
+				}														// Now set to False and Exit the Loop
+				 else                                    				// We did not find value > 0 at index
+				{	localIndex++;                           				// Increment Index
+	            	if (localIndex > 9 )                    				// problem, I went through the entire array and only 
+	            	{		// can I make this secion a little more elegant			// found zeros, now index is array out of bounds
+	            		if(inputValRslt==true)
+	            		{	alert("ERROR: Array Out of bounds problem: localIndex = " + localIndex);
+	            			return(false);
+	            		}
+	            	}	// end if local > 9
+				}		// end else
+			}			// end While
+	
+			outputLine = outputLine + tempString;		/* Append current result 
+			 											 * With Previous results */	
+	
+			initModelArray(modelArray); 				/* Reset & Initialize the array: 
+			 											 * Inside the ending decision check */
   
-			var tempString = "";
-			if (modelArray[localIndex] > 0 ) {					// Ok we found value > 0 at index
-			tempString = (modelArray[localIndex]).toString();	// recored the count at the index
-			tempString = tempString + localIndex.toString();	// string conversions
-			myBoolean = false ;									// Having found the val > 0 at inedex, 
-           														// Now set to False and Exit the Loop
-			} else {                                   			// We did not find value > 0 at index
-            localIndex++;                           			// Increment Index
-            if (localIndex > 9 ){                    			// problem, I went through the entire array and only 
-            // can I make this secion a little more elegant		// found zeros, now index is array out of bounds
-            	if(inputValRslt==true){
-            		alert("ERROR: Array Out of bounds problem: localIndex = " + localIndex);
-            		return(false);
-            	}
-            }									// end if local > 9
-          }										// end else
-		}										// end While
-
-		outputLine = outputLine + tempString;		/* Append current result 
-     											 * With Previous results */	
-
-		initModelArray(modelArray); 				/* Reset & Initialize the array: 
-                                  				 * Inside the ending decision check */
-   
-	}	// end if two chars together check : consecutive chars 
- 
+		}	// end if two chars together check : consecutive chars 
 	}		// end for x < myString.length loop
-  
-  
-//  digitsByLine = outputLine.length;
-//  statsOut = document.getElementById("myStatArea").value + "\n";
-//  document.getElementById("myStatArea").value = statsOut + digitsByLine;
-  
-  /* Ok: We all done.  */
 
-  if (fcnInput == null){  // is this the right check
-	  // from inside, put input and generated string to screen
-
-	  displayResult( outputLine);
-  } else {
 	  // From external call return generated stirng
 	  digitsByLine = outputLine.length;
 	  statsOut = document.getElementById("myStatArea").value + "\n";
 	  document.getElementById("myStatArea").value = statsOut + digitsByLine;
 
-	  var timeStamp_endIterateLast = new Date();
-		
+//	  var timeStamp_endIterateLast = new Date();
+	  timeStamp_endIterateLast = new Date();
 		
 	  loopDuration =  timeStamp_endIterateLast - timeStamp_begin ;
 		
-	  displayResult("0");
+//	  displayResult("0");
 		
 	  return( outputLine );
-  }
 } // end of function genASTring(){}
 
 
