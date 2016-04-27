@@ -9,7 +9,8 @@ Select * from Payment where client_id = 5163755 AND PAYMENT_DATE = TRUNC(SYSDATE
 // adbrain_fps user w/acct 2203
 SELECT SUM(P.AMOUNT)
               FROM PAYMENT P
-              WHERE P.CREATOR_ID = 1460520 AND P.PAYMENT_DATE = TRUNC(SYSDATE)
+              WHERE P.CREATOR_ID = 1460520 AND P.PAYMENT_DATE = TRUNC(SYSDATE);
+              
               AND P.FUNDING_ACCOUNT_IDENTIFIER = 18998240;
 
 // adbrain_fps user w/acct 2211
