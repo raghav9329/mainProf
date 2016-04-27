@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Go and get \$Home command files, script, etc. "
+echo "copying getDiskStructureFile "
+sleep 4
+
+cp ~/getDiskStructureFile .
+
+echo "Done. now doing a git status to check what's changed "
+sleep 3
+git status
+
