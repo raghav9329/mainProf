@@ -1,0 +1,1 @@
+select * from LOGIN_INFO where LOGIN_NAME Like 'adbrain_f%' ;
