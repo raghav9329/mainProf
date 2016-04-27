@@ -8,6 +8,7 @@ set backspace=2		" more powerful backspacing
 set number
 set nowrap
 set ruler
+set mouse=a
 syntax on
 colo koehler
 

@@ -7,7 +7,15 @@ alias cpDotFiles='cp ~/.atkmhrc ~/Mark/Dotfiles ; cp ~/.bash_profile ~/Mark/Dotf
 alias runprotonqa='npm run protractor -- --params.env=qa'
 alias protractqa='npm run protractor -- --params.env=qa'
 alias datestr=' date +%m-%d-%Y_%H:%M:%S'
+alias gs='git status'
 
+#######################
+#
+#
+#
+#
+######################
+alias genGitDiskImage='tree -La 2 > ~/Mark/myDiskStructure'
 ########################
 # 
 # Go cd to directories
@@ -48,3 +56,5 @@ alias how_showHiddenFiles='echo defaults write com.apple.finder AppleShowAllFile
 alias how_HideFiles='echo defaults write com.apple.finder AppleShowAllFiles NO '
 alias how_runProtractor=' echo npm run protractor -- --prams.env=qa'
 alias how_toBecomeRoot='echo $sudo su - <ent> then supply the sudo password  '
+alias how_toDiscardUnstagedChanges='echo git checkout path2/file2/revert'
+alias how_toQaProtractor='echo npm run protractor_qa -- --params.browsers=chrome --params.env=qa --suite=qaOnly'

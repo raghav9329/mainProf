@@ -3,3 +3,5 @@
 	name = Mark Atkinson
 [core]
 	excludefiles = /Users/maatkins/.gitignore
+[push]
+	default = simple

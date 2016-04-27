@@ -8,54 +8,57 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/count
+~Msle0~/\<tree\>
+
+# Last Substitute Search Pattern:
+~MSle0&mockBackend\/authmodal.test.js:
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:wq
 :q
-:w
-:e ../testData/environments
-:e
-:e conf.js
-:w!
+:wq
 :q!
-:kkkkkkkkkkkk
-:e spec.js
-:.,.+1512:38.659:INFO [Chrome 48.0.2564 (Windows 7 0.0.0)]: 
-:.,.+1512:29.202:INFO [launcher]: 
-:.,.+1512:28.814:INFO [karma]: 
-:.,.+1512:28.757:INFO [framework.browserify]: 
-:n
-:e pageObjects/HomePage.js
-:colorscheme
-:N
+:w
+:set nonu
+:set nu
+:e
 :bp
-:colo desert
+:n
+:N
+:aq
+:2,$s/mockBackend\/authmodal.test.js://g
+:1,$s/mockBackend\/authmodal.test.js://g
+:1,$s/mockBackend\/auditTable.test.js://g
+:jjjjj
+:e 
+:w ~/svbWebpayPtorTestList04082016
+:w ~/ptorTestList04082016
+:colo elflord
+:colorscheme desert
 
 # Search String History (newest to oldest):
-?/count
-?/grepal
-?/describe
-?/exit
+? \<tree\>
+?/git
+?/Recovered
+?/npm
+?//
+? mockBackend\/authmodal.test.js:
+? mockBackend\/auditTable.test.js:
+?/asdfa;slkfj
+?/gulp
+?/karma
+?/optional
+?/qa
+?/verifyCan
+?/it(
+?/module.exports
+?/defaultConfiguration
+?/return
+?/it
 ?/loginName
-?/loginname
-?/printNewline
-?/printNewLine
-?/expect
-?/aCount
-?/vi
-?/markNotes
-? \<git\>
-? \<button\>
-?/history
-?/s.c
-? ##################
-?/notes
-? \<alias\>
-?/mld
+?/payment
 
 # Expression History (newest to oldest):
 
@@ -65,1077 +68,902 @@ $
 
 # Registers:
 "0	LINE	0
-	cp ~/theColors .
+		 browser.sleep(3800);
 "1	LINE	0
-	cp 
+	var activityReportPage = require("../pageObjects/ActivityReportPage.js");
 "2	LINE	0
-	 .
+	var activityReportPage = require("../pageObjects/ActivityReportPage.js");
 "3	LINE	0
-			</buildCommand>
+	//var zeroEntitlementsUser = envConfig.zeroEntitlement;// We want UK Payments user with zero Entitlements
 "4	LINE	0
-				</arguments>
+	 */
 "5	LINE	0
-				<arguments>
+	 * Entitlement: Bank User Wi thout a login
 "6	LINE	0
-				<name>org.eclipse.wst.jsdt.core.javascriptValidator</name>
+	/*
 "7	LINE	0
-			<buildCommand>
+	var bankUser = envConfig.zeroEntitlementsUser;// We want UK Payments user with zero Entitlements
 "8	LINE	0
-		<natures>
-			<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
-		</natures>
+	var activityReportPage = require("../pageObjects/ActivityReportPage.js");
 "9	LINE	0
-		excludefiles = /Users/maatkins/.DS_Store
+	
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
 ""-	CHAR	0
-	#
+	protractor_qa script \'protractor protractor_qa.conf.js "--params.browsers=chrome" "--params.env=qa" "--suite=qaOnly"''
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  16  11  ~/MarkGit/DotFiles/getDotFiles
-'1  15  0  ~/MarkGit/DotFiles/getDotFiles
-'2  18  59  ~/MarkGit/DotFiles/getDotFiles
-'3  1  0  ~/MarkGit/DotFiles/getDotFiles
-'4  4  6  ~/MarkGit/DotFiles/getDotFiles
-'5  3  5  ~/MarkGit/DotFiles/getDotFiles
-'6  20  9  ~/MarkGit/DotFiles/getDotFiles
-'7  3299  0  ~/.bash_eternal_history
-'8  8  1  ~/svb-web-payments/.project
-'9  1  0  ~/svb-web-payments/protractor.conf
+'0  48  0  ~/Vagrantfile
+'1  1  0  ~/.svbrc
+'2  60  23  ~/.svbrc
+'3  37  0  ~/.svbrc
+'4  45  0  ~/.svbrc
+'5  1  0  ~/tempTree
+'6  1  0  ~/Mark/treeOutputFile
+'7  1  0  ~/Mark/myDiskStructure
+'8  4  0  ~/getDiskStructureFile
+'9  1723  0  ~/Mark/myDiskStructure
 
 # Jumplist (newest first):
--'  16  11  ~/MarkGit/DotFiles/getDotFiles
--'  1  0  ~/MarkGit/DotFiles/getDotFiles
--'  15  0  ~/MarkGit/DotFiles/getDotFiles
--'  18  59  ~/MarkGit/DotFiles/getDotFiles
--'  4  6  ~/MarkGit/DotFiles/getDotFiles
--'  3  5  ~/MarkGit/DotFiles/getDotFiles
--'  20  9  ~/MarkGit/DotFiles/getDotFiles
--'  11  24  ~/MarkGit/DotFiles/getDotFiles
--'  3299  0  ~/.bash_eternal_history
--'  2  0  ~/.bash_eternal_history
--'  1  0  ~/.bash_eternal_history
--'  333  0  ~/.bash_eternal_history
--'  5095  0  ~/.bash_eternal_history
--'  8  1  ~/svb-web-payments/.project
--'  1  0  ~/svb-web-payments/.project
--'  1  0  ~/svb-web-payments/protractor.conf
--'  9  0  ~/svb-web-payments/.project
--'  9  0  ~/svb-web-payments/integration/utils/intSpecHelper.js
--'  1  0  ~/svb-web-payments/integration/utils/intSpecHelper.js
--'  1  0  ~/svb-web-payments/integration/testData/environments
--'  50  0  ~/test/spec.js
--'  1  0  ~/test/spec.js
--'  1  0  ~/svb-web-payments/spec.js
--'  44  0  ~/svb-web-payments/spec.js
--'  37  0  ~/svb-web-payments/spec.js
--'  47  0  ~/svb-web-payments/spec.js
--'  1  0  ~/svb-web-payments/conf.js
--'  1  0  ~/svb-web-payments/conf
--'  5  41  ~/.gitconfig
--'  1  0  ~/.gitconfig
--'  1  8  ~/.gitignore_global
--'  6  40  ~/.gitconfig
--'  1  8  ~/MarkGit/.gitignore
--'  54  22  ~/.atkmhrc
--'  1  0  ~/.atkmhrc
--'  9  39  ~/.svbrc
+-'  48  0  ~/Vagrantfile
+-'  1  0  ~/Vagrantfile
 -'  1  0  ~/.svbrc
--'  57  18  ~/.atkmhrc
--'  1  0  ~/.bashrc
--'  7  49  ~/test/conf.js
--'  1  0  ~/test/conf.js
--'  8  2  ~/test/conf.js
--'  16  1  ~/test/spec.js
--'  1  0  ~/test/spec
--'  9  0  ~/test/conf.js
--'  3  2  ~/test/conf.js
--'  2  1  ~/test/conf.js
--'  1  0  ~/test/xxx_todo-spec.js.xxx
--'  25  0  ~/test/protractorDemoSpec.js
--'  1  0  ~/test/protractorDemoSpec.js
--'  9  0  ~/test/xxx_todo-spec.js.xxx
--'  1  0  ~/test/oneLIneRem_package.json
--'  15  0  ~/test/package.json
--'  1  0  ~/test/package.json
--'  45  2  ~/test/package.json
--'  23  90  ~/test/package.json
--'  8  32  ~/test/package.json
--'  1  8  ~/svb-web-payments/integration/scenarios/ptor_user4_bacs_chapsScenario.test.js
--'  18  0  ~/svb-web-payments/integration/scenarios/ptor_user4_bacs_chapsScenario.test.js
--'  16  0  ~/svb-web-payments/integration/scenarios/ptor_user4_bacs_chapsScenario.test.js
--'  1  0  ~/test/npm-debug.log
--'  38  0  ~/test/npm-debug.log
--'  34  0  ~/test/npm-debug.log
--'  44  29  ~/test/package.json
--'  79  0  ~/test/package.json
--'  43  0  ~/test/npm-debug.log
--'  41  0  ~/test/npm-debug.log
--'  126  2  ~/test/package.json
--'  137  0  ~/test/package.json
--'  11  54  ~/test/spec.js
--'  38  4  ~/test/spec.js
--'  108  0  ~/svb-web-payments/package.json
--'  1  0  ~/svb-web-payments/package.json
--'  1  0  ~/newFile
--'  5  115  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1457735631
--'  3  194  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1457735631
--'  6  235  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1457735631
--'  1  121  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1457735631
--'  7  496  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1457735631
--'  15  130  ~/newFile
--'  19  151  ~/newFile
--'  17  1102  ~/newFile
--'  8  110  ~/newFile
--'  29  2988  ~/newFile
--'  23  551  ~/newFile
--'  21  171  ~/newFile
--'  13  336  ~/newFile
--'  28  17  ~/newFile
--'  16  78  ~/newFile
--'  6  0  ~/newFile
--'  43  130  ~/newFile
--'  47  151  ~/newFile
--'  45  1102  ~/newFile
--'  36  110  ~/newFile
--'  57  2988  ~/newFile
--'  51  551  ~/newFile
--'  49  171  ~/newFile
+-'  60  23  ~/.svbrc
+-'  37  0  ~/.svbrc
+-'  2  0  ~/.svbrc
+-'  45  0  ~/.svbrc
+-'  1  0  ~/tempTree
+-'  1  0  ~/Mark/treeOutputFile
+-'  1  0  ~/Mark/myDiskStructure
+-'  4  0  ~/getDiskStructureFile
+-'  2  0  ~/getDiskStructureFile
+-'  1  0  ~/getDiskStructureFile
+-'  1723  0  ~/Mark/myDiskStructure
+-'  6  0  ~/getDiskStructureFile
+-'  1  0  ~/mv
+-'  2516  42  ~/Mark/myDiskStructure
+-'  2531  0  ~/Mark/myDiskStructure
+-'  58  0  ~/Mark/myDiskStructure
+-'  2529  0  ~/Mark/myDiskStructure
+-'  5  0  ~/Mark/myDiskStructure
+-'  2  12  ~/.getDiskStructureFile
+-'  1  0  ~/.getDiskStructureFile
+-'  2  9  ~/.getDisStructureFile
+-'  1  0  ~/.getDisStructureFile
+-'  1374  0  ~/Mark/myDiskStructure
+-'  18  58  ~/.svbrc
+-'  40  19  ~/myDiskStructAgain
+-'  1655  19  ~/myDiskStructAgain
+-'  1654  19  ~/myDiskStructAgain
+-'  1628  19  ~/myDiskStructAgain
+-'  1627  19  ~/myDiskStructAgain
+-'  1612  19  ~/myDiskStructAgain
+-'  1611  19  ~/myDiskStructAgain
+-'  1599  19  ~/myDiskStructAgain
+-'  1598  19  ~/myDiskStructAgain
+-'  1584  19  ~/myDiskStructAgain
+-'  1583  19  ~/myDiskStructAgain
+-'  1572  19  ~/myDiskStructAgain
+-'  1571  19  ~/myDiskStructAgain
+-'  1556  19  ~/myDiskStructAgain
+-'  1555  19  ~/myDiskStructAgain
+-'  1543  19  ~/myDiskStructAgain
+-'  1542  19  ~/myDiskStructAgain
+-'  1530  19  ~/myDiskStructAgain
+-'  1529  19  ~/myDiskStructAgain
+-'  1517  19  ~/myDiskStructAgain
+-'  1516  19  ~/myDiskStructAgain
+-'  1505  19  ~/myDiskStructAgain
+-'  1504  19  ~/myDiskStructAgain
+-'  1493  19  ~/myDiskStructAgain
+-'  1492  19  ~/myDiskStructAgain
+-'  1480  19  ~/myDiskStructAgain
+-'  1479  19  ~/myDiskStructAgain
+-'  1468  19  ~/myDiskStructAgain
+-'  1467  19  ~/myDiskStructAgain
+-'  1461  19  ~/myDiskStructAgain
+-'  1453  19  ~/myDiskStructAgain
+-'  1452  19  ~/myDiskStructAgain
+-'  1323  19  ~/myDiskStructAgain
+-'  1322  19  ~/myDiskStructAgain
+-'  1134  58  ~/myDiskStructAgain
+-'  1036  37  ~/myDiskStructAgain
+-'  1033  48  ~/myDiskStructAgain
+-'  1032  48  ~/myDiskStructAgain
+-'  417  25  ~/myDiskStructAgain
+-'  383  23  ~/myDiskStructAgain
+-'  98  19  ~/myDiskStructAgain
+-'  63  11  ~/myDiskStructAgain
+-'  62  11  ~/myDiskStructAgain
+-'  1  0  ~/myDiskStructAgain
+-'  18  18  ~/myDiskStructAgain
+-'  18  0  ~/myDiskStructure
+-'  838  27  ~/myDiskStructure
+-'  713  27  ~/myDiskStructure
+-'  622  18  ~/myDiskStructure
+-'  621  18  ~/myDiskStructure
+-'  620  18  ~/myDiskStructure
+-'  619  18  ~/myDiskStructure
+-'  123  0  ~/myDiskStructure
+-'  1  0  ~/myDiskStructure
+-'  1665  8  ~/myDiskStructure
+-'  1718  0  ~/myDiskStructure
+-'  867  0  ~/myDiskStructure
+-'  715  0  ~/myDiskStructure
+-'  7  0  ~/myDiskStructure
+-'  24  0  ~/myDiskStructure
+-'  9  0  ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing217_1.qa_test.js
+-'  1  0  ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing217_1.qa_test.js
+-'  1  21  ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing216_1.qa_test.js
+-'  21  21  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+-'  16  12  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+-'  9  35  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+-'  1  0  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+-'  104  0  ~/temp-svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
+-'  1  0  ~/temp-svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
+-'  1  0  ~/svb-web-payments/integration/testData/scenarioUsers.js
+-'  146  11  ~/temp-svb-web-payments/integration/testData/scenarioUsers.js
+-'  1  0  ~/.svbrc
 
 # History of marks within files (newest to oldest):
 
-> ~/MarkGit/DotFiles/getDotFiles
-	"	16	11
-	^	16	12
-	.	16	11
-	+	1	11
-	+	2	19
-	+	8	11
-	+	9	16
-	+	10	16
-	+	19	0
-	+	11	0
-	+	12	11
-	+	17	0
-	+	12	12
-	+	13	12
-	+	14	10
-	+	15	16
-	+	17	2
-	+	16	0
-	+	17	0
-	+	16	20
-	+	6	0
-	+	2	26
-	+	7	0
-	+	8	0
-	+	9	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	18	0
-	+	4	38
-	+	16	12
-	+	5	6
-	+	18	56
-	+	20	9
-	+	3	12
-	+	4	12
-	+	2	45
-	+	3	50
-	+	4	5
-	+	3	6
-	+	4	6
-	+	18	59
-	+	7	0
-	+	8	0
-	+	9	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	15	0
-	+	16	11
-
-> ~/.lesshst
-	"	36	0
-
-> ~/.bash_eternal_history
-	"	3299	0
-	.	1	0
-	+	1	0
-
-> ~/svb-web-payments/.project
-	"	8	1
-	.	8	0
-	+	9	0
-	+	8	0
-
-> ~/svb-web-payments/protractor.conf
-	"	1	0
-
-> ~/svb-web-payments/integration/utils/intSpecHelper.js
-	"	9	0
-
-> ~/svb-web-payments/integration/testData/environments.js
-	"	55	0
-
-> ~/svb-web-payments/integration/pageObjects/PayeeSelector.js
-	"	1	0
-	^	1	2
-	.	1	0
-	+	1	0
-
-> ~/svb-web-payments/integration/pageObjects/MakePaymentPage.js
-	"	7	0
-
-> ~/svb-web-payments/integration/pageObjects/HomePage.js
-	"	1	0
-
-> ~/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
-	"	233	0
-
-> ~/svb-web-payments/integration/testData/environments
-	"	1	0
-
-> ~/test/spec.js
-	"	50	0
-	^	16	2
-	.	16	1
-	+	12	3
-	+	11	54
-	+	17	0
-	+	16	1
-
-> ~/svb-web-payments/spec.js
-	"	1	0
-
-> ~/svb-web-payments/conf
-	"	1	0
-
-> ~/svb-web-payments/conf.js
-	"	1	0
-
-> ~/.gitconfig
-	"	5	41
-	^	5	42
-	.	5	41
-	+	6	0
-	+	5	41
-
-> ~/.gitignore_global
-	"	1	8
-	^	1	9
-	.	1	8
-	+	1	8
-
-> ~/MarkGit/.gitignore
-	"	1	8
-	^	1	9
-	.	1	8
-	+	1	8
-
-> ~/.atkmhrc
-	"	54	22
-	^	54	23
-	.	54	22
-	+	23	0
-	+	22	20
-	+	21	0
-	+	20	32
-	+	34	26
-	+	36	21
-	+	64	0
-	+	67	0
-	+	66	0
-	+	67	0
-	+	64	0
-	+	88	0
-	+	35	0
-	+	35	0
-	+	34	0
-	+	35	15
-	+	20	1
-	+	58	0
-	+	57	18
-	+	54	22
+> ~/Vagrantfile
+	"	48	0
 
 > ~/.svbrc
-	"	9	39
-	^	9	40
-	.	9	39
-	+	30	19
-	+	31	19
-	+	32	19
-	+	32	16
-	+	33	16
-	+	34	19
-	+	34	19
-	+	34	19
-	+	34	19
-	+	30	28
-	+	31	21
-	+	31	20
-	+	32	0
-	+	32	0
-	+	32	25
-	+	33	25
-	+	34	28
-	+	34	28
-	+	34	28
-	+	34	28
-	+	34	30
-	+	35	21
-	+	36	25
-	+	37	20
-	+	38	19
-	+	35	28
-	+	36	31
-	+	37	26
-	+	38	26
-	+	30	31
-	+	31	31
-	+	32	28
-	+	33	28
-	+	34	31
-	+	35	31
-	+	36	34
-	+	37	28
+	"	1	0
+	^	60	24
+	.	60	23
+	+	42	19
+	+	42	19
 	+	38	28
-	+	30	5
-	+	31	0
-	+	32	0
-	+	33	0
-	+	34	0
-	+	35	0
-	+	36	0
-	+	37	0
-	+	38	0
-	+	30	34
-	+	31	32
-	+	30	32
-	+	32	30
-	+	33	29
-	+	34	32
-	+	35	31
-	+	36	35
-	+	37	27
-	+	38	27
-	+	31	33
-	+	30	35
-	+	31	35
-	+	33	31
-	+	34	33
-	+	35	32
-	+	37	29
-	+	38	29
-	+	35	33
-	+	34	33
-	+	35	33
-	+	34	25
-	+	35	25
-	+	34	25
-	+	35	32
-	+	34	32
-	+	35	31
-	+	37	30
-	+	38	26
-	+	39	0
-	+	38	27
-	+	30	61
-	+	31	61
-	+	32	55
-	+	33	54
-	+	34	61
-	+	35	59
-	+	36	63
-	+	37	55
-	+	38	56
-	+	30	26
-	+	31	26
-	+	32	23
-	+	33	23
-	+	34	26
-	+	35	25
-	+	36	28
-	+	37	27
-	+	38	27
-	+	37	23
-	+	38	23
+	+	39	21
+	+	39	20
 	+	40	0
+	+	40	0
+	+	40	25
+	+	41	25
+	+	42	28
+	+	42	28
+	+	42	28
+	+	42	28
+	+	42	30
+	+	43	21
+	+	44	25
+	+	45	20
+	+	46	19
+	+	43	28
+	+	44	31
+	+	45	26
+	+	46	26
+	+	38	31
+	+	39	31
+	+	40	28
+	+	41	28
+	+	42	31
+	+	43	31
+	+	44	34
+	+	45	28
+	+	46	28
+	+	38	5
+	+	39	0
+	+	40	0
+	+	41	0
+	+	42	0
+	+	43	0
+	+	44	0
+	+	45	0
+	+	46	0
+	+	38	34
+	+	39	32
+	+	38	32
+	+	40	30
+	+	41	29
+	+	42	32
+	+	43	31
+	+	44	35
+	+	45	27
+	+	46	27
+	+	39	33
+	+	38	35
+	+	39	35
+	+	41	31
+	+	42	33
+	+	43	32
+	+	45	29
+	+	46	29
+	+	43	33
+	+	42	33
+	+	43	33
+	+	42	25
+	+	43	25
+	+	42	25
+	+	43	32
+	+	42	32
+	+	43	31
+	+	45	30
+	+	46	26
+	+	47	0
+	+	46	27
+	+	38	61
+	+	39	61
+	+	40	55
+	+	41	54
+	+	42	61
+	+	43	59
+	+	44	63
+	+	45	55
+	+	46	56
+	+	38	26
+	+	39	26
+	+	40	23
+	+	41	23
+	+	42	26
+	+	43	25
+	+	44	28
+	+	45	27
+	+	46	27
+	+	45	23
+	+	46	23
+	+	48	0
 	+	9	39
-	e	29	76
-
-> ~/.bashrc
-	"	1	0
-	^	134	75
-	.	134	2
-	+	21	14
-	+	22	18
-	+	130	33
-	+	108	0
-	+	116	0
-	+	108	17
-	+	109	15
-	+	3	0
-	+	111	0
-	+	112	15
-	+	113	13
-	+	130	9
-	+	18	0
-	+	17	2
-	+	20	0
-	+	21	0
-	+	22	0
-	+	24	55
-	+	147	0
-	+	134	2
-
-> ~/svb-web-payments/integration/scenarios/ptor_user5_allScenario.test.js
-	"	33	0
-
-> ~/.bash_profile
-	"	1	0
-	^	11	16
-	.	11	15
-	+	8	16
-	+	9	0
-	+	8	1
-	+	9	16
 	+	10	0
-	+	9	84
-	+	10	16
+	+	59	73
+	+	18	58
+	+	60	147
+	+	60	30
+	+	60	111
+	+	60	23
+	e	37	76
+
+> ~/tempTree
+	"	1	0
+
+> ~/Mark/treeOutputFile
+	"	1	0
+
+> ~/Mark/myDiskStructure
+	"	1	0
+
+> ~/getDiskStructureFile
+	"	4	0
+	^	2	1
+	.	6	0
+	+	5	0
 	+	6	0
-	+	2	75
-	+	3	28
-	+	4	119
-	+	5	123
-	+	11	15
-
-> ~/test/conf.js
-	"	5	0
-	^	7	53
-	.	7	49
-	+	2	18
-	+	3	1
-	+	3	46
-	+	9	0
-	+	3	0
-	+	9	0
-	+	8	2
-	+	7	49
-
-> ~/test/spec
-	"	1	0
-
-> ~/test/xxx_todo-spec.js.xxx
-	"	1	0
-
-> ~/test/protractorDemoSpec.js
-	"	25	0
-
-> ~/test/oneLIneRem_package.json
-	"	1	0
-
-> ~/test/package.json
-	"	15	0
-	^	44	30
-	.	45	0
 	+	2	0
-	+	2	17
-	+	3	22
-	+	8	36
-	+	45	0
-	+	45	0
-	+	44	29
-	+	8	32
-	+	23	90
-	+	44	29
-	+	45	0
+	+	5	0
+	+	6	0
 
-> ~/svb-web-payments/integration/scenarios/ptor_user4_bacs_chapsScenario.test.js
-	"	1	8
+> ~/mv
+	"	1	0
 
-> ~/test/npm-debug.log
+> ~/.getDiskStructureFile
+	"	2	12
+	^	2	14
+	.	2	12
+	+	2	49
+	+	4	48
+	+	2	12
+
+> ~/.getDisStructureFile
+	"	2	9
+	^	2	10
+	.	2	9
+	+	1	10
+	+	2	9
+
+> ~/myDiskStructAgain
+	"	40	19
+
+> ~/myDiskStructure
+	"	18	0
+	.	1718	0
+	+	1719	0
+	+	1718	0
+
+> ~/temp-svb-web-payments/package.json
 	"	1	0
 
 > ~/svb-web-payments/package.json
-	"	108	0
-
-> ~/newFile
-	"	1	0
-	^	15	131
-	.	15	76
-	+	57	75
-	+	41	231
-	+	41	842
-	+	42	0
-	+	43	104
-	+	43	196
-	+	44	0
-	+	45	191
-	+	46	0
-	+	47	44
-	+	48	0
-	+	49	171
-	+	49	0
-	+	49	342
-	+	51	150
-	+	51	7
-	+	51	99
-	+	51	404
-	+	51	488
-	+	50	1
-	+	51	564
-	+	52	158
-	+	53	0
-	+	54	0
-	+	55	1079
-	+	56	187
-	+	57	184
-	+	57	2962
-	+	35	0
-	+	36	72
-	+	43	1276
-	+	44	8
-	+	45	1380
-	+	45	0
-	+	46	31
-	+	47	122
-	+	43	170
-	+	43	76
-	+	1	2
-	+	2	53
-	+	3	17
-	+	5	57
-	+	7	0
-	+	8	857
-	+	8	0
-	+	8	870
-	+	9	0
-	+	10	0
-	+	11	0
-	+	12	10
-	+	13	26
-	+	15	28
-	+	16	66
-	+	17	131
-	+	19	243
-	+	21	12
-	+	23	17
-	+	23	25
-	+	24	12
-	+	26	7
-	+	27	51
-	+	28	17
-	+	29	75
-	+	13	231
-	+	13	842
-	+	14	0
-	+	15	104
-	+	15	196
-	+	16	0
-	+	17	191
-	+	18	0
-	+	19	44
-	+	20	0
-	+	21	171
-	+	21	0
-	+	21	342
-	+	23	150
-	+	23	7
-	+	23	99
-	+	23	404
-	+	23	488
-	+	22	1
-	+	23	564
-	+	24	158
+	"	26	55
+	^	24	56
+	.	24	0
 	+	25	0
-	+	26	0
-	+	27	1079
-	+	28	187
-	+	29	184
-	+	29	2962
-	+	7	0
-	+	8	72
-	+	15	1276
-	+	16	8
-	+	17	1380
-	+	17	0
-	+	18	31
-	+	19	122
-	+	15	170
-	+	15	76
-	a	27	62
-	b	1	1
-	p	6	0
-
-> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1457735631
-	"	5	115
-	^	3	131
-	.	3	76
-	+	1	13
-	+	3	75
-	+	1	231
-	+	1	842
-	+	2	0
-	+	3	104
-	+	3	248
-	+	3	191
-	+	4	38
-	+	7	133
-	+	7	0
-	+	7	451
-	+	7	7
-	+	7	404
-	+	7	488
-	+	5	650
-	+	6	48
-	+	5	1606
-	+	5	0
-	+	6	3399
-	+	1	83
-	+	3	1327
-	+	4	249
-	+	5	85
-	+	6	919
-	+	6	208
-	+	3	170
-	+	3	76
-	a	6	69
-
-> ~/svb-scheduler-payments/src/test/java/com/svb/murano/payments/model/PayeeTest.java
-	"	41	0
-
-> ~/svb-scheduler-payments/src/test/java/com/svb/murano/payments/PaymentStatusTest.java
-	"	32	0
-
-> ~/svb-scheduler-payments/src/main/java/com/svb/murano/scheduler/PaymentPostSchedulerService.java
-	"	83	0
-
-> ~/svb-scheduler-payments/src/main/java/com/svb/murano/payments/model/Payee.java
-	"	54	0
-
-> ~/svb-scheduler-payments/src/main/java/com/svb/murano/payments/model/Payment.java
-	"	3	0
-
-> ~/svb-scheduler-payments/src/main/java/com/svb/murano/payments/model/User.java
-	"	1	0
-
-> ~/svb-scheduler-payments/src/main/java/com/svb/murano/payments/PaymentStatus.java
-	"	64	0
-
-> ~/svb-scheduler-payments/src/main/java/com/svb/murano/common/web/listener/MuranoServletContextListener.java
-	"	40	0
-
-> ~/svb-scheduler-payments/src/main/java/com/svb/murano/common/web/listener/MuranoServletContextListenerHelper.java
-	"	96	0
-
-> ~/svb-web-payments/app/src/pages/makePayment/MakePaymentPage.test.js
-	"	108	0
-
-> ~/Mark/README.md
-	"	3	60
-	^	3	61
-	.	3	60
-	+	3	60
-
-> ~/MarkGit/README.md
-	"	5	3
-	^	5	4
-	.	5	3
-	+	5	3
-
-> ~/Mark/javascriptDev/firstTestDir03102016/file2
-	"	12	11
-	^	12	12
-	.	12	11
-	+	7	16
-	+	2	0
-	+	12	11
-
-> ~/Mark/javascriptDev/firstTestDir03102016/file1
-	"	6	37
-	^	6	38
-	.	6	37
-	+	14	9
-	+	6	37
-
-> ~/Mark/javascriptDev/firstProj02252015/initPage.js
-	"	8	27
-	^	8	28
-	.	8	27
-	+	8	27
-
-> ~/Mark/javascriptDev/firstProj02252015/htmlTest2.html
-	"	12	24
-	^	12	25
-	.	12	24
-	+	12	24
-
-> ~/svb-web-payments/app/src/pages/makePayment/MakePaymentPage.js
-	"	148	0
-
-> ~/svb-web-payments/protractor.conf.js
-	"	3	0
-
-> ~/svb-web-payments/integration/pageObjects/Home
-	"	1	0
-
-> pageObjects/HomePage.js
-	"	1	0
-
-> ~/Mark/Notes/.git/MERGE_MSG
-	"	1	0
-
-> ~/Mark/Notes/script
-	"	37	6
-	^	20	7
-	.	35	6
-	+	1	11
-	+	6	0
-	+	1	120
-	+	2	0
-	+	3	0
-	+	4	0
-	+	4	0
-	+	5	0
-	+	1	72
-	+	1	118
-	+	1	150
-	+	3	29
-	+	4	14
-	+	3	7
-	+	4	30
-	+	3	0
-	+	6	11
-	+	3	10
-	+	6	15
-	+	1	14
-	+	1	73
-	+	1	119
-	+	2	0
-	+	31	15
-	+	6	0
-	+	8	0
-	+	31	0
-	+	6	9
-	+	8	8
-	+	25	0
-	+	6	0
-	+	16	14
-	+	8	0
-	+	16	0
-	+	31	0
-	+	6	0
-	+	8	0
-	+	16	0
-	+	7	22
-	+	11	0
-	+	9	6
 	+	23	0
-	+	11	19
-	+	12	0
-	+	13	6
-	+	22	22
 	+	24	0
-	+	35	7
-	+	28	6
-	+	34	6
-	+	35	0
-	+	30	3
-	+	32	0
-	+	33	4
-	+	35	0
-	+	33	0
-	+	7	18
-	+	9	6
-	+	13	6
-	+	18	6
-	+	20	6
-	+	26	15
-	+	28	6
-	+	35	6
 
-> ~/Mark/oneTabOut/out
+> ~/.atkmhrc
 	"	1	0
 
-> ~/Mark/javascriptDev/firstProj02252015/myjs.js
-	"	124	12
-	^	124	13
-	.	124	12
-	+	30	91
-	+	51	33
-	+	59	20
-	+	51	44
-	+	59	81
-	+	60	28
-	+	59	48
-	+	62	7
-	+	59	23
-	+	62	0
-	+	61	0
-	+	51	33
-	+	52	0
-	+	59	83
-	+	55	0
-	+	53	38
-	+	54	44
-	+	53	43
-	+	57	8
-	+	63	3
-	+	32	0
-	+	48	4
-	+	31	13
-	+	43	3
-	+	38	18
-	+	33	39
-	+	34	37
-	+	37	39
-	+	38	19
-	+	43	14
-	+	36	4
-	+	35	15
-	+	43	13
-	+	34	4
-	+	47	30
-	+	46	38
-	+	38	31
-	+	39	32
-	+	43	9
-	+	42	0
-	+	43	0
-	+	41	22
-	+	49	17
-	+	50	1
-	+	123	5
-	+	123	13
-	+	124	12
+> ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing217_1.qa_test.js
+	"	9	0
+	.	9	0
+	+	1	90
+	+	3	0
+	+	2	1
+	+	3	1
+	+	6	13
+	+	8	51
+	+	13	0
+	+	12	0
+	+	9	0
 
-> ~/svb-web-payments/app/src/pages/paymentsHome/paymentsHome.test.js
-	"	46	0
+> ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing216_1.qa_test.js
+	"	1	21
+	^	1	22
+	.	1	21
+	+	1	21
 
-> ~/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
-	"	229	0
+> ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+	"	21	21
+	^	19	33
+	.	19	32
+	+	6	0
+	+	4	0
+	+	9	41
+	+	15	0
+	+	21	2
+	+	16	57
+	+	18	0
+	+	19	0
+	+	17	0
+	+	16	57
+	+	19	29
+	+	21	21
+	+	19	32
 
-> ~/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
-	"	88	0
+> ~/temp-svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
+	"	104	0
 
 > ~/svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
-	"	81	47
+	"	1	12
 
-> ~/svb-web-payments/app/src/pages/index.js
+> ~/svb-web-payments/integration/testData/scenarioUsers.js
+	"	1	0
+	^	147	24
+	.	146	0
+	+	100	0
+	+	135	12
+	+	136	1
+	+	135	11
+	+	136	12
+	+	137	1
+	+	143	24
+	+	148	0
+	+	151	0
+	+	151	0
+	+	146	13
+	+	148	1
+	+	147	23
+	+	148	0
+	+	146	0
+
+> ~/temp-svb-web-payments/integration/testData/scenarioUsers.js
+	"	146	11
+	^	12	11
+	.	12	0
+	+	12	0
+
+> ~/svb-web-payments/integration/testData/environments.js
+	"	52	0
+	^	45	59
+	.	46	0
+	+	41	6
+	+	43	0
+	+	43	0
+	+	44	46
+	+	45	56
+	+	44	0
+	+	46	0
+
+> ~/temp-svb-web-payments/integration/testData/environments.js
+	"	52	1
+	^	11	70
+	.	39	0
+	+	11	0
+	+	25	0
+	+	39	0
+
+> ~/svb-web-payments/integration/qaScenarios/nonUkPymtsBankUser212_2.qa_test.js
+	"	18	0
+
+> ~/svb-web-payments/integration/qaScenarios/non
 	"	1	0
 
-> ~/svb-web-payments/app/src/app.js
-	"	71	0
+> ~/svb-web-payments/integration/scenarios/ttoller_bankUser.test.js
+	"	1	0
 
-> ~/svb-web-payments/config/qa/config.js
-	"	20	0
+> ~/svb-web-payments/protractor_qa.conf.js
+	"	40	35
+	^	40	36
+	.	40	35
+	+	36	0
+	+	39	2
+	+	40	1
+	+	38	3
+	+	40	7
+	+	43	14
+	+	40	45
+	+	40	53
+	+	40	52
+	+	41	0
+	+	40	35
 
-> ~/svb-web-payments/node_modules/jasmine-core/lib/console/console.js
-	"	84	0
+> ~/svb-web-payments/integration/qaScenarios/ptor_user2_AllScen.qa_test.js
+	"	1	0
+	^	42	78
+	.	42	78
+	+	46	1
+	+	36	3
+	+	46	0
+	+	31	1
+	+	37	1
+	+	38	0
+	+	35	0
+	+	36	0
+	+	34	24
+	+	44	1
+	+	39	7
+	+	31	74
+	+	40	3
+	+	43	3
+	+	42	78
 
-> ~/svb-web-payments/node_modules/jasmine-core/README.md
-	"	73	0
+> ~/svb-service-payments/src/test/java/com/svb/murano/payments/rules/AccountDailyCumLimitRuleTest.java
+	"	85	0
 
-> ~/svb-web-payments/scripts/checkoutVersionForEnv.js
-	"	51	0
+> ~/svb-service-payments/src/test/java/com/svb/murano/payments/rules/CompanyDailyTransactionLimitRuleTest.java
+	"	154	0
 
-> ~/svb-web-payments/scripts/installForBuildBox.js
-	"	2	0
+> ~/svb-service-payments/src/test/java/com/svb/murano/payments/rules/MinPaymentAmountRuleTest.java
+	"	1	0
 
-> ~/Mark/xxxx_3_7_12/script
-	"	4	37
-	^	4	38
-	.	4	37
-	+	4	37
+> ~/svb-service-payments/src/test/java/com/svb/murano/payments/rules/PaymentTypeMaxAmountRuleTest.java
+	"	1	0
+
+> ~/svb-service-payments/src/test/resources/mockData/userInfo.json
+	"	48	18
+
+> ~/svb-service-payments/src/main/java/com/svb/murano/payments/rules/AccountDailyCumLimitRule.java
+	"	1	0
+
+> ~/svb-service-payments/src/main/java/com/svb/murano/payments/rules/CompanyDailyTransactionLimitRule.java
+	"	1	0
+
+> ~/svb-service-payments/src/main/java/com/svb/murano/payments/rules/IPaymentValidationRule.java
+	"	1	0
+
+> ~/svb-service-payments/src/main/java/com/svb/murano/payments/rules/MinPaymentAmountRule.java
+	"	1	0
+
+> ~/svb-service-payments/src/main/java/com/svb/murano/payments/rules/PaymentTypeMaxAmountRule.java
+	"	1	0
+
+> ~/svb-service-payments/src/main/java/com/svb/murano/payments/rules/TransactionLimitRule.java
+	"	1	0
+	^	1	1
+	.	1	1
+	+	1	1
+
+> ~/svb-service-payments/src/main/java/com/svb/murano/accounts/model/Account.java
+	"	88	0
+
+> ~/svb-service-payments/src/main/java/com/svb/murano/accounts/client/AccountClient.java
+	"	177	0
+
+> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1460194493
+	"	1	0
+	.	98	0
+	+	50	0
+	+	51	0
+	+	51	0
+	+	51	0
+	+	52	0
+	+	53	0
+	+	53	0
+	+	53	0
+	+	54	0
+	+	55	0
+	+	56	0
+	+	57	0
+	+	58	0
+	+	59	0
+	+	60	0
+	+	60	0
+	+	61	0
+	+	62	0
+	+	63	0
+	+	64	0
+	+	65	0
+	+	66	0
+	+	67	0
+	+	67	0
+	+	75	0
+	+	76	0
+	+	77	0
+	+	78	0
+	+	79	0
+	+	80	0
+	+	80	0
+	+	81	0
+	+	81	0
+	+	82	0
+	+	83	0
+	+	84	0
+	+	85	0
+	+	86	0
+	+	87	0
+	+	87	0
+	+	87	0
+	+	87	0
+	+	87	0
+	+	88	0
+	+	89	0
+	+	90	0
+	+	91	0
+	+	92	0
+	+	93	0
+	+	94	0
+	+	95	0
+	+	96	0
+	+	97	0
+	+	98	0
+	+	98	0
+	+	99	0
+	+	100	0
+	+	101	0
+	+	102	0
+	+	103	0
+	+	104	0
+	+	105	0
+	+	106	0
+	+	107	0
+	+	108	0
+	+	109	0
+	+	110	0
+	+	111	0
+	+	112	0
+	+	113	0
+	+	114	0
+	+	115	0
+	+	116	0
+	+	117	0
+	+	118	0
+	+	119	0
+	+	120	0
+	+	121	0
+	+	122	0
+	+	123	0
+	+	123	0
+	+	124	0
+	+	125	0
+	+	126	0
+	+	127	0
+	+	127	0
+	+	128	0
+	+	127	0
+	+	123	0
+	+	87	0
+	+	9	0
+	+	10	0
+	+	14	0
+	+	51	0
+	+	53	0
+	+	60	0
+	+	67	0
+	+	80	0
+	+	81	0
+	+	98	0
+	o	1	0
+
+> ~/svb-web-payments/protractor.conf.js
+	"	48	2
+
+> ~/svb-web-payments/npm-shrinkwrap.json
+	"	1331	0
 
 > ~/svb-web-payments/gulpfile.js
-	"	15	0
+	"	5	0
 
-> ~/Mark/Notes/testScript
-	"	23	7
-	^	23	18
-	.	23	7
-	+	6	0
-	+	11	0
-	+	9	11
-	+	12	15
-	+	16	0
-	+	14	11
-	+	18	25
-	+	20	11
-	+	7	12
-	+	12	12
-	+	18	12
-	+	9	6
-	+	14	6
-	+	20	6
-	+	12	21
-	+	23	17
-	+	8	14
-	+	9	6
-	+	13	14
-	+	14	6
-	+	19	14
-	+	20	6
-	+	23	7
+> ~/svb-web-payments/karma/karma-base.conf.js
+	"	62	0
+	.	1	0
+	+	1	0
 
-> ~/Mark/Notes/README.txt
-	"	1	0
-	^	1	358
-	.	1	357
-	+	1	357
-
-> ~/Mark/Notes/JiraTicket_EntrySpaceÂ .txt
-	"	1	0
-	^	1	23
-
-> ~/Mark/Dotfiles/script
-	"	16	11
-	^	16	12
-	.	16	11
-	+	16	11
-
-> ~/.bash_history
-	"	518	0
-
-> ~/svbrc
+> ~/svb-web-payments/karma/karma-coverage.conf.js
 	"	1	0
 
-> ~/Mark/Notes/General Notes 1:4:16.txt
-	"	1	20
-	^	1	21
-	.	1	20
-	+	1	20
+> ~/svb-web-payments/karma/karma.conf.js
+	"	1	0
 
-> ~/Mark/Notes/IN_Work.txt
+> ~/svb-web-payments/integration/database/econnectScripts.js
+	"	1	0
+
+> ~/svb-web-payments/integration/database/entitlementServiceScripts.js
+	"	1	0
+
+> ~/svb-web-payments/integration/database/holidayCalendarScripts.js
+	"	1	0
+
+> ~/svb-web-payments/integration/database/oracleHelper.js
+	"	1	0
+
+> ~/svb-web-payments/integration/database/paymentServiceScripts.js
+	"	1	0
+
+> ~/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+	"	97	0
+
+> ~/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
+	"	76	0
+
+> ~/svb-web-payments/integration/scenarios/ooba_payment.test.js
+	"	49	0
+
+> ~/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+	"	49	0
+
+> ~/svb-web-payments/integration/scenarios/paymentSubmission.test.db.js
+	"	1	0
+
+> ~/svb-web-payments/integration/scenarios/ptor_user2_AllScen.qa_test.js
+	"	1	0
+	.	45	0
+	+	44	0
+	+	45	0
+	+	45	0
+	+	45	0
+	+	45	0
+
+> ~/svb-web-payments/integration/scenarios/ptor_user5_allScenario.test.js
+	"	68	4
+
+> ~/Mark/protWork/calculator/spec.js
+	"	129	43
+	^	129	44
+	.	129	43
+	+	115	0
+	+	114	0
+	+	116	0
+	+	117	0
+	+	149	0
+	+	117	26
+	+	102	68
+	+	78	44
+	+	77	49
+	+	79	54
+	+	80	33
+	+	81	50
+	+	82	34
+	+	83	53
+	+	73	100
+	+	111	0
+	+	118	5
+	+	148	2
+	+	110	0
+	+	148	45
+	+	118	0
+	+	120	0
+	+	120	0
+	+	124	0
+	+	123	2
+	+	124	28
+	+	124	48
+	+	128	2
+	+	130	46
+	+	131	33
+	+	124	58
+	+	132	50
+	+	133	0
+	+	132	50
+	+	134	32
+	+	135	34
+	+	140	0
+	+	137	0
+	+	124	0
+	+	132	40
+	+	136	0
+	+	138	0
+	+	134	46
+	+	138	46
+	+	139	34
+	+	140	0
+	+	85	0
+	+	141	1
+	+	142	47
+	+	144	30
+	+	149	0
+	+	121	0
+	+	124	0
+	+	146	0
+	+	124	0
+	+	123	55
+	+	145	16
+	+	142	47
+	+	141	0
+	+	143	1
+	+	140	1
+	+	1	10
+	+	140	0
+	+	142	0
+	+	127	65
+	+	131	0
+	+	128	2
+	+	124	1
+	+	125	1
+	+	126	1
+	+	127	1
+	+	130	1
+	+	131	1
+	+	132	1
+	+	134	0
+	+	135	0
+	+	136	0
+	+	138	0
+	+	139	0
+	+	140	0
+	+	143	0
+	+	144	0
+	+	145	0
+	+	144	0
+	+	143	0
+	+	140	0
+	+	139	0
+	+	138	0
+	+	136	0
+	+	135	0
+	+	134	1
+	+	135	1
+	+	136	1
+	+	138	1
+	+	139	1
+	+	140	1
+	+	143	1
+	+	144	1
+	+	145	1
+	+	129	43
+
+> ~/svb-econnect-services-mock/coherence_3.7.1.12/bin/cache-server.cmd
+	"	2	0
+
+> ~/svb-service-accounts/sonar-project.properties
+	"	62	1
+	^	62	2
+	.	62	0
+	+	62	0
+
+> ~/Mark/protWork/calculator/spec
+	"	1	0
+
+> ~/Mark/protWork/calculator/juliemr_github_spec.js
+	"	1	11
+	^	1	12
+	.	1	11
+	+	1	11
+
+> ~/Mark/protWork/calculator/spec.js.save
+	"	15	26
+	^	15	27
+	.	15	26
+	+	15	26
+
+> ~/svb-scheduler-payments/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerHelperTest.java
+	"	1	0
+
+> ~/svb-scheduler-payments/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerTest.java
+	"	132	0
+
+> ~/svb-scheduler-payments/src/test/java/com/svb/murano/payments/PaymentStatusTest.java
+	"	1	1
+
+> ~/MarkGit/.git/config
+	"	6	0
+	.	20	0
+	+	20	0
+
+> ~/MarkGit/.git/index
+	"	1	0
+
+> ~/MarkGit/.git/hooks/applypatch-msg.sample
+	"	1	0
+
+> ~/MarkGit/.git/hooks/commit-msg.sample
+	"	1	0
+
+> ~/MarkGit/.git/hooks/post-update.sample
+	"	1	0
+
+> ~/MarkGit/.git/hooks/pre-applypatch.sample
+	"	1	0
+
+> ~/MarkGit/.git/hooks/pre-commit.sample
+	"	1	0
+
+> ~/MarkGit/.git/hooks/pre-push.sample
+	"	53	0
+
+> ~/MarkGit/.git/hooks/pre-rebase.sample
+	"	1	0
+
+> ~/MarkGit/.git/hooks/prepare-commit-msg.sample
+	"	1	0
+
+> ~/MarkGit/.git/hooks/update.sample
+	"	1	0
+
+> ~/MarkGit/.git/MERGE_MSG
+	"	2	0
+
+> ~/Mark/SVB_Notes_tmp/.git/MERGE_MSG
+	"	1	0
+
+> ~/Mark/SVB_Notes/.git/config
+	"	2	26
+
+> ~/Mark/Notes/.git/COMMIT_EDITMSG
+	"	1	0
+
+> ~/Mark/Notes/.git/FETCH_HEAD
+	"	1	0
+
+> ~/Mark/Notes/.git/HEAD
+	"	1	0
+
+> ~/Mark/Notes/.git/ORIG_HEAD
+	"	1	0
+
+> ~/Mark/Notes/.git/config
+	"	1	0
+
+> ~/Mark/Notes/.gitignore
+	"	1	8
+	^	1	9
+	.	1	8
+	+	1	8
+
+> ~/tmp/TempGitMoveCopy/Notes/.git/COMMIT_EDITMSG
+	"	1	0
+
+> ~/tmp/TempGitMoveCopy/Notes/.git/FETCH_HEAD
+	"	1	0
+
+> ~/tmp/TempGitMoveCopy/Notes/.git/HEAD
+	"	1	0
+
+> ~/tmp/TempGitMoveCopy/Notes/.git/ORIG_HEAD
+	"	1	0
+
+> ~/tmp/TempGitMoveCopy/Notes/.git/config
+	"	1	0
+
+> ~/tmp/TempGitMoveCopy/Notes/.git/description
+	"	1	0
+
+> ~/tmp/TempGitMoveCopy/Notes/.git/index
+	"	1	0
+
+> ~/tmp/TempGitMoveCopy/Notes/.git/packed-refs
+	"	1	0
+
+> ~/MarkGit/Notes/General Notes.txt
+	"	1	13
+	^	1	14
+	.	1	14
+	+	1	14
+
+> ~/MarkGit/Notes/IN_Work.txt
 	"	1	7
 	^	1	8
 	.	1	7
 	+	1	7
 
-> ~/Mark/Notes/Jira Notes Searches.txt
-	"	1	19
-	^	1	20
-	.	1	20
-	+	1	20
-
-> ~/Mark/Notes/JustText.txt
-	"	1	8
-	^	1	9
-	.	1	8
-	+	1	8
-
-> ~/Mark/Notes/Testing Notes-.txt
-	"	1	14
-	^	1	15
-	.	1	14
-	+	1	14
-
-> ~/Mark/Notes/TmpTicket_place.txt
-	"	1	55
-	^	1	55
-	.	1	55
-	+	1	55
-
-> ~/Mark/Notes/ToDo_General.txt
-	"	1	12
-	^	1	13
-	.	1	12
-	+	1	12
-
-> ~/Mark/Notes/URLs Go back to.txt
-	"	1	15
-	^	1	16
-	.	1	15
-	+	1	15
-
-> ~/Mark/Notes/Work Hours.txt
-	"	1	10
-	^	1	11
-	.	1	10
-	+	1	10
-
-> ~/Mark/Notes/X Jira Sprint 15 Notes-.txt
-	"	1	23
-	^	1	24
-	.	1	23
-	+	1	23
-
-> ~/Mark/Notes/XX Help desk.txt
-	"	1	12
-	^	1	13
-	.	1	12
-	+	1	12
-
-> ~/Mark/Notes/XX Jira Sprint 12 Notes-Â .txt
-	"	1	26
-	^	1	27
-	.	1	26
-	+	1	26
-
-> ~/Mark/Notes/XX Jira Sprint 12 Stories-Â .txt
-	"	1	29
-	^	1	30
-	.	1	29
-	+	1	29
-
-> ~/Mark/Notes/XX Jira Sprint 13 Notes.txt
-	"	1	23
-	^	1	24
-	.	1	23
-	+	1	23
-
-> ~/Mark/Notes/XX Jira Sprint 14 Notes-.txt
-	"	1	24
-	^	1	25
-	.	1	24
-	+	1	24
-
-> ~/Mark/Notes/XX Jire Sprint 13 Notes.txt
-	"	1	67
-	.	1	67
-	+	1	67
-
-> ~/Mark/Notes/XX Murano Proj focus.txt
-	"	1	31
-	.	1	31
-	+	1	31
-
-> ~/Mark/Notes/XX SprintPlan 1:6:16.txt
-	"	1	65
-	.	1	65
-	+	1	65
-
-> ~/Mark/Notes/XXX Murano Proj focus.txt
-	"	1	21
-	^	1	22
-	.	1	21
-	+	1	21
-
-> ~/Mark/Notes/XXX SprintPlan 1:6:16.txt
-	"	1	21
-	^	1	22
-	.	1	21
-	+	1	21
-
-> ~/Mark/Notes/XXX_TmpTicket_place.txt
-	"	1	19
-	^	1	20
-	.	1	19
-	+	1	19
-
-> ~/Desktop/Eval/src/dcConsoleAutoTest/A10_Debug.java
-	"	50	0
+> ~/MarkGit/Notes/Interesting Protractor Tutorial.txt
+	"	110	65
+	^	110	66
+	.	110	65
+	+	1	80
+	+	110	65
