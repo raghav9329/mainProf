@@ -1,4 +1,4 @@
-select * from USER_ENTITLEMENT where USER_ID = 1460520 ;
+select * from USER_ENTITLEMENT where USER_ID = 1460531 ;
 
 select * from USER_ENTITLEMENT where CLIENT_ID = 5163755;
 
