@@ -9,21 +9,25 @@ select CLIENT_ID from EC_MUR_USER;
 select USER_ID, LOGIN_NAME, CLIENT_ID From EC_MUR_USER 
 Where  LOGIN_NAME LIKE '%fps%' ORDER BY CLIENT_ID;
 
-// User Limits
-update USER_ENTITLEMENT SET MAX_TRAN_AMT = 300000
-WHERE function_name like 'CREATE_%' and user_id in (select user_id from  USER_ENTITLEMENT where MAX_TRAN_AMT = 3000000);
+// User Per TransAction Amount: Testing 25K
+update USER_ENTITLEMENT SET MAX_TRAN_AMT = 125000
+WHERE function_name like 'CREATE_%' and user_id in (select user_id from  USER_ENTITLEMENT where MAX_TRAN_AMT != 125000 );
+commit ;
 
-update USER_ENTITLEMENT SET MAX_DAILY_CUMULATIVE_LIMIT = 200000
-WHERE function_name like 'CREATE_%' and user_id in (select user_id from  USER_ENTITLEMENT where MAX_DAILY_CUMULATIVE_LIMIT = 2000005);
+// User Cumulative Limit per day: Testing 55K
+update USER_ENTITLEMENT SET MAX_DAILY_CUMULATIVE_LIMIT = 55000
+WHERE function_name like 'CREATE_%' and user_id in (select user_id from  USER_ENTITLEMENT where MAX_DAILY_CUMULATIVE_LIMIT != 55000);
+commit;
 
+// Client Per Transaction Amount: Testing 51K
+update CLIENT_LIMIT SET MAX_PER_TRAN_AMT = 51000
+WHERE function_name like 'CREATE_%' and client_id  in (select client_id  from  CLIENT_LIMIT where MAX_PER_TRAN_AMT != 51000);
+commit;
 
-// Client Limits
-update CLIENT_LIMIT SET MAX_TRAN_AMT = 65000
-WHERE function_name like 'CREATE_%' and client_id  in (select client_id  from  CLIENT_LIMIT where MAX_TRAN_AMT = 50000);
-
-update CLIENT_LIMIT SET MAX_DAILY_TRAN_AMT = 95000
-WHERE function_name like 'CREATE_%' and client_id in (select client_id from  CLIENT_LIMIT where MAX_DAILY_TRAN_AMT = 1000000);
-
+// Client Cumulaitve Limit Per Day: Testing 80K
+update CLIENT_LIMIT SET MAX_DAILY_TRAN_AMT = 80000
+WHERE function_name like 'CREATE_%' and client_id in (select client_id from  CLIENT_LIMIT where MAX_DAILY_TRAN_AMT != 80000) ;
+commit;
 
 
 
@@ -61,3 +65,4 @@ and e.PRM_CIF_FLG=1
 and c.id in (
 select id from econnect.login_info where login_name in('adbrain_fps','adbrainfps2','adbrainfpsbacs2' , 'adbrainfpschaps2' , 'sussex_fps' , 'sussex_fps_bacs' )
  );
+ 

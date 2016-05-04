@@ -5,6 +5,8 @@ SELECT SUM(P.AMOUNT)
               WHERE P.CLIENT_ID = 5163755 AND P.PAYMENT_DATE = TRUNC(SYSDATE);
               
 Select * from Payment where client_id = 5163755 AND PAYMENT_DATE = TRUNC(SYSDATE) order by payment_id DESC;
+Select * from Payment where CREATOR_ID = 1460520 AND PAYMENT_DATE = TRUNC(SYSDATE) order by Payment_id DESC  ;
+select count(*) from payment where CREATOR_ID = 1460520 AND PAYMENT_DATE = TRUNC(SYSDATE) ;
 
 // adbrain_fps user w/acct 2203
 SELECT SUM(P.AMOUNT)
@@ -33,5 +35,4 @@ SELECT SUM(P.AMOUNT)
 //
 
 
-Select * from Payment where CREATOR_ID = 1460520 order by Payment_id DESC;
-select count(*) from payment where CREATOR_ID = 1460520;
+
