@@ -17,28 +17,30 @@
 $
 
 # Command Line History (newest to oldest):
-:q
 :wq
-:q!
 :w
-:set nonu
-:set nu
-:e
-:bp
+:q!
+:q
 :n
-:N
-:aq
-:2,$s/mockBackend\/authmodal.test.js://g
-:1,$s/mockBackend\/authmodal.test.js://g
-:1,$s/mockBackend\/auditTable.test.js://g
-:jjjjj
+:e
+:Q
+:b 
+:e ~/Mark/JsDev/MattCarriere_Tutorial/weather.html
+:e ~/Mark/JsDev/MattCarriere_Tutorial/Index.html
+:j
 :e 
-:w ~/svbWebpayPtorTestList04082016
-:w ~/ptorTestList04082016
+:e ~/Mark/JsDev/MattCarriere_Tutorial/app.js
+:e scenarioUsers.js
+:aq
+:set nonu
+:set nowrap
+:set wrap
 :colo elflord
-:colorscheme desert
+:colo 
 
 # Search String History (newest to oldest):
+?/13 selecting text:
+?/13 selecting text
 ? \<tree\>
 ?/git
 ?/Recovered
@@ -57,8 +59,6 @@ $
 ?/defaultConfiguration
 ?/return
 ?/it
-?/loginName
-?/payment
 
 # Expression History (newest to oldest):
 
@@ -68,53 +68,110 @@ $
 
 # Registers:
 "0	LINE	0
-		 browser.sleep(3800);
+	########################
+	# 
+	# SSH to QA Hosts
+	# 
+	#######################
 "1	LINE	0
-	var activityReportPage = require("../pageObjects/ActivityReportPage.js");
+	
 "2	LINE	0
-	var activityReportPage = require("../pageObjects/ActivityReportPage.js");
+	
 "3	LINE	0
-	//var zeroEntitlementsUser = envConfig.zeroEntitlement;// We want UK Payments user with zero Entitlements
+	
 "4	LINE	0
-	 */
+	
 "5	LINE	0
-	 * Entitlement: Bank User Wi thout a login
+	
 "6	LINE	0
-	/*
+	
 "7	LINE	0
-	var bankUser = envConfig.zeroEntitlementsUser;// We want UK Payments user with zero Entitlements
+	
 "8	LINE	0
-	var activityReportPage = require("../pageObjects/ActivityReportPage.js");
+	
 "9	LINE	0
 	
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
 ""-	CHAR	0
-	protractor_qa script \'protractor protractor_qa.conf.js "--params.browsers=chrome" "--params.env=qa" "--suite=qaOnly"''
+	 
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  48  0  ~/Vagrantfile
-'1  1  0  ~/.svbrc
-'2  60  23  ~/.svbrc
-'3  37  0  ~/.svbrc
-'4  45  0  ~/.svbrc
-'5  1  0  ~/tempTree
-'6  1  0  ~/Mark/treeOutputFile
-'7  1  0  ~/Mark/myDiskStructure
-'8  4  0  ~/getDiskStructureFile
-'9  1723  0  ~/Mark/myDiskStructure
+'0  48  117  ~/.svbrc
+'1  1  2  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js.onHold
+'2  1  0  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+'3  15  0  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+'4  15  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
+'5  1  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
+'6  1  0  ~/svb-web-payments/integration/qaScenarios/AlogintTests212_1.qa_test.js
+'7  4  0  ~/svb-web-payments/integration/qaScenarios/AlogintTests212_1.qa_test.js
+'8  10  2  ~/Mark/JsDev/MattCarriere_Tutorial/app.js
+'9  6  11  ~/Mark/JsDev/MattCarriere_Tutorial/app.js
 
 # Jumplist (newest first):
+-'  48  117  ~/.svbrc
+-'  1  0  ~/.svbrc
+-'  1  2  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js.onHold
+-'  1  0  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+-'  15  0  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+-'  15  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
+-'  1  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
+-'  1  0  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js.OnHold
+-'  1  0  ~/svb-web-payments/integration/qaScenarios/AlogintTests212_1.qa_test.js
+-'  4  0  ~/svb-web-payments/integration/qaScenarios/AlogintTests212_1.qa_test.js
+-'  10  2  ~/Mark/JsDev/MattCarriere_Tutorial/app.js
+-'  1  0  ~/Mark/JsDev/MattCarriere_Tutorial/app.js
+-'  6  11  ~/Mark/JsDev/MattCarriere_Tutorial/app.js
+-'  1  0  ~/Mark/JsDev/MattCarriere_Tutorial/Index.html
+-'  24  8  ~/svb-web-payments/package.json
+-'  1  0  ~/svb-web-payments/package.json
+-'  110  1  ~/svb-web-payments/protractor_qa.conf.js
+-'  1  0  ~/svb-web-payments/protractor_qa.conf.js
+-'  1  8  ~/svb-web-payments/integration/testData/scenarioUsers.js
+-'  1  0  ~/svb-web-payments/integration/testData/environments.js
+-'  52  0  ~/svb-web-payments/integration/testData/environments.js
+-'  44  26  ~/svb-web-payments/npm-debug.log
+-'  1  0  ~/svb-web-payments/npm-debug.log
+-'  4  0  ~/svb-web-payments/integration/testData/environments.js
+-'  51  0  ~/svb-web-payments/protractor_qa.conf.js
+-'  58  0  ~/svb-web-payments/protractor.conf.js
+-'  1  0  ~/svb-web-payments/protractor.conf.js
+-'  44  0  ~/temp-svb-web-payments/integration/testData/environments.js
+-'  1  0  ~/temp-svb-web-payments/integration/testData/environments.js
+-'  25  0  ~/svb-web-payments/package.json
+-'  11  50  ~/Desktop/untitled.csv.txt
+-'  1  0  ~/Desktop/untitled.csv.txt
+-'  63  0  ~/Desktop/untitled.csv.txt
+-'  36  61  ~/Desktop/untitled.csv.txt
+-'  1  0  ~/.viminfo
+-'  8  0  ~/option-window
+-'  957  0  ~/option-window
+-'  1  0  ~/.vimrc
+-'  6  0  ~/.vimrc
+-'  45  3  ~/Mark/protWork/calculator/package.json
+-'  13  25  ~/Mark/protWork/calculator/spec.js
+-'  1  0  ~/Mark/protWork/calculator/spec.js
+-'  71  0  ~/.svbrc
+-'  65  32  ~/.svbrc
+-'  16  23  ~/.svbrc
+-'  64  15  ~/.svbrc
+-'  17  23  ~/.svbrc
+-'  62  27  ~/.svbrc
+-'  3  42  ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
+-'  1  0  ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
+-'  7  11  ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
+-'  6  24  ~/Mark/CmdOrScriptFiles/getLocalDotFiles
+-'  2  6  ~/Mark/CmdOrScriptFiles/getLocalDotFiles
+-'  1  0  ~/Mark/CmdOrScriptFiles/getLocalDotFiles
 -'  48  0  ~/Vagrantfile
 -'  1  0  ~/Vagrantfile
--'  1  0  ~/.svbrc
 -'  60  23  ~/.svbrc
--'  37  0  ~/.svbrc
+-'  33  0  ~/.svbrc
 -'  2  0  ~/.svbrc
--'  45  0  ~/.svbrc
+-'  41  0  ~/.svbrc
 -'  1  0  ~/tempTree
 -'  1  0  ~/Mark/treeOutputFile
 -'  1  0  ~/Mark/myDiskStructure
@@ -134,7 +191,6 @@ $
 -'  2  9  ~/.getDisStructureFile
 -'  1  0  ~/.getDisStructureFile
 -'  1374  0  ~/Mark/myDiskStructure
--'  18  58  ~/.svbrc
 -'  40  19  ~/myDiskStructAgain
 -'  1655  19  ~/myDiskStructAgain
 -'  1654  19  ~/myDiskStructAgain
@@ -154,170 +210,471 @@ $
 -'  1542  19  ~/myDiskStructAgain
 -'  1530  19  ~/myDiskStructAgain
 -'  1529  19  ~/myDiskStructAgain
--'  1517  19  ~/myDiskStructAgain
--'  1516  19  ~/myDiskStructAgain
--'  1505  19  ~/myDiskStructAgain
--'  1504  19  ~/myDiskStructAgain
--'  1493  19  ~/myDiskStructAgain
--'  1492  19  ~/myDiskStructAgain
--'  1480  19  ~/myDiskStructAgain
--'  1479  19  ~/myDiskStructAgain
--'  1468  19  ~/myDiskStructAgain
--'  1467  19  ~/myDiskStructAgain
--'  1461  19  ~/myDiskStructAgain
--'  1453  19  ~/myDiskStructAgain
--'  1452  19  ~/myDiskStructAgain
--'  1323  19  ~/myDiskStructAgain
--'  1322  19  ~/myDiskStructAgain
--'  1134  58  ~/myDiskStructAgain
--'  1036  37  ~/myDiskStructAgain
--'  1033  48  ~/myDiskStructAgain
--'  1032  48  ~/myDiskStructAgain
--'  417  25  ~/myDiskStructAgain
--'  383  23  ~/myDiskStructAgain
--'  98  19  ~/myDiskStructAgain
--'  63  11  ~/myDiskStructAgain
--'  62  11  ~/myDiskStructAgain
--'  1  0  ~/myDiskStructAgain
--'  18  18  ~/myDiskStructAgain
--'  18  0  ~/myDiskStructure
--'  838  27  ~/myDiskStructure
--'  713  27  ~/myDiskStructure
--'  622  18  ~/myDiskStructure
--'  621  18  ~/myDiskStructure
--'  620  18  ~/myDiskStructure
--'  619  18  ~/myDiskStructure
--'  123  0  ~/myDiskStructure
--'  1  0  ~/myDiskStructure
--'  1665  8  ~/myDiskStructure
--'  1718  0  ~/myDiskStructure
--'  867  0  ~/myDiskStructure
--'  715  0  ~/myDiskStructure
--'  7  0  ~/myDiskStructure
--'  24  0  ~/myDiskStructure
--'  9  0  ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing217_1.qa_test.js
--'  1  0  ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing217_1.qa_test.js
--'  1  21  ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing216_1.qa_test.js
--'  21  21  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
--'  16  12  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
--'  9  35  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
--'  1  0  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
--'  104  0  ~/temp-svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
--'  1  0  ~/temp-svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
--'  1  0  ~/svb-web-payments/integration/testData/scenarioUsers.js
--'  146  11  ~/temp-svb-web-payments/integration/testData/scenarioUsers.js
--'  1  0  ~/.svbrc
 
 # History of marks within files (newest to oldest):
 
-> ~/Vagrantfile
-	"	48	0
-
 > ~/.svbrc
-	"	1	0
-	^	60	24
-	.	60	23
-	+	42	19
-	+	42	19
-	+	38	28
-	+	39	21
-	+	39	20
-	+	40	0
-	+	40	0
-	+	40	25
-	+	41	25
-	+	42	28
-	+	42	28
-	+	42	28
-	+	42	28
-	+	42	30
-	+	43	21
-	+	44	25
-	+	45	20
-	+	46	19
-	+	43	28
-	+	44	31
-	+	45	26
-	+	46	26
-	+	38	31
+	"	48	117
+	^	48	116
+	.	48	117
 	+	39	31
-	+	40	28
+	+	40	34
 	+	41	28
-	+	42	31
-	+	43	31
-	+	44	34
-	+	45	28
-	+	46	28
-	+	38	5
+	+	42	28
+	+	34	5
+	+	35	0
+	+	36	0
+	+	37	0
+	+	38	0
 	+	39	0
 	+	40	0
 	+	41	0
 	+	42	0
-	+	43	0
-	+	44	0
-	+	45	0
-	+	46	0
-	+	38	34
+	+	34	34
+	+	35	32
+	+	34	32
+	+	36	30
+	+	37	29
+	+	38	32
+	+	39	31
+	+	40	35
+	+	41	27
+	+	42	27
+	+	35	33
+	+	34	35
+	+	35	35
+	+	37	31
+	+	38	33
+	+	39	32
+	+	41	29
+	+	42	29
+	+	39	33
+	+	38	33
+	+	39	33
+	+	38	25
+	+	39	25
+	+	38	25
 	+	39	32
 	+	38	32
-	+	40	30
-	+	41	29
-	+	42	32
-	+	43	31
-	+	44	35
-	+	45	27
-	+	46	27
-	+	39	33
-	+	38	35
-	+	39	35
-	+	41	31
-	+	42	33
-	+	43	32
-	+	45	29
-	+	46	29
-	+	43	33
-	+	42	33
-	+	43	33
-	+	42	25
-	+	43	25
-	+	42	25
-	+	43	32
-	+	42	32
-	+	43	31
-	+	45	30
-	+	46	26
-	+	47	0
-	+	46	27
-	+	38	61
-	+	39	61
-	+	40	55
-	+	41	54
-	+	42	61
-	+	43	59
-	+	44	63
-	+	45	55
-	+	46	56
-	+	38	26
-	+	39	26
-	+	40	23
-	+	41	23
+	+	39	31
+	+	41	30
 	+	42	26
-	+	43	25
-	+	44	28
-	+	45	27
-	+	46	27
-	+	45	23
-	+	46	23
+	+	43	0
+	+	42	27
+	+	34	61
+	+	35	61
+	+	36	55
+	+	37	54
+	+	38	61
+	+	39	59
+	+	40	63
+	+	41	55
+	+	42	56
+	+	34	26
+	+	35	26
+	+	36	23
+	+	37	23
+	+	38	26
+	+	39	25
+	+	40	28
+	+	41	27
+	+	42	27
+	+	41	23
+	+	42	23
 	+	48	0
 	+	9	39
 	+	10	0
 	+	59	73
-	+	18	58
+	+	16	58
 	+	60	147
 	+	60	30
 	+	60	111
 	+	60	23
-	e	37	76
+	+	13	0
+	+	21	0
+	+	31	0
+	+	71	15
+	+	69	5
+	+	62	5
+	+	61	6
+	+	62	19
+	+	61	23
+	+	62	46
+	+	61	47
+	+	64	12
+	+	65	12
+	+	64	22
+	+	65	36
+	+	64	36
+	+	65	0
+	+	64	33
+	+	65	32
+	+	64	36
+	+	65	34
+	+	66	2
+	+	64	23
+	+	66	0
+	+	43	0
+	+	45	19
+	+	48	117
+	e	33	76
+
+> ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js.onHold
+	"	1	2
+
+> ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
+	"	1	0
+	^	19	33
+	.	19	32
+	+	6	0
+	+	4	0
+	+	9	41
+	+	15	0
+	+	21	2
+	+	16	57
+	+	18	0
+	+	19	0
+	+	17	0
+	+	16	57
+	+	19	29
+	+	21	21
+	+	19	32
+
+> ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
+	"	15	0
+	.	46	0
+	+	31	0
+	+	33	0
+	+	36	0
+	+	39	0
+	+	42	0
+	+	46	0
+
+> ~/svb-web-payments/integration/qaScenarios/AlogintTests212_1.qa_test.js
+	"	1	0
+	.	5	0
+	+	4	113
+	+	4	173
+	+	4	241
+	+	4	244
+	+	4	286
+	+	4	289
+	+	4	347
+	+	4	413
+	+	4	520
+	+	4	522
+	+	5	0
+
+> ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js.OnHold
+	"	1	0
+
+> ~/Mark/JsDev/MattCarriere_Tutorial/app.js
+	"	10	2
+	^	1	27
+	.	1	0
+	+	6	0
+	+	5	1
+	+	9	5
+	+	1	0
+
+> ~/Mark/JsDev/MattCarriere_Tutorial/Index.html
+	"	10	3
+	^	1	25
+	.	8	0
+	+	7	9
+	+	8	23
+	+	8	0
+
+> ~/Mark/JsDev/MattCarriere_Tutorial/weather.html
+	"	3	5
+	^	3	6
+	.	3	5
+	+	3	5
+
+> ~/svb-web-payments/package.json
+	"	1	0
+	^	1	0
+	.	1	0
+	+	26	0
+	+	23	0
+	+	25	0
+	+	25	0
+	+	24	0
+	+	1	0
+
+> ~/svb-web-payments/protractor_qa.conf.js
+	"	109	0
+	^	39	36
+	.	10	0
+	+	35	0
+	+	38	2
+	+	39	1
+	+	37	3
+	+	39	7
+	+	42	14
+	+	39	45
+	+	39	53
+	+	39	52
+	+	40	0
+	+	39	35
+	+	10	0
+
+> ~/svb-web-payments/protractor.conf.js
+	"	108	0
+
+> ~/svb-web-payments/integration/testData/scenarioUsers.js
+	"	149	0
+	^	133	4
+	.	133	3
+	+	100	0
+	+	150	12
+	+	150	1
+	+	150	11
+	+	150	12
+	+	150	1
+	+	150	24
+	+	153	0
+	+	156	0
+	+	156	0
+	+	151	13
+	+	153	1
+	+	152	23
+	+	153	0
+	+	151	0
+	+	150	0
+	+	148	2
+	+	133	3
+
+> ~/svb-web-payments/integration/testData/environments.js
+	"	52	0
+	^	11	2
+	.	11	1
+	+	41	6
+	+	43	0
+	+	43	0
+	+	46	46
+	+	47	56
+	+	46	0
+	+	48	0
+	+	44	32
+	+	45	45
+	+	46	0
+	+	11	1
+
+> ~/svb-web-payments/integration/testData/env
+	"	1	0
+
+> ~/svb-web-payments/protractor-mock.conf.js
+	"	1	0
+
+> ~/svb-web-payments/npm-debug.log
+	"	44	26
+
+> ~/temp-svb-web-payments/integration/testData/environments.js
+	"	44	0
+	^	45	44
+	.	39	0
+	+	11	0
+	+	25	0
+	+	39	0
+
+> ~/svb-web-payments/integration/scenarios/ttoller_bankUser.test.js
+	"	1	0
+
+> ~/temp-svb-web-payments/integration/scenarios/ttoller_bankUser.test.js
+	"	1	0
+
+> ~/svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
+	"	1	12
+	^	1	13
+	.	1	12
+	+	1	12
+
+> ~/temp-svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
+	"	8	0
+
+> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1462321727
+	"	1	0
+	^	1	1
+	.	1	0
+	+	1	0
+
+> ~/Desktop/untitled.csv.txt
+	"	11	50
+
+> ~/Downloads/transactionReport-2016-05-03T12-31-49-07-00.csv
+	"	11	50
+
+> ~/.viminfo
+	"	1	0
+
+> ~/.vimrc
+	"	7	43
+
+> ~/option-window
+	"	8	0
+	^	1	1
+	.	956	0
+	+	957	0
+	+	957	17
+	+	956	0
+
+> ~/Mark/protWork/calculator/spec.js
+	"	44	4
+	^	129	44
+	.	129	43
+	+	115	0
+	+	114	0
+	+	116	0
+	+	117	0
+	+	149	0
+	+	117	26
+	+	102	68
+	+	78	44
+	+	77	49
+	+	79	54
+	+	80	33
+	+	81	50
+	+	82	34
+	+	83	53
+	+	73	100
+	+	111	0
+	+	118	5
+	+	148	2
+	+	110	0
+	+	148	45
+	+	118	0
+	+	120	0
+	+	120	0
+	+	124	0
+	+	123	2
+	+	124	28
+	+	124	48
+	+	128	2
+	+	130	46
+	+	131	33
+	+	124	58
+	+	132	50
+	+	133	0
+	+	132	50
+	+	134	32
+	+	135	34
+	+	140	0
+	+	137	0
+	+	124	0
+	+	132	40
+	+	136	0
+	+	138	0
+	+	134	46
+	+	138	46
+	+	139	34
+	+	140	0
+	+	85	0
+	+	141	1
+	+	142	47
+	+	144	30
+	+	149	0
+	+	121	0
+	+	124	0
+	+	146	0
+	+	124	0
+	+	123	55
+	+	145	16
+	+	142	47
+	+	141	0
+	+	143	1
+	+	140	1
+	+	1	10
+	+	140	0
+	+	142	0
+	+	127	65
+	+	131	0
+	+	128	2
+	+	124	1
+	+	125	1
+	+	126	1
+	+	127	1
+	+	130	1
+	+	131	1
+	+	132	1
+	+	134	0
+	+	135	0
+	+	136	0
+	+	138	0
+	+	139	0
+	+	140	0
+	+	143	0
+	+	144	0
+	+	145	0
+	+	144	0
+	+	143	0
+	+	140	0
+	+	139	0
+	+	138	0
+	+	136	0
+	+	135	0
+	+	134	1
+	+	135	1
+	+	136	1
+	+	138	1
+	+	139	1
+	+	140	1
+	+	143	1
+	+	144	1
+	+	145	1
+	+	129	43
+
+> ~/Mark/protWork/calculator/package.json
+	"	45	3
+
+> ~/Mark/protWork/calculator/README.md
+	"	1	14
+
+> ~/CumulativeUser
+	"	1	0
+
+> ~/export.sql
+	"	4	30
+	^	4	31
+	.	4	30
+	+	18	0
+	+	18	0
+	+	18	0
+	+	6	0
+	+	7	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	16	0
+	+	17	0
+	+	6	0
+	+	4	30
+
+> ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
+	"	3	42
+	^	3	43
+	.	3	42
+	+	7	11
+	+	3	42
+
+> ~/Mark/CmdOrScriptFiles/getLocalDotFiles
+	"	6	24
+	^	6	25
+	.	6	24
+	+	2	7
+	+	11	0
+	+	2	50
+	+	4	0
+	+	3	33
+	+	6	24
+
+> ~/Vagrantfile
+	"	48	0
 
 > ~/tempTree
 	"	1	0
@@ -368,14 +725,6 @@ $
 > ~/temp-svb-web-payments/package.json
 	"	1	0
 
-> ~/svb-web-payments/package.json
-	"	26	55
-	^	24	56
-	.	24	0
-	+	25	0
-	+	23	0
-	+	24	0
-
 > ~/.atkmhrc
 	"	1	0
 
@@ -398,100 +747,17 @@ $
 	.	1	21
 	+	1	21
 
-> ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
-	"	21	21
-	^	19	33
-	.	19	32
-	+	6	0
-	+	4	0
-	+	9	41
-	+	15	0
-	+	21	2
-	+	16	57
-	+	18	0
-	+	19	0
-	+	17	0
-	+	16	57
-	+	19	29
-	+	21	21
-	+	19	32
-
-> ~/temp-svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
-	"	104	0
-
-> ~/svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
-	"	1	12
-
-> ~/svb-web-payments/integration/testData/scenarioUsers.js
-	"	1	0
-	^	147	24
-	.	146	0
-	+	100	0
-	+	135	12
-	+	136	1
-	+	135	11
-	+	136	12
-	+	137	1
-	+	143	24
-	+	148	0
-	+	151	0
-	+	151	0
-	+	146	13
-	+	148	1
-	+	147	23
-	+	148	0
-	+	146	0
-
 > ~/temp-svb-web-payments/integration/testData/scenarioUsers.js
 	"	146	11
 	^	12	11
 	.	12	0
 	+	12	0
 
-> ~/svb-web-payments/integration/testData/environments.js
-	"	52	0
-	^	45	59
-	.	46	0
-	+	41	6
-	+	43	0
-	+	43	0
-	+	44	46
-	+	45	56
-	+	44	0
-	+	46	0
-
-> ~/temp-svb-web-payments/integration/testData/environments.js
-	"	52	1
-	^	11	70
-	.	39	0
-	+	11	0
-	+	25	0
-	+	39	0
-
 > ~/svb-web-payments/integration/qaScenarios/nonUkPymtsBankUser212_2.qa_test.js
 	"	18	0
 
 > ~/svb-web-payments/integration/qaScenarios/non
 	"	1	0
-
-> ~/svb-web-payments/integration/scenarios/ttoller_bankUser.test.js
-	"	1	0
-
-> ~/svb-web-payments/protractor_qa.conf.js
-	"	40	35
-	^	40	36
-	.	40	35
-	+	36	0
-	+	39	2
-	+	40	1
-	+	38	3
-	+	40	7
-	+	43	14
-	+	40	45
-	+	40	53
-	+	40	52
-	+	41	0
-	+	40	35
 
 > ~/svb-web-payments/integration/qaScenarios/ptor_user2_AllScen.qa_test.js
 	"	1	0
@@ -660,9 +926,6 @@ $
 	+	98	0
 	o	1	0
 
-> ~/svb-web-payments/protractor.conf.js
-	"	48	2
-
 > ~/svb-web-payments/npm-shrinkwrap.json
 	"	1331	0
 
@@ -722,111 +985,6 @@ $
 > ~/svb-web-payments/integration/scenarios/ptor_user5_allScenario.test.js
 	"	68	4
 
-> ~/Mark/protWork/calculator/spec.js
-	"	129	43
-	^	129	44
-	.	129	43
-	+	115	0
-	+	114	0
-	+	116	0
-	+	117	0
-	+	149	0
-	+	117	26
-	+	102	68
-	+	78	44
-	+	77	49
-	+	79	54
-	+	80	33
-	+	81	50
-	+	82	34
-	+	83	53
-	+	73	100
-	+	111	0
-	+	118	5
-	+	148	2
-	+	110	0
-	+	148	45
-	+	118	0
-	+	120	0
-	+	120	0
-	+	124	0
-	+	123	2
-	+	124	28
-	+	124	48
-	+	128	2
-	+	130	46
-	+	131	33
-	+	124	58
-	+	132	50
-	+	133	0
-	+	132	50
-	+	134	32
-	+	135	34
-	+	140	0
-	+	137	0
-	+	124	0
-	+	132	40
-	+	136	0
-	+	138	0
-	+	134	46
-	+	138	46
-	+	139	34
-	+	140	0
-	+	85	0
-	+	141	1
-	+	142	47
-	+	144	30
-	+	149	0
-	+	121	0
-	+	124	0
-	+	146	0
-	+	124	0
-	+	123	55
-	+	145	16
-	+	142	47
-	+	141	0
-	+	143	1
-	+	140	1
-	+	1	10
-	+	140	0
-	+	142	0
-	+	127	65
-	+	131	0
-	+	128	2
-	+	124	1
-	+	125	1
-	+	126	1
-	+	127	1
-	+	130	1
-	+	131	1
-	+	132	1
-	+	134	0
-	+	135	0
-	+	136	0
-	+	138	0
-	+	139	0
-	+	140	0
-	+	143	0
-	+	144	0
-	+	145	0
-	+	144	0
-	+	143	0
-	+	140	0
-	+	139	0
-	+	138	0
-	+	136	0
-	+	135	0
-	+	134	1
-	+	135	1
-	+	136	1
-	+	138	1
-	+	139	1
-	+	140	1
-	+	143	1
-	+	144	1
-	+	145	1
-	+	129	43
-
 > ~/svb-econnect-services-mock/coherence_3.7.1.12/bin/cache-server.cmd
 	"	2	0
 
@@ -885,85 +1043,3 @@ $
 
 > ~/MarkGit/.git/hooks/pre-push.sample
 	"	53	0
-
-> ~/MarkGit/.git/hooks/pre-rebase.sample
-	"	1	0
-
-> ~/MarkGit/.git/hooks/prepare-commit-msg.sample
-	"	1	0
-
-> ~/MarkGit/.git/hooks/update.sample
-	"	1	0
-
-> ~/MarkGit/.git/MERGE_MSG
-	"	2	0
-
-> ~/Mark/SVB_Notes_tmp/.git/MERGE_MSG
-	"	1	0
-
-> ~/Mark/SVB_Notes/.git/config
-	"	2	26
-
-> ~/Mark/Notes/.git/COMMIT_EDITMSG
-	"	1	0
-
-> ~/Mark/Notes/.git/FETCH_HEAD
-	"	1	0
-
-> ~/Mark/Notes/.git/HEAD
-	"	1	0
-
-> ~/Mark/Notes/.git/ORIG_HEAD
-	"	1	0
-
-> ~/Mark/Notes/.git/config
-	"	1	0
-
-> ~/Mark/Notes/.gitignore
-	"	1	8
-	^	1	9
-	.	1	8
-	+	1	8
-
-> ~/tmp/TempGitMoveCopy/Notes/.git/COMMIT_EDITMSG
-	"	1	0
-
-> ~/tmp/TempGitMoveCopy/Notes/.git/FETCH_HEAD
-	"	1	0
-
-> ~/tmp/TempGitMoveCopy/Notes/.git/HEAD
-	"	1	0
-
-> ~/tmp/TempGitMoveCopy/Notes/.git/ORIG_HEAD
-	"	1	0
-
-> ~/tmp/TempGitMoveCopy/Notes/.git/config
-	"	1	0
-
-> ~/tmp/TempGitMoveCopy/Notes/.git/description
-	"	1	0
-
-> ~/tmp/TempGitMoveCopy/Notes/.git/index
-	"	1	0
-
-> ~/tmp/TempGitMoveCopy/Notes/.git/packed-refs
-	"	1	0
-
-> ~/MarkGit/Notes/General Notes.txt
-	"	1	13
-	^	1	14
-	.	1	14
-	+	1	14
-
-> ~/MarkGit/Notes/IN_Work.txt
-	"	1	7
-	^	1	8
-	.	1	7
-	+	1	7
-
-> ~/MarkGit/Notes/Interesting Protractor Tutorial.txt
-	"	110	65
-	^	110	66
-	.	110	65
-	+	1	80
-	+	110	65

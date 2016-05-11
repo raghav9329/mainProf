@@ -1,5 +1,15 @@
 URLs Go back to
 
+https://www.youtube.com/watch?v=a-zUgVcFCb4&ebc=ANyPxKrfQgK3inBQU9kI7bGzn8uamgPV_QJIEas80bGRBfccBXNjapuFFIR0089Jh6SifqxQEFujDY646C78cPhb3OV3fCLLeQ&nohtml5=False
+One of many F1 videos Peter Windsor and Craig Scarborough on tech things
+
+
+https://www.npmjs.com/package/jasmine-terminal-reporter
+This might have been related to looking at sonar/jenkins and how it reports
+Dave turned me on to Jasmine pieces.  this might have been one of them
+
+google: yosemite 2 million years ago
+Look at Images
 
 
 Text Editors

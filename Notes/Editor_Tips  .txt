@@ -1,0 +1,23 @@
+Editor_Tips  
+Vim(&MacVim) : Sublime : IntelliJ : ATOM : Brackets : Eclipse :
+
+#############
+# MacVim
+#
+google: can macvim split windows vertical
+http://superuser.com/questions/486532/how-to-open-files-in-vertically-horizontal-split-windows-in-vim-from-the-command
+Ctrl+W, S (upper case) for horizontal splitting
+Ctrl+W, v (lower case) for vertical splitting
+Ctrl+W, Q to close one
+Ctrl+W, Ctrl+W to switch between windows
+Ctrl+W, J (xor K, H, L) to switch to adjacent window (intuitively up, down, left, right)
+
+http://stackoverflow.com/questions/18279772/splits-managing-in-vim
+:bn "show next buffer in the list
+:bp "show previous buffer in the list
+:b3 "show buffer #3
+:bf "show first buffer in the list
+:bl "show last buffer in the list
+:b <tab> "select buffer from a menu
+:b fo<Tab> "select buffer from a menu
+:b foo "show buffer named foo

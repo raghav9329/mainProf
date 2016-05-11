@@ -1,5 +1,60 @@
 Testing Notes
 
+5/2/16 Pulling data out of 1500.1_setup Mpay 1538
+All the users research data.  I donÕt want this as a test case.
+
+
+TransAction Max Amount per Payment is $6,500.00
+
+USER ID Usr Login    CLIENT_ID
+------------------------------------------
+1460520 adbrain_fps 5163755
+1460576 adbrainfps2 5163755
+-1460523 adbrain_fps_bacs 5163758   What did the Ò-Ò Mean ?  I know something ???
+1460579 adbrainfpsbacs2 5163758
+1460524 adbrain_fps_chaps 5163759
+1460600 adbrainfpsnopay1 5163759
+1460580 adbrainfpschaps2 5163759
+1460528 sussex_fps 5163763
+1460531 sussex_fps_bacs 5163766
+1460532 sussex_fps_chaps 5163767
+1460599 adbrainfpsnopay 5163789
+1460597 adbrainfps2016 5163789
+
+
+adbrain_fps          	ok
+adbrainfps2		ok
+adbrain_fps_bacs     	NO Mk No Summ
+adbrainfpsbacs2        	ok	
+adbrain_fps_chaps    	No Mk No Summ
+adbrainfpsnopay1      	No Mk Got Sum
+adbrainfpschaps2     	ok
+sussex_fps            	trouble but can get there
+sussex_fps_bacs  	NO Mk No Summ
+sussex_fps_chaps     	NO Mk No Summ
+adbrainfpsnopay       	No Mk Got Sum
+adbrainfps2016     	Sum, mkPay_ButNoFund
+
+===============
+Additional layout config testing
+This text in the description area of jira test ( or ticket )
+Gives you a table with two heading columns
+and 4 or 5 rows of data
+
+||Heading 1||Heading 2||
+|Col A1|Col A2|
+|y             
+ asdfas    
+asdf         |       x    |
+|        yy   |       xx    |
+|        yyy   |       xxx    |
+|        yyyy   |       xxxx    |
+
+======================================
+
+
+
+
 
 3/21/16
 The CSRF service issues one token per session, so we would like the webapp to only request a token once and then re use it if it is still within the same session. This seems to be working in the local environment but not in dev

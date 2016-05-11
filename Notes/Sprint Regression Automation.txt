@@ -47,7 +47,7 @@ Sprint 3 Stories are 97, 98, 161, 166
   -1.0 ricksanchez newpas1*  Does this user have links .  ThatÕs what the test is about
   -1.1 Are there other users who can meet the same requirement showing links ??
 
-216 Security Questions(?? actor Resturant Childhood ??) correct landing page on success  :  This stuff already happens
+216 Security Questions(?? actor Resturant Childhood ??) correct landing page on success  :  This stuff already happens  So, at this time, this test is un necessary
 
 214.1 Negative test with user who cannot get to MPay.  but is the user UK ok ?
 

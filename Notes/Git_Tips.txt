@@ -1,0 +1,8 @@
+Git_Tips
+
+
+git checkout - - <pathtofile>   the two dashes are supposed to be closer together    
+this will change the edits on the file back to unedited.
+
+
+

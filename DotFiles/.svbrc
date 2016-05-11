@@ -12,14 +12,11 @@ alias gs='git status'
 #######################
 #
 #
-#
-#
 ######################
 alias genGitDiskImage='tree -La 2 > ~/Mark/myDiskStructure'
 ########################
 # 
 # Go cd to directories
-# 
 # 
 #######################
 alias gosvb='cd ~/svb-web-payments'
@@ -30,7 +27,6 @@ alias gotmp='echo this is just here to prove a point '
 ########################
 # 
 # SSH to QA Hosts
-# 
 # 
 #######################
 
@@ -44,8 +40,12 @@ alias hostqaeccoh1='echo   10.138.10.59 hostqaecapp2'
 alias hostqaecoracle1='echo  10.138.14.55 hostqaecoracle1'
 alias hostqaapp1='echo   10.138.30.40 hostqaapp1'
 alias hostqaapp2='echo   10.138.30.41 hostqaapp2 '
-
-
+########################
+# 
+# QA testing helpers
+# 
+#######################
+alias atestqa='how_toQaProtractor ; npm run protractor_qa -- --params.browsers=chrome --params.env=qa --suite=qaOnly '
 ########################
 # 
 #  How to Section
@@ -58,3 +58,14 @@ alias how_runProtractor=' echo npm run protractor -- --prams.env=qa'
 alias how_toBecomeRoot='echo $sudo su - <ent> then supply the sudo password  '
 alias how_toDiscardUnstagedChanges='echo git checkout path2/file2/revert'
 alias how_toQaProtractor='echo npm run protractor_qa -- --params.browsers=chrome --params.env=qa --suite=qaOnly'
+alias how_rename_remove='echo rename -x *.onHold  '
+alias how_rename_add='echo rename -a .onHold *'
+
+alias onHoldA='rename -a $1*.onHold '
+alias onHoldX='rename -s .onHold '' $1*'
+
+#################
+# 
+# end.
+#
+################

@@ -1,5 +1,15 @@
 ToDo_General
 
+
+
+
+4/22/16  Need an alias or some such that goes and gets all operating dot files and copies them into the ~Mark directory where ever they to.
+
+Need to finish the genDiskStructure script
+tree -La 2 > to output file  I have this called from an alias but it is only for 
+$home.  I need one that goes and recored all the directories in /Applications.
+Also this might be tree -L 1 cus I might not need the second layer É. looking
+
 3/16/16  Sort of a reboot 
 
 Move the Mark Repos into MarkGit
@@ -12,7 +22,7 @@ Rest desktop Image links after MarGit rename
 ++++ Professional below line
 
 
-
+5/4/16 Backup Notes
 
 
 /* end of 3/16/16 reboot

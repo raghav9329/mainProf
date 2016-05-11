@@ -1,5 +1,24 @@
 Jira Notes Searches
 
+5/4/16 Some really good Atlassian Search Documentation
+https://confluence.atlassian.com/jira/advanced-searching-179442050.html
+https://confluence.atlassian.com/jira/advanced-searching-179442050.html#AdvancedSearching-ORDERBY
+https://confluence.atlassian.com/jira/advanced-searching-179442050.html#AdvancedSearching-IssueKey
+https://confluence.atlassian.com/jirasoftwareserver070/advanced-searching-762877735.html#Advancedsearching-linkedIssueslinkedIssues()
+https://confluence.atlassian.com/jirasoftwareserver070/advanced-searching-functions-reference-762877747.html
+https://docs.atlassian.com/jira/REST/latest/#api/2/search
+
+4/30/16 Jira Query: 
+	•	In order to find the test cases that were involved in any SOA work or FlexCube workÉ..
+project = "Murano Payments" AND Sprint in (closedSprints()) AND Type = Story AND( description ~"SOA" or summary ~"SOA"  or description ~"FC" or summary ~"FC" or summary ~"flex"  or description ~"flex") 
+	•	That gave me a list of stories that had links to test cases.  The list of Jira tests was then
+	•	queried for beloc
+
+Project = "Murano Payments" and type = test AND (Issuekey = "mpay-1438" or issuekey = "mpay-1185" or issuekey = "mpay-336"  or issuekey = "mpay-404" or issuekey = "mpay-507"  or issuekey = "mpay-526" or issuekey = "mpay-566" or issuekey = "mpay-409" or issuekey = "mpay-408" or issuekey = "mpay-317" or issuekey = "mpay-316"  or issuekey = "mpay-315"or issuekey = "mpay-1028" or issuekey = "mpay-1026" or issuekey = "mpay-1025Ó   )
+	•	Query output was then exportable to Excel.
+	•	This excel sheet represented what was tested on SOA and FlexCube.
+
+
 An incorrectly made Bug, can be modified to become a Story bug by using the Convert-To-Subtask feature.
 In that work flow, It make you select the Parrent Issue ( story )
 Select Sub-Task-Type selecting Story Bug.
