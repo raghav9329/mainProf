@@ -13,7 +13,7 @@ echo "adding all (*)   "
 sleep 2
 
 git add *
-git add .*
+git add ./.*
 
 echo 
 echo "sleeping 5 sec"
