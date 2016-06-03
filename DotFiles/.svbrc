@@ -20,6 +20,8 @@ alias genGitDiskImage='tree -La 2 > ~/Mark/myDiskStructure'
 # 
 #######################
 alias gosvb='cd ~/svb-web-payments'
+alias goqascen='cd ~/svb-web-payments/integration/qaScenarios'
+alias gotmphold='cd ~/Mark/tmp_hold'
 alias marknotes='cd ~/Mark/Notes'
 alias gonotes='cd ~/Mark/Notes'
 alias gobooks='cd ~/Books'
@@ -40,12 +42,15 @@ alias hostqaeccoh1='echo   10.138.10.59 hostqaecapp2'
 alias hostqaecoracle1='echo  10.138.14.55 hostqaecoracle1'
 alias hostqaapp1='echo   10.138.30.40 hostqaapp1'
 alias hostqaapp2='echo   10.138.30.41 hostqaapp2 '
+alias sshtom1='ssh maatkins_r@10.138.10.56'
+alias sshtom2='ssh maatkins_r@10.138.10.57'
 ########################
 # 
 # QA testing helpers
 # 
 #######################
-alias atestqa='how_toQaProtractor ; npm run protractor_qa -- --params.browsers=chrome --params.env=qa --suite=qaOnly '
+alias atestqa='gosvb ;how_toQaProtractor ; npm run protractor_qa -- --params.browsers=chrome --params.env=qa --suite=qaOnly '
+alias webPayUnitTest='sudo npm run test' 
 ########################
 # 
 #  How to Section
@@ -63,6 +68,7 @@ alias how_rename_add='echo rename -a .onHold *'
 
 alias onHoldA='rename -a $1*.onHold '
 alias onHoldX='rename -s .onHold '' $1*'
+alias mvonhold='mv $1 $1.onHold'
 
 #################
 # 

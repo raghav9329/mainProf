@@ -16,11 +16,9 @@ shopt -s histappend
 # The following found in 
 # http://superuser.com/questions/137438/how-to-unlimited-bash-shell-history
 
-
 ## for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 #HISTSIZE=100000
 #HISTFILESIZE=200000
-
 # see section at bottom of file W.R.T Unilimited History
 
 # check the window size after each command and, if necessary,
@@ -88,10 +86,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias la='ls -A'
-alias l='ls -CF'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -113,7 +107,6 @@ if [ -f ~/.svbrc ]; then
     . ~/.svbrc
 fi
 
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -124,11 +117,9 @@ fi
 export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
 if [ "$TERM" != "dumb" ]; then
     [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
-
 fi
 
- alias s.c='source /Users/maatkins/.bashrc'
-
+alias s.c='source /Users/maatkins/.bashrc'
 
 # The following is coming from
 # http://superuser.com/questions/137438/how-to-unlimited-bash-shell-history
@@ -145,3 +136,28 @@ export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Funciton "Move File" 
+# Only works in specific directories and between these directories.
+mf()
+{
+ if [ -z "$1" ] ; then
+   echo "An argument is really necessary "
+ fi
+ if [ `pwd` == "/Users/maatkins/svb-web-payments/integration/qaScenarios"  ] ; then
+   if [ -f $1* ]; then
+      mv ./$1* /Users/maatkins/Mark/tmp_hold
+      else echo "File wasn't there "
+   fi
+ elif [ `pwd` == "/Users/maatkins/Mark/tmp_hold" ] ; then
+   if [ -f $1* ]; then
+      mv ./$1* /Users/maatkins/svb-web-payments/integration/qaScenarios
+      else echo "File wasn't there "
+   fi
+ else echo "Not in a directory that supports the -mf(move file)- command"
+fi
+}
+
+
+
+

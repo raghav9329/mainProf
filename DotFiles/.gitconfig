@@ -1,7 +1,16 @@
 [user]
-	email = atkmh@sonic.net
+	email = matkinson2@svb.com
 	name = Mark Atkinson
 [core]
 	excludefiles = /Users/maatkins/.gitignore
+	excludesfile = /Users/maatkins/.gitignore_global
 [push]
 	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/maatkins/.stCommitMsg

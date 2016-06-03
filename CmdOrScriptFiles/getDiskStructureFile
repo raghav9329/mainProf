@@ -1,5 +1,6 @@
 #!/bin/bash
-#tree -La 2 > /Users/maatkins/Mark/myDiskStructure
+cd ~/
+tree -La 2 > /Users/maatkins/Mark/myDiskStructure
 
 
 cd /Applications

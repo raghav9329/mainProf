@@ -4,10 +4,17 @@ echo "        getconfig, sentientrc, svbrc, viminfo"
 echo "        vimrc, theColors, vimrc_MasterCopy"
 sleep 4
 
+cp ~/.atkmhrc .
+cp ~/.bash_eternal_history .
+cp ~/.bash_history .
 cp ~/.bash_profile .
 cp ~/.bashrc .
 cp ~/.dircolors .
 cp ~/.gitconfig .
+cp ~/.gitignore .
+cp ~/.gitignore_global .
+cp ~/.hgignore_global .
+cp ~/.lesshst .
 cp ~/.sentientrc .
 cp ~/.svbrc .
 cp ~/.viminfo .

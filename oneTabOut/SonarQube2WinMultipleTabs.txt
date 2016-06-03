@@ -1,0 +1,18 @@
+http://sal-dvs-msonaq1.dev.svbank.com:9000/dashboard/?did=5 | SonarQube
+https://www.google.com/search?q=sonarqube+dashboards+explained&oq=sonarqube+dashboards+explained&aqs=chrome..69i57.9489j0j7&sourceid=chrome&es_sm=91&ie=UTF-8 | sonarqube dashboards explained - Google Search
+http://docs.sonarqube.org/display/SONAR/Project+Dashboards | Project Dashboards - SonarQube Documentation - SonarQube
+https://www.google.com/search?q=can+I+export+or+capture+sonarqube+dashboard+statistics&oq=can+I+export+or+capture+sonarqube+dashboard+statistics&aqs=chrome..69i57.16639j0j7&sourceid=chrome&es_sm=91&ie=UTF-8 | can I export or capture sonarqube dashboard statistics - Google Search
+http://docs.sonarqube.org/dosearchsite.action?queryString=export | Search - SonarQube
+http://docs.sonarqube.org/display/SONAR/Update+Center | Update Center - SonarQube Documentation - SonarQube
+http://docs.sonarqube.org/display/SONARQUBE44/PDF+Plugin | PDF Plugin - SonarQube-4.4 - SonarQube
+http://stackoverflow.com/questions/18869138/is-there-a-way-to-export-a-sonar-project-as-a-doc-or-pdf | sonarqube - Is there a way to export a sonar project as a doc or pdf? - Stack Overflow
+https://github.com/SonarQubeCommunity | Community plugins for SonarQube
+http://www.sonarsource.com/products/plugins/governance/report/ | Report | SonarSource
+
+http://sal-dvs-mjenk01.dev.svbank.com:8080/ | Dashboard [Jenkins]
+https://www.google.com/search?q=how+to+navigate+to+sonarqube+plugin+in+Jenkins | how to navigate to sonarqube plugin in Jenkins - Google Search
+https://wiki.jenkins-ci.org/display/JENKINS/SonarQube+plugin | SonarQube plugin - Jenkins - Jenkins Wiki
+https://lasithapetthawadu.wordpress.com/2014/05/03/configure-jenkins-with-sonarqube-for-static-code-analysis-and-integration/ | Configure Jenkins with SonarQube for static code analysis and integration | Tech Inspiration
+https://cloudbees.zendesk.com/hc/en-us/articles/204947684-How-Can-I-Run-A-Sonar-Analysis-Without-Maven | How Can I Run A Sonar Analysis Without Maven – CloudBees Support
+http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Jenkins | Analyzing with SonarQube Scanner for Jenkins - Scanners - SonarQube
+http://stackoverflow.com/questions/13472283/do-i-need-sonar-and-sonar-runner-for-jenkins | sonarqube - Do I need sonar and sonar runner for Jenkins? - Stack Overflow
