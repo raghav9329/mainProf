@@ -4,6 +4,8 @@ echo "copying getDiskStructureFile, *.sql,  "
 sleep 4
 
 cp ~/getDiskStructureFile .
+cp ~/upDateRepos .
+
 cp ~/*.sql .
 
 echo "Done. now doing a git status to check what's changed "

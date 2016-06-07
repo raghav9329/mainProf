@@ -20,7 +20,7 @@ Sprint 11 
 
 Sprint 10
 
-Sprint 9
+Sprint 9:q
 
 Sprint 8
 
@@ -53,6 +53,9 @@ Sprint 3 Stories are 97, 98, 161, 166
 
 213
 	•	1 UK legit Login, but NO LINK for payments  An un entitled user  LetÕs try adbrainfps2016   Vishal just gave me this user on 4-14-16
+	▪	 No longer considering adbrainfps2016 . he went out of proper use just about the time the sun went down on the day of creation.
+	▪	Now user the followingÉ.. adbrainnoviewnomake
+	•	 
 	•	2 User: paulsulyok / newpas1*. Interesting UK user
 	•	 
 212.1 negative Login test

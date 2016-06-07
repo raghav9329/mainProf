@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+REPO_DIRECTORIES="svb-*"
+
+# echo $REPO_DIRECTORIES
+
+for f in $REPO_DIRECTORIES
+	do
+		if [ -d "$f" ]
+		then
+		#	echo echoing whats in DollarF ; echo $f
+			cd $f
+			pwd
+			git pull
+			cd ~/
+
+		else 
+			echo NotWorking
+		fi
+	done
+
+echo done!
