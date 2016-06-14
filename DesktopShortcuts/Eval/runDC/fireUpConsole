@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ ./master does not exist ];
+then 
+	echo " No master exe"
+	echo "exiting"
+	exit 1
+
+else 
+	echo " master exist"
+
+nohup ./runMaster
+nohup ./runConsole

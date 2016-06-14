@@ -1,0 +1,123 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Demo Expandable list v1</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection">
+        
+		<!-- <script type="text/javascript" src="js/jquery-1.4.2.min.js"> </script>   --> 
+        
+		<script type="text/javascript" src="js/scripts.js"> </script>
+        
+	 <script type="text/javascript"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#auto-submit-form a').click(function(){
+					var $this = $(this);
+					$('#EMAIL').val($this.text());
+					$('#PASSWORDCS').val($('#test-pass').text());
+
+					$('form').first().submit();
+				});
+			});
+		</script>
+    </head>
+    <body>
+        <h1><b>Demo ExpandableList</b></h1>
+		
+		
+		
+		
+        <div id="listContainer">
+            <div class="listControl">
+                <a id="expandList">Expand All</a>
+                <a id="collapseList">Collapse All</a>
+            </div>
+			<span id="test-pass">password1</span>
+          <!--  <ul id="expList">  -->
+			<ul id="auto-submit-form">
+                <li>
+                    Item A
+                    <ul>
+                        <li>
+                            Item A.1
+                            <ul>
+                            <!--   <li>  
+                                 
+									<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis ultricies arcu, quis porttitor risus placerat et. Proin quis metus diam, quis bibendum dolor. Nulla nec dapibus nunc. Quisque ac erat sit amet nisl venenatis consequat nec in nibh. Aliquam viverra vestibulum elit faucibus sollicitudin.</span>
+ 							   </li>  -->
+							   
+					<li><a href="#"> </a></li>
+				    <li><a href="#"> matkinson+032114_1BEAUCHAMP@credit.com</a> <br>Failed the setup properly</li>
+					<li><a href="#"> matkinson+032114_2BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032114_3BEAUCHAMP@credit.com</a>    .     .</li>
+				<!-- <li><a href="#"> </a></li>  -->
+					<li><a href="#"> matkinson+032114_5BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032114_6BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032114_7BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032114_8BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032114_9BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032114_10BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032114_11BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+031814_14BAILEY@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032414_1BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032414_4BEAUCHAMP@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032114_1BERGMANN@credit.com</a>   .     .</li>
+					<li><a href="#"> matkinson+032114_2BERGMANN@credit.com</a>   .     .</li>	
+					<li><a href="#"> matkinson+032114_3BERGMANN@credit.com</a>   .     .</li>
+							<br>
+					<li><a href="#"> matkinson+032414_5BEAUCHAMP@credit.com</a>   .     .</li>
+					
+					
+                            </ul>
+                        </li>
+                        <li>
+                            Item A.2 <input type="text">Test</input>
+                        </li>
+                        <li>
+                            Item A.3
+                            <ul>
+                                <li>
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis ultricies arcu, quis porttitor risus placerat et. Proin quis metus diam, quis bibendum dolor. Nulla nec dapibus nunc. Quisque ac erat sit amet nisl venenatis consequat nec in nibh. Aliquam viverra vestibulum elit faucibus sollicitudin.</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Item B
+                </li>
+                <li>
+                    Item C
+                    <ul>
+                        <li>
+                            Item C.1
+                        </li>
+                        <li>
+                            Item C.2
+                            <ul>
+                                <li>
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis ultricies arcu, quis porttitor risus placerat et. Proin quis metus diam, quis bibendum dolor. Nulla nec dapibus nunc. Quisque ac erat sit amet nisl venenatis consequat nec in nibh. Aliquam viverra vestibulum elit faucibus sollicitudin.</span>
+                                </li> 
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+			
+				<form action="http://qa6.sf.credit.com/login/" method="POST" target="_blank">
+					<input type="HIDDEN" value="MAIN" name="CURRENT_DETAIL" /> <input
+						type="HIDDEN" value="FINAL" name="NEXT_DETAIL" /> <input
+						type="hidden" value="ccom_user_login.MAIN"
+						name="partition-submit-id"> <input type="hidden" value=""
+						placeholder="Email Address" name="EMAIL" text="Email" required=""
+						id="EMAIL"> <input type="hidden" value=""
+						placeholder="Password" name="PASSWORDCS" required=""
+						id="PASSWORDCS">
+				</form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<script type="text/javascript"
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#auto-submit-form a').click(function(){
+					var $this = $(this);
+					$('#EMAIL').val($this.text());
+					$('#PASSWORDCS').val($('#test-pass').text());
+
+					$('form').first().submit();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="test-user-sign-in">
+
+			<div id="prequal" class="content">
+				<h1>Not for PROD use only test users!</h1>
+
+				Click to login as user: (change the password in html for current env:  see id="test-pass"&lt;value&gt;) <br />
+
+				password:
+				<span id="test-pass">password1</span>
+				<ul id="auto-submit-form">
+				<table>
+				<tr><td>
+					<li>segment <a href="#">matkinson.022014+1@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+2@credit.com </a> </li>
+					<li>segment <a href="#">matkinson.022014+3@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+4@credit.com </a></li>
+					<li>segment  NONE!! found</li>
+					<li>segment <a href="#">matkinson.022014+5@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+6@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+7@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+8@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+9@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+10@credit.com</a></li>
+					<li>segment <a href="#">matkinson.022014+11@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+12@credit.com </a>No Plan set for 12  </li>
+					<li>segment <a href="#">matkinson.022014+12B@credit.com </a>Plan IS SET for 12B: Text is missing !  </li>
+					<li>segment<a href="#">matkinson.022014+13@credit.com </a></li>
+					<li>segment<a href="#">matkinson.022014+14@credit.com </a></li>
+					<li>segment<a href="#">matkinson.022014+15@credit.com </a></li>
+					<li>segment<a href="#">matkinson.022014+16@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+17@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+18@credit.com </a> </li>
+					<li>segment <a href="#">matkinson.022014+19@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+20@credit.com </a></li>
+					</td>
+					<td>
+					<li>segment <a href="#">matkinson.022014+21@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+22@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+23@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+24@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+25@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+26@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+27@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+28@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+29@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+30@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+31@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+32@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+33@credit.com</a></li>
+					<li>segment <a href="#">matkinson.022014+34@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+35@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022014+36@credit.com </a></li>
+					<li>segment<a href="#">matkinson.022014+37@credit.com </a></li>
+					<li>segment<a href="#">matkinson.022014+38@credit.com </a></li>
+					<li>segment<a href="#">matkinson.022014+39@credit.com </a></li>
+					<li>segment<a href="#">matkinson.022014+42@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022614+55@credit.com </a></li>
+					<li>segment <a href="#">matkinson.022614+56@credit.com </a></li>
+					</td>
+					</tr>
+				</table>
+				</ul>
+
+				<form action="http://qa6.sf.credit.com/login/" method="POST" target="_blank">
+					<input type="HIDDEN" value="MAIN" name="CURRENT_DETAIL" /> <input
+						type="HIDDEN" value="FINAL" name="NEXT_DETAIL" /> <input
+						type="hidden" value="ccom_user_login.MAIN"
+						name="partition-submit-id"> <input type="hidden" value=""
+						placeholder="Email Address" name="EMAIL" text="Email" required=""
+						id="EMAIL"> <input type="hidden" value=""
+						placeholder="Password" name="PASSWORDCS" required=""
+						id="PASSWORDCS">
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</body>
+</html>

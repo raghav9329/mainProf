@@ -1,0 +1,13 @@
+#!/bin/bash
+#psql projectdb -f $1
+#psql darkcycle  -f $1
+
+# Modificaiton to thie script in order for it to output the table name
+# case statement that looks at the $1 string and pulls off the sel and
+# determnes what table name to output.
+# App  - application
+# Usr  - users
+# Proj - projects
+# etc.
+
+cat $1 | sudo -u postgres psql

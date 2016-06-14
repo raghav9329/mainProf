@@ -1,0 +1,1 @@
+./console -masterserveraddr=10.12.0.60:9000 -mastercontrolserveraddr=10.12.0.60:9001 -consoleaddr=10.12.0.60:8080 &

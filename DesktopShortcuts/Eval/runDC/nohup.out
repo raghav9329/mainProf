@@ -1,0 +1,66 @@
+[INFO]  1 17:40:50.725              main.main (main.go:68) | Go Tree    : go1.5.1
+[INFO]  1 17:40:50.730              main.main (main.go:68) | Build Time : 2015-09-30_14:53:52-0700
+[INFO]  1 17:40:50.730              main.main (main.go:68) | Build Hash : ae2197073066e411ec4d7f3b490f8ecd9001ff11
+[INFO]  1 17:40:50.730              main.main (main.go:68) | Build Brch : dev
+[INFO]  1 17:40:50.731              main.main (main.go:70) | Proc Id    : 27258
+master server =  10.12.0.60:9000
+master control server =  10.12.0.60:9001
+console =  10.12.0.60:8080
+[INFO]  1 17:40:50.738       main.main (consolemain.go:79) | Main.logLevel=Warning
+[DBUG]  1 17:40:50.738 connector.New (dataconnector.go:23) | serverAddr=10.12.0.60:9000
+[INFO]  1 17:40:50.739 (*Server).Serve (restserver.go:127) | url=10.12.0.60:8080
+[negroni] listening on 10.12.0.60:8080
+[DBUG]  1 17:40:55.739 .StatusMaster (dataconnector.go:66) | caller=./console has been started on qa-DC30-master1
+[DBUG]  1 17:40:55.739 ControlClient (dataconnector.go:29) | DataConnector.CreateMasterControlClient
+[DBUG]  1 17:40:55.743 .StatusMaster (dataconnector.go:73) | statusCheck=OK
+[negroni] Started GET /user/bWFyay5hdGtpbnNvbkBzZW50aWVudC5haQ:MQ
+[DBUG]  1 17:41:28.406 tor).GetUser (dataconnector.go:293) | owner=mark.atkinson@sentient.ai
+[DBUG]  1 17:41:28.406 tor).GetUser (dataconnector.go:294) | id=7
+[DBUG]  1 17:41:28.406 ControlClient (dataconnector.go:29) | DataConnector.CreateMasterControlClient
+[negroni] Started GET /org/bWFyay5hdGtpbnNvbkBzZW50aWVudC5haQ:MQ
+[DBUG]  1 17:41:28.412 ctor).GetOrg (dataconnector.go:265) | owner=mark.atkinson@sentient.ai
+[DBUG]  1 17:41:28.412 ctor).GetOrg (dataconnector.go:266) | id=0
+[DBUG]  1 17:41:28.412 ControlClient (dataconnector.go:29) | DataConnector.CreateMasterControlClient
+[negroni] Completed 200 OK in 22.991709ms
+[negroni] Completed 200 OK in 19.899753ms
+[negroni] Started POST /login
+[DBUG]  1 17:41:32.221 r).LoginUser (dataconnector.go:332) | email=mark.atkinson@sentient.ai
+[DBUG]  1 17:41:32.221 r).LoginUser (dataconnector.go:333) | password=mark1
+[DBUG]  1 17:41:32.221 ControlClient (dataconnector.go:29) | DataConnector.CreateMasterControlClient
+[negroni] Completed 200 OK in 9.644908ms
+[negroni] Started GET /org/bWFyay5hdGtpbnNvbkBzZW50aWVudC5haQ:MQ
+[DBUG]  1 17:41:32.298 ctor).GetOrg (dataconnector.go:265) | owner=mark.atkinson@sentient.ai
+[DBUG]  1 17:41:32.298 ctor).GetOrg (dataconnector.go:266) | id=0
+[DBUG]  1 17:41:32.298 ControlClient (dataconnector.go:29) | DataConnector.CreateMasterControlClient
+[negroni] Started GET /user/bWFyay5hdGtpbnNvbkBzZW50aWVudC5haQ:MQ
+[DBUG]  1 17:41:32.305 tor).GetUser (dataconnector.go:293) | owner=mark.atkinson@sentient.ai
+[DBUG]  1 17:41:32.305 tor).GetUser (dataconnector.go:294) | id=7
+[DBUG]  1 17:41:32.306 ControlClient (dataconnector.go:29) | DataConnector.CreateMasterControlClient
+[negroni] Completed 200 OK in 13.552841ms
+[negroni] Completed 200 OK in 8.173743ms
+[WARN]  1 17:41:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  490.48 KB ≈  490.48 KB (∆  490.48 KB) ↻  490.48 KB
+[WARN]  1 17:41:50.734   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB (∆    4.00 MB) ↻    4.00 MB
+[WARN]  1 17:42:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  492.27 KB ≈  490.60 KB (∆    1.80 KB) ↻  490.48 KB
+[WARN]  1 17:42:50.734   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:43:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  494.01 KB ≈  490.82 KB (∆    1.73 KB) ↻  490.48 KB
+[WARN]  1 17:43:50.735   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:44:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  495.62 KB ≈  491.14 KB (∆    1.61 KB) ↻  490.59 KB
+[WARN]  1 17:44:50.735   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:45:50.734 essProjects.func1 (scheduler.go:62) | The project processing module has received no communication for 5 minutes
+[WARN]  1 17:45:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  497.35 KB ≈  491.56 KB (∆    1.73 KB) ↻  490.59 KB
+[WARN]  1 17:45:50.735   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:46:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  499.84 KB ≈  492.11 KB (∆    2.49 KB) ↻  490.59 KB
+[WARN]  1 17:46:50.734   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:47:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  501.70 KB ≈  492.75 KB (∆    1.86 KB) ↻  490.59 KB
+[WARN]  1 17:47:50.735   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:48:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  503.38 KB ≈  493.46 KB (∆    1.67 KB) ↻  491.07 KB
+[WARN]  1 17:48:50.735   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:49:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  505.11 KB ≈  494.23 KB (∆    1.73 KB) ↻  491.07 KB
+[WARN]  1 17:49:50.734   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:50:50.734   runtime.goexit (asm_amd64.s:1696) | Alloc   :  506.95 KB ≈  495.08 KB (∆    1.84 KB) ↻  491.07 KB
+[WARN]  1 17:50:50.735   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:50:50.735 essProjects.func1 (scheduler.go:62) | The project processing module has received no communication for 5 minutes
+[WARN]  1 17:51:50.733   runtime.goexit (asm_amd64.s:1696) | Alloc   :  509.29 KB ≈  496.03 KB (∆    2.34 KB) ↻  491.07 KB
+[WARN]  1 17:51:50.733   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
+[WARN]  1 17:52:50.735   runtime.goexit (asm_amd64.s:1696) | Alloc   :  511.15 KB ≈  497.04 KB (∆    1.86 KB) ↻  492.06 KB
+[WARN]  1 17:52:50.735   runtime.goexit (asm_amd64.s:1696) | Sys     :    4.00 MB ≈    4.00 MB ↻    4.00 MB
