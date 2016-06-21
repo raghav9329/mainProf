@@ -6,4 +6,25 @@ http://www.businessinsider.com/jpmorgan-10-books-this-summer-2016-6
 
 
 
+Technical professional: Results-driven with past proven successes leading cross-functional teams developing execution strategies and process in order to complete complex projects.  Hands on leader managing project definition, resource planning / allocation, and risk identification to ensure project delivery on schedule and within budgetary constraints.  Led and managed multi-site teams locally and offshore enabling smooth product delivery, under budget, meeting quality metrics.  Focused work in requirements analysis, risk management for feature delivery.   Main expertise in designing and implementing software quality process and framework that reduces product delivery costs and provides a frame work for continual improvement of product quality and performance.
+
+TECHNICAL SKILLS
+
+Operating Systems:
+Solaris 8/10, Windows XP, Windows Vista, Windows Server 2000, Linux, Mac OS X
+
+Languages:
+Unix shell script, C, C++, Java, SQL, Perl, Python, TCL/Tk, Java script, VB 6.0
+
+DBMS:
+MySQL, Oracle, Microsoft SQL Server, Microsoft Access 2000, Sybase 11
+
+Internet / Web	HTML, XML, SOAP, TFTP, SFTP, SNMP
+Technologies:
+
+Other:
+Project, Excel, Word, Power point, Subversion, Clear case, CVS, Win Runner, QF-Test, OOA&D, Database design, SarCheck D-trace, Jira, Confluence.
+
+
+
 
