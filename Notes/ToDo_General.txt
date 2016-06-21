@@ -1,6 +1,7 @@
 ToDo_General
 
-
+6/17 VisualVM  
+David Tee is using this. I look interesting
 
 
 4/22/16  Need an alias or some such that goes and gets all operating dot files and copies them into the ~Mark directory where ever they to.
