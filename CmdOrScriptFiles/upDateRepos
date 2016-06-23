@@ -10,10 +10,14 @@ for f in $REPO_DIRECTORIES
 		if [ -d "$f" ]
 		then
 		#	echo echoing whats in DollarF ; echo $f
+			echo "************************************************"
+			echo "************************************************"
 			cd $f
 			pwd
 			git pull
 			cd ~/
+			echo
+			echo
 
 		else 
 			echo NotWorking

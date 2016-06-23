@@ -8,6 +8,7 @@ alias runprotonqa='npm run protractor -- --params.env=qa'
 alias protractqa='npm run protractor -- --params.env=qa'
 alias datestr=' date +%m-%d-%Y_%H:%M:%S'
 alias gs='git status'
+alias psefirefox='psefg Firefox.app'
 
 #######################
 #
@@ -31,7 +32,7 @@ alias gotmp='echo this is just here to prove a point '
 # SSH to QA Hosts
 # 
 #######################
-
+alias hostcommands='grep -A 13 "SSH to QA Hosts" ~/.svbrc'
 alias listqahosts='hostaqapache1; hostqaapache2; hostqatom1; hostqatom2  ; hostqqecpapp1 ; hostqaeccoh1 ; hostqaecoracle1 ; hostqaapp1 ; hostqaapp2 '
 alias hostaqapache1='echo  10.138.10.54 hostqaapache1'
 alias hostqaapache2='echo  10.138.10.55 hostqaapache2'

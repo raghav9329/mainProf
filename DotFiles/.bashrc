@@ -114,7 +114,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
+# *******************************************************
+# 
+# Atempting to make Java work at command line and for Gradle
+# Was testing these examples as described on the net.
+#
+# export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
+# export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/java
+# export JAVA_HOME=/usr/bin/java
 if [ "$TERM" != "dumb" ]; then
     [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 fi

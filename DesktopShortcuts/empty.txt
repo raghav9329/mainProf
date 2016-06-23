@@ -1,8 +1,4 @@
 
-In order to properly align the execution test cycles with releases and sprints I've had to delete the Initial Passing Execution and replace it with an execution against the right fixedVersion.   The attachment captures for posterity the initial Execution work done on the identified Date.
-
-
-http://www.businessinsider.com/jpmorgan-10-books-this-summer-2016-6
 
 
 

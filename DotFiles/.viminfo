@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/});\*\/
+~MSle0~/ps
 
 # Last Substitute Search Pattern:
 ~MSle0&mockBackend\/authmodal.test.js:
@@ -17,14 +17,16 @@
 $
 
 # Command Line History (newest to oldest):
-:wq
-:w
 :q
-:W
 :q!
 :e
-:e./gulp/utils/runSequentially.js
+:N
 :n
+:wq
+:w
+:a
+:W
+:e./gulp/utils/runSequentially.js
 :Q
 :b 
 :e ~/Mark/JsDev/MattCarriere_Tutorial/weather.html
@@ -35,16 +37,20 @@ $
 :e scenarioUsers.js
 :aq
 :set nonu
-:set nowrap
-:set wrap
 
 # Search String History (newest to oldest):
+?/ps
+?/psefg
+?/PATH
+?/ls
+?/path
+?/test
+?/lsd
 ? });\*\/
 ? });
 ? \*\/
 ? \<What\>
 ?//
-?/test
 ?/atest
 ??npm run
 ?/gulp
@@ -53,12 +59,6 @@ $
 ?/JAVA
 ?/JAVA_HOME
 ?/html
-?/13 selecting text:
-?/13 selecting text
-? \<tree\>
-?/git
-?/Recovered
-?/npm
 
 # Expression History (newest to oldest):
 
@@ -67,148 +67,703 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	cp ~/.svbrc .
+""0	LINE	0
+				echo
 "1	LINE	0
-	
+				echo "***************************"
 "2	LINE	0
-	
+				echo ***************************
 "3	LINE	0
-	/*  */
+				echo ***************************
 "4	LINE	0
-	/*      it("I should be able to find a button Select/Switch client by Id ", function() {
+				echo ***************************
 "5	LINE	0
-	          browser.sleep(600);
+				
 "6	LINE	0
-	            expect(element(by.id('openClientDialog')).isPresent()).toBe(true)  ;
+	
 "7	LINE	0
-	      });
+	
 "8	LINE	0
-	 */
+	
 "9	LINE	0
-	            expect(element(by.css(".svb-header-user-menu-container")).getText()).toEqual("Tim Toller");
+	
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
-""-	CHAR	0
-	svbrc
+"-	CHAR	0
+	 
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  21  12  ~/Mark/DotFiles/getLocalDotFiles
-'1  3  0  ~/getDiskStructureFile
-'2  54  2  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
-'3  1  0  ~/svb-web-payments/integration/qaScenarios/AlogintTests212_1.qa_test.js
-'4  7  83  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js
-'5  1  0  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js
-'6  256  0  ~/svb-services-dashboard/src/test/resources/contracts/creditcards/swagger.json
-'7  16  5  ~/svb-web-payments/package.json
-'8  53  39  ~/.svbrc
-'9  15371  5  ~/.bash_eternal_history
+'0  110  0  ~/svb-web-payments/integration/scenarios/paymentEntitlement.2accounts.test.js
+'1  9  0  ~/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+'2  1  0  ~/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+'3  1  0  ~/svb-web-payments/integration/scenarios/paymentEntitlement.2accounts.test.js
+'4  1  0  ~/Vagrantfile
+'5  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestLoginFactory.java
+'6  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/TestLoginFactory.java
+'7  20  3  ~/updateRepos
+'8  14  3  ~/updateRepos
+'9  15  3  ~/updateRepos
 
 # Jumplist (newest first):
--'  21  12  ~/Mark/DotFiles/getLocalDotFiles
--'  8  30  ~/Mark/DotFiles/getLocalDotFiles
--'  1  0  ~/Mark/DotFiles/getLocalDotFiles
--'  3  0  ~/getDiskStructureFile
--'  1  0  ~/getDiskStructureFile
--'  54  2  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  53  1  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  18  1  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  33  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  32  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  31  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  1  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  1  0  ~/svb-web-payments/integration/qaScenarios/AlogintTests212_1.qa_test.js
--'  7  83  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js
--'  36  0  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js
--'  34  56  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js
--'  33  114  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js
--'  1  0  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js
--'  256  0  ~/svb-services-dashboard/src/test/resources/contracts/creditcards/swagger.json
--'  1  0  ~/svb-services-dashboard/src/test/resources/contracts/creditcards/swagger.json
--'  16  5  ~/svb-web-payments/package.json
--'  140  7  ~/svb-web-payments/package.json
--'  18  22  ~/svb-web-payments/package.json
--'  17  22  ~/svb-web-payments/package.json
--'  10  0  ~/svb-web-payments/package.json
--'  1  0  ~/svb-web-payments/package.json
--'  53  39  ~/.svbrc
--'  9  7  ~/.svbrc
--'  1  0  ~/.svbrc
--'  15371  5  ~/.bash_eternal_history
--'  17311  0  ~/.bash_eternal_history
--'  1  0  ~/.bash_eternal_history
--'  10369  1  ~/.bash_eternal_history
--'  15454  3  ~/.bash_eternal_history
--'  15465  0  ~/.bash_eternal_history
--'  15467  0  ~/.bash_eternal_history
--'  15460  3  ~/.bash_eternal_history
--'  10465  3  ~/.bash_eternal_history
--'  6574  3  ~/.bash_eternal_history
--'  1016  3  ~/.bash_eternal_history
--'  15495  3  ~/.bash_eternal_history
--'  15479  3  ~/.bash_eternal_history
--'  15455  3  ~/.bash_eternal_history
--'  15425  3  ~/.bash_eternal_history
--'  17309  0  ~/.bash_eternal_history
--'  24  35  ~/.svbrc
--'  163  0  ~/.bashrc
+-'  110  0  ~/svb-web-payments/integration/scenarios/paymentEntitlement.2accounts.test.js
+-'  171  0  ~/svb-web-payments/integration/scenarios/paymentEntitlement.2accounts.test.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/paymentEntitlement.2accounts.test.js
+-'  9  0  ~/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+-'  226  0  ~/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/ooba_payment.test.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/crsfToken.test.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+-'  1  0  ~/Vagrantfile
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestLoginFactory.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestLogin.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestFactoryPattern.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/LoginType.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/FF_Login.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/CH_Login.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/TestLoginFactory.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/Login.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/FireFoxLogin.java
+-'  20  3  ~/updateRepos
+-'  1  0  ~/updateRepos
+-'  14  3  ~/updateRepos
+-'  15  3  ~/updateRepos
+-'  13  3  ~/updateRepos
+-'  1  0  ~/Mark/Notes/Editor_Tips Â .txt
+-'  8  0  ~/Mark/Notes/ClosedOut
+-'  1  0  ~/Mark/Notes/testScript
+-'  1  0  ~/Mark/Notes/runGit
+-'  1  0  ~/Mark/Notes/devNotes.txt
+-'  1  0  ~/Mark/Notes/Work Hours.txt
+-'  1  0  ~/Mark/Notes/Unix_Linux-Tips.txt
+-'  1  0  ~/Mark/Notes/URLs Go back to.txt
+-'  1  0  ~/Mark/Notes/ToDo_General.txt
+-'  1  0  ~/Mark/Notes/Testing Notes.txt
+-'  1  0  ~/Mark/Notes/Sprint Regression Automation.txt
+-'  1  0  ~/Mark/Notes/README.txt
+-'  1  0  ~/Mark/Notes/Observed_provblems.txt
+-'  1  0  ~/Mark/Notes/JustText.txt
+-'  1  0  ~/Mark/Notes/JiraTicket_EntrySpaceÂ .txt
+-'  1  0  ~/Mark/Notes/Jira Notes Searches.txt
+-'  1  0  ~/Mark/Notes/Interesting Protractor Tutorial.txt
+-'  1  0  ~/Mark/Notes/IN_Work.txt
+-'  1  0  ~/Mark/Notes/Git_Tips.txt
+-'  1  0  ~/Mark/Notes/General Notes.txt
+-'  170  0  ~/.bashrc
 -'  1  0  ~/.bashrc
--'  146  1  ~/.bashrc
--'  144  13  ~/.bashrc
--'  157  62  ~/.bashrc
--'  77  0  ~/.svbrc
--'  19  0  ~/.svbrc
--'  50  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js.onHold
--'  1  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js.onHold
--'  36  0  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js.onHold
--'  1  0  ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js.onHold
--'  36  0  ~/svb-web-payments/integration/qaScenarios/AlogintTests212_1.qa_test.js
--'  4  57  ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing217_1.qa_test.js.onHold
--'  1  0  ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing217_1.qa_test.js.onHold
--'  2  41  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js.onHold
--'  1  0  ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js.onHold
--'  124  0  ~/.bashrc
--'  122  1  ~/.bashrc
--'  22  1  /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/include/classfile_constants.h
--'  17  0  /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/include/classfile_constants.h
--'  1  0  /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/include/classfile_constants.h
--'  2  4  ~/.bashrc
--'  1  0  ~/.bash_profile
--'  12  47  ~/.bash_profile
--'  1  0  ~/svb-web-payments/karma/karma-coverage.conf.js
--'  42  0  ~/svb-web-payments/gulp/utils/runSequentially.js
--'  9  0  ~/svb-web-payments/gulpfile.js
--'  63  22  ~/svb-web-payments/gulpfile.js
--'  64  47  ~/svb-web-payments/gulpfile.js
--'  65  33  ~/svb-web-payments/gulpfile.js
--'  119  0  ~/svb-web-payments/gulpfile.js
--'  1  0  ~/svb-web-payments/gulpfile.js
--'  45  4  ~/svb-web-payments/package.json
--'  11  0  ~/svb-scheduler-payments/src/test/java/com/svb/murano/payments/PaymentStatusTest.java
--'  1  0  ~/svb-scheduler-payments/src/test/java/com/svb/murano/payments/PaymentStatusTest.java
--'  59  1  ~/svb-scheduler-payments/src/main/java/com/svb/murano/payments/PaymentStatus.java
--'  1  0  ~/svb-scheduler-payments/src/main/java/com/svb/murano/payments/PaymentStatus.java
--'  1  0  ~/Books/.git/MERGE_MSG
--'  150  0  ~/.bashrc
--'  9  0  ~/.bash_profile
--'  46  41  ~/.svbrc
--'  71  16  ~/.svbrc
--'  23  60  ~/.svbrc
--'  24  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  52  21  ~/.svbrc
--'  54  2  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  53  1  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  18  1  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  33  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  32  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  31  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  1  0  ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
--'  1  0  ~/svb-web-payments/integration/qaScenarios/AlogintTests212_1.qa_test.js
+-'  1  10  ~/.svbrc
+-'  67  0  ~/.svbrc
+-'  1  0  ~/svb-web-monitor/gulpfile.js
+-'  2  0  ~/svb-web-monitor/package.json
+-'  1  0  ~/svb-web-monitor/package.json
+-'  1  0  ~/svb-web-monitor/app/src/monitor/monitorPage.html
+-'  1  0  ~/svb-web-monitor/app/src/monitor/MonitorPage.js
+-'  1  0  ~/svb-web-monitor/infrastructure/dev/apache/svb-web-monitor.conf
+-'  1  0  ~/svb-web-monitor/infrastructure/local/apache/svb-web-monitor.conf
+-'  8  2  ~/svb-web-monitor/infrastructure/local
+-'  265  0  ~/svb-web-monitor/static/index.html
+-'  1  0  ~/svb-web-monitor/static/index.html
+-'  8  2  ~/svb-web-monitor/static
+-'  20  0  ~/Desktop/Eval/src/dcConsoleAutoTest/A_5Utilization.java
+-'  1  0  ~/Desktop/Eval/src/dcConsoleAutoTest/A_5Utilization.java
+-'  1  0  ~/Mark/temp_shortcuts/cnn_com:.webloc
+-'  6  22  ~/Desktop/cnn_com:.webloc
+-'  1  0  ~/Desktop/cnn_com:.webloc
+-'  6  30  ~/Desktop/mail_yahoo_com:.webloc
+-'  1  0  ~/Desktop/mail_yahoo_com:.webloc
+-'  54  49  ~/testNVPY/README.rst
+-'  1  0  ~/testNVPY/README.rst
+-'  32  0  ~/svb-service-base/src/main/java/com/svb/murano/common/jaxrs/SVBAbstractApplication.java
+-'  1  0  ~/svb-service-base/src/main/java/com/svb/murano/common/jaxrs/SVBAbstractApplication.java
+-'  84  0  ~/svb-service-base/src/main/java/com/svb/murano/common/jaxrs/SVBAbstractApplication.java
+-'  83  1  ~/svb-service-base/src/main/java/com/svb/murano/common/jaxrs/SVBAbstractApplication.java
+-'  46  0  ~/svb-service-base/src/main/java/com/svb/murano/common/jaxrs/SVBAbstractApplication.java
+-'  1  0  ~/svb-service-base/src/main/java/com/svb/murano/MuranoApplication.java
+-'  1  0  ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerTest.java
+-'  1  0  ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerJersyTest.java
+-'  78  0  ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerHelperTest.java
+-'  222  0  ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerHelperTest.java
+-'  1  0  ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerHelperTest.java
+-'  26  0  ~/svb-service-base/src/test/java/com/svb/murano/testutility/SwaggerTestHelper.java
+-'  110  17  ~/svb-service-base/src/test/java/com/svb/murano/testutility/SwaggerTestHelper.java
+-'  147  0  ~/svb-service-base/src/test/java/com/svb/murano/testutility/SwaggerTestHelper.java
+-'  1  0  ~/svb-web-payments/integration/scenarios/ooba_payment.test.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/crsfToken.test.js
+-'  1  0  ~/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+-'  1  0  ~/Vagrantfile
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestLoginFactory.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestLogin.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestFactoryPattern.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/LoginType.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/FF_Login.java
+-'  1  0  ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/CH_Login.java
 
 # History of marks within files (newest to oldest):
+
+> ~/svb-web-payments/integration/scenarios/paymentEntitlement.2accounts.test.js
+	"	110	0
+
+> ~/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+	"	9	0
+
+> ~/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+	"	1	0
+
+> ~/svb-web-payments/integration/scenarios/crsfToken.test.js
+	"	1	0
+
+> ~/svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
+	"	1	0
+
+> ~/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
+	"	1	0
+
+> ~/svb-web-payments/integration/scenarios/ooba_payment.test.js
+	"	1	0
+
+> ~/Vagrantfile
+	"	1	0
+
+> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/CH_Login.java
+	"	1	0
+
+> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/FF_Login.java
+	"	1	0
+
+> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/LoginType.java
+	"	1	0
+
+> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestFactoryPattern.java
+	"	1	0
+
+> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestLogin.java
+	"	1	0
+
+> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestLoginFactory.java
+	"	1	0
+
+> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/FireFoxLogin.java
+	"	1	0
+
+> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/Login.java
+	"	1	0
+
+> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/TestLoginFactory.java
+	"	1	0
+
+> ~/updateRepos
+	"	20	3
+	^	21	0
+	.	20	0
+	+	15	2
+	+	15	0
+	+	13	36
+	+	15	0
+	+	15	0
+	+	15	0
+	+	13	30
+	+	15	0
+	+	14	0
+	+	21	0
+	+	20	0
+
+> ~/Mark/Notes/Editor_Tips Â .txt
+	"	1	0
+
+> ~/Mark/Notes/General Notes.txt
+	"	1	0
+
+> ~/Mark/Notes/Git_Tips.txt
+	"	1	0
+
+> ~/Mark/Notes/IN_Work.txt
+	"	1	0
+
+> ~/Mark/Notes/Interesting Protractor Tutorial.txt
+	"	1	0
+
+> ~/Mark/Notes/Jira Notes Searches.txt
+	"	1	0
+
+> ~/Mark/Notes/JiraTicket_EntrySpaceÂ .txt
+	"	1	0
+
+> ~/Mark/Notes/JustText.txt
+	"	1	0
+
+> ~/Mark/Notes/Observed_provblems.txt
+	"	1	0
+
+> ~/Mark/Notes/README.txt
+	"	1	0
+
+> ~/Mark/Notes/Sprint Regression Automation.txt
+	"	1	0
+
+> ~/Mark/Notes/Testing Notes.txt
+	"	1	0
+
+> ~/Mark/Notes/ToDo_General.txt
+	"	1	0
+
+> ~/Mark/Notes/URLs Go back to.txt
+	"	1	0
+
+> ~/Mark/Notes/Unix_Linux-Tips.txt
+	"	1	0
+
+> ~/Mark/Notes/Work Hours.txt
+	"	1	0
+
+> ~/Mark/Notes/devNotes.txt
+	"	1	0
+
+> ~/Mark/Notes/runGit
+	"	1	0
+
+> ~/Mark/Notes/testScript
+	"	1	0
+
+> ~/.bashrc
+	"	170	0
+	^	120	53
+	.	120	52
+	+	22	0
+	+	89	0
+	+	109	0
+	+	127	0
+	+	129	0
+	+	130	0
+	+	149	0
+	+	147	9
+	+	166	0
+	+	158	1
+	+	156	20
+	+	156	50
+	+	156	0
+	+	158	0
+	+	156	0
+	+	156	12
+	+	150	0
+	+	156	0
+	+	156	0
+	+	156	0
+	+	156	0
+	+	156	0
+	+	156	0
+	+	158	0
+	+	156	0
+	+	155	0
+	+	156	0
+	+	158	0
+	+	156	2
+	+	156	8
+	+	150	10
+	+	154	12
+	+	155	12
+	+	150	2
+	+	154	2
+	+	156	2
+	+	156	2
+	+	156	3
+	+	156	11
+	+	150	1
+	+	154	0
+	+	156	0
+	+	155	1
+	+	156	1
+	+	158	1
+	+	154	3
+	+	165	1
+	+	150	13
+	+	154	18
+	+	150	23
+	+	154	72
+	+	155	2
+	+	156	2
+	+	158	2
+	+	155	3
+	+	156	3
+	+	158	3
+	+	159	0
+	+	157	33
+	+	159	1
+	+	169	0
+	+	159	0
+	+	164	60
+	+	164	2
+	+	164	1
+	+	164	0
+	+	159	7
+	+	159	48
+	+	164	0
+	+	159	0
+	+	160	70
+	+	148	66
+	+	164	2
+	+	159	7
+	+	164	1
+	+	161	5
+	+	159	0
+	+	160	0
+	+	163	4
+	+	164	62
+	+	150	1
+	+	152	39
+	+	153	8
+	+	153	2
+	+	151	13
+	+	153	0
+	+	123	0
+	+	122	0
+	+	123	85
+	+	123	1
+	+	124	0
+	+	123	0
+	+	123	90
+	+	123	0
+	+	122	1
+	+	123	1
+	+	124	1
+	+	119	1
+	+	121	0
+	+	120	52
+	f	149	0
+
+> ~/.svbrc
+	"	1	10
+	^	35	57
+	.	35	29
+	+	46	0
+	+	47	0
+	+	39	34
+	+	40	32
+	+	39	32
+	+	41	30
+	+	42	29
+	+	43	32
+	+	44	31
+	+	45	35
+	+	46	27
+	+	47	27
+	+	40	33
+	+	39	35
+	+	40	35
+	+	42	31
+	+	43	33
+	+	44	32
+	+	46	29
+	+	47	29
+	+	44	33
+	+	43	33
+	+	44	33
+	+	43	25
+	+	44	25
+	+	43	25
+	+	44	32
+	+	43	32
+	+	44	31
+	+	46	30
+	+	47	26
+	+	50	0
+	+	47	27
+	+	39	61
+	+	40	61
+	+	41	55
+	+	42	54
+	+	43	61
+	+	44	59
+	+	45	63
+	+	46	55
+	+	47	56
+	+	39	26
+	+	40	26
+	+	41	23
+	+	42	23
+	+	43	26
+	+	44	25
+	+	45	28
+	+	46	27
+	+	47	27
+	+	46	23
+	+	47	23
+	+	55	0
+	+	12	39
+	+	13	0
+	+	67	73
+	+	19	58
+	+	68	147
+	+	68	30
+	+	68	111
+	+	68	23
+	+	16	0
+	+	24	0
+	+	36	0
+	+	80	15
+	+	78	5
+	+	70	5
+	+	69	6
+	+	70	19
+	+	69	23
+	+	70	46
+	+	69	47
+	+	72	12
+	+	73	12
+	+	72	22
+	+	73	36
+	+	72	36
+	+	73	0
+	+	72	33
+	+	73	32
+	+	72	36
+	+	73	34
+	+	75	2
+	+	72	23
+	+	75	0
+	+	50	0
+	+	52	19
+	+	55	117
+	+	55	21
+	+	26	60
+	+	74	31
+	+	48	14
+	+	49	41
+	+	27	35
+	+	56	39
+	+	3	0
+	+	10	0
+	+	11	35
+	+	35	29
+	e	38	76
+
+> ~/Mark_MicroSoft_JS_Demos/chalkboard/Script/Benchmark.js
+	"	64	0
+
+> ~/svb-web-monitor/gulpfile.js
+	"	1	0
+
+> ~/svb-web-monitor/package.json
+	"	2	0
+
+> ~/svb-web-monitor/app/src/monitor/monitorPage.html
+	"	1	0
+
+> ~/svb-web-monitor/app/src/monitor/MonitorPage.js
+	"	1	0
+
+> ~/svb-web-monitor/infrastructure/dev/apache/svb-web-monitor.conf
+	"	1	0
+
+> ~/svb-web-monitor/infrastructure/local/apache/svb-web-monitor.conf
+	"	1	0
+
+> ~/svb-web-monitor/static/index.html
+	"	265	0
+
+> ~/Desktop/Eval/src/dcConsoleAutoTest/A_5Utilization.java
+	"	20	0
+
+> ~/Mark/temp_shortcuts/cnn_com:.webloc
+	"	1	0
+
+> ~/Desktop/cnn_com:.webloc
+	"	6	22
+	^	6	23
+	.	6	22
+	+	6	22
+
+> ~/Desktop/mail_yahoo_com:.webloc
+	"	6	30
+	^	6	31
+	.	6	30
+	+	6	30
+
+> ~/testNVPY/README.rst
+	"	54	49
+
+> ~/svb-service-base/src/main/java/com/svb/murano/common/jaxrs/SVBAbstractApplication.java
+	"	32	0
+
+> ~/svb-service-base/src/main/java/com/svb/murano/MuranoApplication.java
+	"	1	0
+
+> ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerHelperTest.java
+	"	78	0
+
+> ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerJersyTest.java
+	"	1	0
+
+> ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerTest.java
+	"	1	0
+
+> ~/svb-service-base/src/test/java/com/svb/murano/testutility/SwaggerTestHelper.java
+	"	26	0
+
+> ~/svb-service-base/src/test/java/com/svb/murano/testutility/AuthIntegrationHelper.java
+	"	1	0
+
+> ~/svb-service-base/src/test/java/com/svb/murano/testutility/Endpoint.java
+	"	1	0
+
+> ~/.atkmhrc
+	"	59	23
+	^	55	28
+	.	56	0
+	+	29	15
+	+	36	17
+	+	37	27
+	+	56	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/java/sql/Timestamp.java
+	"	87	5
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/java/sql/Struct.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/java/sql/Savepoint.java
+	"	57	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKColorChooserPanel.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKColorType.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKConstants.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKEngine.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKFileChooserUI.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKGraphicsUtils.java
+	"	107	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKIconFactory.java
+	"	350	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKLookAndFeel.java
+	"	1433	4
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows.java
+	"	37	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_de.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_es.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_fr.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_it.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_ja.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_ko.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_pt_BR.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_sv.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_zh_CN.java
+	"	1	0
+
+> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/THIRDPARTYLICENSEREADME.txt
+	"	116	78
+
+> ~/testLoopDirs
+	"	6	1
+	^	6	2
+	.	6	1
+	+	23	9
+	+	4	23
+	+	8	26
+	+	21	3
+	+	9	0
+	+	21	0
+	+	12	2
+	+	12	15
+	+	19	17
+	+	20	3
+	+	21	0
+	+	8	7
+	+	10	15
+	+	12	2
+	+	14	5
+	+	13	7
+	+	12	41
+	+	6	21
+	+	16	7
+	+	12	2
+	+	15	10
+	+	6	1
+
+> ~/svb-web-payments/package.json
+	"	1	0
+	.	45	0
+	+	26	0
+	+	23	0
+	+	25	0
+	+	25	0
+	+	24	0
+	+	1	0
+	+	45	0
+
+> ~/.bash_profile
+	"	1	0
+	^	14	54
+	.	14	53
+	+	12	0
+	+	13	0
+	+	12	0
+	+	13	54
+	+	14	53
+
+> ~/bashrc
+	"	1	0
+
+> ~/Mark/runGit
+	"	16	19
+	^	16	20
+	.	16	19
+	+	16	19
+
+> ~/Mark/myDiskStructure
+	"	1	0
+
+> ~/getDiskStructureFile
+	"	3	9
+	^	7	26
+	.	3	9
+	+	6	0
+	+	7	0
+	+	3	0
+	+	6	0
+	+	7	0
+	+	3	0
+	+	2	4
+	+	3	25
+	+	7	25
+	+	3	9
+
+> ~/svb
+	"	1	0
 
 > ~/Mark/DotFiles/getLocalDotFiles
 	"	21	12
@@ -228,17 +783,6 @@ $
 	+	17	0
 	+	18	0
 	+	17	12
-
-> ~/getDiskStructureFile
-	"	3	0
-	^	2	1
-	.	2	0
-	+	5	0
-	+	6	0
-	+	2	0
-	+	5	0
-	+	6	0
-	+	2	0
 
 > ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js
 	"	54	2
@@ -339,233 +883,14 @@ $
 	+	41	39
 	+	7	83
 
-> ~/.bashrc
-	"	146	0
-	^	144	14
-	.	146	0
-	+	117	1
-	+	115	2
-	+	117	0
-	+	18	0
-	+	22	0
-	+	89	0
-	+	109	0
-	+	120	0
-	+	122	0
-	+	123	0
-	+	142	0
-	+	140	9
-	+	159	0
-	+	151	1
-	+	149	20
-	+	149	50
-	+	149	0
-	+	151	0
-	+	149	0
-	+	149	12
-	+	143	0
-	+	149	0
-	+	149	0
-	+	149	0
-	+	149	0
-	+	149	0
-	+	149	0
-	+	151	0
-	+	149	0
-	+	148	0
-	+	149	0
-	+	151	0
-	+	149	2
-	+	149	8
-	+	143	10
-	+	147	12
-	+	148	12
-	+	143	2
-	+	147	2
-	+	149	2
-	+	149	2
-	+	149	3
-	+	149	11
-	+	143	1
-	+	147	0
-	+	149	0
-	+	148	1
-	+	149	1
-	+	151	1
-	+	147	3
-	+	158	1
-	+	143	13
-	+	147	18
-	+	143	23
-	+	147	72
-	+	148	2
-	+	149	2
-	+	151	2
-	+	148	3
-	+	149	3
-	+	151	3
-	+	152	0
-	+	150	33
-	+	152	1
-	+	162	0
-	+	152	0
-	+	157	60
-	+	157	2
-	+	157	1
-	+	157	0
-	+	152	7
-	+	152	48
-	+	157	0
-	+	152	0
-	+	153	70
-	+	141	66
-	+	157	2
-	+	152	7
-	+	157	1
-	+	154	5
-	+	152	0
-	+	153	0
-	+	156	4
-	+	157	62
-	+	143	1
-	+	145	39
-	+	146	8
-	+	146	2
-	+	144	13
-	+	146	0
-	f	142	0
-
 > ~/svb-services-dashboard/src/test/resources/contracts/creditcards/swagger.json
 	"	256	0
-
-> ~/svb-web-payments/package.json
-	"	16	5
-	.	45	0
-	+	26	0
-	+	23	0
-	+	25	0
-	+	25	0
-	+	24	0
-	+	1	0
-	+	45	0
-
-> ~/.svbrc
-	"	53	39
-	^	53	39
-	.	53	39
-	+	39	0
-	+	40	0
-	+	41	0
-	+	42	0
-	+	43	0
-	+	44	0
-	+	36	34
-	+	37	32
-	+	36	32
-	+	38	30
-	+	39	29
-	+	40	32
-	+	41	31
-	+	42	35
-	+	43	27
-	+	44	27
-	+	37	33
-	+	36	35
-	+	37	35
-	+	39	31
-	+	40	33
-	+	41	32
-	+	43	29
-	+	44	29
-	+	41	33
-	+	40	33
-	+	41	33
-	+	40	25
-	+	41	25
-	+	40	25
-	+	41	32
-	+	40	32
-	+	41	31
-	+	43	30
-	+	44	26
-	+	47	0
-	+	44	27
-	+	36	61
-	+	37	61
-	+	38	55
-	+	39	54
-	+	40	61
-	+	41	59
-	+	42	63
-	+	43	55
-	+	44	56
-	+	36	26
-	+	37	26
-	+	38	23
-	+	39	23
-	+	40	26
-	+	41	25
-	+	42	28
-	+	43	27
-	+	44	27
-	+	43	23
-	+	44	23
-	+	52	0
-	+	9	39
-	+	10	0
-	+	64	73
-	+	16	58
-	+	65	147
-	+	65	30
-	+	65	111
-	+	65	23
-	+	13	0
-	+	21	0
-	+	33	0
-	+	77	15
-	+	75	5
-	+	67	5
-	+	66	6
-	+	67	19
-	+	66	23
-	+	67	46
-	+	66	47
-	+	69	12
-	+	70	12
-	+	69	22
-	+	70	36
-	+	69	36
-	+	70	0
-	+	69	33
-	+	70	32
-	+	69	36
-	+	70	34
-	+	72	2
-	+	69	23
-	+	72	0
-	+	47	0
-	+	49	19
-	+	52	117
-	+	52	21
-	+	23	60
-	+	71	31
-	+	45	14
-	+	46	41
-	+	24	35
-	+	53	39
-	e	35	76
 
 > ~/.bash_eternal_history
 	"	15371	5
 	.	15460	0
 	+	15460	0
 	+	15460	0
-
-> ~/.atkmhrc
-	"	30	15
-	^	29	16
-	.	29	15
-	+	29	15
 
 > ~/svb-web-payments/integration/qaScenarios/Cptor_user2_AllScen.qa_test.js.onHold
 	"	50	0
@@ -578,547 +903,3 @@ $
 	^	36	0
 	.	37	0
 	+	37	0
-
-> ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing217_1.qa_test.js.onHold
-	"	4	57
-	^	4	58
-	.	4	57
-	+	4	57
-
-> ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js.onHold
-	"	2	41
-	^	2	42
-	.	2	41
-	+	5	0
-	+	4	1
-	+	2	41
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/include/classfile_constants.h
-	"	22	1
-
-> ~/.bash_profile
-	"	1	0
-	^	12	48
-	.	12	47
-	+	12	47
-
-> ~/svb-web-payments/karma/karma-coverage.conf.js
-	"	1	0
-
-> ~/svb-web-payments/gulpfile.js
-	"	119	0
-
-> ~/svb-web-payments/gulp/utils/runSequentially.js
-	"	42	0
-
-> ~/svb-web-payments/gulp/steps/build.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/buildCSS.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/bundleJs.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/cleanTargets.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/cleanTemplates.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/configure.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/copyFonts.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/deploy.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/generateVersionInfo.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/jshint.js
-	"	1	0
-
-> ~/svb-web-payments/gulp/steps/templates.js
-	"	3	0
-
-> ~/svb-web-payments/karma/karma-base.conf.js
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~/svb-web-payments/karma/karma.conf.js
-	"	1	0
-
-> ~/svb-web-payments/scripts/checkoutVersionForEnv.js
-	"	1	0
-
-> ~/svb-web-payments/scripts/installForBuildBox.js
-	"	1	0
-
-> ~/svb-web-payments/scripts/verifyTeaLeafIds.js
-	"	1	0
-
-> ~/svb-web-payments/reports/karma/TESTS-Chrome_50.0.2661_(Mac_OS_X_10.10.5).xml
-	"	1	0
-
-> ~/svb-scheduler-payments/src/test/java/com/svb/murano/payments/PaymentStatusTest.java
-	"	11	0
-
-> ~/svb-scheduler-payments/src/test/java/com/svb/murano/payments/model/PayeeTest.java
-	"	1	0
-
-> ~/svb-scheduler-payments/src/test/java/com/svb/murano/payments/model/UserTest.java
-	"	1	0
-
-> ~/svb-scheduler-payments/src/test/java/com/svb/murano/payments/model/PaymentTest.java
-	"	1	0
-
-> ~/svb-scheduler-payments/src/main/java/com/svb/murano/payments/PaymentStatus.java
-	"	59	1
-
-> ~/Books/.git/MERGE_MSG
-	"	1	0
-
-> ~/svb-web-payments/.git/MERGE_MSG
-	"	1	0
-
-> ~/svb-web-payments/integration/qaScenarios/npm-debug.log
-	"	42	0
-
-> ~/Mark/.gitignore
-	"	2	4
-	^	2	5
-	.	2	4
-	+	2	4
-
-> ~/svb-web-payments/integration/qaScenarios/Esomthingsomthing214_1.qa_test.js
-	"	1	0
-	^	19	33
-	.	19	32
-	+	6	0
-	+	4	0
-	+	9	41
-	+	15	0
-	+	21	2
-	+	16	57
-	+	18	0
-	+	19	0
-	+	17	0
-	+	16	57
-	+	19	29
-	+	21	21
-	+	19	32
-
-> ~/svb-web-payments/integration/qaScenarios/BnonUkPymtsBankUser212_2.qa_test.js.OnHold
-	"	1	0
-
-> ~/Mark/JsDev/MattCarriere_Tutorial/app.js
-	"	10	2
-	^	1	27
-	.	1	0
-	+	6	0
-	+	5	1
-	+	9	5
-	+	1	0
-
-> ~/Mark/JsDev/MattCarriere_Tutorial/Index.html
-	"	10	3
-	^	1	25
-	.	8	0
-	+	7	9
-	+	8	23
-	+	8	0
-
-> ~/Mark/JsDev/MattCarriere_Tutorial/weather.html
-	"	3	5
-	^	3	6
-	.	3	5
-	+	3	5
-
-> ~/svb-web-payments/protractor_qa.conf.js
-	"	109	0
-	^	39	36
-	.	10	0
-	+	35	0
-	+	38	2
-	+	39	1
-	+	37	3
-	+	39	7
-	+	42	14
-	+	39	45
-	+	39	53
-	+	39	52
-	+	40	0
-	+	39	35
-	+	10	0
-
-> ~/svb-web-payments/protractor.conf.js
-	"	108	0
-
-> ~/svb-web-payments/integration/testData/scenarioUsers.js
-	"	149	0
-	^	133	4
-	.	133	3
-	+	100	0
-	+	150	12
-	+	150	1
-	+	150	11
-	+	150	12
-	+	150	1
-	+	150	24
-	+	153	0
-	+	156	0
-	+	156	0
-	+	151	13
-	+	153	1
-	+	152	23
-	+	153	0
-	+	151	0
-	+	150	0
-	+	148	2
-	+	133	3
-
-> ~/svb-web-payments/integration/testData/environments.js
-	"	52	0
-	^	11	2
-	.	11	1
-	+	41	6
-	+	43	0
-	+	43	0
-	+	46	46
-	+	47	56
-	+	46	0
-	+	48	0
-	+	44	32
-	+	45	45
-	+	46	0
-	+	11	1
-
-> ~/svb-web-payments/integration/testData/env
-	"	1	0
-
-> ~/svb-web-payments/protractor-mock.conf.js
-	"	1	0
-
-> ~/svb-web-payments/npm-debug.log
-	"	44	26
-
-> ~/temp-svb-web-payments/integration/testData/environments.js
-	"	44	0
-	^	45	44
-	.	39	0
-	+	11	0
-	+	25	0
-	+	39	0
-
-> ~/svb-web-payments/integration/scenarios/ttoller_bankUser.test.js
-	"	1	0
-
-> ~/temp-svb-web-payments/integration/scenarios/ttoller_bankUser.test.js
-	"	1	0
-
-> ~/svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
-	"	1	12
-	^	1	13
-	.	1	12
-	+	1	12
-
-> ~/temp-svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
-	"	8	0
-
-> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1462321727
-	"	1	0
-	^	1	1
-	.	1	0
-	+	1	0
-
-> ~/Desktop/untitled.csv.txt
-	"	11	50
-
-> ~/Downloads/transactionReport-2016-05-03T12-31-49-07-00.csv
-	"	11	50
-
-> ~/.viminfo
-	"	1	0
-
-> ~/.vimrc
-	"	7	43
-
-> ~/option-window
-	"	8	0
-	^	1	1
-	.	956	0
-	+	957	0
-	+	957	17
-	+	956	0
-
-> ~/Mark/protWork/calculator/spec.js
-	"	44	4
-	^	129	44
-	.	129	43
-	+	115	0
-	+	114	0
-	+	116	0
-	+	117	0
-	+	149	0
-	+	117	26
-	+	102	68
-	+	78	44
-	+	77	49
-	+	79	54
-	+	80	33
-	+	81	50
-	+	82	34
-	+	83	53
-	+	73	100
-	+	111	0
-	+	118	5
-	+	148	2
-	+	110	0
-	+	148	45
-	+	118	0
-	+	120	0
-	+	120	0
-	+	124	0
-	+	123	2
-	+	124	28
-	+	124	48
-	+	128	2
-	+	130	46
-	+	131	33
-	+	124	58
-	+	132	50
-	+	133	0
-	+	132	50
-	+	134	32
-	+	135	34
-	+	140	0
-	+	137	0
-	+	124	0
-	+	132	40
-	+	136	0
-	+	138	0
-	+	134	46
-	+	138	46
-	+	139	34
-	+	140	0
-	+	85	0
-	+	141	1
-	+	142	47
-	+	144	30
-	+	149	0
-	+	121	0
-	+	124	0
-	+	146	0
-	+	124	0
-	+	123	55
-	+	145	16
-	+	142	47
-	+	141	0
-	+	143	1
-	+	140	1
-	+	1	10
-	+	140	0
-	+	142	0
-	+	127	65
-	+	131	0
-	+	128	2
-	+	124	1
-	+	125	1
-	+	126	1
-	+	127	1
-	+	130	1
-	+	131	1
-	+	132	1
-	+	134	0
-	+	135	0
-	+	136	0
-	+	138	0
-	+	139	0
-	+	140	0
-	+	143	0
-	+	144	0
-	+	145	0
-	+	144	0
-	+	143	0
-	+	140	0
-	+	139	0
-	+	138	0
-	+	136	0
-	+	135	0
-	+	134	1
-	+	135	1
-	+	136	1
-	+	138	1
-	+	139	1
-	+	140	1
-	+	143	1
-	+	144	1
-	+	145	1
-	+	129	43
-
-> ~/Mark/protWork/calculator/package.json
-	"	45	3
-
-> ~/Mark/protWork/calculator/README.md
-	"	1	14
-
-> ~/CumulativeUser
-	"	1	0
-
-> ~/export.sql
-	"	4	30
-	^	4	31
-	.	4	30
-	+	18	0
-	+	18	0
-	+	18	0
-	+	6	0
-	+	7	0
-	+	8	0
-	+	9	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	17	0
-	+	6	0
-	+	4	30
-
-> ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
-	"	3	42
-	^	3	43
-	.	3	42
-	+	7	11
-	+	3	42
-
-> ~/Mark/CmdOrScriptFiles/getLocalDotFiles
-	"	6	24
-	^	6	25
-	.	6	24
-	+	2	7
-	+	11	0
-	+	2	50
-	+	4	0
-	+	3	33
-	+	6	24
-
-> ~/Vagrantfile
-	"	48	0
-
-> ~/tempTree
-	"	1	0
-
-> ~/Mark/treeOutputFile
-	"	1	0
-
-> ~/Mark/myDiskStructure
-	"	1	0
-
-> ~/mv
-	"	1	0
-
-> ~/.getDiskStructureFile
-	"	2	12
-	^	2	14
-	.	2	12
-	+	2	49
-	+	4	48
-	+	2	12
-
-> ~/.getDisStructureFile
-	"	2	9
-	^	2	10
-	.	2	9
-	+	1	10
-	+	2	9
-
-> ~/myDiskStructAgain
-	"	40	19
-
-> ~/myDiskStructure
-	"	18	0
-	.	1718	0
-	+	1719	0
-	+	1718	0
-
-> ~/temp-svb-web-payments/package.json
-	"	1	0
-
-> ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing217_1.qa_test.js
-	"	9	0
-	.	9	0
-	+	1	90
-	+	3	0
-	+	2	1
-	+	3	1
-	+	6	13
-	+	8	51
-	+	13	0
-	+	12	0
-	+	9	0
-
-> ~/svb-web-payments/integration/qaScenarios/FsomethinSomthing216_1.qa_test.js
-	"	1	21
-	^	1	22
-	.	1	21
-	+	1	21
-
-> ~/temp-svb-web-payments/integration/testData/scenarioUsers.js
-	"	146	11
-	^	12	11
-	.	12	0
-	+	12	0
-
-> ~/svb-web-payments/integration/qaScenarios/nonUkPymtsBankUser212_2.qa_test.js
-	"	18	0
-
-> ~/svb-web-payments/integration/qaScenarios/non
-	"	1	0
-
-> ~/svb-web-payments/integration/qaScenarios/ptor_user2_AllScen.qa_test.js
-	"	1	0
-	^	42	78
-	.	42	78
-	+	46	1
-	+	36	3
-	+	46	0
-	+	31	1
-	+	37	1
-	+	38	0
-	+	35	0
-	+	36	0
-	+	34	24
-	+	44	1
-	+	39	7
-	+	31	74
-	+	40	3
-	+	43	3
-	+	42	78
-
-> ~/svb-service-payments/src/test/java/com/svb/murano/payments/rules/AccountDailyCumLimitRuleTest.java
-	"	85	0
-
-> ~/svb-service-payments/src/test/java/com/svb/murano/payments/rules/CompanyDailyTransactionLimitRuleTest.java
-	"	154	0
-
-> ~/svb-service-payments/src/test/java/com/svb/murano/payments/rules/MinPaymentAmountRuleTest.java
-	"	1	0
-
-> ~/svb-service-payments/src/test/java/com/svb/murano/payments/rules/PaymentTypeMaxAmountRuleTest.java
-	"	1	0
-
-> ~/svb-service-payments/src/test/resources/mockData/userInfo.json
-	"	48	18
-
-> ~/svb-service-payments/src/main/java/com/svb/murano/payments/rules/AccountDailyCumLimitRule.java
-	"	1	0
-
-> ~/svb-service-payments/src/main/java/com/svb/murano/payments/rules/CompanyDailyTransactionLimitRule.java
-	"	1	0
