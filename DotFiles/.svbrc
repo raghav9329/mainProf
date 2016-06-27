@@ -21,6 +21,7 @@ alias genGitDiskImage='tree -La 2 > ~/Mark/myDiskStructure'
 # 
 #######################
 alias gosvb='cd ~/svb-web-payments'
+alias gomark='cd ~/Mark'
 alias goqascen='cd ~/svb-web-payments/integration/qaScenarios'
 alias gotmphold='cd ~/Mark/tmp_hold'
 alias marknotes='cd ~/Mark/Notes'

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Deprecated in favor of a function in ~/.bashrc with same name as this file
 
 REPO_DIRECTORIES="svb-*"
 

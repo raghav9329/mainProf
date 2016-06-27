@@ -167,4 +167,27 @@ fi
 
 
 
+updateRepos()
+{
+	REPO_DIRECTORIES="svb-*"
+echo BASHRC_VERSION
+	for f in $REPO_DIRECTORIES
+		do
+			if [ -d "$f"  ]	
+			then
+                        	echo "************************************************"
+                        	echo "************************************************"
+                        	cd $f
+                        	pwd 
+				git pull
+				cd ~/
+				echo 	
+				echo 	
+			else
+				echo NotWorking
+			fi
+		done
+echo BASHRC_VERSION.......
+echo !! DONE  !!
 
+}
