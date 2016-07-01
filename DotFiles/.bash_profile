@@ -10,5 +10,10 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 source ~/.bashrc
 #export GRADLE_HOME=/Volumes/dev/tools/gradle-2.5
-export GRADLE_HOME=/Users/maatkins/tools/gradle-2.4/bin
+# Since including /Volumes/dev/svb-vagrant/tools/bash_profile.sh
+# below Gradle_home is not needed
+#export GRADLE_HOME=/Users/maatkins/tools/gradle-2.4/bin
 export PATH=$PATH:/Users/maatkins/tools/gradle-2.4/bin
+# from setting up bash profile for team 2 developer
+echo sourcing Volumes-dev-svb_vagrant-tools-bash_profile.sh 
+source /Volumes/dev/svb-vagrant/tools/bash_profile.sh

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FILES=~/Mark/images/*
+cd ~/Mark/images
+for f in $FILES 
+do
+	#echo "processing $f"
+	chmod 644 $f
+done
