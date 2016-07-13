@@ -16,4 +16,4 @@ source ~/.bashrc
 export PATH=$PATH:/Users/maatkins/tools/gradle-2.4/bin
 # from setting up bash profile for team 2 developer
 echo sourcing Volumes-dev-svb_vagrant-tools-bash_profile.sh 
-source /Volumes/dev/svb-vagrant/tools/bash_profile.sh
+#source /Volumes/dev/svb-vagrant/tools/bash_profile.sh

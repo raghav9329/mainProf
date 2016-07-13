@@ -19,6 +19,7 @@ cp ~/.sentientrc .
 cp ~/.svbrc .
 cp ~/.viminfo .
 cp ~/.vimrc .
+cp ~/.zshrc .
 cp ~/theColors .
 cp ~/vimrc__MasterCopy .
 
