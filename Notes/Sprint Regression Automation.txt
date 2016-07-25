@@ -1,4 +1,8 @@
 Sprint Regression Automation
+7-1-16 it occurs to me that I need to name my files 
+as they relate to the sprints.
+Removing the A*, B*, C*, etc.
+
 No Testcases until Sprint 3
 Test will be identified by MPAY value.Test step
 Ex: Sprint 3 212.1,2,3 thatÕs all there are

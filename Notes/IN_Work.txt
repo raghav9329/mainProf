@@ -1,6 +1,21 @@
 IN_Work
 ::Note:: = Entries need a Closed indication maybe ÒclosedÓ right before the date
 
+7-18-2016
+Comments on 1279 capturing so as to communicate all at once.
+
+4 Given: I have access to the audit report page and land on it and filtered by client name: ÒClient A"
+When: I type a valid char(s) into client filter field 
+but I donÕt select a value from the dropdown by clicking out
+Then: Client text-box defaults back to "Client AÓ
+Question:  what action is taken?  This G only talks about what isnÕt done, and yet there is still output. 
+Some action is not mentioned in this G.
+Also, ItÕs does
+
+
+
+
+
 5/2/16  Text for the Mpay 1538 test case
 
 XAction:

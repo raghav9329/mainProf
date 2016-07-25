@@ -1,5 +1,14 @@
 ToDo_General
 
+7/12/16
+Finish Testing 1792- Done
+Read me for the excel sheet
+Regression test for all sprints
+Testing for Sprint 14
+David T Configuration. - Done but still configuring Vagrant
+Automate running all the git file roundup scripts
+
+
 6/17 VisualVM  
 David Tee is using this. I look interesting
 

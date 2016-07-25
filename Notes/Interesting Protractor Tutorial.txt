@@ -5,7 +5,7 @@ Testing Angular Apps End-to-End with Protractor
 Posted by Andrew Harrison on 12 December 2013 
  angularjs, protractor, testing 
 When the team started up a new Angular project recently, we knew we wanted end-to-end (E2E) testing from day one. While unit tests are a popular and useful tool for enforcing the way that smaller pieces of a program behave, E2E tests are equally useful yet often neglected. They capture the full experience of using an application and demonstrate that the small pieces fit together coherently; learning to write these tests can dramatically reduce the need for costly manual testing.
-
+`
 Until recently, ngScenario was the recommended tool for E2E tests in Angular apps, but now a new library called Protractor is being promoted. It wraps over WebDriverJS from the Selenium project and runs Jasmine tests. Although it’s a relatively young project at this point, Protractor is already quite usable and has been enjoyable to work with in our new project. Let’s take a look at how easy it is to get started!
 
 NOTE: The information below should be accurate for the latest version as I write this post, 0.14.0; please leave a comment if you have issues.
