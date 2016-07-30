@@ -84,3 +84,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source /Volumes/dev/svb-vagrant/tools/bash_profile.sh
+alias bashme='/bin/bash'
+alias x='exit'

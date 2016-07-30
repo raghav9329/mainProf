@@ -173,23 +173,71 @@ updateRepos()
 {
 	REPO_DIRECTORIES="/Volumes/dev/svb-*"
 echo BASHRC_VERSION
-	for f in $REPO_DIRECTORIES
-		do
-			if [ -d "$f"  ]	
-			then
-                        	echo "************************************************"
-                        	echo "************************************************"
-                        	cd $f
-                        	pwd 
-				git pull
-				cd ~/
-				echo 	
-				echo 	
-			else
-				echo NotWorking
-			fi
-		done
+   for f in $REPO_DIRECTORIES
+     do
+	if [ -d "$f"  ]	
+          then
+              echo "************************************************"
+              echo "************************************************"
+              cd $f
+              pwd 
+	      git pull
+	      cd ~/
+              echo 	
+              echo 	
+	else
+              echo NotWorking
+	fi
+      done
 echo BASHRC_VERSION.......
 echo !! DONE  !!
+
+}
+
+
+unitTestCount()
+{
+
+echo Starting to look.....
+grep -r @Test * | grep -v integration | wc
+}
+
+integrationTestCount()
+{
+grep -r @Test * | grep integration | wc
+}
+
+
+getDotFiles()
+{
+
+# In this file I need to set a list of variables
+# that contain the chars in file names that I don't want
+# eg: swp for vi swap files, 
+# eg v8Flags ???? why ???
+# others ???
+#
+# ====================================
+#
+cd /Users/maatkins/
+dirList=`ls -ad .*`
+swpFile=".swp"
+
+# echo $dirList
+
+for f in $dirList
+
+do
+ if [ -f $f ]
+   then
+ 
+     if echo $f | grep -q $swpFile
+       then
+         echo "Do nothing to the swp file  " $f
+       else
+        cp $f /Users/maatkins/Mark/DotFiles
+     fi  
+ fi
+done
 
 }

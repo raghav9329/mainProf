@@ -8,20 +8,23 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/source
+~MSle0/gosvb
 
 # Last Substitute Search Pattern:
-~MSle0&mockBackend\/authmodal.test.js:
+~MSle0~&viSwpFile
 
 # Last Substitute String:
-$
+$swpFile
 
 # Command Line History (newest to oldest):
 :wq
 :w
-:q
-:Q
+:6,25s/viSwpFile/swpFile/g
+:Fw
 :q!
+:q
+:1,24s/Users\/maatkins/Volumes/dev/g
+:Q
 :wq!
 :n
 :N
@@ -34,18 +37,16 @@ $
 :b 
 :e ~/Mark/JsDev/MattCarriere_Tutorial/weather.html
 :e ~/Mark/JsDev/MattCarriere_Tutorial/Index.html
-:j
-:e 
-:e ~/Mark/JsDev/MattCarriere_Tutorial/app.js
 
 # Search String History (newest to oldest):
+? viSwpFile
+?/gosvb
 ?/source
 ?/bash
 ?/theme
 ?/GRADL
 ?/svb-
 ?/goqa
-?/gosvb
 ?/ps
 ?/psefg
 ?/PATH
@@ -58,7 +59,6 @@ $
 ? \*\/
 ? \<What\>
 ?//
-?/atest
 
 # Expression History (newest to oldest):
 
@@ -68,57 +68,75 @@ $
 
 # Registers:
 "0	LINE	0
-	cp ~/.vimrc .
+	if echo $f | grep -q ".swp"
 "1	LINE	0
 	
 "2	LINE	0
 	
 "3	LINE	0
-	
+	#if echo $f | grep -q ".swp"
 "4	LINE	0
-	
+	done
 "5	LINE	0
-	
+	e
 "6	LINE	0
-	
+	done
 "7	LINE	0
-	
+		 fi
 "8	LINE	0
-	
+		  cd ..
 "9	LINE	0
-	
+		  pwd
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
 ""-	CHAR	0
-	c
+	tmp/null
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  22  10  ~/Mark/DotFiles/getLocalDotFiles
-'1  1  0  ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
-'2  8  0  ~/Mark
-'3  11  0  ~/.bash_profile
-'4  21  0  /Volumes/dev/svb-vagrant/Vagrantfile
-'5  86  52  ~/.zshrc
-'6  61  0  /Volumes/dev/svb-vagrant/tools/bash_profile.sh
-'7  19  0  ~/.bash_profile
-'8  84  0  ~/.zshrc
-'9  8  12  ~/.zshrc
+'0  238  42  ~/.bashrc
+'1  28  30  ~/dtfTest
+'2  1  0  ~/.bashrc
+'3  209  0  ~/.bashrc
+'4  25  39  ~/.svbrc
+'5  1  34621  ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/recovery.js
+'6  1  35886  ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/recovery.bak
+'7  1  8670  ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/previous.js
+'8  86  0  ~/.zshrc
+'9  1  0  ~/.bash_profile
 
 # Jumplist (newest first):
+-'  238  42  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  28  30  ~/dtfTest
+-'  6  0  ~/dtfTest
+-'  26  0  ~/dtfTest
+-'  1  0  ~/dtfTest
+-'  209  0  ~/.bashrc
+-'  202  16  ~/.bashrc
+-'  192  0  ~/.bashrc
+-'  25  39  ~/.svbrc
+-'  1  0  ~/.svbrc
+-'  1  34621  ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/recovery.js
+-'  1  35886  ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/recovery.bak
+-'  1  8670  ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/previous.js
+-'  86  0  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  1  0  ~/.bash_profile
+-'  1  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  189773  0  /private/tmp/GitLogP.out
+-'  1  0  /private/tmp/GitLogP.out
+-'  1  0  ~/Mark/myDiskStructure
 -'  22  10  ~/Mark/DotFiles/getLocalDotFiles
 -'  1  0  ~/Mark/DotFiles/getLocalDotFiles
 -'  1  0  ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
 -'  8  0  ~/Mark
 -'  8  0  ~/Mark/CmdOrScriptFiles
 -'  11  0  ~/.bash_profile
--'  1  0  ~/.bash_profile
 -'  21  0  /Volumes/dev/svb-vagrant/Vagrantfile
 -'  1  0  /Volumes/dev/svb-vagrant/Vagrantfile
--'  86  52  ~/.zshrc
--'  1  0  ~/.zshrc
 -'  61  0  /Volumes/dev/svb-vagrant/tools/bash_profile.sh
 -'  1  0  /Volumes/dev/svb-vagrant/tools/bash_profile.sh
 -'  19  0  ~/.bash_profile
@@ -146,14 +164,12 @@ $
 -'  35  0  ~/Vagrantfile
 -'  1  0  ~/Vagrantfile
 -'  1  0  ~/Vagrant
--'  1  0  ~/.bashrc
 -'  18  59  ~/.bash_profile
 -'  33  0  /Volumes/dev/svb-vagrant/tools/bash_profile.sh
 -'  23  29  ~/.svbrc
--'  1  0  ~/.svbrc
 -'  24  29  ~/.svbrc
--'  26  32  ~/.svbrc
--'  25  23  ~/.svbrc
+-'  27  32  ~/.svbrc
+-'  26  23  ~/.svbrc
 -'  174  31  ~/.bashrc
 -'  163  26  ~/.bashrc
 -'  8  12  ~/testImageProps
@@ -189,144 +205,13 @@ $
 -'  1  0  ~/Mark/Notes/ToDo_General.txt
 -'  1  0  ~/Mark/Notes/Testing Notes.txt
 -'  1  0  ~/Mark/Notes/Sprint Regression Automation.txt
--'  1  0  ~/Mark/Notes/README.txt
--'  1  0  ~/Mark/Notes/Observed_provblems.txt
--'  1  0  ~/Mark/Notes/JustText.txt
--'  1  0  ~/Mark/Notes/JiraTicket_EntrySpaceÂ .txt
--'  1  0  ~/Mark/Notes/Jira Notes Searches.txt
--'  1  0  ~/Mark/Notes/Interesting Protractor Tutorial.txt
--'  1  0  ~/Mark/Notes/IN_Work.txt
--'  1  0  ~/Mark/Notes/Git_Tips.txt
--'  1  0  ~/Mark/Notes/General Notes.txt
--'  172  0  ~/.bashrc
--'  68  0  ~/.svbrc
--'  1  0  ~/svb-web-monitor/gulpfile.js
--'  2  0  ~/svb-web-monitor/package.json
--'  1  0  ~/svb-web-monitor/package.json
--'  1  0  ~/svb-web-monitor/app/src/monitor/monitorPage.html
--'  1  0  ~/svb-web-monitor/app/src/monitor/MonitorPage.js
--'  1  0  ~/svb-web-monitor/infrastructure/dev/apache/svb-web-monitor.conf
--'  1  0  ~/svb-web-monitor/infrastructure/local/apache/svb-web-monitor.conf
 
 # History of marks within files (newest to oldest):
 
-> ~/Mark/DotFiles/getLocalDotFiles
-	"	22	10
-	^	22	11
-	.	22	10
-	+	23	0
-	+	22	0
-	+	23	0
-	+	22	10
-
-> ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
-	"	1	0
-
-> ~/.bash_profile
-	"	11	0
-	^	19	1
-	.	11	0
-	+	12	0
-	+	15	0
-	+	12	0
-	+	15	54
-	+	16	53
-	+	15	1
-	+	14	33
-	+	19	0
-	+	17	50
-	+	18	59
-	+	11	0
-	+	19	0
-	+	11	0
-
-> /Volumes/dev/svb-vagrant/Vagrantfile
-	"	21	0
-
-> ~/.zshrc
-	"	86	52
-	^	86	53
-	.	86	38
-	+	8	12
-	+	86	38
-
-> /Volumes/dev/svb-vagrant/tools/bash_profile.sh
-	"	61	0
-
-> /Volumes/dev/svb-web-core-ui/src/modules/widgets/widgetsModule.js
-	"	1	0
-
-> /Volumes/dev/svb-econnect/vagrant/Vagrantfile
-	"	1	0
-
-> ~/Vagrantfile
-	"	35	0
-
-> ~/Vagrant
-	"	1	0
-
 > ~/.bashrc
-	"	1	0
-	^	174	32
-	.	174	31
-	+	157	2
-	+	157	8
-	+	150	10
-	+	154	12
-	+	156	12
-	+	150	2
-	+	154	2
-	+	157	2
-	+	157	2
-	+	157	3
-	+	157	11
-	+	150	1
-	+	154	0
-	+	157	0
-	+	156	1
-	+	157	1
-	+	159	1
-	+	154	3
-	+	167	1
-	+	150	13
-	+	154	18
-	+	150	23
-	+	154	72
-	+	156	2
-	+	157	2
-	+	159	2
-	+	156	3
-	+	157	3
-	+	159	3
-	+	160	0
-	+	158	33
-	+	160	1
-	+	171	0
-	+	160	0
-	+	166	60
-	+	166	2
-	+	166	1
-	+	166	0
-	+	160	7
-	+	160	48
-	+	166	0
-	+	160	0
-	+	161	70
-	+	148	66
-	+	166	2
-	+	160	7
-	+	166	1
-	+	162	5
-	+	160	0
-	+	161	0
-	+	165	4
-	+	166	62
-	+	150	1
-	+	152	39
-	+	153	8
-	+	153	2
-	+	151	13
-	+	153	0
+	"	238	42
+	^	238	43
+	.	238	42
 	+	123	0
 	+	122	0
 	+	123	85
@@ -369,113 +254,495 @@ $
 	+	162	0
 	+	163	26
 	+	174	31
+	+	203	0
+	+	202	0
+	+	201	17
+	+	202	12
+	+	202	42
+	+	202	0
+	+	202	52
+	+	201	0
+	+	202	15
+	+	202	0
+	+	202	11
+	+	202	17
+	+	202	6
+	+	202	0
+	+	202	16
+	+	202	2
+	+	202	11
+	+	202	4
+	+	202	7
+	+	202	3
+	+	202	0
+	+	202	4
+	+	202	5
+	+	198	12
+	+	202	41
+	+	203	0
+	+	208	0
+	+	208	0
+	+	208	0
+	+	209	0
+	+	207	38
+	+	176	2
+	+	177	0
+	+	178	0
+	+	177	4
+	+	178	0
+	+	178	17
+	+	179	9
+	+	180	13
+	+	181	13
+	+	182	14
+	+	183	13
+	+	184	6
+	+	185	6
+	+	186	13
+	+	187	13
+	+	188	0
+	+	178	0
+	+	189	13
+	+	190	0
+	+	191	4
+	+	210	0
+	+	243	0
+	+	242	0
+	+	241	0
+	+	242	0
+	+	214	3
+	+	238	42
 	f	149	0
 
+> ~/dtfTest
+	"	2	0
+	^	14	0
+	.	2	0
+	+	15	12
+	+	2	4
+	+	30	3
+	+	29	0
+	+	29	1
+	+	23	9
+	+	15	1
+	+	23	0
+	+	29	0
+	+	29	0
+	+	23	9
+	+	28	1
+	+	23	26
+	+	25	24
+	+	28	2
+	+	25	30
+	+	9	0
+	+	7	11
+	+	3	0
+	+	2	0
+	+	2	0
+	+	2	15
+	+	23	0
+	+	23	1
+	+	23	0
+	+	23	0
+	+	23	0
+	+	23	0
+	+	23	29
+	+	2	15
+	+	23	0
+	+	25	11
+	+	27	5
+	+	2	17
+	+	1	10
+	+	2	0
+	+	2	0
+	+	2	18
+	+	2	16
+	+	27	1
+	+	26	0
+	+	28	7
+	+	26	0
+	+	27	5
+	+	28	1
+	+	27	1
+	+	2	0
+	+	27	30
+	+	28	0
+	+	21	1
+	+	23	3
+	+	24	4
+	+	25	6
+	+	26	4
+	+	27	6
+	+	25	6
+	+	24	5
+	+	26	5
+	+	28	3
+	+	29	0
+	+	28	0
+	+	27	0
+	+	26	0
+	+	25	0
+	+	24	0
+	+	23	0
+	+	22	0
+	+	21	0
+	+	20	0
+	+	30	0
+	+	16	0
+	+	15	0
+	+	9	37
+	+	8	0
+	+	10	1
+	+	2	0
+	+	16	0
+	+	11	0
+	+	14	0
+	+	11	0
+	+	2	0
+
+> ~/.zshrc
+	"	88	13
+	^	88	14
+	.	88	13
+	+	8	12
+	+	86	38
+	+	87	23
+	+	88	13
+
 > ~/.svbrc
-	"	23	29
-	^	23	30
-	.	23	29
-	+	41	32
-	+	43	30
-	+	44	29
-	+	45	32
-	+	46	31
-	+	47	35
-	+	48	27
+	"	49	6
+	^	25	40
+	.	25	39
+	+	44	30
+	+	45	29
+	+	46	32
+	+	47	31
+	+	48	35
 	+	49	27
-	+	42	33
-	+	41	35
+	+	50	27
+	+	43	33
 	+	42	35
-	+	44	31
-	+	45	33
-	+	46	32
-	+	48	29
+	+	43	35
+	+	45	31
+	+	46	33
+	+	47	32
 	+	49	29
+	+	50	29
+	+	47	33
 	+	46	33
-	+	45	33
-	+	46	33
-	+	45	25
+	+	47	33
 	+	46	25
-	+	45	25
+	+	47	25
+	+	46	25
+	+	47	32
 	+	46	32
-	+	45	32
-	+	46	31
-	+	48	30
-	+	49	26
-	+	52	0
-	+	49	27
-	+	41	61
+	+	47	31
+	+	49	30
+	+	50	26
+	+	53	0
+	+	50	27
 	+	42	61
-	+	43	55
-	+	44	54
-	+	45	61
-	+	46	59
-	+	47	63
-	+	48	55
-	+	49	56
-	+	41	26
+	+	43	61
+	+	44	55
+	+	45	54
+	+	46	61
+	+	47	59
+	+	48	63
+	+	49	55
+	+	50	56
 	+	42	26
-	+	43	23
+	+	43	26
 	+	44	23
-	+	45	26
-	+	46	25
-	+	47	28
-	+	48	27
+	+	45	23
+	+	46	26
+	+	47	25
+	+	48	28
 	+	49	27
-	+	48	23
+	+	50	27
 	+	49	23
-	+	57	0
+	+	50	23
+	+	58	0
 	+	12	39
 	+	13	0
-	+	69	73
+	+	70	73
 	+	19	58
-	+	70	147
-	+	70	30
-	+	70	111
-	+	70	23
-	+	16	0
-	+	26	0
-	+	38	0
-	+	82	15
-	+	80	5
-	+	72	5
-	+	71	6
-	+	72	19
+	+	71	147
+	+	71	30
+	+	71	111
 	+	71	23
-	+	72	46
-	+	71	47
-	+	74	12
+	+	16	0
+	+	27	0
+	+	39	0
+	+	83	15
+	+	81	5
+	+	73	5
+	+	72	6
+	+	73	19
+	+	72	23
+	+	73	46
+	+	72	47
 	+	75	12
-	+	74	22
+	+	76	12
+	+	75	22
+	+	76	36
 	+	75	36
-	+	74	36
-	+	75	0
-	+	74	33
-	+	75	32
-	+	74	36
-	+	75	34
-	+	77	2
-	+	74	23
-	+	77	0
-	+	52	0
-	+	54	19
-	+	57	117
-	+	57	21
-	+	28	60
-	+	76	31
-	+	50	14
-	+	51	41
-	+	29	35
-	+	58	39
+	+	76	0
+	+	75	33
+	+	76	32
+	+	75	36
+	+	76	34
+	+	78	2
+	+	75	23
+	+	78	0
+	+	53	0
+	+	55	19
+	+	58	117
+	+	58	21
+	+	29	60
+	+	77	31
+	+	51	14
+	+	52	41
+	+	30	35
+	+	59	39
 	+	3	0
 	+	10	0
 	+	11	35
-	+	37	29
-	+	25	23
+	+	38	29
+	+	26	23
 	+	24	28
-	+	26	31
+	+	27	31
 	+	23	29
-	e	40	76
+	+	25	39
+	e	41	76
+
+> /Volumes/dev/svb-web-payments/integration/mockBackend/auditTable.test.js
+	"	98	43
+	^	97	15
+	.	98	43
+	+	87	0
+	+	86	3
+	+	87	20
+	+	93	0
+	+	92	3
+	+	93	17
+	+	92	6
+	+	98	0
+	+	97	4
+	+	98	54
+	+	122	0
+	+	121	2
+	+	97	14
+	+	98	43
+
+> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1469770765
+	"	1	0
+
+> /Volumes/dev/svb-web-payments/app/src/fixtures/audit.json
+	"	320	0
+
+> /Volumes/dev/svb-web-payments/app/src/fixtures/mockAuditData.js
+	"	2	4
+
+> ~/Downloads/int-test-results.xml
+	"	1	0
+	.	3	0
+	+	3	0
+	+	5	0
+	+	3	0
+
+> /Volumes/dev/svb-web-payments/protractor-mock.conf.js
+	"	10	0
+
+> /Volumes/dev/svb-web-payments/protractor.conf.js
+	"	6	0
+
+> /Volumes/dev/svb-web-payments/package.json
+	"	26	0
+	.	24	0
+	+	25	0
+	+	24	0
+
+> ~/Mark/tmp_hold/DzeroEntitleUkPymtUser213_1.qa_test.js
+	"	12	0
+
+> ~/Mark/tmp_hold/Esomthingsomthing214_1.qa_test.js
+	"	1	0
+
+> ~/Mark/tmp_hold/FsomethinSomthing217_1.qa_test.js
+	"	1	0
+
+> ~/Mark/tmp_hold/GsomethinSomthing_NNN.qa_test.js
+	"	1	0
+
+> ~/Mark/tmp_hold/HsomethinSomthing_NNN.qa_test.js
+	"	1	0
+
+> ~/Mark/tmp_hold/IsomethinSomthing_NNN.qa_test.js
+	"	1	0
+
+> ~/Mark/tmp_hold/JsomethinSomthing_NNN.qa_test.js
+	"	1	0
+
+> ~/.swp
+	"	2	0
+	^	2	1
+	.	2	0
+	+	2	0
+
+> ~/Mark/aList
+	"	68	6
+	^	68	7
+	.	69	0
+	+	55	9
+	+	54	10
+	+	53	5
+	+	52	6
+	+	51	10
+	+	50	5
+	+	49	9
+	+	48	8
+	+	47	4
+	+	46	8
+	+	45	8
+	+	44	14
+	+	43	0
+	+	44	0
+	+	43	7
+	+	44	0
+	+	42	8
+	+	41	7
+	+	40	7
+	+	39	0
+	+	38	4
+	+	37	10
+	+	36	9
+	+	35	7
+	+	34	6
+	+	33	15
+	+	32	8
+	+	31	4
+	+	30	16
+	+	29	7
+	+	28	5
+	+	27	6
+	+	26	5
+	+	25	3
+	+	24	10
+	+	23	9
+	+	22	12
+	+	21	14
+	+	20	14
+	+	19	3
+	+	18	0
+	+	17	14
+	+	16	11
+	+	14	0
+	+	11	4
+	+	14	0
+	+	60	6
+	+	69	0
+
+> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/soa/SOASubmissionServiceTest.java
+	"	168	0
+
+> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerHelperTest.java
+	"	179	0
+
+> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerTest.java
+	"	133	0
+
+> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListener
+	"	1	0
+
+> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/common/factory/TransformerInstanceFactoryTest.java
+	"	1	0
+
+> ~/Desktop/Murano_Auth.user.js
+	"	1	0
+	^	11	0
+	.	12	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	12	0
+
+> /Volumes/dev/svb-service-payments/src/main/java/com/svb/murano/audit/model/AuditEvent.java
+	"	3	0
+
+> /Volumes/dev/svb-service-payments/src/main/java/com/svb/murano/audit/model/AuditLog.java
+	"	10	0
+
+> /Volumes/dev/svb-service-payments/src/main/java/com/svb/murano/audit/model/AuditLogDetails.java
+	"	1	0
+
+> /Volumes/dev/svb-service-payments/src/main/java/com/svb/murano/accounts/client/AccountClient.java
+	"	8	0
+
+> ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/recovery.js
+	"	1	34621
+
+> ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/recovery.bak
+	"	1	35886
+
+> ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/previous.js
+	"	1	8670
+
+> ~/.bash_profile
+	"	1	0
+	^	19	1
+	.	11	0
+	+	12	0
+	+	15	0
+	+	12	0
+	+	15	54
+	+	16	53
+	+	15	1
+	+	14	33
+	+	19	0
+	+	17	50
+	+	18	59
+	+	11	0
+	+	19	0
+	+	11	0
+
+> /Volumes/MACTHUMB1/XBackup_Called.sh
+	"	1	0
+
+> /private/tmp/GitLogP.out
+	"	189773	0
+
+> ~/Mark/myDiskStructure
+	"	1	0
+
+> ~/Mark/DotFiles/getLocalDotFiles
+	"	22	10
+	^	22	11
+	.	22	10
+	+	23	0
+	+	22	0
+	+	23	0
+	+	22	10
+
+> ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/Vagrantfile
+	"	21	0
+
+> /Volumes/dev/svb-vagrant/tools/bash_profile.sh
+	"	61	0
+
+> /Volumes/dev/svb-web-core-ui/src/modules/widgets/widgetsModule.js
+	"	1	0
+
+> /Volumes/dev/svb-econnect/vagrant/Vagrantfile
+	"	1	0
+
+> ~/Vagrantfile
+	"	35	0
+
+> ~/Vagrant
+	"	1	0
 
 > ~/testImageProps
 	"	8	12
@@ -681,147 +948,4 @@ $
 	"	32	0
 
 > ~/svb-service-base/src/main/java/com/svb/murano/MuranoApplication.java
-	"	1	0
-
-> ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerHelperTest.java
-	"	78	0
-
-> ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerJersyTest.java
-	"	1	0
-
-> ~/svb-service-base/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerTest.java
-	"	1	0
-
-> ~/svb-service-base/src/test/java/com/svb/murano/testutility/SwaggerTestHelper.java
-	"	26	0
-
-> ~/svb-service-base/src/test/java/com/svb/murano/testutility/AuthIntegrationHelper.java
-	"	1	0
-
-> ~/svb-service-base/src/test/java/com/svb/murano/testutility/Endpoint.java
-	"	1	0
-
-> ~/.atkmhrc
-	"	59	23
-	^	55	28
-	.	56	0
-	+	29	15
-	+	36	17
-	+	37	27
-	+	56	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/java/sql/Timestamp.java
-	"	87	5
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/java/sql/Struct.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/java/sql/Savepoint.java
-	"	57	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKColorChooserPanel.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKColorType.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKConstants.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKEngine.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKFileChooserUI.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKGraphicsUtils.java
-	"	107	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKIconFactory.java
-	"	350	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/gtk/GTKLookAndFeel.java
-	"	1433	4
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows.java
-	"	37	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_de.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_es.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_fr.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_it.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_ja.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_ko.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_pt_BR.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_sv.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/temp/com/sun/java/swing/plaf/windows/resources/windows_zh_CN.java
-	"	1	0
-
-> /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/THIRDPARTYLICENSEREADME.txt
-	"	116	78
-
-> ~/testLoopDirs
-	"	6	1
-	^	6	2
-	.	6	1
-	+	23	9
-	+	4	23
-	+	8	26
-	+	21	3
-	+	9	0
-	+	21	0
-	+	12	2
-	+	12	15
-	+	19	17
-	+	20	3
-	+	21	0
-	+	8	7
-	+	10	15
-	+	12	2
-	+	14	5
-	+	13	7
-	+	12	41
-	+	6	21
-	+	16	7
-	+	12	2
-	+	15	10
-	+	6	1
-
-> ~/svb-web-payments/package.json
-	"	1	0
-	.	45	0
-	+	26	0
-	+	23	0
-	+	25	0
-	+	25	0
-	+	24	0
-	+	1	0
-	+	45	0
-
-> ~/bashrc
-	"	1	0
-
-> ~/Mark/runGit
-	"	16	19
-	^	16	20
-	.	16	19
-	+	16	19
-
-> ~/Mark/myDiskStructure
 	"	1	0
