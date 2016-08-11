@@ -73,4 +73,7 @@
 "hostname
 "name
 "host
+"lsdot
+"-F
+"-x
 .shell

@@ -241,3 +241,26 @@ do
 done
 
 }
+
+findBuildGradle()
+{
+	theFile="build.gradle"
+	REPO_DIRECTORIES="/Volumes/dev/svb-*"
+	for d in $REPO_DIRECTORIES
+	 do
+	  if [ -d "$d" ]
+	   then
+	      FILE_LIST=`ls`
+		for f in $FILE_LIST
+		do
+		  if echo $f | grep $theFile
+		  then
+			pwd
+			ls -alF build.gradle
+		  fi
+
+	 	done
+          fi 
+	 done
+
+}
