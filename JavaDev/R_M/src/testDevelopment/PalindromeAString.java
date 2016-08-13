@@ -30,4 +30,8 @@ public class PalindromeAString {
     }
 }
 
-
+/*
+* This was part of a discussion
+* with people from Rndstad Tech
+* Maybe involved with Moodys
+*/
