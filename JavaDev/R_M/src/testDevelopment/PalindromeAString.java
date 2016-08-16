@@ -3,7 +3,8 @@ package testDevelopment;
 public class PalindromeAString {
 
 	public static void main(String[] args) {
-        String input = "I 1234 a 4321 I";
+       // String input = "I 1234 a 4321 I";
+        String input = "I a I";
         String reverse = "";
         
         for(int i= input.length()-1; i>=0; i--)
@@ -14,10 +15,10 @@ public class PalindromeAString {
             
         }
         
-        System.out.println("The original string is:-" + input+ "something1");
+        System.out.println("The original string is:-" + input+ " something1");
         
         
-        System.out.println("The reverse string is:-" + reverse +"something");
+        System.out.println("The reverse string is:-" + reverse +" something");
         
         if(input.equalsIgnoreCase( reverse))
         {
