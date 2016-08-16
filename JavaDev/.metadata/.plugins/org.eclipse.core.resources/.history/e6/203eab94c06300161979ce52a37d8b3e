@@ -163,10 +163,10 @@ public class CreateList {
 		int numOfElements = 4190 ;
 		//int numOfElements = 11 ;
 		
-/**********************************
+/****************************
  * For Loop Simple Populate
- * Could / should be class method
  */
+		
 		for (int x = 2; x < numOfElements ; x++){
 			myList.next = new ListNode(x);
 			myList = myList.next;

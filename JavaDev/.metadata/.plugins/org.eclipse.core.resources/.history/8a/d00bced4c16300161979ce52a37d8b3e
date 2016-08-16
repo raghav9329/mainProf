@@ -24,7 +24,7 @@ public class Solution {
 				if (myList.next == null) break; // check to see are we at the end of the list 
 				
 				myList = myList.next;
-			}// end of not duplicate
+			}// end of not dupliate
 		}// end of list evaluation
 
 	return head;
