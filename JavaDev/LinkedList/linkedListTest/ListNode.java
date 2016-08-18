@@ -10,7 +10,9 @@ public class ListNode {
 	}
 
      
-	public void print(ListNode list){
+//	public void print(ListNode list){
+	public void print(){
+		ListNode list = this;
 		System.out.print("Head:");
 		while (list != null ){
 			System.out.print("->" +list.val);

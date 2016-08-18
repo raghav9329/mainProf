@@ -55,7 +55,8 @@ public class CreateList {
 		myList = testList;	
 		
 		System.out.println("Let's print out the List");
-		myList.print(myList);
+		//myList.print(myList);
+		myList.print();
 		
 			
 		System.out.println();
@@ -78,7 +79,8 @@ public class CreateList {
  * It knows how
  * 	
  */
-		myList.print(myList);	
+//		myList.print(myList);	
+		myList.print();
 		
 		
 		myList = testList;
@@ -102,7 +104,8 @@ public class CreateList {
 		System.out.println();
 		
 		myList = testList;
-		myList.print(myList);
+//		myList.print(myList);
+		myList.print();
 /*		System.out.print("head:");
 		while (myList != null ){
 			System.out.print("->" +myList.val );

@@ -29,7 +29,10 @@ public class Reverse_A_List {
 
 		System.out.println("Just  noOpp line for debug stop.");
 		
-		tempReset.print(tempReset);
+		//tempReset.print(tempReset);
+		// above commented out and replaced due to the 
+		// refactoring of the ListNode.print method signature change
+		tempReset.print();
 
 		return temp;
 	}
