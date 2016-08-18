@@ -89,12 +89,13 @@ public class CreateList {
 		
 		System.out.println();
 		System.out.println("creating Solution Variable");	
-		Solution mySolution = new Solution();
+//		Solution mySolution = new Solution();
 		
 		System.out.println("Calling solution on testLIst");
 		myList = testList;
 		
-		mySolution.deleteDuplicates(myList);
+//		mySolution.deleteDuplicates(myList);
+		myList.removeDupsTogether(myList);
 		
 		System.out.print("Back from solution.deleteDups");
 		System.out.println();

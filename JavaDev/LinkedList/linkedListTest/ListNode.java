@@ -68,5 +68,32 @@ public class ListNode {
     	return count;
      }// end of method coundDuplicates
      
+     public ListNode removeDupsTogether(ListNode head){
+    	 ListNode myList = head;
+    	 
+ 		while (myList != null) { // List evaluation
+			// Following If statement because you can't do  if (x AND Y ) with primitives
+			if (myList.next == null)
+				break;
+			// Handle duplicates at the very end
+			if (myList.val == myList.next.val){ // Dupes together in the list
+				if(myList.next.next == null){ // Are dupes together AT END of LIST !?
+					myList.next = null; // Just drop the last one !
+				}else{ 
+					// else handle the general condition and skip over the dupe
+					myList.next = myList.next.next; 
+				}
+			} else { // Items were not dupes together so just move to next
+				/* System.out.println("second else " +myList.val);*/
+				if (myList.next == null) break; // check to see are we at the end of the list 
+				
+				myList = myList.next;
+			}// end of not duplicat
+		
+ 		} //endWhile	
+			
+ 		return head;
+     }// end method removeDupsTogether
+     
      
 }// end of class
