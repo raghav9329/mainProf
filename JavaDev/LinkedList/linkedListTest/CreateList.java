@@ -17,11 +17,17 @@ public class CreateList {
 
 /**********************************************************
  *  In order to add two duplicate entries at the beginning
- *  of the list, execute this code
+ *  of the list, execute this code 
+		
 		myList.next = new ListNode(1);
 		myList = myList.next;
 		myList.next = new ListNode(1);
 		myList = myList.next;
+
+* Remember if this code is uncommented and puts the first
+* two valuea in the list you must make the main population
+* loop execute from x==2 to numOfElements
+* otherwise x = 0 to numOfElements
 ********************************************************* */
 		
 		
@@ -38,7 +44,7 @@ public class CreateList {
  * For Loop Simple Populate with value of X
  * Could / should be class method
  */
-		for (int x = 2; x < numOfElements ; x++){
+		for (int x = 0; x < numOfElements ; x++){
 			myList.next = new ListNode(x);
 			myList = myList.next;
 		}// we're done.  we made a long list
@@ -50,50 +56,20 @@ public class CreateList {
 		
 		System.out.println("Let's print out the List");
 		myList.print(myList);
-/*		System.out.print("Head:");
 		
-		
-			while (myList != null ){
-			System.out.print("->"+myList.val);
-			if ( myList.next == null )
-					break;
-			myList = myList.next;
-			}
-*/
 			
 		System.out.println();
-		System.out.println("The number of list elements is: " +numOfElements);
+      //System.out.println("The number of list elements is: " +numOfElements);
+		System.out.println("The number of list elements is: " +myList.count(myList));
 			
 		System.out.println();
 		System.out.println("Now let's set some duplicates");
 		
 	//RESET to Head
 		myList = testList;
+		myList.insertDuplicates(myList);
 		
-		int x = 4;
-		int tempInt;
-		
-			while (myList != null ){  // Set Duplicates
-				tempInt = myList.val;
-				if ( tempInt == x){
-					if (myList.next == null) break;
-					
-					myList.next.val = x;
-					
-//					if (myList.next.next == null)
-//						break;
-//					myList.next.next.val = x;
-//					
-//					if (myList.next.next.next == null)
-//						break;
-//					myList.next.next.next.val = x;
-					
-					x = x +5;
-					//x = x + 11;
-				}
-			myList = myList.next;
-			} // end of set Duplicates
-		
+	
 		//RESET to Head
 			myList = testList;
 
@@ -151,6 +127,33 @@ public class CreateList {
 
 
 }// end of Class
+
+// Pulled from the main and re factored in ListNode as a class Method
+
+/*		int x = 4;
+int tempInt;
+
+	while (myList != null ){  // Set Duplicates
+		tempInt = myList.val;
+		if ( tempInt == x){
+			if (myList.next == null) break;
+			
+			myList.next.val = x;
+			
+//			if (myList.next.next == null)
+//				break;
+//			myList.next.next.val = x;
+//			
+//			if (myList.next.next.next == null)
+//				break;
+//			myList.next.next.next.val = x;
+			
+			x = x +5;
+			//x = x + 11;
+		}
+	myList = myList.next;
+	} // end of set Duplicates
+*/	
 
 
 //public static void main(String[] args) {
