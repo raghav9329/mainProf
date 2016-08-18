@@ -68,8 +68,9 @@ public class ListNode {
     	return count;
      }// end of method coundDuplicates
      
-     public ListNode removeDupsTogether(ListNode head){
-    	 ListNode myList = head;
+//     public ListNode removeDupsTogether(ListNode head){
+     public void removeDupsTogether(){
+    	 ListNode myList = this; 
     	 
  		while (myList != null) { // List evaluation
 			// Following If statement because you can't do  if (x AND Y ) with primitives
@@ -92,7 +93,7 @@ public class ListNode {
 		
  		} //endWhile	
 			
- 		return head;
+ 	//	return head;
      }// end method removeDupsTogether
      
      

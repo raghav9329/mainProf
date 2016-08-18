@@ -95,7 +95,8 @@ public class CreateList {
 		myList = testList;
 		
 //		mySolution.deleteDuplicates(myList);
-		myList.removeDupsTogether(myList);
+//		myList.removeDupsTogether(myList);
+		myList.removeDupsTogether();
 		
 		System.out.print("Back from solution.deleteDups");
 		System.out.println();
