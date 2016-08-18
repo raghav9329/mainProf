@@ -55,12 +55,10 @@ public class CreateList {
 		myList = testList;	
 		
 		System.out.println("Let's print out the List");
-		//myList.print(myList);
 		myList.print();
 		
 			
 		System.out.println();
-      //System.out.println("The number of list elements is: " +numOfElements);
 		System.out.println("The number of list elements is: " +myList.count(myList));
 			
 		System.out.println();
@@ -79,43 +77,29 @@ public class CreateList {
  * It knows how
  * 	
  */
-//		myList.print(myList);	
 		myList.print();
 		
 		
 		myList = testList;
-		//CountListDups myCount = new CountListDups();
 		System.out.println();
-		//System.out.println("Number of duplicates is "	+myCount.evaluateList(myList));	
 		System.out.println("Number of duplicates is "	+ myList.countDupsTogether(myList));	
 		
 		System.out.println();
 		System.out.println("creating Solution Variable");	
-//		Solution mySolution = new Solution();
 		
 		System.out.println("Calling solution on testLIst");
 		myList = testList;
 		
-//		mySolution.deleteDuplicates(myList);
-//		myList.removeDupsTogether(myList);
 		myList.removeDupsTogether();
 		
 		System.out.print("Back from solution.deleteDups");
 		System.out.println();
 		
 		myList = testList;
-//		myList.print(myList);
 		myList.print();
-/*		System.out.print("head:");
-		while (myList != null ){
-			System.out.print("->" +myList.val );
-			myList = myList.next;
-		}
-*/
 		
 		myList = testList;	
 		System.out.println();
-		//System.out.println("Number of duplicates is "	+myCount.evaluateList(myList));
 		System.out.println("Number of duplicates is "	+ myList.countDupsTogether(myList));	
 
 		//Reverse_A_List reverseList = new Reverse_A_List();
