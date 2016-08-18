@@ -73,25 +73,19 @@ public class CreateList {
 		//RESET to Head
 			myList = testList;
 
-			
-        /******************************************************************
-         * Here is the replacement call for the output while loop below 
-         */			
+/**********************************
+ * Display the contents of the list
+ * It knows how
+ * 	
+ */
 		myList.print(myList);	
-			
-		/*	System.out.print("Head:");
-			while (myList != null ){
-				System.out.print("->" +myList.val);
-				if (myList.next == null) 
-					break; 
-				myList = myList.next;
-			}	
-		 */
-			
+		
+		
 		myList = testList;
-		CountListDups myCount = new CountListDups();
+		//CountListDups myCount = new CountListDups();
 		System.out.println();
-		System.out.println("Number of duplicates is "	+myCount.evaluateList(myList));	
+		//System.out.println("Number of duplicates is "	+myCount.evaluateList(myList));	
+		System.out.println("Number of duplicates is "	+ myList.countDupsTogether(myList));	
 		
 		System.out.println();
 		System.out.println("creating Solution Variable");	
@@ -116,8 +110,9 @@ public class CreateList {
 		
 		myList = testList;	
 		System.out.println();
-		System.out.println("Number of duplicates is "	+myCount.evaluateList(myList));
-		
+		//System.out.println("Number of duplicates is "	+myCount.evaluateList(myList));
+		System.out.println("Number of duplicates is "	+ myList.countDupsTogether(myList));	
+
 		//Reverse_A_List reverseList = new Reverse_A_List();
 		//reverseList.reverseTheList(myList);
 		

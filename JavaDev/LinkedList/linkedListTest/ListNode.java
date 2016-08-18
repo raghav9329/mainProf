@@ -21,10 +21,7 @@ public class ListNode {
 
 	}// end print(list );
 	
-/*************************
- *  undefined method
- *  public integer nodeCount ( listNode list)   is this returning an object or a simple num.
- */
+
    
 	public int count(ListNode list){
 		int x = 0;
@@ -55,4 +52,21 @@ public class ListNode {
     	 }// endWhile
     	 
      }//end of method insertDuplicates
+     
+     public int countDupsTogether(ListNode head){
+    	int count = 0;
+    	ListNode myList = head;
+    	
+    	while (myList != null ){
+    		if (myList.next == null) break;
+    		if (myList.val == myList.next.val)
+    			count++;
+    		myList = myList.next;
+    		
+    	}// endWhile
+    	
+    	return count;
+     }// end of method coundDuplicates
+     
+     
 }// end of class
