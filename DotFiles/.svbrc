@@ -15,6 +15,8 @@ alias psefirefox='psefg Firefox.app'
 #
 ######################
 alias genGitDiskImage='tree -La 2 > ~/Mark/myDiskStructure'
+alias mddate='mkdir $(date +%m-%d-%Y_%H-%M-%S)'
+alias getAutoTestRpt='cp /Volumes/dev/svb-web-payments/reports/integration/test-html-report.html .  '
 ########################
 # 
 # Go cd to directories
@@ -22,6 +24,7 @@ alias genGitDiskImage='tree -La 2 > ~/Mark/myDiskStructure'
 #######################
 alias godev='cd /Volumes/dev/'
 alias gosvb='cd /Volumes/dev/svb-web-payments'
+alias goautoReports='cd /Volumes/dev/svb-web-payments/reports/integration'
 alias gocoreui='cd /Volumes/dev/svb-web-core-ui'
 alias gomark='cd ~/Mark'
 alias goqascen='cd /Volumes/dev/svb-web-payments/integration/qaScenarios'

@@ -76,4 +76,9 @@
 "lsdot
 "-F
 "-x
+"log
+"binary
+"--stat
+"binar
+"npm
 .shell
