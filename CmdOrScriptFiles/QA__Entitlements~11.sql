@@ -31,11 +31,6 @@ commit;
 
 
 
-
-
-
-
-
 select d.addr_1 as "Client Name", c.login_name "User Login Name", 
 decode(b.function_name, 'CREATE_PAYMENT_FPS', 'Create Payment', 'VIEW_PAYMENT_FPS', 'Summary(View Payment)') "User Func Perm", 
 decode(b.max_tran_amt, null, 'n/a', b.max_tran_amt) "Max Tran Amount"
@@ -77,3 +72,14 @@ where client_id=(select client_id from EC_MUR_USER where login_name='adbrain_fps
 AND CURRENCY_CODE='GBP'
 AND BRANCH='UK'
 AND ACCOUNT_STATUS_CODE IN (1,5,6,7);
+
+
+update AUDIT_LOG set status = 2 where AUDIT_ID=6453;
+
+select * from audit_log
+where audit_id = 6453;
+
+
+
+//where audit_id = 6120;
+
