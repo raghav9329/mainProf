@@ -82,7 +82,8 @@ public class CreateList {
 		
 		myList = testList;
 		System.out.println();
-		System.out.println("Number of duplicates is "	+ myList.countDupsTogether(myList));	
+//		System.out.println("Number of duplicates is "	+ myList.countDupsTogether(myList));	
+		System.out.println("Number of duplicates is "	+ myList.countDupsTogether());	
 		
 		System.out.println();
 		System.out.println("creating Solution Variable");	
@@ -100,7 +101,8 @@ public class CreateList {
 		
 		myList = testList;	
 		System.out.println();
-		System.out.println("Number of duplicates is "	+ myList.countDupsTogether(myList));	
+//		System.out.println("Number of duplicates is "	+ myList.countDupsTogether(myList));	
+		System.out.println("Number of duplicates is "	+ myList.countDupsTogether());	
 
 		//Reverse_A_List reverseList = new Reverse_A_List();
 		//reverseList.reverseTheList(myList);
