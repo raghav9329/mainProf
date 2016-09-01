@@ -1,0 +1,24 @@
+[
+ {
+ "firstName": "Kevin",
+ "lastName": "Andrews",
+ "birthDay": "1980-03-03",
+ "phoneNumber": "987-654-3210",
+ "id": "id_number_3",
+ },
+ {
+ "firstName": "Jane",
+ "lastName": "Smith",
+ "birthDay": "1970-02-02",
+ "phoneNumber": "555-555-1212",
+ "id": "id_number_2",
+ },
+ {
+ "firstName": "Joe",
+ "lastName": "Smith",
+ "birthDay": "1970-01-01",
+ "phoneNumber": "123-456-7890",
+ "id": "id_number_1"
+ },
+]
+
