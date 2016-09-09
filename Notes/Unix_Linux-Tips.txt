@@ -1,5 +1,13 @@
 Unix_Linux-Tips
 
+9/7/2016
+Special Mac Command line user of PostFix as an SMTP daemon on the mac
+for command Line emailingÉÉ.
+https://www.phase2technology.com/blog/how-to-enable-local-smtp-server-postfix-on-os-x-leopard/
+edit /Systems/Library/LaunchDaemons/org.postfix.master.plist following inst above
+
+
+
 http://butlerpc.net/blog/2012/02/execute-a-command-for-each-file-in-a-directory-recursively-on-linux/
 find . -type f -name '*.php' -exec sed -i 's/    /\t/g' {} \;
 Explanation:
