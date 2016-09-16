@@ -1,5 +1,82 @@
 IN_Work
 ::Note:: = Entries need a Closed indication maybe ÒclosedÓ right before the date
+Nick.satija@gmail    Nick Satija
+
+qa user account
+qa client
+
+8/16 TAG TESTS
+
+8/15 Color conditional formatting on markFinalQA Excel sheet on Account number cells
+8/15 Nolio  Checkend in on with Supriya
+8/15 Stories:  Get fully unto speed on ALL in this sprint.
+8/15 Finish Excel Sheets for David What can I get out of UAT ??
+8/15  Clean up below
+
+
+8/10  Still need to  Clean this up
+
+8/8/16
+Service Requests Jenkins  Checked up on this:  no news	
+Service Requests Nolio    Checked up on this: no news
+
+Help request DT Vagrant
+
+My own help Set other VMs up with 2nd network access and try out Chrome on Win 7, on Win 10, etc
+
+
+Test Infrastructure
+	•	Page Documentation 
+
+Testing the $VERSION table Connection pool
+	•	Need VishalÕs help for parameter setting
+	•	Need John JohnsonÕs approval for account connection
+
+
+Windows VM 
+	•	Take the technique for Ie and apply to FF and Chrome.  Maybe even try Safari.
+
+
+BACK LOG
+Regression Testing
+Tests Automation
+	•	on QA
+	•	on Win VMs
+
+DB Connection Pool test
+Sonar: By Team View
+Integration testing
+	•	what is the nature of the execution environment
+New DotFiles solution
+
+
+====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  
+DONE !
+====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  
+
+
+
+7/26/16 Done Closed
+MPAY-1917IN DEV5 sub-tasksPayment audit report amount total
+This is Last Sprints Bonus. 
+Gherkins are done 
+Test see to be complete.  Testing now7/26 10:02
+
+Finish
+
+MPAY-1724DRAFT1 sub-taskPayee Name on Payment Summary
+Gherkins in place.  Need Test 
+
+
+MPAY-2035DRAFT1 sub-taskPayment Audit Totals only for successful events
+Gherkins : Status
+Tests : This needs the TC written for the already completed story
+
+
+MPAY-1940DRAFT1 sub-taskAdd Payment Date to Payment Audit Report
+Gherkins : Done
+Tests : Over Done.  Need to cut down
+
 
 7-18-2016
 Comments on 1279 capturing so as to communicate all at once.

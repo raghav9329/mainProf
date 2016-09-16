@@ -8,57 +8,57 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/go
+~MSle0~/Dot
 
 # Last Substitute Search Pattern:
-~MSle0&should 
+~MSle0&xdes
 
 # Last Substitute String:
-$Should 
+$des
 
 # Command Line History (newest to oldest):
-:q
 :wq
+:q
 :w
-:!
+:n
 :e
+:1,$s/xdes/des/g
+:q!
+:1,$s/desc/xdesc/g
+:1,$s/descri/xdescri/g
+:N
+:1,$s/describe/xdescribe/g
+:150,$s/\/qaScenarios/\/Scenarios/g
+:!
 :e ./XBackup_Called.sh
 :e ../pageObjects/AuditTable.js
 :jjj
 :bp
-:n
 :e ../pageObjects/ActivityReportPage.js
 :e ./AuditTable.js
-:q!
 :wq!
-:wq!@
-:6,25s/viSwpFile/swpFile/g
-:Fw
-:1,24s/Users\/maatkins/Volumes/dev/g
-:Q
-:N
 
 # Search String History (newest to oldest):
-?/go
-?/date
-?/HOLIDAY
+?/Dot
+?/dot
+?/gulp
+? desc
+? xdes
+?/xdesc
+?/runSequentially
 ?/build
-?/clean
-?/can create
-?/should match ui account
-?/fromDateP
-?/fromDaeP
-?/auditTable
-?/chrome
-?/ie
-?/|-- svb-
-?/-- svb-
-?/svb-
-?/lsdot
-? viSwpFile
-?/gosvb
-?/source
-?/bash
+?/jasmine
+?/Jas
+?/jasimine
+?/protrac
+??mock
+?/reports
+? descri
+?/describe
+? \/qaScenarios
+?/grizz
+?/griz
+?/should see 4
 
 # Expression History (newest to oldest):
 
@@ -68,25 +68,49 @@ $Should
 
 # Registers:
 "0	LINE	0
-	#rsync -atvz --progress --exclude bin/ /Volumes/dev/murano-apache/* /Volumes/MacThumb1/SVB/murano-apache
+	alias goautoReports='cd /Volumes/dev/svb-web-payments/reports/integration'
 "1	LINE	0
-	alias mdddate'currdate=$(date +%m-%d-%Y_%H-%M);  mkdir $currdate'
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-web-core-ui/* /Volumes/MacThumb1/SVB/svb-web-core-ui
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-web-dashboard/* /Volumes/MacThumb1/SVB/svb-web-dashboard
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-web-entitlements/* /Volumes/MacThumb1/SVB/svb-web-entitlements
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-web-monitor/* /Volumes/MacThumb1/SVB/svb-web-monitor
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-web-payments/* /Volumes/MacThumb1/SVB/svb-web-payments
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-web-sandbox/* /Volumes/MacThumb1/SVB/svb-web-sandbox
 "2	LINE	0
-	
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/murano-apache/* /Volumes/MacThumb1/SVB/murano-apache
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/murano-apps/* /Volumes/MacThumb1/SVB/murano-apps
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/murano-configs/* /Volumes/MacThumb1/SVB/murano-configs
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/murano-context/* /Volumes/MacThumb1/SVB/murano-context
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-demo-site/* /Volumes/MacThumb1/SVB/svb-demo-site
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-dev-tools/* /Volumes/MacThumb1/SVB/svb-dev-tools
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-econnect/* /Volumes/MacThumb1/SVB/svb-econnect
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-econnect-services-mock/* /Volumes/MacThumb1/SVB/svb-econnect-services-mock
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-murano-config/* /Volumes/MacThumb1/SVB/svb-murano-config
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-scheduler-payments/* /Volumes/MacThumb1/SVB/svb-scheduler-payments
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-service-accounts/* /Volumes/MacThumb1/SVB/svb-service-accounts
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-service-base/* /Volumes/MacThumb1/SVB/svb-service-base
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-service-csrf/* /Volumes/MacThumb1/SVB/svb-service-csrf
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-service-entitlements/* /Volumes/MacThumb1/SVB/svb-service-entitlements
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-service-payments/* /Volumes/MacThumb1/SVB/svb-service-payments
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-service-dashboard/* /Volumes/MacThumb1/SVB/svb-service-dashboard
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-service-sandbox/* /Volumes/MacThumb1/SVB/svb-service-sandbox
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-test-reports/* /Volumes/MacThumb1/SVB/svb-test-reports
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-vagrant/* /Volumes/MacThumb1/SVB/svb-vagrant
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-web-base/* /Volumes/MacThumb1/SVB/svb-web-base
 "3	LINE	0
-	
+	alias mdddate'currdate=$(date +%m-%d-%Y_%H-%M);  mkdir $currdate'
 "4	LINE	0
 	
 "5	LINE	0
-	done
+	
 "6	LINE	0
-	 fi
+	
 "7	LINE	0
-	     fi  
+	done
 "8	LINE	0
-	        cp $f /Users/maatkins/Mark/DotFiles
+	 fi
 "9	LINE	0
-	       else
+	     fi  
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
 ""-	CHAR	0
@@ -96,127 +120,122 @@ $Should
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  230  0  ~/.bashrc
-'1  202  0  ~/.bashrc
-'2  173  0  /Volumes/dev/svb-web-payments/integration/mockBackend/auditTable.test.js
-'3  19  19  ~/.svbrc
-'4  27  73  ~/.svbrc
-'5  1  0  ~/.svbrc
-'6  17  3  /Volumes/dev/svb-web-payments/reports/integration/junkfile
-'7  18  44  ~/.svbrc
-'8  20  58  ~/.svbrc
-'9  1  0  ~/.atkmhrc
+'0  239  14  ~/.bashrc
+'1  15  31  ~/.svbrc
+'2  14  28  ~/.svbrc
+'3  85  15  ~/.svbrc
+'4  32  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+'5  31  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+'6  5  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+'7  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+'8  112  0  /Volumes/dev/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+'9  187  0  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
 
 # Jumplist (newest first):
--'  230  0  ~/.bashrc
+-'  239  14  ~/.bashrc
 -'  1  0  ~/.bashrc
--'  202  0  ~/.bashrc
--'  173  0  /Volumes/dev/svb-web-payments/integration/mockBackend/auditTable.test.js
--'  121  0  /Volumes/dev/svb-web-payments/integration/mockBackend/auditTable.test.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/mockBackend/auditTable.test.js
--'  19  19  ~/.svbrc
+-'  238  0  ~/.bashrc
+-'  15  31  ~/.svbrc
 -'  1  0  ~/.svbrc
--'  27  73  ~/.svbrc
--'  25  3  ~/.svbrc
--'  3  0  ~/.svbrc
--'  17  3  /Volumes/dev/svb-web-payments/reports/integration/junkfile
--'  1  0  /Volumes/dev/svb-web-payments/reports/integration/junkfile
--'  18  44  ~/.svbrc
--'  20  58  ~/.svbrc
--'  1  0  ~/.atkmhrc
--'  3  14  ~/Mark/runGit
--'  1  140  ~/Mark/runGit
--'  172  2  ~/.bashrc
--'  25  4  ~/.bashrc
--'  50  0  /Volumes/dev/svb-web-payments/reports/integration/int-test-results.xml
--'  1  0  /Volumes/dev/svb-web-payments/reports/integration/int-test-results.xml
--'  2  0  /Volumes/dev/svb-web-payments/integration/database/paymentServiceScripts.js
--'  58  9  /Volumes/dev/svb-web-payments/integration/database/paymentServiceScripts.js
--'  57  41  /Volumes/dev/svb-web-payments/integration/database/paymentServiceScripts.js
--'  77  5  /Volumes/dev/svb-web-payments/integration/database/paymentServiceScripts.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/database/paymentServiceScripts.js
--'  59  0  /Volumes/dev/svb-web-payments/integration/scenarios/csrfToken.test.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/csrfToken.test.js
--'  5  91  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  1  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  1  0  /Volumes/MACTHUMB1/XBackupRunner.sh
--'  51  0  /Volumes/dev/svb-web-payments/gulp/steps/build.js
--'  1  0  /Volumes/dev/svb-web-payments/gulp/steps/build.js
--'  17  1  /Volumes/dev/svb-web-payments/gulp/tasks/intTestReport.js
--'  98  5  /Volumes/dev/svb-web-payments/gulp/tasks/intTestReport.js
--'  97  16  /Volumes/dev/svb-web-payments/gulp/tasks/intTestReport.js
--'  26  0  /Volumes/dev/svb-web-payments/gulp/tasks/intTestReport.js
--'  1  0  /Volumes/dev/svb-web-payments/gulp/tasks/intTestReport.js
--'  27  0  /Volumes/dev/svb-web-payments/reports/integration/int-test-results.xml
--'  7  2  /Volumes/dev/svb-web-payments/package.json
--'  1  0  /Volumes/dev/svb-web-payments/package.json
--'  50  0  ~/oradiag_maatkins/diag/clients/user_maatkins/host_343537644_80/alert/log.xml
--'  1  0  ~/oradiag_maatkins/diag/clients/user_maatkins/host_343537644_80/alert/log.xml
--'  1  0  ~/Desktop/Murano_Auth.user.js
--'  109  2  /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
--'  114  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
--'  44  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentAccounts.test.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentAccounts.test.js
+-'  14  28  ~/.svbrc
+-'  85  15  ~/.svbrc
+-'  32  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+-'  31  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+-'  5  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+-'  33  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+-'  34  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+-'  112  0  /Volumes/dev/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+-'  187  0  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
+-'  161  1  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
+-'  145  1  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
+-'  118  1  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
+-'  82  1  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
+-'  38  1  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
+-'  22  0  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
 -'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
--'  66  0  /Volumes/dev/svb-web-payments/integration/scenarios/ooba_payment.test.js
+-'  57  0  /Volumes/dev/svb-web-payments/integration/scenarios/ptorUserNoAccView.test.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/ptorUserNoAccView.test.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.test.db.js
+-'  80  1  /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.test.db.js
+-'  12  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.test.db.js
+-'  8  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.smoketest.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.smoketest.js
+-'  1  12  /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
+-'  86  1  /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
+-'  32  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
+-'  1  8  /Volumes/dev/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+-'  7  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentDisplay.smoketest.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentDisplay.smoketest.js
+-'  210  2  /Volumes/dev/svb-web-payments/integration/scenarios/payeee.test.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/payeee.test.js
+-'  71  2  /Volumes/dev/svb-web-payments/integration/scenarios/ooba_payment.test.js
 -'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/ooba_payment.test.js
--'  5  0  /Volumes/dev/svb-web-payments/integration/mockBackend/auditTable.test.js
--'  35  0  /Volumes/dev/svb-web-payments/integration/pageObjects/ActivityReportPage.js
--'  203  1  /Volumes/dev/svb-web-payments/integration/pageObjects/AuditTable.js
--'  2  0  /Volumes/dev/svb-web-payments/integration/pageObjects/AuditTable.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/pageObjects/ActivityReportPage.js
--'  70  0  /Volumes/dev/svb-web-payments/integration/pageObjects/AuditTable.js
--'  244  0  /Volumes/dev/svb-web-payments/integration/pageObjects/AuditTable.js
--'  13  1  /Volumes/dev/svb-web-payments/integration/pageObjects/AuditTable.js
--'  12  54  /Volumes/dev/svb-web-payments/integration/pageObjects/AuditTable.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/pageObjects/AuditTable.js
--'  4  0  /Volumes/dev/svb-web-payments/integration/pageObjects/ActivityReportPage.js
--'  6  0  /Volumes/dev/svb-web-payments/integration/mockBackend/auditTable.test.js
--'  2  0  /Volumes/dev/svb-web-payments/integration/pageObjects/ActivityReportPage.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/mockBackend/AuditTable.js
--'  39  0  ~/Mark/JsDev/calculator/package.json
--'  1  0  ~/Mark/JsDev/calculator/package.json
--'  6  0  ~/Mark/JsDev/calculator/conf.js
--'  1  0  ~/Mark/JsDev/calculator/conf.js
--'  113  0  ~/Mark/JsDev/StringTheoryRound2/myjsRound2.js
--'  1  0  ~/Mark/JsDev/StringTheoryRound2/myjsRound2.js
--'  30  0  ~/Mark/JsDev/firstProj02252015/myjs.js
--'  1  0  ~/Mark/JsDev/firstProj02252015/myjs.js
--'  1  0  ~/Mark/.gitignore
--'  6  0  ~/Mark/JavaDev/LinkedList/Solution.java
--'  1  0  ~/Mark/JavaDev/LinkedList/Solution.java
--'  1  0  ~/Mark/JavaDev/R_M/.project
--'  5  56  ~/Desktop/XBackup_Called.sh
--'  1  0  ~/Desktop/XBackup_Called.sh
--'  252  7  ~/.bashrc
--'  265  0  ~/.bashrc
--'  211  0  ~/.bashrc
--'  184  3  /Volumes/dev/svb-web-payments/protractor.conf.js
--'  1  0  /Volumes/dev/svb-web-payments/protractor.conf.js
--'  90  33  /Volumes/dev/svb-web-payments/protractor.conf.js
--'  60  63  /Volumes/dev/svb-web-payments/protractor.conf.js
--'  34  14  /Volumes/dev/svb-web-payments/protractor.conf.js
--'  187  0  /Volumes/dev/svb-web-payments/@
--'  1  0  /Volumes/dev/svb-web-payments/@
--'  1510  0  /private/tmp/treeof4
--'  1315  0  /private/tmp/treeof4
--'  1080  8  /private/tmp/treeof4
--'  849  12  /private/tmp/treeof4
--'  589  0  /private/tmp/treeof4
--'  472  0  /private/tmp/treeof4
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/npm-debug.log
+-'  105  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
+-'  106  1  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+-'  50  0  /Volumes/dev/svb-web-payments/integration/scenarios/csrfToken.test.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/csrfToken.test.js
+-'  30  0  /Volumes/dev/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+-'  33  3  /Volumes/dev/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+-'  11  0  /Volumes/dev/svb-web-payments/integration/scenarios/bankUser.smoketest.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/bankUser.smoketest.js
+-'  127  4  /Volumes/dev/svb-web-payments/integration/scenarios/audit_payee_filter.test.js
+-'  56  8  /Volumes/dev/svb-web-payments/integration/scenarios/audit_payee_filter.test.js
+-'  28  4  /Volumes/dev/svb-web-payments/integration/scenarios/audit_payee_filter.test.js
+-'  3  0  /Volumes/dev/svb-web-payments/integration/scenarios/audit_payee_filter.test.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/audit_payee_filter.test.js
+-'  12  0  /Volumes/dev/svb-web-payments/integration/scenarios/audit_no_access.test.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/audit_no_access.test.js
+-'  158  4  /Volumes/dev/svb-web-payments/integration/scenarios/audit_access.test.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/audit_access.test.js
+-'  212  0  /usr/local/lib/node_modules/gulp/bin/gulp.js
+-'  46  0  /usr/local/lib/node_modules/gulp/bin/gulp.js
+-'  1  0  /usr/local/lib/node_modules/gulp/bin/gulp.js
+-'  7  44  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  80  2  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  76  2  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  71  2  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  67  2  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  58  11  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  55  2  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  14  34  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  13  37  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  109  4  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  100  19  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  89  0  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  1  0  /Volumes/dev/svb-web-payments/gulpfile.js
+-'  87  12  /Volumes/dev/svb-web-payments/package.json
+-'  15  13  /Volumes/dev/svb-web-payments/package.json
+-'  1  0  /Volumes/dev/svb-web-payments/package.json
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario2.test.db.js
+-'  5  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  9  38  ~/.svbrc
+-'  16204  8  ~/.bash_eternal_history
+-'  16262  0  ~/.bash_eternal_history
+-'  1  0  ~/.bash_eternal_history
+-'  16182  0  ~/.bash_eternal_history
+-'  16254  0  ~/.bash_eternal_history
+-'  1  0  /Volumes/dev/svb-web-payments/mark.csv
+-'  1  0  /Volumes/dev/svb-web-payments/protractor.conf.mobile.js
+-'  106  1  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario2.test.db.js
+-'  114  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario2.test.db.js
+-'  31  14  ~/.svbrc
+-'  22  55  ~/.svbrc
+-'  176  0  /Volumes/dev/svb-web-payments/integration/scenarios/audit_access.test.js
+-'  120  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario2.test.db.js
+-'  176  1  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
+-'  187  0  /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
 
 # History of marks within files (newest to oldest):
 
 > ~/.bashrc
-	"	230	0
-	^	253	21
-	.	253	21
-	+	192	25
-	+	184	11
-	+	154	0
-	+	155	27
-	+	163	0
+	"	239	14
+	^	239	15
+	.	239	14
 	+	162	0
 	+	163	26
 	+	174	31
@@ -272,47 +291,531 @@ $Should
 	+	190	0
 	+	191	4
 	+	210	0
+	+	244	0
 	+	243	0
 	+	242	0
-	+	241	0
-	+	242	0
+	+	243	0
 	+	214	3
 	+	238	42
 	+	197	0
-	+	244	0
-	+	245	14
-	+	265	0
-	+	245	14
-	+	265	0
-	+	265	0
-	+	265	14
-	+	248	37
-	+	265	0
-	+	248	0
-	+	264	6
-	+	251	4
-	+	251	0
-	+	251	13
-	+	251	14
-	+	251	0
-	+	251	0
-	+	251	0
-	+	251	2
-	+	249	6
-	+	263	11
-	+	261	0
-	+	260	5
-	+	256	21
-	+	247	22
-	+	256	29
-	+	259	22
-	+	265	0
-	+	265	0
-	+	255	3
-	+	262	6
-	+	253	23
-	+	253	21
+	+	245	0
+	+	246	14
+	+	266	0
+	+	246	14
+	+	266	0
+	+	266	0
+	+	266	14
+	+	249	37
+	+	266	0
+	+	249	0
+	+	265	6
+	+	252	4
+	+	252	0
+	+	252	13
+	+	252	14
+	+	252	0
+	+	252	0
+	+	252	0
+	+	252	2
+	+	250	6
+	+	264	11
+	+	262	0
+	+	261	5
+	+	257	21
+	+	248	22
+	+	257	29
+	+	260	22
+	+	266	0
+	+	266	0
+	+	256	3
+	+	263	6
+	+	254	23
+	+	254	21
+	+	154	62
+	+	155	58
+	+	162	61
+	+	163	57
+	+	239	14
 	f	149	0
+
+> ~/.svbrc
+	"	15	31
+	^	15	32
+	.	15	31
+	+	57	56
+	+	49	26
+	+	50	26
+	+	51	23
+	+	52	23
+	+	53	26
+	+	54	25
+	+	55	28
+	+	56	27
+	+	57	27
+	+	56	23
+	+	57	23
+	+	77	0
+	+	14	39
+	+	16	0
+	+	89	73
+	+	24	58
+	+	90	147
+	+	90	30
+	+	90	111
+	+	90	23
+	+	19	0
+	+	34	0
+	+	46	0
+	+	102	15
+	+	100	5
+	+	92	5
+	+	91	6
+	+	92	19
+	+	91	23
+	+	92	46
+	+	91	47
+	+	94	12
+	+	95	12
+	+	94	22
+	+	95	36
+	+	94	36
+	+	95	0
+	+	94	33
+	+	95	32
+	+	94	36
+	+	95	34
+	+	97	2
+	+	94	23
+	+	97	0
+	+	60	0
+	+	62	19
+	+	77	117
+	+	77	21
+	+	36	60
+	+	96	31
+	+	58	14
+	+	59	41
+	+	37	35
+	+	78	39
+	+	3	0
+	+	11	0
+	+	12	35
+	+	45	29
+	+	33	23
+	+	29	28
+	+	34	31
+	+	28	29
+	+	32	39
+	+	21	42
+	+	23	58
+	+	21	43
+	+	23	29
+	+	21	44
+	+	23	0
+	+	22	93
+	+	29	0
+	+	30	73
+	+	22	19
+	+	13	48
+	+	65	0
+	+	67	26
+	+	68	0
+	+	71	41
+	+	72	12
+	+	70	24
+	+	73	13
+	+	72	9
+	+	71	9
+	+	72	79
+	+	73	9
+	+	71	15
+	+	72	16
+	+	73	16
+	+	71	14
+	+	73	79
+	+	74	0
+	+	75	0
+	+	76	74
+	+	31	14
+	+	9	38
+	+	70	15
+	+	15	0
+	+	14	28
+	+	15	31
+	e	48	76
+	k	70	6
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
+	"	32	0
+	^	31	1
+	.	31	0
+	+	114	1
+	+	106	1
+	+	31	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
+	"	1	0
+	.	30	0
+	+	30	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/audit_access.test.js
+	"	158	4
+	^	27	1
+	.	27	0
+	+	27	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/audit_no_access.test.js
+	"	12	0
+	^	12	1
+	.	12	0
+	+	12	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/audit_payee_filter.test.js
+	"	127	4
+	^	122	5
+	.	122	4
+	+	27	0
+	+	55	4
+	+	122	4
+	+	27	0
+	+	55	4
+	+	122	4
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/bankUser.smoketest.js
+	"	11	0
+	^	11	1
+	.	11	0
+	+	11	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/csrfToken.test.js
+	"	50	0
+	.	20	0
+	+	20	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
+	"	105	0
+	^	16	1
+	.	16	0
+	+	16	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/npm-debug.log
+	"	1	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/ooba_payment.test.js
+	"	71	2
+	.	31	1
+	+	12	0
+	+	31	1
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/payeee.test.js
+	"	210	2
+	.	127	4
+	+	21	0
+	+	70	4
+	+	127	4
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/paymentDisplay.smoketest.js
+	"	7	0
+	^	7	1
+	.	7	0
+	+	7	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+	"	1	8
+	.	218	1
+	+	16	0
+	+	47	1
+	+	67	1
+	+	107	1
+	+	218	1
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
+	"	1	12
+	.	99	2
+	+	32	0
+	+	86	1
+	+	99	2
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.smoketest.js
+	"	8	0
+	^	8	1
+	.	8	0
+	+	8	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.test.db.js
+	"	1	0
+	.	112	1
+	+	12	0
+	+	80	1
+	+	112	1
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/ptorUserNoAccView.test.js
+	"	57	0
+	^	1	1
+	.	19	0
+	+	1	0
+	+	19	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
+	"	187	0
+	.	176	1
+	+	22	0
+	+	38	1
+	+	82	1
+	+	118	1
+	+	145	1
+	+	161	1
+	+	176	1
+
+> /usr/local/lib/node_modules/gulp/bin/gulp.js
+	"	212	0
+
+> ~/.zshrc
+	"	77	0
+
+> /Volumes/dev/svb-web-payments/gulpfile.js
+	"	7	44
+
+> /Volumes/dev/svb-web-payments/package.json
+	"	87	12
+	.	24	0
+	+	25	0
+	+	24	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario2.test.db.js
+	"	1	0
+	^	106	2
+	.	106	1
+	+	31	0
+	+	114	1
+	+	106	1
+
+> ~/.bash_profile
+	"	5	0
+
+> ~/.bash_eternal_history
+	"	16204	8
+
+> /Volumes/dev/svb-web-payments/mark.csv
+	"	1	0
+
+> /Volumes/dev/svb-web-payments/protractor.conf.mobile.js
+	"	1	0
+
+> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1473264377
+	"	1	0
+
+> ~/Mark/tmp_hold/audit_access.test.js
+	"	176	0
+
+> ~/Mark/tmp_hold/DzeroEntitleUkPymtUser213_1.qa_test.js
+	"	1	0
+
+> ~/Mark/tmp_hold/Esomthingsomthing214_1.qa_test.js
+	"	1	0
+
+> ~/Mark/tmp_hold/FsomethinSomthing217_1.qa_test.js
+	"	1	0
+
+> ~/Mark/tmp_hold/GsomethinSomthing_NNN.qa_test.js
+	"	1	0
+
+> /System/Library/LaunchDaemons/org.postfix.master.plist
+	"	21	0
+	^	21	1
+	.	21	0
+	+	21	0
+
+> /Volumes/MACTHUMB1/XBackup_newest.sh
+	"	30	93
+	^	30	94
+	.	30	93
+	+	38	0
+	+	9	2
+	+	13	19
+	+	11	32
+	+	36	8
+	+	17	9
+	+	35	3
+	+	34	18
+	+	18	6
+	+	25	22
+	+	27	0
+	+	28	9
+	+	29	7
+	+	31	32
+	+	5	5
+	+	3	15
+	+	7	2
+	+	17	14
+	+	16	1
+	+	16	0
+	+	23	7
+	+	19	36
+	+	21	20
+	+	19	15
+	+	11	2
+	+	12	48
+	+	3	0
+	+	4	30
+	+	5	0
+	+	6	0
+	+	5	0
+	+	6	28
+	+	12	49
+	+	20	0
+	+	19	5
+	+	20	45
+	+	30	80
+	+	26	8
+	+	30	93
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario2.test.db.js.mha
+	"	29	0
+	^	29	1
+	.	29	0
+	+	29	0
+
+> /Volumes/dev/svb-service-accounts/build.gradle
+	"	268	25
+
+> /Volumes/dev/svb-scheduler-payments/build.gradle
+	"	287	1
+
+> /Volumes/dev/svb-scheduler-payments/src/main/webapp/WEB-INF/web.xml
+	"	10	0
+
+> /Volumes/dev/svb-service-csrf/src/test/java/com/svb/murano/csrf/integration/PrivateCsrfTokenResourceSwaggerTest.java
+	"	146	2
+
+> /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/integration/NewUserEntitlementIntegration.java
+	"	260	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/model/OOBADeviceTest.java
+	"	33	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/model/OOBAMetaTest.java
+	"	33	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBACancelIntegrationTest.java
+	"	203	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/BaseOOBAIntegrationTest.java
+	"	52	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payees/integration/PayeesIntegrationTest.java
+	"	33	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/validation/ValidAllowedCharSetTest.java
+	"	36	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/validation/ParamValidatorTest.java
+	"	27	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/soa/controller/integration/SoaPaymentStatusCallbackIntegrationTest.java
+	"	33	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/soa/controller/PaymentStatusCallbackTest.java
+	"	137	0
+
+> /Volumes/dev/svb-test-reports/build.gradle
+	"	30	0
+
+> /Volumes/dev/svb-test-reports/src/main/java/com/svb/XMLTransformer.java
+	"	12	0
+
+> /Volumes/dev/svb-web-dashboard/test/integration/accounts/accountsSpec.js
+	"	226	37
+
+> /Volumes/dev/svb-web-monitor/app/src/monitor/MonitorPage.js
+	"	104	0
+
+> /Volumes/dev/svb-web-monitor/app/src/app.js
+	"	1	0
+
+> /Volumes/dev/svb-web-monitor/infrastructure/local/apache/svb-web-monitor.conf
+	"	1	0
+
+> /Volumes/dev/svb-web-monitor/infrastructure/dev/apache/svb-web-monitor.conf
+	"	1	0
+
+> /Volumes/dev/svb-service-base/build.gradle
+	"	1	0
+
+> /Volumes/dev/svb-service-base/src/test/java/com/svb/murano/common/dao/BaseDAOTest.java
+	"	64	0
+
+> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/AccountEntitlementResourceIntegrationTest.java
+	"	1	0
+
+> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/AccountEntitlementResourceSwaggerTest.java
+	"	1	0
+
+> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/AccountsResourceIntegrationTest.java
+	"	1	0
+
+> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/AccountsResourceSwaggerTest.java
+	"	1	0
+
+> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/ClientAccountsResourceIntegrationTest.java
+	"	1	0
+
+> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/ClientAccountsResourceSwaggerTest.java
+	"	57	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/holidaycal/integration/HolidayCalResourceSwaggerTest.java
+	"	141	0
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/holidaycal/integration/HolidayCalIntegrationTest.java
+	"	80	21
+
+> /Volumes/dev/svb-service-payments/build.gradle
+	"	146	95
+
+> /Volumes/MACTHUMB1/XBackup_Called.sh
+	"	5	28
+	^	5	29
+	.	5	28
+	+	5	91
+	+	5	28
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db copy.js
+	"	1	0
+
+> ~/Library/Preferences/IntelliJIdea15/idea.properties
+	"	2	0
+	^	2	0
+	.	1	27
+	+	1	27
+
+> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1472012505
+	"	1	0
+
+> ~/AutomationReports/e2e/08-23-2016_12-01-11/readme
+	"	5	0
+	^	5	0
+	.	4	0
+	+	4	0
+
+> ~/AutomationReports/e2e/08-23-2016_11-52-07/readme
+	"	9	0
+	^	9	0
+	.	8	0
+	+	8	0
+
+> /Volumes/dev/svb-web-payments/protractor.conf.js
+	"	200	0
+	^	176	36
+	.	176	27
+	+	179	0
+	+	180	2
+	+	179	35
+	+	177	3
+	+	177	0
+	+	176	27
+
+> /Volumes/dev/svb-web-payments/reports/integration/int-test-results.xml
+	"	2	0
 
 > /Volumes/dev/svb-web-payments/integration/mockBackend/auditTable.test.js
 	"	173	0
@@ -332,112 +835,6 @@ $Should
 	+	121	2
 	+	97	14
 	+	98	43
-
-> ~/.svbrc
-	"	19	19
-	^	19	20
-	.	19	19
-	+	48	31
-	+	49	33
-	+	50	32
-	+	52	29
-	+	53	29
-	+	50	33
-	+	49	33
-	+	50	33
-	+	49	25
-	+	50	25
-	+	49	25
-	+	50	32
-	+	49	32
-	+	50	31
-	+	52	30
-	+	53	26
-	+	56	0
-	+	53	27
-	+	45	61
-	+	46	61
-	+	47	55
-	+	48	54
-	+	49	61
-	+	50	59
-	+	51	63
-	+	52	55
-	+	53	56
-	+	45	26
-	+	46	26
-	+	47	23
-	+	48	23
-	+	49	26
-	+	50	25
-	+	51	28
-	+	52	27
-	+	53	27
-	+	52	23
-	+	53	23
-	+	61	0
-	+	12	39
-	+	13	0
-	+	73	73
-	+	21	58
-	+	74	147
-	+	74	30
-	+	74	111
-	+	74	23
-	+	16	0
-	+	30	0
-	+	42	0
-	+	86	15
-	+	84	5
-	+	76	5
-	+	75	6
-	+	76	19
-	+	75	23
-	+	76	46
-	+	75	47
-	+	78	12
-	+	79	12
-	+	78	22
-	+	79	36
-	+	78	36
-	+	79	0
-	+	78	33
-	+	79	32
-	+	78	36
-	+	79	34
-	+	81	2
-	+	78	23
-	+	81	0
-	+	56	0
-	+	58	19
-	+	61	117
-	+	61	21
-	+	32	60
-	+	80	31
-	+	54	14
-	+	55	41
-	+	33	35
-	+	62	39
-	+	3	0
-	+	10	0
-	+	11	35
-	+	41	29
-	+	29	23
-	+	26	28
-	+	30	31
-	+	25	29
-	+	28	39
-	+	18	42
-	+	20	58
-	+	18	43
-	+	20	29
-	+	18	44
-	+	20	0
-	+	19	93
-	+	26	0
-	+	27	73
-	+	19	19
-	e	44	76
 
 > /Volumes/dev/svb-web-payments/reports/integration/junkfile
 	"	17	3
@@ -459,9 +856,6 @@ $Should
 > ~/Mark/runGit
 	"	3	14
 
-> /Volumes/dev/svb-web-payments/reports/integration/int-test-results.xml
-	"	50	0
-
 > /Volumes/dev/svb-web-payments/integration/database/paymentServiceScripts.js
 	"	2	0
 
@@ -471,32 +865,14 @@ $Should
 	.	4	9
 	+	4	9
 
-> /Volumes/dev/svb-web-payments/integration/scenarios/csrfToken.test.js
-	"	59	0
-
-> /Volumes/MACTHUMB1/XBackup_Called.sh
-	"	5	91
-	^	5	92
-	.	5	91
-	+	5	91
-
 > /Volumes/MACTHUMB1/XBackupRunner.sh
 	"	1	0
 
 > /Volumes/dev/svb-web-payments/gulp/steps/build.js
 	"	51	0
 
-> /Volumes/dev/svb-web-payments/gulpfile.js
-	"	99	0
-
 > /Volumes/dev/svb-web-payments/gulp/tasks/intTestReport.js
 	"	17	1
-
-> /Volumes/dev/svb-web-payments/package.json
-	"	7	2
-	.	24	0
-	+	25	0
-	+	24	0
 
 > ~/oradiag_maatkins/diag/clients/user_maatkins/host_343537644_80/alert/log.xml
 	"	50	0
@@ -510,17 +886,8 @@ $Should
 	+	11	0
 	+	12	0
 
-> /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
-	"	109	2
-
 > /Volumes/dev/svb-web-payments/integration/scenarios/paymentAccounts.test.js
 	"	44	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/ooba_payment.test.js
-	"	66	0
 
 > /Volumes/dev/svb-web-payments/integration/pageObjects/ActivityReportPage.js
 	"	35	0
@@ -585,426 +952,3 @@ $Should
 	+	5	42
 	+	6	0
 	+	5	56
-
-> /Volumes/dev/svb-web-payments/protractor.conf.js
-	"	184	3
-	^	176	36
-	.	176	27
-	+	179	0
-	+	180	2
-	+	179	35
-	+	177	3
-	+	177	0
-	+	176	27
-
-> /Volumes/dev/svb-web-payments/@
-	"	187	0
-
-> /private/tmp/treeof4
-	"	1510	0
-
-> /Volumes/dev/svb-web-payments/protractor.conf
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/protractor-mock.conf.js
-	"	25	13
-	^	25	14
-	.	25	13
-	+	25	13
-
-> ~/.sentientrc
-	"	46	0
-
-> /Volumes/dev/svb-web-payments/integration/mockBackend/successModal.test.js
-	"	2	0
-
-> ~/Downloads/int-test-results.xml
-	"	27	34
-	.	3	0
-	+	3	0
-	+	5	0
-	+	3	0
-
-> ~/Mark/CmdOrScriptFiles/dtfTest
-	"	3	26
-	^	3	27
-	.	3	26
-	+	3	26
-
-> ~/dtfTest
-	"	2	0
-	^	14	0
-	.	2	0
-	+	15	12
-	+	2	4
-	+	30	3
-	+	29	0
-	+	29	1
-	+	23	9
-	+	15	1
-	+	23	0
-	+	29	0
-	+	29	0
-	+	23	9
-	+	28	1
-	+	23	26
-	+	25	24
-	+	28	2
-	+	25	30
-	+	9	0
-	+	7	11
-	+	3	0
-	+	2	0
-	+	2	0
-	+	2	15
-	+	23	0
-	+	23	1
-	+	23	0
-	+	23	0
-	+	23	0
-	+	23	0
-	+	23	29
-	+	2	15
-	+	23	0
-	+	25	11
-	+	27	5
-	+	2	17
-	+	1	10
-	+	2	0
-	+	2	0
-	+	2	18
-	+	2	16
-	+	27	1
-	+	26	0
-	+	28	7
-	+	26	0
-	+	27	5
-	+	28	1
-	+	27	1
-	+	2	0
-	+	27	30
-	+	28	0
-	+	21	1
-	+	23	3
-	+	24	4
-	+	25	6
-	+	26	4
-	+	27	6
-	+	25	6
-	+	24	5
-	+	26	5
-	+	28	3
-	+	29	0
-	+	28	0
-	+	27	0
-	+	26	0
-	+	25	0
-	+	24	0
-	+	23	0
-	+	22	0
-	+	21	0
-	+	20	0
-	+	30	0
-	+	16	0
-	+	15	0
-	+	9	37
-	+	8	0
-	+	10	1
-	+	2	0
-	+	16	0
-	+	11	0
-	+	14	0
-	+	11	0
-	+	2	0
-
-> ~/.zshrc
-	"	88	13
-	^	88	14
-	.	88	13
-	+	8	12
-	+	86	38
-	+	87	23
-	+	88	13
-
-> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1469770765
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/app/src/fixtures/audit.json
-	"	320	0
-
-> /Volumes/dev/svb-web-payments/app/src/fixtures/mockAuditData.js
-	"	2	4
-
-> ~/Mark/tmp_hold/DzeroEntitleUkPymtUser213_1.qa_test.js
-	"	12	0
-
-> ~/Mark/tmp_hold/Esomthingsomthing214_1.qa_test.js
-	"	1	0
-
-> ~/Mark/tmp_hold/FsomethinSomthing217_1.qa_test.js
-	"	1	0
-
-> ~/Mark/tmp_hold/GsomethinSomthing_NNN.qa_test.js
-	"	1	0
-
-> ~/Mark/tmp_hold/HsomethinSomthing_NNN.qa_test.js
-	"	1	0
-
-> ~/Mark/tmp_hold/IsomethinSomthing_NNN.qa_test.js
-	"	1	0
-
-> ~/Mark/tmp_hold/JsomethinSomthing_NNN.qa_test.js
-	"	1	0
-
-> ~/.swp
-	"	2	0
-	^	2	1
-	.	2	0
-	+	2	0
-
-> ~/Mark/aList
-	"	68	6
-	^	68	7
-	.	69	0
-	+	55	9
-	+	54	10
-	+	53	5
-	+	52	6
-	+	51	10
-	+	50	5
-	+	49	9
-	+	48	8
-	+	47	4
-	+	46	8
-	+	45	8
-	+	44	14
-	+	43	0
-	+	44	0
-	+	43	7
-	+	44	0
-	+	42	8
-	+	41	7
-	+	40	7
-	+	39	0
-	+	38	4
-	+	37	10
-	+	36	9
-	+	35	7
-	+	34	6
-	+	33	15
-	+	32	8
-	+	31	4
-	+	30	16
-	+	29	7
-	+	28	5
-	+	27	6
-	+	26	5
-	+	25	3
-	+	24	10
-	+	23	9
-	+	22	12
-	+	21	14
-	+	20	14
-	+	19	3
-	+	18	0
-	+	17	14
-	+	16	11
-	+	14	0
-	+	11	4
-	+	14	0
-	+	60	6
-	+	69	0
-
-> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/soa/SOASubmissionServiceTest.java
-	"	168	0
-
-> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerHelperTest.java
-	"	179	0
-
-> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListenerTest.java
-	"	133	0
-
-> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/common/web/listener/MuranoServletContextListener
-	"	1	0
-
-> /Volumes/dev/svb-scheduler-payments/src/test/java/com/svb/murano/common/factory/TransformerInstanceFactoryTest.java
-	"	1	0
-
-> /Volumes/dev/svb-service-payments/src/main/java/com/svb/murano/audit/model/AuditEvent.java
-	"	3	0
-
-> /Volumes/dev/svb-service-payments/src/main/java/com/svb/murano/audit/model/AuditLog.java
-	"	10	0
-
-> /Volumes/dev/svb-service-payments/src/main/java/com/svb/murano/audit/model/AuditLogDetails.java
-	"	1	0
-
-> /Volumes/dev/svb-service-payments/src/main/java/com/svb/murano/accounts/client/AccountClient.java
-	"	8	0
-
-> ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/recovery.js
-	"	1	34621
-
-> ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/recovery.bak
-	"	1	35886
-
-> ~/Library/Application Support/Firefox/Profiles/6ro7klxi.default/sessionstore-backups/previous.js
-	"	1	8670
-
-> ~/.bash_profile
-	"	1	0
-	^	19	1
-	.	11	0
-	+	12	0
-	+	15	0
-	+	12	0
-	+	15	54
-	+	16	53
-	+	15	1
-	+	14	33
-	+	19	0
-	+	17	50
-	+	18	59
-	+	11	0
-	+	19	0
-	+	11	0
-
-> /private/tmp/GitLogP.out
-	"	189773	0
-
-> ~/Mark/myDiskStructure
-	"	1	0
-
-> ~/Mark/DotFiles/getLocalDotFiles
-	"	22	10
-	^	22	11
-	.	22	10
-	+	23	0
-	+	22	0
-	+	23	0
-	+	22	10
-
-> ~/Mark/CmdOrScriptFiles/getLocalCmdOrScripts
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/Vagrantfile
-	"	21	0
-
-> /Volumes/dev/svb-vagrant/tools/bash_profile.sh
-	"	61	0
-
-> /Volumes/dev/svb-web-core-ui/src/modules/widgets/widgetsModule.js
-	"	1	0
-
-> /Volumes/dev/svb-econnect/vagrant/Vagrantfile
-	"	1	0
-
-> ~/Vagrantfile
-	"	35	0
-
-> ~/Vagrant
-	"	1	0
-
-> ~/testImageProps
-	"	8	12
-	^	8	13
-	.	8	12
-	+	5	11
-	+	3	4
-	+	5	16
-	+	9	3
-	+	4	15
-	+	3	20
-	+	7	1
-	+	8	12
-
-> ~/getDiskStructureFile
-	"	1	0
-	^	7	26
-	.	3	9
-	+	6	0
-	+	7	0
-	+	3	0
-	+	6	0
-	+	7	0
-	+	3	0
-	+	2	4
-	+	3	25
-	+	7	25
-	+	3	9
-
-> ~/Mark/CmdOrScriptFiles/upDateRepos
-	"	2	75
-	^	2	76
-	.	2	75
-	+	2	75
-
-> ~/updateRepos
-	"	1	0
-	^	21	0
-	.	20	0
-	+	15	2
-	+	15	0
-	+	13	36
-	+	15	0
-	+	15	0
-	+	15	0
-	+	13	30
-	+	15	0
-	+	14	0
-	+	21	0
-	+	20	0
-
-> ~/svb-web-payments/integration/scenarios/paymentEntitlement.2accounts.test.js
-	"	110	0
-
-> ~/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
-	"	9	0
-
-> ~/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
-	"	1	0
-
-> ~/svb-web-payments/integration/scenarios/crsfToken.test.js
-	"	1	0
-
-> ~/svb-web-payments/integration/scenarios/cumulativeLimitDailyUserlimitScenario.test.db.js
-	"	1	0
-
-> ~/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
-	"	1	0
-
-> ~/svb-web-payments/integration/scenarios/ooba_payment.test.js
-	"	1	0
-
-> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/CH_Login.java
-	"	1	0
-
-> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/FF_Login.java
-	"	1	0
-
-> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/LoginType.java
-	"	1	0
-
-> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestFactoryPattern.java
-	"	1	0
-
-> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestLogin.java
-	"	1	0
-
-> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/giveMeALogin/TestLoginFactory.java
-	"	1	0
-
-> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/FireFoxLogin.java
-	"	1	0
-
-> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/Login.java
-	"	1	0
-
-> ~/Mark/DesktopShortcuts/Eval/LoginFactory/src/simple/TestLoginFactory.java
-	"	1	0
-
-> ~/Mark/Notes/Editor_Tips Â .txt
-	"	1	0
-
-> ~/Mark/Notes/General Notes.txt
-	"	1	0

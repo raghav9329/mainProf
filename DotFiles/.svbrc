@@ -6,10 +6,13 @@ alias visvb='vi ~/.svbrc'
 alias cpDotFiles='cp ~/.atkmhrc ~/Mark/Dotfiles ; cp ~/.bash_profile ~/Mark/Dotfiles ;cp ~/.svbrc ~/Mark/Dotfiles'
 alias runprotonqa='npm run protractor -- --params.env=qa'
 alias protractqa='npm run protractor -- --params.env=qa'
+alias runmock='npm run mock-protractor'
 alias datestr=' date +%m-%d-%Y_%H:%M:%S'
 alias gs='git status'
 alias psefirefox='psefg Firefox.app'
-
+alias bashFuncs='tail -200 ~/.bashrc | grep "()"'
+alias catbash='cat ~/.bashrc'
+alias vibash='cd ; vi ./.bashrc'
 #######################
 #
 #
@@ -25,6 +28,7 @@ alias getAutoTestRpt='cp /Volumes/dev/svb-web-payments/reports/integration/test-
 alias godev='cd /Volumes/dev/'
 alias gosvb='cd /Volumes/dev/svb-web-payments'
 alias goautoReports='cd /Volumes/dev/svb-web-payments/reports/integration'
+alias gosvbrpt='cd /Volumes/dev/svb-web-payments/reports/integration'
 alias gocoreui='cd /Volumes/dev/svb-web-core-ui'
 alias gomark='cd ~/Mark'
 alias goqascen='cd /Volumes/dev/svb-web-payments/integration/qaScenarios'
@@ -58,6 +62,18 @@ alias sshtom2='ssh maatkins_r@10.138.10.57'
 #######################
 alias atestqa='gosvb ;how_toQaProtractor ; npm run protractor_qa -- --params.browsers=chrome --params.env=qa --suite=qaOnly '
 alias webPayUnitTest='sudo npm run test' 
+########################
+# 
+# QA TestAutomation Runners
+# 
+#######################
+alias mktestrpt='gosvb; gulp generateJasmineReport'
+alias  e2eQach='npm run protractor -- --params.browsers=chrome --params.env=qa --stacktrace=true'
+alias e2eDevch='npm run protractor -- --params.browsers=chrome --params.env=dev --stacktrace=true'
+alias e2eUatch='npm run protractor -- --params.browsers=chrome --params.env=uat1 --stacktrace=true'
+
+alias getAutoTestRpt='cp /Volumes/dev/svb-web-payments/reports/integration/test-html-report.html .  '
+alias goAutoTestRpt='cd /Volumes/dev/svb-web-payments/reports/integration/'
 ########################
 # 
 #  How to Section

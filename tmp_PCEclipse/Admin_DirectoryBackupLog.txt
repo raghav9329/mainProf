@@ -1,0 +1,12 @@
+Sat 07/12/2014  9:15:28.08 found f:\2013LaptopBackupAnchor.txt 
+Sat 07/12/2014  9:17:41.05 found f:\2013LaptopBackupAnchor.txt 
+Wed 07/16/2014 22:47:10.35 found f:\2013LaptopBackupAnchor.txt 
+Wed 07/16/2014 22:54:34.00 found f:\2013LaptopBackupAnchor.txt 
+Mon 07/21/2014 23:59:55.47 found f:\2013LaptopBackupAnchor.txt 
+Tue 07/22/2014  0:01:30.88 found f:\2013LaptopBackupAnchor.txt 
+Wed 07/30/2014 22:55:41.18 found g:\2013LaptopBackupAnchor.txt 
+Sun 08/03/2014 23:38:27.47 found g:\2013LaptopBackupAnchor.txt 
+Tue 08/05/2014 20:44:06.34 found g:\2013LaptopBackupAnchor.txt 
+Tue 08/26/2014 23:06:30.20 found g:\2013LaptopBackupAnchor.txt 
+Sat 10/04/2014 13:33:33.40 found f:\2013LaptopBackupAnchor.txt 
+Tue 10/14/2014 23:52:02.96 found f:\2013LaptopBackupAnchor.txt 

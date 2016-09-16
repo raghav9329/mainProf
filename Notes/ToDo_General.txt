@@ -1,5 +1,52 @@
 ToDo_General
 
+9/9/16
+Need to get that one story in Srint 15,16,17 that Sunny Validated but we never had any Test/Task for the story.
+Was to make a test and make sure with Sunny I wrote them correctly.
+
+9/8/16
+
+Get uid/pid to all things
+Jira
+confluence
+Slack
+email
+lynx
+stash
+nolio
+jenkins
+É
+SVB uid / newpas1*
+
+One thing I did with nick:
+git checkout -b <branch name >  in my case it was
+bugfix/MPAY-2235-add-a-client-cumulative-test-pair
+
+
+
+9/7/16
+Pull all 0.1.5 Test Reporting
+ ++ Will need a test/task for story 2007
+
+SusanÕs Acceptance Matrix:
+ ++ create a task for this work
+
+Ask if we are going to get email test reports daily ?
+
+Manage Sprint 18 testing
+Finish IffMpeg setup
+Get password to Jira Confluence
+
+QA Test Process:
+ ++ Complete glass fish, grizzly jersey, gradle
+
+
+
+Backup Notes:
+ ++ Fix File names
+
+get RSNYC to restart where it left off when it is needed to be stopped
+
 7/12/16
 Finish Testing 1792- Done
 Read me for the excel sheet

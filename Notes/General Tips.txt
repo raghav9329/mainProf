@@ -1,6 +1,15 @@
 General Tips
 Started 6/15/16
 
+Windows VM License Expired: Refresh the license.
+Open windows prompt as Administrator:  C:\Windows\system32>slmgr /rearm
+this will reset the license
+
+Excel: Count unique entries in a column of numbers where there is lots of duplication.
+=sumproduct(1/countif(A2:A42,A2:A42))   some how a list is created,  the 1 and the devisor
+makes them fractions.  The Sum Product adds up the fractional value and you get the number of uniques
+
+
 MAC: Enable UTF-8 keyboard entry - Looking for Unicode Hex Input
 SysPrefs: Keyboard: InputSources: ->
 Click the + sign: Scroll to the bottom on the left ->

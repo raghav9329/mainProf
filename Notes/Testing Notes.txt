@@ -110,7 +110,21 @@ maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *u
 maatkins @CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ 
 
 
-
+Feb 24th had this as he list
+NAME
+ Mur Scheduler Payments
+ Mur Web Core UI
+ Mur Web Payment
+ Mur Service Payments
+ Mur Entitlement Service
+ Mur Service Accounts
+ Mur Svc Lib - Exception
+ Mur Svc Lib - Logger
+ Mur Svc Lib - DBConnector
+ Mur Svc Lib - Http Client
+ Mur Svc Lib - Mappers
+ Mur Svc Lib - Monitoring
+ Mur Svc Lib - Auth
 2/17/16 Since we are sprint specific this file should be moved to the sprint specific details
 Likely this will be deprecated or a least become a one or capture or something.
 

@@ -21,6 +21,7 @@ From Solk to Silicon; The story of Golobalizaiotn
 The Sleep Revolution
 Arianna Huffington
 
+
 2/19/16
 Late:  Turns out this didnÕt work:  So, I did sysPrefs Dock: Automatically hide dock
 Keeping the Dock on one screen in a multiple monitor system.
