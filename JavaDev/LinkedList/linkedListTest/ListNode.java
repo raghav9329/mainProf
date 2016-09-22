@@ -55,9 +55,10 @@ public class ListNode {
     	 
      }//end of method insertDuplicates
      
-     public int countDupsTogether(ListNode head){
+//   public int countDupsTogether(ListNode head){
+     public int countDupsTogether(){
     	int count = 0;
-    	ListNode myList = head;
+    	ListNode myList = this;
     	
     	while (myList != null ){
     		if (myList.next == null) break;
