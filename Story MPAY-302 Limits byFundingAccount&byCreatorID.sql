@@ -36,3 +36,6 @@ SELECT SUM(P.AMOUNT)
 
 
 
+select * from payment
+order by PAYMENT_ID Desc
+;
