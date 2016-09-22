@@ -1,10 +1,5 @@
 .less-history-file:
 .search
-"push.default
-"xargs
-"npm run protractor_qa
-"protractor_qa
-"box
 "ignore case
 "case
 "git
@@ -100,4 +95,9 @@
 "word 
 "Word 
 "mock
+"killall
+"java
+"inte
+"xml
+"swp
 .shell

@@ -151,16 +151,16 @@ mf()
  if [ -z "$1" ] ; then
    echo "An argument is really necessary "
  fi
-# if [ `pwd` == "/Users/maatkins/svb-web-payments/integration/scenarios"  ] ; then
- if [ `pwd` == "/Volumes/dev/svb-web-payments/integration/scenarios"  ] ; then
+ #if [ `pwd` == "/Volumes/dev/svb-web-payments/integration/scenarios"  ] ; then
+ if [ `pwd` == "/Volumes/dev/svb-web-payments/integration/qaScenarios"  ] ; then
    if [ -f $1* ]; then
       mv ./$1* /Users/maatkins/Mark/tmp_hold
       else echo "File wasn't there "
    fi
  elif [ `pwd` == "/Users/maatkins/Mark/tmp_hold" ] ; then
    if [ -f $1* ]; then
-#      mv ./$1* /Users/maatkins/svb-web-payments/integration/scenarios
-      mv ./$1* /Volumes/dev/svb-web-payments/integration/scenarios
+  #    mv ./$1* /Volumes/dev/svb-web-payments/integration/scenarios
+      mv ./$1* /Volumes/dev/svb-web-payments/integration/qaScenarios
       else echo "File wasn't there "
    fi
  else echo "Not in a directory that supports the -mf(move file)- command"
