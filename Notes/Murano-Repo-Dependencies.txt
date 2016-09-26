@@ -1,0 +1,68 @@
+Murano-Repo-Dependencies
+
+svn-service-payments
+
+// Dependencies required for the project
+dependencies {
+    runtime project(':modules:encryption')
+    providedCompile "javax.servlet:servlet-api:2.5"
+    providedRuntime 'javax.servlet:jstl:1.1.2'
+
+    compile 'com.svb.murano.common:mur-java-lib-interfaces:1.1.0'
+    compile 'com.svb.murano.common:mur-java-lib-exception:3.2.0'
+    compile 'com.svb.murano.common:mur-java-lib-logger:4.0.0'
+    compile 'com.svb.murano.common:mur-java-lib-mappers:1.0.7'
+
+    compile 'com.svb.murano.common:mur-java-lib-dbconnector:1.4.1'
+    compile 'com.svb.murano.common:mur-java-lib-httpclient:6.2.2'
+    compile 'com.svb.murano.common:mur-java-lib-monitoring:4.1.19'
+    compile 'com.svb.murano.common:mur-java-lib-auth:3.2.4'
+
+
+    compile "com.fasterxml.jackson.core:jackson-databind:2.6.1"
+    compile "com.fasterxml.jackson.core:jackson-core:2.6.1"
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.1'
+    compile 'org.glassfish.jersey.connectors:jersey-apache-connector:2.22.1'
+
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.6.1"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.6.1"
+
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.1'
+    compile 'org.glassfish.jersey.core:jersey-client:2.22.1'
+    compile 'org.glassfish.jersey.core:jersey-server:2.22.1'
+    compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.22.1'
+    compile 'org.glassfish.jersey.ext:jersey-spring3:2.22.1'
+
+    compile 'org.slf4j:slf4j-api:1.7.2'
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+    compile 'ch.qos.logback:logback-core:1.1.3'
+
+    runtime 'org.springframework:spring-core:4.1.6.RELEASE'
+    compile 'org.springframework:spring-test:4.1.6.RELEASE'
+
+    compile 'org.json:json:20141113'
+
+    // MyBatis configuration
+    compile 'org.mybatis:mybatis:3.2.8'
+
+    compile 'javax.json:javax.json-api:1.0'
+
+    compile 'org.glassfish.jersey.ext:jersey-bean-validation:2.22.1'
+    
+    runtime fileTree(dir: 'lib', include: '*.jar')
+    runtime fileTree(dir: 'modules/encryption/build/libs', include: '*.jar')
+
+    testCompile 'org.jmockit:jmockit:1.8'
+    testCompile 'org.testng:testng:6.8.21'
+    testCompile 'org.uncommons:reportng:1.1.4'
+
+    testCompile 'org.glassfish.jersey.test-framework:jersey-test-framework-core:2.22.1'
+    testCompile 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:2.22.1'
+    testCompile 'com.github.fge:json-schema-validator:2.2.6'
+    testCompile 'org.hamcrest:hamcrest-all:1.3'
+    testCompile 'weblogic.jndi:wlfullclient:10.3.4.0'
+
+    // https://discuss.gradle.org/t/provide-support-for-per-unit-test-coverage-reports-in-sonarqube/397
+    // using version 3.2 (April 2015) see: http://mvnrepository.com/artifact/org.codehaus.sonar-plugins.java/sonar-jacoco-listeners
+    //testRuntime 'org.codehaus.sonar-plugins.java:sonar-jacoco-listeners:3.2'
+

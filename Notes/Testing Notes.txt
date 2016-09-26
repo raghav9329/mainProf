@@ -1,194 +1,23 @@
-Testing Notes
-
-5/2/16 Pulling data out of 1500.1_setup Mpay 1538
-All the users research data.  I donÕt want this as a test case.
-
-
-TransAction Max Amount per Payment is $6,500.00
-
-USER ID Usr Login    CLIENT_ID
-------------------------------------------
-1460520 adbrain_fps 5163755
-1460576 adbrainfps2 5163755
--1460523 adbrain_fps_bacs 5163758   What did the Ò-Ò Mean ?  I know something ???
-1460579 adbrainfpsbacs2 5163758
-1460524 adbrain_fps_chaps 5163759
-1460600 adbrainfpsnopay1 5163759
-1460580 adbrainfpschaps2 5163759
-1460528 sussex_fps 5163763
-1460531 sussex_fps_bacs 5163766
-1460532 sussex_fps_chaps 5163767
-1460599 adbrainfpsnopay 5163789
-1460597 adbrainfps2016 5163789
-
-
-adbrain_fps          	ok
-adbrainfps2		ok
-adbrain_fps_bacs     	NO Mk No Summ
-adbrainfpsbacs2        	ok	
-adbrain_fps_chaps    	No Mk No Summ
-adbrainfpsnopay1      	No Mk Got Sum
-adbrainfpschaps2     	ok
-sussex_fps            	trouble but can get there
-sussex_fps_bacs  	NO Mk No Summ
-sussex_fps_chaps     	NO Mk No Summ
-adbrainfpsnopay       	No Mk Got Sum
-adbrainfps2016     	Sum, mkPay_ButNoFund
-
-===============
-Additional layout config testing
-This text in the description area of jira test ( or ticket )
-Gives you a table with two heading columns
-and 4 or 5 rows of data
-
-||Heading 1||Heading 2||
-|Col A1|Col A2|
-|y             
- asdfas    
-asdf         |       x    |
-|        yy   |       xx    |
-|        yyy   |       xxx    |
-|        yyyy   |       xxxx    |
-
-======================================
-
-
-
-
-
-3/21/16
-The CSRF service issues one token per session, so we would like the webapp to only request a token once and then re use it if it is still within the same session. This seems to be working in the local environment but not in dev
-
-Open the MakePayment form and open the inspection tool.
-open the Network-tab in the inspection tool
-Make a payment, click the submit button on the Review dialog
-Immediately find an entry in the network tab <chrome> token/  <firefox> 200 POST /csrf/services/rest/ssrf/vi/token/   
-On either [ ch | ff ] view the Network Response tab ( within Networks )  
-Copy te string  that follows 'token:'    This string is the token.
-
-copy this down.
-
-Log out and log back in make a payment and reveiw the token response.  
-
-Expect:  It must be different
-
-From within the same session, make another payment.
-
-Expect: it should be the same value since the last login and same recent payment.
-
-
-
-3-1-2016
-Protractor test in the Integration/scenarios directorygrep 
-
-
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ find . *.test.js  -type f -print0 | xargs -0 grep "expect" | wc -l
- 
- 
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ ll
-total 136
-drwxr-xr-x  10 maatkins  SVBANKDOM\Domain Users    340 Mar  1 18:21 ./
-drwxr-xr-x  10 maatkins  SVBANKDOM\Domain Users    340 Feb 19 11:23 ../
--rw-r--r--   1 maatkins  SVBANKDOM\Domain Users  12288 Mar  1 18:22 .ptor_user4_bacs_chapsScenario.test.js.swp
--rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   3451 Feb 24 11:21 cumulativeLimitDailyUserlimitScenario.test.db.js
--rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   2757 Feb 24 11:21 cumulativeLimitScenario.test.db.js
--rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   7283 Feb 24 11:21 paymentDisplay.test.db.js
--rw-r--r--   1 maatkins  SVBANKDOM\Domain Users  13705 Feb 24 11:21 ptor_user2_allScenario.test.js
--rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   6076 Feb 24 11:21 ptor_user3_allScenario.test.js
--rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   2317 Feb  9 13:52 ptor_user4_bacs_chapsScenario.test.js
--rw-r--r--   1 maatkins  SVBANKDOM\Domain Users  10997 Feb 24 11:21 ptor_user5_allScenario.test.js
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l  =
-     183
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *.js |less
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect cumulativeLimitD* | wc -l  =  5
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect cumulativeLimitS* | wc -l  = 5
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect pay* | wc -l  = 41
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user2* | wc -l == 48
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user3* | wc -l == 36
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user4* | wc -l  == 5
-maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user5* | wc -l  == 43
-maatkins @CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ 
-
-
-Feb 24th had this as he list
-NAME
- Mur Scheduler Payments
- Mur Web Core UI
- Mur Web Payment
- Mur Service Payments
- Mur Entitlement Service
- Mur Service Accounts
- Mur Svc Lib - Exception
- Mur Svc Lib - Logger
- Mur Svc Lib - DBConnector
- Mur Svc Lib - Http Client
- Mur Svc Lib - Mappers
- Mur Svc Lib - Monitoring
- Mur Svc Lib - Auth
-2/17/16 Since we are sprint specific this file should be moved to the sprint specific details
-Likely this will be deprecated or a least become a one or capture or something.
-
-=== Contents moved into sprint 12 & 13 documents ===
-
-2/18/16
-General Notes:  These are not sprint specific
-
-
-/***************************************************************
-** 
-**  These are being used to test cumulative Limits
-** 
-***************************************************************/
-
-select * from payment where payment_id = 886;
-
-select * from payment order by amount DESC;
-
-select * from payment order by payment_id DESC;
-
-// 5163756  qa adbrain_bacs
-
-// 5173182 dev adbrain_bacs
-
-SELECT SUM(P.AMOUNT)
-              FROM PAYMENT P
-              WHERE P.CLIENT_ID = 5163756 AND P.PAYMENT_DATE = TRUNC(SYSDATE);
-            
-              
-
-select * from payment order by payment_id DESC;
-
-
-select * from payment where client_id = 5173182 order by payment_date DESC, payment_id DESC;
-
-select count(*) from payment where client_id = 5163756 AND PAYMENT_DATE = TRUNC(SYSDATE);
-
-
-https://murano.qa4.svbconnect.com/entitlement/service/rest/private/entitlement/v1/sessionEntitlements?entitlements=PAYMENT_FREE_FORM
-REST Interface :  this tells you the currently logged in UID, ClientID xaction limits, etc.
-
-**** The 302 query is É.
-
-
-// adbrain_fps user
-SELECT SUM(P.AMOUNT)
-              FROM PAYMENT P
-              WHERE P.CREATOR_ID = 1460520 AND P.PAYMENT_DATE = TRUNC(SYSDATE)
-              AND P.FUNDING_ACCOUNT_IDENTIFIER = 18998239;
-
-adbrain_fps UserID == Creator_ID == 1460520
-adbrainfps2 UserID == Creator_ID == 1460576
-
-Funding_account_id == 2011[2181] == 18998239
-Funding_account_id == 2010[5436] == 7391192
-Funding_account_id == 2011[2203] == 18998240
-Funding_account_id == 2011[3714] == 21707232
-Funding_account_id == 2011[2211] == 18998241
-    
-
-[3:49] 
-CREATOR_ID = user id
-
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-end.
+<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><font face="PT Mono">Testing Notes</font><div><br></div><div><font face="PT Mono">5/2/16 Pulling data out of 1500.1_setup Mpay 1538</font></div><div><font face="PT Mono">All the users research data. &nbsp;I don�t want this as a test case.</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><div>TransAction Max Amount per Payment is $6,500.00</div><div><br></div><div>USER ID Usr Login &nbsp; &nbsp;CLIENT_ID</div><div>------------------------------------------</div><div>1460520 adbrain_fps 5163755</div><div>1460576 adbrainfps2 5163755</div><div>-1460523 adbrain_fps_bacs 5163758 &nbsp; What did the �-� Mean ? &nbsp;I know something ???</div><div>1460579 adbrainfpsbacs2 5163758</div><div>1460524 adbrain_fps_chaps 5163759</div><div>1460600 adbrainfpsnopay1 5163759</div><div>1460580 adbrainfpschaps2 5163759</div><div>1460528 sussex_fps 5163763</div><div>1460531 sussex_fps_bacs 5163766</div><div>1460532 sussex_fps_chaps 5163767</div><div>1460599 adbrainfpsnopay 5163789</div><div>1460597 adbrainfps2016 5163789</div></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><div>adbrain_fps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="Apple-tab-span" style="white-space:pre">	</span>ok</div><div>adbrainfps2<span class="Apple-tab-span" style="white-space:pre">		</span>ok</div><div>adbrain_fps_bacs &nbsp; &nbsp; <span class="Apple-tab-span" style="white-space:pre">	</span>NO Mk No Summ</div><div>adbrainfpsbacs2 &nbsp; &nbsp; &nbsp; &nbsp;<span class="Apple-tab-span" style="white-space:pre">	</span>ok<span class="Apple-tab-span" style="white-space:pre">	</span></div><div>adbrain_fps_chaps &nbsp; &nbsp;<span class="Apple-tab-span" style="white-space:pre">	</span>No Mk No Summ</div><div>adbrainfpsnopay1 &nbsp; &nbsp; &nbsp;<span class="Apple-tab-span" style="white-space:pre">	</span>No Mk Got Sum</div><div>adbrainfpschaps2 &nbsp; &nbsp; <span class="Apple-tab-span" style="white-space:pre">	</span>ok</div><div>sussex_fps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="Apple-tab-span" style="white-space:pre">	</span>trouble but can get there</div><div>sussex_fps_bacs &nbsp;<span class="Apple-tab-span" style="white-space:pre">	</span>NO Mk No Summ</div><div>sussex_fps_chaps &nbsp; &nbsp; <span class="Apple-tab-span" style="white-space:pre">	</span>NO Mk No Summ</div><div>adbrainfpsnopay &nbsp; &nbsp; &nbsp; <span class="Apple-tab-span" style="white-space:pre">	</span>No Mk Got Sum</div><div>adbrainfps2016 &nbsp; &nbsp; <span class="Apple-tab-span" style="white-space:pre">	</span>Sum, mkPay_ButNoFund</div></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">===============</font></div><div><font face="PT Mono">Additional layout config testing</font></div><div><font face="PT Mono">This text in the description area of jira test ( or ticket )</font></div><div><font face="PT Mono">Gives you a table&nbsp;with two heading columns</font></div><div><font face="PT Mono">and 4 or 5 rows of data</font></div><div><font face="PT Mono"><br></font></div><div><div>||Heading 1||Heading 2||</div><div>|Col A1|Col A2|</div><div>|y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div><div>&nbsp;asdfas &nbsp; &nbsp;</div><div>asdf &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; x &nbsp; &nbsp;|</div><div>| &nbsp; &nbsp; &nbsp; &nbsp;yy &nbsp; | &nbsp; &nbsp; &nbsp; xx &nbsp; &nbsp;|</div><div>| &nbsp; &nbsp; &nbsp; &nbsp;yyy &nbsp; | &nbsp; &nbsp; &nbsp; xxx &nbsp; &nbsp;|</div><div>| &nbsp; &nbsp; &nbsp; &nbsp;yyyy &nbsp; | &nbsp; &nbsp; &nbsp; xxxx &nbsp; &nbsp;|</div></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">======================================</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">3/21/16</font></div><div><div>The CSRF service issues one token per session, so we would like the webapp to only request a token once and then re use it if it is still within the same session. This seems to be working in the local environment but not in dev</div><div><br></div><div>Open the MakePayment form and open the inspection tool.</div><div>open the Network-tab in the inspection tool</div><div>Make a payment, click the submit button on the Review dialog</div><div>Immediately find an entry in the network tab &lt;chrome&gt; token/ &nbsp;&lt;firefox&gt; 200 POST /csrf/services/rest/ssrf/vi/token/ &nbsp;&nbsp;</div><div>On either [ ch | ff ] view the Network Response tab ( within Networks ) &nbsp;</div><div>Copy te string &nbsp;that follows 'token:' &nbsp; &nbsp;This string is the token.</div><div><br></div><div>copy this down.</div><div><br></div><div>Log out and log back in make a payment and reveiw the token response. &nbsp;</div><div><br></div><div>Expect: &nbsp;It must be different</div><div><br></div><div>From within the same session, make another payment.</div><div><br></div><div>Expect: it should be the same value since the last login and same recent payment.</div></div><div><br></div><div><br></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">3-1-2016</font></div><div><font face="PT Mono">Protractor test in the Integration/scenarios directorygrep&nbsp;</font></div><div><br></div><div><br></div><div><p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ find . *.test.js &nbsp;-type f -print0 | xargs -0 grep "expect" | wc -l</p><p><br></p><p><br></p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ ll</p>
+<p>total 136</p>
+<p>drwxr-xr-x&nbsp; 10 maatkins&nbsp; SVBANKDOM\Domain Users&nbsp; &nbsp; 340 Mar&nbsp; 1 18:21 <span>.</span>/</p><p>drwxr-xr-x&nbsp; 10 maatkins&nbsp; SVBANKDOM\Domain Users&nbsp; &nbsp; 340 Feb 19 11:23 ../</p>
+<p>-rw-r--r-- &nbsp; 1 maatkins&nbsp; SVBANKDOM\Domain Users&nbsp; 12288 Mar&nbsp; 1 18:22 .ptor_user4_bacs_chapsScenario.test.js.swp</p>
+<p>-rw-r--r-- &nbsp; 1 maatkins&nbsp; SVBANKDOM\Domain Users &nbsp; 3451 Feb 24 11:21 cumulativeLimitDailyUserlimitScenario.test.db.js</p>
+<p>-rw-r--r-- &nbsp; 1 maatkins&nbsp; SVBANKDOM\Domain Users &nbsp; 2757 Feb 24 11:21 cumulativeLimitScenario.test.db.js</p>
+<p>-rw-r--r-- &nbsp; 1 maatkins&nbsp; SVBANKDOM\Domain Users &nbsp; 7283 Feb 24 11:21 paymentDisplay.test.db.js</p>
+<p>-rw-r--r-- &nbsp; 1 maatkins&nbsp; SVBANKDOM\Domain Users&nbsp; 13705 Feb 24 11:21 ptor_user2_allScenario.test.js</p>
+<p>-rw-r--r-- &nbsp; 1 maatkins&nbsp; SVBANKDOM\Domain Users &nbsp; 6076 Feb 24 11:21 ptor_user3_allScenario.test.js</p>
+<p>-rw-r--r-- &nbsp; 1 maatkins&nbsp; SVBANKDOM\Domain Users &nbsp; 2317 Feb&nbsp; 9 13:52 ptor_user4_bacs_chapsScenario.test.js</p>
+<p>-rw-r--r-- &nbsp; 1 maatkins&nbsp; SVBANKDOM\Domain Users&nbsp; 10997 Feb 24 11:21 ptor_user5_allScenario.test.js</p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l &nbsp;=</p>
+<p>&nbsp;&nbsp; &nbsp; 183</p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *.js |less</p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect cumulativeLimitD* | wc -l &nbsp;= &nbsp;5</p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect cumulativeLimitS* | wc -l &nbsp;= 5</p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect pay* | wc -l &nbsp;= 41</p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user2* | wc -l == 48</p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user3* | wc -l == 36</p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user4* | wc -l &nbsp;== 5</p>
+<p>maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user5* | wc -l &nbsp;== 43</p>
+<p>maatkins @CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$&nbsp;</p></div><div><br></div><div><div><br></div><div>Feb 24th had this as he list</div><div>NAME</div><div>&nbsp;Mur Scheduler Payments</div><div>&nbsp;Mur Web Core UI</div><div>&nbsp;Mur Web Payment</div><div>&nbsp;Mur Service Payments</div><div>&nbsp;Mur Entitlement Service</div><div>&nbsp;Mur Service Accounts</div><div>&nbsp;Mur Svc Lib - Exception</div><div>&nbsp;Mur Svc Lib - Logger</div><div>&nbsp;Mur Svc Lib - DBConnector</div><div>&nbsp;Mur Svc Lib - Http Client</div><div>&nbsp;Mur Svc Lib - Mappers</div><div>&nbsp;Mur Svc Lib - Monitoring</div><div>&nbsp;Mur Svc Lib - Auth</div></div><div><font face="PT Mono">2/17/16 Since we are sprint specific this file should be moved to the sprint specific details</font></div><div><font face="PT Mono">Likely this will be deprecated or a least become a one or capture or something.</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">=== Contents moved into sprint 12 &amp; 13 documents ===</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">2/18/16</font></div><div><font face="PT Mono">General Notes: &nbsp;These are not sprint specific</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">/***************************************************************</font></div><div><font face="PT Mono">**&nbsp;</font></div><div><font face="PT Mono">** &nbsp;These are being used to test cumulative Limits</font></div><div><font face="PT Mono">**&nbsp;</font></div><div><font face="PT Mono">***************************************************************/</font></div><div><font face="PT Mono"><br></font></div><div><div><font face="PT Mono">select * from payment where payment_id = 886;</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">select * from payment order by amount DESC;</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">select * from payment order by payment_id DESC;</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">// 5163756 &nbsp;qa adbrain_bacs</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">// 5173182 dev adbrain_bacs</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">SELECT SUM(P.AMOUNT)</font></div><div><font face="PT Mono">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FROM PAYMENT P</font></div><div><font face="PT Mono">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; WHERE P.CLIENT_ID =&nbsp;5163756&nbsp;AND P.PAYMENT_DATE = TRUNC(SYSDATE);</font></div><div><font face="PT Mono">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font face="PT Mono">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">select * from payment order by payment_id DESC;</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">select * from payment where client_id = 5173182 order by payment_date DESC, payment_id DESC;</font></div></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">select count(*) from payment where client_id = 5163756 AND PAYMENT_DATE = TRUNC(SYSDATE);</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">https://murano.qa4.svbconnect.com/entitlement/service/rest/private/entitlement/v1/sessionEntitlements?entitlements=PAYMENT_FREE_FORM</font></div><div><font face="PT Mono">REST Interface : &nbsp;this tells you the currently logged in UID, ClientID xaction limits, etc.</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">**** The 302 query is&nbsp;�.</font></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono"><br></font></div><div>// adbrain_fps user</div><div>SELECT SUM(P.AMOUNT)</div><div><ts-message id="msg_1456444143_000008" data-ts="1456444143.000008" data-model-ob-id="D0KBJ3NF4"><div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FROM PAYMENT P<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; WHERE P.CREATOR_ID =&nbsp;</span>1460520 AND P.PAYMENT_DATE =&nbsp;<span>TRUNC(SYSDATE)</span></div><div><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AND P.FUNDING_ACCOUNT_IDENTIFIER =&nbsp;</span>18998239;</div><div><br></div><div>adbrain_fps UserID == Creator_ID == 1460520</div><div>adbrainfps2 UserID == Creator_ID == 1460576</div><div><br></div><div>Funding_account_id == 2011[2181] == 18998239</div><div>Funding_account_id == 2010[5436] ==&nbsp;7391192</div><div>Funding_account_id == 2011[2203] ==&nbsp;18998240</div><div>Funding_account_id == 2011[3714] ==&nbsp;21707232</div><div>Funding_account_id == 2011[2211] ==&nbsp;18998241</div><div>&nbsp;&nbsp; &nbsp;</div><div><br></div><div><a href="https://svbank.slack.com/archives/D0KBJ3NF4/p1456444157000009" target="new_1456176644648"><i>[</i>3:49<i>]</i></a>&nbsp;</div></ts-message><ts-message id="msg_1456444157_000009" data-ts="1456444157.000009" data-model-ob-id="D0KBJ3NF4"><div><span></span><span>CREATOR_ID = user id</span></div></ts-message></div><div><font face="PT Mono"><br></font></div><div><font face="PT Mono">--------------------------------------------------------------------------------</font></div><div><font face="PT Mono">--------------------------------------------------------------------------------</font></div><div><font face="PT Mono">end.</font></div></body></html>

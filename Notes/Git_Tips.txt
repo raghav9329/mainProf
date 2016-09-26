@@ -5,4 +5,8 @@ git checkout - - <pathtofile>   the two dashes are supposed to be closer togeth
 this will change the edits on the file back to unedited.
 
 
+git log -2 <file>  puts out commit ID
+
+git diff commitID <file>  will show the difference between <file> and the stat at commitID
+
 

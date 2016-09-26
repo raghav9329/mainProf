@@ -1,0 +1,35 @@
+Acceptance_Matrix
+
+
+All Users for client presented with Dashboard:
+A Newly added user with UK Murano Payees entitlement:  They open the Murano Dashboard
+
+	•	The Team 1 Murano Dashboard is Very Angular.  So, we should only have to look in the code of the page
+	•	to see that they either got a very angualr page or one that is not like that at all
+===========
+With a set of users known to have UK Murano Payment entitlement, navigate to Home Page
+if Angular Team 1 page : Pass
+If not Angular Team 1 Page: Fail
+
+With A set of users who are NOT UK Murano entitled, navigate to Murano Home page
+If eConnect Home page: Pass
+What would be a  failed ???  We are not give page signature so ???
+
+With a Set of users who are Murano UK Entitied, but they are one the Black List
+If Angular Team 1 page :  FAIL
+IF Angular eC page : Pass
+
+===================================
+Add a new user
+
+Do we add user programmatically ??  maybe scripting
+
+Any way, Client gets new user, and by definition means Entitled UK payments
+Does new user get proper dashboard.  ??
+
+==============================
+All users for client had dashboard removed
+This administrative control should automatically give all users
+to this client the eC dashboard
+
+=======================
