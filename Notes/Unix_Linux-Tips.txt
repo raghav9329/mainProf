@@ -1,2 +1,55 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">Unix_Linux-Tips<div><br><div>9/7/2016</div><div>Special Mac Command line user of PostFix as an SMTP daemon on the mac</div><div>for command Line emailing…….</div><div><a href="https://www.phase2technology.com/blog/how-to-enable-local-smtp-server-postfix-on-os-x-leopard/">https://www.phase2technology.com/blog/how-to-enable-local-smtp-server-postfix-on-os-x-leopard/</a></div><div>edit /Systems/Library/LaunchDaemons/org.postfix.master.plist following inst above</div><div><br></div><div><br><div><br></div><div><a href="http://butlerpc.net/blog/2012/02/execute-a-command-for-each-file-in-a-directory-recursively-on-linux/"></a>http://butlerpc.net/blog/2012/02/execute-a-command-for-each-file-in-a-directory-recursively-on-linux/<a href="http://butlerpc.net/blog/2012/02/execute-a-command-for-each-file-in-a-directory-recursively-on-linux/"></a></div><div><div>find . -type f -name '*.php' -exec sed -i 's/ &nbsp; &nbsp;/\t/g' {} \;</div><div>Explanation:</div><div><br></div><div>find lists all files, one per line, in the current directory and all subdirectories recursively</div><div>. (period) means current directory</div><div>-type f only list files, not directories.</div><div>-name ‘*.php’ only if the name matches * (wildcard) with “.php” at the end</div><div>-exec execute the following command for each result that matched</div><div>sed -i ‘s/ &nbsp; &nbsp;/\t/g’ replace, or substitute, one string for another. I’m searching for four consecutive spaces and replacing with t, meaning tab character. the /g at the end means global, replace each instance wherever it may appear in the file on each line. -i means “edit file in place” so the modified file is saved back to itself.</div><div>{} this inputs the file for the sed command</div><div>\; I think this finishes the -exec parameter for find. Don’t forget the backslash</div></div><div><br></div><div><br></div><div>How to recursively find files and grep for contents</div><div>find . -name ‘*.java’ -print0 | xargs -0 grep “for what evvah"</div><div>find . -name *.java -print0 | xargs -0 grep @Test | grep "/integration/“|wc</div><div>Should count all the integration tests</div><div><br></div><div>google:mac cmdline bash foreach example</div><div><a href="http://www.cyberciti.biz/faq/linux-unix-bash-for-loop-one-line-command/">http://www.cyberciti.biz/faq/linux-unix-bash-for-loop-one-line-command/</a></div><div><div><table><tbody><tr><td><pre><span>Commands:</span></pre><pre><span>for</span> i <span>in</span> <span>{</span><span>1</span>..<span>5</span><span>}</span>; <span>do</span> COMMAND-HERE; <span>done</span></pre><div><pre><span>for</span><span>(</span><span>(</span><span>i</span>=<span>1</span>;i<span>&lt;</span>=<span>10</span>;i+=<span>2</span><span>)</span><span>)</span>; <span>do</span> <span>echo</span> <span>"Welcome <span>$i</span> times"</span>; <span>done</span></pre><pre>Files:
-<table><tbody><tr><td><pre><span>for</span> i <span>in</span> <span>*</span>; <span>do</span> <span>echo</span> <span>$i</span>; <span>done</span></pre></td></tr></tbody></table></pre><pre><pre><span>for</span> i <span>in</span> <span>/</span>etc<span>/*</span>.conf; <span>do</span> <span>cp</span> <span>$i</span> <span>/</span>backup; <span>done</span></pre></pre></div><div><span><br></span></div></td></tr></tbody></table></div></div><div><br></div><div><br></div><div>in order to get rid of the .DS_Store entry</div><div>in Git hub even when you have that entered</div><div>into ./.gitignore you need to do the following</div><div>git rm —cached .DS_Store</div><div><br></div><div>then commit and push</div><div>git status will no longer report it</div><div><br></div><div><br></div><div><div>2/4/16 &nbsp;nice tip</div><div>How to diff common files between two directories</div><div>diff -srq dir1 dir2 | grep identical</div></div><div><br></div><div><br></div><div><a href="http://stackoverflow.com/questions/31797856/loop-through-files-in-mac-terminal">http://stackoverflow.com/questions/31797856/loop-through-files-in-mac-terminal</a></div></div></div></body></html>
+Unix_Linux-Tips
+
+9/7/2016
+Special Mac Command line user of PostFix as an SMTP daemon on the mac
+for command Line emailing√â√â.
+https://www.phase2technology.com/blog/how-to-enable-local-smtp-server-postfix-on-os-x-leopard/
+edit /Systems/Library/LaunchDaemons/org.postfix.master.plist following inst above
+
+
+
+http://butlerpc.net/blog/2012/02/execute-a-command-for-each-file-in-a-directory-recursively-on-linux/
+find . -type f -name '*.php' -exec sed -i 's/ ¬† ¬†/\t/g' {} \;
+Explanation:
+
+find lists all files, one per line, in the current directory and all subdirectories recursively
+. (period) means current directory
+-type f only list files, not directories.
+-name √î*.php√ï only if the name matches * (wildcard) with √í.php√ì at the end
+-exec execute the following command for each result that matched
+sed -i √îs/ ¬† ¬†/\t/g√ï replace, or substitute, one string for another. I√ïm searching for four consecutive spaces and replacing with t, meaning tab character. the /g at the end means global, replace each instance wherever it may appear in the file on each line. -i means √íedit file in place√ì so the modified file is saved back to itself.
+{} this inputs the file for the sed command
+\; I think this finishes the -exec parameter for find. Don√ït forget the backslash
+
+
+How to recursively find files and grep for contents
+find . -name √î*.java√ï -print0 | xargs -0 grep √ífor what evvah"
+find . -name *.java -print0 | xargs -0 grep @Test | grep "/integration/√í|wc
+Should count all the integration tests
+
+google:mac cmdline bash foreach example
+http://www.cyberciti.biz/faq/linux-unix-bash-for-loop-one-line-command/
+Commands:
+for i in {1..5}; do COMMAND-HERE; done
+for((i=1;i<=10;i+=2)); do echo "Welcome $i times"; done
+Files:
+for i in *; do echo $i; done
+for i in /etc/*.conf; do cp $i /backup; done
+
+
+
+in order to get rid of the .DS_Store entry
+in Git hub even when you have that entered
+into ./.gitignore you need to do the following
+git rm √ëcached .DS_Store
+
+then commit and push
+git status will no longer report it
+
+
+2/4/16 ¬†nice tip
+How to diff common files between two directories
+diff -srq dir1 dir2 | grep identical
+
+
+http://stackoverflow.com/questions/31797856/loop-through-files-in-mac-terminal

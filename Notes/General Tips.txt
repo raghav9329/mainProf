@@ -1,1 +1,38 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">General Tips<div>Started 6/15/16</div><div><br></div><div><br></div><div><br></div><div><br></div><div>Windows VM License Expired: Refresh the license.</div><div>Open windows prompt as Administrator: &nbsp;C:\Windows\system32&gt;slmgr /rearm</div><div>this will reset the license</div><div><br></div><div>Excel: Count unique entries in a column of numbers where there is lots of duplication.</div><div>=sumproduct(1/countif(A2:A42,A2:A42)) &nbsp; some how a list is created, &nbsp;the 1 and the devisor</div><div>makes them fractions. &nbsp;The Sum Product adds up the fractional value and you get the number of uniques</div><div><br></div><div><br></div><div>MAC: Enable UTF-8 keyboard entry - Looking for Unicode Hex Input</div><div>SysPrefs: Keyboard: InputSources: -&gt;</div><div>Click the + sign: Scroll to the bottom on the left -&gt;</div><div>Pick Others: On the right will ( should ) appear Unicode Hex Input: Select it �Add�: &nbsp;Now it shows on the left</div><div>as a keyboard you can select. &nbsp;</div><div>with option key held down, then d, 8, 3, d, d, c, a, 9</div><div>should create a little smilyface Pile-of-Poo Character</div><div><br></div><div>Gherkin Syntax</div><div><a href="http://docs.behat.org/en/v3.0/guides/1.gherkin.html"></a>http://docs.behat.org/en/v3.0/guides/1.gherkin.html<a href="http://docs.behat.org/en/v3.0/guides/1.gherkin.html"></a></div><div><br></div><div>Save Chrome UID/PID via javascript</div><div><br></div><div>javascript:(function(){var%20ac,c,f,fa,fe,fea,x,y,z;ac="autocomplete";c=0;f=document.forms;for(x=0;x&lt;f.length;x++){fa=f[x].attributes;for(y=0;y&lt;fa.length;y++){if(fa[y].name.toLowerCase()==ac){fa[y].value="on";c++;}}fe=f[x].elements;for(y=0;y&lt;fe.length;y++){fea=fe[y].attributes;for(z=0;z&lt;fea.length;z++){if(fea[z].name.toLowerCase()==ac){fea[z].value="on";c++;}}}}alert("Enabled%20'"+ac+"'%20on%20"+c+"%20objects.");})();</div><div>----------------------------------</div><div>This came from&nbsp;</div><div><a href="http://www.howtogeek.com/62980/how-to-force-your-browser-to-remember-passwords/"></a>http://www.howtogeek.com/62980/how-to-force-your-browser-to-remember-passwords/</div><div><a href="http://www.howtogeek.com/62980/how-to-force-your-browser-to-remember-passwords/"></a><a href="http://www.howtogeek.com/62980/how-to-force-your-browser-to-remember-passwords/"></a><br></div><div>Change Mac Screen shot output format permanently</div><div><a href="http://www.howtogeek.com/258368/how-to-change-the-screenshot-file-type-in-os-x/"></a><a href="http://www.howtogeek.com/258368/how-to-change-the-screenshot-file-type-in-os-x/"></a><a href="http://unix.stackexchange.com/questions/47407/cat-line-x-to-line-y-on-a-huge-file"></a>http://unix.stackexchange.com/questions/47407/cat-line-x-to-line-y-on-a-huge-file</div><div><br></div><div><br></div><div><span style="font-family: 'PT Mono';">SVB HelpDesk INternal &nbsp;47444 Phone number &nbsp;can from sf</span></div></body></html>
+General Tips
+Started 6/15/16
+
+
+
+
+Windows VM License Expired: Refresh the license.
+Open windows prompt as Administrator:  C:\Windows\system32>slmgr /rearm
+this will reset the license
+
+Excel: Count unique entries in a column of numbers where there is lots of duplication.
+=sumproduct(1/countif(A2:A42,A2:A42))   some how a list is created,  the 1 and the devisor
+makes them fractions.  The Sum Product adds up the fractional value and you get the number of uniques
+
+
+MAC: Enable UTF-8 keyboard entry - Looking for Unicode Hex Input
+SysPrefs: Keyboard: InputSources: ->
+Click the + sign: Scroll to the bottom on the left ->
+Pick Others: On the right will ( should ) appear Unicode Hex Input: Select it ÔAddÕ:  Now it shows on the left
+as a keyboard you can select.  
+with option key held down, then d, 8, 3, d, d, c, a, 9
+should create a little smilyface Pile-of-Poo Character
+
+Gherkin Syntax
+http://docs.behat.org/en/v3.0/guides/1.gherkin.html
+
+Save Chrome UID/PID via javascript
+
+javascript:(function(){var%20ac,c,f,fa,fe,fea,x,y,z;ac="autocomplete";c=0;f=document.forms;for(x=0;x<f.length;x++){fa=f[x].attributes;for(y=0;y<fa.length;y++){if(fa[y].name.toLowerCase()==ac){fa[y].value="on";c++;}}fe=f[x].elements;for(y=0;y<fe.length;y++){fea=fe[y].attributes;for(z=0;z<fea.length;z++){if(fea[z].name.toLowerCase()==ac){fea[z].value="on";c++;}}}}alert("Enabled%20'"+ac+"'%20on%20"+c+"%20objects.");})();
+----------------------------------
+This came from 
+http://www.howtogeek.com/62980/how-to-force-your-browser-to-remember-passwords/
+
+Change Mac Screen shot output format permanently
+http://unix.stackexchange.com/questions/47407/cat-line-x-to-line-y-on-a-huge-file
+
+
+SVB HelpDesk INternal  47444 Phone number  can from sf

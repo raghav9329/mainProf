@@ -1,6 +1,7 @@
 Acceptance_Matrix
 
 
+Dashboard Entitlement-
 All Users for client presented with Dashboard:
 A Newly added user with UK Murano Payees entitlement:  They open the Murano Dashboard
 
@@ -20,7 +21,8 @@ If Angular Team 1 page :  FAIL
 IF Angular eC page : Pass
 
 ===================================
-Add a new user
+Dashboard Entitlement-
+Add a new user:
 
 Do we add user programmatically ??  maybe scripting
 
@@ -28,8 +30,275 @@ Any way, Client gets new user, and by definition means Entitled UK payments
 Does new user get proper dashboard.  ??
 
 ==============================
-All users for client had dashboard removed
+
+Dashboard Entitlement-
+All users for client had dashboard removed:
 This administrative control should automatically give all users
 to this client the eC dashboard
 
+
 =======================
+Account View-
+Accounts Visible on initial set up
+For a given user, We need to know a users account #s and accounts balances
+This could be fixed, or queried for 
+
+=======================
+Account View-
+Account(s) removed from view / access
+Log on as a specific user.  recored a list of the accounts available
+This means these accounts are entitled to be seen/accessed ( funding accounts )
+Take entitlement away on an account
+Reevaluate the list of available accounts.  It must decrease the same as entitlement taken away.
+
+=======================
+Account View-
+Account(s) added to view / access
+Execute the corollary to the test above.  Add to the list of accounts available.
+=======================
+
+Account / Limit - 
+User Account Limits   ( This needs to be broken down )  very big statement.
+
+User Per Trans action
+Cumulaitve limt per day at user level
+Client per transaction
+Client limit per day ( Single or multiple )
+
+Here are the values and settings to set this sequence of test up properly. Names are not going to be exactly correct, but it should be obvious within minutes of reading all of this.
+
+This setup comes out of MPAY-1538.
+IÕve rearranged the placement of the limits in a (slightly) more logical order
+Moved 51K up under 25K  
+Test setup JavaScript Protractor file paymentServiceScripts.js or DBConnectionManager.js
+
+Set  FPS System Limit :  
+
+Set a users Max transaction limit ( diff users can have diff Limits )
+PAYMENT.PAYMENT_TYPE.MAX_SYS_TRAN_AMT $100000  WHERE INTERNAL_NAME == PAYMENT_FPS  
+
+Set a Max for a users per Transaction amount
+ENTITLEMENT.USER_ENTITLEMENT.MAX_TRAN_AMT == $25000
+
+Set a Max Limit on individual Client Transaction( diff users can have diff limits )
+This value limits a clients exposure if the user limit is miss configured 
+ENTITLEMENT.CLIENT_LIMIT.MAX_PER_TRAN_AMT == $51000
+
+Set a Max for a users accumulation for a day
+ENTITLEMENT.USER_ENTITLEMENT.MX_DAILY_CUMULATIVE_LIMIT == $55000
+
+Set a Max for a Clients accumulation for a day
+ENTITLEMENT.CLIENT_LIMIT.MAX_DAILY_TRAN_AMT == $80000
+
+
+These queries are going to have to be corrected and be more UserID or Client ID specific.
+Previous testing simply set the same value on every db row.  I need to focus on one specific user row
+
+// User Per TransAction Amount: Testing 25K
+update USER_ENTITLEMENT SET MAX_TRAN_AMT = 25000
+WHERE function_name like 'CREATE_%' and user_id in (select user_id from  USER_ENTITLEMENT where MAX_TRAN_AMT != 25000 );
+commit ;
+
+
+// User Cumulative Limit per day: Testing 55K
+update USER_ENTITLEMENT SET MAX_DAILY_CUMULATIVE_LIMIT = 55000
+WHERE function_name like 'CREATE_%' and user_id in (select user_id from  USER_ENTITLEMENT where MAX_DAILY_CUMULATIVE_LIMIT != 55000);
+commit;
+
+// Client Per Transaction Amount: Testing 51K
+update CLIENT_LIMIT SET MAX_PER_TRAN_AMT = 51000
+WHERE function_name like 'CREATE_%' and client_id  in (select client_id  from  CLIENT_LIMIT where MAX_PER_TRAN_AMT != 51000);
+commit;
+
+// Client Cumulaitve Limit Per Day: Testing 80K
+update CLIENT_LIMIT SET MAX_DAILY_TRAN_AMT = 80000
+WHERE function_name like 'CREATE_%' and client_id in (select client_id from  CLIENT_LIMIT where MAX_DAILY_TRAN_AMT != 80000) ;
+commit;
+
+TESTING FPS System Limits :  in the following order
+Logon as FPS Client User #1
+  -1) Create payment 100,000.01 Should FAIL				With all limits set low MAX_FPS still not achievable
+  -2) Create a payment of 25,000.01 Should FAIL			0.01 greater than User Max Tran
+  -3) Create a payment of 25K should PASS				At Lim of User Max Tran & 25K into User Cumulative Lim
+  -4) Create a payment of 25,000.01 should FAIL			0.01 greater than User Max Tran
+  -5) Create a payment of 25K Should PASS				At Lim of User Max Tran & 50K into User Cumulative Lim
+  -6) Create a payment of 5,000.1 Should FaIL			0.01 greater than User Cumulative Lim 
+  -7) Create a payment of 5K Should PASS				Now Matches the User Cumulative Limt or 55K
+  -8) Create a payment of 0.01 Should FAIL				0.01 greater than the User Cumulative Limit or 55K
+
+Login as FPS Client User #2							.
+
+  -9) Create payment of 25,000.01 Should FAIL			0.01 greater than Client Cumulative limit
+-10) Create payment of 25K Should PASS				Matches the Client Cumulative Limit 80K
+-11) Create payment of 0.01 Should FAIL				0.01 greater than Client Cumulative limit 80K
+
+Modify  User Transaction Limit Value from 25K to 125K	Remove USER Per Transaction & cumulative Limits
+Login as new Client User #3							.
+
+-12) Create a payment of 51,000.01 Should FAIL			0.01 greater than Client Max per Transaction
+-13) Create a payment of 51K Should PASS				At Lim of Cli Per trans 51K
+Modify Client Per Transaction limit 51K to 151K			.
+-14) Create a payment of 55,000.01 Should FAIL			At Limi of User Cumulative Limit 55K
+-15) Create a payment of 55K Should PASS				Matches Limit of user Cumulative Limit 55K
+
+Modify User Cumulative Limit 55K to 155K
+Login as a new user
+-16)
+-17)
+-18)
+-19)
+-20)
+-21)
+=======================
+Account / Limit - 
+User Account limit exceeds the faster payment threashold ( 100K ) was our manual test setting.
+
+"Singular test within the larger Limits Test suite"
+
+Since it is un likely that any of the other user/client type limits would exceed the value the may payment that FPS will support,
+hereÕs how this is tested.
+All the lower limits are raised above the FPS limit, making FPS the lowest limit. Then, the coded logic will finally run into this limit.
+
+Limits are set in the db.
+See the test above
+
+=======================
+Account / Limit - 
+User Access to Dormant Account
+Flexcube specific:  Have to entitle to an acct that is in dormant status ( in FC )
+Dorment acct WILL NOT show up in the Funding acct list !!!
+Check that they have entitielent to this acct, then check the FE
+if acct is dormant and shows in app, that is a FAIL
+WE dont' want to see it.
+
+To Test:
+Do this backward from how Susan spoke of it and how I wrote it.
+Start with an account I have entitlement & access to and can see.
+Logout as this user.  Clear the cache and history
+Then have FC make the account Entitled and DORMANT.
+Login as this user If the Account is GONE:  PASS
+If the account is visible :  FAIL
+
+
+=======================
+Account / Limit -
+User Access to Closed Account
+
+FC has a status of Closed.
+We will have to toggle the FC OPEN CLOSED Status
+
+To Test: 
+Open with a user who has entitlement to a specific account
+Make a payment with said account : PASS
+Programmatically change the status of the account 
+Re open the make payment page 
+If the funding account is there : FAIL
+If the funding account is missing : PASS
+
+=======================
+Account / Limit -
+User Access to USD Account
+
+To Test:
+Take a client and user and make sure they can see the account from Dashboard they are entitled to see a USD account
+Entitle a UK Client User to have access to a USD acocunt
+They can see the account in the UK Dashboard : PASS
+Open the Make Payment page.
+They can See the USD account in the dropdown : FAIL
+The CANNOT see the USD account in the dropdown : PASS
+
+=======================
+FPS- No Exception
+Immediate Faster Payment (Pre-Cut Off) on Account with no exceptions
+
+To Test:
+Send Faster Payment before cutoff
+We need to see the FC output.  ( I say:  Hummmm. selenium web driver.
+
+
+
+=======================
+FPS- No Exception
+Account with no exceptions, future dated [NOTE - covers scenario for post cut-off)
+
+
+
+
+=======================
+FPS- No Exception
+Account with no exceptions, future dated [NOTE - covers scenario for bank holidays)
+
+
+
+
+
+=======================
+FPS- Overrides
+Account with No Debits, soft hold
+
+
+
+
+
+=======================
+FPS- Overrides
+Fraud threshold exceeded (Txn exceeds £20,000)
+
+
+
+
+
+=======================
+FPS- Overrides
+FPS Limit Exceeded
+
+
+
+
+
+=======================
+FPS- Overrides
+Account overdrawn with no facility
+
+
+
+
+
+=======================
+
+
+
+
+
+=======================
+
+
+
+
+
+=======================
+
+
+
+
+
+=======================
+
+
+
+
+
+=======================
+
+
+
+
+
+=======================
+
+
+
+
+
+
+

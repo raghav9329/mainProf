@@ -1,1 +1,71 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">Sprint Regression Automation<div>7-1-16 it occurs to me that I need to name my files&nbsp;</div><div>as they relate to the sprints.</div><div>Removing the A*, B*, C*, etc.</div><div><br></div><div>No Testcases until Sprint 3</div><div>Test will be identified by MPAY value.Test step</div><div>Ex: Sprint 3 212.1,2,3 that�s all there are</div><div>Ex: Sprint 3 216.1..4 &nbsp; There are four test steps</div><div><br></div><div>Sprint 2016-07</div><div><br></div><div>Old Sprint naming format</div><div><br></div><div>Sprint &nbsp;</div><div>Sprint &nbsp;</div><div>Sprint 15&nbsp;</div><div>Sprint 14&nbsp;</div><div><br></div><div>Sprint 13&nbsp;</div><div>Sprint 12&nbsp;</div><div><br></div><div>Sprint 11&nbsp;</div><div><br></div><div>Sprint 10</div><div><br></div><div>Sprint 9:q</div><div><br></div><div>Sprint 8</div><div><br></div><div>Sprint 7</div><div><br></div><div>Sprint 6</div><div><br></div><div>Sprint 5</div><div><br></div><div><br></div><div>Sprint 4&nbsp;</div><div><br></div><div>Sprint 3 Stories are 97, 98, 161, 166</div><div>352</div><div>278</div><div>277</div><div>276</div><div>266</div><div>259</div><div>257 Login as a specific user and view the payment home list of payments&nbsp;</div><div>&nbsp; -1.0 &nbsp;will need to search for specifics</div><div>243 Not sure these test apply to the store criteria</div><div>217 login &amp; nav to make payment. make a payment. &nbsp;No Nickname given at the end. &nbsp;</div><div>&nbsp; -1.0 ricksanchez newpas1* &nbsp;Does this user have links . &nbsp;That�s what the test is about</div><div>&nbsp; -1.1 Are there other users who can meet the same requirement showing links ??</div><div><br></div><div>216 Security Questions(?? actor Resturant Childhood ??) correct landing page on success &nbsp;: &nbsp;This stuff already happens &nbsp;So, at this time, this test is un necessary</div><div><br></div><div>214.1 Negative test with user who cannot get to MPay. &nbsp;but is the user UK ok ?</div><div><br></div><div>213</div><div><ul class="Apple-dash-list"><li>1 UK legit Login, but NO LINK for payments &nbsp;An un entitled user &nbsp;Let�s try&nbsp;<span style="font-family: Calibri, sans-serif; font-size: 14px; line-height: normal;">adbrainfps2016 &nbsp; Vishal just gave me this user on 4-14-16</span></li><ul><ul><li><span style="font-family: Calibri, sans-serif; font-size: 14px; line-height: normal;">&nbsp;No longer considering adbrainfps2016 . he went out of proper use just about the time the sun went down on the day of creation.</span></li><li><font face="Calibri, sans-serif"><span style="font-size: 14px; line-height: normal;">Now user the following�.. adbrainnoviewnomake</span></font></li></ul></ul><li><span style="font-family: Calibri, sans-serif; font-size: 14px; line-height: normal;">&nbsp;</span></li><li>2 User: paulsulyok / newpas1*. Interesting UK user</li><li><br></li></ul></div><div>212.1 negative Login test</div><div><ul class="Apple-dash-list"><li>1 login page commit with non UK uid pid</li><li>1.1 The key may be related to UK login but not UK payment &nbsp;let�s use one of the auditReport logins ttoller is the audit user</li><li><br></li><li>1.2 Because the third test gets a login b no Payment</li></ul><div><br></div></div><div>Any tests that do not have the security questions are no longer valid in the std workflow</div></body></html>
+Sprint Regression Automation
+7-1-16 it occurs to me that I need to name my files 
+as they relate to the sprints.
+Removing the A*, B*, C*, etc.
+
+No Testcases until Sprint 3
+Test will be identified by MPAY value.Test step
+Ex: Sprint 3 212.1,2,3 thatÕs all there are
+Ex: Sprint 3 216.1..4   There are four test steps
+
+Sprint 2016-07
+
+Old Sprint naming format
+
+Sprint  
+Sprint  
+Sprint 15 
+Sprint 14 
+
+Sprint 13 
+Sprint 12 
+
+Sprint 11 
+
+Sprint 10
+
+Sprint 9:q
+
+Sprint 8
+
+Sprint 7
+
+Sprint 6
+
+Sprint 5
+
+
+Sprint 4 
+
+Sprint 3 Stories are 97, 98, 161, 166
+352
+278
+277
+276
+266
+259
+257 Login as a specific user and view the payment home list of payments 
+  -1.0  will need to search for specifics
+243 Not sure these test apply to the store criteria
+217 login & nav to make payment. make a payment.  No Nickname given at the end.  
+  -1.0 ricksanchez newpas1*  Does this user have links .  ThatÕs what the test is about
+  -1.1 Are there other users who can meet the same requirement showing links ??
+
+216 Security Questions(?? actor Resturant Childhood ??) correct landing page on success  :  This stuff already happens  So, at this time, this test is un necessary
+
+214.1 Negative test with user who cannot get to MPay.  but is the user UK ok ?
+
+213
+	•	1 UK legit Login, but NO LINK for payments  An un entitled user  LetÕs try adbrainfps2016   Vishal just gave me this user on 4-14-16
+	▪	 No longer considering adbrainfps2016 . he went out of proper use just about the time the sun went down on the day of creation.
+	▪	Now user the followingÉ.. adbrainnoviewnomake
+	•	 
+	•	2 User: paulsulyok / newpas1*. Interesting UK user
+	•	 
+212.1 negative Login test
+	•	1 login page commit with non UK uid pid
+	•	1.1 The key may be related to UK login but not UK payment  letÕs use one of the auditReport logins ttoller is the audit user
+	•	 
+	•	1.2 Because the third test gets a login b no Payment
+
+Any tests that do not have the security questions are no longer valid in the std workflow

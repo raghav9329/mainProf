@@ -1,3 +1,58 @@
-<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">devNotes<br><div><br></div><div>5/19/16 Interesting snippit</div><div><a href="https://www.quora.com/Are-there-any-good-resources-or-tutorials-for-dynamic-programming-besides-the-TopCoder-tutorial">https://www.quora.com/Are-there-any-good-resources-or-tutorials-for-dynamic-programming-besides-the-TopCoder-tutorial</a></div><div><ol><li><code><span>int</span><span> dp</span><span>[</span><span>N</span><span>+</span><span>1</span><span>][</span><span>N</span><span>+</span><span>1</span><span>];</span></code></li><li><code><span>for</span><span> </span><span>(</span><span>int</span><span> i </span><span>=</span><span> </span><span>0</span><span>;</span><span> i </span><span>&lt;=</span><span> N</span><span>;</span><span> </span><span>++</span><span>i</span><span>)</span></code></li><li><code><span>  dp</span><span>[</span><span>0</span><span>][</span><span>i</span><span>]</span><span> </span><span>=</span><span> dp</span><span>[</span><span>i</span><span>][</span><span>0</span><span>]</span><span> </span><span>=</span><span> </span><span>0</span><span>;</span></code></li><li><code><span>for</span><span> </span><span>(</span><span>int</span><span> i </span><span>=</span><span> </span><span>1</span><span>;</span><span> i </span><span>&lt;=</span><span> N</span><span>;</span><span> </span><span>++</span><span>i</span><span>)</span></code></li><li><code><span>  </span><span>for</span><span> </span><span>(</span><span>int</span><span> j </span><span>=</span><span> </span><span>1</span><span>;</span><span> j </span><span>&lt;=</span><span> N</span><span>;</span><span> </span><span>++</span><span>j</span><span>)</span><span> </span><span>{</span></code></li><li><code><span>    dp</span><span>[</span><span>i</span><span>][</span><span>j</span><span>]</span><span> </span><span>=</span><span> max</span><span>(</span><span>dp</span><span>[</span><span>i</span><span>-</span><span>1</span><span>][</span><span>j</span><span>],</span><span> dp</span><span>[</span><span>i</span><span>][</span><span>j</span><span>-</span><span>1</span><span>]);</span></code></li><li><code><span>    </span><span>if</span><span> </span><span>(</span><span>A</span><span>[</span><span>i</span><span>-</span><span>1</span><span>]</span><span> </span><span>==</span><span> B</span><span>[</span><span>j</span><span>-</span><span>1</span><span>])</span></code></li><li><code><span>      dp</span><span>[</span><span>i</span><span>][</span><span>j</span><span>]</span><span> </span><span>=</span><span> max</span><span>(</span><span>dp</span><span>[</span><span>i</span><span>][</span><span>j</span><span>],</span><span> dp</span><span>[</span><span>i</span><span>-</span><span>1</span><span>][</span><span>j</span><span>-</span><span>1</span><span>]+</span><span>1</span><span>);</span></code></li><li><code><span>  </span><span>}</span></code></li><li><code></code></li><li><code><span>int</span><span> answer </span><span>=</span><span> dp</span><span>[</span><span>N</span><span>][</span><span>N</span><span>];</span></code></li></ol></div><div><br></div><div>JavaScript:</div><div><p><span>var</span><span> command = </span>"npm install --cache-min 99999999 "<span> + depsToInstall;</span></p>
-<p><span>console.log(</span>"Executing shell command: "<span> + command);</span></p>
-<p>shell.exec(command);&nbsp;</p><p><br></p><p><br></p><p>~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l &nbsp;183</p><p>~/svb-web-payments/app/src$ find . *.test.js -type f -print0 | xargs -0 grep&nbsp; "expect"&nbsp; | wc -l &nbsp;307</p><p><br></p><p>Need to resolve</p><p>:~/svb-web-payments/integration/scenarios$ find . *.test.js &nbsp;-type f -print0 | xargs -0 grep "expect" | wc -l &nbsp;315</p><p>vs</p><p>:~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l 183</p><p><br></p><p>/u01/murano/apps/tomcat/logs</p><p>catalina.out</p></div><div><br></div><div><br></div><div>3/7/16</div><div>From an earlier web search on JS automatically creating HTML page elements</div><div>http://jsfiddle.net/t656N/1/</div><div><br></div><div><div>&lt;input type="text" id="member" name="member" value=""&gt;Number of members: (max. 10)&lt;br /&gt;</div><div>&lt;a href="#" id="filldetails" onclick="addFields()"&gt;Fill Details&lt;/a&gt;</div><div>&nbsp; &nbsp; &lt;div id="container�/&gt;</div></div><div>&nbsp; &nbsp;&nbsp;</div><div>-------------------</div><div>&nbsp; &nbsp;</div><div><div>&nbsp; &nbsp; &nbsp; &nbsp; function addFields(){</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var number = document.getElementById("member").value;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var container = document.getElementById("container");</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; while (container.hasChildNodes()) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; container.removeChild(container.lastChild);</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (i=0;i&lt;number;i++){</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; container.appendChild(document.createTextNode("Member " + (i+1)));</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var input = document.createElement("input");</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; input.type = "text";</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; container.appendChild(input);</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; container.appendChild(document.createElement("br"));</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</div><div>&nbsp; &nbsp; &nbsp; &nbsp; }</div></div></body></html>
+devNotes
+
+5/19/16 Interesting snippit
+https://www.quora.com/Are-there-any-good-resources-or-tutorials-for-dynamic-programming-besides-the-TopCoder-tutorial
+	1.	int dp[N+1][N+1];
+	2.	for (int i = 0; i <= N; ++i)
+	3.	dp[0][i] = dp[i][0] = 0;
+	4.	for (int i = 1; i <= N; ++i)
+	5.	for (int j = 1; j <= N; ++j) {
+	6.	dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+	7.	if (A[i-1] == B[j-1])
+	8.	dp[i][j] = max(dp[i][j], dp[i-1][j-1]+1);
+	9.	}
+	10.	
+	11.	int answer = dp[N][N];
+
+JavaScript:
+var command = "npm install --cache-min 99999999 " + depsToInstall;
+console.log("Executing shell command: " + command);
+shell.exec(command); 
+ 
+ 
+~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l  183
+~/svb-web-payments/app/src$ find . *.test.js -type f -print0 | xargs -0 grep  "expect"  | wc -l  307
+ 
+Need to resolve
+:~/svb-web-payments/integration/scenarios$ find . *.test.js  -type f -print0 | xargs -0 grep "expect" | wc -l  315
+vs
+:~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l 183
+ 
+/u01/murano/apps/tomcat/logs
+catalina.out
+
+
+3/7/16
+From an earlier web search on JS automatically creating HTML page elements
+http://jsfiddle.net/t656N/1/
+
+<input type="text" id="member" name="member" value="">Number of members: (max. 10)<br />
+<a href="#" id="filldetails" onclick="addFields()">Fill Details</a>
+    <div id="containerÓ/>
+    
+-------------------
+   
+        function addFields(){
+            var number = document.getElementById("member").value;
+            var container = document.getElementById("container");
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){
+                container.appendChild(document.createTextNode("Member " + (i+1)));
+                var input = document.createElement("input");
+                input.type = "text";
+                container.appendChild(input);
+                container.appendChild(document.createElement("br"));
+            }
+        }

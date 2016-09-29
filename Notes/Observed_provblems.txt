@@ -1,1 +1,10 @@
-<html><head></head><body>Observed_provblems<div><br></div><div>These are problems that don�t warrant a bug, but if they repeated&nbsp;</div><div><br></div><div><br></div><div>4/12/16: &nbsp;having changed the payment cutoff time it was not picked up with a new login</div><div>Usually the value is set at 23:55. &nbsp;I was setting at 22:30 and they then 22:45.</div><div><br></div><div>I saw it switch to 22:45 and then it went back to 22:30 and stayed there only switching to&nbsp;</div><div>22:45 after another browser(this one Chrome ) logged in and go the right value.</div></body></html>
+Observed_provblems
+
+These are problems that donÕt warrant a bug, but if they repeated 
+
+
+4/12/16:  having changed the payment cutoff time it was not picked up with a new login
+Usually the value is set at 23:55.  I was setting at 22:30 and they then 22:45.
+
+I saw it switch to 22:45 and then it went back to 22:30 and stayed there only switching to 
+22:45 after another browser(this one Chrome ) logged in and go the right value.
