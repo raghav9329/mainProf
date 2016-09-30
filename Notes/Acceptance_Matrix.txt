@@ -214,6 +214,8 @@ Immediate Faster Payment (Pre-Cut Off) on Account with no exceptions
 To Test:
 Send Faster Payment before cutoff
 We need to see the FC output.  ( I say:  Hummmm. selenium web driver.
+I now know this is not as easliy feasible as I had thought.
+FC is a Web Java APP , not a web page.
 
 
 
@@ -221,38 +223,76 @@ We need to see the FC output.  ( I say:  Hummmm. selenium web driver.
 FPS- No Exception
 Account with no exceptions, future dated [NOTE - covers scenario for post cut-off)
 
-
+After cutoff. Get the next bus day as the payment date!
+And we want to see in _FC_ that it get's processed at 6:00 am +300ms
+To Test:
+Commit a payment after cutoff.  
+Validate the next day as payment.
+Camp out on the process until 6:00 AM London time/
+Payment transitions from Scheduled to Sent  : PASS
+No changes to the payment : FAIL
 
 
 =======================
 FPS- No Exception
 Account with no exceptions, future dated [NOTE - covers scenario for bank holidays)
 
-
-
-
+Most automated testing takes place in the present.  ItÕs a right now concept.
+Do something to the App.  Evaluate the response.
+but here we a scheduling something that will no trigger for three days.  This by common automation standards is not automate-able.
+this is not easy to automate because of the longer duration than a weekend.
+Still if we had better management of the Holiday calendar we should be able to manage this.
+Bank Holidays.  Friday night submission. Sat, Sun, MonHOliday.
+Payment date is set for Tuesday.
+To Test:
+Open and make a payment on Friday night
+Let it sit and evaluate on Monday
 
 =======================
 FPS- Overrides
 Account with No Debits, soft hold
 
+NO DEBITS is a FC concept that stops smooth flowthroughÉ.
+Pay gets into FC and an FC user has to interact to push payment through FC
+Approve or reject are the operator's options in FC
+Pmt Request gets into FC in Payment Pending Auth
+ 
+Approved: would not show any indication.  All would be well with the pay workflow w.r.t the mpayments user
+ 
+Rejected: Payment would still say "SENT", but would FAIL and user shojuld be getting a phone call from FC Administrator
 
-
+To Test:
+If we can gain access to the pending auth queue ÉÉ..
+Again this will be difficult to automate
 
 
 =======================
 FPS- Overrides
 Fraud threshold exceeded (Txn exceeds £20,000)
 
+This is none of the other conceptual limits built in our system.
+This is an arbitrary thing the bank does on a whim .
+Value set in FC.  Hit this limit and you go into pending Auth Queue.   ----  Just like the previous story there are no indications to the user in the murano payments app that this has happened
+Will hapend TO ALL Account types regardless if the hit the limit.
 
+To Test: 
+Requires some kind of access into FC we need to see the Pending Auth Queue ( if there is such a thing )
+Initiate a payment 
+Check Queue
 
-
+See Queue Empty (on some admin action ) : PASS
+Any form of rejection : FAIL
 
 =======================
 FPS- Overrides
 FPS Limit Exceeded
+This should result in a faliure
 
-
+To Test: 
+Likely to use All the DB Management Limit setting , getting them all out of the way so that $100K is the lowest limit.
+Submit a payment above the FPS limit
+Payment rejected: PASS
+Payment accepted: FAIL
 
 
 
@@ -260,45 +300,133 @@ FPS Limit Exceeded
 FPS- Overrides
 Account overdrawn with no facility
 
+Goes into a Pending Auth Queue
+Could be accepted or rejected.  
+We have no visibility in the app
+
+To Test: 
+If we can gain access to the pending auth queue
+may be we can approve or reject.
+Approve would simply move on with no observable interaction
+Reject would never debit the account, but no other observation to make
 
 
 
 
 =======================
+FPS Ð Errors -
+Account with No Debits hard hold
+
+Immediate rejection.  No indication in Murano payments App
+FC will never acknowledge/ record the payment .  Its like it never happened.
+But, we publish an end point that FC can grab and write to the DB about this failure
+Email is also gened to the UK Payment operations people
+ 
+To Test: 
+Until we can get FC to grab onto our failureNotificaiton EndPoint and record transaction failure 
+We will not be able to test this.
+
+=======================
+FPS Ð Errors -
+Account closed - Payment from (payment made mid closure)
+ 
+Special condition between today and tomorrow
+This morning account is open.  Noon account is closed
+Afternoon a payment is made against this account.
+It will go to FC  ===== And Susan has to check what happens.  We think it will be Pending Auth then reject
+ 
+ 
+To Test: 
+There is research testing tat needs to be done before we can identify how to automate this testing procedure.
+
+=======================
+FPS Ð Errors -
+Account closed - Payment to
+the closed account is on the receiving end on , IE the Payees Account
+The payment would go through as everthing is valid
+pay sits at the other end of un posted transactions.
+No indication to the user on our end of the failure to receive funds.
+ 
+To Test: 
+This one will be on the back burner until we figure how to resolve the transaction failure.
+From our perspective , all will be green lighted. The funding account will never be debited ( for real )
+( maybe it will but will be sitting in a bank queue that will have to be backed out upon fail discovery )
 
 
+=======================
+FPS Ð Errors -
+Account dormant - Payment From (payment made mid dormant)
+ 
+Behavior will be the same as payee made mid closure.
+There are issues relating to before and after cutoff
+To Test: 
+Currently unknown
+
+=======================
+FPS Ð Errors -
+Account Invalid : Negative type test.
+Susan states :  As New users are added and existing users are modified THROUGH THE SCRIPTING Process
+We need to enter incorrect data for account numbers
+
+To Test: 
+Login before scrpipting  the problem , record and validate the users Fund acct list.  recored your list.
+Run a minor version of the scripting that add / modifies Clients or Client Users
+Login as one of the Client users and review the funding accounts.  ThatÕs were things are supposed to be screwed up.
+One would think with some Referential Integrity built into the produce ( not speaking DB level where I always expect it )
+We should show only valid accounts against the list recorded before the scripting to mess up accts..  
+View a known messed up funding account :FAIL
+View only known good accounts : PASS
+
+=======================
+FPS Ð Errors -
+Account NOT of GBP
+
+To Test: 
+From FC enable a UK Payments user to have $USD account
+open make payment dropdown  See the $USD account:  FAIL
+open make payment dropdown  Do Not See the $USD account:  PASS
+
+
+=======================
+Authentication Testing -
+User makes payment with successful code entry--CTV and TTV:
+
+Currently TTV is the only service we would be able to automate
+Voice requires a human at this point in Test Technology Developent
+
+To Test: 
+I have to research how DT has done this in the past
+Do we have access to the value sent to the phone, if so, thatÕs half the equation ( not half the problem )
+Do we / can we simulate sending a text from a specific Ph# back to the host.
 
 
 
 =======================
+Authentication Testing -
+User attempts to enter code incorrectly 3 times and is frozen
+We need to incorporate use of the Audit Report and scan for specific a specific user transaction row ,
+and for specific information in that row  With that we ca É...
 
-
-
-
-
-=======================
-
-
-
-
-
-=======================
-
-
-
-
-
-=======================
-
-
-
+To Test: 
+CTV fail:  First time we need to look at the AuditReport and see one fail , but user status still active.
+CTV Fail:  2nd time. look at audit report again user status: active
+CTV Fail:  3rd time, look at the audit report:  USER STATUS FROZEN, but  the account has not been Invalidated
+	•	The account is left active ( you are logged in )  Here we have two pathways:  
+	◦	one-logout and see you are frozen out
+	◦	two-remain and continue :  ( this has two pathways )
+	▪	Successfully pass the test and you should go back to active: Tested, you do : )
+	▪	Fail 4,5,6 and your session will be invalidated,  The browser takes this and logs you out.
+	•	 
 
 
 =======================
+Authentication Testing -
+User attempts to enter code incorrectly 6 times and is Logged out
+ 
 
-
-
-
+To Test: 
+Re run the entire sequence as a complete fail
+Check for browser status.  Is the browser still open and connected ??
 
 
 
