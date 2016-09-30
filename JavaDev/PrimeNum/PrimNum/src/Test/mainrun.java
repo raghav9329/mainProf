@@ -6,25 +6,30 @@ public class mainrun{
 
 	public static void main(String[] args) {
 		Calendar calendar = Calendar.getInstance();
+		int howManyPrimes = 0;
 
 		// 2) get a java.util.Date from the calendar instance.
 		//		    this date will represent the current instant, or "now".
 		java.util.Date startTime = calendar.getTime();	
 	
 		
-		for (int testVal = 1 ; testVal < 65535 ; testVal ++)	{
+		for (int testVal = 1 ; testVal < 875000; testVal ++)	{
 	    	
-	    System.out.print("Is " + testVal + " prime ? ");	
-	    if (isPrime(testVal) )
-	    	System.out.println("Yes");
-	    else
-	    	System.out.println("No ");
+	   /* System.out.print("Is " + testVal + " prime ? ");	 */
+	    if (isPrime(testVal) ){
+	    	System.out.println(testVal);
+/*	    	System.out.println("Yes"); */
+	    	howManyPrimes += 1;
+	    }
+	   /* else
+	    	System.out.println("No "); */
 
 	    }
 		java.util.Date endTime = calendar.getTime();
 		
 		System.out.println("Started at: " +startTime);
 		System.out.println("Finished at: " +endTime);
+		System.out.println("Number of primes: " +howManyPrimes);
 	}
 	
 	
