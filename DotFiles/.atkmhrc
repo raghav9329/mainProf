@@ -34,6 +34,7 @@ alias llrm='ll -R |less'
 alias lll='ls -alFtr'
 alias lld='ls -alF | grep /'
 alias lsd='ls -d */'
+alias lsdot='ls -ad .*'
 # 8/3/2016 found a better ver of lsdot
 # this -ad .*  gives you dot files where ever you are
 # the other only referenes ones on ~/
