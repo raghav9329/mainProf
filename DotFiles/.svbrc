@@ -9,11 +9,13 @@ alias protractqa='npm run protractor -- --params.env=qa'
 alias runmock='npm run mock-protractor'
 alias datestr=' date +%m-%d-%Y_%H:%M:%S'
 alias gs='git status'
+alias gcm='git commit -m'
 alias psefirefox='psefg Firefox.app'
 alias bashFuncs='tail -200 ~/.bashrc | grep "()"'
 alias catbash='cat ~/.bashrc'
 alias vibash='cd ; vi ./.bashrc'
 alias findhelp='echo " find . -name ‘*.java’ -print0 | xargs -0 grep \"grep for what evvah \" " '
+alias protractorlocalost=' echo "127.0.0.1 $(hostname)" | sudo tee -a /etc/hosts'
 #   “for what evvah"  " '
 #######################
 #
@@ -29,6 +31,7 @@ alias getAutoTestRpt='cp /Volumes/dev/svb-web-payments/reports/integration/test-
 #######################
 alias godev='cd /Volumes/dev/'
 alias gosvb='cd /Volumes/dev/svb-web-payments'
+alias gomacthumb='cd /Volumes/MACTHUMB1/'
 alias goautoReports='cd /Volumes/dev/svb-web-payments/reports/integration'
 alias gosvbrpt='cd /Volumes/dev/svb-web-payments/reports/integration'
 alias openTestRpt='gosvbrpt; open ./test*'

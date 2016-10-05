@@ -8,20 +8,23 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/.test
+~MSle0~/unit
 
 # Last Substitute Search Pattern:
-~MSle0&xdes
+~MSle0&'
 
 # Last Substitute String:
-$
+$,
 
 # Command Line History (newest to oldest):
 :wq
 :w
 :q
 :q!
+:1,$s/'/,/g
+:1,$s/'/,g
 :n
+:aq
 :N
 :e
 :bp
@@ -34,31 +37,28 @@ $
 :150,$s/\/qaScenarios/\/Scenarios/g
 :!
 :e ./XBackup_Called.sh
-:e ../pageObjects/AuditTable.js
-:jjj
-:e ../pageObjects/ActivityReportPage.js
 
 # Search String History (newest to oldest):
+?/unit
+?/go
+?/git
+?/vagrant
+? '
+?/ad
+?/paul
+?/Mark
+?/mark
+?/555
+?/is555
+?/ie55
+?/Julie55
+?/julie55
+?/user
+?/sort
+?/sortcode
+?/123456
 ?/.test
 ?/test
-?/integration
-?/echo
-?/jersey
-?/pause
-?/mockit
-? \<framework\>
-?/e2
-?/e2e
-?/gulp
-?/qascen
-?/Dot
-?/dot
-? desc
-? xdes
-?/xdesc
-?/runSequentially
-?/build
-?/jasmine
 
 # Expression History (newest to oldest):
 
@@ -68,19 +68,21 @@ $
 
 # Registers:
 "0	LINE	0
-	      mv ./$1* /Volumes/dev/svb-web-payments/integration/scenarios
-"1	LINE	0
-	#      mv ./$1* /Users/maatkins/svb-web-payments/integration/scenarios
-"2	LINE	0
-	# if [ `pwd` == "/Users/maatkins/svb-web-payments/integration/scenarios"  ] ; then
-"3	LINE	0
-	#      mv ./$1* /Users/maatkins/svb-web-payments/integration/scenarios
-"4	LINE	0
-	# if [ `pwd` == "/Users/maatkins/svb-web-payments/integration/scenarios"  ] ; then
-"5	LINE	0
-	./JavaDev/.metadata/*
-"6	LINE	0
+	echo
+	echo
 	
+""1	LINE	0
+	e
+"2	LINE	0
+	
+"3	LINE	0
+	
+"4	LINE	0
+	echo
+"5	LINE	0
+	echo
+"6	LINE	0
+	#rsync -atvz --progress --exclude bin/ /Volumes/dev/svb-service-base/* /Volumes/MacThumb1/SVB/svb-service-base
 "7	LINE	0
 	
 "8	LINE	0
@@ -89,219 +91,203 @@ $
 	
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
-""-	CHAR	0
-	s
+"-	CHAR	0
+	`
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  163  59  ~/.bashrc
-'1  163  0  ~/Mark/DotFiles/.bashrc
-'2  1  0  ~/Mark/DotFiles/.bashrc
-'3  154  0  ~/.bashrc
-'4  1  0  ~/Mark/.git/MERGE_MSG
-'5  4  0  ~/Mark/.gitignore
-'6  5  20  ~/Mark/.gitignore
-'7  2  2  ~/Downloads/Template of Figures.xml
-'8  1  0  ~/Desktop/MPAY-1538_files/themedata.xml
-'9  1  0  ~/Desktop/MPAY-1538_files/filelist.xml
+'0  229  24  ~/.bashrc
+'1  228  0  ~/.bashrc
+'2  186  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+'3  133  15  /Volumes/MACTHUMB1/XBackup_Called.sh
+'4  32891  0  /private/tmp/scriptMacThumb.out
+'5  34  40  ~/.svbrc
+'6  69  0  ~/.atkmhrc
+'7  116  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+'8  30  1  /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_1Users.java
+'9  1  768  /Volumes/MACTHUMB1/dc30_dev/deployment/testfiles/localhost.dop
 
 # Jumplist (newest first):
--'  163  59  ~/.bashrc
--'  162  0  ~/.bashrc
+-'  229  24  ~/.bashrc
 -'  1  0  ~/.bashrc
--'  163  0  ~/Mark/DotFiles/.bashrc
--'  1  0  ~/Mark/DotFiles/.bashrc
--'  154  0  ~/.bashrc
--'  1  0  ~/Mark/.git/MERGE_MSG
--'  4  0  ~/Mark/.gitignore
--'  1  0  ~/Mark/.gitignore
--'  5  20  ~/Mark/.gitignore
--'  2  2  ~/Downloads/Template of Figures.xml
--'  1  0  ~/Downloads/Template of Figures.xml
--'  1  0  ~/Desktop/MPAY-1538_files/themedata.xml
--'  1  0  ~/Desktop/MPAY-1538_files/filelist.xml
--'  43  0  /Volumes/dev/svb-web-payments/karma/karma-coverage.conf.js
--'  35  0  /Volumes/dev/svb-web-payments/karma/karma-coverage.conf.js
--'  1  0  /Volumes/dev/svb-web-payments/karma/karma-coverage.conf.js
--'  97  0  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  304  5  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  76  8  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  147  38  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  140  23  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  132  52  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  128  0  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  127  0  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  125  0  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  124  24  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  123  0  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  118  0  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  82  0  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  1  0  /Volumes/dev/svb-scheduler-payments/build.gradle
--'  8  0  /Volumes/dev/svb-scheduler-payments/build
--'  16  96  ~/.svbrc
+-'  228  0  ~/.bashrc
+-'  186  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  187  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  83  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  1  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  133  15  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  32  20  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  14  60  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  69  6  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  32891  0  /private/tmp/scriptMacThumb.out
+-'  1  0  /private/tmp/scriptMacThumb.out
+-'  34  40  ~/.svbrc
 -'  1  0  ~/.svbrc
--'  17  0  ~/.svbrc
--'  96  26  ~/.svbrc
--'  95  36  ~/.svbrc
--'  94  24  ~/.svbrc
--'  93  26  ~/.svbrc
--'  92  21  ~/.svbrc
--'  91  27  ~/.svbrc
--'  90  21  ~/.svbrc
--'  59  18  ~/.svbrc
--'  58  18  ~/.svbrc
--'  57  23  ~/.svbrc
--'  56  20  ~/.svbrc
--'  55  21  ~/.svbrc
--'  54  18  ~/.svbrc
--'  53  18  ~/.svbrc
--'  52  21  ~/.svbrc
--'  51  21  ~/.svbrc
--'  43  13  ~/.svbrc
--'  15  0  ~/.svbrc
--'  11  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsResourceSwaggerTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsResourceSwaggerTest.java
--'  9  22  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsIntegrationTest.java
--'  11  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsIntegrationTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsIntegrationTest.java
--'  1  0  /Volumes/dev/svb-service-payments/settings.gradle
--'  329  5  /Volumes/dev/svb-service-payments/build.gradle
--'  1  0  /Volumes/dev/svb-service-payments/build.gradle
--'  1  0  ~/Mark/tmp_PCEclipse/TestAbstractClallProj/src/PoiTesting/PoiTestProcess.java
--'  65  0  ~/Mark/tmp_PCEclipse/TestAbstractClallProj/src/PoiTesting/AbstractTestSetup.java
--'  9  0  ~/Mark/tmp_PCEclipse/TestAbstractClallProj/src/PoiTesting/AbstractTestSetup.java
--'  1  0  ~/Mark/tmp_PCEclipse/TestAbstractClallProj/src/PoiTesting/AbstractTestSetup.java
--'  113  4  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.test.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.test.js
--'  16  0  /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.test.js
--'  1  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/utils/UserInfoValidationHelperTest.java
--'  10  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/utils
--'  8  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/utils
--'  99  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/user/econnect/bean/EconnectAuthenticationResultTest.java
--'  9  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/user/econnect/bean
--'  8  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/user
--'  1  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/integration/AccountsResourceSwaggerTest.java
--'  10  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/integration
--'  8  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/integration
--'  1  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/filterhelpers/DatabaseEntitlementProviderTest.java
--'  9  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/filterhelpers
--'  8  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/filterhelpers
--'  1  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/integration/AccountsResourceIntegration.java
--'  27  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/integration
--'  26  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/integration
--'  17  0  /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/filterhelpers
--'  495  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsIntegrationTest.java
--'  115  1  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsIntegrationTest.java
--'  65  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsIntegrationTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payees/integration/PayeesIntegrationTest.java
--'  18  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBAVerifyTextIntegrationTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OutOfBandAuthenticationSwaggerTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBAVerifyTextIntegrationTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBAStatusIntegrationTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBAPollIntegrationTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBAInitIntegrationTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBADeviceInfoIntegrationTest.java
--'  1  0  /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBACancelIntegrationTest.java
+-'  69  0  ~/.atkmhrc
+-'  1  0  ~/.atkmhrc
+-'  116  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  62  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  48  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  41  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  34  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  27  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  28  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  20  0  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  13  12  /Volumes/MACTHUMB1/XBackup_Called.sh
+-'  30  1  /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_1Users.java
+-'  1  0  /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_1Users.java
+-'  1  768  /Volumes/MACTHUMB1/dc30_dev/deployment/testfiles/localhost.dop
+-'  1  0  ~/Desktop/XBackup_newest.sh
+-'  19  0  ~/Desktop/XBackup_newest.sh
+-'  12  4  ~/Desktop/XBackup_newest.sh
+-'  179  14  ~/.bashrc
+-'  142  0  ~/.bashrc
+-'  181  16  ~/.bashrc
+-'  193  0  ~/.bashrc
+-'  208  11  ~/.bashrc
+-'  18  6  ~/Desktop/XBackup_newest.sh
+-'  1  0  ~/Mark/mainrun.java
+-'  1  0  /private/tmp/LinkedList/linkedListTest/ListNode.java
+-'  1  0  /private/tmp/LinkedList/linkedListTest/CountListDups.java
+-'  10  25  /private/tmp/LinkedList/linkedListTest/CreateList.java
+-'  1  0  /private/tmp/LinkedList/linkedListTest/CreateList.java
+-'  12  0  ~/.svbrc
+-'  16  0  ~/.bash_profile
+-'  17  0  ~/.bash_profile
+-'  12  0  ~/.bash_profile
+-'  19  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  295  0  ~/.bashrc
+-'  47  0  ~/Mark/tmp_PCEclipse/TestPoiAccessWebExample.java
+-'  1  0  ~/Mark/tmp_PCEclipse/TestPoiAccessWebExample.java
+-'  6  0  ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/Run.java
+-'  1  0  ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/Run.java
+-'  47  0  ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/TheTest.java
+-'  1  0  ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/TheTest.java
+-'  116  1  ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/MyHashMap.java
+-'  1  0  ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/MyHashMap.java
+-'  47  0  ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/HashMapRunner.java
+-'  1  0  ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/HashMapRunner.java
+-'  47  1  ~/Mark/tmp_PCEclipse/00__ProdRefresh_1-16-2014/src/Pkg_One/TestOne.java
+-'  1  0  ~/Mark/tmp_PCEclipse/00__ProdRefresh_1-16-2014/src/Pkg_One/TestOne.java
+-'  10  0  ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Run.java
+-'  1  0  ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Run.java
+-'  1  0  ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Calculator.java
+-'  63  0  ~/Mark/tmp_PCEclipse/Epic-12_5_2013-301Redirects/src/TestMoreRedirects.java
+-'  1  0  ~/Mark/tmp_PCEclipse/Epic-12_5_2013-301Redirects/src/TestMoreRedirects.java
+-'  54  0  ~/Mark/tmp_PCEclipse/Epic-12_5_2013-301Redirects/src/TestRedirects.java
+-'  1  0  ~/Mark/tmp_PCEclipse/Epic-12_5_2013-301Redirects/src/TestRedirects.java
+-'  1  0  ~/Mark/tmp_PCEclipse/OPOWER/src/onLineTest/one.java
+-'  1  339  /private/tmp/export.tsv
+-'  37  22  ~/.atkmhrc
+-'  99  17  ~/.svbrc
+-'  101  17  ~/.svbrc
+-'  91  13  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  1  0  ~/Library/Caches/TemporaryItems/Outlook Temp/Murano_SOA_Req[1].xml
+-'  1  0  /private/tmp/user_csv.out
+-'  1  0  /private/tmp/user_csv.out
+-'  1  0  ~/Library/Caches/TemporaryItems/Outlook Temp/Murano_SOA_Req[1].xml
+-'  1  0  /private/tmp/user_csv.out
+-'  1  0  /private/tmp/user_csv.out
+-'  91  13  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  1  0  ~/Library/Caches/TemporaryItems/Outlook Temp/Murano_SOA_Req[1].xml
+-'  1  0  /private/tmp/user_csv.out
+-'  1  0  /private/tmp/user_csv.out
+-'  1  0  ~/Library/Caches/TemporaryItems/Outlook Temp/Murano_SOA_Req[1].xml
+-'  1  0  /private/tmp/user_csv.out
+-'  1  0  /private/tmp/user_csv.out
+-'  91  13  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  1  0  ~/Library/Caches/TemporaryItems/Outlook Temp/Murano_SOA_Req[1].xml
+-'  1  0  /private/tmp/user_csv.out
+-'  1  0  /private/tmp/user_csv.out
+-'  1  0  ~/Library/Caches/TemporaryItems/Outlook Temp/Murano_SOA_Req[1].xml
+-'  18  20  /Volumes/MACTHUMB1/XBackup_Called.sh
 
 # History of marks within files (newest to oldest):
 
 > ~/.bashrc
-	"	163	59
-	^	163	60
-	.	163	59
-	+	202	11
+	"	229	24
+	^	229	25
+	.	229	24
+	+	236	0
+	+	236	0
+	+	237	0
+	+	235	38
+	+	200	2
+	+	201	0
+	+	202	0
+	+	201	4
+	+	202	0
 	+	202	17
-	+	202	6
+	+	203	9
+	+	204	13
+	+	205	13
+	+	206	14
+	+	207	13
+	+	208	6
+	+	209	6
+	+	210	13
+	+	211	13
+	+	212	0
 	+	202	0
-	+	202	16
-	+	202	2
-	+	202	11
-	+	202	4
-	+	202	7
-	+	202	3
-	+	202	0
-	+	202	4
-	+	202	5
-	+	198	12
-	+	202	41
-	+	203	0
-	+	208	0
-	+	208	0
-	+	208	0
-	+	209	0
-	+	207	38
-	+	176	2
-	+	177	0
-	+	178	0
-	+	177	4
-	+	178	0
-	+	178	17
-	+	179	9
-	+	180	13
-	+	181	13
-	+	182	14
-	+	183	13
-	+	184	6
-	+	185	6
-	+	186	13
-	+	187	13
-	+	188	0
-	+	178	0
-	+	189	13
-	+	190	0
-	+	191	4
-	+	210	0
-	+	244	0
-	+	243	0
-	+	242	0
-	+	243	0
-	+	214	3
-	+	238	42
-	+	197	0
-	+	245	0
-	+	246	14
-	+	266	0
-	+	246	14
-	+	266	0
-	+	266	0
-	+	266	14
-	+	249	37
-	+	266	0
-	+	249	0
-	+	265	6
-	+	252	4
-	+	252	0
-	+	252	13
-	+	252	14
-	+	252	0
-	+	252	0
-	+	252	0
-	+	252	2
-	+	250	6
-	+	264	11
-	+	262	0
-	+	261	5
-	+	257	21
-	+	248	22
-	+	257	29
-	+	260	22
-	+	266	0
-	+	266	0
-	+	256	3
-	+	263	6
-	+	254	23
-	+	254	21
+	+	213	13
+	+	214	0
+	+	215	4
+	+	238	0
+	+	272	0
+	+	271	0
+	+	270	0
+	+	271	0
+	+	242	3
+	+	266	42
+	+	221	0
+	+	273	0
+	+	274	14
+	+	294	0
+	+	274	14
+	+	294	0
+	+	294	0
+	+	294	14
+	+	277	37
+	+	294	0
+	+	277	0
+	+	293	6
+	+	280	4
+	+	280	0
+	+	280	13
+	+	280	14
+	+	280	0
+	+	280	0
+	+	280	0
+	+	280	2
+	+	278	6
+	+	292	11
+	+	290	0
+	+	289	5
+	+	285	21
+	+	276	22
+	+	285	29
+	+	288	22
+	+	294	0
+	+	294	0
+	+	284	3
+	+	291	6
+	+	282	23
+	+	282	21
 	+	154	62
 	+	154	58
 	+	162	61
 	+	162	57
-	+	239	14
-	+	236	45
-	+	239	8
-	+	238	42
-	+	239	13
+	+	267	14
+	+	264	45
+	+	267	8
+	+	266	42
+	+	267	13
 	+	154	0
 	+	154	0
 	+	162	0
@@ -311,7 +297,511 @@ $
 	+	162	2
 	+	155	60
 	+	163	59
+	+	193	0
+	+	172	0
+	+	174	0
+	+	193	0
+	+	208	0
+	+	193	0
+	+	181	16
+	+	169	0
+	+	179	0
+	+	227	5
+	+	228	6
+	+	222	20
+	+	230	0
+	+	229	0
+	+	228	9
+	+	229	0
+	+	229	24
 	f	149	0
+
+> /Volumes/MACTHUMB1/XBackup_Called.sh
+	"	186	0
+	.	186	0
+	+	70	0
+	+	77	0
+	+	84	0
+	+	91	0
+	+	98	0
+	+	105	0
+	+	112	0
+	+	119	0
+	+	126	0
+	+	133	0
+	+	140	0
+	+	147	0
+	+	154	0
+	+	161	0
+	+	168	0
+	+	175	0
+	+	182	19
+	+	175	20
+	+	168	19
+	+	161	24
+	+	154	22
+	+	147	19
+	+	140	16
+	+	14	15
+	+	21	18
+	+	28	19
+	+	32	0
+	+	28	18
+	+	35	17
+	+	42	17
+	+	49	16
+	+	56	30
+	+	63	21
+	+	70	26
+	+	77	24
+	+	84	20
+	+	91	20
+	+	98	27
+	+	105	24
+	+	112	26
+	+	119	22
+	+	126	20
+	+	133	15
+	+	8	27
+	+	9	4
+	+	10	0
+	+	14	9
+	+	15	4
+	+	16	0
+	+	25	0
+	+	32	0
+	+	39	0
+	+	46	0
+	+	53	0
+	+	60	0
+	+	67	0
+	+	74	0
+	+	75	0
+	+	81	0
+	+	89	0
+	+	96	0
+	+	103	0
+	+	110	0
+	+	117	0
+	+	124	0
+	+	131	0
+	+	138	0
+	+	145	0
+	+	152	0
+	+	159	0
+	+	166	0
+	+	173	0
+	+	180	0
+	+	186	0
+	+	22	0
+	+	29	0
+	+	36	0
+	+	43	0
+	+	50	0
+	+	57	0
+	+	64	0
+	+	71	0
+	+	78	0
+	+	85	0
+	+	92	0
+	+	99	0
+	+	106	0
+	+	113	0
+	+	120	0
+	+	127	0
+	+	134	0
+	+	141	0
+	+	148	0
+	+	155	0
+	+	162	0
+	+	169	0
+	+	176	0
+	+	183	0
+	+	188	0
+	+	186	0
+
+> /private/tmp/scriptMacThumb.out
+	"	32891	0
+
+> ~/.svbrc
+	"	34	40
+	^	34	41
+	.	34	41
+	+	106	12
+	+	105	22
+	+	106	36
+	+	105	36
+	+	106	0
+	+	105	33
+	+	106	32
+	+	105	36
+	+	106	34
+	+	108	2
+	+	105	23
+	+	108	0
+	+	67	0
+	+	69	19
+	+	88	117
+	+	88	21
+	+	43	60
+	+	107	31
+	+	65	14
+	+	66	41
+	+	44	35
+	+	89	39
+	+	3	0
+	+	11	0
+	+	13	35
+	+	52	29
+	+	39	23
+	+	33	28
+	+	40	31
+	+	32	29
+	+	38	39
+	+	25	42
+	+	27	58
+	+	25	43
+	+	27	29
+	+	25	44
+	+	27	0
+	+	26	93
+	+	33	0
+	+	35	73
+	+	26	19
+	+	14	48
+	+	72	0
+	+	74	26
+	+	75	0
+	+	82	41
+	+	83	12
+	+	77	24
+	+	84	13
+	+	83	9
+	+	82	9
+	+	83	79
+	+	84	9
+	+	82	15
+	+	83	16
+	+	84	16
+	+	82	14
+	+	84	79
+	+	85	0
+	+	86	0
+	+	87	74
+	+	36	14
+	+	9	38
+	+	77	15
+	+	16	0
+	+	15	28
+	+	16	31
+	+	42	0
+	+	41	59
+	+	78	13
+	+	37	40
+	+	82	22
+	+	83	22
+	+	84	22
+	+	82	5
+	+	79	0
+	+	82	14
+	+	83	16
+	+	84	15
+	+	79	84
+	+	80	86
+	+	81	87
+	+	79	10
+	+	80	10
+	+	81	11
+	+	17	57
+	+	17	60
+	+	17	59
+	+	20	0
+	+	17	67
+	+	19	0
+	+	17	67
+	+	19	2
+	+	17	72
+	+	19	3
+	+	17	96
+	+	18	80
+	+	13	0
+	+	12	0
+	+	34	41
+	e	55	76
+	k	77	6
+
+> ~/.atkmhrc
+	"	69	0
+	^	37	23
+	.	37	22
+	+	37	22
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_1Users.java
+	"	30	1
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_2Hosts.java
+	"	1	0
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_31ProjCreate.java
+	"	1	0
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_3Projects.java
+	"	1	0
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_3ProjRsrc.java
+	"	1	0
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_4Accounting.java
+	"	1	0
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_5Utilization.java
+	"	1	0
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_6Reports.java
+	"	1	0
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_7Notifications.java
+	"	1	0
+
+> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_8Settings.java
+	"	1	0
+
+> /Volumes/MACTHUMB1/dc30_dev/deployment/testfiles/localhost.dop
+	"	1	768
+
+> ~/Desktop/XBackup_newest.sh
+	"	1	0
+	^	28	47
+	.	29	0
+	+	27	7
+	+	26	41
+	+	28	46
+	+	29	0
+
+> ~/Mark/mainrun.java
+	"	1	0
+
+> /private/tmp/LinkedList/linkedListTest/ListNode.java
+	"	1	0
+
+> /private/tmp/LinkedList/linkedListTest/CountListDups.java
+	"	1	0
+
+> /private/tmp/LinkedList/linkedListTest/CreateList.java
+	"	10	25
+
+> ~/.bash_profile
+	"	16	0
+	.	16	0
+	+	19	0
+	+	12	0
+	+	17	1
+	+	16	0
+	+	16	0
+
+> ~/Mark/tmp_PCEclipse/TestPoiAccessWebExample.java
+	"	47	0
+
+> ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/Run.java
+	"	6	0
+
+> ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/TheTest.java
+	"	47	0
+
+> ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/MyHashMap.java
+	"	116	1
+
+> ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/HashMapRunner.java
+	"	47	0
+
+> ~/Mark/tmp_PCEclipse/00__ProdRefresh_1-16-2014/src/Pkg_One/TestOne.java
+	"	47	1
+
+> ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Run.java
+	"	10	0
+
+> ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Calculator.java
+	"	1	0
+
+> ~/Mark/tmp_PCEclipse/Epic-12_5_2013-301Redirects/src/TestMoreRedirects.java
+	"	63	0
+
+> ~/Mark/tmp_PCEclipse/Epic-12_5_2013-301Redirects/src/TestRedirects.java
+	"	54	0
+
+> ~/Mark/tmp_PCEclipse/OPOWER/src/onLineTest/one.java
+	"	1	0
+
+> /private/tmp/export.tsv
+	"	1	339
+	.	2	0
+	+	1	21
+	+	1	32
+	+	1	43
+	+	1	54
+	+	1	65
+	+	1	76
+	+	1	87
+	+	1	98
+	+	1	109
+	+	1	120
+	+	1	131
+	+	1	8
+	+	1	17
+	+	1	26
+	+	1	35
+	+	1	44
+	+	1	53
+	+	1	62
+	+	1	71
+	+	1	80
+	+	1	89
+	+	1	98
+	+	1	107
+	+	1	116
+	+	1	125
+	+	1	134
+	+	1	143
+	+	1	152
+	+	1	161
+	+	1	170
+	+	1	179
+	+	1	188
+	+	1	197
+	+	1	206
+	+	1	215
+	+	1	224
+	+	1	233
+	+	1	242
+	+	1	251
+	+	1	260
+	+	1	269
+	+	1	278
+	+	1	287
+	+	1	296
+	+	1	305
+	+	1	314
+	+	1	323
+	+	1	332
+	+	2	0
+
+> ~/.zshrc
+	"	91	13
+	^	89	46
+	.	89	45
+	+	90	0
+	+	89	45
+
+> ~/Library/Caches/TemporaryItems/Outlook Temp/Murano_SOA_Req[1].xml
+	"	1	0
+
+> /private/tmp/user_csv.out
+	"	1	0
+	.	1	0
+	+	1	19
+	+	1	0
+	+	1	119
+	+	1	0
+
+> /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+	"	205	0
+
+> ~/Desktop/MPAY-1538_files/themedata.xml
+	"	1	0
+
+> ~/Desktop/MPAY-1538_files/filelist.xml
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/Vagrantfile
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/chef/cookbooks/apache24/recipes/default.rb
+	"	51	0
+
+> /Volumes/dev/svb-vagrant/chef/cookbooks/apache24/files/apache24.sh
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/chef/cookbooks/apache24/files/epel-httpd24.repo
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/chef/cookbooks/apache24/files/murano.conf
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/svb-web-dashboard/dev.js
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/aliases/addssh
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/action_provision
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/action_set_name
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/chef_node_name
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/creator_uid
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/id
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/index_uuid
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/private_key
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/synced_folders
+	"	1	0
+
+> ~/SoapUI-Tutorials/Sample-REST-Project-soapui-project.xml
+	"	210	0
+
+> ~/SoapUI-Tutorials/popular-apis/Google-Maps-soapui-project.xml
+	"	243	0
+
+> ~/SoapUI-Tutorials/popular-apis/YouTube-soapui-project.xml
+	"	352	62
+
+> /private/etc/hosts
+	"	14	0
+	.	15	0
+	+	15	0
+
+> /Volumes/dev/svb-web-payments/app/src/factories/payeeService/payeeService.test.js
+	"	1	0
+
+> /Volumes/dev/svb-web-payments/app/src/mockApp.js
+	"	1	0
+
+> /Volumes/dev/svb-web-payments/app/src/pages/makePayment/MakePaymentPage.js
+	"	1	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.test.db.js
+	"	131	2
+	.	112	1
+	+	12	0
+	+	80	1
+	+	112	1
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
+	"	78	26
+	.	218	1
+	+	16	0
+	+	47	1
+	+	67	1
+	+	107	1
+	+	218	1
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
+	"	115	0
+	.	99	2
+	+	32	0
+	+	86	1
+	+	99	2
 
 > ~/Mark/DotFiles/.bashrc
 	"	163	0
@@ -330,124 +820,11 @@ $
 	.	2	2
 	+	2	2
 
-> ~/Desktop/MPAY-1538_files/themedata.xml
-	"	1	0
-
-> ~/Desktop/MPAY-1538_files/filelist.xml
-	"	1	0
-
 > /Volumes/dev/svb-web-payments/karma/karma-coverage.conf.js
 	"	43	0
 
 > /Volumes/dev/svb-scheduler-payments/build.gradle
 	"	97	0
-
-> ~/.svbrc
-	"	16	96
-	^	16	97
-	.	16	96
-	+	99	23
-	+	100	46
-	+	99	47
-	+	102	12
-	+	103	12
-	+	102	22
-	+	103	36
-	+	102	36
-	+	103	0
-	+	102	33
-	+	103	32
-	+	102	36
-	+	103	34
-	+	105	2
-	+	102	23
-	+	105	0
-	+	64	0
-	+	66	19
-	+	85	117
-	+	85	21
-	+	40	60
-	+	104	31
-	+	62	14
-	+	63	41
-	+	41	35
-	+	86	39
-	+	3	0
-	+	11	0
-	+	12	35
-	+	49	29
-	+	36	23
-	+	31	28
-	+	37	31
-	+	30	29
-	+	35	39
-	+	23	42
-	+	25	58
-	+	23	43
-	+	25	29
-	+	23	44
-	+	25	0
-	+	24	93
-	+	31	0
-	+	32	73
-	+	24	19
-	+	13	48
-	+	69	0
-	+	71	26
-	+	72	0
-	+	79	41
-	+	80	12
-	+	74	24
-	+	81	13
-	+	80	9
-	+	79	9
-	+	80	79
-	+	81	9
-	+	79	15
-	+	80	16
-	+	81	16
-	+	79	14
-	+	81	79
-	+	82	0
-	+	83	0
-	+	84	74
-	+	33	14
-	+	9	38
-	+	74	15
-	+	15	0
-	+	14	28
-	+	15	31
-	+	39	0
-	+	38	59
-	+	75	13
-	+	34	40
-	+	79	22
-	+	80	22
-	+	81	22
-	+	79	5
-	+	76	0
-	+	79	14
-	+	80	16
-	+	81	15
-	+	76	84
-	+	77	86
-	+	78	87
-	+	76	10
-	+	77	10
-	+	78	11
-	+	16	57
-	+	16	60
-	+	16	59
-	+	18	0
-	+	16	67
-	+	17	0
-	+	16	67
-	+	17	2
-	+	16	72
-	+	17	3
-	+	16	96
-	e	52	76
-	k	74	6
 
 > /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsIntegrationTest.java
 	"	9	22
@@ -551,309 +928,3 @@ $
 	+	177	0
 	+	176	27
 	+	20	26
-
-> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1473898823
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario.test.db.js
-	"	12	0
-	^	16	1
-	.	16	0
-	+	16	0
-
-> /Volumes/dev/svb-web-payments/protractor-mock.conf.js
-	"	1	0
-
-> /System/Library/LaunchDaemons/org.postfix.master.plist
-	"	21	0
-	.	21	0
-	+	21	0
-	+	21	0
-
-> /Volumes/dev/svb-web-payments/package.json
-	"	38	0
-	.	24	0
-	+	25	0
-	+	24	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.js
-	"	32	0
-	^	31	1
-	.	31	0
-	+	114	1
-	+	106	1
-	+	31	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/calendarBusinessDayScenario.test.db.js
-	"	1	0
-	.	30	0
-	+	30	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/audit_access.test.js
-	"	158	4
-	^	27	1
-	.	27	0
-	+	27	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/audit_no_access.test.js
-	"	12	0
-	^	12	1
-	.	12	0
-	+	12	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/audit_payee_filter.test.js
-	"	127	4
-	^	122	5
-	.	122	4
-	+	27	0
-	+	55	4
-	+	122	4
-	+	27	0
-	+	55	4
-	+	122	4
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/bankUser.smoketest.js
-	"	11	0
-	^	11	1
-	.	11	0
-	+	11	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/csrfToken.test.js
-	"	50	0
-	.	20	0
-	+	20	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/npm-debug.log
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/ooba_payment.test.js
-	"	71	2
-	.	31	1
-	+	12	0
-	+	31	1
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/payeee.test.js
-	"	210	2
-	.	127	4
-	+	21	0
-	+	70	4
-	+	127	4
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/paymentDisplay.smoketest.js
-	"	7	0
-	^	7	1
-	.	7	0
-	+	7	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
-	"	1	8
-	.	218	1
-	+	16	0
-	+	47	1
-	+	67	1
-	+	107	1
-	+	218	1
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
-	"	1	12
-	.	99	2
-	+	32	0
-	+	86	1
-	+	99	2
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.smoketest.js
-	"	8	0
-	^	8	1
-	.	8	0
-	+	8	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.test.db.js
-	"	1	0
-	.	112	1
-	+	12	0
-	+	80	1
-	+	112	1
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/ptorUserNoAccView.test.js
-	"	57	0
-	^	1	1
-	.	19	0
-	+	1	0
-	+	19	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/ptor_user2_allScenario.test.js
-	"	187	0
-	.	176	1
-	+	22	0
-	+	38	1
-	+	82	1
-	+	118	1
-	+	145	1
-	+	161	1
-	+	176	1
-
-> /usr/local/lib/node_modules/gulp/bin/gulp.js
-	"	212	0
-
-> ~/.zshrc
-	"	77	0
-
-> /Volumes/dev/svb-web-payments/gulpfile.js
-	"	7	44
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario2.test.db.js
-	"	1	0
-	^	106	2
-	.	106	1
-	+	31	0
-	+	114	1
-	+	106	1
-
-> ~/.bash_profile
-	"	5	0
-
-> ~/.bash_eternal_history
-	"	16204	8
-
-> /Volumes/dev/svb-web-payments/mark.csv
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/protractor.conf.mobile.js
-	"	1	0
-
-> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1473264377
-	"	1	0
-
-> ~/Mark/tmp_hold/audit_access.test.js
-	"	176	0
-
-> ~/Mark/tmp_hold/DzeroEntitleUkPymtUser213_1.qa_test.js
-	"	1	0
-
-> ~/Mark/tmp_hold/Esomthingsomthing214_1.qa_test.js
-	"	1	0
-
-> ~/Mark/tmp_hold/FsomethinSomthing217_1.qa_test.js
-	"	1	0
-
-> ~/Mark/tmp_hold/GsomethinSomthing_NNN.qa_test.js
-	"	1	0
-
-> /Volumes/MACTHUMB1/XBackup_newest.sh
-	"	30	93
-	^	30	94
-	.	30	93
-	+	38	0
-	+	9	2
-	+	13	19
-	+	11	32
-	+	36	8
-	+	17	9
-	+	35	3
-	+	34	18
-	+	18	6
-	+	25	22
-	+	27	0
-	+	28	9
-	+	29	7
-	+	31	32
-	+	5	5
-	+	3	15
-	+	7	2
-	+	17	14
-	+	16	1
-	+	16	0
-	+	23	7
-	+	19	36
-	+	21	20
-	+	19	15
-	+	11	2
-	+	12	48
-	+	3	0
-	+	4	30
-	+	5	0
-	+	6	0
-	+	5	0
-	+	6	28
-	+	12	49
-	+	20	0
-	+	19	5
-	+	20	45
-	+	30	80
-	+	26	8
-	+	30	93
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeLimitScenario2.test.db.js.mha
-	"	29	0
-	^	29	1
-	.	29	0
-	+	29	0
-
-> /Volumes/dev/svb-service-accounts/build.gradle
-	"	268	25
-
-> /Volumes/dev/svb-scheduler-payments/src/main/webapp/WEB-INF/web.xml
-	"	10	0
-
-> /Volumes/dev/svb-service-csrf/src/test/java/com/svb/murano/csrf/integration/PrivateCsrfTokenResourceSwaggerTest.java
-	"	146	2
-
-> /Volumes/dev/svb-service-entitlements/src/test/java/com/svb/murano/entitlements/integration/NewUserEntitlementIntegration.java
-	"	260	0
-
-> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/model/OOBADeviceTest.java
-	"	33	0
-
-> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/model/OOBAMetaTest.java
-	"	33	0
-
-> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/validation/ValidAllowedCharSetTest.java
-	"	36	0
-
-> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/validation/ParamValidatorTest.java
-	"	27	0
-
-> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/soa/controller/integration/SoaPaymentStatusCallbackIntegrationTest.java
-	"	33	0
-
-> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/soa/controller/PaymentStatusCallbackTest.java
-	"	137	0
-
-> /Volumes/dev/svb-test-reports/build.gradle
-	"	30	0
-
-> /Volumes/dev/svb-test-reports/src/main/java/com/svb/XMLTransformer.java
-	"	12	0
-
-> /Volumes/dev/svb-web-dashboard/test/integration/accounts/accountsSpec.js
-	"	226	37
-
-> /Volumes/dev/svb-web-monitor/app/src/monitor/MonitorPage.js
-	"	104	0
-
-> /Volumes/dev/svb-web-monitor/app/src/app.js
-	"	1	0
-
-> /Volumes/dev/svb-web-monitor/infrastructure/local/apache/svb-web-monitor.conf
-	"	1	0
-
-> /Volumes/dev/svb-web-monitor/infrastructure/dev/apache/svb-web-monitor.conf
-	"	1	0
-
-> /Volumes/dev/svb-service-base/build.gradle
-	"	1	0
-
-> /Volumes/dev/svb-service-base/src/test/java/com/svb/murano/common/dao/BaseDAOTest.java
-	"	64	0
-
-> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/AccountEntitlementResourceIntegrationTest.java
-	"	1	0
-
-> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/AccountEntitlementResourceSwaggerTest.java
-	"	1	0
-
-> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/AccountsResourceIntegrationTest.java
-	"	1	0
-
-> /Volumes/dev/svb-service-accounts/src/test/java/com/svb/murano/accounts/integration/AccountsResourceSwaggerTest.java
-	"	1	0

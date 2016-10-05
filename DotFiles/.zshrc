@@ -84,5 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source /Volumes/dev/svb-vagrant/tools/bash_profile.sh
-alias bashme='/bin/bash'
+# 9/29/16 after livin with zsh Post DT mod, I've decided
+# go back to bash as default.  This was done at 
+# Terminal App Preferences General Tab setting
+#alias bashme='/bin/bash'
 alias x='exit'

@@ -107,6 +107,9 @@ if [ -f ~/.svbrc ]; then
     . ~/.svbrc
 fi
 
+
+alias s.c='source /Users/maatkins/.bashrc'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -125,8 +128,6 @@ fi
 if [ "$TERM" != "dumb" ]; then
     [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 fi
-
-alias s.c='source /Users/maatkins/.bashrc'
 
 # The following is coming from
 # http://superuser.com/questions/137438/how-to-unlimited-bash-shell-history
@@ -167,6 +168,30 @@ mf()
 fi
 }
 
+whatRepoBranch()
+{
+	REPO_DIRECTORIES="/Volumes/dev/svb-*"
+
+echo BASHRC_VERSION
+   for f in $REPO_DIRECTORIES
+     do
+	if [ -d "$f"  ]	
+          then
+              cd $f
+              pwd 
+	      git branch
+	      cd ~/
+              echo 	
+              echo 	
+	else
+              echo NotWorking
+	fi
+      done
+echo BASHRC_VERSION.......
+echo !! DONE  !!
+
+
+}
 
 
 updateRepos()
@@ -195,11 +220,15 @@ echo !! DONE  !!
 }
 
 
-unitTestCount()
+unitTestCountPayments()
 {
 
 echo Starting to look.....
-grep -r @Test * | grep -v integration | wc
+echo Moving to payments repo
+gosvb
+cd app/src
+grep -r "\sit(" * | wc -l
+#grep -r @Test * | grep -v integration | wc
 }
 
 integrationTestCount()
