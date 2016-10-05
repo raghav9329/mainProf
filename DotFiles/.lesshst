@@ -1,8 +1,5 @@
 .less-history-file:
 .search
-"ignore case
-"case
-"git
 "asdf;kjasd;flkj
 ".git
 ".git 
@@ -100,4 +97,7 @@
 "inte
 "xml
 "swp
+"print
+"print $
+"print
 .shell

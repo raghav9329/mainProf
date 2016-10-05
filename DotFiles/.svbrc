@@ -16,6 +16,7 @@ alias catbash='cat ~/.bashrc'
 alias vibash='cd ; vi ./.bashrc'
 alias findhelp='echo " find . -name ‘*.java’ -print0 | xargs -0 grep \"grep for what evvah \" " '
 alias protractorlocalost=' echo "127.0.0.1 $(hostname)" | sudo tee -a /etc/hosts'
+alias shelltestCounts='unitTestCountPayments; unitTestCountCoreUi;integrationTestCountMock;integrationTestCountE2E; integrationTestCountAll '
 #   “for what evvah"  " '
 #######################
 #
