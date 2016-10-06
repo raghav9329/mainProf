@@ -1,0 +1,193 @@
+# Shell Functions moved to .svbshellFuncs on 10/5/2016
+#
+# Funciton "Move File" 
+# Only works in specific directories and between these directories.
+mf()
+{
+ if [ -z "$1" ] ; then
+   echo "An argument is really necessary "
+ fi
+ #if [ `pwd` == "/Volumes/dev/svb-web-payments/integration/scenarios"  ] ; then
+ if [ `pwd` == "/Volumes/dev/svb-web-payments/integration/qaScenarios"  ] ; then
+   if [ -f $1* ]; then
+      mv ./$1* /Users/maatkins/Mark/tmp_hold
+      else echo "File wasn't there "
+   fi
+ elif [ `pwd` == "/Users/maatkins/Mark/tmp_hold" ] ; then
+   if [ -f $1* ]; then
+  #    mv ./$1* /Volumes/dev/svb-web-payments/integration/scenarios
+      mv ./$1* /Volumes/dev/svb-web-payments/integration/qaScenarios
+      else echo "File wasn't there "
+   fi
+ else echo "Not in a directory that supports the -mf(move file)- command"
+fi
+}
+
+whatrepoBranch()
+{
+	REPO_DIRECTORIES="/Volumes/dev/svb-*"
+
+#echo BASHRC_VERSION
+   for f in $REPO_DIRECTORIES
+     do
+	if [ -d "$f"  ]	
+          then
+              cd $f
+              pwd 
+	      git branch
+	      cd ~/
+              echo 	
+	else
+              echo NotWorking
+	fi
+      done
+#echo BASHRC_VERSION.......
+echo !! DONE  !!
+
+
+}
+
+
+updateRepos()
+{
+	REPO_DIRECTORIES="/Volumes/dev/svb-*"
+echo BASHRC_VERSION
+   for f in $REPO_DIRECTORIES
+     do
+	if [ -d "$f"  ]	
+          then
+              echo "************************************************"
+              echo "************************************************"
+              cd $f
+              pwd 
+	      git pull
+	      cd ~/
+              echo 	
+              echo 	
+	else
+              echo NotWorking
+	fi
+      done
+echo BASHRC_VERSION.......
+echo !! DONE  !!
+
+}
+
+
+unitTestCountPayments()
+{	echo payments repo
+	gosvb # /Volumes/dev/svb-web-payments/
+	cd app/src
+	grep -r "\sit(" * | wc -l
+}
+
+unitTestCountCoreUi()
+{	echo  web-core-ui repo
+	godev
+	cd svb-web-core-ui/src
+	grep -r "\sit(" * | wc -l
+}
+
+
+integrationTestCountMock()
+{	echo mockBackend 
+	gosvb; 
+	cd integration/mockBackend
+	grep -r "\sit(" * | wc -l
+}
+
+integrationTestCountE2E()
+{	echo e2e scenarios
+	gosvb; 
+	cd integration/scenarios
+	grep -r "\sit(" * | wc -l
+}
+
+integrationTestCountAll()
+{	echo All Integration test
+	gosvb; 
+	cd integration
+	grep -r "\sit(" * | wc -l
+}
+
+testcountbyCase()
+{	echo test case count by Case
+	if [ -z $1  ] ; then
+	   scriptVar="scriptVar 3, 5, 7, 11, 13, 17" 
+	   else scriptVar=$1
+	fi
+	
+	case $scriptVar in
+		
+		3)
+		echo case 3
+		  ;;
+		5)
+		echo case 5
+		  ;;
+		7)
+		echo case 7
+		  ;;
+		11)
+		echo case 11
+		  ;;
+		13)
+		echo case 13
+		  ;;
+		17)
+		echo case 17
+		  ;;
+		*)
+		echo the value of sriptVariable is $scriptVar
+		  ;;
+			
+	esac
+}
+
+
+getDotFiles()
+{   # In this file I need to set a list of variables that contain the chars in the file names
+    # that I don't want  eg: swp for vi swap files,  eg v8Flags ???? why ???   others ???
+    # ====================================================================================
+cd /Users/maatkins/
+dirList=`ls -ad .*`
+swpFile=".swp"
+
+for f in $dirList
+do
+ if [ -f $f ]
+   then
+     if echo $f | grep -q $swpFile
+       then
+         echo "Not touching swp file named: "$f
+       else
+        cp $f /Users/maatkins/Mark/DotFiles
+	echo -e $f "\t copied"
+     fi  
+ fi
+done
+
+}
+
+findBuildGradle()
+{
+	theFile="build.gradle"
+	REPO_DIRECTORIES="/Volumes/dev/svb-*"
+	for d in $REPO_DIRECTORIES
+	 do
+	  if [ -d "$d" ]
+	   then
+	      FILE_LIST=`ls`
+		for f in $FILE_LIST
+		do
+		  if echo $f | grep $theFile
+		  then
+			pwd
+			ls -alF build.gradle
+		  fi
+
+	 	done
+          fi 
+	 done
+
+}
