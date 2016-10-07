@@ -1,5 +1,19 @@
 General Notes
 ----------------------------------------------------------------------------------------------------
+
+pulled from 
+http://stash.dev.svbank.com/projects/API/repos/engdocs/browse/principles/testing.md
+Testing at Standard Treasury
+
+There are multiple types of tests recognized by our engineering organization.
+Unit: Fast tests that cover a specific method or function. Sockets not allowed, heavy use of mock
+Functional: that combine multiple classes or systems. Single process, mocked bank backend, queries database
+Integration: Tests that depend on external processes, Multi-process, no mocks, synchronization required. Typically this runs on a specialized cluster.
+Simulation: Simulation tests run expensive tests under varying degrees of load and realistic use patterns using a probabilistic load use case generator.
+
+
+
+
 6/20/16
 Business Insider
 http://www.businessinsider.com/jpmorgan-10-books-this-summer-2016-6

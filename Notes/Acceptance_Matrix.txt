@@ -427,6 +427,7 @@ User attempts to enter code incorrectly 6 times and is Logged out
 To Test: 
 Re run the entire sequence as a complete fail
 Check for browser status.  Is the browser still open and connected ??
+Susan: Can we also check the user status user Admin Econnect.
 
 
 

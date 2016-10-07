@@ -4,6 +4,8 @@ Git_Tips
 git checkout - - <pathtofile>   the two dashes are supposed to be closer together    
 this will change the edits on the file back to unedited.
 
+Question to be answered: Does it take it out of modified or out of staged ?
+
 
 git log -2 <file>  puts out commit ID
 
