@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/grepal
+~MSle0~/integr
 
 # Last Substitute Search Pattern:
 ~MSle0&'
@@ -18,8 +18,12 @@ $,
 
 # Command Line History (newest to oldest):
 :wq
-:q
 :w
+:set nu
+:set nonu
+:tabsize
+:set tabsize
+:q
 :q!
 :1,$s/'/,/g
 :1,$s/'/,g
@@ -33,12 +37,11 @@ $,
 :1,$s/xdes/des/g
 :1,$s/desc/xdesc/g
 :1,$s/descri/xdescri/g
-:1,$s/describe/xdescribe/g
-:150,$s/\/qaScenarios/\/Scenarios/g
-:!
-:e ./XBackup_Called.sh
 
 # Search String History (newest to oldest):
+?/integr
+?/ga
+?/gs
 ?/grepal
 ?/go
 ?/find
@@ -56,9 +59,6 @@ $,
 ?/Mark
 ?/mark
 ?/555
-?/is555
-?/ie55
-?/Julie55
 
 # Expression History (newest to oldest):
 
@@ -68,72 +68,97 @@ $,
 
 # Registers:
 "0	LINE	0
-	alias catfuncs='cat /Users/maatkins/.svbshellFuncs'
+				echo Count is : $loopCount
 "1	LINE	0
-	alias go=''
+	echo BASHRC_VERSION.......
 "2	LINE	0
-	=''
+	
 "3	LINE	0
-	alias go
+			echo In svb-web-payments:  do Nothing !!!
 "4	LINE	0
-	alias gowebpay=''
+	#		if [ "$f" ==  "/Volumes/dev/svb-web-payments"  ] 
 "5	LINE	0
-	alias goservpay=''
+	
 "6	LINE	0
-	alias goservpay=''
+	
 "7	LINE	0
-	alias goservpay=''
+				
 "8	LINE	0
-	alias goservpay=''
+			pwd
 "9	LINE	0
-	alias goservpay=''
+	       
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
 ""-	CHAR	0
-	s
+	[
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  21  14  ~/.svbrc
-'1  22  34  ~/.svbrc
-'2  68  6  ~/.atkmhrc
-'3  20  25  ~/.svbrc
-'4  49  0  ~/Mark/JavaDev/LinkedList/src/linkedListTest/CreateList.java
-'5  67  0  ~/Mark/JavaDev/LinkedList/src/linkedListTest/ListNode.java
-'6  56  21  ~/.svbrc
-'7  18  67  ~/.svbrc
-'8  167  2  ~/.svbshellFuncs
-'9  102  24  ~/.svbshellFuncs
+'0  80  15  ~/.svbshellFuncs
+'1  113  3  ~/.svbshellFuncs
+'2  134  18  ~/.svbshellFuncs
+'3  121  44  ~/.svbshellFuncs
+'4  76  4  ~/.svbshellFuncs
+'5  13  18  ~/.svbrc
+'6  12  17  ~/.svbrc
+'7  7  8  ~/Mark/.gitignore
+'8  2  0  ~/Mark/.gitignore
+'9  1  0  ~/Mark/.gitignore
 
 # Jumplist (newest first):
--'  21  14  ~/.svbrc
+-'  80  15  ~/.svbshellFuncs
+-'  86  16  ~/.svbshellFuncs
+-'  113  2  ~/.svbshellFuncs
+-'  91  65  ~/.svbshellFuncs
+-'  260  0  ~/.svbshellFuncs
+-'  26  0  ~/.svbshellFuncs
+-'  1  0  ~/.svbshellFuncs
+-'  127  9  ~/.svbshellFuncs
+-'  76  4  ~/.svbshellFuncs
+-'  134  18  ~/.svbshellFuncs
+-'  121  44  ~/.svbshellFuncs
+-'  8  0  ~/.svbshellFuncs
+-'  122  24  ~/.svbshellFuncs
+-'  19  45  ~/.svbshellFuncs
+-'  18  46  ~/.svbshellFuncs
+-'  11  46  ~/.svbshellFuncs
+-'  10  47  ~/.svbshellFuncs
+-'  13  18  ~/.svbrc
 -'  1  0  ~/.svbrc
--'  22  34  ~/.svbrc
+-'  12  17  ~/.svbrc
+-'  7  8  ~/Mark/.gitignore
+-'  1  0  ~/Mark/.gitignore
+-'  2  0  ~/Mark/.gitignore
+-'  68  0  ~/.svbshellFuncs
+-'  65  1  ~/.svbshellFuncs
+-'  33  0  ~/.svbshellFuncs
+-'  25  48  ~/.svbrc
+-'  23  14  ~/.svbrc
+-'  24  34  ~/.svbrc
 -'  68  6  ~/.atkmhrc
 -'  1  0  ~/.atkmhrc
--'  20  25  ~/.svbrc
--'  124  15  ~/.svbrc
+-'  22  25  ~/.svbrc
+-'  127  15  ~/.svbrc
 -'  49  0  ~/Mark/JavaDev/LinkedList/src/linkedListTest/CreateList.java
 -'  1  0  ~/Mark/JavaDev/LinkedList/src/linkedListTest/CreateList.java
 -'  67  0  ~/Mark/JavaDev/LinkedList/src/linkedListTest/ListNode.java
 -'  1  0  ~/Mark/JavaDev/LinkedList/src/linkedListTest/ListNode.java
--'  56  21  ~/.svbrc
--'  39  52  ~/.svbrc
--'  18  67  ~/.svbrc
--'  167  2  ~/.svbshellFuncs
--'  149  50  ~/.svbshellFuncs
--'  79  5  ~/.svbshellFuncs
+-'  59  21  ~/.svbrc
+-'  42  52  ~/.svbrc
+-'  20  67  ~/.svbrc
+-'  234  2  ~/.svbshellFuncs
+-'  216  50  ~/.svbshellFuncs
+-'  146  5  ~/.svbshellFuncs
 -'  37  11  ~/.svbshellFuncs
--'  113  0  ~/.svbshellFuncs
--'  1  0  ~/.svbshellFuncs
--'  102  24  ~/.svbshellFuncs
+-'  180  0  ~/.svbshellFuncs
+-'  169  24  ~/.svbshellFuncs
 -'  40  1  ~/.svbshellFuncs
--'  69  0  ~/.svbshellFuncs
--'  99  23  ~/.svbshellFuncs
--'  96  25  ~/.svbshellFuncs
--'  85  28  ~/.svbshellFuncs
+-'  67  0  ~/.svbshellFuncs
+-'  166  23  ~/.svbshellFuncs
+-'  163  25  ~/.svbshellFuncs
+-'  152  28  ~/.svbshellFuncs
 -'  222  0  ~/.bashrc
 -'  1  0  ~/.bashrc
 -'  148  36  ~/.bashrc
@@ -155,7 +180,7 @@ $,
 -'  69  6  /Volumes/MACTHUMB1/XBackup_Called.sh
 -'  32891  0  /private/tmp/scriptMacThumb.out
 -'  1  0  /private/tmp/scriptMacThumb.out
--'  38  40  ~/.svbrc
+-'  41  40  ~/.svbrc
 -'  70  0  ~/.atkmhrc
 -'  116  0  /Volumes/MACTHUMB1/XBackup_Called.sh
 -'  62  0  /Volumes/MACTHUMB1/XBackup_Called.sh
@@ -173,147 +198,238 @@ $,
 -'  19  0  ~/Desktop/XBackup_newest.sh
 -'  12  4  ~/Desktop/XBackup_newest.sh
 -'  182  14  ~/.bashrc
--'  143  0  ~/.bashrc
--'  184  16  ~/.bashrc
--'  196  0  ~/.bashrc
--'  211  11  ~/.bashrc
--'  18  6  ~/Desktop/XBackup_newest.sh
--'  1  0  ~/Mark/mainrun.java
--'  1  0  /private/tmp/LinkedList/linkedListTest/ListNode.java
--'  1  0  /private/tmp/LinkedList/linkedListTest/CountListDups.java
--'  10  25  /private/tmp/LinkedList/linkedListTest/CreateList.java
--'  1  0  /private/tmp/LinkedList/linkedListTest/CreateList.java
--'  12  0  ~/.svbrc
--'  16  0  ~/.bash_profile
--'  17  0  ~/.bash_profile
--'  12  0  ~/.bash_profile
--'  19  0  ~/.bash_profile
--'  1  0  ~/.bash_profile
--'  47  0  ~/Mark/tmp_PCEclipse/TestPoiAccessWebExample.java
--'  1  0  ~/Mark/tmp_PCEclipse/TestPoiAccessWebExample.java
--'  6  0  ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/Run.java
--'  1  0  ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/Run.java
--'  47  0  ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/TheTest.java
--'  1  0  ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/TheTest.java
--'  116  1  ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/MyHashMap.java
--'  1  0  ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/MyHashMap.java
--'  47  0  ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/HashMapRunner.java
--'  1  0  ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/HashMapRunner.java
--'  47  1  ~/Mark/tmp_PCEclipse/00__ProdRefresh_1-16-2014/src/Pkg_One/TestOne.java
--'  1  0  ~/Mark/tmp_PCEclipse/00__ProdRefresh_1-16-2014/src/Pkg_One/TestOne.java
--'  10  0  ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Run.java
--'  1  0  ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Run.java
--'  1  0  ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Calculator.java
--'  63  0  ~/Mark/tmp_PCEclipse/Epic-12_5_2013-301Redirects/src/TestMoreRedirects.java
+-'  13  28  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  101  18  ~/.svbshellFuncs
+-'  89  44  ~/.svbshellFuncs
+-'  90  24  ~/.svbshellFuncs
 
 # History of marks within files (newest to oldest):
 
-> ~/.svbrc
-	"	21	14
-	^	22	35
-	.	21	14
-	+	98	0
-	+	99	0
-	+	100	74
-	+	49	14
-	+	9	38
-	+	90	15
-	+	16	0
-	+	15	28
-	+	16	31
-	+	55	0
-	+	54	59
-	+	91	13
-	+	50	40
-	+	95	22
-	+	96	22
-	+	97	22
-	+	95	5
-	+	92	0
-	+	95	14
-	+	96	16
-	+	97	15
-	+	92	84
-	+	93	86
-	+	94	87
-	+	92	10
+> ~/.svbshellFuncs
+	"	80	15
+	^	80	16
+	.	80	15
+	+	114	0
+	+	91	0
+	+	91	22
+	+	79	40
+	+	91	54
+	+	79	40
+	+	127	0
+	+	113	0
+	+	113	2
+	+	91	66
+	+	91	0
+	+	91	67
+	+	91	67
+	+	113	8
+	+	113	0
+	+	113	0
+	+	113	0
+	+	222	0
+	+	89	1
+	+	90	1
+	+	91	7
+	+	114	4
+	+	115	7
+	+	118	4
+	+	119	4
+	+	120	2
+	+	89	1
+	+	113	0
+	+	113	1
+	+	98	1
+	+	82	17
+	+	107	1
+	+	113	0
+	+	113	0
+	+	131	0
+	+	129	1
+	+	131	1
+	+	132	1
+	+	133	1
+	+	134	1
+	+	128	0
+	+	127	11
+	+	120	6
+	+	91	2
+	+	92	1
 	+	93	10
-	+	94	11
-	+	17	57
-	+	17	60
-	+	17	59
-	+	25	0
-	+	17	67
-	+	24	0
-	+	17	67
-	+	24	2
-	+	17	72
-	+	24	3
-	+	17	96
-	+	19	80
-	+	13	0
-	+	12	0
-	+	47	41
-	+	23	136
-	+	23	35
-	+	23	125
-	+	23	0
-	+	23	127
-	+	17	15
-	+	18	67
-	+	46	0
-	+	39	0
-	+	46	0
-	+	46	0
-	+	46	0
-	+	46	0
-	+	46	0
-	+	46	0
-	+	46	0
-	+	46	0
-	+	46	0
-	+	46	0
-	+	39	8
-	+	46	0
-	+	39	8
+	+	95	0
+	+	113	0
+	+	97	0
+	+	95	2
+	+	97	2
+	+	98	4
+	+	103	19
+	+	106	17
+	+	100	14
+	+	93	11
+	+	113	0
+	+	94	0
+	+	113	0
+	+	130	4
+	+	97	34
+	+	103	27
+	+	109	25
+	+	138	0
+	+	137	0
+	+	138	0
+	+	93	41
+	+	97	2
+	+	100	2
+	+	101	2
+	+	103	2
+	+	104	2
+	+	105	0
+	+	106	0
+	+	107	0
+	+	109	0
+	+	110	0
+	+	93	12
+	+	77	11
+	+	86	12
+	+	95	6
+	+	96	28
+	+	86	6
+	+	117	0
+	+	116	0
+	+	86	16
+	+	110	0
+	+	109	0
+	+	107	0
+	+	106	0
+	+	105	0
+	+	104	2
+	+	103	2
+	+	101	2
+	+	100	2
+	+	97	2
+	+	102	0
+	+	108	0
+	+	93	2
+	+	80	15
+
+> ~/.vimrc
+	"	13	28
+	^	13	29
+	.	13	28
+	+	13	28
+
+> ~/.svbrc
+	"	13	18
+	^	13	19
+	.	13	18
+	+	52	14
+	+	9	38
+	+	93	15
+	+	18	0
+	+	17	28
+	+	18	31
+	+	58	0
+	+	57	59
+	+	94	13
+	+	53	40
+	+	98	22
+	+	99	22
+	+	100	22
+	+	98	5
+	+	95	0
+	+	98	14
+	+	99	16
+	+	100	15
+	+	95	84
+	+	96	86
+	+	97	87
+	+	95	10
+	+	96	10
+	+	97	11
+	+	19	57
+	+	19	60
+	+	19	59
+	+	28	0
+	+	19	67
+	+	27	0
+	+	19	67
+	+	27	2
+	+	19	72
+	+	27	3
+	+	19	96
+	+	21	80
+	+	15	0
+	+	14	0
+	+	50	41
+	+	26	136
+	+	26	35
+	+	26	125
+	+	26	0
+	+	26	127
+	+	19	15
+	+	20	67
+	+	49	0
 	+	42	0
-	+	43	0
-	+	44	0
+	+	49	0
+	+	49	0
+	+	49	0
+	+	49	0
+	+	49	0
+	+	49	0
+	+	49	0
+	+	49	0
+	+	49	0
+	+	49	0
+	+	42	8
+	+	49	0
+	+	42	8
 	+	45	0
 	+	46	0
-	+	46	0
-	+	39	15
+	+	47	0
+	+	48	0
+	+	49	0
+	+	49	0
+	+	42	15
+	+	45	18
+	+	46	15
+	+	47	17
+	+	43	22
+	+	42	0
+	+	44	0
 	+	42	18
-	+	43	15
-	+	44	17
-	+	40	22
-	+	39	0
-	+	41	0
-	+	39	18
-	+	45	16
-	+	46	8
-	+	39	46
-	+	40	58
-	+	41	52
-	+	42	50
-	+	43	46
-	+	44	50
-	+	45	43
-	+	46	0
-	+	39	20
-	+	40	22
-	+	41	18
-	+	42	18
-	+	43	18
-	+	44	20
-	+	45	19
-	+	20	25
-	+	21	20
-	+	22	34
-	+	20	13
-	+	21	14
-	e	68	76
-	k	90	6
+	+	48	16
+	+	49	8
+	+	42	46
+	+	43	58
+	+	44	52
+	+	45	50
+	+	46	46
+	+	47	50
+	+	48	43
+	+	49	0
+	+	42	20
+	+	43	22
+	+	44	18
+	+	45	18
+	+	46	18
+	+	47	20
+	+	48	19
+	+	22	25
+	+	23	20
+	+	24	34
+	+	22	13
+	+	23	14
+	+	25	48
+	+	12	17
+	+	13	18
+	e	71	76
+	k	93	6
+
+> ~/Mark/.gitignore
+	"	7	8
+	^	7	23
+	.	7	8
+	+	5	0
+	+	7	8
 
 > ~/.atkmhrc
 	"	68	6
@@ -330,111 +446,6 @@ $,
 
 > /Volumes/dev/svb-services-sandbox/mur-java-lib-httpclient/src/test/java/com/svb/murano/common/JSONParseTest.java
 	"	39	0
-
-> ~/.svbshellFuncs
-	"	167	2
-	^	44	1
-	.	26	4
-	+	79	0
-	+	78	1
-	+	85	1
-	+	86	0
-	+	85	1
-	+	78	7
-	+	85	7
-	+	78	7
-	+	93	17
-	+	100	19
-	+	106	21
-	+	109	14
-	+	107	26
-	+	92	3
-	+	99	3
-	+	106	3
-	+	113	0
-	+	79	38
-	+	113	0
-	+	79	0
-	+	146	0
-	+	150	33
-	+	149	74
-	+	150	0
-	+	150	88
-	+	150	86
-	+	151	0
-	+	150	32
-	+	151	0
-	+	150	33
-	+	149	90
-	+	150	1
-	+	151	0
-	+	152	0
-	+	149	3
-	+	150	0
-	+	151	0
-	+	150	0
-	+	149	1
-	+	152	0
-	+	149	1
-	+	150	0
-	+	151	2
-	+	150	2
-	+	149	3
-	+	150	3
-	+	151	89
-	+	156	0
-	+	145	0
-	+	114	30
-	+	113	15
-	+	119	15
-	+	119	11
-	+	144	4
-	+	120	18
-	+	119	41
-	+	124	5
-	+	123	7
-	+	136	5
-	+	121	1
-	+	143	2
-	+	140	1
-	+	141	1
-	+	138	8
-	+	135	8
-	+	132	8
-	+	129	7
-	+	126	7
-	+	115	12
-	+	118	2
-	+	117	2
-	+	116	2
-	+	117	0
-	+	119	0
-	+	117	19
-	+	115	7
-	+	115	17
-	+	116	0
-	+	117	5
-	+	118	0
-	+	117	1
-	+	116	1
-	+	117	3
-	+	116	3
-	+	119	1
-	+	123	11
-	+	126	7
-	+	129	7
-	+	132	7
-	+	135	7
-	+	138	7
-	+	140	1
-	+	141	46
-	+	142	5
-	+	117	15
-	+	115	0
-	+	119	0
-	+	30	0
-	+	44	0
-	+	26	4
 
 > ~/.bashrc
 	"	222	0
@@ -922,11 +933,6 @@ $,
 > ~/Mark/.git/MERGE_MSG
 	"	1	0
 
-> ~/Mark/.gitignore
-	"	4	0
-	.	5	0
-	+	5	0
-
 > ~/Downloads/Template of Figures.xml
 	"	2	2
 	^	2	3
@@ -1014,6 +1020,3 @@ $,
 
 > /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/audit/integration/AuditIntegrationTest.java
 	"	10	0
-
-> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/audit/integration/AuditResourceSwaggerTest.java
-	"	1	0

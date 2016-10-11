@@ -57,12 +57,10 @@ echo BASHRC_VERSION
 	if [ -d "$f"  ]	
           then
               echo "************************************************"
-              echo "************************************************"
               cd $f
               pwd 
 	      git pull
 	      cd ~/
-              echo 	
               echo 	
 	else
               echo NotWorking
@@ -72,6 +70,95 @@ echo BASHRC_VERSION.......
 echo !! DONE  !!
 
 }
+
+repoLookInt()
+{
+godev
+	loopCount=0
+	componentCount=""
+	dummyVar=""
+	REPO_DIRECTORIES="/Volumes/dev/svb-*"
+	VARSVBWP="/Volumes/dev/svb-web-payments"
+	VARSVBDSHBRD="/Volumes/dev/svb-web-dashboard"
+	VARSVBTOOLS="/Volumes/dev/tools"
+	VARSVBJUNKDIR1="/Volumes/dev/svb-xx_web-entitlements_justIgnoreThis"
+echo $BASHRC_VERSION
+   for f in $REPO_DIRECTORIES
+     do
+		((loopCount++))
+	if [ -d "$f"  ]	; then
+		
+		#echo "************************************************"
+		cd $f
+		
+		
+#case $f in
+		
+#$VARSVBWP)
+		#	pwd 
+		#	echo Count is : $loopCount
+		#	;;	
+		#$VARSVBTOOLS)
+		#	pwd
+		#	echo Count is : $loopCount
+		#	;;
+		#$VARSVBDSHBRD)
+		#	pwd
+		#	echo Count is : $loopCount
+		#	;;
+		#$VARSVBJUNKDIR1)
+		#	pwd
+		#	echo Count is : $loopCount
+		#	;;
+
+		
+#*)
+		#echo "************************************************"
+
+		#pwd 
+		#echo Count is : $loopCount
+
+	   	#myLocalEnvar=`find . -type d -name 'integration' `
+		#echo ....
+		
+		#echo is the next line valid hummmmm .....
+	 	componentCount=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+
+		if [ "$componentCount" -lt "1"  ] ; then
+			#echo Value ===  Zero 	
+			dummyVar=$dummyVar+1
+		
+		else
+		echo "************************************************"
+			pwd
+			echo $componentCount
+			componentCount=""
+		fi
+
+		#pwd
+		#echo $componentCount	
+		#if [ $componentCount -n ]; then
+	#		pwd
+		#	echo $componentCount
+		#	componentCount=""
+		#fi
+
+		#echo .....
+		cd ~/
+		#echo 	
+	
+#esac
+	
+	else
+		echo NotWorking
+		$myLocalVar=""
+	fi
+      done
+echo "************************************************"
+echo !! DONE  !!
+
+}
+
 
 
 unitTestCountPayments()

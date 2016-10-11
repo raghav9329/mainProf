@@ -9,6 +9,8 @@ set number
 set nowrap
 set ruler
 set mouse=a
+set tabstop=4
+set softtabstop=0 noexpandtab
 syntax on
 colo koehler
 
