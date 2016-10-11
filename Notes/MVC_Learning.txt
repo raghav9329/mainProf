@@ -1,0 +1,301 @@
+MVC_Learning
+
+
+http://stackoverflow.com/questions/8497833/hello-world-in-mvc-pattern
+
+var M = {}, V = {}, C = {};
+M.data = "hello world";
+V.render = function (M) { alert(M.data); }
+C.handleOnload = function () { V.render(M); }
+window.onload = C.handleOnLoad;
+
+Controller (C) listens on some kind of interaction/event stream. In this case it's the page's loading event.
+
+Model (M) is an abstraction of a data source.
+
+View (V) knows how to render data from the Model.
+
+The Controller tells to View to do something with something from the Model.
+
+In this example
+
+the View knows nothing about the Model apart from it implements some interface
+the Model knows nothing of the View and the Controller
+the Controller knows about both the Model and the View and tells the View to go do something with the data from the Model.
+Note the above example is a severe simplification for demonstrating purposes. For real "hello world" examples in the JS MVC world go take a look at todoMVC  https://github.com/tastejs/todomvc
+
+The following is listed as a better example
+
+var M = {}, V = {}, C = {};
+
+/* Model View Controller Pattern with Form Example */
+
+
+/* Controller Handles the Events */
+
+M = {
+    data: {
+        userName : "Dummy Guy",
+        userNumber : "000000000"
+    }, 
+    setData : function(d){
+        this.data.userName = d.userName;
+        this.data.userNumber = d.userNumber;
+    },
+    getData : function(){
+        return data;
+    }
+}
+
+V = {
+    userName : document.querySelector("#inputUserName"),
+    userNumber : document.querySelector("#inputUserNumber"),
+    update: function(M){
+        this.userName.value = M.data.userName;
+        this.userNumber.value = M.data.userNumber;
+    }
+}
+
+C = {
+    model: M,
+    view: V,
+    handler: function(){
+        this.view.update(this.model);
+    }
+}
+
+document.querySelector(".submitBtn").addEventListener("click", function(){
+    C.handler.call(C);
+}); 
+
+/* Model Handles the Data */
+
+/* View Handles the Display */
+
+
+
+Additionally from: https://alexatnet.com/articles/model-view-controller-mvc-javascript
+
+
+I like JavaScript because it is one of the most flexible languages in the world. It supports wide range of the programming styles and techniques, but such flexibility comes with danger - it is very easy for the JavaScript project to become a messy heap if the practices or design patterns are applied in a wrong way or inconsistently.
+
+My goal for this article is to demonstrate how to apply the Model-View- Controller pattern while developing a simple JavaScript component. The component is a kind of the HTML ListBox (ÒselectÓ HTML tag) control with an editable list of items: the user should be able to select and remove items and add new items into the list. The component will consist of three classes that corresponds to the parts of the Model-View-Controller design pattern.
+
+I hope, this article will be a good reading for you, but it would be much better if you consider to run the examples and adapt them to you needs. I believe you have everything to create and run JavaScript programs: brains, hands, text editor, and an Internet Browser (Google Chrome, for example).
+
+The Model-View-Controller pattern requires some description here. As you may know, the name of the pattern is based on the names of its main parts: Model, which stores an application data model; View, which renders Model for an appropriate representation; and Controller, which updates Model. Wikipedia defines typical components of the Model-View-Controller architecture as follows:
+
+Model - The domain-specific representation of the information on which the application operates. The model is another name for the domain layer. Domain logic adds meaning to raw data (e.g., calculating if today is the userÕs birthday, or the totals, taxes and shipping charges for shopping cart items).
+View - Renders the model into a form suitable for interaction, typically a user interface element. MVC is often seen in web applications, where the view is the HTML page and the code which gathers dynamic data for the page.
+Controller - Processes and responds to events, typically user actions, and invokes changes on the model and perhaps the view.
+The data of the component is just a list of items, in which one particular item can be selected and deleted. So, the model of the component is very simple - it consists of an array and a selected item index; and here it is:
+
+/**
+ * The Model. Model stores items and notifies
+ * observers about changes.
+ */
+function ListModel(items) {
+    this._items = items;
+    this._selectedIndex = -1;
+
+    this.itemAdded = new Event(this);
+    this.itemRemoved = new Event(this);
+    this.selectedIndexChanged = new Event(this);
+}
+
+ListModel.prototype = {
+    getItems : function () {
+        return [].concat(this._items);
+    },
+
+    addItem : function (item) {
+        this._items.push(item);
+        this.itemAdded.notify({ item : item });
+    },
+
+    removeItemAt : function (index) {
+        var item;
+
+        item = this._items[index];
+        this._items.splice(index, 1);
+        this.itemRemoved.notify({ item : item });
+        if (index === this._selectedIndex) {
+            this.setSelectedIndex(-1);
+        }
+    },
+
+    getSelectedIndex : function () {
+        return this._selectedIndex;
+    },
+
+    setSelectedIndex : function (index) {
+        var previousIndex;
+
+        previousIndex = this._selectedIndex;
+        this._selectedIndex = index;
+        this.selectedIndexChanged.notify({ previous : previousIndex });
+    }
+};
+
+Event is a simple class for implementing the Observer pattern:
+
+function Event(sender) {
+    this._sender = sender;
+    this._listeners = [];
+}
+
+Event.prototype = {
+    attach : function (listener) {
+        this._listeners.push(listener);
+    },
+    notify : function (args) {
+        var index;
+
+        for (index = 0; index < this._listeners.length; index += 1) {
+            this._listeners[index](this._sender, args);
+        }
+    }
+};
+
+The View class requires defining controls for interacting with. There are numerous alternatives of interface for the task, but I prefer a most simple one. I want my items to be in a Listbox control and two buttons below it: ÒplusÓ button for adding items and ÒminusÓ for removing selected item. The support for selecting an item is provided by ListboxÕs native functionality. A View class is tightly bound with a Controller class, which ÒÉ handles the input event from the user interface, often via a registered handler or callbackÓ (from wikipedia.org).
+
+Here are the View and Controller classes:
+
+/**
+ * The View. View presents the model and provides
+ * the UI events. The controller is attached to these
+ * events to handle the user interraction.
+ */
+function ListView(model, elements) {
+    this._model = model;
+    this._elements = elements;
+
+    this.listModified = new Event(this);
+    this.addButtonClicked = new Event(this);
+    this.delButtonClicked = new Event(this);
+
+    var _this = this;
+
+    // attach model listeners
+    this._model.itemAdded.attach(function () {
+        _this.rebuildList();
+    });
+    this._model.itemRemoved.attach(function () {
+        _this.rebuildList();
+    });
+
+    // attach listeners to HTML controls
+    this._elements.list.change(function (e) {
+        _this.listModified.notify({ index : e.target.selectedIndex });
+    });
+    this._elements.addButton.click(function () {
+        _this.addButtonClicked.notify();
+    });
+    this._elements.delButton.click(function () {
+        _this.delButtonClicked.notify();
+    });
+}
+
+ListView.prototype = {
+    show : function () {
+        this.rebuildList();
+    },
+
+    rebuildList : function () {
+        var list, items, key;
+
+        list = this._elements.list;
+        list.html('');
+
+        items = this._model.getItems();
+        for (key in items) {
+            if (items.hasOwnProperty(key)) {
+                list.append($('<option>' + items[key] + '</option>'));
+            }
+        }
+        this._model.setSelectedIndex(-1);
+    }
+};
+
+/**
+ * The Controller. Controller responds to user actions and
+ * invokes changes on the model.
+ */
+function ListController(model, view) {
+    this._model = model;
+    this._view = view;
+
+    var _this = this;
+
+    this._view.listModified.attach(function (sender, args) {
+        _this.updateSelected(args.index);
+    });
+
+    this._view.addButtonClicked.attach(function () {
+        _this.addItem();
+    });
+
+    this._view.delButtonClicked.attach(function () {
+        _this.delItem();
+    });
+}
+
+ListController.prototype = {
+    addItem : function () {
+        var item = window.prompt('Add item:', '');
+        if (item) {
+            this._model.addItem(item);
+        }
+    },
+
+    delItem : function () {
+        var index;
+
+        index = this._model.getSelectedIndex();
+        if (index !== -1) {
+            this._model.removeItemAt(this._model.getSelectedIndex());
+        }
+    },
+
+    updateSelected : function (index) {
+        this._model.setSelectedIndex(index);
+    }
+};
+
+
+And of course, the Model, View, and Controller classes should be instantiated. The sample, which you can below, uses the following code to instantiate and configure the classes:
+
+
+$(function () {
+    var model = new ListModel(['PHP', 'JavaScript']),
+        view = new ListView(model, {
+            'list' : $('#list'), 
+            'addButton' : $('#plusBtn'), 
+            'delButton' : $('#minusBtn')
+        }),
+        controller = new ListController(model, view);
+    
+    view.show();
+});?
+
+
+
+
+
+<select id="list" size="10"></select>
+<button id="plusBtn">  +  </button>
+<button id="minusBtn">  -  </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
