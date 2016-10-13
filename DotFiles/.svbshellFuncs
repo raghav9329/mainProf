@@ -137,7 +137,7 @@ repoLookInt()
 	else
 		echo NotWorking
 		echo eff is $f
-		$myLocalVar=""
+		myLocalVar=""
 	fi
    done
 	popd >> /dev/null
@@ -263,3 +263,196 @@ findBuildGradle()
 	 done
 
 }
+
+
+XXX__repoLookInt()
+{  
+	
+	# ***********************
+	# cus I want to get back
+	# to where I started 	
+	pushd /Volumes/dev/ >> /dev/null
+
+	# *********************
+	# godev is an alias call cd to /Volumes/dev
+	#godev
+
+	testSum=0
+	loopCount=0
+	componentCount=0
+	utCount=0
+	integrationDirCount=0
+	dummyVar=""
+	REPO_DIRECTORIES="/Volumes/dev/svb*"
+	themagicPlace="src/test"
+	activeDir=""
+   
+	for f in $REPO_DIRECTORIES
+     do
+		
+		if [ "$1" == "allRepos"  ] ; then
+			echo $f 
+		fi
+		#*****************************************
+		# loopCount++ cuz in a couple of places
+		# I wanted to see how many times I'd been
+		# through the loop and on to another dir
+		((loopCount++))
+	
+	# *************************************
+	# are we in one of the directories
+	# identified in $REPO_DIRECTORIES ???
+	if [ -d "$f"  ]	; then
+#debug	echo "************************************************00"
+		cd $f
+#debug	echo $loopCount
+
+		if [ -d "./src/test/"   ] ; then
+#debug			echo found it !!!!
+			cd ./src/test/
+#debug		pwd
+			#componentCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			testSum=$(( testSum + utCount ))
+
+#debug		echo having just run find in ...src/test/ what is the componentCount
+#debug		echo $componentCount
+				
+		fi
+		
+		
+	    #componentCount=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		#integrationDirCount=`find . -name integration -type d | wc -l`
+
+#debug	echo is there a Bash Integer Expression expected warning next 11 ??	
+		if [ "$utCount" -gt 0  ] ; then
+
+# for now...		echo "************************************************11"
+			cd $f
+			dirStirng=`pwd`
+			tabString=" \t \t "
+			echo -e $dirStirng  
+			echo Java Unit Test count: $utCount Test_Sum is: $testSum  
+#			echo Test count Summation is: $testSum
+			echo 
+			utCount=0
+			dirString=""
+		else
+			dummyVar=$dummyVar+1
+			
+		fi
+
+
+#debug	echo is there a Bash Integer Expression expected warning next 22 ??	
+		if [ "$integrationDirCount" -gt 0 ]  ; then
+			dirString=`pwd`
+			echo $dirString Unit Test Directories: $integrationDirCount
+			echo
+			integrationDirCount=0
+			dirString=""
+		else
+			dummyVar=$dummyVar+2
+	
+		fi
+
+		cd ~/
+	else
+		echo NotWorking
+		echo eff is $f
+		myLocalVar=""
+	fi
+   done
+	popd >> /dev/null
+	testSum=$((testSum - 250 - 43 - 347 - 31 - 3 ))
+	echo $testSum
+echo "************************************************"
+
+}
+
+
+yyy__repoLookInt()
+{  
+	# ***********************
+	# cus I want to get back
+	# to where I started 	
+	pushd /Volumes/dev/ >> /dev/null
+
+	# *********************
+	# godev is an alias call cd to /Volumes/dev
+	#godev
+
+	testSum=0
+	loopCount=0
+	componentCount=0
+	utCount=0
+	integrationDirCount=0
+	dummyVar=""
+	REPO_DIRECTORIES="/Volumes/dev/svb-services-sandbox/*"
+	themagicPlace="src/test"
+	activeDir=""
+  
+ 
+	for f in $REPO_DIRECTORIES
+     do
+	
+		if [ "$1" == "allRepos"  ] ; then
+			echo $f 
+		fi
+		#*****************************************
+		# loopCount++ cuz in a couple of places
+		# I wanted to see how many times I'd been
+		# through the loop and on to another dir
+		((loopCount++))
+	
+	# *************************************
+	# are we in one of the directories
+	# identified in $REPO_DIRECTORIES ???
+	if [ -d "$f"  ]	; then
+		cd $f
+
+		if [ -d "./src/test/"   ] ; then
+			cd ./src/test/
+			utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			testSum=$(( testSum + utCount ))
+
+		fi
+
+		if [ "$utCount" -gt 0  ] ; then
+			cd $f
+			dirStirng=`pwd`
+			tabString=" \t \t "
+			echo -e $dirStirng  
+			echo Java Unit Test count: $utCount Test_Sum is: $testSum  
+			echo 
+			utCount=0
+			dirString=""
+		else
+			dummyVar=$dummyVar+1
+			
+		fi
+
+		if [ "$integrationDirCount" -gt 0 ]  ; then
+			dirString=`pwd`
+			echo $dirString Unit Test Directories: $integrationDirCount
+			echo
+			integrationDirCount=0
+			dirString=""
+		else
+			dummyVar=$dummyVar+2
+	
+		fi
+
+		cd ~/
+	else
+		echo NotWorking
+		echo eff is $f
+		myLocalVar=""
+	fi
+   done
+	popd >> /dev/null
+echo "************************************************"
+
+}
+
+
+#  end of file 
