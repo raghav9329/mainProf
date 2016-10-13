@@ -72,91 +72,76 @@ echo !! DONE  !!
 }
 
 repoLookInt()
-{
-godev
+{  
+	
+	# ***********************
+	# cus I want to get back
+	# to where I started 	
+	pushd /Volumes/dev/ >> /dev/null
+
+	# *********************
+	# godev is an alias call cd to /Volumes/dev
+	#godev
+
 	loopCount=0
 	componentCount=""
+	integrationDirCount=""
 	dummyVar=""
-	REPO_DIRECTORIES="/Volumes/dev/svb-*"
-	VARSVBWP="/Volumes/dev/svb-web-payments"
-	VARSVBDSHBRD="/Volumes/dev/svb-web-dashboard"
-	VARSVBTOOLS="/Volumes/dev/tools"
-	VARSVBJUNKDIR1="/Volumes/dev/svb-xx_web-entitlements_justIgnoreThis"
-echo $BASHRC_VERSION
-   for f in $REPO_DIRECTORIES
+	REPO_DIRECTORIES="/Volumes/dev/svb*"
+   
+	for f in $REPO_DIRECTORIES
      do
+		
+		if [ "$1" == "allRepos"  ] ; then
+			echo $f 
+		fi
+		#*****************************************
+		# loopCount++ cuz in a couple of places
+		# I wanted to see how many times I'd been
+		# through the loop and on to another dir
 		((loopCount++))
+	
+	# *************************************
+	# are we in one of the directories
+	# identified in $REPO_DIRECTORIES ???
 	if [ -d "$f"  ]	; then
 		
-		#echo "************************************************"
 		cd $f
 		
-		
-#case $f in
-		
-#$VARSVBWP)
-		#	pwd 
-		#	echo Count is : $loopCount
-		#	;;	
-		#$VARSVBTOOLS)
-		#	pwd
-		#	echo Count is : $loopCount
-		#	;;
-		#$VARSVBDSHBRD)
-		#	pwd
-		#	echo Count is : $loopCount
-		#	;;
-		#$VARSVBJUNKDIR1)
-		#	pwd
-		#	echo Count is : $loopCount
-		#	;;
-
-		
-#*)
-		#echo "************************************************"
-
-		#pwd 
-		#echo Count is : $loopCount
-
-	   	#myLocalEnvar=`find . -type d -name 'integration' `
-		#echo ....
-		
-		#echo is the next line valid hummmmm .....
 	 	componentCount=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		integrationDirCount=`find . -name integration -type d | wc -l`
 
 		if [ "$componentCount" -lt "1"  ] ; then
-			#echo Value ===  Zero 	
 			dummyVar=$dummyVar+1
 		
 		else
 		echo "************************************************"
-			pwd
-			echo $componentCount
+			dirStirng=`pwd`
+			echo $dirStirng Java Component Test count: $componentCount
 			componentCount=""
+			dirString=""
 		fi
 
-		#pwd
-		#echo $componentCount	
-		#if [ $componentCount -n ]; then
-	#		pwd
-		#	echo $componentCount
-		#	componentCount=""
-		#fi
+		if [ "$integrationDirCount" -lt "1" ]  ; then
+			dummyVar=$dummyVar+2
 
-		#echo .....
+		else
+			dirString=`pwd`
+			echo $dirString Integration Directories: $integrationDirCount
+			echo
+			integrationDirCount=""
+			dirString=""
+		fi
+
 		cd ~/
-		#echo 	
-	
-#esac
-	
 	else
 		echo NotWorking
+		echo eff is $f
 		$myLocalVar=""
 	fi
-      done
+   done
+	popd >> /dev/null
 echo "************************************************"
-echo !! DONE  !!
-
 }
 
 

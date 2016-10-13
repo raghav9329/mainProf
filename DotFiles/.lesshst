@@ -1,7 +1,5 @@
 .less-history-file:
 .search
-"asdf;kjasd;flkj
-".git
 ".git 
 ".git
 "version
@@ -100,4 +98,6 @@
 "print
 "print $
 "print
+"integration
+"integra
 .shell
