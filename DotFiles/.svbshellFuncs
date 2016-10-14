@@ -371,7 +371,8 @@ echo "************************************************"
 
 
 yyy__repoLookInt()
-{  
+{ 
+	echo 
 	# ***********************
 	# cus I want to get back
 	# to where I started 	
@@ -422,7 +423,8 @@ yyy__repoLookInt()
 			dirStirng=`pwd`
 			tabString=" \t \t "
 			echo -e $dirStirng  
-			echo Java Unit Test count: $utCount Test_Sum is: $testSum  
+			#echo Java Unit Test count: $utCount Test_Sum is: $testSum  
+			echo Java Unit Test count: $utCount 
 			echo 
 			utCount=0
 			dirString=""
@@ -443,10 +445,10 @@ yyy__repoLookInt()
 		fi
 
 		cd ~/
-	else
-		echo NotWorking
-		echo eff is $f
-		myLocalVar=""
+	#else
+	#	echo NotWorking
+	#	echo eff is $f
+	#	myLocalVar=""
 	fi
    done
 	popd >> /dev/null

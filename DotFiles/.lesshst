@@ -1,14 +1,5 @@
 .less-history-file:
 .search
-".git 
-".git
-"version
-"Books
-"dot files
-"teale
-"-f
-"-A
-"color
 "-i
 "dry
 "protractor_qa
@@ -100,4 +91,13 @@
 "print
 "integration
 "integra
+"src
+"limit
+"depth
+"1G
+"depth
+"recursive
+"svb-
+"asdf;lkja;lsdkfj
+".svb-
 .shell

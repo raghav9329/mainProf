@@ -8,10 +8,10 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0/#\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+~MSle0~/myLocalVar
 
 # Last Substitute Search Pattern:
-~MSle0~&intDirCount
+~MSle0&intDirCount
 
 # Last Substitute String:
 $integrationDirCount
@@ -20,9 +20,10 @@ $integrationDirCount
 :q
 :wq
 :w
-:80,135s/intDirCount/integrationDirCount/g
 :set nu
 :set nonu
+:fw
+:80,135s/intDirCount/integrationDirCount/g
 :tabsize
 :set tabsize
 :q!
@@ -36,9 +37,11 @@ $integrationDirCount
 :p
 :e payeeForm.test.js
 :1,$s/xdes/des/g
-:1,$s/desc/xdesc/g
 
 # Search String History (newest to oldest):
+?/myLocalVar
+? \<echo\>
+?/activeDir
 ? intDirCount
 ?/80,
 ? #\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
@@ -56,9 +59,6 @@ $integrationDirCount
 ?/update
 ?/source
 ?/lsdot
-?/unit
-?/git
-?/vagrant
 
 # Expression History (newest to oldest):
 
@@ -68,51 +68,74 @@ $integrationDirCount
 
 # Registers:
 "0	LINE	0
-				dirString=""
-""1	LINE	0
-	exit
+				echo Java Unit Test count: $utCount Test_Sum is: $testSum  
+"1	LINE	0
+		echo debug_inside for f in repoDirs...
 "2	LINE	0
-		
+	echo debug_Variables traversed....
 "3	LINE	0
-		esac
+	echo debug_Starting....	
 "4	LINE	0
 	
 "5	LINE	0
-			;;
+	#debug	echo is there a Bash Integer Expression expected warning next 22 ??	
 "6	LINE	0
-		*)
+			
 "7	LINE	0
-	
+			
 "8	LINE	0
-			;;	
+	#			echo Test count Summation is: $testSum
 "9	LINE	0
-			exeMode=$1
+	
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
-"-	CHAR	0
-	g
+""-	CHAR	0
+	Test_Sum is: $testSum  
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  1  0  /Volumes/dev/svb-service-entitlements/sonar-project.properties
-'1  3  0  /Volumes/dev/svb-web-payments/sonar-project.properties
-'2  1  0  /Volumes/dev/svb-web-payments/sonar-project.properties
-'3  145  0  ~/.svbshellFuncs
-'4  91  15  ~/.svbshellFuncs
-'5  111  3  ~/.svbshellFuncs
-'6  140  18  ~/.svbshellFuncs
-'7  111  44  ~/.svbshellFuncs
-'8  82  4  ~/.svbshellFuncs
-'9  13  18  ~/.svbrc
+'0  61  6  /Volumes/dev/svb-service-client/src/test/java/com/svb/murano/client/dao/ClientDAOTest.java
+'1  388  9  ~/.svbshellFuncs
+'2  318  15  ~/.svbshellFuncs
+'3  1  0  ~/Mark/.gitig
+'4  145  0  ~/.svbshellFuncs
+'5  1  0  /Volumes/dev/svb-service-entitlements/sonar-project.properties
+'6  3  0  /Volumes/dev/svb-web-payments/sonar-project.properties
+'7  1  0  /Volumes/dev/svb-web-payments/sonar-project.properties
+'8  91  15  ~/.svbshellFuncs
+'9  111  3  ~/.svbshellFuncs
 
 # Jumplist (newest first):
+-'  61  6  /Volumes/dev/svb-service-client/src/test/java/com/svb/murano/client/dao/ClientDAOTest.java
+-'  1  0  /Volumes/dev/svb-service-client/src/test/java/com/svb/murano/client/dao/ClientDAOTest.java
+-'  388  9  ~/.svbshellFuncs
+-'  362  3  ~/.svbshellFuncs
+-'  140  3  ~/.svbshellFuncs
+-'  451  3  ~/.svbshellFuncs
+-'  380  0  ~/.svbshellFuncs
+-'  335  36  ~/.svbshellFuncs
+-'  315  0  ~/.svbshellFuncs
+-'  316  2  ~/.svbshellFuncs
+-'  282  1  ~/.svbshellFuncs
+-'  1  0  ~/.svbshellFuncs
+-'  318  15  ~/.svbshellFuncs
+-'  328  26  ~/.svbshellFuncs
+-'  330  17  ~/.svbshellFuncs
+-'  327  11  ~/.svbshellFuncs
+-'  322  2  ~/.svbshellFuncs
+-'  288  1  ~/.svbshellFuncs
+-'  338  9  ~/.svbshellFuncs
+-'  320  3  ~/.svbshellFuncs
+-'  74  0  ~/.svbshellFuncs
+-'  265  0  ~/.svbshellFuncs
+-'  461  0  ~/.svbshellFuncs
+-'  1  0  ~/Mark/.gitig
+-'  145  0  ~/.svbshellFuncs
 -'  1  0  /Volumes/dev/svb-service-entitlements/sonar-project.properties
 -'  3  0  /Volumes/dev/svb-web-payments/sonar-project.properties
 -'  1  0  /Volumes/dev/svb-web-payments/sonar-project.properties
--'  145  0  ~/.svbshellFuncs
--'  265  0  ~/.svbshellFuncs
 -'  75  7  ~/.svbshellFuncs
 -'  135  16  ~/.svbshellFuncs
 -'  150  0  ~/.svbshellFuncs
@@ -122,12 +145,10 @@ $integrationDirCount
 -'  111  1  ~/.svbshellFuncs
 -'  87  5  ~/.svbshellFuncs
 -'  91  60  ~/.svbshellFuncs
--'  1  0  ~/.svbshellFuncs
 -'  102  16  ~/.svbshellFuncs
 -'  110  65  ~/.svbshellFuncs
 -'  26  0  ~/.svbshellFuncs
 -'  82  4  ~/.svbshellFuncs
--'  140  18  ~/.svbshellFuncs
 -'  8  0  ~/.svbshellFuncs
 -'  19  45  ~/.svbshellFuncs
 -'  18  46  ~/.svbshellFuncs
@@ -182,32 +203,135 @@ $integrationDirCount
 -'  187  0  /Volumes/MACTHUMB1/XBackup_Called.sh
 -'  83  0  /Volumes/MACTHUMB1/XBackup_Called.sh
 -'  1  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  133  15  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  32  20  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  14  60  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  69  6  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  32891  0  /private/tmp/scriptMacThumb.out
--'  1  0  /private/tmp/scriptMacThumb.out
--'  41  40  ~/.svbrc
--'  70  0  ~/.atkmhrc
--'  116  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  62  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  48  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  41  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  34  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  27  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  28  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  1  0  ~/tmp/test
--'  4  0  ~/SoapUI-Tutorials/popular-apis/Twitter-soapui-project.xml
--'  1  0  ~/SoapUI-Tutorials/popular-apis/Twitter-soapui-project.xml
--'  229  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  141  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  68  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  1  0  /Volumes/MACTHUMB1/XBackup_Called.sh
--'  1  0  /Volumes/dev/svb-services-sandbox/mur-java-lib-logger/src/test/java/com/svb/murano/common/logger/BaseLogSetup.java
--'  54  0  /Volumes/dev/svb-services-sandbox/mur-java-lib-logger/src/test/java/com/svb/murano/common/logger/LogUtilsTest.java
+-'  388  9  ~/.svbshellFuncs
+-'  362  3  ~/.svbshellFuncs
+-'  140  3  ~/.svbshellFuncs
+-'  451  3  ~/.svbshellFuncs
 
 # History of marks within files (newest to oldest):
+
+> /Volumes/dev/svb-service-client/src/test/java/com/svb/murano/client/dao/ClientDAOTest.java
+	"	61	6
+
+> ~/.svbshellFuncs
+	"	388	9
+	^	427	39
+	.	427	38
+	+	334	8
+	+	333	20
+	+	334	22
+	+	328	27
+	+	347	35
+	+	328	27
+	+	347	33
+	+	328	30
+	+	347	32
+	+	328	27
+	+	342	3
+	+	341	0
+	+	329	0
+	+	329	0
+	+	328	27
+	+	355	1
+	+	354	0
+	+	348	0
+	+	347	32
+	+	351	23
+	+	349	27
+	+	369	0
+	+	280	9
+	+	316	38
+	+	318	15
+	+	316	25
+	+	316	47
+	+	316	14
+	+	318	13
+	+	334	34
+	+	335	7
+	+	335	108
+	+	318	0
+	+	319	0
+	+	317	0
+	+	319	0
+	+	337	7
+	+	334	11
+	+	316	0
+	+	335	66
+	+	335	68
+	+	316	0
+	+	335	71
+	+	335	67
+	+	337	0
+	+	335	96
+	+	283	9
+	+	315	0
+	+	315	0
+	+	314	3
+	+	315	9
+	+	316	40
+	+	316	25
+	+	328	9
+	+	335	61
+	+	338	3
+	+	316	0
+	+	366	44
+	+	367	13
+	+	460	0
+	+	460	14
+	+	373	2
+	+	391	53
+	+	460	0
+	+	455	0
+	+	391	52
+	+	412	0
+	+	413	0
+	+	415	0
+	+	416	0
+	+	419	0
+	+	420	0
+	+	421	0
+	+	422	0
+	+	428	0
+	+	420	0
+	+	436	0
+	+	455	54
+	+	368	54
+	+	455	29
+	+	376	22
+	+	395	29
+	+	398	39
+	+	395	33
+	+	391	52
+	+	376	0
+	+	395	0
+	+	398	0
+	+	451	2
+	+	362	2
+	+	140	2
+	+	455	28
+	+	448	1
+	+	449	1
+	+	450	1
+	+	451	1
+	+	375	4
+	+	427	0
+	+	426	3
+	+	427	38
+
+> ~/Mark/.gitignore
+	"	5	0
+	^	5	0
+	.	4	9
+	+	9	0
+	+	11	8
+	+	4	0
+	+	6	17
+	+	7	17
+	+	8	18
+	+	4	9
+
+> ~/Mark/.gitig
+	"	1	0
 
 > /Volumes/dev/svb-service-entitlements/sonar-project.properties
 	"	1	0
@@ -217,110 +341,6 @@ $integrationDirCount
 
 > /Volumes/dev/svb-web-payments/sonar-project.properties
 	"	3	0
-
-> ~/.svbshellFuncs
-	"	145	0
-	.	145	0
-	+	136	0
-	+	137	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	111	0
-	+	109	0
-	+	110	0
-	+	111	0
-	+	110	0
-	+	137	0
-	+	136	0
-	+	145	0
-	+	137	0
-	+	136	0
-	+	136	0
-	+	91	0
-	+	90	32
-	+	139	15
-	+	90	34
-	+	88	14
-	+	112	55
-	+	121	19
-	+	123	16
-	+	136	0
-	+	134	4
-	+	125	30
-	+	126	22
-	+	132	7
-	+	130	0
-	+	132	0
-	+	132	0
-	+	123	0
-	+	121	0
-	+	136	0
-	+	129	5
-	+	120	29
-	+	130	32
-	+	120	12
-	+	131	6
-	+	116	0
-	+	81	52
-	+	91	3
-	+	92	0
-	+	142	3
-	+	82	1
-	+	85	0
-	+	82	23
-	+	81	0
-	+	83	43
-	+	101	41
-	+	98	23
-	+	106	37
-	+	88	0
-	+	119	17
-	+	120	18
-	+	129	2
-	+	130	8
-	+	135	0
-	+	136	13
-	+	120	22
-	+	122	2
-	+	136	0
-	+	129	17
-	+	133	0
-	+	94	8
-	+	75	4
-	+	81	1
-	+	75	9
-	+	143	4
-	+	81	0
-	+	80	0
-	+	79	21
-	+	77	4
-	+	77	2
-	+	77	11
-	+	96	1
-	+	95	28
-	+	97	3
-	+	96	2
-	+	95	1
-	+	96	1
-	+	97	2
-	+	96	1
-	+	95	1
-	+	97	3
-	+	95	19
-	+	77	1
-	+	77	3
-	+	96	35
-	+	76	0
-	+	77	0
-	+	95	9
-	+	84	1
-	+	80	32
-	+	143	17
-	+	96	10
-	+	95	23
-	+	144	0
-	+	145	0
 
 > ~/tmp/test
 	"	1	0
@@ -551,13 +571,6 @@ $integrationDirCount
 	+	13	18
 	e	71	76
 	k	93	6
-
-> ~/Mark/.gitignore
-	"	7	8
-	^	7	23
-	.	7	8
-	+	5	0
-	+	7	8
 
 > ~/.atkmhrc
 	"	68	6
@@ -1016,10 +1029,4 @@ $integrationDirCount
 	"	1	0
 
 > /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBACancelIntegrationTest.java
-	"	1	0
-
-> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBADeviceInfoIntegrationTest.java
-	"	1	0
-
-> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/ooba/integration/OOBAInitIntegrationTest.java
 	"	1	0
