@@ -25,9 +25,9 @@ fi
 
 whatrepoBranch()
 {
+ 	pushd /Volumes/dev/ >> /dev/null
 	REPO_DIRECTORIES="/Volumes/dev/svb-*"
 
-#echo BASHRC_VERSION
    for f in $REPO_DIRECTORIES
      do
 	if [ -d "$f"  ]	
@@ -41,20 +41,19 @@ whatrepoBranch()
               echo NotWorking
 	fi
       done
-#echo BASHRC_VERSION.......
 echo !! DONE  !!
 
-
+	popd >> /dev/null
 }
 
 
 updateRepos()
 {
+ 	pushd /Volumes/dev/ >> /dev/null
 	REPO_DIRECTORIES="/Volumes/dev/svb-*"
-echo BASHRC_VERSION
    for f in $REPO_DIRECTORIES
      do
-	if [ -d "$f"  ]	
+		if [ -d "$f"  ]	
           then
               echo "************************************************"
               cd $f
@@ -62,18 +61,22 @@ echo BASHRC_VERSION
 	      git pull
 	      cd ~/
               echo 	
-	else
+		else
               echo NotWorking
-	fi
+			  echo something about $f
+			  echo not resolving in the if -d analysis
+		fi
       done
-echo BASHRC_VERSION.......
-echo !! DONE  !!
+	echo !! DONE  !!
+	popd >> /dev/null
 
 }
 
-repoLookInt()
-{  
-	
+integrationCount()
+{ #repoLookInt()
+  
+	echo Repository Integration test counts and...
+	echo Repository Integration directory count	
 	# ***********************
 	# cus I want to get back
 	# to where I started 	
@@ -265,17 +268,13 @@ findBuildGradle()
 }
 
 
-XXX__repoLookInt()
-{  
-	
+unitCount()
+{	#XXX__repoLookInt()
+	echo	
 	# ***********************
 	# cus I want to get back
 	# to where I started 	
 	pushd /Volumes/dev/ >> /dev/null
-
-	# *********************
-	# godev is an alias call cd to /Volumes/dev
-	#godev
 
 	testSum=0
 	loopCount=0
@@ -331,8 +330,8 @@ XXX__repoLookInt()
 			cd $f
 			dirStirng=`pwd`
 			tabString=" \t \t "
-			echo -e $dirStirng  
-			echo Java Unit Test count: $utCount Test_Sum is: $testSum  
+			echo -e $dirStirng" :"$utCount
+			#echo "                   Test_Sum is: $testSum"
 #			echo Test count Summation is: $testSum
 			echo 
 			utCount=0
@@ -363,24 +362,22 @@ XXX__repoLookInt()
 	fi
    done
 	popd >> /dev/null
-	testSum=$((testSum - 250 - 43 - 347 - 31 - 3 ))
-	echo $testSum
+#	testSum=$((testSum - 250 - 43 - 347 - 31 - 3 ))
+#	echo $testSum
 echo "************************************************"
 
 }
 
 
-yyy__repoLookInt()
-{ 
+sandboxCount()
+{	#yyy__repoLookInt()
+	
 	echo 
 	# ***********************
 	# cus I want to get back
 	# to where I started 	
 	pushd /Volumes/dev/ >> /dev/null
 
-	# *********************
-	# godev is an alias call cd to /Volumes/dev
-	#godev
 
 	testSum=0
 	loopCount=0
@@ -399,11 +396,12 @@ yyy__repoLookInt()
 		if [ "$1" == "allRepos"  ] ; then
 			echo $f 
 		fi
-		#*****************************************
-		# loopCount++ cuz in a couple of places
-		# I wanted to see how many times I'd been
-		# through the loop and on to another dir
-		((loopCount++))
+	
+	#*****************************************
+	# loopCount++ cuz in a couple of places
+	# I wanted to see how many times I'd been
+	# through the loop and on to another dir
+	((loopCount++))
 	
 	# *************************************
 	# are we in one of the directories
@@ -433,6 +431,8 @@ yyy__repoLookInt()
 			
 		fi
 
+		# likely to remove the intDirCount secion
+		# sandox doesn't have any integration directories
 		if [ "$integrationDirCount" -gt 0 ]  ; then
 			dirString=`pwd`
 			echo $dirString Unit Test Directories: $integrationDirCount
@@ -441,10 +441,9 @@ yyy__repoLookInt()
 			dirString=""
 		else
 			dummyVar=$dummyVar+2
-	
 		fi
 
-		cd ~/
+		#cd ~/  don't think I needed to do thie every time
 	#else
 	#	echo NotWorking
 	#	echo eff is $f

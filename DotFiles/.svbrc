@@ -8,6 +8,7 @@ alias runprotonqa='npm run protractor -- --params.env=qa'
 alias protractqa='npm run protractor -- --params.env=qa'
 alias runmock='npm run mock-protractor'
 alias datestr=' date +%m-%d-%Y_%H:%M:%S'
+alias gb='git branch'
 alias gs='git status'
 alias ga='git add'
 alias gp='git push'
@@ -23,10 +24,11 @@ alias catfunc='cat /Users/maatkins/.svbshellFuncs'
 alias lessfunc='less /Users/maatkins/.svbshellFuncs'
 alias funcal='catfunc | grep -i $1'
 alias vifuncs='vi /Users/maatkins/.svbshellFuncs'
+alias whatCounts='funcal "Count()"'
 alias shelltestCounts='unitTestCountPayments; unitTestCountCoreUi;integrationTestCountMock;integrationTestCountE2E; integrationTestCountAll '
-#   “for what evvah"  " '
 #######################
 #
+#   “for what evvah"  " '
 #
 ######################
 alias genGitDiskImage='tree -La 2 > ~/Mark/myDiskStructure'
@@ -35,17 +37,21 @@ alias getAutoTestRpt='cp /Volumes/dev/svb-web-payments/reports/integration/test-
 ########################
 # 
 # Go cd to directories
-# 
+# go_2_directories
 #######################
 alias godev='cd /Volumes/dev/'
 alias gosvb='cd /Volumes/dev/svb-web-payments'
-alias goservcpay='cd /Volumes/dev/service-payments'
-alias goservcentitle='cd /Volumes/dev/svb-service-entitlements'
 alias goschedpay='cd /Volumes/dev/svb-scheduler-payments'
-alias goservacct='cd /Volumes/dev/svb-service-accounts'
-alias goservcsrf='cd /Volumes/dev/svb-service-csrf'
+alias goservaccts='cd /Volumes/dev/svb-service-accounts'
+alias goservbank='cd /Volumes/dev/svb-service-bankinfo'
 alias goservclient='cd /Volumes/dev/svb-service-client'
-alias goservcooba='cd /Volumes/dev/service-ooba'
+alias goservcsrf='cd /Volumes/dev/svb-service-csrf'
+alias goserventitle='cd /Volumes/dev/svb-service-entitlements'
+alias goservooba='cd /Volumes/dev/svb-service-ooba'
+alias goservpay='cd /Volumes/dev/svb-service-payments'
+alias goservsand='cd /Volumes/dev/svb-services-sandbox'
+alias gowebcoreui='cd /Volumes/dev/svb-web-core-ui'
+alias listgo2repos='grep -A 14 go_2_directories ~/.svbrc| head -15'
 
 alias gomacthumb='cd /Volumes/MACTHUMB1/'
 alias goautoReports='cd /Volumes/dev/svb-web-payments/reports/integration'
