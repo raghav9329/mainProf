@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/go
+~Msle0~/\<sum\>
 
 # Last Substitute Search Pattern:
 ~MSle0&intDirCount
@@ -17,11 +17,15 @@
 $integrationDirCount
 
 # Command Line History (newest to oldest):
-:wq
-:w
-::wq
 :q
 :q!
+:wq
+:w
+:.,.+5
+:.,.+1 
+:. 
+:W
+::wq
 :e ./Backup_Code.sh
 :set nu
 :set nonu
@@ -33,12 +37,10 @@ $integrationDirCount
 :1,$s/'/,g
 :n
 :aq
-:N
-:e
-:bp
-:p
 
 # Search String History (newest to oldest):
+? \<sum\>
+?/vifuncs
 ?/go
 ?/ga
 ?/pushd
@@ -57,8 +59,6 @@ $integrationDirCount
 ?/gs
 ?/grepal
 ?/find
-?/findhow
-?/update
 
 # Expression History (newest to oldest):
 
@@ -68,25 +68,25 @@ $integrationDirCount
 
 # Registers:
 "0	LINE	0
-	yyy__repoLookInt()
+				echo the sum is: $sum
 ""1	LINE	0
-		
+			echo finished array by for loop
 "2	LINE	0
-	{ 
+	#	done
 "3	LINE	0
-		# *********************
+	#	do
 "4	LINE	0
-		# godev is an alias call cd to /Volumes/dev
+	#	for i in $directories
 "5	LINE	0
-		#godev
+	#	for X in $directories
 "6	LINE	0
-	
+				echo something
 "7	LINE	0
-		#godev
+			do
 "8	LINE	0
-		# godev is an alias call cd to /Volumes/dev
+	
 "9	LINE	0
-		# *********************
+	
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
 "-	CHAR	0
@@ -96,24 +96,43 @@ $integrationDirCount
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  239  0  ~/.svbshellFuncs
-'1  53  63  ~/.svbrc
-'2  64  0  ~/.svbrc
-'3  54  0  /Volumes/dev/svb-web-core-ui/src/modules/navbar/navbarDirective.js
-'4  1  0  /Volumes/dev/svb-web-core-ui/src/modules/navbar/navbarModule.js
-'5  166  0  ~/.svbshellFuncs
-'6  75  11  ~/.svbshellFuncs
-'7  79  43  ~/.svbshellFuncs
-'8  11  20  ~/.svbrc
-'9  273  4  ~/.svbshellFuncs
+'0  1  0  ~/.svbshellFuncs
+'1  519  0  ~/.svbshellFuncs
+'2  476  8  ~/.svbshellFuncs
+'3  484  11  ~/.svbshellFuncs
+'4  426  0  ~/.svbshellFuncs
+'5  26  12  ~/.svbrc
+'6  11  32  /private/etc/hosts
+'7  12  32  /private/etc/hosts
+'8  239  0  ~/.svbshellFuncs
+'9  53  63  ~/.svbrc
 
 # Jumplist (newest first):
--'  239  0  ~/.svbshellFuncs
 -'  1  0  ~/.svbshellFuncs
+-'  519  0  ~/.svbshellFuncs
+-'  483  1  ~/.svbshellFuncs
+-'  512  9  ~/.svbshellFuncs
+-'  511  0  ~/.svbshellFuncs
+-'  496  7  ~/.svbshellFuncs
+-'  474  3  ~/.svbshellFuncs
+-'  498  8  ~/.svbshellFuncs
+-'  469  0  ~/.svbshellFuncs
+-'  480  0  ~/.svbshellFuncs
+-'  476  8  ~/.svbshellFuncs
+-'  484  11  ~/.svbshellFuncs
+-'  379  0  ~/.svbshellFuncs
+-'  426  0  ~/.svbshellFuncs
+-'  526  0  ~/.svbshellFuncs
+-'  462  14  ~/.svbshellFuncs
+-'  26  12  ~/.svbrc
+-'  1  0  ~/.svbrc
+-'  11  32  /private/etc/hosts
+-'  1  0  /private/etc/hosts
+-'  12  32  /private/etc/hosts
+-'  239  0  ~/.svbshellFuncs
 -'  323  54  ~/.svbshellFuncs
 -'  434  42  ~/.svbshellFuncs
 -'  53  63  ~/.svbrc
--'  1  0  ~/.svbrc
 -'  64  0  ~/.svbrc
 -'  51  45  ~/.svbrc
 -'  2  0  ~/.svbrc
@@ -131,7 +150,6 @@ $integrationDirCount
 -'  333  24  ~/.svbshellFuncs
 -'  335  49  ~/.svbshellFuncs
 -'  46  17  ~/.svbshellFuncs
--'  459  0  ~/.svbshellFuncs
 -'  27  0  ~/.svbshellFuncs
 -'  370  0  ~/.svbshellFuncs
 -'  43  9  ~/.svbshellFuncs
@@ -174,7 +192,7 @@ $integrationDirCount
 -'  337  9  ~/.svbshellFuncs
 -'  319  3  ~/.svbshellFuncs
 -'  268  0  ~/.svbshellFuncs
--'  460  0  ~/.svbshellFuncs
+-'  527  0  ~/.svbshellFuncs
 -'  1  0  ~/Mark/.gitig
 -'  148  0  ~/.svbshellFuncs
 -'  1  0  /Volumes/dev/svb-service-entitlements/sonar-project.properties
@@ -187,137 +205,118 @@ $integrationDirCount
 -'  140  0  ~/.svbshellFuncs
 -'  114  1  ~/.svbshellFuncs
 -'  90  5  ~/.svbshellFuncs
--'  94  60  ~/.svbshellFuncs
--'  105  16  ~/.svbshellFuncs
--'  113  65  ~/.svbshellFuncs
--'  26  0  ~/.svbshellFuncs
--'  85  4  ~/.svbshellFuncs
--'  8  0  ~/.svbshellFuncs
--'  19  45  ~/.svbshellFuncs
--'  18  46  ~/.svbshellFuncs
--'  11  46  ~/.svbshellFuncs
--'  10  47  ~/.svbshellFuncs
--'  14  18  ~/.svbrc
--'  13  17  ~/.svbrc
--'  2  0  ~/Mark/.gitignore
--'  69  0  ~/.svbshellFuncs
--'  64  1  ~/.svbshellFuncs
--'  33  0  ~/.svbshellFuncs
--'  26  48  ~/.svbrc
--'  24  14  ~/.svbrc
 
 # History of marks within files (newest to oldest):
 
 > ~/.svbshellFuncs
-	"	239	0
-	^	446	52
-	.	446	51
-	+	413	0
-	+	414	0
-	+	417	0
-	+	418	0
-	+	419	0
-	+	420	0
-	+	426	0
-	+	418	0
-	+	436	0
-	+	454	54
-	+	367	54
-	+	454	29
-	+	376	22
-	+	392	29
-	+	395	39
-	+	392	33
-	+	388	52
-	+	376	0
-	+	392	0
-	+	395	0
-	+	450	2
-	+	361	2
-	+	143	2
-	+	454	28
-	+	447	1
-	+	448	1
-	+	449	1
-	+	450	1
-	+	374	4
-	+	425	0
-	+	424	3
-	+	425	38
-	+	374	0
-	+	1	0
-	+	27	0
-	+	28	1
-	+	46	17
-	+	335	17
-	+	336	4
-	+	335	49
-	+	335	49
-	+	333	19
-	+	333	42
-	+	335	3
-	+	333	38
-	+	333	42
-	+	333	46
-	+	335	3
-	+	336	3
-	+	333	0
-	+	333	3
-	+	333	0
-	+	335	0
-	+	334	0
-	+	365	0
-	+	366	0
-	+	273	4
-	+	76	0
-	+	75	10
-	+	76	0
-	+	77	0
-	+	76	1
-	+	79	43
-	+	75	11
-	+	70	0
-	+	54	0
-	+	56	1
-	+	64	1
-	+	68	1
-	+	67	44
-	+	31	0
-	+	44	0
-	+	52	0
-	+	71	0
-	+	70	0
-	+	75	11
-	+	272	1
-	+	271	8
-	+	273	0
-	+	279	0
-	+	381	0
-	+	373	2
-	+	372	11
-	+	374	1
-	+	375	0
-	+	404	1
-	+	403	1
-	+	402	1
-	+	401	1
-	+	399	1
-	+	400	0
-	+	434	91
-	+	446	2
-	+	434	0
-	+	434	43
-	+	434	0
-	+	435	1
-	+	433	0
-	+	444	0
-	+	446	51
+	"	1	0
+	^	523	1
+	.	519	0
+	+	514	16
+	+	510	13
+	+	498	12
+	+	462	14
+	+	469	20
+	+	499	9
+	+	500	9
+	+	501	8
+	+	502	9
+	+	503	9
+	+	504	9
+	+	499	10
+	+	500	10
+	+	501	9
+	+	502	10
+	+	503	10
+	+	504	10
+	+	503	10
+	+	502	10
+	+	500	10
+	+	499	24
+	+	500	24
+	+	501	24
+	+	502	24
+	+	503	24
+	+	504	43
+	+	503	43
+	+	502	43
+	+	501	43
+	+	500	43
+	+	499	43
+	+	498	44
+	+	499	24
+	+	500	24
+	+	501	24
+	+	502	24
+	+	503	24
+	+	504	24
+	+	498	44
+	+	499	43
+	+	500	43
+	+	501	43
+	+	502	43
+	+	503	43
+	+	504	43
+	+	469	20
+	+	462	14
+	+	510	27
+	+	511	10
+	+	508	8
+	+	515	0
+	+	511	30
+	+	514	0
+	+	511	32
+	+	492	1
+	+	493	1
+	+	494	1
+	+	495	1
+	+	496	1
+	+	497	1
+	+	498	1
+	+	499	1
+	+	500	1
+	+	501	1
+	+	502	1
+	+	503	1
+	+	504	1
+	+	505	1
+	+	506	1
+	+	489	1
+	+	490	1
+	+	491	1
+	+	509	6
+	+	512	34
+	+	513	23
+	+	521	15
+	+	523	0
+	+	519	0
+	+	512	37
+	+	522	5
+	+	512	14
+	+	516	2
+	+	517	2
+	+	513	1
+	+	512	14
+	+	457	8
+	+	480	7
+	+	482	0
+	+	483	0
+	+	482	7
+	+	482	0
+	+	483	7
+	+	481	7
+	+	492	0
+	+	508	0
+	+	520	1
+	+	521	0
+	+	522	0
+	+	523	0
+	+	519	0
 
 > ~/.svbrc
-	"	27	34
+	"	26	12
 	^	27	35
-	.	27	34
-	+	20	72
+	.	26	12
 	+	31	3
 	+	20	96
 	+	22	80
@@ -417,8 +416,17 @@ $integrationDirCount
 	+	55	0
 	+	54	17
 	+	27	34
+	+	26	12
 	e	77	76
 	k	99	6
+
+> /private/etc/hosts
+	"	11	32
+	^	11	33
+	.	11	32
+	+	17	0
+	+	12	32
+	+	11	32
 
 > /Volumes/dev/svb-web-core-ui/src/modules/navbar/navbarDirective.js
 	"	54	0
@@ -959,11 +967,6 @@ $integrationDirCount
 
 > ~/SoapUI-Tutorials/popular-apis/YouTube-soapui-project.xml
 	"	352	62
-
-> /private/etc/hosts
-	"	14	0
-	.	15	0
-	+	15	0
 
 > /Volumes/dev/svb-web-payments/app/src/factories/payeeService/payeeService.test.js
 	"	1	0

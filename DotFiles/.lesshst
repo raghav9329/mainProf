@@ -1,6 +1,5 @@
 .less-history-file:
 .search
-"binary
 "JAVACMD
 "line numbers
 "line
@@ -100,4 +99,5 @@
 "ls
 "after
 "context
+"get
 .shell

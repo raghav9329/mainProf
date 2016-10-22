@@ -452,8 +452,75 @@ sandboxCount()
    done
 	popd >> /dev/null
 echo "************************************************"
-
 }
 
+svbIntSum()
+{
+	arrayIndex=0
+
+	pushd /Volumes/dev/ >> /dev/null
+  directories="
+svb-service-accounts 
+svb-service-bankinfo 
+svb-service-client 
+svb-service-csrf 
+svb-service-entitlements
+svb-service-ooba
+svb-service-payments"
+
+	for i in $directories
+#	for i in svb-scheduler-payments svb-web-core-ui svb-vagrant svb-murano-config
+	do
+		#((arrayIndex++))
+		cd $i
+		#pwd
+		tabChar="\t"
+		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		answersArray[arrayIndex]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+# debug echo -e $i $tabChar $immediate
+# debug echo
+# debugecho The number of elements
+# debug echo ${#answersArray[@]}
+		cd /Volumes/dev
+		((arrayIndex++))
+
+	done
+	
+#	echo done Loading now putting out the dollar answer array
+#	echo $answersArray
+#	echo
+#		echo .......
+#		echo number of ele to follow
+#		echo size ${#answersArray[@]}
+#		echo elems ${answersArray[@]}
+#		echo zero? ${#answerArray[*]}
+#		echo the rest
+#		echo 0: ${directories[0]} ${answersArray[0]}
+#		echo 1: ${directories[1]} ${answersArray[1]}
+#		echo 2: ${directories[2]} ${answersArray[2]}
+#		echo 3: ${directories[3]} ${answersArray[3]}
+#		echo 4: ${directories[4]} ${answersArray[4]}
+#		echo 5: ${directories[5]} ${answersArray[5]}
+#		echo 6: ${directories[6]} ${answersArray[6]}
+#		echo this could be wierd
+#		echo 7: ${answersArray[7]}
+		echo ......		
+		index=0
+		sum=0
+		for i in $directories ; do
+			echo ${answersArray[index]} $i
+			sum=$((sum+${answersArray[index]}))
+		
+			((index++))
+		done
+			
+		echo the sum is: $sum
+		echo 
+
+		answersArray="" 
+		arrayIndex="" 
+		sum=0
+		popd >> /dev/null
+}
 
 #  end of file 
