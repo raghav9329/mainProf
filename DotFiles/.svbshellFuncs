@@ -454,9 +454,17 @@ sandboxCount()
 echo "************************************************"
 }
 
+################
+#  
+# Get the count of integration tests in the repo's identified
+# In order to check if this is the proper list of repo's run unitCount()
+# 
+#  
+###
 svbIntSum()
 {
-	arrayIndex=0
+	#arrayIndex=0
+	Index=0
 
 	pushd /Volumes/dev/ >> /dev/null
   directories="
@@ -471,18 +479,20 @@ svb-service-payments"
 	for i in $directories
 #	for i in svb-scheduler-payments svb-web-core-ui svb-vagrant svb-murano-config
 	do
-		#((arrayIndex++))
+		#((arrayIndex++)) comment here cuz this was commented out: arrayIndex now Index
 		cd $i
 		#pwd
 		tabChar="\t"
 		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
-		answersArray[arrayIndex]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		#answersArray[arrayIndex]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
 # debug echo -e $i $tabChar $immediate
 # debug echo
 # debugecho The number of elements
 # debug echo ${#answersArray[@]}
 		cd /Volumes/dev
-		((arrayIndex++))
+		#((arrayIndex++))
+		((Index++))
 
 	done
 	
@@ -505,20 +515,26 @@ svb-service-payments"
 #		echo this could be wierd
 #		echo 7: ${answersArray[7]}
 		echo ......		
-		index=0
+		#index=0
+		x=0
 		sum=0
 		for i in $directories ; do
-			echo ${answersArray[index]} $i
-			sum=$((sum+${answersArray[index]}))
+			#echo ${answersArray[index]} $i
+			echo ${answersArray[x]} $i
+			#sum=$((sum+${answersArray[index]}))
+			sum=$((sum+${answersArray[x]}))
 		
-			((index++))
+			#((index++))
+			((x++))
 		done
 			
 		echo the sum is: $sum
 		echo 
 
 		answersArray="" 
-		arrayIndex="" 
+		#arrayIndex="" 
+		Index="" 
+		x=0
 		sum=0
 		popd >> /dev/null
 }
