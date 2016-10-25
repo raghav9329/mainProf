@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<sum\>
+~MSle0~/vifunc
 
 # Last Substitute Search Pattern:
 ~MSle0&intDirCount
@@ -17,10 +17,11 @@
 $integrationDirCount
 
 # Command Line History (newest to oldest):
-:q
-:q!
 :wq
 :w
+:q
+:q!
+:e .svbshellFuncs
 :.,.+5
 :.,.+1 
 :. 
@@ -36,9 +37,9 @@ $integrationDirCount
 :1,$s/'/,/g
 :1,$s/'/,g
 :n
-:aq
 
 # Search String History (newest to oldest):
+?/vifunc
 ? \<sum\>
 ?/vifuncs
 ?/go
@@ -58,7 +59,6 @@ $integrationDirCount
 ?/integr
 ?/gs
 ?/grepal
-?/find
 
 # Expression History (newest to oldest):
 
@@ -67,48 +67,78 @@ $integrationDirCount
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-				echo the sum is: $sum
-""1	LINE	0
-			echo finished array by for loop
+""0	LINE	0
+	source /Users/maatkins/.svbshellFuncs
+"1	LINE	0
+	
 "2	LINE	0
-	#	done
+	
 "3	LINE	0
-	#	do
+	
 "4	LINE	0
-	#	for i in $directories
+	#}
 "5	LINE	0
-	#	for X in $directories
+	#
 "6	LINE	0
-				echo something
+	#	 done
 "7	LINE	0
-			do
+	#          fi 
 "8	LINE	0
-	
+	#	 	done
 "9	LINE	0
-	
+	#
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
 "-	CHAR	0
-		
+	#
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  1  0  ~/.svbshellFuncs
-'1  519  0  ~/.svbshellFuncs
-'2  476  8  ~/.svbshellFuncs
-'3  484  11  ~/.svbshellFuncs
-'4  426  0  ~/.svbshellFuncs
-'5  26  12  ~/.svbrc
-'6  11  32  /private/etc/hosts
-'7  12  32  /private/etc/hosts
-'8  239  0  ~/.svbshellFuncs
-'9  53  63  ~/.svbrc
+'0  149  36  ~/.bashrc
+'1  1  0  ~/.sentientrc
+'2  98  0  ~/.atkmhrc
+'3  53  0  ~/.svbshellFunc2
+'4  1  0  ~/.svbshellFuncs2
+'5  27  48  ~/.svbrc
+'6  28  0  ~/.svbrc
+'7  1857  0  /private/tmp/thumbDriveCapture
+'8  23  0  /private/tmp/somefilename
+'9  216  0  /Volumes/MACTHUMB1/Backup_Code.sh
 
 # Jumplist (newest first):
+-'  149  36  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  1  0  ~/.sentientrc
+-'  98  0  ~/.atkmhrc
+-'  1  0  ~/.atkmhrc
+-'  53  0  ~/.svbshellFunc2
+-'  1  0  ~/.svbshellFunc2
+-'  1  0  ~/.svbshellFuncs2
+-'  27  48  ~/.svbrc
+-'  1  0  ~/.svbrc
+-'  28  0  ~/.svbrc
+-'  1857  0  /private/tmp/thumbDriveCapture
+-'  33501  0  /private/tmp/thumbDriveCapture
+-'  33504  0  /private/tmp/thumbDriveCapture
+-'  1  0  /private/tmp/thumbDriveCapture
+-'  23  0  /private/tmp/somefilename
+-'  1  0  /private/tmp/somefilename
+-'  216  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  207  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  180  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  181  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  183  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  225  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  160  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  149  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  142  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  114  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  1  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  1  0  ~/Desktop/MPAY-1538_files/filelist.xml
 -'  1  0  ~/.svbshellFuncs
+-'  453  0  ~/.svbshellFuncs
 -'  519  0  ~/.svbshellFuncs
 -'  483  1  ~/.svbshellFuncs
 -'  512  9  ~/.svbshellFuncs
@@ -125,16 +155,15 @@ $integrationDirCount
 -'  526  0  ~/.svbshellFuncs
 -'  462  14  ~/.svbshellFuncs
 -'  26  12  ~/.svbrc
--'  1  0  ~/.svbrc
 -'  11  32  /private/etc/hosts
 -'  1  0  /private/etc/hosts
 -'  12  32  /private/etc/hosts
 -'  239  0  ~/.svbshellFuncs
 -'  323  54  ~/.svbshellFuncs
 -'  434  42  ~/.svbshellFuncs
--'  53  63  ~/.svbrc
--'  64  0  ~/.svbrc
--'  51  45  ~/.svbrc
+-'  54  63  ~/.svbrc
+-'  65  0  ~/.svbrc
+-'  52  45  ~/.svbrc
 -'  2  0  ~/.svbrc
 -'  54  0  /Volumes/dev/svb-web-core-ui/src/modules/navbar/navbarDirective.js
 -'  1  0  /Volumes/dev/svb-web-core-ui/src/modules/navbar/navbarDirective.js
@@ -158,8 +187,7 @@ $integrationDirCount
 -'  2  0  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1476901232
 -'  1  0  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1476901232
 -'  131  0  ~/.svbshellFuncs
--'  218  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  1  0  /Volumes/MACTHUMB1/Backup_Code.sh
+-'  215  0  /Volumes/MACTHUMB1/Backup_Code.sh
 -'  4  0  /Volumes/MACTHUMB1/BackupDoIt.sh
 -'  1  0  /Volumes/MACTHUMB1/BackupDoIt.sh
 -'  4  21  /Volumes/MACTHUMB1/XBackupRunner.sh
@@ -178,204 +206,304 @@ $integrationDirCount
 -'  385  9  ~/.svbshellFuncs
 -'  361  3  ~/.svbshellFuncs
 -'  143  3  ~/.svbshellFuncs
--'  450  3  ~/.svbshellFuncs
--'  380  0  ~/.svbshellFuncs
--'  314  0  ~/.svbshellFuncs
--'  315  2  ~/.svbshellFuncs
--'  281  1  ~/.svbshellFuncs
--'  317  15  ~/.svbshellFuncs
--'  327  26  ~/.svbshellFuncs
--'  329  17  ~/.svbshellFuncs
--'  326  11  ~/.svbshellFuncs
--'  321  2  ~/.svbshellFuncs
--'  287  1  ~/.svbshellFuncs
--'  337  9  ~/.svbshellFuncs
--'  319  3  ~/.svbshellFuncs
--'  268  0  ~/.svbshellFuncs
--'  527  0  ~/.svbshellFuncs
--'  1  0  ~/Mark/.gitig
--'  148  0  ~/.svbshellFuncs
--'  1  0  /Volumes/dev/svb-service-entitlements/sonar-project.properties
--'  3  0  /Volumes/dev/svb-web-payments/sonar-project.properties
--'  77  7  ~/.svbshellFuncs
--'  138  16  ~/.svbshellFuncs
--'  153  0  ~/.svbshellFuncs
--'  101  24  ~/.svbshellFuncs
--'  139  2  ~/.svbshellFuncs
--'  140  0  ~/.svbshellFuncs
--'  114  1  ~/.svbshellFuncs
--'  90  5  ~/.svbshellFuncs
 
 # History of marks within files (newest to oldest):
 
+> ~/.bashrc
+	"	149	36
+	^	152	13
+	.	149	36
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	153	0
+	+	147	0
+	+	148	36
+	+	153	0
+	+	153	0
+	+	153	0
+	+	152	12
+	+	149	36
+
+> ~/.sentientrc
+	"	1	0
+
+> ~/.atkmhrc
+	"	98	0
+	^	38	25
+	.	38	24
+	+	37	22
+	+	38	24
+
+> ~/.svbshellFunc2
+	"	53	0
+	.	104	0
+	+	1	0
+	+	5	0
+	+	78	0
+	+	101	1
+	+	104	0
+	+	104	0
+	+	104	0
+
 > ~/.svbshellFuncs
 	"	1	0
-	^	523	1
-	.	519	0
-	+	514	16
-	+	510	13
-	+	498	12
-	+	462	14
-	+	469	20
-	+	499	9
-	+	500	9
-	+	501	8
-	+	502	9
-	+	503	9
-	+	504	9
-	+	499	10
-	+	500	10
-	+	501	9
-	+	502	10
-	+	503	10
-	+	504	10
-	+	503	10
-	+	502	10
-	+	500	10
-	+	499	24
-	+	500	24
-	+	501	24
-	+	502	24
-	+	503	24
-	+	504	43
-	+	503	43
-	+	502	43
-	+	501	43
-	+	500	43
-	+	499	43
-	+	498	44
-	+	499	24
-	+	500	24
-	+	501	24
-	+	502	24
-	+	503	24
-	+	504	24
-	+	498	44
-	+	499	43
-	+	500	43
-	+	501	43
-	+	502	43
-	+	503	43
-	+	504	43
-	+	469	20
-	+	462	14
-	+	510	27
-	+	511	10
-	+	508	8
-	+	515	0
-	+	511	30
-	+	514	0
-	+	511	32
-	+	492	1
-	+	493	1
-	+	494	1
-	+	495	1
-	+	496	1
-	+	497	1
-	+	498	1
-	+	499	1
-	+	500	1
-	+	501	1
-	+	502	1
-	+	503	1
-	+	504	1
-	+	505	1
-	+	506	1
-	+	489	1
-	+	490	1
-	+	491	1
-	+	509	6
-	+	512	34
-	+	513	23
-	+	521	15
-	+	523	0
-	+	519	0
-	+	512	37
-	+	522	5
-	+	512	14
-	+	516	2
-	+	517	2
-	+	513	1
-	+	512	14
-	+	457	8
-	+	480	7
-	+	482	0
-	+	483	0
-	+	482	7
-	+	482	0
-	+	483	7
-	+	481	7
-	+	492	0
-	+	508	0
-	+	520	1
-	+	521	0
-	+	522	0
-	+	523	0
-	+	519	0
+	.	177	0
+	+	394	15
+	+	389	0
+	+	390	0
+	+	394	0
+	+	400	0
+	+	423	0
+	+	426	0
+	+	427	0
+	+	429	0
+	+	436	0
+	+	380	1
+	+	381	1
+	+	382	1
+	+	383	1
+	+	384	1
+	+	385	1
+	+	386	1
+	+	379	0
+	+	180	3
+	+	181	57
+	+	181	74
+	+	182	4
+	+	182	0
+	+	75	0
+	+	71	0
+	+	73	1
+	+	75	29
+	+	77	4
+	+	72	1
+	+	100	0
+	+	101	0
+	+	101	40
+	+	102	17
+	+	103	0
+	+	104	0
+	+	140	30
+	+	141	32
+	+	143	56
+	+	71	24
+	+	74	45
+	+	31	33
+	+	32	22
+	+	33	0
+	+	52	33
+	+	53	5
+	+	53	23
+	+	54	0
+	+	54	0
+	+	53	0
+	+	54	3
+	+	54	3
+	+	55	12
+	+	56	12
+	+	57	8
+	+	58	8
+	+	54	0
+	+	61	12
+	+	62	3
+	+	63	3
+	+	33	2
+	+	33	8
+	+	34	8
+	+	35	5
+	+	36	5
+	+	37	8
+	+	39	8
+	+	41	4
+	+	42	1
+	+	41	4
+	+	33	0
+	+	50	0
+	+	50	0
+	+	52	0
+	+	53	0
+	+	102	17
+	+	101	66
+	+	102	17
+	+	103	0
+	+	102	17
+	+	82	0
+	+	80	26
+	+	81	0
+	+	78	0
+	+	156	0
+	+	155	56
+	+	158	5
+	+	159	1
+	+	160	0
+	+	161	0
+	+	163	22
+	+	164	20
+	+	165	0
+	+	165	1
+	+	165	37
+	+	166	0
+	+	153	0
+	+	177	3
+	+	177	0
+	+	177	0
+	+	177	0
+
+> ~/.svbshellFuncs2
+	"	1	0
 
 > ~/.svbrc
-	"	26	12
-	^	27	35
-	.	26	12
-	+	31	3
+	"	27	48
+	^	27	49
+	.	27	48
 	+	20	96
 	+	22	80
 	+	16	0
 	+	15	0
-	+	56	41
-	+	28	136
-	+	28	35
-	+	28	125
-	+	28	0
-	+	28	127
+	+	57	41
+	+	29	136
+	+	29	35
+	+	29	125
+	+	29	0
+	+	29	127
 	+	20	15
 	+	21	67
+	+	55	0
+	+	52	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	52	8
+	+	55	0
+	+	52	8
 	+	54	0
-	+	51	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	51	8
-	+	54	0
-	+	51	8
-	+	53	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	54	0
-	+	51	15
-	+	53	18
-	+	54	15
-	+	54	17
-	+	53	22
-	+	51	0
-	+	53	0
-	+	51	18
-	+	54	16
-	+	54	8
-	+	51	46
-	+	53	58
-	+	53	52
-	+	53	50
-	+	54	46
-	+	54	50
-	+	54	43
-	+	54	0
-	+	51	20
-	+	53	22
-	+	53	18
-	+	53	18
+	+	55	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	55	0
+	+	52	15
 	+	54	18
-	+	54	20
-	+	54	19
+	+	55	15
+	+	55	17
+	+	54	22
+	+	52	0
+	+	54	0
+	+	52	18
+	+	55	16
+	+	55	8
+	+	52	46
+	+	54	58
+	+	54	52
+	+	54	50
+	+	55	46
+	+	55	50
+	+	55	43
+	+	55	0
+	+	52	20
+	+	54	22
+	+	54	18
+	+	54	18
+	+	55	18
+	+	55	20
+	+	55	19
 	+	23	25
 	+	24	20
 	+	25	34
@@ -385,40 +513,150 @@ $integrationDirCount
 	+	13	17
 	+	14	18
 	+	11	20
-	+	51	12
-	+	53	12
-	+	54	37
-	+	51	0
-	+	45	17
-	+	44	0
-	+	53	0
-	+	46	54
-	+	47	0
+	+	52	12
+	+	54	12
+	+	55	37
+	+	52	0
+	+	46	17
+	+	45	0
 	+	54	0
-	+	49	0
-	+	53	0
+	+	47	54
+	+	48	0
+	+	55	0
 	+	50	0
 	+	54	0
 	+	51	0
+	+	55	0
+	+	52	0
+	+	55	0
+	+	49	0
+	+	55	0
+	+	53	54
 	+	54	0
-	+	48	0
-	+	54	0
-	+	52	54
-	+	53	0
-	+	40	17
-	+	54	27
-	+	40	6
-	+	54	25
-	+	29	0
-	+	32	0
+	+	41	17
+	+	55	27
+	+	41	6
+	+	55	25
 	+	30	0
 	+	33	0
-	+	55	0
-	+	54	17
-	+	27	34
+	+	31	0
+	+	34	0
+	+	56	0
+	+	55	17
+	+	28	34
 	+	26	12
-	e	77	76
-	k	99	6
+	+	27	48
+	e	78	76
+	k	100	6
+
+> /private/tmp/thumbDriveCapture
+	"	1857	0
+	^	1857	0
+	.	1850	0
+	+	1858	0
+	+	1854	67
+	+	1850	0
+
+> /private/tmp/somefilename
+	"	23	0
+
+> /Volumes/MACTHUMB1/Backup_Code.sh
+	"	216	0
+	^	200	20
+	.	216	0
+	+	5	24
+	+	10	18
+	+	16	15
+	+	22	18
+	+	29	18
+	+	35	22
+	+	40	17
+	+	46	18
+	+	52	16
+	+	58	30
+	+	64	12
+	+	69	21
+	+	75	24
+	+	80	26
+	+	86	15
+	+	77	0
+	+	72	0
+	+	66	0
+	+	61	0
+	+	55	0
+	+	49	0
+	+	43	0
+	+	37	0
+	+	32	0
+	+	25	0
+	+	19	0
+	+	16	11
+	+	13	0
+	+	7	0
+	+	83	0
+	+	88	0
+	+	91	0
+	+	94	0
+	+	91	8
+	+	97	0
+	+	99	0
+	+	97	24
+	+	102	0
+	+	105	0
+	+	102	16
+	+	108	0
+	+	110	0
+	+	108	23
+	+	114	0
+	+	115	0
+	+	113	22
+	+	120	0
+	+	118	29
+	+	123	0
+	+	126	0
+	+	123	16
+	+	130	0
+	+	133	0
+	+	130	16
+	+	136	0
+	+	138	0
+	+	136	20
+	+	142	0
+	+	141	16
+	+	144	0
+	+	149	0
+	+	148	17
+	+	151	0
+	+	155	17
+	+	158	0
+	+	162	13
+	+	165	0
+	+	169	8
+	+	172	0
+	+	176	12
+	+	179	0
+	+	181	0
+	+	181	0
+	+	182	17
+	+	184	0
+	+	182	19
+	+	187	17
+	+	190	0
+	+	194	12
+	+	197	0
+	+	200	19
+	+	202	0
+	+	207	0
+	+	206	12
+	+	209	0
+	+	213	12
+	+	216	0
+
+> ~/Desktop/MPAY-1538_files/filelist.xml
+	"	1	0
+
+> ~/Desktop/MPAY-1538_files/themedata.xml
+	"	1	0
 
 > /private/etc/hosts
 	"	11	32
@@ -443,9 +681,6 @@ $integrationDirCount
 	^	2	1
 	.	2	0
 	+	2	0
-
-> /Volumes/MACTHUMB1/Backup_Code.sh
-	"	218	0
 
 > /Volumes/MACTHUMB1/BackupDoIt.sh
 	"	4	0
@@ -613,13 +848,6 @@ $integrationDirCount
 	.	13	28
 	+	13	28
 
-> ~/.atkmhrc
-	"	68	6
-	^	38	25
-	.	38	24
-	+	37	22
-	+	38	24
-
 > ~/Mark/JavaDev/LinkedList/src/linkedListTest/CreateList.java
 	"	49	0
 
@@ -628,112 +856,6 @@ $integrationDirCount
 
 > /Volumes/dev/svb-services-sandbox/mur-java-lib-httpclient/src/test/java/com/svb/murano/common/JSONParseTest.java
 	"	39	0
-
-> ~/.bashrc
-	"	222	0
-	^	222	1
-	.	222	0
-	+	211	0
-	+	213	0
-	+	214	0
-	+	215	0
-	+	216	0
-	+	212	0
-	+	298	0
-	+	297	0
-	+	296	0
-	+	295	0
-	+	294	0
-	+	293	0
-	+	292	0
-	+	291	0
-	+	290	0
-	+	289	0
-	+	288	0
-	+	287	0
-	+	286	0
-	+	285	0
-	+	284	0
-	+	283	0
-	+	282	0
-	+	281	0
-	+	279	0
-	+	278	0
-	+	280	0
-	+	277	0
-	+	276	0
-	+	275	0
-	+	274	0
-	+	273	0
-	+	272	0
-	+	271	0
-	+	270	0
-	+	269	0
-	+	268	0
-	+	267	0
-	+	266	0
-	+	265	0
-	+	264	0
-	+	263	0
-	+	262	0
-	+	261	0
-	+	260	0
-	+	259	0
-	+	258	0
-	+	257	0
-	+	255	0
-	+	254	0
-	+	253	0
-	+	252	0
-	+	251	0
-	+	250	0
-	+	249	0
-	+	248	0
-	+	247	0
-	+	245	0
-	+	244	0
-	+	243	0
-	+	242	0
-	+	241	0
-	+	240	0
-	+	239	0
-	+	238	0
-	+	237	0
-	+	236	0
-	+	235	0
-	+	234	0
-	+	232	0
-	+	231	0
-	+	230	0
-	+	229	0
-	+	228	0
-	+	227	0
-	+	226	0
-	+	225	0
-	+	224	0
-	+	223	0
-	+	221	0
-	+	220	0
-	+	219	0
-	+	218	0
-	+	217	0
-	+	216	0
-	+	215	0
-	+	214	0
-	+	213	0
-	+	212	0
-	+	211	0
-	+	210	0
-	+	212	0
-	+	213	0
-	+	214	0
-	+	215	0
-	+	216	0
-	+	211	0
-	+	147	0
-	+	148	36
-	+	222	0
-	f	152	0
 
 > /private/tmp/scriptMacThumb.out
 	"	32891	0
@@ -908,12 +1030,6 @@ $integrationDirCount
 > /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
 	"	205	0
 
-> ~/Desktop/MPAY-1538_files/themedata.xml
-	"	1	0
-
-> ~/Desktop/MPAY-1538_files/filelist.xml
-	"	1	0
-
 > /Volumes/dev/svb-vagrant/Vagrantfile
 	"	1	0
 
@@ -1023,22 +1139,3 @@ $integrationDirCount
 
 > /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/payments/integration/PaymentsResourceSwaggerTest.java
 	"	11	0
-
-> /Volumes/dev/svb-service-payments/settings.gradle
-	"	1	0
-
-> /Volumes/dev/svb-service-payments/build.gradle
-	"	329	5
-
-> ~/Mark/tmp_PCEclipse/TestAbstractClallProj/src/PoiTesting/AbstractTestSetup.java
-	"	65	0
-
-> ~/Mark/tmp_PCEclipse/TestAbstractClallProj/src/PoiTesting/PoiTestProcess.java
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/cumulativeClientLimitWith2Users.test.js
-	"	113	4
-	^	113	5
-	.	113	4
-	+	16	0
-	+	113	4

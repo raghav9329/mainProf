@@ -1,13 +1,5 @@
 .less-history-file:
 .search
-"JAVACMD
-"line numbers
-"line
-"diff
-"HEAD
-"vagrant
-"Vag
-"version
 "recursive
 "recur
 "mv
@@ -100,4 +92,12 @@
 "after
 "context
 "get
+"examples
+"exampl
+"type file
+"type
+"file
+"negation
+"negate
+"not
 .shell

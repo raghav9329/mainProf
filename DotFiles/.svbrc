@@ -24,6 +24,7 @@ alias catfunc='cat /Users/maatkins/.svbshellFuncs'
 alias lessfunc='less /Users/maatkins/.svbshellFuncs'
 alias funcal='catfunc | grep -i $1'
 alias vifunc='vi /Users/maatkins/.svbshellFuncs'
+alias vifunc2='vi /Users/maatkins/.svbshellFuncs2'
 alias whatCounts='funcal "Count()"'
 alias shelltestCounts='unitTestCountPayments; unitTestCountCoreUi;integrationTestCountMock;integrationTestCountE2E; integrationTestCountAll '
 #######################

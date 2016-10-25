@@ -1,0 +1,105 @@
+# Shell Functions moved to .svbshellFuncs on 10/5/2016
+#
+# Funciton "Move File" 
+# Only works in specific directories and between these directories.
+
+
+unitTestCountPayments()
+{	echo payments repo
+	gosvb # /Volumes/dev/svb-web-payments/
+	cd app/src
+	grep -r "\sit(" * | wc -l
+}
+
+unitTestCountCoreUi()
+{	echo  web-core-ui repo
+	godev
+	cd svb-web-core-ui/src
+	grep -r "\sit(" * | wc -l
+}
+
+
+integrationTestCountMock()
+{	echo mockBackend 
+	gosvb; 
+	cd integration/mockBackend
+	grep -r "\sit(" * | wc -l
+}
+
+integrationTestCountE2E()
+{	echo e2e scenarios
+	gosvb; 
+	cd integration/scenarios
+	grep -r "\sit(" * | wc -l
+}
+
+integrationTestCountAll()
+{	echo All Integration test
+	gosvb; 
+	cd integration
+	grep -r "\sit(" * | wc -l
+}
+
+testcountbyCase()
+{	echo test case count by Case
+	if [ -z $1  ] ; then
+	   scriptVar="scriptVar 3, 5, 7, 11, 13, 17" 
+	   else scriptVar=$1
+	fi
+	
+	case $scriptVar in
+		
+		3)
+		echo case 3
+		  ;;
+		5)
+		echo case 5
+		  ;;
+		7)
+		echo case 7
+		  ;;
+		11)
+		echo case 11
+		  ;;
+		13)
+		echo case 13
+		  ;;
+		17)
+		echo case 17
+		  ;;
+		*)
+		echo the value of sriptVariable is $scriptVar
+		  ;;
+			
+	esac
+}
+
+
+findBuildGradle()
+{
+	theFile="build.gradle"
+	REPO_DIRECTORIES="/Volumes/dev/svb-*"
+	for d in $REPO_DIRECTORIES
+	 do
+	  if [ -d "$d" ]
+	   then
+	      FILE_LIST=`ls`
+		for f in $FILE_LIST
+		do
+		  if echo $f | grep $theFile
+		  then
+			pwd
+			ls -alF build.gradle
+		  fi
+
+	 	done
+          fi 
+	 done
+
+}
+
+	
+
+
+
+#  end of file 

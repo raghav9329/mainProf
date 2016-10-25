@@ -28,20 +28,18 @@ whatrepoBranch()
  	pushd /Volumes/dev/ >> /dev/null
 	REPO_DIRECTORIES="/Volumes/dev/svb-*"
 
-   for f in $REPO_DIRECTORIES
-     do
-	if [ -d "$f"  ]	
-          then
-              cd $f
-              pwd 
-	      git branch
-	      cd ~/
-              echo 	
+   for f in $REPO_DIRECTORIES ; do
+	if [ -d "$f"  ]	; then
+        cd $f
+        pwd 
+	    git branch
+	    cd ~/
+        echo 	
 	else
-              echo NotWorking
+        echo NotWorking
 	fi
-      done
-echo !! DONE  !!
+    done
+	echo !! DONE  !!
 
 	popd >> /dev/null
 }
@@ -49,22 +47,20 @@ echo !! DONE  !!
 
 updateRepos()
 {
- 	pushd /Volumes/dev/ >> /dev/null
+	pushd /Volumes/dev/ >> /dev/null
 	REPO_DIRECTORIES="/Volumes/dev/svb-*"
-   for f in $REPO_DIRECTORIES
-     do
-		if [ -d "$f"  ]	
-          then
-              echo "************************************************"
-              cd $f
-              pwd 
-	      git pull
-	      cd ~/
+	for f in $REPO_DIRECTORIES ; do
+		if [ -d "$f"  ]	; then
+			echo "************************************************"
+            cd $f
+            pwd 
+	        git pull
+	        cd ~/
               echo 	
 		else
-              echo NotWorking
-			  echo something about $f
-			  echo not resolving in the if -d analysis
+            echo NotWorking
+			echo something about $f
+			echo not resolving in the if -d analysis
 		fi
       done
 	echo !! DONE  !!
@@ -72,14 +68,17 @@ updateRepos()
 
 }
 
-integrationCount()
-{ #repoLookInt()
-  
-	echo Repository Integration test counts and...
+integrationDirectoriesAndCount()
+{ 
+ 	echo	
+	echo "This is all the Repo's that have Sub Directories named \"integration\" " 
+	echo Integration Repository test counts and...
 	echo Repository Integration directory count	
+	echo
+
 	# ***********************
-	# cus I want to get back
-	# to where I started 	
+	# cus I want to get back to where I started 	
+
 	pushd /Volumes/dev/ >> /dev/null
 
 	# *********************
@@ -98,11 +97,11 @@ integrationCount()
 		if [ "$1" == "allRepos"  ] ; then
 			echo $f 
 		fi
-		#*****************************************
-		# loopCount++ cuz in a couple of places
-		# I wanted to see how many times I'd been
-		# through the loop and on to another dir
-		((loopCount++))
+	#*****************************************
+	# loopCount++ cuz in a couple of places I wanted to see how many 
+	# times I'd been through the loop and on to another dir
+	((loopCount++))
+
 	
 	# *************************************
 	# are we in one of the directories
@@ -138,7 +137,10 @@ integrationCount()
 
 		cd ~/
 	else
-		echo NotWorking
+		echo There is a BIG Problem !
+		echo Something Critical is Not Working
+		echo Something about the main loop variable through all directories in Volumes dev
+		echo is not a directory.  Here look at the value of eff
 		echo eff is $f
 		myLocalVar=""
 	fi
@@ -149,91 +151,18 @@ echo "************************************************"
 
 
 
-unitTestCountPayments()
-{	echo payments repo
-	gosvb # /Volumes/dev/svb-web-payments/
-	cd app/src
-	grep -r "\sit(" * | wc -l
-}
-
-unitTestCountCoreUi()
-{	echo  web-core-ui repo
-	godev
-	cd svb-web-core-ui/src
-	grep -r "\sit(" * | wc -l
-}
-
-
-integrationTestCountMock()
-{	echo mockBackend 
-	gosvb; 
-	cd integration/mockBackend
-	grep -r "\sit(" * | wc -l
-}
-
-integrationTestCountE2E()
-{	echo e2e scenarios
-	gosvb; 
-	cd integration/scenarios
-	grep -r "\sit(" * | wc -l
-}
-
-integrationTestCountAll()
-{	echo All Integration test
-	gosvb; 
-	cd integration
-	grep -r "\sit(" * | wc -l
-}
-
-testcountbyCase()
-{	echo test case count by Case
-	if [ -z $1  ] ; then
-	   scriptVar="scriptVar 3, 5, 7, 11, 13, 17" 
-	   else scriptVar=$1
-	fi
-	
-	case $scriptVar in
-		
-		3)
-		echo case 3
-		  ;;
-		5)
-		echo case 5
-		  ;;
-		7)
-		echo case 7
-		  ;;
-		11)
-		echo case 11
-		  ;;
-		13)
-		echo case 13
-		  ;;
-		17)
-		echo case 17
-		  ;;
-		*)
-		echo the value of sriptVariable is $scriptVar
-		  ;;
-			
-	esac
-}
-
-
 getDotFiles()
-{   # In this file I need to set a list of variables that contain the chars in the file names
+{   #####################################################
+	# In this file I need to set a list of variables that contain the chars in the file names
     # that I don't want  eg: swp for vi swap files,  eg v8Flags ???? why ???   others ???
-    # ====================================================================================
-cd /Users/maatkins/
-dirList=`ls -ad .*`
-swpFile=".swp"
+    # 
+	cd /Users/maatkins/
+	dirList=`ls -ad .*`
+	swpFile=".swp"
 
-for f in $dirList
-do
- if [ -f $f ]
-   then
-     if echo $f | grep -q $swpFile
-       then
+	for f in $dirList ; do
+ 	if [ -f $f ] ; then
+		if echo $f | grep -q $swpFile ; then
          echo "Not touching swp file named: "$f
        else
         cp $f /Users/maatkins/Mark/DotFiles
@@ -244,33 +173,13 @@ done
 
 }
 
-findBuildGradle()
-{
-	theFile="build.gradle"
-	REPO_DIRECTORIES="/Volumes/dev/svb-*"
-	for d in $REPO_DIRECTORIES
-	 do
-	  if [ -d "$d" ]
-	   then
-	      FILE_LIST=`ls`
-		for f in $FILE_LIST
-		do
-		  if echo $f | grep $theFile
-		  then
-			pwd
-			ls -alF build.gradle
-		  fi
 
-	 	done
-          fi 
-	 done
-
-}
 
 
 unitCount()
-{	#XXX__repoLookInt()
-	echo	
+{			
+
+	echo
 	# ***********************
 	# cus I want to get back
 	# to where I started 	
@@ -467,31 +376,27 @@ svbIntSum()
 	Index=0
 
 	pushd /Volumes/dev/ >> /dev/null
-  directories="
-svb-service-accounts 
-svb-service-bankinfo 
-svb-service-client 
-svb-service-csrf 
-svb-service-entitlements
-svb-service-ooba
-svb-service-payments"
+	directories="
+	svb-service-accounts 
+	svb-service-bankinfo 
+	svb-service-client 
+	svb-service-csrf 
+	svb-service-entitlements
+	svb-service-ooba
+	svb-service-payments"
 
 	for i in $directories
-#	for i in svb-scheduler-payments svb-web-core-ui svb-vagrant svb-murano-config
 	do
-		#((arrayIndex++)) comment here cuz this was commented out: arrayIndex now Index
 		cd $i
 		#pwd
 		tabChar="\t"
 		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
-		#answersArray[arrayIndex]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
 		answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
 # debug echo -e $i $tabChar $immediate
 # debug echo
 # debugecho The number of elements
 # debug echo ${#answersArray[@]}
 		cd /Volumes/dev
-		#((arrayIndex++))
 		((Index++))
 
 	done
@@ -515,16 +420,12 @@ svb-service-payments"
 #		echo this could be wierd
 #		echo 7: ${answersArray[7]}
 		echo ......		
-		#index=0
 		x=0
 		sum=0
 		for i in $directories ; do
-			#echo ${answersArray[index]} $i
 			echo ${answersArray[x]} $i
-			#sum=$((sum+${answersArray[index]}))
 			sum=$((sum+${answersArray[x]}))
 		
-			#((index++))
 			((x++))
 		done
 			
@@ -532,7 +433,6 @@ svb-service-payments"
 		echo 
 
 		answersArray="" 
-		#arrayIndex="" 
 		Index="" 
 		x=0
 		sum=0
