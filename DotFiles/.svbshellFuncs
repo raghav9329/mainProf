@@ -382,7 +382,7 @@ svbIntegrationSum()
 		cd $i
 		#pwd
 		tabChar="\t"
-		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+#		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
 		answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
 # debug echo -e $i $tabChar $immediate
 # debug echo
@@ -445,13 +445,29 @@ svbIntegrationSum()
 
 tstreturn()
 {
-	startValue=344	
-  	svbIntegrationSum localVar > /dev/null 2>&1
+	svbIntegrationSum
+	unitTestSum
+	startValue="33702"	
+  	svbIntegrationSum repoIntegrationCount > /dev/null 2>&1
+	
 	echo .............
-	echo "after calling svbIntegrationSum localVar"
-	echo the value of local Var is : $localVar
-	echo subtracting $localVar from $startValue should be "102"
-	echo the value returned is: $((startValue - localVar))
+	echo "after calling svbIntegrationSum repoIntegrationCount "
+	echo the value of the repo Integraiton sum Var is : $repoIntegrationCount
+	echo subtracting $repoIntegrationCount from $startValue should be "102"
+	echo the value returned is: $((startValue - repoIntegrationCount))
+	echo	
+	echo "calling unitTestSum(withAnotherVariable) "
+	unitTestSum withAnotherVariable > /dev/null 2>&1
+	echo 
+	echo result of unitTestSum is:$withAnotherVariable
+	echo
+	echo test subtraction like other method
+	echo subtraction result is: $(( withAnotherVariable - repoIntegrationCount  ))
+	echo
+	#eval differenc=$((withAnotherVariable - repoIntegraitonCount))
+	differenc=$(( withAnotherVariable - repoIntegratitonCount ))
+	echo   Unit test count: $difference
+	echo Integration Count: $repoIntegrationCount
 }
 
 unitTestSum()
@@ -462,20 +478,19 @@ unitTestSum()
 	directories=" svb-service-payments svb-service-entitlements svb-service-ooba
 	svb-scheduler-payments svb-service-accounts svb-service-csrf svb-service-client
 	svb-service-bankinfo"
-	
+
+#  Need to get sand box repo libs httpClient auth dbconnector logger Monotiring Exception Mappers	
 
 	for i in $directories ; do
 		cd $i
-		#pwd
-		tabChar="\t"
-		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
-		answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
-		cd /Volumes/dev
-		((Index++))
-
+		
+        if [ -d "./src/test/"   ] ; then
+            cd ./src/test/
+			answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			cd /Volumes/dev
+			((Index++))
+		fi
 	done
-	
-
 
 		if [ -z $1  ] ; then
 			echo ......		
