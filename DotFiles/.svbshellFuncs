@@ -2,6 +2,75 @@
 #
 # Funciton "Move File" 
 # Only works in specific directories and between these directories.
+giveMeSomeSpace()
+{
+	echo "..................................."
+	echo 
+	echo "   ******  Just some space ***** "
+	echo 
+	echo "..................................."
+
+}
+
+
+testRunFuncs()
+{  # Test process to at least verify this file 
+
+	pushd /Volumes/dev/ >> /dev/null	
+
+	echo runing the mf - MoveFile function
+	mf
+	giveMeSomeSpace		
+	echo running the whatrepoBranch funciton
+
+	whatrepoBranch
+
+	giveMeSomeSpace	
+	
+	if [ "$1" != ""  ] ; then
+	#if [ -z $1  ] ; then
+		updateRepos
+		giveMeSomeSpace
+	else
+		echo NOT running the updateRepos function
+		echo that one requires a network connection
+	fi
+
+	integrationDirectoriesAndCount
+	giveMeSomeSpace		
+
+	echo getDotFiles
+	getDotFiles
+	giveMeSomeSpace	
+	
+	echo unitCount
+	unitCount
+	giveMeSomeSpace	
+	
+	echo sandboxCount
+	sandboxCount
+	giveMeSomeSpace	
+
+	svbIntegrationSum
+
+
+
+	tstreturn
+
+
+
+
+	sanboxUTCount
+
+
+	unitTestSum
+
+
+
+	popd >> /dev/null
+}
+##
+
 mf()
 {
  if [ -z "$1" ] ; then
@@ -156,6 +225,10 @@ getDotFiles()
 	# In this file I need to set a list of variables that contain the chars in the file names
     # that I don't want  eg: swp for vi swap files,  eg v8Flags ???? why ???   others ???
     # 
+	#
+	# Todo:  make the check for a *.swp file a case statement alloinwg
+	#		 us to check for other file extension types, ex. *.swo, *.json
+	#####
 	cd /Users/maatkins/
 	dirList=`ls -ad .*`
 	swpFile=".swp"
@@ -173,7 +246,12 @@ done
 
 }
 
+getDotFileTest()
+{
 
+	# try to do a Case statement with several checks all
+	# Not touching this file named : $f
+}
 
 
 unitCount()
@@ -445,8 +523,10 @@ svbIntegrationSum()
 
 tstreturn()
 {
-	svbIntegrationSum
-	unitTestSum
+	if [ $# -ne 0  ] ; then #if num of arguments != 0
+		svbIntegrationSum
+		unitTestSum
+	fi
 	startValue="33702"	
   	svbIntegrationSum repoIntegrationCount > /dev/null 2>&1
 	
@@ -470,6 +550,65 @@ tstreturn()
 	echo Integration Count: $repoIntegrationCount
 }
 
+sanboxUTCount()
+{
+    Index=0
+
+	pushd /Volumes/dev/ >> /dev/null
+	directories=" svb-service-payments svb-service-entitlements svb-service-ooba
+	svb-scheduler-payments svb-service-accounts svb-service-csrf svb-service-client
+	svb-service-bankinfo"
+
+#  Need to get sand box repo libs httpClient auth dbconnector logger Monotiring Exception Mappers	
+
+	for i in $directories ; do
+		cd $i
+        if [ -d "./src/test/"   ] ; then
+            cd ./src/test/
+			answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			cd /Volumes/dev
+			((Index++))
+		fi
+	done
+
+		if [ -z $1  ] ; then
+			echo ......		
+		fi
+
+		x=0
+		sum=0
+		for i in $directories ; do
+
+		if [ -z $1  ] ; then
+			echo ${answersArray[x]} $i
+
+		fi
+			sum=$((sum+${answersArray[x]}))
+			((x++))
+		done
+
+		if [ -z $1  ] ; then
+			echo the sum is: $sum
+			echo 
+		fi
+#   	debug echo inside svbIntegrationSum, arg[0] = $1	
+#		debug echo inside svbIntegrationSum, sum  = $sum
+		if [ -z $1  ] ; then
+			echo ""
+		else
+			echo debug trying to set arg[1] to the sum in next command
+			eval $1=$((sum))
+			return $1
+		fi
+
+		answersArray="" 
+		Index="" 
+		x=0
+		sum=0
+		popd >> /dev/null
+
+}
+
 unitTestSum()
 {
     Index=0
@@ -483,7 +622,6 @@ unitTestSum()
 
 	for i in $directories ; do
 		cd $i
-		
         if [ -d "./src/test/"   ] ; then
             cd ./src/test/
 			answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
