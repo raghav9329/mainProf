@@ -370,23 +370,15 @@ echo "************************************************"
 # 
 #  
 ###
-svbIntSum()
+svbIntegrationSum()
 {
-	#arrayIndex=0
-	Index=0
+    Index=0
 
 	pushd /Volumes/dev/ >> /dev/null
-	directories="
-	svb-service-accounts 
-	svb-service-bankinfo 
-	svb-service-client 
-	svb-service-csrf 
-	svb-service-entitlements
-	svb-service-ooba
-	svb-service-payments"
+	directories=" svb-service-accounts svb-service-bankinfo svb-service-client 
+	svb-service-csrf svb-service-entitlements svb-service-ooba svb-service-payments"
 
-	for i in $directories
-	do
+	for i in $directories ; do
 		cd $i
 		#pwd
 		tabChar="\t"
@@ -401,36 +393,119 @@ svbIntSum()
 
 	done
 	
-#	echo done Loading now putting out the dollar answer array
-#	echo $answersArray
-#	echo
-#		echo .......
-#		echo number of ele to follow
-#		echo size ${#answersArray[@]}
-#		echo elems ${answersArray[@]}
-#		echo zero? ${#answerArray[*]}
-#		echo the rest
-#		echo 0: ${directories[0]} ${answersArray[0]}
-#		echo 1: ${directories[1]} ${answersArray[1]}
-#		echo 2: ${directories[2]} ${answersArray[2]}
-#		echo 3: ${directories[3]} ${answersArray[3]}
-#		echo 4: ${directories[4]} ${answersArray[4]}
-#		echo 5: ${directories[5]} ${answersArray[5]}
-#		echo 6: ${directories[6]} ${answersArray[6]}
-#		echo this could be wierd
-#		echo 7: ${answersArray[7]}
-		echo ......		
+#	echo done Loading now putting out the dollar answer array #	echo $answersArray
+#	echo #		echo .......  #		echo number of ele to follow #		echo size ${#answersArray[@]}
+#		echo elems ${answersArray[@]} #		echo zero? ${#answerArray[*]} #		echo the rest
+#		echo 0: ${directories[0]} ${answersArray[0]} #		echo 1: ${directories[1]} ${answersArray[1]}
+#		echo 2: ${directories[2]} ${answersArray[2]} #		echo 3: ${directories[3]} ${answersArray[3]}
+#		echo 4: ${directories[4]} ${answersArray[4]} #		echo 5: ${directories[5]} ${answersArray[5]}
+#		echo 6: ${directories[6]} ${answersArray[6]} #		echo this could be wierd #		echo 7: ${answersArray[7]}
+
+
+		#if [[ $1 == "" ]] ; then
+		if [ -z $1  ] ; then
+			echo ......		
+		fi
+
 		x=0
 		sum=0
 		for i in $directories ; do
+
+		#if [[ $1 == "" ]] ; then
+		if [ -z $1  ] ; then
 			echo ${answersArray[x]} $i
+
+		fi
 			sum=$((sum+${answersArray[x]}))
-		
 			((x++))
 		done
-			
-		echo the sum is: $sum
-		echo 
+
+		#if [[ $1 == "" ]] ; then
+		if [ -z $1  ] ; then
+			echo the sum is: $sum
+			echo 
+		fi
+#   	debug echo inside svbIntegrationSum, arg[0] = $1	
+#		debug echo inside svbIntegrationSum, sum  = $sum
+		if [ -z $1  ] ; then
+			echo ""
+		else
+			echo debug trying to set arg[1] to the sum in next command
+			#eval $1=$((sum))
+			eval $1=$((sum))
+			return $1
+		fi
+
+		answersArray="" 
+		Index="" 
+		x=0
+		sum=0
+		popd >> /dev/null
+}
+
+tstreturn()
+{
+	startValue=344	
+  	svbIntegrationSum localVar > /dev/null 2>&1
+	echo .............
+	echo "after calling svbIntegrationSum localVar"
+	echo the value of local Var is : $localVar
+	echo subtracting $localVar from $startValue should be "102"
+	echo the value returned is: $((startValue - localVar))
+}
+
+unitTestSum()
+{
+    Index=0
+
+	pushd /Volumes/dev/ >> /dev/null
+	directories=" svb-service-payments svb-service-entitlements svb-service-ooba
+	svb-scheduler-payments svb-service-accounts svb-service-csrf svb-service-client
+	svb-service-bankinfo"
+	
+
+	for i in $directories ; do
+		cd $i
+		#pwd
+		tabChar="\t"
+		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		cd /Volumes/dev
+		((Index++))
+
+	done
+	
+
+
+		if [ -z $1  ] ; then
+			echo ......		
+		fi
+
+		x=0
+		sum=0
+		for i in $directories ; do
+
+		if [ -z $1  ] ; then
+			echo ${answersArray[x]} $i
+
+		fi
+			sum=$((sum+${answersArray[x]}))
+			((x++))
+		done
+
+		if [ -z $1  ] ; then
+			echo the sum is: $sum
+			echo 
+		fi
+#   	debug echo inside svbIntegrationSum, arg[0] = $1	
+#		debug echo inside svbIntegrationSum, sum  = $sum
+		if [ -z $1  ] ; then
+			echo ""
+		else
+			echo debug trying to set arg[1] to the sum in next command
+			eval $1=$((sum))
+			return $1
+		fi
 
 		answersArray="" 
 		Index="" 
