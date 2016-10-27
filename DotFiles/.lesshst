@@ -1,6 +1,5 @@
 .less-history-file:
 .search
-"recur
 "mv
 "total
 "integration
@@ -100,4 +99,5 @@
 "negate
 "not
 "-q
+"recursive
 .shell
