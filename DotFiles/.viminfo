@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/only
+~MSle0~/'
 
 # Last Substitute Search Pattern:
 ~MSle0&intDirCount
@@ -17,18 +17,17 @@
 $integrationDirCount
 
 # Command Line History (newest to oldest):
-:q!
-:q
-:help macvim
 :wq
 :w
+:W
+:q
 :set nu
 :set nonu
+:q!
 :e .svbshellFuncs
 :.,.+5
 :.,.+1 
 :. 
-:W
 ::wq
 :e ./Backup_Code.sh
 :fw
@@ -37,11 +36,16 @@ $integrationDirCount
 :set tabsize
 :1,$s/'/,/g
 :1,$s/'/,g
+:n
 
 # Search String History (newest to oldest):
-?/only
-?/read
-?/read only
+?/'
+?/startValue
+? \<after\>
+?/tstretu
+?/Count()
+?/getDot
+?/getDo	
 ?/sandbox
 ? \<echo\>
 ?/vifunc
@@ -55,10 +59,6 @@ $integrationDirCount
 ?/myLocalVar
 ?/activeDir
 ? intDirCount
-?/80,
-? #\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
-? \<find\>
-?/No
 
 # Expression History (newest to oldest):
 
@@ -68,10 +68,9 @@ $integrationDirCount
 
 # Registers:
 "0	LINE	0
-		echo 
+					answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
 ""1	LINE	0
-	
-	unitTestSum()
+				
 "2	LINE	0
 	
 "3	LINE	0
@@ -83,7 +82,7 @@ $integrationDirCount
 "6	LINE	0
 	
 "7	LINE	0
-	
+	echo "614 and answers array [ index ]" ${answersArray[x]}
 "8	LINE	0
 	
 "9	LINE	0
@@ -91,57 +90,104 @@ $integrationDirCount
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
 "-	CHAR	0
-		
+	#echo "617" $x " : " $sum
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  685  0  ~/.svbshellFuncs
-'1  558  0  ~/.svbshellFuncs
-'2  616  0  ~/.svbshellFuncs
-'3  570  0  ~/.svbshellFuncs
-'4  488  16  ~/.svbshellFuncs
-'5  483  24  ~/.svbshellFuncs
-'6  149  36  ~/.bashrc
-'7  1  0  ~/.sentientrc
-'8  98  0  ~/.atkmhrc
-'9  53  0  ~/.svbshellFunc2
+'0  1  8  ~/.svbshellFuncs
+'1  18  0  ~/.svbshellFuncs
+'2  70  17  ~/.svbshellFuncs
+'3  641  0  ~/.svbshellFuncs
+'4  700  0  ~/.svbshellFuncs
+'5  654  0  ~/.svbshellFuncs
+'6  552  16  ~/.svbshellFuncs
+'7  540  24  ~/.svbshellFuncs
+'8  149  36  ~/.bashrc
+'9  1  0  ~/.sentientrc
 
 # Jumplist (newest first):
--'  685  0  ~/.svbshellFuncs
--'  1  0  ~/.svbshellFuncs
--'  675  9  ~/.svbshellFuncs
--'  577  11  ~/.svbshellFuncs
--'  558  0  ~/.svbshellFuncs
+-'  1  8  ~/.svbshellFuncs
+-'  617  3  ~/.svbshellFuncs
+-'  634  0  ~/.svbshellFuncs
+-'  635  0  ~/.svbshellFuncs
+-'  614  3  ~/.svbshellFuncs
+-'  642  0  ~/.svbshellFuncs
+-'  575  1  ~/.svbshellFuncs
+-'  144  27  ~/.svbshellFuncs
+-'  89  26  ~/.svbshellFuncs
+-'  83  26  ~/.svbshellFuncs
+-'  658  44  ~/.svbshellFuncs
+-'  643  0  ~/.svbshellFuncs
+-'  584  1  ~/.svbshellFuncs
+-'  585  30  ~/.svbshellFuncs
+-'  625  3  ~/.svbshellFuncs
+-'  613  0  ~/.svbshellFuncs
+-'  637  0  ~/.svbshellFuncs
 -'  616  0  ~/.svbshellFuncs
--'  30  0  ~/.svbshellFuncs
--'  17  0  ~/.svbshellFuncs
--'  323  45  ~/.svbshellFuncs
--'  26  6  ~/.svbshellFuncs
--'  561  0  ~/.svbshellFuncs
--'  570  0  ~/.svbshellFuncs
--'  557  0  ~/.svbshellFuncs
--'  617  0  ~/.svbshellFuncs
+-'  627  0  ~/.svbshellFuncs
+-'  628  0  ~/.svbshellFuncs
+-'  531  1  ~/.svbshellFuncs
+-'  524  0  ~/.svbshellFuncs
+-'  559  8  ~/.svbshellFuncs
 -'  560  0  ~/.svbshellFuncs
--'  488  16  ~/.svbshellFuncs
--'  472  0  ~/.svbshellFuncs
--'  482  1  ~/.svbshellFuncs
--'  496  18  ~/.svbshellFuncs
--'  495  0  ~/.svbshellFuncs
--'  400  0  ~/.svbshellFuncs
--'  500  0  ~/.svbshellFuncs
--'  464  0  ~/.svbshellFuncs
--'  461  11  ~/.svbshellFuncs
--'  460  0  ~/.svbshellFuncs
--'  403  0  ~/.svbshellFuncs
--'  455  0  ~/.svbshellFuncs
--'  470  0  ~/.svbshellFuncs
--'  479  33  ~/.svbshellFuncs
--'  452  2  ~/.svbshellFuncs
--'  440  12  ~/.svbshellFuncs
--'  445  0  ~/.svbshellFuncs
--'  483  24  ~/.svbshellFuncs
+-'  554  1  ~/.svbshellFuncs
+-'  561  0  ~/.svbshellFuncs
+-'  545  31  ~/.svbshellFuncs
+-'  548  0  ~/.svbshellFuncs
+-'  539  6  ~/.svbshellFuncs
+-'  558  31  ~/.svbshellFuncs
+-'  543  28  ~/.svbshellFuncs
+-'  540  39  ~/.svbshellFuncs
+-'  361  75  ~/.svbshellFuncs
+-'  259  37  ~/.svbshellFuncs
+-'  74  9  ~/.svbshellFuncs
+-'  224  16  ~/.svbshellFuncs
+-'  250  15  ~/.svbshellFuncs
+-'  255  0  ~/.svbshellFuncs
+-'  18  0  ~/.svbshellFuncs
+-'  366  0  ~/.svbshellFuncs
+-'  140  25  ~/.svbshellFuncs
+-'  571  8  ~/.svbshellFuncs
+-'  449  65  ~/.svbshellFuncs
+-'  359  0  ~/.svbshellFuncs
+-'  258  4  ~/.svbshellFuncs
+-'  461  15  ~/.svbshellFuncs
+-'  30  0  ~/.svbshellFuncs
+-'  37  0  ~/.svbshellFuncs
+-'  32  12  ~/.svbshellFuncs
+-'  43  1  ~/.svbshellFuncs
+-'  42  6  ~/.svbshellFuncs
+-'  70  17  ~/.svbshellFuncs
+-'  20  0  ~/.svbshellFuncs
+-'  21  0  ~/.svbshellFuncs
+-'  22  1  ~/.svbshellFuncs
+-'  641  0  ~/.svbshellFuncs
+-'  700  0  ~/.svbshellFuncs
+-'  73  0  ~/.svbshellFuncs
+-'  16  19  ~/.svbshellFuncs
+-'  377  45  ~/.svbshellFuncs
+-'  35  6  ~/.svbshellFuncs
+-'  645  0  ~/.svbshellFuncs
+-'  654  0  ~/.svbshellFuncs
+-'  640  0  ~/.svbshellFuncs
+-'  701  0  ~/.svbshellFuncs
+-'  552  16  ~/.svbshellFuncs
+-'  526  0  ~/.svbshellFuncs
+-'  564  18  ~/.svbshellFuncs
+-'  563  0  ~/.svbshellFuncs
+-'  454  0  ~/.svbshellFuncs
+-'  570  0  ~/.svbshellFuncs
+-'  518  0  ~/.svbshellFuncs
+-'  515  11  ~/.svbshellFuncs
+-'  514  0  ~/.svbshellFuncs
+-'  457  0  ~/.svbshellFuncs
+-'  509  0  ~/.svbshellFuncs
+-'  538  33  ~/.svbshellFuncs
+-'  506  2  ~/.svbshellFuncs
+-'  494  12  ~/.svbshellFuncs
+-'  499  0  ~/.svbshellFuncs
 -'  149  36  ~/.bashrc
 -'  1  0  ~/.bashrc
 -'  1  0  ~/.sentientrc
@@ -160,173 +206,140 @@ $integrationDirCount
 -'  23  0  /private/tmp/somefilename
 -'  1  0  /private/tmp/somefilename
 -'  216  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  207  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  180  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  181  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  183  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  225  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  160  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  149  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  142  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  114  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  1  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  1  0  ~/Desktop/MPAY-1538_files/filelist.xml
--'  628  0  ~/.svbshellFuncs
--'  694  0  ~/.svbshellFuncs
--'  658  1  ~/.svbshellFuncs
--'  687  9  ~/.svbshellFuncs
--'  686  0  ~/.svbshellFuncs
--'  671  7  ~/.svbshellFuncs
--'  649  3  ~/.svbshellFuncs
--'  673  8  ~/.svbshellFuncs
--'  644  0  ~/.svbshellFuncs
--'  655  0  ~/.svbshellFuncs
--'  651  8  ~/.svbshellFuncs
--'  659  11  ~/.svbshellFuncs
--'  404  0  ~/.svbshellFuncs
--'  442  0  ~/.svbshellFuncs
--'  701  0  ~/.svbshellFuncs
--'  637  14  ~/.svbshellFuncs
--'  26  12  ~/.svbrc
--'  11  32  /private/etc/hosts
--'  1  0  /private/etc/hosts
--'  12  32  /private/etc/hosts
--'  265  0  ~/.svbshellFuncs
--'  349  54  ~/.svbshellFuncs
--'  465  42  ~/.svbshellFuncs
--'  54  63  ~/.svbrc
--'  65  0  ~/.svbrc
--'  52  45  ~/.svbrc
--'  2  0  ~/.svbrc
--'  54  0  /Volumes/dev/svb-web-core-ui/src/modules/navbar/navbarDirective.js
--'  1  0  /Volumes/dev/svb-web-core-ui/src/modules/navbar/navbarDirective.js
--'  1  0  /Volumes/dev/svb-web-core-ui/src/modules/navbar/navbarModule.js
--'  192  0  ~/.svbshellFuncs
--'  101  11  ~/.svbshellFuncs
--'  105  43  ~/.svbshellFuncs
--'  102  0  ~/.svbshellFuncs
+-'  68  14  ~/.svbshellFuncs
 
 # History of marks within files (newest to oldest):
 
 > ~/.svbshellFuncs
-	"	685	0
-	^	577	12
-	.	560	0
-	+	479	40
-	+	483	54
-	+	484	19
-	+	483	19
-	+	484	38
-	+	485	64
-	+	482	60
-	+	483	43
-	+	490	25
-	+	488	48
-	+	498	45
-	+	495	7
-	+	476	13
-	+	476	20
-	+	476	14
-	+	476	19
-	+	476	1
-	+	476	17
-	+	476	1
-	+	472	12
-	+	472	12
-	+	472	28
-	+	476	0
-	+	472	12
-	+	472	20
-	+	497	0
-	+	495	11
-	+	497	35
-	+	495	5
-	+	496	0
-	+	495	2
-	+	496	17
-	+	489	6
-	+	487	48
-	+	486	4
-	+	490	30
-	+	496	18
-	+	472	13
-	+	496	57
-	+	477	13
-	+	496	48
-	+	494	0
-	+	493	74
-	+	477	16
-	+	474	1
-	+	477	3
-	+	476	2
-	+	475	1
-	+	474	46
-	+	572	0
-	+	560	0
-	+	501	12
-	+	560	0
-	+	557	0
-	+	557	0
-	+	502	0
-	+	501	14
-	+	29	0
-	+	28	0
-	+	17	46
-	+	21	2
-	+	20	38
-	+	26	42
-	+	27	43
-	+	17	0
-	+	14	0
-	+	13	0
-	+	11	0
-	+	11	0
-	+	10	0
-	+	9	39
-	+	7	0
-	+	6	0
-	+	5	0
-	+	6	0
-	+	7	0
-	+	8	0
-	+	9	0
-	+	10	0
-	+	11	0
-	+	12	0
-	+	13	1
-	+	16	0
-	+	17	0
-	+	18	0
-	+	19	0
-	+	20	0
-	+	21	0
-	+	22	0
-	+	23	0
-	+	24	0
-	+	25	0
-	+	26	0
-	+	27	0
-	+	28	0
-	+	29	0
-	+	30	0
-	+	558	0
-	+	577	0
-	+	560	0
+	"	1	8
+	^	608	10
+	.	617	0
+	+	602	9
+	+	598	9
+	+	588	9
+	+	575	9
+	+	581	9
+	+	584	9
+	+	591	10
+	+	575	0
+	+	581	0
+	+	583	0
+	+	585	0
+	+	588	0
+	+	591	0
+	+	640	0
+	+	583	9
+	+	575	11
+	+	591	12
+	+	575	0
+	+	574	0
+	+	583	0
+	+	591	0
+	+	606	9
+	+	612	8
+	+	613	8
+	+	614	8
+	+	619	8
+	+	625	8
+	+	626	8
+	+	634	8
+	+	640	8
+	+	617	19
+	+	619	8
+	+	625	8
+	+	626	8
+	+	634	8
+	+	640	8
+	+	620	0
+	+	623	0
+	+	612	0
+	+	613	0
+	+	613	0
+	+	614	0
+	+	610	1
+	+	613	1
+	+	613	1
+	+	574	5
+	+	606	0
+	+	614	9
+	+	617	7
+	+	614	56
+	+	614	0
+	+	614	0
+	+	602	0
+	+	598	0
+	+	619	0
+	+	625	0
+	+	626	0
+	+	624	0
+	+	623	0
+	+	620	0
+	+	613	0
+	+	613	0
+	+	612	0
+	+	610	0
+	+	612	0
+	+	610	2
+	+	611	1
+	+	614	0
+	+	634	8
+	+	640	9
+	+	615	0
+	+	614	0
+	+	615	34
+	+	612	12
+	+	609	1
+	+	618	0
+	+	617	3
+	+	617	2
+	+	616	2
+	+	615	2
+	+	614	3
+	+	613	2
+	+	612	2
+	+	611	2
+	+	610	5
+	+	634	8
+	+	640	8
+	+	615	1
+	+	614	4
+	+	614	0
+	+	634	0
+	+	640	0
+	+	615	1
+	+	614	3
+	+	614	0
+	+	617	3
+	+	608	9
+	+	612	9
+	+	613	0
+	+	617	0
 
-> /private/tmp/MarkTestOut
-	"	333	0
-	^	356	4
-	.	356	3
-	+	356	3
+> /Volumes/dev/svb-services-sandbox/mur-java-lib-auth/src/main/java/com/svb/murano/common/authorizer/Authorizer.java
+	"	1	0
+
+> /Volumes/dev/svb-services-sandbox/mur-java-lib-auth/src/main/java/com/svb/murano/common/authorizer/HasAnyAuthorizer.java
+	"	1	0
+
+> /Volumes/dev/svb-services-sandbox/mur-java-lib-auth/src/main/java/com/svb/murano/common/authorizer/MuranoGenericAuthorizer.java
+	"	1	0
+
+> /Volumes/dev/svb-services-sandbox/mur-java-lib-auth/src/main/java/com/svb/murano/common/authorizer/PublicAuthorizer.java
+	"	1	0
+
+> /Volumes/dev/svb-services-sandbox/mur-java-lib-auth/src/main/java/com/svb/murano/common/annotations/AuditTrigger.java
+	"	1	0
+
+> /Volumes/dev/svb-services-sandbox/mur-java-lib-auth/src/main/java/com/svb/murano/common/annotations/RequestAuthorization.java
+	"	1	0
 
 > ~/.svbrc
-	"	30	90
-	^	30	91
-	.	30	90
-	+	22	80
+	"	30	63
+	^	31	64
+	.	31	63
 	+	16	0
 	+	15	0
-	+	58	41
+	+	59	41
 	+	29	136
 	+	29	35
 	+	29	125
@@ -334,52 +347,52 @@ $integrationDirCount
 	+	29	127
 	+	20	15
 	+	21	67
+	+	57	0
+	+	54	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	54	8
+	+	57	0
+	+	54	8
 	+	56	0
-	+	53	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	53	8
-	+	56	0
-	+	53	8
-	+	55	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	56	0
-	+	53	15
-	+	55	18
-	+	56	15
-	+	56	17
-	+	55	22
-	+	53	0
-	+	55	0
-	+	53	18
-	+	56	16
-	+	56	8
-	+	53	46
-	+	55	58
-	+	55	52
-	+	55	50
-	+	56	46
-	+	56	50
-	+	56	43
-	+	56	0
-	+	53	20
-	+	55	22
-	+	55	18
-	+	55	18
+	+	57	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	57	0
+	+	54	15
 	+	56	18
-	+	56	20
-	+	56	19
+	+	57	15
+	+	57	17
+	+	56	22
+	+	54	0
+	+	56	0
+	+	54	18
+	+	57	16
+	+	57	8
+	+	54	46
+	+	56	58
+	+	56	52
+	+	56	50
+	+	57	46
+	+	57	50
+	+	57	43
+	+	57	0
+	+	54	20
+	+	56	22
+	+	56	18
+	+	56	18
+	+	57	18
+	+	57	20
+	+	57	19
 	+	23	25
 	+	24	20
 	+	25	34
@@ -389,42 +402,49 @@ $integrationDirCount
 	+	13	17
 	+	14	18
 	+	11	20
-	+	53	12
-	+	55	12
-	+	56	37
-	+	53	0
-	+	47	17
-	+	46	0
-	+	55	0
-	+	48	54
-	+	49	0
+	+	54	12
+	+	56	12
+	+	57	37
+	+	54	0
+	+	48	17
+	+	47	0
 	+	56	0
-	+	51	0
-	+	55	0
+	+	49	54
+	+	50	0
+	+	57	0
 	+	52	0
 	+	56	0
 	+	53	0
+	+	57	0
+	+	54	0
+	+	57	0
+	+	51	0
+	+	57	0
+	+	55	54
 	+	56	0
-	+	50	0
-	+	56	0
-	+	54	54
-	+	55	0
-	+	42	17
-	+	56	27
-	+	42	6
-	+	56	25
-	+	31	0
-	+	34	0
+	+	43	17
+	+	57	27
+	+	43	6
+	+	57	25
 	+	32	0
 	+	35	0
-	+	57	0
-	+	56	17
+	+	33	0
+	+	36	0
+	+	58	0
+	+	57	17
 	+	28	34
 	+	26	12
 	+	27	48
 	+	30	90
-	e	79	76
-	k	101	6
+	+	31	63
+	e	80	76
+	k	102	6
+
+> /private/tmp/MarkTestOut
+	"	333	0
+	^	356	4
+	.	356	3
+	+	356	3
 
 > ~/.atkmhrc
 	"	1	18
@@ -1111,34 +1131,3 @@ $integrationDirCount
 	+	12	0
 	+	80	1
 	+	112	1
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/paymentDisplay.test.db.js
-	"	78	26
-	.	218	1
-	+	16	0
-	+	47	1
-	+	67	1
-	+	107	1
-	+	218	1
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/paymentEntitlement.test.js
-	"	115	0
-	.	99	2
-	+	32	0
-	+	86	1
-	+	99	2
-
-> ~/Mark/DotFiles/.bashrc
-	"	163	0
-
-> ~/Mark/.git/MERGE_MSG
-	"	1	0
-
-> ~/Downloads/Template of Figures.xml
-	"	2	2
-	^	2	3
-	.	2	2
-	+	2	2
-
-> /Volumes/dev/svb-web-payments/karma/karma-coverage.conf.js
-	"	43	0
