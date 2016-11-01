@@ -180,7 +180,8 @@ integrateDirs_UT_Count() 	# first to find all *.java under Integration
 		
 		cd $f
 		
-	 	componentCount=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+	 	#componentCount=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+	 	componentCount=`find . -name 'integration' -print0 | xargs -0 grep -r @Test |grep -v @Tested | grep -v //@Test | wc -l`
 		integrationDirCount=`find . -name integration -type d | wc -l`
 
 		if [ "$componentCount" -lt "1"  ] ; then
@@ -300,7 +301,8 @@ unitCount() 		# Ver 1. Finds *.java in Repo/src/test. Includes Int *.java
 			cd ./src/test/
 #debug		pwd
 			#componentCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
-			utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			#utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test|grep -v @Tested | grep -v //@Test | wc -l`
 			testSum=$(( testSum + utCount ))
 
 #debug		echo having just run find in ...src/test/ what is the componentCount
@@ -400,7 +402,8 @@ sandboxCount()		# Ver 1. Finds *.java in all LIB/src/test dir tree
 
 		if [ -d "./src/test/"   ] ; then
 			cd ./src/test/
-			utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			#utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test|grep -v @Tested | grep -v //@Test | wc -l`
 			testSum=$(( testSum + utCount ))
 
 		fi
@@ -463,7 +466,8 @@ svbIntegrationSum()		# Ver 2 of integrationDirs_UT_Count
 		#pwd
 		tabChar="\t"
 #		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
-		answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		#answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test |grep -v @Tested | grep -v //@Test | wc -l`
 # debug echo -e $i $tabChar $immediate
 # debug echo
 # debugecho The number of elements
@@ -607,7 +611,8 @@ sandboxUTCount()		# Ver 2 of sandboxCount. Returns sum if asked
 			fi
 			if [ -d "./src/test/"   ] ; then
           		 cd ./src/test/
-				answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+				#answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+				answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| grep -v @Tested | grep -v //@Test | wc -l`
 				((Index++))
 			fi
 		fi
@@ -682,7 +687,10 @@ unitTestSum()		# Ver 2 of unitCount. Returns sum if asked
 		cd $i
         if [ -d "./src/test/"   ] ; then
             cd ./src/test/
-			answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			pwd
+			#answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			# Turns out @Tested is a Spring Java Annotation, there are also commented out @Test(s). But I cannot trust "/* @Test. so removing it
+			answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test|grep -v @Tested | grep -v //@Test |  wc -l`
 			cd /Volumes/dev
 			((Index++))
 		fi

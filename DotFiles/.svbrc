@@ -42,6 +42,7 @@ alias getAutoTestRpt='cp /Volumes/dev/svb-web-payments/reports/integration/test-
 # Go cd to directories
 # go_2_directories
 #######################
+alias gost='cd src/test'
 alias godev='cd /Volumes/dev/'
 alias gosvb='cd /Volumes/dev/svb-web-payments'
 alias goschedpay='cd /Volumes/dev/svb-scheduler-payments'
