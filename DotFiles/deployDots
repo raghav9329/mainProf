@@ -1,0 +1,21 @@
+#!/bin/bash
+
+	fileList=".atkmhrc .bash_profile .bashrc .dircolors .gitconfig 
+			  .gitignore .gitignore_global .sentientrc .svbrc
+			  .svbshellfuncs .svbshellFunc2  .vimrc
+			  .zshrc"
+
+
+	for f in $fileList ; do
+	if [ -d $f  ] ; then
+		:  # aparently the colon is the no-opp, here if we get the dot directory
+	else	
+	 #echo "checking diff for all files $f "
+		if cmp -s $f ../../$f ; then
+			:	
+		else
+			echo "$f not same as in root "
+		fi	
+
+	fi
+	done

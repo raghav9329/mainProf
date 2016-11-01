@@ -524,10 +524,8 @@ svbIntegrationSum()		# Ver 2 of integrationDirs_UT_Count
 }
 
 #tstreturn(-)			# Ver 1 of Test Reporting Func
-testReport()		# Ver 1 of Test Reporting Func
+tstreturn()			# Ver 1 of Test Reporting Func
 {
-	pushd /Volumes/dev/ >> /dev/null
-
 	difference=0
 	utCountOnly=0
 	repoIntegrationCount=0
@@ -536,7 +534,6 @@ testReport()		# Ver 1 of Test Reporting Func
 	if [ $# -ne 0  ] ; then #if num of arguments != 0
 		svbIntegrationSum
 		unitTestSum
-		sandboxUTCount
 	fi
 	echo
 	echo calling svbIntegrationSum [ repoIntegrationCount ] redirect to dev-null
@@ -564,8 +561,6 @@ testReport()		# Ver 1 of Test Reporting Func
 	echo Test Setting a variable to this difference
 	
 	utCountOnly=$((unitTestSumResult - repoIntegrationCount ))
-	echo 
-	echo adding in the javaLibUTCount var $javaLibUTCount to the utCountOnly var
 	utCountOnly=$(( utCountOnly + javaLibUTCount ))
 	echo echoing utCountOnly variable: $utCountOnly
 	echo 
@@ -581,7 +576,6 @@ testReport()		# Ver 1 of Test Reporting Func
 #	echo Integration Count: $repoIntegrationCount
 	difference=0
 	repoIntegrationCount=0
-	popd >> /dev/null
 }
 
 sandboxUTCount()		# Ver 2 of sandboxCount. Returns sum if asked
@@ -590,63 +584,52 @@ sandboxUTCount()		# Ver 2 of sandboxCount. Returns sum if asked
 	sum=0
 	pushd /Volumes/dev/ >> /dev/null
 
+#	directories=" svb-service-payments svb-service-entitlements svb-service-ooba
+#	svb-scheduler-payments svb-service-accounts svb-service-csrf svb-service-client
 #	svb-service-bankinfo"
 	REPO_DIRECTORIES="/Volumes/dev/svb-services-sandbox/*"
-	toolsDir="/Volumes/dev/svb-services-sandbox/tools"
-	zeroFile="/Volumes/dev/svb-services-sandbox/Zero"
+
 #  Need to get sand box repo libs httpClient auth dbconnector logger Monotiring Exception Mappers	
 
 	for i in $REPO_DIRECTORIES ; do
 
 		if [ -d "$i" ] ; then 
-			if [[ "$i" == "$zeroFile" || "$i" == "$toolsDir"   ]]  ; then
-				#echo "598 tools dir skip"
-				dummy1=$i # a no-op for he if then else fi  	
-			else
-				cd $i
-			fi
+			cd $i
+
 			if [ -d "./src/test/"   ] ; then
           		 cd ./src/test/
+				#find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l
 				answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+				cd /Volumes/dev
 				((Index++))
 			fi
 		fi
 	done
-	
+
 	if [ -z $1  ] ; then
 		echo ......		
 	fi
+
 	x=0
 	sum=0
-#cd /Volumes/dev
 	for i in $REPO_DIRECTORIES ; do
-		#echo "619 i == $i"
-		cd $i
-		#echo "621 $(pwd)"
-		# if -f "$i"  is a check if $i represents a file.
-		# in this one case, it is equial to the Zero file
-		if [[ "$i" == "$zeroFile"   ||  "$i" == "$toolsDir"  ]] ; then		
-			echo ""	
-			#echo "627  found i = $i "
-		else #We're looking at directories.
+
+		if [ -f "$i"  ] ; then		
+			echo ""
+		
+		else	
 			if [ -z $1  ] ; then
-				justSubDirName=`echo "$i"| awk '{print substr ($0,34)}'`
-				echo "${answersArray[x]} $justSubDirName "
+				echo  ${answersArray[x]} $i
 			fi
-         	#echo "632  ${answersArray[x]}"		 	
+		 	
 			sum=$((sum + ${answersArray[x]}))
-
 			((x++))
-
 		fi	
-
 	done
-	
-	
 
 	if [ -z $1  ] ; then
-		echo "the sum is: $sum"
-		echo ""
+		echo the sum is: $sum
+		echo 
 	fi
 
 	#   	debug echo inside svbIntegrationSum, arg[0] = $1	
@@ -755,7 +738,6 @@ team2UtCFe()		# Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
 #
 #echo ""
 #}
-
 
 
 #  end of file 

@@ -24,11 +24,11 @@ alias catfunc='cat /Users/maatkins/.svbshellFuncs'
 alias lessfunc='less /Users/maatkins/.svbshellFuncs'
 alias funcal='catfunc | grep -i $1'
 alias vifunc='vi /Users/maatkins/.svbshellFuncs'
-alias vifunc2='vi /Users/maatkins/.svbshellFuncs2'
+alias vifunc2='vi /Users/maatkins/.svbshellFunc2'
 alias whatCounts='funcal "Count()"'
 alias shelltestCounts='unitTestCountPayments; unitTestCountCoreUi;integrationTestCountMock;integrationTestCountE2E; integrationTestCountAll '
 alias qashellfuncs2tmp=' date > /tmp/MarkTestOut ;         testRunFuncs >> /tmp/MarkTestOut'
-alias shellFuncNames=' grep "()" /Users/maatkins/.svbshellfuncs'
+alias shellFuncNames='echo;  grep "()" /Users/maatkins/.svbshellfuncs; echo'
 #######################
 #
 #   “for what evvah"  " '
