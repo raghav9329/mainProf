@@ -446,14 +446,77 @@ sandboxCount()		# Ver 1. Finds *.java in all LIB/src/test dir tree
 echo "************************************************"
 }
 
+
+#tstreturn(-)			# Ver 1 of Test Reporting Func
+testReport()		# Ver 1 of Test Reporting Func
+{
+	pushd /Volumes/dev/ >> /dev/null
+
+	difference=0
+	utCountOnly=0
+	repoIntegrationCount=0
+	javaLibUTCount=0
+
+	if [ $# -ne 0  ] ; then #if num of arguments != 0
+		svbIntegrationSum
+		unitTestSum
+		sandboxUTCount
+	fi
+	echo
+	echo calling svbIntegrationSum [ repoIntegrationCount ] redirect to dev-null
+  	svbIntegrationSum repoIntegrationCount > /dev/null 2>&1
+	echo after calling svbIntegrationSum [ repoIntegrationCount ]
+	echo the value of the repoIntegraitonCount Var is : $repoIntegrationCount
+	echo
+
+	echo calling unitTestSum [ unitTestSumResult ] redirect to dev-null
+	unitTestSum unitTestSumResult > /dev/null 2>&1
+	echo after calling unitTestSum [ unitTestSumResult ]
+	echo the value of the unitTestSumResult Var is : $unitTestSumResult
+	echo
+
+	echo calling sandboxUTCount [ javaLibUTCount ] redirect to dev-null
+	sandboxUTCount javaLibUTCount > /dev/null 2>&1
+	echo after calling sandboxUTCount [ javaLibUTCount ] redirect to dev-null
+	echo the value of the javaLibUTCount var is : $javaLibUTCount
+	echo
+
+
+	echo subtracting $repoIntegrationCount from $unitTestSumResult and should be "somevalue"
+	echo the diff in subtracting variables is: $((unitTestSumResult - repoIntegrationCount ))
+	echo	
+	echo Test Setting a variable to this difference
+	
+	utCountOnly=$((unitTestSumResult - repoIntegrationCount ))
+	echo 
+	echo adding in the javaLibUTCount var $javaLibUTCount to the utCountOnly var
+	utCountOnly=$(( utCountOnly + javaLibUTCount ))
+	echo echoing utCountOnly variable: $utCountOnly
+	echo 
+	echo So, reporting should look like
+	echo  Integration Test Count: $repoIntegrationCount
+	echo "       Unit Test Count: "$utCountOnly
+
+#	echo subtraction result is: $(( withAnotherVariable - repoIntegrationCount  ))
+#	echo
+#	#eval differenc=$((withAnotherVariable - repoIntegraitonCount))
+#	differenc=$(( withAnotherVariable - repoIntegratitonCount ))
+#	echo   Unit test count: $difference
+#	echo Integration Count: $repoIntegrationCount
+	difference=0
+	repoIntegrationCount=0
+	popd >> /dev/null
+}
+
+
 ################
 #  
 # Get the count of integration tests in the repo's identified
 # In order to check if this is the proper list of repo's run unitCount(-)
-# 
 #  
 ###
-svbIntegrationSum()		# Ver 2 of integrationDirs_UT_Count
+#svbIntegrationSum(-)		# Ver 2 of integrationDirs_UT_Count
+paymentsComponentUTC()	# Ver 2 of integrationDirs_UT_Count
 {
     Index=0
 
@@ -527,68 +590,12 @@ svbIntegrationSum()		# Ver 2 of integrationDirs_UT_Count
 		popd >> /dev/null
 }
 
-#tstreturn(-)			# Ver 1 of Test Reporting Func
-testReport()		# Ver 1 of Test Reporting Func
-{
-	pushd /Volumes/dev/ >> /dev/null
-
-	difference=0
-	utCountOnly=0
-	repoIntegrationCount=0
-	javaLibUTCount=0
-
-	if [ $# -ne 0  ] ; then #if num of arguments != 0
-		svbIntegrationSum
-		unitTestSum
-		sandboxUTCount
-	fi
-	echo
-	echo calling svbIntegrationSum [ repoIntegrationCount ] redirect to dev-null
-  	svbIntegrationSum repoIntegrationCount > /dev/null 2>&1
-	echo after calling svbIntegrationSum [ repoIntegrationCount ]
-	echo the value of the repoIntegraitonCount Var is : $repoIntegrationCount
-	echo
-
-	echo calling unitTestSum [ unitTestSumResult ] redirect to dev-null
-	unitTestSum unitTestSumResult > /dev/null 2>&1
-	echo after calling unitTestSum [ unitTestSumResult ]
-	echo the value of the unitTestSumResult Var is : $unitTestSumResult
-	echo
-
-	echo calling sandboxUTCount [ javaLibUTCount ] redirect to dev-null
-	sandboxUTCount javaLibUTCount > /dev/null 2>&1
-	echo after calling sandboxUTCount [ javaLibUTCount ] redirect to dev-null
-	echo the value of the javaLibUTCount var is : $javaLibUTCount
-	echo
 
 
-	echo subtracting $repoIntegrationCount from $unitTestSumResult and should be "somevalue"
-	echo the diff in subtracting variables is: $((unitTestSumResult - repoIntegrationCount ))
-	echo	
-	echo Test Setting a variable to this difference
-	
-	utCountOnly=$((unitTestSumResult - repoIntegrationCount ))
-	echo 
-	echo adding in the javaLibUTCount var $javaLibUTCount to the utCountOnly var
-	utCountOnly=$(( utCountOnly + javaLibUTCount ))
-	echo echoing utCountOnly variable: $utCountOnly
-	echo 
-	echo So, reporting should look like
-	echo  Integration Test Count: $repoIntegrationCount
-	echo "       Unit Test Count: "$utCountOnly
 
-#	echo subtraction result is: $(( withAnotherVariable - repoIntegrationCount  ))
-#	echo
-#	#eval differenc=$((withAnotherVariable - repoIntegraitonCount))
-#	differenc=$(( withAnotherVariable - repoIntegratitonCount ))
-#	echo   Unit test count: $difference
-#	echo Integration Count: $repoIntegrationCount
-	difference=0
-	repoIntegrationCount=0
-	popd >> /dev/null
-}
-
-sandboxUTCount()		# Ver 2 of sandboxCount. Returns sum if asked
+#sandboxUTCount(-)		# Ver 2 of sandboxCount. Returns sum if asked
+#paymentsJavaLIbTUC(-)	# Ver 2 of sandboxCount. Returns sum if asked
+paymentsJavaLibUTC()	# Ver 2 of sandboxCount. Returns sum if asked
 {
     Index=0
 	sum=0
@@ -623,7 +630,7 @@ sandboxUTCount()		# Ver 2 of sandboxCount. Returns sum if asked
 	fi
 	x=0
 	sum=0
-#cd /Volumes/dev
+
 	for i in $REPO_DIRECTORIES ; do
 		#echo "619 i == $i"
 		cd $i
@@ -638,7 +645,6 @@ sandboxUTCount()		# Ver 2 of sandboxCount. Returns sum if asked
 				justSubDirName=`echo "$i"| awk '{print substr ($0,34)}'`
 				echo "${answersArray[x]} $justSubDirName "
 			fi
-         	#echo "632  ${answersArray[x]}"		 	
 			sum=$((sum + ${answersArray[x]}))
 
 			((x++))
@@ -672,22 +678,23 @@ sandboxUTCount()		# Ver 2 of sandboxCount. Returns sum if asked
 
 }
 
-unitTestSum()		# Ver 2 of unitCount. Returns sum if asked
+#unitTestSum(-)		# Ver 2 of unitCount. Returns sum if asked
+paymentsAllUTC()		# Ver 2 of unitCount. Returns sum if asked
 {
     Index=0
 
+	# from where ever the cmdline is, do this so as to popd at end.  your back
 	pushd /Volumes/dev/ >> /dev/null
+	
 	directories=" svb-service-payments svb-service-entitlements svb-service-ooba
 	svb-scheduler-payments svb-service-accounts svb-service-csrf svb-service-client
 	svb-service-bankinfo"
-
-#  Need to get sand box repo libs httpClient auth dbconnector logger Monotiring Exception Mappers	
 
 	for i in $directories ; do
 		cd $i
         if [ -d "./src/test/"   ] ; then
             cd ./src/test/
-			pwd
+			#pwd
 			#answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
 			# Turns out @Tested is a Spring Java Annotation, there are also commented out @Test(s). But I cannot trust "/* @Test. so removing it
 			answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test|grep -v @Tested | grep -v //@Test |  wc -l`
@@ -696,26 +703,27 @@ unitTestSum()		# Ver 2 of unitCount. Returns sum if asked
 		fi
 	done
 
-		if [ -z $1  ] ; then
-			echo ......		
-		fi
+		#if [ -z $1  ] ; then
+		#	echo ......		
+		#fi
+		if [ -z $1  ] ; then echo "......	" ; fi
 
 		x=0
 		sum=0
 		for i in $directories ; do
 
-		if [ -z $1  ] ; then
-			echo ${answersArray[x]} $i
+		#if [ -z $1  ] ; then
+		#	echo ${answersArray[x]} $i
+		#fi
+		if [ -z $1  ] ; then echo -e "\t${answersArray[x]} $i" ; fi
 
-		fi
-			sum=$((sum+${answersArray[x]}))
-			((x++))
+		sum=$((sum+${answersArray[x]}))
+		((x++))
+
 		done
 
-		if [ -z $1  ] ; then
-			echo the sum is: $sum
-			echo 
-		fi
+		if [ -z $1  ] ; then echo the sum is: $sum ; echo ; fi
+
 #   	debug echo inside svbIntegrationSum, arg[0] = $1	
 #		debug echo inside svbIntegrationSum, sum  = $sum
 		if [ -z $1  ] ; then
@@ -733,37 +741,90 @@ unitTestSum()		# Ver 2 of unitCount. Returns sum if asked
 		popd >> /dev/null
 }
 
-team2UtCFe()		# Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
+#team2FE_UTC(-)		# Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
+svbWebPay_UTC()		# Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
 {
+	#pushd /Volumes/dev/ >> /dev/null
+
 	REPO_DIRECTORIES="/Volumes/dev/svb-web-payments/"
-	returnVal=0
+	payAppReturnVal=0
 	
 	cd /Volumes/dev/svb-web-payments/app/src
-		returnVal=$( grep -r "\sit(" * | wc -l)
+		payAppReturnVal=$( grep -r "\sit(" * | wc -l)
 		if [ -z $1 ] ; then
-			echo "test count is: $returnVal"	
+			echo "test count is: $payAppReturnVal"	
 		else
 			#eval $1 = $((returnVal))
 			#tempVar=0
 			#returnVal=$((returnVal + tempVar ))
 			# debug	echo "debug returnVal ="$returnVal
-			eval $1=$((returnVal))
+			eval $1=$(( payAppReturnVal ))
 			return $1
 		fi
-	
-	returnVal=0
+
+	payAppReturnVal=0
 	echo ""
+	#popd >> /dev/null
 }
 
-#team23UtCoreUi()		# Ver 2 UnitTEst Count in svb-web-core-ui. Val returned if askedi
-#{
-#	REPO_DIRECTORIES="/Volumes/dev/svb-web-core-ui/*
-#
-#
-#
-#echo ""
-#}
+webCoreUI_UTC()		# Ver 2 UnitTEst Count in svb-web-core-ui. Val returned if askedi
+{
+	WCUI_REPODIR="/Volumes/dev/svb-web-core-ui/src/"
+	wcuiReturnVal=0
+	for i in $WCUI_REPODIR ; do
+		cd $i
+		wcuiReturnVal=$( grep -r "\sit(" * | wc -l )
+		if [ -z $1 ] ; then
+			echo "test count is: $wcuiReturnVal"
+		else
+			echo "781 $wcuiReturnVal"
+			eval $1=$(( wcuiReturnVal ))
+			return $1
+			echo "784"
+		fi	
+	done
+
+	wcuiReturnVal=0
+}
+
+team2TestCounts()
+{
+	paymentsAllUTC allUTC > /dev/null 2>&1
+	echo "all backend Repo unit tests: $allUTC"
+	
+	paymentsJavaLibUTC pJLibUTC > /dev/null 2>&1
+	echo "all backend JavaLib Unit tests: $pJLibUTC"
+	repoAndJavaLib=$(( allUTC + pJLibUTC ))
+	echo ""
+	echo "These to numbers will be summed $repoAndJavaLib"
+
+	echo ""
+	paymentsComponentUTC pCUTC > /dev/null 2>&1
+	unitOnly=$(( repoAndJavaLib - pCUTC ))
+	echo "all backend component test are subtracted from the sum above: $unitOnly"
+	echo "the backend component count is: $pCUTC"	
+	echo "the backend component counts stand as it's own count"
+	echo ""
+	svbWebPay_UTC svbWPUTC > /dev/null 2>&1	
+	webCoreUI_UTC wCUI_UTC > /dev/null 2>&1
+	allWebPayFE_UTC=$(( svbWPUTC + wCUI_UTC ))
+	echo "the front end svb-web-payments unit tests: $svbWPUTC"
+
+	echo "the front end svb-core-ui unit test: $wCUI_UTC"
+	giveMeSomeSpace
+	
+	echo "Murano Payments Backend Unit Test: $unitOnly"
+	echo "Murano Payments Backend Integration Tests: $pCUTC"
+	echo "All Murano Paments Frontend Unit Test: $allWebPayFE_UTC"
+	
+	
 
 
+
+
+
+
+	allUTC=""
+}
 
 #  end of file 
