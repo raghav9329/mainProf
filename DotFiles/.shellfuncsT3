@@ -1,0 +1,97 @@
+#team2FE_UTC(-)     # Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
+svbWebBillpay_UTC()     # Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
+{
+    #pushd /Volumes/dev/ >> /dev/null
+
+    REPO_DIRECTORIES="/Volumes/dev/svb-web-billpay/"
+    billpayAppReturnVal=0
+    
+    cd /Volumes/dev/svb-web-billpay/app/src
+        billpayAppReturnVal=$( grep -r "\sit(" * | wc -l) 
+        if [ -z $1 ] ; then
+            echo "test count is: $billpayAppReturnVal"  
+        else
+            #eval $1 = $((returnVal))
+            #tempVar=0
+            #returnVal=$((returnVal + tempVar ))
+            # debug echo "debug returnVal ="$returnVal
+            eval $1=$(( billpayAppReturnVal ))
+            return $1
+        fi  
+
+    billpayAppReturnVal=0
+    echo ""
+    #popd >> /dev/null
+}
+
+#*****************************
+#
+# taken out of .shellfuncsT2  
+# this was func paymentsComponentUTC()	# Ver 2 of integrationDirs_UT_Count
+#
+#*****************************
+webBillPayComponent()
+{
+    Index=0
+
+	pushd /Volumes/dev/ >> /dev/null
+	directories=" svb-service-billpay "
+
+	for i in $directories ; do
+		cd $i
+		#pwd
+		tabChar="\t"
+#		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		#answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test |grep -v @Tested | grep -v //@Test | wc -l`
+# debug echo -e $i $tabChar $immediate
+# debug echo
+# debugecho The number of elements
+# debug echo ${#answersArray[@]}
+		cd /Volumes/dev
+		((Index++))
+
+	done
+	
+		#if [[ $1 == "" ]] ; then
+		if [ -z $1  ] ; then
+			echo ......		
+		fi
+
+		x=0
+		sum=0
+		for i in $directories ; do
+
+		#if [[ $1 == "" ]] ; then
+		if [ -z $1  ] ; then
+			echo ${answersArray[x]} $i
+
+		fi
+			sum=$((sum+${answersArray[x]}))
+			((x++))
+		done
+
+		#if [[ $1 == "" ]] ; then
+		if [ -z $1  ] ; then
+			echo the sum is: $sum
+			echo 
+		fi
+
+#   	debug echo inside svbIntegrationSum, arg[0] = $1	
+#		debug echo inside svbIntegrationSum, sum  = $sum
+		if [ -z $1  ] ; then
+			echo ""
+		else
+			echo debug trying to set arg[1] to the sum in next command
+			eval $1=$((sum))
+			return $1
+		fi
+
+		answersArray="" 
+		Index="" 
+		x=0
+		sum=0
+		popd >> /dev/null
+
+}
+

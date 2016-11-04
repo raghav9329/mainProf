@@ -513,8 +513,9 @@ testReport()		# Ver 1 of Test Reporting Func
 #  
 # Get the count of integration tests in the repo's identified
 # In order to check if this is the proper list of repo's run unitCount(-)
-#  
+#:  
 ###
+
 #svbIntegrationSum(-)		# Ver 2 of integrationDirs_UT_Count
 paymentsComponentUTC()	# Ver 2 of integrationDirs_UT_Count
 {
