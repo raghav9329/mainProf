@@ -1,0 +1,830 @@
+# Shell Functions moved to .svbshellFuncs on 10/5/2016
+#
+# Funciton "Move File" 
+# Only works in specific directories and between these directories.
+giveMeSomeSpace()		# print some output space and lines
+{
+	echo "..................................."
+	echo 
+	echo "   ******  Just some space ***** "
+	echo 
+	echo "..................................."
+
+}
+
+
+testRunFuncs()		# Test process to at least verify this file 
+{  # Test process to at least verify this file 
+
+	pushd /Volumes/dev/ >> /dev/null	
+
+	echo runing the mf - MoveFile function
+	mf
+	giveMeSomeSpace		
+	echo running the whatrepoBranch funciton
+
+	whatrepoBranch
+
+	giveMeSomeSpace	
+	
+	if [ "$1" != ""  ] ; then
+	#if [ -z $1  ] ; then
+		updateRepos
+		giveMeSomeSpace
+	else
+		echo NOT running the updateRepos function
+		echo that one requires a network connection
+	fi
+
+	integrationDirectoriesAndCount
+	giveMeSomeSpace		
+
+	echo getDotFiles
+	getDotFiles
+	giveMeSomeSpace	
+	
+	echo unitCount
+	unitCount
+	giveMeSomeSpace	
+	
+	echo sandboxCount
+	sandboxCount
+	giveMeSomeSpace	
+
+	svbIntegrationSum
+
+
+
+	tstreturn
+
+
+
+
+	sandboxUTCount
+
+
+	unitTestSum
+
+
+
+	popd >> /dev/null
+}
+##
+
+mf() 			# Function moves files if in specific Loc to specific Loc
+{
+ if [ -z "$1" ] ; then
+   echo "An argument is really necessary "
+ fi
+ #if [ `pwd` == "/Volumes/dev/svb-web-payments/integration/scenarios"  ] ; then
+ if [ `pwd` == "/Volumes/dev/svb-web-payments/integration/qaScenarios"  ] ; then
+   if [ -f $1* ]; then
+      mv ./$1* /Users/maatkins/Mark/tmp_hold
+      else echo "File wasn't there "
+   fi
+ elif [ `pwd` == "/Users/maatkins/Mark/tmp_hold" ] ; then
+   if [ -f $1* ]; then
+  #    mv ./$1* /Volumes/dev/svb-web-payments/integration/scenarios
+      mv ./$1* /Volumes/dev/svb-web-payments/integration/qaScenarios
+      else echo "File wasn't there "
+   fi
+ else echo "Not in a directory that supports the -mf(move file)- command"
+fi
+}
+
+whatrepoBranch()		# Iterate through all repos and do a git branch check
+{
+ 	pushd /Volumes/dev/ >> /dev/null
+	REPO_DIRECTORIES="/Volumes/dev/svb-*"
+
+   for f in $REPO_DIRECTORIES ; do
+	if [ -d "$f"  ]	; then
+        cd $f
+        pwd 
+	    git branch
+	    cd ~/
+        echo 	
+	else
+        echo NotWorking
+	fi
+    done
+	echo !! DONE  !!
+
+	popd >> /dev/null
+}
+
+
+updateRepos()		# Iterate through all repos and do a git pull
+{
+	pushd /Volumes/dev/ >> /dev/null
+	REPO_DIRECTORIES="/Volumes/dev/svb-*"
+	for f in $REPO_DIRECTORIES ; do
+		if [ -d "$f"  ]	; then
+			echo "************************************************"
+            cd $f
+            pwd 
+	        git pull
+	        cd ~/
+              echo 	
+		else
+            echo NotWorking
+			echo something about $f
+			echo not resolving in the if -d analysis
+		fi
+      done
+	echo !! DONE  !!
+	popd >> /dev/null
+
+}
+
+#integrationDirectoriesAndCount(-) # first to find all *.java under Integration
+integrateDirs_UT_Count() 	# first to find all *.java under Integration
+{ 
+ 	echo	
+	echo "This is all the Repo's that have Sub Directories named \"integration\" " 
+	echo Integration Repository test counts and...
+	echo Repository Integration directory count	
+	echo
+
+	# ***********************
+	# cus I want to get back to where I started 	
+
+	pushd /Volumes/dev/ >> /dev/null
+
+	# *********************
+	# godev is an alias call cd to /Volumes/dev
+	#godev
+
+	loopCount=0
+	componentCount=""
+	integrationDirCount=""
+	dummyVar=""
+	REPO_DIRECTORIES="/Volumes/dev/svb*"
+   
+	for f in $REPO_DIRECTORIES
+     do
+		
+		if [ "$1" == "allRepos"  ] ; then
+			echo $f 
+		fi
+	#*****************************************
+	# loopCount++ cuz in a couple of places I wanted to see how many 
+	# times I'd been through the loop and on to another dir
+	((loopCount++))
+
+	
+	# *************************************
+	# are we in one of the directories
+	# identified in $REPO_DIRECTORIES ???
+	if [ -d "$f"  ]	; then
+		
+		cd $f
+		
+	 	#componentCount=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+	 	componentCount=`find . -name 'integration' -print0 | xargs -0 grep -r @Test |grep -v @Tested | grep -v //@Test | wc -l`
+		integrationDirCount=`find . -name integration -type d | wc -l`
+
+		if [ "$componentCount" -lt "1"  ] ; then
+			dummyVar=$dummyVar+1
+		
+		else
+		echo "************************************************"
+			dirStirng=`pwd`
+			echo $dirStirng Java Component Test count: $componentCount
+			componentCount=""
+			dirString=""
+		fi
+
+		if [ "$integrationDirCount" -lt "1" ]  ; then
+			dummyVar=$dummyVar+2
+
+		else
+			dirString=`pwd`
+			echo $dirString Integration Directories: $integrationDirCount
+			echo
+			integrationDirCount=""
+			dirString=""
+		fi
+
+		cd ~/
+	else
+		echo There is a BIG Problem !
+		echo Something Critical is Not Working
+		echo Something about the main loop variable through all directories in Volumes dev
+		echo is not a directory.  Here look at the value of eff
+		echo eff is $f
+		myLocalVar=""
+	fi
+   done
+	popd >> /dev/null
+echo "************************************************"
+}
+
+
+
+getDotFiles() 		# Gets all the ~/maatkins/.* files. copies to ~/Mark/DotFiles
+{   #####################################################
+	# In this file I need to set a list of variables that contain the chars in the file names
+    # that I don't want  eg: swp for vi swap files,  eg v8Flags ???? why ???   others ???
+    # 
+	#
+	# Todo:  make the check for a *.swp file a case statement alloinwg
+	#		 us to check for other file extension types, ex. *.swo, *.json
+	#####
+	cd /Users/maatkins/
+	dirList=`ls -ad .*`
+	swpFile=".swp"
+
+	for f in $dirList ; do
+ 	if [ -f $f ] ; then
+		if echo $f | grep -q $swpFile ; then
+         echo "Not touching swp file named: "$f
+       else
+        cp $f /Users/maatkins/Mark/DotFiles
+	echo -e $f "\t copied"
+     fi  
+ fi
+done
+
+}
+
+getDotFileTest() 		# test bed for getDotFiles using case statement to avoid file types
+{
+	echo not doing anything yet
+# try to do a Case statement with several checks all
+	# Not touching this file named : $f
+}
+
+
+#unitCount(-) # first to find all *.java in ../src/test in each repo. Includes Ingetration *.java
+unitCount() 		# Ver 1. Finds *.java in Repo/src/test. Includes Int *.java
+{			
+
+	echo
+	# ***********************
+	# cus I want to get back
+	# to where I started 	
+	pushd /Volumes/dev/ >> /dev/null
+
+	testSum=0
+	loopCount=0
+	componentCount=0
+	utCount=0
+	integrationDirCount=0
+	dummyVar=""
+	REPO_DIRECTORIES="/Volumes/dev/svb*"
+	themagicPlace="src/test"
+	activeDir=""
+   
+	for f in $REPO_DIRECTORIES
+     do
+		
+		if [ "$1" == "allRepos"  ] ; then
+			echo $f 
+		fi
+		#*****************************************
+		# loopCount++ cuz in a couple of places
+		# I wanted to see how many times I'd been
+		# through the loop and on to another dir
+		((loopCount++))
+	
+	# *************************************
+	# are we in one of the directories
+	# identified in $REPO_DIRECTORIES ???
+	if [ -d "$f"  ]	; then
+#debug	echo "************************************************00"
+		cd $f
+#debug	echo $loopCount
+
+		if [ -d "./src/test/"   ] ; then
+#debug			echo found it !!!!
+			cd ./src/test/
+#debug		pwd
+			#componentCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			#utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test|grep -v @Tested | grep -v //@Test | wc -l`
+			testSum=$(( testSum + utCount ))
+
+#debug		echo having just run find in ...src/test/ what is the componentCount
+#debug		echo $componentCount
+				
+		fi
+		
+		
+	    #componentCount=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		#integrationDirCount=`find . -name integration -type d | wc -l`
+
+#debug	echo is there a Bash Integer Expression expected warning next 11 ??	
+		if [ "$utCount" -gt 0  ] ; then
+
+# for now...		echo "************************************************11"
+			cd $f
+			dirStirng=`pwd`
+			tabString=" \t \t "
+			echo -e $dirStirng" :"$utCount
+			#echo "                   Test_Sum is: $testSum"
+#			echo Test count Summation is: $testSum
+			echo 
+			utCount=0
+			dirString=""
+		else
+			dummyVar=$dummyVar+1
+			
+		fi
+
+
+#debug	echo is there a Bash Integer Expression expected warning next 22 ??	
+		if [ "$integrationDirCount" -gt 0 ]  ; then
+			dirString=`pwd`
+			echo $dirString Unit Test Directories: $integrationDirCount
+			echo
+			integrationDirCount=0
+			dirString=""
+		else
+			dummyVar=$dummyVar+2
+	
+		fi
+
+		cd ~/
+	else
+		echo NotWorking
+		echo eff is $f
+		myLocalVar=""
+	fi
+   done
+	popd >> /dev/null
+#	testSum=$((testSum - 250 - 43 - 347 - 31 - 3 ))
+#	echo $testSum
+echo "************************************************"
+
+}
+
+
+sandboxCount()		# Ver 1. Finds *.java in all LIB/src/test dir tree
+{	#yyy__repoLookInt(-)
+	
+	echo 
+	# ***********************
+	# cus I want to get back
+	# to where I started 	
+	pushd /Volumes/dev/ >> /dev/null
+
+
+	testSum=0
+	loopCount=0
+	componentCount=0
+	utCount=0
+	integrationDirCount=0
+	dummyVar=""
+	REPO_DIRECTORIES="/Volumes/dev/svb-services-sandbox/*"
+	themagicPlace="src/test"
+	activeDir=""
+  
+ 
+	for f in $REPO_DIRECTORIES
+     do
+	
+		if [ "$1" == "allRepos"  ] ; then
+			echo $f 
+		fi
+	
+	#*****************************************
+	# loopCount++ cuz in a couple of places
+	# I wanted to see how many times I'd been
+	# through the loop and on to another dir
+	((loopCount++))
+	
+	# *************************************
+	# are we in one of the directories
+	# identified in $REPO_DIRECTORIES ???
+	if [ -d "$f"  ]	; then
+		cd $f
+
+		if [ -d "./src/test/"   ] ; then
+			cd ./src/test/
+			#utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			utCount=` find . -name '*.java' -print0 |xargs -0 grep -r @Test|grep -v @Tested | grep -v //@Test | wc -l`
+			testSum=$(( testSum + utCount ))
+
+		fi
+
+		if [ "$utCount" -gt 0  ] ; then
+			cd $f
+			dirStirng=`pwd`
+			tabString=" \t \t "
+			echo -e $dirStirng  
+			#echo Java Unit Test count: $utCount Test_Sum is: $testSum  
+			echo Java Unit Test count: $utCount 
+			echo 
+			utCount=0
+			dirString=""
+		else
+			dummyVar=$dummyVar+1
+			
+		fi
+
+		# likely to remove the intDirCount secion
+		# sandox doesn't have any integration directories
+		if [ "$integrationDirCount" -gt 0 ]  ; then
+			dirString=`pwd`
+			echo $dirString Unit Test Directories: $integrationDirCount
+			echo
+			integrationDirCount=0
+			dirString=""
+		else
+			dummyVar=$dummyVar+2
+		fi
+
+		#cd ~/  don't think I needed to do thie every time
+	#else
+	#	echo NotWorking
+	#	echo eff is $f
+	#	myLocalVar=""
+	fi
+   done
+	popd >> /dev/null
+echo "************************************************"
+}
+
+
+#tstreturn(-)			# Ver 1 of Test Reporting Func
+testReport()		# Ver 1 of Test Reporting Func
+{
+	pushd /Volumes/dev/ >> /dev/null
+
+	difference=0
+	utCountOnly=0
+	repoIntegrationCount=0
+	javaLibUTCount=0
+
+	if [ $# -ne 0  ] ; then #if num of arguments != 0
+		svbIntegrationSum
+		unitTestSum
+		sandboxUTCount
+	fi
+	echo
+	echo calling svbIntegrationSum [ repoIntegrationCount ] redirect to dev-null
+  	svbIntegrationSum repoIntegrationCount > /dev/null 2>&1
+	echo after calling svbIntegrationSum [ repoIntegrationCount ]
+	echo the value of the repoIntegraitonCount Var is : $repoIntegrationCount
+	echo
+
+	echo calling unitTestSum [ unitTestSumResult ] redirect to dev-null
+	unitTestSum unitTestSumResult > /dev/null 2>&1
+	echo after calling unitTestSum [ unitTestSumResult ]
+	echo the value of the unitTestSumResult Var is : $unitTestSumResult
+	echo
+
+	echo calling sandboxUTCount [ javaLibUTCount ] redirect to dev-null
+	sandboxUTCount javaLibUTCount > /dev/null 2>&1
+	echo after calling sandboxUTCount [ javaLibUTCount ] redirect to dev-null
+	echo the value of the javaLibUTCount var is : $javaLibUTCount
+	echo
+
+
+	echo subtracting $repoIntegrationCount from $unitTestSumResult and should be "somevalue"
+	echo the diff in subtracting variables is: $((unitTestSumResult - repoIntegrationCount ))
+	echo	
+	echo Test Setting a variable to this difference
+	
+	utCountOnly=$((unitTestSumResult - repoIntegrationCount ))
+	echo 
+	echo adding in the javaLibUTCount var $javaLibUTCount to the utCountOnly var
+	utCountOnly=$(( utCountOnly + javaLibUTCount ))
+	echo echoing utCountOnly variable: $utCountOnly
+	echo 
+	echo So, reporting should look like
+	echo  Integration Test Count: $repoIntegrationCount
+	echo "       Unit Test Count: "$utCountOnly
+
+#	echo subtraction result is: $(( withAnotherVariable - repoIntegrationCount  ))
+#	echo
+#	#eval differenc=$((withAnotherVariable - repoIntegraitonCount))
+#	differenc=$(( withAnotherVariable - repoIntegratitonCount ))
+#	echo   Unit test count: $difference
+#	echo Integration Count: $repoIntegrationCount
+	difference=0
+	repoIntegrationCount=0
+	popd >> /dev/null
+}
+
+
+################
+#  
+# Get the count of integration tests in the repo's identified
+# In order to check if this is the proper list of repo's run unitCount(-)
+#  
+###
+#svbIntegrationSum(-)		# Ver 2 of integrationDirs_UT_Count
+paymentsComponentUTC()	# Ver 2 of integrationDirs_UT_Count
+{
+    Index=0
+
+	pushd /Volumes/dev/ >> /dev/null
+	directories=" svb-service-accounts svb-service-bankinfo svb-service-client 
+	svb-service-csrf svb-service-entitlements svb-service-ooba svb-service-payments"
+
+	for i in $directories ; do
+		cd $i
+		#pwd
+		tabChar="\t"
+#		immediate=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		#answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test | wc -l`
+		answersArray[Index]=`find . -name 'integration' -print0 | xargs -0 grep -r @Test |grep -v @Tested | grep -v //@Test | wc -l`
+# debug echo -e $i $tabChar $immediate
+# debug echo
+# debugecho The number of elements
+# debug echo ${#answersArray[@]}
+		cd /Volumes/dev
+		((Index++))
+
+	done
+	
+#	echo done Loading now putting out the dollar answer array #	echo $answersArray
+#	echo #		echo .......  #		echo number of ele to follow #		echo size ${#answersArray[@]}
+#		echo elems ${answersArray[@]} #		echo zero? ${#answerArray[*]} #		echo the rest
+#		echo 0: ${directories[0]} ${answersArray[0]} #		echo 1: ${directories[1]} ${answersArray[1]}
+#		echo 2: ${directories[2]} ${answersArray[2]} #		echo 3: ${directories[3]} ${answersArray[3]}
+#		echo 4: ${directories[4]} ${answersArray[4]} #		echo 5: ${directories[5]} ${answersArray[5]}
+#		echo 6: ${directories[6]} ${answersArray[6]} #		echo this could be wierd #		echo 7: ${answersArray[7]}
+
+
+		#if [[ $1 == "" ]] ; then
+		if [ -z $1  ] ; then
+			echo ......		
+		fi
+
+		x=0
+		sum=0
+		for i in $directories ; do
+
+		#if [[ $1 == "" ]] ; then
+		if [ -z $1  ] ; then
+			echo ${answersArray[x]} $i
+
+		fi
+			sum=$((sum+${answersArray[x]}))
+			((x++))
+		done
+
+		#if [[ $1 == "" ]] ; then
+		if [ -z $1  ] ; then
+			echo the sum is: $sum
+			echo 
+		fi
+#   	debug echo inside svbIntegrationSum, arg[0] = $1	
+#		debug echo inside svbIntegrationSum, sum  = $sum
+		if [ -z $1  ] ; then
+			echo ""
+		else
+			echo debug trying to set arg[1] to the sum in next command
+			#eval $1=$((sum))
+			eval $1=$((sum))
+			return $1
+		fi
+
+		answersArray="" 
+		Index="" 
+		x=0
+		sum=0
+		popd >> /dev/null
+}
+
+
+
+
+#sandboxUTCount(-)		# Ver 2 of sandboxCount. Returns sum if asked
+#paymentsJavaLIbTUC(-)	# Ver 2 of sandboxCount. Returns sum if asked
+paymentsJavaLibUTC()	# Ver 2 of sandboxCount. Returns sum if asked
+{
+    Index=0
+	sum=0
+	pushd /Volumes/dev/ >> /dev/null
+
+#	svb-service-bankinfo"
+	REPO_DIRECTORIES="/Volumes/dev/svb-services-sandbox/*"
+	toolsDir="/Volumes/dev/svb-services-sandbox/tools"
+	zeroFile="/Volumes/dev/svb-services-sandbox/Zero"
+#  Need to get sand box repo libs httpClient auth dbconnector logger Monotiring Exception Mappers	
+
+	for i in $REPO_DIRECTORIES ; do
+
+		if [ -d "$i" ] ; then 
+			if [[ "$i" == "$zeroFile" || "$i" == "$toolsDir"   ]]  ; then
+				#echo "598 tools dir skip"
+				dummy1=$i # a no-op for he if then else fi  	
+			else
+				cd $i
+			fi
+			if [ -d "./src/test/"   ] ; then
+          		 cd ./src/test/
+				#answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+				answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| grep -v @Tested | grep -v //@Test | wc -l`
+				((Index++))
+			fi
+		fi
+	done
+	
+	if [ -z $1  ] ; then
+		echo ......		
+	fi
+	x=0
+	sum=0
+
+	for i in $REPO_DIRECTORIES ; do
+		#echo "619 i == $i"
+		cd $i
+		#echo "621 $(pwd)"
+		# if -f "$i"  is a check if $i represents a file.
+		# in this one case, it is equial to the Zero file
+		if [[ "$i" == "$zeroFile"   ||  "$i" == "$toolsDir"  ]] ; then		
+			echo ""	
+			#echo "627  found i = $i "
+		else #We're looking at directories.
+			if [ -z $1  ] ; then
+				justSubDirName=`echo "$i"| awk '{print substr ($0,34)}'`
+				echo "${answersArray[x]} $justSubDirName "
+			fi
+			sum=$((sum + ${answersArray[x]}))
+
+			((x++))
+
+		fi	
+
+	done
+	
+	
+
+	if [ -z $1  ] ; then
+		echo "the sum is: $sum"
+		echo ""
+	fi
+
+	#   	debug echo inside svbIntegrationSum, arg[0] = $1	
+	#		debug echo inside svbIntegrationSum, sum  = $sum
+	if [ -z $1  ] ; then
+		echo ""
+	else
+		echo debug trying to set arg[1] to the sum in next command
+		eval $1=$((sum))
+		return $1
+	fi
+
+	answersArray="" 
+	Index="" 
+	x=0
+	sum=0
+	popd >> /dev/null
+
+}
+
+#unitTestSum(-)		# Ver 2 of unitCount. Returns sum if asked
+paymentsAllUTC()		# Ver 2 of unitCount. Returns sum if asked
+{
+    Index=0
+
+	# from where ever the cmdline is, do this so as to popd at end.  your back
+	pushd /Volumes/dev/ >> /dev/null
+	
+	directories=" svb-service-payments svb-service-entitlements svb-service-ooba
+	svb-scheduler-payments svb-service-accounts svb-service-csrf svb-service-client
+	svb-service-bankinfo"
+
+	for i in $directories ; do
+		cd $i
+        if [ -d "./src/test/"   ] ; then
+            cd ./src/test/
+			#pwd
+			#answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
+			# Turns out @Tested is a Spring Java Annotation, there are also commented out @Test(s). But I cannot trust "/* @Test. so removing it
+			answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test|grep -v @Tested | grep -v //@Test |  wc -l`
+			cd /Volumes/dev
+			((Index++))
+		fi
+	done
+
+		#if [ -z $1  ] ; then
+		#	echo ......		
+		#fi
+		if [ -z $1  ] ; then echo "......	" ; fi
+
+		x=0
+		sum=0
+		for i in $directories ; do
+
+		#if [ -z $1  ] ; then
+		#	echo ${answersArray[x]} $i
+		#fi
+		if [ -z $1  ] ; then echo -e "\t${answersArray[x]} $i" ; fi
+
+		sum=$((sum+${answersArray[x]}))
+		((x++))
+
+		done
+
+		if [ -z $1  ] ; then echo the sum is: $sum ; echo ; fi
+
+#   	debug echo inside svbIntegrationSum, arg[0] = $1	
+#		debug echo inside svbIntegrationSum, sum  = $sum
+		if [ -z $1  ] ; then
+			echo ""
+		else
+			echo debug trying to set arg[1] to the sum in next command
+			eval $1=$((sum))
+			return $1
+		fi
+
+		answersArray="" 
+		Index="" 
+		x=0
+		sum=0
+		popd >> /dev/null
+}
+
+#team2FE_UTC(-)		# Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
+svbWebPay_UTC()		# Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
+{
+	#pushd /Volumes/dev/ >> /dev/null
+
+	REPO_DIRECTORIES="/Volumes/dev/svb-web-payments/"
+	payAppReturnVal=0
+	
+	cd /Volumes/dev/svb-web-payments/app/src
+		payAppReturnVal=$( grep -r "\sit(" * | wc -l)
+		if [ -z $1 ] ; then
+			echo "test count is: $payAppReturnVal"	
+		else
+			#eval $1 = $((returnVal))
+			#tempVar=0
+			#returnVal=$((returnVal + tempVar ))
+			# debug	echo "debug returnVal ="$returnVal
+			eval $1=$(( payAppReturnVal ))
+			return $1
+		fi
+
+	payAppReturnVal=0
+	echo ""
+	#popd >> /dev/null
+}
+
+webCoreUI_UTC()		# Ver 2 UnitTEst Count in svb-web-core-ui. Val returned if askedi
+{
+	WCUI_REPODIR="/Volumes/dev/svb-web-core-ui/src/"
+	wcuiReturnVal=0
+	for i in $WCUI_REPODIR ; do
+		cd $i
+		wcuiReturnVal=$( grep -r "\sit(" * | wc -l )
+		if [ -z $1 ] ; then
+			echo "test count is: $wcuiReturnVal"
+		else
+			echo "781 $wcuiReturnVal"
+			eval $1=$(( wcuiReturnVal ))
+			return $1
+			echo "784"
+		fi	
+	done
+
+	wcuiReturnVal=0
+}
+
+team2TestCounts()
+{
+	paymentsAllUTC allUTC > /dev/null 2>&1
+	echo "all backend Repo unit tests: $allUTC"
+	
+	paymentsJavaLibUTC pJLibUTC > /dev/null 2>&1
+	echo "all backend JavaLib Unit tests: $pJLibUTC"
+	repoAndJavaLib=$(( allUTC + pJLibUTC ))
+	echo ""
+	echo "These to numbers will be summed $repoAndJavaLib"
+
+	echo ""
+	paymentsComponentUTC pCUTC > /dev/null 2>&1
+	unitOnly=$(( repoAndJavaLib - pCUTC ))
+	echo "all backend component test are subtracted from the sum above: $unitOnly"
+	echo "the backend component count is: $pCUTC"	
+	echo "the backend component counts stand as it's own count"
+	echo ""
+	svbWebPay_UTC svbWPUTC > /dev/null 2>&1	
+	webCoreUI_UTC wCUI_UTC > /dev/null 2>&1
+	allWebPayFE_UTC=$(( svbWPUTC + wCUI_UTC ))
+	echo "the front end svb-web-payments unit tests: $svbWPUTC"
+
+	echo "the front end svb-core-ui unit test: $wCUI_UTC"
+	giveMeSomeSpace
+	
+	echo "Murano Payments Backend Unit Test: $unitOnly"
+	echo "Murano Payments Backend Integration Tests: $pCUTC"
+	echo "All Murano Paments Frontend Unit Test: $allWebPayFE_UTC"
+	
+	
+
+
+
+
+
+
+	allUTC=""
+}
+
+#  end of file 
