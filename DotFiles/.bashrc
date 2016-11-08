@@ -145,7 +145,8 @@ export HISTFILE=~/.bash_eternal_history
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-source /Users/maatkins/.svbshellFuncs
+source /Users/maatkins/.shellfuncsT2
+source /Users/maatkins/.shellfuncsT3
 source /Users/maatkins/.svbshellFunc2
 
 
