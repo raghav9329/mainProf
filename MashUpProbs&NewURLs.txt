@@ -1,0 +1,38 @@
+https://murano.qa4.svbconnect.com/#/payment/paymentHome
+
+
+
+https://murano.qa4.svbconnect.com/#/payment/makePayment
+
+
+
+https://murano.qa4.svbconnect.com/#/payment/auditReport
+
+
+All URLs don’t work on IE 11
+
+All URLs are flaky in Safari on Mac
+
+All URLs seem to be functional in FF and Ch on Mac
+
+
+
+Old Footer Story MPAY 824 tested on both CH and FF
+from Payment Summary  
+Legal Disclosures button http://www.svb.com/services/econnectprivacy.asp?privacy
+Returns a 404
+
+
+Both Ch and FF in Responsive mode display the same way.
+
+
+
+
+
+
+
+
+http://sal-dvs-mjenk01.dev.svbank.com:8080/job/T2-web-payments-e2e-uat-nightly/211/
+
+
+

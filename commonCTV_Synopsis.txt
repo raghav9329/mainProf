@@ -1,0 +1,119 @@
+
+
+My normal method of estimation on the duration of testing efforts, in the past, has come with 
+a large amount of data I have captured my self.  With this I could give with rather
+accurate estimates the duration of tasks like this, the people needed and other details.
+
+With out this data, I have to rely on past experiences and map how those went to how this
+feels .  
+
+So here’s are the details and my sense of its accuracy.
+
+I think the Authentication testing will require 24 Person hours of work Worst case
+and 12 person hours Best case. But expect it to take about 18 Person hours.
+
+With servers up,(right ! ) 
+With network up, 
+with out context switching ( meetings, additional task requests, etc. )
+
+I state this as Person hours, because I see it being Me , Deepan, Jess, Iz and some of Abhi and Aniz
+
+
+I think we can be done before the end of Wednesday next week.
+
+The following are my notes at a high level of where and what looks like it needs focus.
+
+
+Auth:
+	General/Common
+		Make sure the graphics displayed are the same in all three apps
+		Deepan, Iz and Jess have been looking at this, but there has been
+		so much turmoil with QA that they stopped until the work for QA 
+		gets finished.
+
+		I want to run happy path and failure on all three ( well two ) apps
+		and review the audit reports.  
+		Failure Modes are noted at end of note. I believe all three apps are now supposed
+		to follow this model. This would be a focused effort, but not a heavy investigation.
+		
+		MTT-386 must be met. MTT-364( Never saw these requirements: Wow )
+		MTT-13  only thing unfamiliar is the “Having Trouble”: Does Team1 see this
+		MTT-298 Basic.  MTT-11 Basic.  MTT-308(alt.Basic) MTT-284  MTT-7 is basicEverything
+		MTT-5 is part of 7 to me MTT-3 basicEverything  MTT-8 basic 
+		MTT-141 Basic I’veNeverKnown. MTT-193 Basic
+		MTT-9 Basic MTT-4Basic, but security specific MTT-10 way under the covers to even see
+
+		
+	MurDashboard
+		Team 1 knows they are taking Authentication from Team2’s now common code. 
+		Team 1 now has different looking graphics, they also have slightly different
+		functionality( different alert after 3rd fail: something like that ).  Deepak
+		is clear on this, knows where to look for the master images
+
+		
+
+	MurPayments
+		
+		No changes to our graphics or alerts.  
+		
+		Seems like the basics as specified in the MTT stories with a few 
+		exceptions or additions 
+
+		Rerun above Canceling workflow at Phone# pic
+			Would expect Pay Audit Rpt to show ctv initiation.
+				Might not cuz I didn’t go far enough before canceling
+				Rerun farther until I know I’m getting ctv initiate
+		
+		Rerun above in the Code Entry failure pathways noted below
+
+	
+	MurBillPay
+		Until common is deployed, Bill Pay can’t take up authentication
+		That limits how much work needs to be done right now, but adds somewhat
+		to the work that needs to be redone when BillPay takes common.  It COULD be
+		that nothing needs to be redone, but I just feel better thinking some 
+		regression over the others will be needed.
+
+		What I don’t know is the timing of BillPay Common CTV adoption.  So, I can
+		get a forecast together for the duration of this specific effort.
+
+
+
+CTV FAILURE PATHWAYS:
+
+			Fail1 : 
+				Audit report fail 1
+				User Activity Report Fail 1
+			Fail2 : 
+				Audit report fail 2
+				User Activity Report Fail 2
+			Fail3 : 
+				Audit report fail 3
+				User Activity Report Fail 3
+				Audit Report check acct frozen
+
+				 Logout, and you cannot log back in
+				/
+			Pathway -
+				\
+				 Continue onto Attempt 4 Fail !
+					Audit report fail 1
+					User Activity Report Fail 1
+					Acount Still Frozen
+
+			
+			Pathway -
+				\
+				Continue onto Attempt 4 PASS !
+					Audit report Success
+					User Activity Report Success
+					Account ACTIVE ( NOT Frozen )
+
+			Pathway -
+				\
+				Continue onto Attempt 4 Fail ! Move onto Attempt 5
+				5 can pass and fail the same way as 4
+				
+				6 can pass and fail the same way as 4 & 5
+					but Fail on 6 sets the session to invalid
+					Invalid sessions imm

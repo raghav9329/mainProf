@@ -1,7 +1,7 @@
 #team2FE_UTC(-)     # Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
 svbWebBillpay_UTC()     # Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
 {
-    #pushd /Volumes/dev/ >> /dev/null
+    pushd /Volumes/dev/ >> /dev/null
 
     REPO_DIRECTORIES="/Volumes/dev/svb-web-billpay/"
     billpayAppReturnVal=0
@@ -21,16 +21,16 @@ svbWebBillpay_UTC()     # Ver 2 Unit Test Count in svb-web-payments. Val returne
 
     billpayAppReturnVal=0
     echo ""
-    #popd >> /dev/null
+    popd >> /dev/null
 }
 
 #*****************************
 #
 # taken out of .shellfuncsT2  
-# this was func paymentsComponentUTC()	# Ver 2 of integrationDirs_UT_Count
+# this was func paymentsComponentUTC(-)	# Ver 2 of integrationDirs_UT_Count
 #
 #*****************************
-webBillPayComponent()
+serviceBillPayComponent()
 {
     Index=0
 
@@ -95,3 +95,40 @@ webBillPayComponent()
 
 }
 
+serviceBillPayUTC()
+{
+
+	echo ""	
+
+}
+
+
+svbwebBillpayE2E_Int()
+{
+
+    pushd /Volumes/dev/ >> /dev/null
+
+    REPO_DIRECTORIES="/Volumes/dev/svb-web-payments/"
+    e2eReturnVal=0
+     
+    cd /Volumes/dev/svb-web-billpay/test/integration
+        e2eReturnVal=$( grep -r "\sit(" * | wc -l) 
+        if [ -z $1 ] ; then
+            echo "test count is: $e2eReturnVal"  
+        else
+            #eval $1 = $((returnVal))
+            #tempVar=0
+            #returnVal=$((returnVal + tempVar ))
+            # debug echo "debug returnVal ="$returnVal
+            eval $1=$(( e2eReturnVal ))
+            return $1
+        fi  
+
+    e2eReturnVal=0
+    echo ""
+    popd >> /dev/null
+
+}
+
+
+#end

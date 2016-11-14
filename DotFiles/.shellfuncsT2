@@ -508,6 +508,9 @@ testReport()		# Ver 1 of Test Reporting Func
 	popd >> /dev/null
 }
 
+blank()
+{ echo ""; }
+
 
 ################
 #  
@@ -741,6 +744,34 @@ paymentsAllUTC()		# Ver 2 of unitCount. Returns sum if asked
 		sum=0
 		popd >> /dev/null
 }
+
+svbWebPayE2eInt()		# Ver 2 all the E2E Intergration protractor tests Mock & full network
+{
+
+    pushd /Volumes/dev/ >> /dev/null
+
+    REPO_DIRECTORIES="/Volumes/dev/svb-web-payments/"
+    e2eReturnVal=0
+        
+    cd /Volumes/dev/svb-web-payments/integration
+        e2eReturnVal=$( grep -r "\sit(" * | wc -l) 
+        if [ -z $1 ] ; then
+            echo "test count is: $e2eReturnVal"  
+        else
+            #eval $1 = $((returnVal))
+            #tempVar=0
+            #returnVal=$((returnVal + tempVar ))
+            # debug echo "debug returnVal ="$returnVal
+            eval $1=$(( e2eReturnVal ))
+            return $1
+        fi  
+
+    e2eReturnVal=0
+    echo ""
+    popd >> /dev/null
+
+}
+
 
 #team2FE_UTC(-)		# Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
 svbWebPay_UTC()		# Ver 2 Unit Test Count in svb-web-payments. Val returned if asked
