@@ -12,6 +12,17 @@ giveMeSomeSpace()		# print some output space and lines
 
 }
 
+locInDir()
+{
+	for f in $1 ; do
+	if [ $f == "." ] ; then
+		echo ""	
+	fi	
+	 wc -l $f
+	
+	done
+
+}
 
 testRunFuncs()		# Test process to at least verify this file 
 {  # Test process to at least verify this file 
@@ -801,7 +812,8 @@ svbWebPay_UTC()		# Ver 2 Unit Test Count in svb-web-payments. Val returned if as
 
 webCoreUI_UTC()		# Ver 2 UnitTEst Count in svb-web-core-ui. Val returned if askedi
 {
-	WCUI_REPODIR="/Volumes/dev/svb-web-core-ui/src/"
+	#WCUI_REPODIR="/Volumes/dev/svb-web-core-ui/src/"
+	WCUI_REPODIR="/Volumes/dev/svb-web-core-ui/app/src/"
 	wcuiReturnVal=0
 	for i in $WCUI_REPODIR ; do
 		cd $i

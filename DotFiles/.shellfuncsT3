@@ -98,7 +98,7 @@ serviceBillPayComponent()
 serviceBillPayUTC()
 {
 
-	echo ""	
+	echo "no code written for this yet !!"	
 
 }
 
@@ -108,7 +108,7 @@ svbwebBillpayE2E_Int()
 
     pushd /Volumes/dev/ >> /dev/null
 
-    REPO_DIRECTORIES="/Volumes/dev/svb-web-payments/"
+    #REPO_DIRECTORIES="/Volumes/dev/svb-web-payments/"
     e2eReturnVal=0
      
     cd /Volumes/dev/svb-web-billpay/test/integration
@@ -131,4 +131,4 @@ svbwebBillpayE2E_Int()
 }
 
 
-#end
+#eneturnVal

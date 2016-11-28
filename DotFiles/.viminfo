@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/'
+~MSle0~/gra
 
 # Last Substitute Search Pattern:
 ~MSle0&intDirCount
@@ -17,48 +17,48 @@
 $integrationDirCount
 
 # Command Line History (newest to oldest):
+:q
 :wq
 :w
-:W
-:q
+:e
+:q!
+:bn
+:bp
+:e .shellfuncsT3
 :set nu
 :set nonu
-:q!
+:set no nu
+:n
+:w /tmp/letter2Raju
+:set wrap
+:set wordwrap
+:W
 :e .svbshellFuncs
 :.,.+5
 :.,.+1 
 :. 
-::wq
-:e ./Backup_Code.sh
-:fw
-:80,135s/intDirCount/integrationDirCount/g
-:tabsize
-:set tabsize
-:1,$s/'/,/g
-:1,$s/'/,g
-:n
 
 # Search String History (newest to oldest):
-?/'
-?/startValue
-? \<after\>
-?/tstretu
-?/Count()
-?/getDot
-?/getDo	
-?/sandbox
-? \<echo\>
+?/gra
+?/grad
+?/find
+?/fin
+?/integration
+?/integreation
+? \<url\>
+?/option
+?/shellfunc
 ?/vifunc
-? \<sum\>
 ?/vifuncs
-?/go
-?/ga
-?/pushd
-?/Branch
-?/branch
-?/myLocalVar
-?/activeDir
-? intDirCount
+?/JavaL
+?/xargs -0 grep
+?/Tested
+?/tested
+?/\/
+?/\/*
+?//* @Test
+?/@Test
+?/sandbox
 
 # Expression History (newest to oldest):
 
@@ -68,252 +68,791 @@ $integrationDirCount
 
 # Registers:
 "0	LINE	0
-					answersArray[Index]=`find . -name '*.java' -print0 |xargs -0 grep -r @Test| wc -l`
-""1	LINE	0
-				
+		WCUI_REPODIR="/Volumes/dev/svb-web-core-ui/src/"
+"1	LINE	0
+		svb-service-csrf svb-service-entitlements svb-service-ooba svb-service-payments"
 "2	LINE	0
-	
+		svb-service-csrf svb-service-entitlements svb-service-ooba svb-service-payments"
 "3	LINE	0
 	
 "4	LINE	0
 	
 "5	LINE	0
-	
+				#eval $1=$((sum))
 "6	LINE	0
-	
+	#		debug echo inside svbIntegrationSum, sum  = $sum
 "7	LINE	0
-	echo "614 and answers array [ index ]" ${answersArray[x]}
+	#   	debug echo inside svbIntegrationSum, arg[0] = $1	
 "8	LINE	0
 	
 "9	LINE	0
 	
 "a	CHAR	0
 	iqaecpa€kb€kb€kb€kb€kbqecpapp1lxxxlllllllah€kb€kbqaeccoh`€kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra€kb€kb€kboracle1llllllll
-"-	CHAR	0
-	#echo "617" $x " : " $sum
+""-	CHAR	0
+	#
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  1  8  ~/.svbshellFuncs
-'1  18  0  ~/.svbshellFuncs
-'2  70  17  ~/.svbshellFuncs
-'3  641  0  ~/.svbshellFuncs
-'4  700  0  ~/.svbshellFuncs
-'5  654  0  ~/.svbshellFuncs
-'6  552  16  ~/.svbshellFuncs
-'7  540  24  ~/.svbshellFuncs
-'8  149  36  ~/.bashrc
-'9  1  0  ~/.sentientrc
+'0  874  0  ~/.shellfuncsT2
+'1  1  0  ~/Desktop/Murano_Auth.user.js
+'2  25  44  ~/.bash_profile
+'3  26  5  ~/.bash_profile
+'4  1  0  ~/.bash_profile
+'5  91  13  ~/.zshrc
+'6  28238  0  /private/tmp/macthumbPass2or1?.txt
+'7  31253  0  /private/tmp/macthumbPass.txt
+'8  39  8  /Volumes/dev/svb-web-payments/protractor.conf.js
+'9  1  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
 
 # Jumplist (newest first):
--'  1  8  ~/.svbshellFuncs
--'  617  3  ~/.svbshellFuncs
--'  634  0  ~/.svbshellFuncs
--'  635  0  ~/.svbshellFuncs
--'  614  3  ~/.svbshellFuncs
--'  642  0  ~/.svbshellFuncs
--'  575  1  ~/.svbshellFuncs
--'  144  27  ~/.svbshellFuncs
--'  89  26  ~/.svbshellFuncs
--'  83  26  ~/.svbshellFuncs
--'  658  44  ~/.svbshellFuncs
--'  643  0  ~/.svbshellFuncs
--'  584  1  ~/.svbshellFuncs
--'  585  30  ~/.svbshellFuncs
--'  625  3  ~/.svbshellFuncs
--'  613  0  ~/.svbshellFuncs
--'  637  0  ~/.svbshellFuncs
--'  616  0  ~/.svbshellFuncs
--'  627  0  ~/.svbshellFuncs
--'  628  0  ~/.svbshellFuncs
--'  531  1  ~/.svbshellFuncs
--'  524  0  ~/.svbshellFuncs
--'  559  8  ~/.svbshellFuncs
--'  560  0  ~/.svbshellFuncs
--'  554  1  ~/.svbshellFuncs
--'  561  0  ~/.svbshellFuncs
--'  545  31  ~/.svbshellFuncs
--'  548  0  ~/.svbshellFuncs
--'  539  6  ~/.svbshellFuncs
--'  558  31  ~/.svbshellFuncs
--'  543  28  ~/.svbshellFuncs
--'  540  39  ~/.svbshellFuncs
--'  361  75  ~/.svbshellFuncs
--'  259  37  ~/.svbshellFuncs
--'  74  9  ~/.svbshellFuncs
--'  224  16  ~/.svbshellFuncs
--'  250  15  ~/.svbshellFuncs
--'  255  0  ~/.svbshellFuncs
--'  18  0  ~/.svbshellFuncs
--'  366  0  ~/.svbshellFuncs
--'  140  25  ~/.svbshellFuncs
--'  571  8  ~/.svbshellFuncs
--'  449  65  ~/.svbshellFuncs
--'  359  0  ~/.svbshellFuncs
--'  258  4  ~/.svbshellFuncs
--'  461  15  ~/.svbshellFuncs
--'  30  0  ~/.svbshellFuncs
--'  37  0  ~/.svbshellFuncs
--'  32  12  ~/.svbshellFuncs
--'  43  1  ~/.svbshellFuncs
--'  42  6  ~/.svbshellFuncs
--'  70  17  ~/.svbshellFuncs
--'  20  0  ~/.svbshellFuncs
--'  21  0  ~/.svbshellFuncs
--'  22  1  ~/.svbshellFuncs
--'  641  0  ~/.svbshellFuncs
--'  700  0  ~/.svbshellFuncs
--'  73  0  ~/.svbshellFuncs
--'  16  19  ~/.svbshellFuncs
--'  377  45  ~/.svbshellFuncs
--'  35  6  ~/.svbshellFuncs
--'  645  0  ~/.svbshellFuncs
--'  654  0  ~/.svbshellFuncs
--'  640  0  ~/.svbshellFuncs
--'  701  0  ~/.svbshellFuncs
--'  552  16  ~/.svbshellFuncs
--'  526  0  ~/.svbshellFuncs
--'  564  18  ~/.svbshellFuncs
--'  563  0  ~/.svbshellFuncs
--'  454  0  ~/.svbshellFuncs
--'  570  0  ~/.svbshellFuncs
--'  518  0  ~/.svbshellFuncs
--'  515  11  ~/.svbshellFuncs
--'  514  0  ~/.svbshellFuncs
--'  457  0  ~/.svbshellFuncs
--'  509  0  ~/.svbshellFuncs
--'  538  33  ~/.svbshellFuncs
--'  506  2  ~/.svbshellFuncs
--'  494  12  ~/.svbshellFuncs
--'  499  0  ~/.svbshellFuncs
--'  149  36  ~/.bashrc
--'  1  0  ~/.bashrc
--'  1  0  ~/.sentientrc
--'  98  0  ~/.atkmhrc
--'  1  0  ~/.atkmhrc
--'  53  0  ~/.svbshellFunc2
--'  1  0  ~/.svbshellFunc2
--'  1  0  ~/.svbshellFuncs2
--'  27  48  ~/.svbrc
+-'  874  0  ~/.shellfuncsT2
+-'  1  0  ~/.shellfuncsT2
+-'  1  0  ~/Desktop/Murano_Auth.user.js
+-'  25  44  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  26  5  ~/.bash_profile
+-'  20  0  ~/.bash_profile
+-'  91  13  ~/.zshrc
+-'  86  26  ~/.zshrc
+-'  1  0  ~/.zshrc
+-'  28238  0  /private/tmp/macthumbPass2or1?.txt
+-'  1  0  /private/tmp/macthumbPass2or1?.txt
+-'  31253  0  /private/tmp/macthumbPass.txt
+-'  1  0  /private/tmp/macthumbPass.txt
+-'  39  8  /Volumes/dev/svb-web-payments/protractor.conf.js
+-'  1  0  /Volumes/dev/svb-web-payments/protractor.conf.js
+-'  1  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
+-'  19  8  ~/.shellfuncsT2
+-'  21  9  ~/.shellfuncsT2
+-'  133  3  /Volumes/dev/svb-web-payments/integration/scenarios/paymentFormAndPayeeValidation.js
+-'  186  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentFormAndPayeeValidation.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/paymentFormAndPayeeValidation.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/ptorUserNoAccView.test.js
+-'  317  3  ~/.shellfuncsT2
+-'  270  25  ~/.shellfuncsT2
+-'  241  0  ~/.shellfuncsT2
+-'  108  0  ~/.shellfuncsT3
+-'  1  0  ~/.shellfuncsT3
+-'  208  0  ~/.shellfuncsT2
+-'  152  37  ~/.shellfuncsT2
+-'  151  46  ~/.shellfuncsT2
+-'  101  37  ~/.shellfuncsT3
+-'  1  8  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-3900548114
+-'  2  0  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-3900548114
+-'  1  8  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1479242794
+-'  2  0  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1479242794
+-'  816  47  ~/.shellfuncsT2
+-'  657  0  ~/.shellfuncsT2
+-'  194  28  ~/.shellfuncsT2
+-'  171  1  ~/.shellfuncsT2
+-'  155  64  ~/.shellfuncsT2
+-'  99  45  ~/.shellfuncsT2
+-'  98  46  ~/.shellfuncsT2
+-'  91  46  ~/.shellfuncsT2
+-'  90  47  ~/.shellfuncsT2
+-'  50  1  ~/.shellfuncsT2
+-'  1  0  /Volumes/dev/svb-web-base/app/src/components/index.js
+-'  10  0  ~/Books/.git/config
+-'  9  0  ~/Books/.git/config
+-'  1  0  ~/Books/.git/config
+-'  53  0  /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+-'  205  8  /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+-'  64  0  /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+-'  35  2  /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+-'  7  3  /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+-'  8  3  /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+-'  15  0  /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+-'  765  0  ~/.shellfuncsT2
+-'  1  0  /private/tmp/clientlogsettingpolicy.xml
+-'  5  14  ~/Mark/Notes_HeaderFooterCTVAuthentication
+-'  2  0  ~/Mark/Notes_HeaderFooterCTVAuthentication
+-'  16  98  ~/Mark/Notes_HeaderFooterCTVAuthentication
+-'  1  0  ~/Mark/Notes_HeaderFooterCTVAuthentication
+-'  134  3  ~/.shellfuncsT3
+-'  107  0  ~/.shellfuncsT3
+-'  97  0  ~/.shellfuncsT3
+-'  94  0  ~/.shellfuncsT3
+-'  38  35  ~/.shellfuncsT3
+-'  4  0  ~/.shellfuncsT3
+-'  95  0  ~/.shellfuncsT3
+-'  39  1  ~/.shellfuncsT3
+-'  81  0  ~/.shellfuncsT3
+-'  82  2  ~/.shellfuncsT3
+-'  30  0  ~/.shellfuncsT3
+-'  47  0  ~/.shellfuncsT3
+-'  48  0  ~/.shellfuncsT3
+-'  49  0  ~/.shellfuncsT3
+-'  50  0  ~/.shellfuncsT3
+-'  51  2  ~/.shellfuncsT3
+-'  531  0  ~/.shellfuncsT2
+-'  533  0  ~/.shellfuncsT2
+-'  563  0  ~/.shellfuncsT2
+-'  536  0  ~/.shellfuncsT2
+-'  617  54  ~/.shellfuncsT2
+-'  1  0  /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1478303524
+-'  32  13  ~/.svbrc
+-'  31  8  ~/.svbrc
+-'  27  35  ~/.svbrc
+-'  26  34  ~/.svbrc
 -'  1  0  ~/.svbrc
--'  28  0  ~/.svbrc
--'  1857  0  /private/tmp/thumbDriveCapture
--'  33501  0  /private/tmp/thumbDriveCapture
--'  33504  0  /private/tmp/thumbDriveCapture
--'  1  0  /private/tmp/thumbDriveCapture
--'  23  0  /private/tmp/somefilename
--'  1  0  /private/tmp/somefilename
--'  216  0  /Volumes/MACTHUMB1/Backup_Code.sh
--'  68  14  ~/.svbshellFuncs
+-'  9  34  ~/.shellfuncsT3
+-'  3  0  ~/.shellfuncsT3
+-'  16  0  ~/.shellfuncsT3
+-'  1  0  ~/.svbshellFuncs
+-'  830  0  ~/.svbshellFuncs
+-'  827  0  ~/.svbshellFuncs
+-'  720  0  ~/.svbshellFuncs
 
 # History of marks within files (newest to oldest):
 
-> ~/.svbshellFuncs
-	"	1	8
-	^	608	10
-	.	617	0
-	+	602	9
-	+	598	9
-	+	588	9
-	+	575	9
-	+	581	9
-	+	584	9
-	+	591	10
-	+	575	0
-	+	581	0
-	+	583	0
-	+	585	0
-	+	588	0
-	+	591	0
-	+	640	0
-	+	583	9
-	+	575	11
-	+	591	12
-	+	575	0
-	+	574	0
-	+	583	0
-	+	591	0
-	+	606	9
-	+	612	8
-	+	613	8
-	+	614	8
-	+	619	8
-	+	625	8
-	+	626	8
-	+	634	8
-	+	640	8
-	+	617	19
-	+	619	8
-	+	625	8
-	+	626	8
-	+	634	8
-	+	640	8
-	+	620	0
-	+	623	0
-	+	612	0
-	+	613	0
-	+	613	0
-	+	614	0
-	+	610	1
-	+	613	1
-	+	613	1
-	+	574	5
-	+	606	0
-	+	614	9
-	+	617	7
-	+	614	56
-	+	614	0
-	+	614	0
-	+	602	0
-	+	598	0
-	+	619	0
-	+	625	0
-	+	626	0
-	+	624	0
-	+	623	0
-	+	620	0
-	+	613	0
-	+	613	0
-	+	612	0
-	+	610	0
-	+	612	0
-	+	610	2
-	+	611	1
-	+	614	0
-	+	634	8
-	+	640	9
-	+	615	0
-	+	614	0
-	+	615	34
-	+	612	12
-	+	609	1
+> ~/.shellfuncsT2
+	"	874	0
+	^	19	9
+	.	19	8
+	+	527	1
+	+	529	0
 	+	618	0
-	+	617	3
-	+	617	2
-	+	616	2
-	+	615	2
-	+	614	3
-	+	613	2
-	+	612	2
-	+	611	2
-	+	610	5
-	+	634	8
-	+	640	8
-	+	615	1
-	+	614	4
-	+	614	0
-	+	634	0
-	+	640	0
-	+	615	1
-	+	614	3
-	+	614	0
-	+	617	3
-	+	608	9
-	+	612	9
-	+	613	0
-	+	617	0
+	+	816	0
+	+	815	1
+	+	816	47
+	+	5	0
+	+	25	0
+	+	23	4
+	+	22	0
+	+	21	9
+	+	20	3
+	+	19	8
+
+> ~/Desktop/Murano_Auth.user.js
+	"	1	0
+
+> ~/.bash_profile
+	"	25	44
+	^	25	45
+	.	25	44
+	+	16	0
+	+	17	0
+	+	20	0
+	+	16	0
+	+	17	1
+	+	21	0
+	+	20	0
+	+	27	0
+	+	24	40
+	+	26	5
+	+	25	44
+
+> /Volumes/dev/svb-vagrant/tools/publishPomsToNexus.py
+	"	1	0
+
+> /Volumes/dev/svb-vagrant/tools/bash_profile.sh
+	"	93	1
+	^	93	2
+	.	94	0
+	+	94	0
+	+	93	1
+	+	94	35
+	+	94	0
+	+	93	1
+	+	94	1
+	+	93	1
+	+	94	0
+
+> ~/.zshrc
+	"	91	13
+	^	1	7
+	.	1	0
+	+	1	0
+
+> /private/tmp/macthumbPass2or1?.txt
+	"	28238	0
+	^	28238	0
+	.	28237	44
+	+	28237	44
+
+> /private/tmp/macthumbPass.txt
+	"	31253	0
+	^	31253	0
+	.	31252	60
+	+	31252	60
+
+> /Volumes/dev/svb-web-payments/protractor.conf.js
+	"	39	8
+
+> /Volumes/dev/svb-web-payments/protractor-mock.conf.js
+	"	1	0
+
+> /Volumes/dev/svb-web-billpay/.git/MERGE_MSG
+	"	1	0
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/paymentFormAndPayeeValidation.js
+	"	133	3
+
+> /Volumes/dev/svb-web-payments/integration/scenarios/ptorUserNoAccView.test.js
+	"	1	0
+
+> ~/.shellfuncsT3
+	"	108	0
+	^	101	38
+	.	101	37
+	+	25	1
+	+	6	49
+	+	7	7
+	+	10	11
+	+	12	37
+	+	18	27
+	+	22	7
+	+	2	10
+	+	9	34
+	+	96	0
+	+	35	0
+	+	35	0
+	+	35	0
+	+	32	29
+	+	30	15
+	+	30	16
+	+	31	0
+	+	51	0
+	+	30	0
+	+	56	0
+	+	82	0
+	+	79	0
+	+	86	0
+	+	96	0
+	+	39	0
+	+	96	0
+	+	39	0
+	+	38	33
+	+	97	0
+	+	97	1
+	+	97	0
+	+	30	37
+	+	33	6
+	+	4	4
+	+	24	4
+	+	103	0
+	+	101	0
+	+	134	3
+	+	103	0
+	+	99	0
+	+	103	0
+	+	101	0
+	+	98	18
+	+	101	7
+	+	132	0
+	+	106	21
+	+	131	0
+	+	109	36
+	+	129	0
+	+	114	40
+	+	111	5
+	+	134	10
+	+	101	37
+
+> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-3900548114
+	"	1	8
+	^	1	9
+	.	1	2
+	+	1	2
+
+> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1479242794
+	"	1	8
+	^	1	9
+	.	1	2
+	+	1	2
+
+> /Volumes/dev/svb-web-base/app/src/components/index.js
+	"	1	0
+
+> ~/Books/.git/config
+	"	10	0
+	^	9	37
+	.	9	36
+	+	9	0
+	+	10	0
+	+	9	36
+
+> /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
+	"	53	0
+
+> /private/tmp/clientlogsettingpolicy.xml
+	"	1	0
+
+> ~/Mark/Notes_HeaderFooterCTVAuthentication
+	"	5	14
+	^	5	15
+	.	5	14
+	+	16	98
+	+	2	0
+	+	7	0
+	+	3	7
+	+	2	7
+	+	5	14
+
+> ~/.svbrc
+	"	32	66
+	^	32	67
+	.	32	66
+	+	57	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	57	8
+	+	60	0
+	+	57	8
+	+	59	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	60	0
+	+	57	15
+	+	59	18
+	+	60	15
+	+	60	17
+	+	59	22
+	+	57	0
+	+	59	0
+	+	57	18
+	+	60	16
+	+	60	8
+	+	57	46
+	+	59	58
+	+	59	52
+	+	59	50
+	+	60	46
+	+	60	50
+	+	60	43
+	+	60	0
+	+	57	20
+	+	59	22
+	+	59	18
+	+	59	18
+	+	60	18
+	+	60	20
+	+	60	19
+	+	23	25
+	+	24	20
+	+	25	34
+	+	23	13
+	+	24	14
+	+	26	48
+	+	13	17
+	+	14	18
+	+	11	20
+	+	57	12
+	+	59	12
+	+	60	37
+	+	57	0
+	+	51	17
+	+	50	0
+	+	59	0
+	+	52	54
+	+	53	0
+	+	60	0
+	+	55	0
+	+	59	0
+	+	56	0
+	+	60	0
+	+	57	0
+	+	60	0
+	+	54	0
+	+	60	0
+	+	58	54
+	+	59	0
+	+	45	17
+	+	60	27
+	+	45	6
+	+	60	25
+	+	34	0
+	+	37	0
+	+	35	0
+	+	38	0
+	+	61	0
+	+	60	17
+	+	29	34
+	+	26	12
+	+	28	48
+	+	31	90
+	+	32	63
+	+	28	47
+	+	32	74
+	+	47	23
+	+	32	11
+	+	26	45
+	+	27	46
+	+	32	67
+	+	33	63
+	+	32	67
+	+	33	62
+	+	32	66
+	e	83	76
+	k	105	6
+
+> ~/altTemp/atkmhDraw_io-Test.xml
+	"	1	0
+
+> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1478303524
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+
+> ~/.bashrc
+	"	149	35
+	^	148	36
+	.	149	35
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	154	0
+	+	147	0
+	+	148	36
+	+	154	0
+	+	154	0
+	+	154	0
+	+	153	12
+	+	150	36
+	+	148	35
+	+	149	35
+
+> ~/.svbshellFuncs
+	"	1	0
+	^	1	2
+	.	1	0
+	+	787	4
+	+	778	37
+	+	773	16
+	+	777	13
+	+	776	0
+	+	774	9
+	+	776	9
+	+	778	12
+	+	780	12
+	+	783	12
+	+	788	9
+	+	785	10
+	+	788	9
+	+	775	6
+	+	776	7
+	+	774	7
+	+	778	11
+	+	780	11
+	+	783	11
+	+	785	9
+	+	788	8
+	+	788	0
+	+	788	9
+	+	774	10
+	+	780	17
+	+	781	18
+	+	772	44
+	+	774	0
+	+	776	0
+	+	778	9
+	+	785	0
+	+	788	0
+	+	697	3
+	+	718	29
+	+	646	9
+	+	633	0
+	+	648	0
+	+	828	0
+	+	793	33
+	+	792	38
+	+	793	41
+	+	802	0
+	+	827	9
+	+	793	41
+	+	790	16
+	+	795	0
+	+	598	0
+	+	597	1
+	+	598	17
+	+	597	20
+	+	795	45
+	+	799	36
+	+	825	0
+	+	802	0
+	+	519	0
+	+	804	0
+	+	801	7
+	+	805	36
+	+	799	37
+	+	806	19
+	+	805	15
+	+	822	0
+	+	793	31
+	+	796	18
+	+	793	19
+	+	804	18
+	+	805	18
+	+	806	18
+	+	811	49
+	+	813	44
+	+	807	7
+	+	799	61
+	+	797	39
+	+	799	54
+	+	803	38
+	+	804	34
+	+	808	1
+	+	744	7
+	+	770	9
+	+	745	0
+	+	745	0
+	+	744	13
+	+	745	9
+	+	770	12
+	+	808	39
+	+	811	58
+	+	809	39
+	+	813	52
+	+	815	0
+	+	816	35
+	+	819	0
+	+	816	18
+	+	819	1
+	+	810	42
+	+	818	23
+	+	816	31
+	+	818	62
+	+	817	56
+	+	830	0
+	+	1	0
+
+> /Volumes/dev/svb-web-billpay/test/integration/scenarios/addPayee.test.js
+	"	1	0
+
+> /Volumes/dev/svb-web-billpay/test/integration/scenarios/paymentConfirmationOverlay.test.js
+	"	1	0
+
+> /Volumes/dev/svb-web-billpay/test/integration/scenarios/paymentDisplay.test.js
+	"	307	0
+
+> /Volumes/dev/svb-web-billpay/test/integration/scenarios/paymentReviewModel.test.js
+	"	18	0
+
+> /Volumes/dev/svb-web-billpay/test/integration/components/SelectElement.js
+	"	45	0
+
+> /Volumes/dev/svb-web-billpay/test/integration/components/ValidatedInput.js
+	"	46	0
+
+> /Volumes/dev/svb-web-billpay/app/src/factories/csrf/csrfResourceFactory.js
+	"	1	0
+
+> /Volumes/dev/svb-web-billpay/app/src/factories/csrf/csrfServiceFactory.js
+	"	1	0
+
+> /Volumes/dev/svb-web-billpay/app/src/factories/csrf/csrfServiceFactory.test.js
+	"	1	0
+
+> /Volumes/dev/svb-service-ooba/src/test/java/com/svb/murano/ooba/integration/BaseOOBAIntegrationTest.java
+	"	59	0
+
+> /Volumes/dev/svb-service-ooba/src/test/java/com/svb/murano/ooba/integration/OOBACancelIntegrationTest.java
+	"	104	41
+
+> /Volumes/dev/svb-service-ooba/src/test/java/com/svb/murano/ooba/integration/OOBADeviceInfoIntegrationTest.java
+	"	37	16
+
+> /Volumes/dev/svb-service-ooba/src/test/java/com/svb/murano/ooba/integration/OOBAInitIntegrationTest.java
+	"	275	41
+
+> /Volumes/dev/svb-service-client/src/test/java/com/svb/murano/integration/ClientInfoIntegrationTest.java
+	"	66	2
+
+> /Volumes/dev/svb-service-client/src/test/java/com/svb/murano/integration/ClientInfoSwaggerTest.java
+	"	184	0
+
+> ~/Mark/DotFiles/.svbshellFuncs
+	"	773	0
+	^	580	2
+	.	580	1
+	+	361	0
+	+	580	1
+
+> /Volumes/dev/svb-service-payments/src/test/java/com/svb/murano/accounts/client/AccountClientTest.java
+	"	177	1
+
+> /Volumes/dev/svb-service-ooba/src/test/java/com/svb/murano/common/monitoring/MonitoringApplicationTest.java
+	"	1	0
+
+> /Volumes/dev/svb-service-ooba/src/test/java/com/svb/murano/common/monitoring/resource/MonitoringResourceSpec.java
+	"	27	1
+
+> /Volumes/dev/svb-service-ooba/src/test/java/com/svb/murano/ooba/service/OutOfBandAuthenticationServiceTest.java
+	"	322	1
+
+> /private/tmp/periodAfter
+	"	1	0
+
+> /private/tmp/periodBefore
+	"	1	0
+
+> ~/11.svbshellFuncs_holdDueToVerGoingBackwards
+	"	613	0
+
+> ~/.svbshellFuncs_holdDueToVerGoingBackwards
+	"	1	0
+	^	361	0
+	.	361	0
+	+	361	0
+
+> ~/.svbshellFuncs_holdDueToVerGoingBackwa
+	"	1	0
+
+> ~/Mark/DotFiles/deployDots
+	"	5	35
+	.	5	35
+	+	5	35
+
+> ~/.viminfo
+	"	205	0
+
+> ~/Mark/DotFiles/.deployDots
+	"	1	0
+	^	13	3
+	.	13	2
+	+	21	4
+	+	6	10
+	+	19	0
+	+	15	3
+	+	17	24
+	+	6	11
+	+	13	36
+	+	10	21
+	+	11	1
+	+	20	2
+	+	12	4
+	+	4	17
+	+	14	11
+	+	17	8
+	+	13	39
+	+	11	73
+	+	13	2
+
+> ~/Mark/DotFiles/.viminfo
+	"	1133	1
+
+> ~/.svbshellFunc2
+	"	44	0
+	.	104	0
+	+	1	0
+	+	5	0
+	+	78	0
+	+	101	1
+	+	104	0
+	+	104	0
+	+	104	0
+
+> /Volumes/dev/svb-services-sandbox/mur-java-lib-monitoring/src/test/java/com/svb/murano/common/monitoring/dto/HealthReportTest.java
+	"	15	0
+
+> /Volumes/dev/svb-services-sandbox/mur-java-lib-monitoring/src/test/java/com/svb/murano/common/monitoring/service/MonitoringServiceTest.java
+	"	80	20
+
+> ~/.svbshellFuncs2
+	"	1	0
 
 > /Volumes/dev/svb-services-sandbox/mur-java-lib-auth/src/main/java/com/svb/murano/common/authorizer/Authorizer.java
 	"	1	0
@@ -332,113 +871,6 @@ $integrationDirCount
 
 > /Volumes/dev/svb-services-sandbox/mur-java-lib-auth/src/main/java/com/svb/murano/common/annotations/RequestAuthorization.java
 	"	1	0
-
-> ~/.svbrc
-	"	30	63
-	^	31	64
-	.	31	63
-	+	16	0
-	+	15	0
-	+	59	41
-	+	29	136
-	+	29	35
-	+	29	125
-	+	29	0
-	+	29	127
-	+	20	15
-	+	21	67
-	+	57	0
-	+	54	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	54	8
-	+	57	0
-	+	54	8
-	+	56	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	57	0
-	+	54	15
-	+	56	18
-	+	57	15
-	+	57	17
-	+	56	22
-	+	54	0
-	+	56	0
-	+	54	18
-	+	57	16
-	+	57	8
-	+	54	46
-	+	56	58
-	+	56	52
-	+	56	50
-	+	57	46
-	+	57	50
-	+	57	43
-	+	57	0
-	+	54	20
-	+	56	22
-	+	56	18
-	+	56	18
-	+	57	18
-	+	57	20
-	+	57	19
-	+	23	25
-	+	24	20
-	+	25	34
-	+	23	13
-	+	24	14
-	+	26	48
-	+	13	17
-	+	14	18
-	+	11	20
-	+	54	12
-	+	56	12
-	+	57	37
-	+	54	0
-	+	48	17
-	+	47	0
-	+	56	0
-	+	49	54
-	+	50	0
-	+	57	0
-	+	52	0
-	+	56	0
-	+	53	0
-	+	57	0
-	+	54	0
-	+	57	0
-	+	51	0
-	+	57	0
-	+	55	54
-	+	56	0
-	+	43	17
-	+	57	27
-	+	43	6
-	+	57	25
-	+	32	0
-	+	35	0
-	+	33	0
-	+	36	0
-	+	58	0
-	+	57	17
-	+	28	34
-	+	26	12
-	+	27	48
-	+	30	90
-	+	31	63
-	e	80	76
-	k	102	6
 
 > /private/tmp/MarkTestOut
 	"	333	0
@@ -459,126 +891,7 @@ $integrationDirCount
 > /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1477374706
 	"	1	0
 
-> ~/.bashrc
-	"	149	36
-	^	152	13
-	.	149	36
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	153	0
-	+	147	0
-	+	148	36
-	+	153	0
-	+	153	0
-	+	153	0
-	+	152	12
-	+	149	36
-
 > ~/.sentientrc
-	"	1	0
-
-> ~/.svbshellFunc2
-	"	53	0
-	.	104	0
-	+	1	0
-	+	5	0
-	+	78	0
-	+	101	1
-	+	104	0
-	+	104	0
-	+	104	0
-
-> ~/.svbshellFuncs2
 	"	1	0
 
 > /private/tmp/thumbDriveCapture
@@ -894,240 +1207,3 @@ $integrationDirCount
 
 > /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_1Users.java
 	"	30	1
-
-> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_2Hosts.java
-	"	1	0
-
-> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_31ProjCreate.java
-	"	1	0
-
-> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_3Projects.java
-	"	1	0
-
-> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_3ProjRsrc.java
-	"	1	0
-
-> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_4Accounting.java
-	"	1	0
-
-> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_5Utilization.java
-	"	1	0
-
-> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_6Reports.java
-	"	1	0
-
-> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_7Notifications.java
-	"	1	0
-
-> /Volumes/MACTHUMB1/dc30_dev/qa/src/dcConsoleAutoTest/A_8Settings.java
-	"	1	0
-
-> /Volumes/MACTHUMB1/dc30_dev/deployment/testfiles/localhost.dop
-	"	1	768
-
-> ~/Desktop/XBackup_newest.sh
-	"	1	0
-	^	28	47
-	.	29	0
-	+	27	7
-	+	26	41
-	+	28	46
-	+	29	0
-
-> ~/Mark/mainrun.java
-	"	1	0
-
-> /private/tmp/LinkedList/linkedListTest/ListNode.java
-	"	1	0
-
-> /private/tmp/LinkedList/linkedListTest/CountListDups.java
-	"	1	0
-
-> /private/tmp/LinkedList/linkedListTest/CreateList.java
-	"	10	25
-
-> ~/.bash_profile
-	"	16	0
-	.	16	0
-	+	19	0
-	+	12	0
-	+	17	1
-	+	16	0
-	+	16	0
-
-> ~/Mark/tmp_PCEclipse/TestPoiAccessWebExample.java
-	"	47	0
-
-> ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/Run.java
-	"	6	0
-
-> ~/Mark/tmp_PCEclipse/03_SignUpNewUsers_2_18_2013/src/signup/TheTest.java
-	"	47	0
-
-> ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/MyHashMap.java
-	"	116	1
-
-> ~/Mark/tmp_PCEclipse/000_12162015_LeanPlum/src/hashMap_Test/HashMapRunner.java
-	"	47	0
-
-> ~/Mark/tmp_PCEclipse/00__ProdRefresh_1-16-2014/src/Pkg_One/TestOne.java
-	"	47	1
-
-> ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Run.java
-	"	10	0
-
-> ~/Mark/tmp_PCEclipse/ChronicledHerokuAppCalculator/src/HerokuCalcTester/Calculator.java
-	"	1	0
-
-> ~/Mark/tmp_PCEclipse/Epic-12_5_2013-301Redirects/src/TestMoreRedirects.java
-	"	63	0
-
-> ~/Mark/tmp_PCEclipse/Epic-12_5_2013-301Redirects/src/TestRedirects.java
-	"	54	0
-
-> ~/Mark/tmp_PCEclipse/OPOWER/src/onLineTest/one.java
-	"	1	0
-
-> /private/tmp/export.tsv
-	"	1	339
-	.	2	0
-	+	1	21
-	+	1	32
-	+	1	43
-	+	1	54
-	+	1	65
-	+	1	76
-	+	1	87
-	+	1	98
-	+	1	109
-	+	1	120
-	+	1	131
-	+	1	8
-	+	1	17
-	+	1	26
-	+	1	35
-	+	1	44
-	+	1	53
-	+	1	62
-	+	1	71
-	+	1	80
-	+	1	89
-	+	1	98
-	+	1	107
-	+	1	116
-	+	1	125
-	+	1	134
-	+	1	143
-	+	1	152
-	+	1	161
-	+	1	170
-	+	1	179
-	+	1	188
-	+	1	197
-	+	1	206
-	+	1	215
-	+	1	224
-	+	1	233
-	+	1	242
-	+	1	251
-	+	1	260
-	+	1	269
-	+	1	278
-	+	1	287
-	+	1	296
-	+	1	305
-	+	1	314
-	+	1	323
-	+	1	332
-	+	2	0
-
-> ~/.zshrc
-	"	91	13
-	^	89	46
-	.	89	45
-	+	90	0
-	+	89	45
-
-> ~/Library/Caches/TemporaryItems/Outlook Temp/Murano_SOA_Req[1].xml
-	"	1	0
-
-> /private/tmp/user_csv.out
-	"	1	0
-	.	1	0
-	+	1	19
-	+	1	0
-	+	1	119
-	+	1	0
-
-> /Volumes/dev/svb-web-payments/integration/commands/process-csv.js
-	"	205	0
-
-> /Volumes/dev/svb-vagrant/Vagrantfile
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/chef/cookbooks/apache24/recipes/default.rb
-	"	51	0
-
-> /Volumes/dev/svb-vagrant/chef/cookbooks/apache24/files/apache24.sh
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/chef/cookbooks/apache24/files/epel-httpd24.repo
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/chef/cookbooks/apache24/files/murano.conf
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/svb-web-dashboard/dev.js
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/aliases/addssh
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/action_provision
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/action_set_name
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/chef_node_name
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/creator_uid
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/id
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/index_uuid
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/private_key
-	"	1	0
-
-> /Volumes/dev/svb-vagrant/.vagrant/machines/default/virtualbox/synced_folders
-	"	1	0
-
-> ~/SoapUI-Tutorials/Sample-REST-Project-soapui-project.xml
-	"	210	0
-
-> ~/SoapUI-Tutorials/popular-apis/Google-Maps-soapui-project.xml
-	"	243	0
-
-> ~/SoapUI-Tutorials/popular-apis/YouTube-soapui-project.xml
-	"	352	62
-
-> /Volumes/dev/svb-web-payments/app/src/factories/payeeService/payeeService.test.js
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/app/src/mockApp.js
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/app/src/pages/makePayment/MakePaymentPage.js
-	"	1	0
-
-> /Volumes/dev/svb-web-payments/integration/scenarios/paymentSubmission.test.db.js
-	"	131	2
-	.	112	1
-	+	12	0
-	+	80	1
-	+	112	1

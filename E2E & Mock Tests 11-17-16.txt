@@ -1,0 +1,24 @@
+Accounts   3 of 77  
+
+FCS + Scheduled Payments  13
+
+Cumulative limit tests 9 or 73
+
+
+Phone number registration was a known and accepted problem in QA because we had CTV connectivity.  I was just forced to enter phone numbers for a user REGISTRATION Process.
+It fails at the after clicking to have the text sent to my phone.  CTV works on this phone number.  Are there any thoughts on config or other possible solutions ?
+
+
+
+End to End Automated agains UAT at build time
+3.51%	2	payment entitlement3.51%	2	Authenticate3.51%	2	Payment Submission5.26%	3	Profile Sub-Menu5.26%	3	Cumulative Limits7.02%	4	ooba_Payment8.77%	5	Audit - payee Filter8.77%	5	Payment Home AGAIN10.53%	6	Audit Events17.54%	10	Payee Tests21.05%	12	Payments, payment Table
+
+
+
+
+
+Mock Protractor run on CI at build time
+4.00%	5	CTV Modal4.00%	5	Review Modal5.60%	7	success Modal 7.20%	9	Payment Table8.00%	10	NavBar9.60%	12	Payee Form 11.20%	14	Success Modal23.20%	29	Client Side Validation27.20%	34	Audit Table
+
+
+3	Accounts12	automated FPS _ Scheduler + SOA + FC9	Cumulative Limits

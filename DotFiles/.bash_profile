@@ -14,8 +14,14 @@ source ~/.bashrc
 # Since including /Volumes/dev/svb-vagrant/tools/bash_profile.sh
 # below Gradle_home is not needed
 #export GRADLE_HOME=/Users/maatkins/tools/gradle-2.4/bin
-# export PATH=$PATH:/Users/maatkins/tools/gradle-2.4/bin
+#export PATH=$PATH:/Users/maatkins/tools/gradle-2.4/bin
 # from setting up bash profile for team 2 developer
 
-#echo sourcing Volumes-dev-svb_vagrant-tools-bash_profile.sh 
-#source /Volumes/dev/svb-vagrant/tools/bash_profile.sh
+echo sourcing Volumes-dev-svb_vagrant-tools-bash_profile.sh 
+source /Volumes/dev/svb-vagrant/tools/bash_profile.sh
+# the following is a test, this line taken out of the 
+# vagrant/toos/bash_profile at line #93  
+# I want what is below not what is at #93
+echo "Now trying to reset my prompt post src vag bash prof"
+PS1=""
+PS1="$BLUE$PATH_SHORT$COLOR_RESET $NO_COLOR[\u@\h] $ "
