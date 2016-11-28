@@ -16,3 +16,8 @@ Unmountof all volumes on <diskname> was successful
 
 I pulled the drive out, and shortly there after put it back in.
 All good . woot^2
+
+
+youtube conversion
+https://www.onlinevideoconverter.com/
+www.clipconverter.cc  seems to deny getting downloads if there is a video track

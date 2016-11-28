@@ -1,0 +1,20 @@
+General_TMP
+
+
+AND fixVersion = "Unscheduled" AND lables = "common_auth"
+
+
+
+
+project = "MUR" AND fixVersion = "Unscheduled" AND cycleName in ("Common Ui Integration - Dashboard") and labels = "common_header" or labels =Òcommon_footer"
+
+Project = MTT 
+
+Login to Sonar  maatkins   Welcome123
+
+11/17/16
+for Deepan I worked on user_Entitlement in Uat_
+I took away view payments and left this view was 0 and 0 in amounts
+1101460 5030870 VIEW_PAYMENT_FPS 200 2000
+
+Ten min later I put it back in

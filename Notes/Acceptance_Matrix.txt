@@ -165,6 +165,7 @@ See the test above
 =======================
 Account / Limit - 
 User Access to Dormant Account
+
 Flexcube specific:  Have to entitle to an acct that is in dormant status ( in FC )
 Dorment acct WILL NOT show up in the Funding acct list !!!
 Check that they have entitielent to this acct, then check the FE

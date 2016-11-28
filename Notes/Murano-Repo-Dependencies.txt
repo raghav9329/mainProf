@@ -1,5 +1,10 @@
 Murano-Repo-Dependencies
 
+
+
+10/27/16 Close this file
+These dependencies are intrarepo dependencies. All repo product will build and start independently on their own.  i.e.. they donÕt need each other.
+
 svn-service-payments
 
 // Dependencies required for the project

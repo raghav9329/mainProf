@@ -1,0 +1,134 @@
+ThingsIveLearned_cache
+
+This is not a queue.
+This catches stuff that needs to be proper filed in other notes
+Backgound:  This will help keep down the number of web pages that are left open in browser
+
+
+10/17/16
+Rsync: 
+https://www.google.com/search?q=can+rsync+make+directories&oq=can+rsync+make+directories&aqs=chrome..69i57.9817j0j7&sourceid=chrome&ie=UTF-8
+
+http://stackoverflow.com/questions/1636889/rsync-how-can-i-configure-it-to-create-target-directory-on-server
+
+http://stackoverflow.com/questions/9242135/how-to-force-rsync-to-create-destination-folder
+
+
+http://www.schwertly.com/2013/07/forcing-rsync-to-create-a-remote-path-using-rsync-path/
+
+10/17/16
+wha's better rsnyc or scp
+https://www.google.com/search?q=wha%27s+better+rsnyc+or+scp&oq=wha%27s+better+rsnyc+or+scp&aqs=chrome..69i57.7201j0j7&sourceid=chrome&ie=UTF-8
+
+http://serverfault.com/questions/146377/why-is-my-rsync-so-slow-compared-to-pure-cp-or-even-scp
+
+
+http://www.linuxquestions.org/questions/linux-general-1/rsync-z-vs-scp-which-one-is-faster-over-network-848161/
+
+
+10/17/16
+needing to know how to do bash arithmetic operation on variables
+https://www.google.com/search?q=bash+arithmetic+operations+on+variables&oq=bash+arithmetic+operations+on+var&aqs=chrome.0.0j69i57.11926j0j7&sourceid=chrome&ie=UTF-8
+
+http://tldp.org/LDP/abs/html/ops.html
+
+http://tldp.org/LDP/abs/html/arithexp.html
+
+https://bash.cyberciti.biz/guide/Perform_arithmetic_operations
+
+http://stackoverflow.com/questions/18093871/how-can-i-do-division-with-variables-in-a-linux-shell
+
+http://faculty.salina.k-state.edu/tim/unix_sg/bash/math.html
+
+http://faculty.salina.k-state.edu/tim/unix_sg/bash/math.html
+
+https://www.shell-tips.com/2010/06/14/performing-math-calculation-in-bash/
+
+
+
+
+10/17/16
+bash shell scripting
+bash script if directory exists
+https://www.google.com/search?q=bash+script+if+directory+exists&oq=bash+script+example+if+directory+&aqs=chrome.1.69i57j0l4.11121j0j7&sourceid=chrome&ie=UTF-8
+
+
+http://stackoverflow.com/questions/59838/check-if-a-directory-exists-in-a-shell-script
+
+http://tecadmin.net/bash-shell-test-if-file-or-directory-exists/#
+
+http://www.cyberciti.biz/faq/howto-check-if-a-directory-exists-in-a-bash-shellscript/
+
+
+
+bash script echo tab character
+https://www.google.com/search?q=bash+script+echo+tab+character&oq=bash+script+echo+tab+char&aqs=chrome.0.0j69i57j0.7343j0j7&sourceid=chrome&ie=UTF-8
+
+http://stackoverflow.com/questions/525872/echo-tab-characters-in-bash-script
+
+
+Unix If condition
+https://www.google.com/#q=unix+if+condition
+
+
+http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
+
+http://www.dreamsyssoft.com/unix-shell-scripting/ifelse-tutorial.php
+
+http://linuxcommand.org/wss0090.php
+
+https://linuxacademy.com/blog/linux/conditions-in-bash-scripting-if-statements/
+
+https://robots.thoughtbot.com/the-unix-shells-humble-if
+
+
+
+Math Theory
+Prime Numbers
+
+Òode to codeÓ
+http://odetocode.com/blogs/scott/archive/2014/10/16/working-with-validators-and-messages-in-angularjs.aspx
+
+common quick prime number evaluator code
+https://www.google.com/search?q=common+quick+prime+number+evaluator+code&oq=common+quick+prime+number+evaluator+code&aqs=chrome..69i57.9135j0j7&sourceid=chrome&ie=UTF-8
+
+https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+
+
+http://www.murderousmaths.co.uk/games/primcal.htm
+http://www.murderousmaths.co.uk/books/bkmm9.htm
+http://www.murderousmaths.co.uk/books/calculus/index.htm
+http://www.murderousmaths.co.uk/books/primeflash/index.htm
+
+
+
+MVC Learning
+MVC IN JavaScript, etc.
+https://www.google.com/search?q=simple+MVC+examlples+in+Java&oq=simple+MVC+examlples+in+Java&aqs=chrome..69i57j0l5.12689j0j7&sourceid=chrome&ie=UTF-8
+
+https://www.google.com/search?q=simple+mvc+example+in+javascript&oq=simple+MVC+examlples+in+javasc&aqs=chrome.1.69i57j0l5.9350j0j7&sourceid=chrome&ie=UTF-8
+
+https://gist.github.com/g6scheme/4157554
+
+https://alexatnet.com/articles/model-view-controller-mvc-javascript
+
+http://stackoverflow.com/questions/8497833/hello-world-in-mvc-pattern
+
+
+10/20/16
+http://stackoverflow.com/questions/292357/what-are-the-differences-between-git-pull-and-git-fetch
+
+https://longair.net/blog/2009/04/16/git-fetch-and-merge/
+Was dealing with test numbers that didnÕt match Sonar.
+Found that I was looking at master in all my repos instead of 
+release/0.1.6 at this time.
+so found that while on line in the office I could actually do
+git branch release/0.1.6 and then I would be switched into that branch.
+alsoÉ git branch -a  will list branches
+also  git ls-remote will list the same info
+
+!! I need to find out about remote-tracking branches
+
+
+
+end.

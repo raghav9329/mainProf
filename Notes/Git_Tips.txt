@@ -1,5 +1,17 @@
 Git_Tips
 
+10/14/16
+Getting rid of continual .metadata and .recommenders and any other such filesÉ..
+you need to add and commit every thing that you are interested inÉ.. 
+source files text , what evvah!
+This leaves behind all the Workspace .metadata/*  and workspace/project/.meta.. or recommendersÉ.  
+With this stuff as the only that is reported in git status changes not staged for commit:
+In this case they were all WorkSpace/.metadata/.* sooooÉ
+I did #git rm -rf JavaDev/.metadata   but the command instructed at 
+http://stackoverflow.com/questions/11451535/gitignore-not-working   had been git rm -r Ñcached
+It was the instruction to a similar problem.
+Removing the entire subdirectory from the REPO was EXACTLY what I really wanted to do.  I donÕt care about the metadata only the source
+
 
 git checkout - - <pathtofile>   the two dashes are supposed to be closer together    
 this will change the edits on the file back to unedited.

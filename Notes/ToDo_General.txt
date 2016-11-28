@@ -1,5 +1,25 @@
 ToDo_General
 
+10/31/16
+Reset the dot file concept and process.
+Keep the Mark/Dotfiles as the source.
+make all edits in Mark/Dotfiles.  Deploy back to the user root 
+Do deploy with Mark/Dotfiles shellScript
+This will alleviate the getDotFiles function that gets more than IÕm concerned withÉ.. 
+
+
+
+10/27/16
+Enter hours
+straighten out the shell functions
+within the same file
+	•	Get old ones moved off to say the top of the file
+	•	get the new ones that improve the old ones at the bottom
+	•	get the function names worked out 
+	•	put in a help/usage switch ( low pri )
+
+
+
 9/9/16
 Need to get that one story in Srint 15,16,17 that Sunny Validated but we never had any Test/Task for the story.
 Was to make a test and make sure with Sunny I wrote them correctly.

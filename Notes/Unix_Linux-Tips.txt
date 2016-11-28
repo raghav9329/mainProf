@@ -1,5 +1,67 @@
 Unix_Linux-Tips
 
+10/13/16
+http://tecadmin.net/bash-shell-test-if-file-or-directory-exists/#
+
+16 APRIL 2014
+Bash Shell Ð Test If File or Directory Exists  Written by Rahul K.
+
+ 
+While working with bash programming, we many times need to check if file already exists, create new files, inserts data in files. Also some times we required to execute other scripts from other scripts.
+
+This article has few details about testing file and directories existence in system. Which can be very helpful for you while writing shell scripting.
+
+1. Bash Shell Ð Test if File Exists
+
+If we required to add some content or need to create files from script. First make sure that file already exists or not. For example one of my script creating logs in file /tmp/testfile.log and we need to make sure this file exists or not
+
+#!/bin/bash
+if [ -f /tmp/testfile.log ]
+then
+    echo "File exists"
+fi
+The above statements can be also write using test keyword as below
+
+#!/bin/bash
+if test -f /tmp/testfile.log
+then
+    echo "File exists"
+fi
+Or in a single line we can write it as below. This is very useful while writing in shell scripting.
+
+[ -f /tmp/testfile.log ] && echo "File exists"
+to add else part in above command
+
+[ -f /tmp/testfile.log ] && echo "File exists" || echo "File not exists"
+
+2. Bash Shell Ð Test if Directory Exists
+Sometimes we need to create files inside a specific directory or need directory any other reason, we should make sure that directory exists. For example we are checking /tmp/mydir exists for not.
+
+#!/bin/bash
+
+if [ -d /tmp/mydir ]
+then
+    echo "Directory exists"
+fi
+The above statements can be also write using test keyword as below
+
+#!/bin/bash
+
+if test -d /tmp/mydir
+then
+    echo "Directory exists"
+fi
+Or in a single line we can write it as below
+
+[ -d /tmp/mydir ] && echo "Directory exists"
+
+3. Bash Shell Ð Create File Directory only if not Exists
+This is the best practice to check file existence before creating them else you will get error message.
+
+For File:   [ ! -f /tmp/testfile.log ] && touch /tmp/testfile.log
+
+For Directory:   [ ! -d /tmp/mydir  ] && mkdir /tmp/mydir
+
 9/7/2016
 Special Mac Command line user of PostFix as an SMTP daemon on the mac
 for command Line emailingÉÉ.
