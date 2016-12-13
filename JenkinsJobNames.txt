@@ -1,0 +1,52 @@
+
+
+T2 Libs
+
+
+
+
+
+
+
+
+
+
+
+
+
+t2 Pipeline 
+
+xSuccess	100%	T2 svb-service-accounts-pipe	
+xSuccess	100%	T2 svb-service-client-pipe	
+xSuccess	100%	T2 svb-service-payments-pipe	
+0Success	33%	T2 svb-web-monitor-pipe	
+?Success	80%	T2 svb-web-payment-build-consolidated	
+0Success	40%	T2-svb-scheduler-payments-pipe	
+xSuccess	100%	T2-svb-service-bankinfo-pipe	
+xSuccess	80%	T2-svb-web-payments-pipe	
+
+
+Failed	0%	Payments-SmokeTest-dev	1 mo 3 days - #2	25 days - #8	2 min 21 sec	Schedule a build for Payments-SmokeTest-dev	Console output	 
+Failed	0%	Payments-SmokeTest-qa	1 mo 17 days - #3	5 days 19 hr - #9	0.12 sec	Schedule a build for Payments-SmokeTest-qa	Console output	 
+Failed	50%	Payments-SmokeTest-uat1	19 days - #1	19 days - #2	24 sec	Schedule a build with parameters for Payments-SmokeTest-uat1	Console output
+Success	100%	t2-spashared-test	17 days - #6	N/A	0.45 sec	Schedule a build with parameters for t2-spashared-test	Console output
+Failed	0%	T2-web-payments-unittest	1 mo 26 days - #42	2 days 19 hr - #116	1 min 2 sec	Schedule a build with parameters for T2-web-payments-unittest	Console output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+,,,

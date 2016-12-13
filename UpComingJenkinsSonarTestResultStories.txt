@@ -1,0 +1,18 @@
+
+	All Service Repositories need to be configured to execute and Capture Test Execution results.
+Unit Test Reports for 
+
+Mur Service PaymentsMur Entitlement ServiceMur Service OOBAMur Scheduler PaymentsMur Service AccountsMur Service CSRFMur Client Service
+
+Mur Svc Lib - Http ClientMur Svc Lib - AuthMur Svc Lib - DBConnectorMur Svc Lib - LoggerMur Svc Lib - MonitoringMur Svc Lib - ExceptionMur Svc Lib - MappersMur Web Core UIMur Web Payment
+Integration test reports for 
+
+svb-service-accounts
+svb-service-client
+svb-service-csrf
+svb-service-entitlements
+svb-service-ooba
+svb-service-paymentsTest Automation Systems Configuration: Java based Service Repos Unit testsTest Automation Systems Configuration: Java Library Repo Unit testsTest Automation Systems Configuration: Javascript Frontend Repo Unit tests
+
+
+Test Automation Systems Configuration: Java based ServiceAPI Repo Integration Test
