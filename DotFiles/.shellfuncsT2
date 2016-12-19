@@ -527,6 +527,8 @@ blank()
 #  
 # Get the count of integration tests in the repo's identified
 # In order to check if this is the proper list of repo's run unitCount(-)
+# 11/29/16 Pulling svb-service-bankinfo out of directories list
+#  It was removed from our prod at time of Acquity and SortCodeValidation
 #:  
 ###
 
@@ -536,8 +538,8 @@ paymentsComponentUTC()	# Ver 2 of integrationDirs_UT_Count
     Index=0
 
 	pushd /Volumes/dev/ >> /dev/null
-	directories=" svb-service-accounts svb-service-bankinfo svb-service-client 
-	svb-service-csrf svb-service-entitlements svb-service-ooba svb-service-payments"
+	directories=" svb-service-accounts svb-service-client svb-service-csrf 
+    svb-service-entitlements svb-service-ooba svb-service-payments"
 
 	for i in $directories ; do
 		cd $i
@@ -694,6 +696,7 @@ paymentsJavaLibUTC()	# Ver 2 of sandboxCount. Returns sum if asked
 }
 
 #unitTestSum(-)		# Ver 2 of unitCount. Returns sum if asked
+# Pulling service-bankinfo : replaced with Actuity at SortCodeValidation time
 paymentsAllUTC()		# Ver 2 of unitCount. Returns sum if asked
 {
     Index=0
@@ -702,8 +705,8 @@ paymentsAllUTC()		# Ver 2 of unitCount. Returns sum if asked
 	pushd /Volumes/dev/ >> /dev/null
 	
 	directories=" svb-service-payments svb-service-entitlements svb-service-ooba
-	svb-scheduler-payments svb-service-accounts svb-service-csrf svb-service-client
-	svb-service-bankinfo"
+	svb-scheduler-payments svb-service-accounts svb-service-csrf svb-service-client"
+	
 
 	for i in $directories ; do
 		cd $i
@@ -833,11 +836,12 @@ webCoreUI_UTC()		# Ver 2 UnitTEst Count in svb-web-core-ui. Val returned if aske
 
 team2TestCounts()
 {
+	echo ""
 	paymentsAllUTC allUTC > /dev/null 2>&1
-	echo "all backend Repo unit tests: $allUTC"
+	echo "paymentsAllUTC:     all backend Repo unit tests: $allUTC"
 	
 	paymentsJavaLibUTC pJLibUTC > /dev/null 2>&1
-	echo "all backend JavaLib Unit tests: $pJLibUTC"
+	echo "paymentsJavaLibUTC: all backend JavaLib Unit tests: $pJLibUTC"
 	repoAndJavaLib=$(( allUTC + pJLibUTC ))
 	echo ""
 	echo "These to numbers will be summed $repoAndJavaLib"
@@ -846,7 +850,7 @@ team2TestCounts()
 	paymentsComponentUTC pCUTC > /dev/null 2>&1
 	unitOnly=$(( repoAndJavaLib - pCUTC ))
 	echo "all backend component test are subtracted from the sum above: $unitOnly"
-	echo "the backend component count is: $pCUTC"	
+	echo "paymentsComponentUTC: the backend component count is: $pCUTC"	
 	echo "the backend component counts stand as it's own count"
 	echo ""
 	svbWebPay_UTC svbWPUTC > /dev/null 2>&1	
