@@ -35,9 +35,6 @@
     "watch": "gulp watch",
     "****************************Deployment****************************": ""
   },
-  "dependencies": {
-    "svb-web-core-ui": "git+http://sal-dvs-mstash1.dev.svbank.com:7990/scm/mur/svb-web-core-ui.git#release/0.2.0"
-  },
   "devDependencies": {
     "angular-i18n": "1.5.8",
     "angular-mocks": "1.5.0",
