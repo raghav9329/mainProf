@@ -1,9 +1,5 @@
 .less-history-file:
 .search
-"lsdot
-"-F
-"-x
-"log
 "binary
 "--stat
 "binar
@@ -100,4 +96,8 @@
 "rest
 "REST
 "payments
+"((
+"(
+"\(
+"\s(
 .shell
