@@ -11,11 +11,6 @@
   "scripts": {
     "****************************Build****************************": "",
     "build": "gulp build",
-    "build-core": "cd node_modules/svb-web-core-ui && npm run build",
-    "build-all": "npm run build; npm run build build-core",
-    "build-mock": "gulp build --env=mock",
-    "build-core-mock": "cd node_modules/svb-web-core-ui && npm run build -- --env=mock --common=true",
-    "build-all-mock": "npm run build-mock; npm run build-core-mock",
     "clean": "gulp clean",
     "generateJasmineReport": "gulp generateJasmineReport",
     "****************************Unit Tests****************************": "",
