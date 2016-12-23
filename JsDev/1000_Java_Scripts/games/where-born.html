@@ -1,0 +1,785 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Games:  Where Born?</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="date" CONTENT="2000-09-09">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="javascriptsource.com">
+<META NAME="section" CONTENT="Games">
+<META NAME="description" CONTENT="Rumor has it the Feds have a way to track where you were born.  This JavaScript uses their database to find out where you were born.  Give it a try!">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function makeArray(n) {
+this.length = n
+for (var i=1; i <= n; i++)
+this[i] = null
+return this
+}
+var ssn = new makeArray(57)
+ssn[1] = 3
+ssn[2] = 7
+ssn[3] = 9
+ssn[4] = 34
+ssn[5] = 39
+ssn[6] = 49
+ssn[7] = 134
+ssn[8] = 158
+ssn[9] = 211
+ssn[10] = 220
+ssn[11] = 222
+ssn[12] = 231
+ssn[13] = 236
+ssn[14] = 246
+ssn[15] = 251
+ssn[16] = 260
+ssn[17] = 267
+ssn[18] = 302
+ssn[19] = 317
+ssn[20] = 361
+ssn[21] = 386
+ssn[22] = 399
+ssn[23] = 407
+ssn[24] = 415
+ssn[25] = 424
+ssn[26] = 428
+ssn[27] = 432
+ssn[28] = 439
+ssn[29] = 448
+ssn[30] = 467
+ssn[31] = 477
+ssn[32] = 485
+ssn[33] = 500
+ssn[34] = 502
+ssn[35] = 504
+ssn[36] = 508
+ssn[37] = 515
+ssn[38] = 517
+ssn[39] = 519
+ssn[40] = 520
+ssn[41] = 524
+ssn[42] = 525
+ssn[43] = 527
+ssn[44] = 529
+ssn[45] = 530
+ssn[46] = 539
+ssn[47] = 544
+ssn[48] = 573
+ssn[49] = 574
+ssn[50] = 576
+ssn[51] = 579
+ssn[52] = 580
+ssn[53] = 584
+ssn[54] = 585
+ssn[55] = 586
+ssn[56] = 599
+ssn[57] = 728
+var geo = new makeArray(57)
+geo[1] = "New Hampshire"
+geo[2] = "Maine"
+geo[3] = "Vermont"
+geo[4] = "Massachusetts"
+geo[5] = "Rhode Island"
+geo[6] = "Connecticut"
+geo[7] = "New York"
+geo[8] = "New Jersey"
+geo[9] = "Pennsylvania"
+geo[10] = "Maryland"
+geo[11] = "Delaware"
+geo[12] = "Virginia"
+geo[13] = "West Virginia"
+geo[14] = "North Carolina"
+geo[15] = "South Carolina"
+geo[16] = "Georgia"
+geo[17] = "Florida"
+geo[18] = "Ohio"
+geo[19] = "Indiana"
+geo[20] = "Illinois"
+geo[21] = "Michigan"
+geo[22] = "Wisconsin"
+geo[23] = "Kentucky"
+geo[24] = "Tennessee"
+geo[25] = "Alabama"
+geo[26] = "Mississippi"
+geo[27] = "Arkansas"
+geo[28] = "Louisiana"
+geo[29] = "Oklahoma"
+geo[30] = "Texas"
+geo[31] = "Minnesota"
+geo[32] = "Iowa"
+geo[33] = "Missouri"
+geo[34] = "North Dakota"
+geo[35] = "South Dakota"
+geo[36] = "Nebraska"
+geo[37] = "Kansas"
+geo[38] = "Montana"
+geo[39] = "Idaho"
+geo[40] = "Wyoming"
+geo[41] = "Colorado"
+geo[42] = "New Mexico"
+geo[43] = "Arizona"
+geo[44] = "Utah"
+geo[45] = "Nevada"
+geo[46] = "Washington"
+geo[47] = "Oregon"
+geo[48] = "California"
+geo[49] = "Alaska"
+geo[50] = "Hawaii"
+geo[51] = "District of Columbia"
+geo[52] = "Virgin Islands"
+geo[53] = "Puerto Rico"
+geo[54] = "New Mexico"
+geo[55] = "Guam, American Samoa, N. Mariana Isl., Philippines"
+geo[56] = "Puerto Rico"
+geo[57] = "Long-time or retired railroad workers"
+function stripZeros(inputStr) {
+var result = inputStr
+while (result.substring(0,1) == "0") {
+result = result.substring(1,result.length)
+}
+return result
+}
+function isEmpty(inputStr) {
+if (inputStr == "" || inputStr == null) {
+return true
+}
+return false
+}
+function isNumber(inputStr) {
+for (var i = 0; i < inputStr.length; i++) {
+var oneChar = inputStr.substring(i, i + 1)
+if (oneChar < "0" || oneChar > "9") {
+return false
+   }
+}
+return true
+}
+function inRange(inputStr) {
+num = parseInt(inputStr)
+if (num < 1 || num > 586 && num < 596 || num > 599 && num < 700 || num > 728) {
+return false
+}
+return true
+}
+function isValid(inputStr) {
+if (isEmpty(inputStr)) {
+alert("Please enter a number into the field before clicking the button.")
+return false
+} else {
+if (!isNumber(inputStr)) {
+alert("Please make sure entries are numbers only.")
+return false
+} else {
+if (!inRange(inputStr)) {
+alert("Sorry, the number you entered is not part of our database.  Try another three-digit number.")
+return false
+      }
+   }
+}
+return true
+}
+function search(form) {
+var foundMatch = false
+var inputStr = stripZeros(form.entry.value)
+if (isValid(inputStr)) {
+inputValue = inputStr
+for (var i = 1; i <= ssn.length; i++) {
+if (inputValue <= ssn[i]) {
+foundMatch = true
+break
+      }
+   }
+}
+form.result.value = (foundMatch) ? geo[i] : ""
+form.entry.focus()
+form.entry.select()
+}
+// End -->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=843V2002111414475&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=233V20021115201453&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/where-born.html/1285153129/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_HW_Brown_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<BASEFONT SIZE=3>
+  <FONT SIZE=6>
+<B><FONT SIZE="+2" FACE="Helvetica,Arial" ALIGN=RIGHT COLOR="#0000FF">
+<b><A HREF="../../Upper1/default.htm" TARGET="_top">
+Home</A> </b><img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <b><A HREF="default.htm" TARGET="_top"><font color="#FF0000">Games</font></A> </b>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <FONT COLOR="#006666">Where Born?</FONT></b></FONT><BR>
+</B><BR>
+  </FONT>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+
+According to an article in the <CITE>Wall Street Journal</CITE>, the first three digits of a U.S. Social Security number is a code that <B>may indicate</B> the state or territory in which your application stated you were born (because the code reveals the state in which you registered).  For recent immigrants, the number is supposed to match up with the state or territory in which you were living when you received proper working papers.<P>Note: The database in this document is not 100 percent complete or 100 percent accurate.  Please don't e-mail me to inform me that it was not correct.  Nothing is perfect.  Populous states have added numeric ranges not contained here.<br><hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<BODY>
+<FORM METHOD=post>
+Instructions:
+<OL><LI>Enter the first three digits of a U.S. Social 
+Security number in question.</LI>
+<LI>Click on the Search button.</LI>
+<LI>See the corresponding state or territory in the field.</L1>
+</OL>
+<CENTER>
+<P>Enter the first <B>three</B> digits of a Social Security number:
+<INPUT TYPE="text" NAME="entry" SIZE=3>
+<INPUT TYPE="button" VALUE="Search" ONCLICK="search(this.form)">
+<P>
+The Federal Government links this number to:  
+<INPUT TYPE="text" NAME="result" SIZE=50></center>
+<BR>
+<HR>
+<BR><BR><BR>
+<P><B>For the paranoiad:</B> No information you enter here is recorded or monitored - it stays entirely within your browser.
+</CENTER>
+</FORM>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Games:  Where Born?</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Apple-s).  The script is yours!!!<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  4.95 KB  " size="24">
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL WHERE BORN?:
+
+   1.  Put the designated coding into the HEAD of your HTML document
+   2.  Paste the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Copy this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+function makeArray(n) {
+this.length = n
+for (var i=1; i &lt;= n; i++)
+this[i] = null
+return this
+}
+var ssn = new makeArray(57)
+ssn[1] = 3
+ssn[2] = 7
+ssn[3] = 9
+ssn[4] = 34
+ssn[5] = 39
+ssn[6] = 49
+ssn[7] = 134
+ssn[8] = 158
+ssn[9] = 211
+ssn[10] = 220
+ssn[11] = 222
+ssn[12] = 231
+ssn[13] = 236
+ssn[14] = 246
+ssn[15] = 251
+ssn[16] = 260
+ssn[17] = 267
+ssn[18] = 302
+ssn[19] = 317
+ssn[20] = 361
+ssn[21] = 386
+ssn[22] = 399
+ssn[23] = 407
+ssn[24] = 415
+ssn[25] = 424
+ssn[26] = 428
+ssn[27] = 432
+ssn[28] = 439
+ssn[29] = 448
+ssn[30] = 467
+ssn[31] = 477
+ssn[32] = 485
+ssn[33] = 500
+ssn[34] = 502
+ssn[35] = 504
+ssn[36] = 508
+ssn[37] = 515
+ssn[38] = 517
+ssn[39] = 519
+ssn[40] = 520
+ssn[41] = 524
+ssn[42] = 525
+ssn[43] = 527
+ssn[44] = 529
+ssn[45] = 530
+ssn[46] = 539
+ssn[47] = 544
+ssn[48] = 573
+ssn[49] = 574
+ssn[50] = 576
+ssn[51] = 579
+ssn[52] = 580
+ssn[53] = 584
+ssn[54] = 585
+ssn[55] = 586
+ssn[56] = 599
+ssn[57] = 728
+var geo = new makeArray(57)
+geo[1] = "New Hampshire"
+geo[2] = "Maine"
+geo[3] = "Vermont"
+geo[4] = "Massachusetts"
+geo[5] = "Rhode Island"
+geo[6] = "Connecticut"
+geo[7] = "New York"
+geo[8] = "New Jersey"
+geo[9] = "Pennsylvania"
+geo[10] = "Maryland"
+geo[11] = "Delaware"
+geo[12] = "Virginia"
+geo[13] = "West Virginia"
+geo[14] = "North Carolina"
+geo[15] = "South Carolina"
+geo[16] = "Georgia"
+geo[17] = "Florida"
+geo[18] = "Ohio"
+geo[19] = "Indiana"
+geo[20] = "Illinois"
+geo[21] = "Michigan"
+geo[22] = "Wisconsin"
+geo[23] = "Kentucky"
+geo[24] = "Tennessee"
+geo[25] = "Alabama"
+geo[26] = "Mississippi"
+geo[27] = "Arkansas"
+geo[28] = "Louisiana"
+geo[29] = "Oklahoma"
+geo[30] = "Texas"
+geo[31] = "Minnesota"
+geo[32] = "Iowa"
+geo[33] = "Missouri"
+geo[34] = "North Dakota"
+geo[35] = "South Dakota"
+geo[36] = "Nebraska"
+geo[37] = "Kansas"
+geo[38] = "Montana"
+geo[39] = "Idaho"
+geo[40] = "Wyoming"
+geo[41] = "Colorado"
+geo[42] = "New Mexico"
+geo[43] = "Arizona"
+geo[44] = "Utah"
+geo[45] = "Nevada"
+geo[46] = "Washington"
+geo[47] = "Oregon"
+geo[48] = "California"
+geo[49] = "Alaska"
+geo[50] = "Hawaii"
+geo[51] = "District of Columbia"
+geo[52] = "Virgin Islands"
+geo[53] = "Puerto Rico"
+geo[54] = "New Mexico"
+geo[55] = "Guam, American Samoa, N. Mariana Isl., Philippines"
+geo[56] = "Puerto Rico"
+geo[57] = "Long-time or retired railroad workers"
+function stripZeros(inputStr) {
+var result = inputStr
+while (result.substring(0,1) == "0") {
+result = result.substring(1,result.length)
+}
+return result
+}
+function isEmpty(inputStr) {
+if (inputStr == "" || inputStr == null) {
+return true
+}
+return false
+}
+function isNumber(inputStr) {
+for (var i = 0; i &lt; inputStr.length; i++) {
+var oneChar = inputStr.substring(i, i + 1)
+if (oneChar &lt; "0" || oneChar &gt; "9") {
+return false
+   }
+}
+return true
+}
+function inRange(inputStr) {
+num = parseInt(inputStr)
+if (num &lt; 1 || num &gt; 586 && num &lt; 596 || num &gt; 599 && num &lt; 700 || num &gt; 728) {
+return false
+}
+return true
+}
+function isValid(inputStr) {
+if (isEmpty(inputStr)) {
+alert("Please enter a number into the field before clicking the button.")
+return false
+} else {
+if (!isNumber(inputStr)) {
+alert("Please make sure entries are numbers only.")
+return false
+} else {
+if (!inRange(inputStr)) {
+alert("Sorry, the number you entered is not part of our database.  Try another three-digit number.")
+return false
+      }
+   }
+}
+return true
+}
+function search(form) {
+var foundMatch = false
+var inputStr = stripZeros(form.entry.value)
+if (isValid(inputStr)) {
+inputValue = inputStr
+for (var i = 1; i &lt;= ssn.length; i++) {
+if (inputValue &lt;= ssn[i]) {
+foundMatch = true
+break
+      }
+   }
+}
+form.result.value = (foundMatch) ? geo[i] : ""
+form.entry.focus()
+form.entry.select()
+}
+// End --&gt;
+&lt;/SCRIPT&gt;
+
+&lt;!-- STEP TWO: Paste this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;FORM METHOD=post&gt;
+Instructions:
+&lt;OL&gt;&lt;LI&gt;Enter the first three digits of a U.S. Social 
+Security number in question.&lt;/LI&gt;
+&lt;LI&gt;Click on the Search button.&lt;/LI&gt;
+&lt;LI&gt;See the corresponding state or territory in the field.&lt;/L1&gt;
+&lt;/OL&gt;
+&lt;CENTER&gt;
+&lt;P&gt;Enter the first &lt;B&gt;three&lt;/B&gt; digits of a Social Security number:
+&lt;INPUT TYPE="text" NAME="entry" SIZE=3&gt;
+&lt;INPUT TYPE="button" VALUE="Search" ONCLICK="search(this.form)"&gt;
+&lt;P&gt;
+The Federal Government links this number to:  
+&lt;INPUT TYPE="text" NAME="result" SIZE=50&gt;&lt;/center&gt;
+&lt;BR&gt;
+&lt;HR&gt;
+&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;
+&lt;P&gt;&lt;B&gt;For the paranoiad:&lt;/B&gt; No information you enter here is recorded or monitored - it stays entirely within your browser.
+&lt;/CENTER&gt;
+&lt;/FORM&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size="-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  4.95 KB  --&gt;
+</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/where-born.html/173214514/125x800/House_Counter_2e/counterpre-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Counter_2e/counterpre-125x600.gif"  ALT="Track who is coming to your website and from where"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/where-born.html/173214514/125x800/House_Counter_2e/counterpre-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='where-born.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/where-born.html/553206697/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/where-born.html/553206697/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html></body></html>

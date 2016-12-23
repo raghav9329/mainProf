@@ -1,0 +1,903 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Page Details:  Scrollbar Colors ScriptWriter</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="IE 5.5+ allows you to change the colors of scroll bars in a textarea tag or the browser window. Select the colors you want for the respective scroll bar attributes and see how they will look. Then, switch the "Show Source" to "Yes", re-submit, and the code will appear in a new window. Pretty neat!">
+<META NAME="date" CONTENT="2001-11-15">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="David Antonacci">
+<META NAME="section" CONTENT="Page Details">
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=678V20021114144615&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=284V200211152029&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/page-details/scrollbar-colors-scriptwriter.html/692331114/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_IDE_Brown_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Page Details</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Scrollbar Colors ScriptWriter</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+IE 5.5+ allows you to change the colors of scroll bars in a textarea tag or the browser window. Select the colors you want for the respective scroll bar attributes and see how they will look. Then, switch the "Show Source" to "Yes", re-submit, and the code will appear in a new window. Pretty neat!
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  David Antonacci (DaveA@codeave.com) -->
+<!-- Web Site:  http://www.codeave.com -->
+
+<!-- Begin
+function change_colors()
+{
+text_area.style.scrollbarBaseColor=document.c_form.BaseColor.value
+text_area.style.scrollbarArrowColor=document.c_form.ArrowColor.value
+text_area.style.scrollbarDarkShadowColor=document.c_form.DarkShadowColor.value
+text_area.style.scrollbarFaceColor=document.c_form.FaceColor.value
+text_area.style.scrollbarHighlightColor=document.c_form.HighlightColor.value
+text_area.style.scrollbarShadowColor=document.c_form.ShadowColor.value
+text_area.style.scrollbar3DLightColor=document.c_form.dlightColor.value
+if (document.c_form.show_text.value == "Yes")
+{
+new_window = open("","displayWindow","width=500,height=400,left=10,top=10");
+
+// open new document
+  new_window.document.open();
+// Text of the new document
+// Replace your " with ' or \" or your document.write statements will fail
+new_window.document.write("<html><title>JavaScript ScrollBar Code</title>");
+new_window.document.write("<body bgcolor=\"#FFFFFF\">");
+new_window.document.write("<br>");
+new_window.document.write("&lt;html&gt;<br>");
+new_window.document.write("&lt;body&gt;<br>");
+new_window.document.write("&lt;script language=\"JavaScript\"&gt;<br>");
+new_window.document.write("&lt;!--<br>");
+if (c_form.BaseColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarBaseColor='"+document.c_form.BaseColor.value +"'");
+new_window.document.write("<br>");
+}
+if (c_form.ArrowColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarArrowColor='"+document.c_form.ArrowColor.value +"'");
+new_window.document.write("<br>");
+}
+if (c_form.DarkShadowColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarDarkShadowColor='"+document.c_form.DarkShadowColor.value +"'");
+new_window.document.write("<br>");
+}
+if (c_form.FaceColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarFaceColor='"+document.c_form.FaceColor.value +"'");
+new_window.document.write("<br>");
+}
+if (c_form.HighlightColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarHighlightColor='"+document.c_form.HighlightColor.value +"'");
+new_window.document.write("<br>");
+}
+if (c_form.ShadowColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarShadowColor='"+document.c_form.ShadowColor.value +"'");
+new_window.document.write("<br>");
+}
+if (c_form.dlightColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbar3dlightColor='"+document.c_form.dlightColor.value +"'");
+new_window.document.write("<br>");
+}
+new_window.document.write("<br>--&gt;<br>");
+new_window.document.write("&lt;/script&gt;<br>");
+new_window.document.write("&lt;/body&gt;<br>");
+new_window.document.write("&lt;/html&gt;<br>");
+new_window.document.write("</body></html>");
+// close the document
+  new_window.document.close();
+}
+}
+//  End -->
+</script>
+
+<center>
+<textarea name="text_area" cols="45" rows="5">
+Four score and seven years ago our fathers
+brought forth on this continent a new nation,
+conceived in liberty and dedicated to the
+proposition that all men are created equal.
+Now we are engaged in a great civil war,
+testing whether that nation or any nation so
+conceived and so dedicated can long endure.
+</textarea>
+</center>
+
+<div align="center">
+<center>
+<table width="450">
+<tr><td align="center" valign="top" width="112" nowrap>
+<form name="c_form">
+<div align="center">Base<br>
+<select name="BaseColor">
+<option value="">None</option>
+<option value="#000000">Black</option>
+<option value="#FFFFFF">White</option>
+<option value="#008000">Green</option>
+<option value="#800000">Maroon</option>
+<option value="#808000">Olive</option>
+<option value="#000080">Navy</option>
+<option value="#800080">Purple</option>
+<option value="#808080">Grey</option>
+<option value="#FFFF00">Yellow</option>
+<option value="#00FF00">Lime</option>
+<option value="#00FFFF">Aqua</option>
+<option value="#FF00FF">Fushia</option>
+<option value="#C0C0C0">Silver</option>
+<option value="#FF0000">Red</option>
+<option value="#0000FF">Blue</option>
+<option value="#008080">Teal</option>
+</select>
+
+</td><td align="center" valign="top" width="112" nowrap>
+Arrow
+<br>
+<select name="ArrowColor">
+<option value="">None</option>
+<option value="#000000">Black</option>
+<option value="#FFFFFF">White</option>
+<option value="#008000">Green</option>
+<option value="#800000">Maroon</option>
+<option value="#808000">Olive</option>
+<option value="#000080">Navy</option>
+<option value="#800080">Purple</option>
+<option value="#808080">Grey</option>
+<option value="#FFFF00">Yellow</option>
+<option value="#00FF00">Lime</option>
+<option value="#00FFFF">Aqua</option>
+<option value="#FF00FF">Fushia</option>
+<option value="#C0C0C0">Silver</option>
+<option value="#FF0000">Red</option>
+<option value="#0000FF">Blue</option>
+<option value="#008080">Teal</option>
+</select>
+
+</td><td align="center" valign="top" width="112" nowrap>
+Dark Shadow
+<br>
+<select name="DarkShadowColor">
+<option value="">None</option>
+<option value="#000000">Black</option>
+<option value="#FFFFFF">White</option>
+<option value="#008000">Green</option>
+<option value="#800000">Maroon</option>
+<option value="#808000">Olive</option>
+<option value="#000080">Navy</option>
+<option value="#800080">Purple</option>
+<option value="#808080">Grey</option>
+<option value="#FFFF00">Yellow</option>
+<option value="#00FF00">Lime</option>
+<option value="#00FFFF">Aqua</option>
+<option value="#FF00FF">Fushia</option>
+<option value="#C0C0C0">Silver</option>
+<option value="#FF0000">Red</option>
+<option value="#0000FF">Blue</option>
+<option value="#008080">Teal</option>
+</select>
+
+</td>
+<td align="center" valign="top" width="112" nowrap>
+Face
+<br>
+<select name="FaceColor">
+<option value="">None</option>
+<option value="#000000">Black</option>
+<option value="#FFFFFF">White</option>
+<option value="#008000">Green</option>
+<option value="#800000">Maroon</option>
+<option value="#808000">Olive</option>
+<option value="#000080">Navy</option>
+<option value="#800080">Purple</option>
+<option value="#808080">Grey</option>
+<option value="#FFFF00">Yellow</option>
+<option value="#00FF00">Lime</option>
+<option value="#00FFFF">Aqua</option>
+<option value="#FF00FF">Fushia</option>
+<option value="#C0C0C0">Silver</option>
+<option value="#FF0000">Red</option>
+<option value="#0000FF">Blue</option>
+<option value="#008080">Teal</option>
+</select>
+
+</td></tr>
+<tr><td align="center" valign="top" width="112" nowrap>
+Highlight
+<br>
+<select name="HighlightColor">
+<option value="">None</option>
+<option value="#000000">Black</option>
+<option value="#FFFFFF">White</option>
+<option value="#008000">Green</option>
+<option value="#800000">Maroon</option>
+<option value="#808000">Olive</option>
+<option value="#000080">Navy</option>
+<option value="#800080">Purple</option>
+<option value="#808080">Grey</option>
+<option value="#FFFF00">Yellow</option>
+<option value="#00FF00">Lime</option>
+<option value="#00FFFF">Aqua</option>
+<option value="#FF00FF">Fushia</option>
+<option value="#C0C0C0">Silver</option>
+<option value="#FF0000">Red</option>
+<option value="#0000FF">Blue</option>
+<option value="#008080">Teal</option>
+</select>
+
+</td><td align="center" valign="top" width="112" nowrap>
+Shadow
+<br>
+<select name="ShadowColor">
+<option value="">None</option>
+<option value="#000000">Black</option>
+<option value="#FFFFFF">White</option>
+<option value="#008000">Green</option>
+<option value="#800000">Maroon</option>
+<option value="#808000">Olive</option>
+<option value="#000080">Navy</option>
+<option value="#800080">Purple</option>
+<option value="#808080">Grey</option>
+<option value="#FFFF00">Yellow</option>
+<option value="#00FF00">Lime</option>
+<option value="#00FFFF">Aqua</option>
+<option value="#FF00FF">Fushia</option>
+<option value="#C0C0C0">Silver</option>
+<option value="#FF0000">Red</option>
+<option value="#0000FF">Blue</option>
+<option value="#008080">Teal</option>
+</select>
+
+</td><td align="center" valign="top" width="112" nowrap>
+3dlight
+<br>
+<select name="dlightColor">
+<option value="">None</option>
+<option value="#000000">Black</option>
+<option value="#FFFFFF">White</option>
+<option value="#008000">Green</option>
+<option value="#800000">Maroon</option>
+<option value="#808000">Olive</option>
+<option value="#000080">Navy</option>
+<option value="#800080">Purple</option>
+<option value="#808080">Grey</option>
+<option value="#FFFF00">Yellow</option>
+<option value="#00FF00">Lime</option>
+<option value="#00FFFF">Aqua</option>
+<option value="#FF00FF">Fushia</option>
+<option value="#C0C0C0">Silver</option>
+<option value="#FF0000">Red</option>
+<option value="#0000FF">Blue</option>
+<option value="#008080">Teal</option>
+</select>
+
+</td><td align="center" valign="top" width="112" nowrap>
+Show Source<br>
+<select name="show_text">
+<option value="No">No</option>
+<option value="Yes">Yes</option>
+</select>
+</td></tr>
+<tr>
+<td align="center" valign="top" colspan="4" width="442">
+<input type="button" value="Change Colors/Get Source" onClick="JavaScript:change_colors()">
+</div>
+</form>
+</td></tr>
+</table>
+
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Page Details:  Scrollbar Colors ScriptWriter</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  11.52 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- ONE STEP TO INSTALL SCROLLBAR COLORS SCRIPTWRITER:
+
+  1.  Copy the coding into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+&lt;!-- Original:  David Antonacci (DaveA@codeave.com) --&gt;
+&lt;!-- Web Site:  http://www.codeave.com --&gt;
+
+&lt;!-- Begin
+function change_colors()
+{
+text_area.style.scrollbarBaseColor=document.c_form.BaseColor.value
+text_area.style.scrollbarArrowColor=document.c_form.ArrowColor.value
+text_area.style.scrollbarDarkShadowColor=document.c_form.DarkShadowColor.value
+text_area.style.scrollbarFaceColor=document.c_form.FaceColor.value
+text_area.style.scrollbarHighlightColor=document.c_form.HighlightColor.value
+text_area.style.scrollbarShadowColor=document.c_form.ShadowColor.value
+text_area.style.scrollbar3DLightColor=document.c_form.dlightColor.value
+if (document.c_form.show_text.value == "Yes")
+{
+new_window = open("","displayWindow","width=500,height=400,left=10,top=10");
+
+// open new document
+  new_window.document.open();
+// Text of the new document
+// Replace your " with ' or \" or your document.write statements will fail
+new_window.document.write("&lt;html&gt;&lt;title&gt;JavaScript ScrollBar Code&lt;/title&gt;");
+new_window.document.write("&lt;body bgcolor=\"#FFFFFF\"&gt;");
+new_window.document.write("&lt;br&gt;");
+new_window.document.write("&lt;html&gt;&lt;br&gt;");
+new_window.document.write("&lt;body&gt;&lt;br&gt;");
+new_window.document.write("&lt;script language=\"JavaScript\"&gt;&lt;br&gt;");
+new_window.document.write("&lt;!--&lt;br&gt;");
+if (c_form.BaseColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarBaseColor='"+document.c_form.BaseColor.value +"'");
+new_window.document.write("&lt;br&gt;");
+}
+if (c_form.ArrowColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarArrowColor='"+document.c_form.ArrowColor.value +"'");
+new_window.document.write("&lt;br&gt;");
+}
+if (c_form.DarkShadowColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarDarkShadowColor='"+document.c_form.DarkShadowColor.value +"'");
+new_window.document.write("&lt;br&gt;");
+}
+if (c_form.FaceColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarFaceColor='"+document.c_form.FaceColor.value +"'");
+new_window.document.write("&lt;br&gt;");
+}
+if (c_form.HighlightColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarHighlightColor='"+document.c_form.HighlightColor.value +"'");
+new_window.document.write("&lt;br&gt;");
+}
+if (c_form.ShadowColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbarShadowColor='"+document.c_form.ShadowColor.value +"'");
+new_window.document.write("&lt;br&gt;");
+}
+if (c_form.dlightColor.value != "")
+{
+new_window.document.write("document.body.style.scrollbar3dlightColor='"+document.c_form.dlightColor.value +"'");
+new_window.document.write("&lt;br&gt;");
+}
+new_window.document.write("&lt;br&gt;--&gt;&lt;br&gt;");
+new_window.document.write("&lt;/script&gt;&lt;br&gt;");
+new_window.document.write("&lt;/body&gt;&lt;br&gt;");
+new_window.document.write("&lt;/html&gt;&lt;br&gt;");
+new_window.document.write("&lt;/body&gt;&lt;/html&gt;");
+// close the document
+  new_window.document.close();
+}
+}
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;center&gt;
+&lt;textarea name="text_area" cols="45" rows="5"&gt;
+Four score and seven years ago our fathers
+brought forth on this continent a new nation,
+conceived in liberty and dedicated to the
+proposition that all men are created equal.
+Now we are engaged in a great civil war,
+testing whether that nation or any nation so
+conceived and so dedicated can long endure.
+&lt;/textarea&gt;
+&lt;/center&gt;
+
+&lt;div align="center"&gt;
+&lt;center&gt;
+&lt;table width="450"&gt;
+&lt;tr&gt;&lt;td align="center" valign="top" width="112" nowrap&gt;
+&lt;form name="c_form"&gt;
+&lt;div align="center"&gt;Base&lt;br&gt;
+&lt;select name="BaseColor"&gt;
+&lt;option value=""&gt;None&lt;/option&gt;
+&lt;option value="#000000"&gt;Black&lt;/option&gt;
+&lt;option value="#FFFFFF"&gt;White&lt;/option&gt;
+&lt;option value="#008000"&gt;Green&lt;/option&gt;
+&lt;option value="#800000"&gt;Maroon&lt;/option&gt;
+&lt;option value="#808000"&gt;Olive&lt;/option&gt;
+&lt;option value="#000080"&gt;Navy&lt;/option&gt;
+&lt;option value="#800080"&gt;Purple&lt;/option&gt;
+&lt;option value="#808080"&gt;Grey&lt;/option&gt;
+&lt;option value="#FFFF00"&gt;Yellow&lt;/option&gt;
+&lt;option value="#00FF00"&gt;Lime&lt;/option&gt;
+&lt;option value="#00FFFF"&gt;Aqua&lt;/option&gt;
+&lt;option value="#FF00FF"&gt;Fushia&lt;/option&gt;
+&lt;option value="#C0C0C0"&gt;Silver&lt;/option&gt;
+&lt;option value="#FF0000"&gt;Red&lt;/option&gt;
+&lt;option value="#0000FF"&gt;Blue&lt;/option&gt;
+&lt;option value="#008080"&gt;Teal&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;/td&gt;&lt;td align="center" valign="top" width="112" nowrap&gt;
+Arrow
+&lt;br&gt;
+&lt;select name="ArrowColor"&gt;
+&lt;option value=""&gt;None&lt;/option&gt;
+&lt;option value="#000000"&gt;Black&lt;/option&gt;
+&lt;option value="#FFFFFF"&gt;White&lt;/option&gt;
+&lt;option value="#008000"&gt;Green&lt;/option&gt;
+&lt;option value="#800000"&gt;Maroon&lt;/option&gt;
+&lt;option value="#808000"&gt;Olive&lt;/option&gt;
+&lt;option value="#000080"&gt;Navy&lt;/option&gt;
+&lt;option value="#800080"&gt;Purple&lt;/option&gt;
+&lt;option value="#808080"&gt;Grey&lt;/option&gt;
+&lt;option value="#FFFF00"&gt;Yellow&lt;/option&gt;
+&lt;option value="#00FF00"&gt;Lime&lt;/option&gt;
+&lt;option value="#00FFFF"&gt;Aqua&lt;/option&gt;
+&lt;option value="#FF00FF"&gt;Fushia&lt;/option&gt;
+&lt;option value="#C0C0C0"&gt;Silver&lt;/option&gt;
+&lt;option value="#FF0000"&gt;Red&lt;/option&gt;
+&lt;option value="#0000FF"&gt;Blue&lt;/option&gt;
+&lt;option value="#008080"&gt;Teal&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;/td&gt;&lt;td align="center" valign="top" width="112" nowrap&gt;
+Dark Shadow
+&lt;br&gt;
+&lt;select name="DarkShadowColor"&gt;
+&lt;option value=""&gt;None&lt;/option&gt;
+&lt;option value="#000000"&gt;Black&lt;/option&gt;
+&lt;option value="#FFFFFF"&gt;White&lt;/option&gt;
+&lt;option value="#008000"&gt;Green&lt;/option&gt;
+&lt;option value="#800000"&gt;Maroon&lt;/option&gt;
+&lt;option value="#808000"&gt;Olive&lt;/option&gt;
+&lt;option value="#000080"&gt;Navy&lt;/option&gt;
+&lt;option value="#800080"&gt;Purple&lt;/option&gt;
+&lt;option value="#808080"&gt;Grey&lt;/option&gt;
+&lt;option value="#FFFF00"&gt;Yellow&lt;/option&gt;
+&lt;option value="#00FF00"&gt;Lime&lt;/option&gt;
+&lt;option value="#00FFFF"&gt;Aqua&lt;/option&gt;
+&lt;option value="#FF00FF"&gt;Fushia&lt;/option&gt;
+&lt;option value="#C0C0C0"&gt;Silver&lt;/option&gt;
+&lt;option value="#FF0000"&gt;Red&lt;/option&gt;
+&lt;option value="#0000FF"&gt;Blue&lt;/option&gt;
+&lt;option value="#008080"&gt;Teal&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;/td&gt;
+&lt;td align="center" valign="top" width="112" nowrap&gt;
+Face
+&lt;br&gt;
+&lt;select name="FaceColor"&gt;
+&lt;option value=""&gt;None&lt;/option&gt;
+&lt;option value="#000000"&gt;Black&lt;/option&gt;
+&lt;option value="#FFFFFF"&gt;White&lt;/option&gt;
+&lt;option value="#008000"&gt;Green&lt;/option&gt;
+&lt;option value="#800000"&gt;Maroon&lt;/option&gt;
+&lt;option value="#808000"&gt;Olive&lt;/option&gt;
+&lt;option value="#000080"&gt;Navy&lt;/option&gt;
+&lt;option value="#800080"&gt;Purple&lt;/option&gt;
+&lt;option value="#808080"&gt;Grey&lt;/option&gt;
+&lt;option value="#FFFF00"&gt;Yellow&lt;/option&gt;
+&lt;option value="#00FF00"&gt;Lime&lt;/option&gt;
+&lt;option value="#00FFFF"&gt;Aqua&lt;/option&gt;
+&lt;option value="#FF00FF"&gt;Fushia&lt;/option&gt;
+&lt;option value="#C0C0C0"&gt;Silver&lt;/option&gt;
+&lt;option value="#FF0000"&gt;Red&lt;/option&gt;
+&lt;option value="#0000FF"&gt;Blue&lt;/option&gt;
+&lt;option value="#008080"&gt;Teal&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td align="center" valign="top" width="112" nowrap&gt;
+Highlight
+&lt;br&gt;
+&lt;select name="HighlightColor"&gt;
+&lt;option value=""&gt;None&lt;/option&gt;
+&lt;option value="#000000"&gt;Black&lt;/option&gt;
+&lt;option value="#FFFFFF"&gt;White&lt;/option&gt;
+&lt;option value="#008000"&gt;Green&lt;/option&gt;
+&lt;option value="#800000"&gt;Maroon&lt;/option&gt;
+&lt;option value="#808000"&gt;Olive&lt;/option&gt;
+&lt;option value="#000080"&gt;Navy&lt;/option&gt;
+&lt;option value="#800080"&gt;Purple&lt;/option&gt;
+&lt;option value="#808080"&gt;Grey&lt;/option&gt;
+&lt;option value="#FFFF00"&gt;Yellow&lt;/option&gt;
+&lt;option value="#00FF00"&gt;Lime&lt;/option&gt;
+&lt;option value="#00FFFF"&gt;Aqua&lt;/option&gt;
+&lt;option value="#FF00FF"&gt;Fushia&lt;/option&gt;
+&lt;option value="#C0C0C0"&gt;Silver&lt;/option&gt;
+&lt;option value="#FF0000"&gt;Red&lt;/option&gt;
+&lt;option value="#0000FF"&gt;Blue&lt;/option&gt;
+&lt;option value="#008080"&gt;Teal&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;/td&gt;&lt;td align="center" valign="top" width="112" nowrap&gt;
+Shadow
+&lt;br&gt;
+&lt;select name="ShadowColor"&gt;
+&lt;option value=""&gt;None&lt;/option&gt;
+&lt;option value="#000000"&gt;Black&lt;/option&gt;
+&lt;option value="#FFFFFF"&gt;White&lt;/option&gt;
+&lt;option value="#008000"&gt;Green&lt;/option&gt;
+&lt;option value="#800000"&gt;Maroon&lt;/option&gt;
+&lt;option value="#808000"&gt;Olive&lt;/option&gt;
+&lt;option value="#000080"&gt;Navy&lt;/option&gt;
+&lt;option value="#800080"&gt;Purple&lt;/option&gt;
+&lt;option value="#808080"&gt;Grey&lt;/option&gt;
+&lt;option value="#FFFF00"&gt;Yellow&lt;/option&gt;
+&lt;option value="#00FF00"&gt;Lime&lt;/option&gt;
+&lt;option value="#00FFFF"&gt;Aqua&lt;/option&gt;
+&lt;option value="#FF00FF"&gt;Fushia&lt;/option&gt;
+&lt;option value="#C0C0C0"&gt;Silver&lt;/option&gt;
+&lt;option value="#FF0000"&gt;Red&lt;/option&gt;
+&lt;option value="#0000FF"&gt;Blue&lt;/option&gt;
+&lt;option value="#008080"&gt;Teal&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;/td&gt;&lt;td align="center" valign="top" width="112" nowrap&gt;
+3dlight
+&lt;br&gt;
+&lt;select name="dlightColor"&gt;
+&lt;option value=""&gt;None&lt;/option&gt;
+&lt;option value="#000000"&gt;Black&lt;/option&gt;
+&lt;option value="#FFFFFF"&gt;White&lt;/option&gt;
+&lt;option value="#008000"&gt;Green&lt;/option&gt;
+&lt;option value="#800000"&gt;Maroon&lt;/option&gt;
+&lt;option value="#808000"&gt;Olive&lt;/option&gt;
+&lt;option value="#000080"&gt;Navy&lt;/option&gt;
+&lt;option value="#800080"&gt;Purple&lt;/option&gt;
+&lt;option value="#808080"&gt;Grey&lt;/option&gt;
+&lt;option value="#FFFF00"&gt;Yellow&lt;/option&gt;
+&lt;option value="#00FF00"&gt;Lime&lt;/option&gt;
+&lt;option value="#00FFFF"&gt;Aqua&lt;/option&gt;
+&lt;option value="#FF00FF"&gt;Fushia&lt;/option&gt;
+&lt;option value="#C0C0C0"&gt;Silver&lt;/option&gt;
+&lt;option value="#FF0000"&gt;Red&lt;/option&gt;
+&lt;option value="#0000FF"&gt;Blue&lt;/option&gt;
+&lt;option value="#008080"&gt;Teal&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;/td&gt;&lt;td align="center" valign="top" width="112" nowrap&gt;
+Show Source&lt;br&gt;
+&lt;select name="show_text"&gt;
+&lt;option value="No"&gt;No&lt;/option&gt;
+&lt;option value="Yes"&gt;Yes&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center" valign="top" colspan="4" width="442"&gt;
+&lt;input type="button" value="Change Colors/Get Source" onClick="JavaScript:change_colors()"&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  11.52 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/page-details/scrollbar-colors-scriptwriter.html/959980643/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif"  ALT="The Enterprise IM Strategies & Solutions Event"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/page-details/scrollbar-colors-scriptwriter.html/959980643/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='scrollbar-colors-scriptwriter.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/page-details/scrollbar-colors-scriptwriter.html/1040432819/468x60-2/House_InstantMessagingSprg03_1a/imp-spring2003-leo.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_InstantMessagingSprg03_1a/imp-spring2003-leo.gif"  ALT="The Enterprise IM Strategies & Solutions Event"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/page-details/scrollbar-colors-scriptwriter.html/1040432819/468x60-2/House_InstantMessagingSprg03_1a/imp-spring2003-leo.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

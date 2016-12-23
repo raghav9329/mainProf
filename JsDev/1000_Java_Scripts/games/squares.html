@@ -1,0 +1,796 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Games:  Squares</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="Test your strategic ability with this classic example of the game Squares.  Be careful, it's very addicting!">
+<META NAME="date" CONTENT="2001-04-18">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Ken Douglas">
+<META NAME="section" CONTENT="Games">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Ken Douglas (ken@ntlworld.com) -->
+<!-- Web Site:  http://www.groveroad.herts.sch.uk -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+// static globals 
+var maxheight = 9;
+var maxwidth = maxheight;
+var winscore = Math.round((maxheight * maxwidth / 2) + 0.5);
+// dynamic globals
+var player = 1; 
+var won = 0;
+function newGame() {
+// sets all graphics back to default and clears scores
+won = 0;
+eval('document.squares.score1.value = 0');
+eval('document.squares.score2.value = 0');
+for (var y = 1; y <= maxheight; y ++ ) {
+for (var x = 1; x <= maxwidth; x ++ ) {
+document.images["x" + x + "y" + y].src = sqr[0].src;
+document.images["vx" + x + "vy" + y].src = ver[0].src;
+document.images["hx" + x + "hy" + y].src = hor[0].src;
+   }
+}
+for (var a = 1; a <= maxheight; a ++ ) {
+onemore = maxheight + 1;
+document.images["vx" + onemore + "vy" + a].src = ver[0].src;
+document.images["hx" + a + "hy" + onemore].src = hor[0].src;
+   }
+}
+function preload() {
+if (document.images) {
+sqr = new makeArray(3);
+sqr[0].src = "http://javascript.internet.com/img/squares/p0.gif";
+sqr[1].src = "http://javascript.internet.com/img/squares/p1.gif";
+sqr[2].src = "http://javascript.internet.com/img/squares/p2.gif";
+ver = new makeArray(3);
+ver[0].src = "http://javascript.internet.com/img/squares/v0.gif";
+ver[1].src = "http://javascript.internet.com/img/squares/v1.gif";
+ver[2].src = "http://javascript.internet.com/img/squares/v2.gif";
+hor = new makeArray(3);
+hor[0].src = "http://javascript.internet.com/img/squares/h0.gif";
+hor[1].src = "http://javascript.internet.com/img/squares/h1.gif";
+hor[2].src = "http://javascript.internet.com/img/squares/h2.gif";
+sel = new makeArray(2);
+sel[0].src = "http://javascript.internet.com/img/squares/notsel.gif";
+sel[1].src = "http://javascript.internet.com/img/squares/sel.gif";
+}
+else {
+alert("Sorry, this game needs a browser\nwhich supports the image object.");
+   }
+}
+function makeArray(n) {
+this.length = n;
+for (i = 0; i < n; i ++) {
+this[i] = new Image();
+}
+return this;
+}
+function go (type, a, b) {
+// processes clicks on square verticals and horizontals...
+hit = 0;
+if (type == 1) {
+if (document.images["hx" + a + "hy" + b].src == hor[1].src) {
+alert("Already taken - try again");
+return;
+}
+document.images["hx" + a + "hy" + b].src = hor[1].src;
+// figure out if the square above is captured 
+if (b != 1) {
+var an = a + 1;
+var bn = b - 1;
+ if ((document.images["vx" + a + "vy" + bn].src == ver[1].src) && (document.images["vx" + an + "vy" + bn].src == ver[1].src) && (document.images["hx" + a + "hy" + bn].src == hor[1].src)) {
+document.images["x" + a + "y" + bn].src = sqr[player].src;
+scoresOnDoors();
+hit = 1;
+   }
+}
+//figure out if the square below is captured
+if (b != maxheight + 1) {
+var an = a + 1;
+var bn = b + 1;
+if ((document.images["vx" + a + "vy" + b].src == ver[1].src) && (document.images["vx" + an + "vy" + b].src == ver[1].src) && (document.images["hx" + a + "hy" + bn].src == hor[1].src)) {
+document.images["x" + a + "y" + b].src = sqr[player].src;
+scoresOnDoors();
+hit = 1;
+      }
+   }
+}
+if (type == 2) {
+if (document.images["vx" + a + "vy" + b].src == ver[1].src) {
+alert("Already taken - try again");
+return;
+}
+document.images["vx" + a + "vy" + b].src = ver[1].src;
+// figure out if the square right is captured 
+if (a != maxwidth + 1) {
+var an = a + 1;
+var bn = b + 1;
+if ((document.images["hx" + a + "hy" + b].src == hor[1].src) && (document.images["hx" + a + "hy" + bn].src == hor[1].src) && (document.images["vx" + an + "vy" + b].src == ver[1].src)) {
+document.images["x" + a + "y" + b].src = sqr[player].src;
+scoresOnDoors();
+hit = 1;
+   }
+}
+//figure out if the left is captured
+if (a != 1) {
+var an = a - 1;
+var bn = b + 1;
+if ((document.images["hx" + an + "hy" + b].src == hor[1].src) && (document.images["hx" + an + "hy" + bn].src == hor[1].src) && (document.images["vx" + an + "vy" + b].src == ver[1].src)) {
+document.images["x" + an + "y" + b].src = sqr[player].src;
+scoresOnDoors();
+hit = 1;
+      }
+   }
+}
+// change players if no hit
+if (hit == 0) {
+if (player != 1) {player = 1
+}
+else {
+player = 2;
+}
+showPlayer();
+}
+return;
+}
+function showPlayer() {
+// let the users jnow which player is "up" by switching on the appropriate graphic
+if (player == 1) {
+document.images["play2"].src = sqr[0].src;
+document.images["play1"].src = sqr[1].src;
+}
+if (player == 2) {
+document.images["play1"].src = sqr[0].src;
+document.images["play2"].src = sqr[2].src;
+}
+return;
+}
+function scoresOnDoors() {
+// simple score increment and check - note play can comtinue after a winner is declared
+eval('tmp = document.squares.score' + player + '.value');
+tmp = tmp * 1;
+tmp += 1;
+eval('document.squares.score' + player + '.value = tmp');
+if (won == 0 && tmp >= winscore) {
+alert("Player " + player + " wins");
+won = 1;
+}
+return;
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=843V2002111414475&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=233V20021115201453&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/squares.html/430786533/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_HW_Brown_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Games</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Squares</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Test your strategic ability with this classic example of the game Squares.  Be careful, it's very addicting!
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<a href="http://javascript.internet.com/img/squares/squares.zip">Download the Required Image Files</a>
+<br>
+<br>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Ken Douglas (ken@ntlworld.com) -->
+<!-- Web Site:  http://www.groveroad.herts.sch.uk -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var output = '';
+output += '<TABLE CELLPADDING = 0 CELLSPACING = 8 BORDER = 0><TR>';
+// create the board
+output += '<TD><TABLE CELLPADDING = 0 CELLSPACING = 0 BORDER = 0>';
+for (var y = 1; y <= maxheight; y ++ ) {
+output += '<TR>';
+for (var x = 1; x <= maxwidth; x ++ ) {
+output += '<TD><IMG SRC = "http://javascript.internet.com/img/squares/d.gif" WIDTH = 4 HEIGHT = 4 BORDER = 0></TD><TD><A HREF = "javascript:go(1,' + x + ',' + y + ');" onFocus = "blur();">';
+output += '<IMG SRC = "http://javascript.internet.com/img/squares/h0.gif" NAME = "hx' + x + 'hy' + y + '" WIDTH = 38 HEIGHT = 4 ALT = "" BORDER = 0></A></TD>';
+}
+output += '<TD><IMG SRC = "http://javascript.internet.com/img/squares/d.gif" WIDTH = 4 HEIGHT = 4 BORDER = 0></TD></TR><TR>'
+for (var x = 1; x <= maxwidth; x ++ ) {
+output += '<TD><A HREF = "javascript:go(2,' + x + ',' + y + ');" onFocus = "blur();">';
+output += '<IMG SRC = "http://javascript.internet.com/img/squares/v0.gif" NAME = "vx' + x + 'vy' + y + '" WIDTH = 4 HEIGHT = 38 ALT = "" BORDER = 0></A></TD>';
+output += '<TD><IMG SRC = "http://javascript.internet.com/img/squares/p0.gif" NAME = "x' + x + 'y' + y + '" WIDTH = 38 HEIGHT = 38 ALT = "" BORDER = 0></TD>';
+}
+var x = maxwidth + 1
+output += '<TD><A HREF = "javascript:go(2,' + x + ',' + y + ');" onFocus = "blur();">';
+output += '<IMG SRC = "http://javascript.internet.com/img/squares/v0.gif" NAME = "vx' + x + 'vy' + y + '" WIDTH = 4 HEIGHT = 38 ALT = "" BORDER = 0></A></TD>';
+output += '</TR>';
+}
+output += '<TR>'
+for (var x = 1; x <= maxwidth; x ++ ) {
+output += '<TD><IMG SRC = "http://javascript.internet.com/img/squares/d.gif" WIDTH = 4 HEIGHT = 4 BORDER = 0></TD><TD><A HREF = "javascript:go(1,' + x + ',' + y + ');" onFocus = "blur();">';
+output += '<IMG SRC = "http://javascript.internet.com/img/squares/h0.gif" NAME = "hx' + x + 'hy' + y + '" WIDTH = 38 HEIGHT = 4 ALT = "" BORDER = 0></A></TD>';
+}
+output += '<TD><IMG SRC = "http://javascript.internet.com/img/squares/d.gif" WIDTH = 4 HEIGHT = 4 BORDER = 0></TD></TR><TR><TD COLSPAN = ';
+spanthis = (maxheight*2) + 1;
+output += spanthis;
+output += '>&nbsp;</TD></TR></TABLE></TD>';
+// create the form for feedback to user and also a "new game" button
+output += '<TD VALIGN = top><FORM NAME = "squares"><TABLE CELLPADDING = 2 CELLSPACING = 0 BORDER = 0 BGCOLOR = "#0193ff">';
+output += '<TR><TD ALIGN = center><FONT FACE = "Arial, Helvetica, sans-serif" SIZE = 2>Player 1</FONT></TD>';
+output += '<TD ALIGN = center><FONT FACE = "Arial, Helvetica, sans-serif" SIZE = 2>Player 2</FONT></TD></TR>';
+output += '<TR><TD ALIGN = center><IMG SRC = "http://javascript.internet.com/img/squares/p1.gif" WIDTH = 38 HEIGHT = 38 NAME = "play1" ALT = " Player 1 " VSPACE = 2" BORDER = 0><BR></TD>';
+output += '<TD ALIGN = center><IMG SRC = "http://javascript.internet.com/img/squares/p0.gif" WIDTH = 38 HEIGHT = 38 NAME = "play2" ALT = " Player 2 " VSPACE = 2" BORDER = 0><BR></TD></TR>';
+output += '<TR><TD ALIGN = center><INPUT TYPE = "text" NAME = "score1" SIZE = "3" VALUE = 0 onFocus = "blur();"></TD>';
+output += '<TD ALIGN = center><INPUT TYPE = "text" NAME = "score2" SIZE = "3" VALUE = 0 onFocus = "blur();"></TD></TR>';
+output += '<TR><TD COLSPAN = 2 ALIGN = center><BR><INPUT TYPE = "button" VALUE = " New Game " onClick = "newGame();">';
+output += '<BR>&nbsp;</TD></TR><TR><TD COLSPAN = 2 BGCOLOR = "#0193ff" ALIGN = center>';
+output += '<BR><BR><FONT FACE = "Arial, Helvetica, sans-serif" SIZE = 1>';
+output += '<A HREF = "http://www.groveroad.herts.sch.uk/kids/squares/howtoplay.html" TARGET="_new">Instructions</A><BR>';
+output += '<BR></FONT></TD></TR>';
+output += '</TABLE></FORM></TD>';
+output += '</TR></TABLE>';
+document.write(output);
+preload();
+//  End -->
+</script>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Games:  Squares</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  9.29 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL SQUARES:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Original:  Ken Douglas (ken@ntlworld.com) --&gt;
+&lt;!-- Web Site:  http://www.groveroad.herts.sch.uk --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+// static globals 
+var maxheight = 9;
+var maxwidth = maxheight;
+var winscore = Math.round((maxheight * maxwidth / 2) + 0.5);
+// dynamic globals
+var player = 1; 
+var won = 0;
+function newGame() {
+// sets all graphics back to default and clears scores
+won = 0;
+eval('document.squares.score1.value = 0');
+eval('document.squares.score2.value = 0');
+for (var y = 1; y &lt;= maxheight; y ++ ) {
+for (var x = 1; x &lt;= maxwidth; x ++ ) {
+document.images["x" + x + "y" + y].src = sqr[0].src;
+document.images["vx" + x + "vy" + y].src = ver[0].src;
+document.images["hx" + x + "hy" + y].src = hor[0].src;
+   }
+}
+for (var a = 1; a &lt;= maxheight; a ++ ) {
+onemore = maxheight + 1;
+document.images["vx" + onemore + "vy" + a].src = ver[0].src;
+document.images["hx" + a + "hy" + onemore].src = hor[0].src;
+   }
+}
+function preload() {
+if (document.images) {
+sqr = new makeArray(3);
+sqr[0].src = "images/p0.gif";
+sqr[1].src = "images/p1.gif";
+sqr[2].src = "images/p2.gif";
+ver = new makeArray(3);
+ver[0].src = "images/v0.gif";
+ver[1].src = "images/v1.gif";
+ver[2].src = "images/v2.gif";
+hor = new makeArray(3);
+hor[0].src = "images/h0.gif";
+hor[1].src = "images/h1.gif";
+hor[2].src = "images/h2.gif";
+sel = new makeArray(2);
+sel[0].src = "images/notsel.gif";
+sel[1].src = "images/sel.gif";
+}
+else {
+alert("Sorry, this game needs a browser\nwhich supports the image object.");
+   }
+}
+function makeArray(n) {
+this.length = n;
+for (i = 0; i &lt; n; i ++) {
+this[i] = new Image();
+}
+return this;
+}
+function go (type, a, b) {
+// processes clicks on square verticals and horizontals...
+hit = 0;
+if (type == 1) {
+if (document.images["hx" + a + "hy" + b].src == hor[1].src) {
+alert("Already taken - try again");
+return;
+}
+document.images["hx" + a + "hy" + b].src = hor[1].src;
+// figure out if the square above is captured 
+if (b != 1) {
+var an = a + 1;
+var bn = b - 1;
+ if ((document.images["vx" + a + "vy" + bn].src == ver[1].src) && (document.images["vx" + an + "vy" + bn].src == ver[1].src) && (document.images["hx" + a + "hy" + bn].src == hor[1].src)) {
+document.images["x" + a + "y" + bn].src = sqr[player].src;
+scoresOnDoors();
+hit = 1;
+   }
+}
+//figure out if the square below is captured
+if (b != maxheight + 1) {
+var an = a + 1;
+var bn = b + 1;
+if ((document.images["vx" + a + "vy" + b].src == ver[1].src) && (document.images["vx" + an + "vy" + b].src == ver[1].src) && (document.images["hx" + a + "hy" + bn].src == hor[1].src)) {
+document.images["x" + a + "y" + b].src = sqr[player].src;
+scoresOnDoors();
+hit = 1;
+      }
+   }
+}
+if (type == 2) {
+if (document.images["vx" + a + "vy" + b].src == ver[1].src) {
+alert("Already taken - try again");
+return;
+}
+document.images["vx" + a + "vy" + b].src = ver[1].src;
+// figure out if the square right is captured 
+if (a != maxwidth + 1) {
+var an = a + 1;
+var bn = b + 1;
+if ((document.images["hx" + a + "hy" + b].src == hor[1].src) && (document.images["hx" + a + "hy" + bn].src == hor[1].src) && (document.images["vx" + an + "vy" + b].src == ver[1].src)) {
+document.images["x" + a + "y" + b].src = sqr[player].src;
+scoresOnDoors();
+hit = 1;
+   }
+}
+//figure out if the left is captured
+if (a != 1) {
+var an = a - 1;
+var bn = b + 1;
+if ((document.images["hx" + an + "hy" + b].src == hor[1].src) && (document.images["hx" + an + "hy" + bn].src == hor[1].src) && (document.images["vx" + an + "vy" + b].src == ver[1].src)) {
+document.images["x" + an + "y" + b].src = sqr[player].src;
+scoresOnDoors();
+hit = 1;
+      }
+   }
+}
+// change players if no hit
+if (hit == 0) {
+if (player != 1) {player = 1
+}
+else {
+player = 2;
+}
+showPlayer();
+}
+return;
+}
+function showPlayer() {
+// let the users jnow which player is "up" by switching on the appropriate graphic
+if (player == 1) {
+document.images["play2"].src = sqr[0].src;
+document.images["play1"].src = sqr[1].src;
+}
+if (player == 2) {
+document.images["play1"].src = sqr[0].src;
+document.images["play2"].src = sqr[2].src;
+}
+return;
+}
+function scoresOnDoors() {
+// simple score increment and check - note play can comtinue after a winner is declared
+eval('tmp = document.squares.score' + player + '.value');
+tmp = tmp * 1;
+tmp += 1;
+eval('document.squares.score' + player + '.value = tmp');
+if (won == 0 && tmp &gt;= winscore) {
+alert("Player " + player + " wins");
+won = 1;
+}
+return;
+}
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Original:  Ken Douglas (ken@ntlworld.com) --&gt;
+&lt;!-- Web Site:  http://www.groveroad.herts.sch.uk --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+var output = '';
+output += '&lt;TABLE CELLPADDING = 0 CELLSPACING = 8 BORDER = 0&gt;&lt;TR&gt;';
+// create the board
+output += '&lt;TD&gt;&lt;TABLE CELLPADDING = 0 CELLSPACING = 0 BORDER = 0&gt;';
+for (var y = 1; y &lt;= maxheight; y ++ ) {
+output += '&lt;TR&gt;';
+for (var x = 1; x &lt;= maxwidth; x ++ ) {
+output += '&lt;TD&gt;&lt;IMG SRC = "images/d.gif" WIDTH = 4 HEIGHT = 4 BORDER = 0&gt;&lt;/TD&gt;&lt;TD&gt;&lt;A HREF = "javascript:go(1,' + x + ',' + y + ');" onFocus = "blur();"&gt;';
+output += '&lt;IMG SRC = "images/h0.gif" NAME = "hx' + x + 'hy' + y + '" WIDTH = 38 HEIGHT = 4 ALT = "" BORDER = 0&gt;&lt;/A&gt;&lt;/TD&gt;';
+}
+output += '&lt;TD&gt;&lt;IMG SRC = "images/d.gif" WIDTH = 4 HEIGHT = 4 BORDER = 0&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;'
+for (var x = 1; x &lt;= maxwidth; x ++ ) {
+output += '&lt;TD&gt;&lt;A HREF = "javascript:go(2,' + x + ',' + y + ');" onFocus = "blur();"&gt;';
+output += '&lt;IMG SRC = "images/v0.gif" NAME = "vx' + x + 'vy' + y + '" WIDTH = 4 HEIGHT = 38 ALT = "" BORDER = 0&gt;&lt;/A&gt;&lt;/TD&gt;';
+output += '&lt;TD&gt;&lt;IMG SRC = "images/p0.gif" NAME = "x' + x + 'y' + y + '" WIDTH = 38 HEIGHT = 38 ALT = "" BORDER = 0&gt;&lt;/TD&gt;';
+}
+var x = maxwidth + 1
+output += '&lt;TD&gt;&lt;A HREF = "javascript:go(2,' + x + ',' + y + ');" onFocus = "blur();"&gt;';
+output += '&lt;IMG SRC = "images/v0.gif" NAME = "vx' + x + 'vy' + y + '" WIDTH = 4 HEIGHT = 38 ALT = "" BORDER = 0&gt;&lt;/A&gt;&lt;/TD&gt;';
+output += '&lt;/TR&gt;';
+}
+output += '&lt;TR&gt;'
+for (var x = 1; x &lt;= maxwidth; x ++ ) {
+output += '&lt;TD&gt;&lt;IMG SRC = "images/d.gif" WIDTH = 4 HEIGHT = 4 BORDER = 0&gt;&lt;/TD&gt;&lt;TD&gt;&lt;A HREF = "javascript:go(1,' + x + ',' + y + ');" onFocus = "blur();"&gt;';
+output += '&lt;IMG SRC = "images/h0.gif" NAME = "hx' + x + 'hy' + y + '" WIDTH = 38 HEIGHT = 4 ALT = "" BORDER = 0&gt;&lt;/A&gt;&lt;/TD&gt;';
+}
+output += '&lt;TD&gt;&lt;IMG SRC = "images/d.gif" WIDTH = 4 HEIGHT = 4 BORDER = 0&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD COLSPAN = ';
+spanthis = (maxheight*2) + 1;
+output += spanthis;
+output += '&gt;&nbsp;&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&lt;/TD&gt;';
+// create the form for feedback to user and also a "new game" button
+output += '&lt;TD VALIGN = top&gt;&lt;FORM NAME = "squares"&gt;&lt;TABLE CELLPADDING = 2 CELLSPACING = 0 BORDER = 0 BGCOLOR = "#0193ff"&gt;';
+output += '&lt;TR&gt;&lt;TD ALIGN = center&gt;&lt;FONT FACE = "Arial, Helvetica, sans-serif" SIZE = 2&gt;Player 1&lt;/FONT&gt;&lt;/TD&gt;';
+output += '&lt;TD ALIGN = center&gt;&lt;FONT FACE = "Arial, Helvetica, sans-serif" SIZE = 2&gt;Player 2&lt;/FONT&gt;&lt;/TD&gt;&lt;/TR&gt;';
+output += '&lt;TR&gt;&lt;TD ALIGN = center&gt;&lt;IMG SRC = "images/p1.gif" WIDTH = 38 HEIGHT = 38 NAME = "play1" ALT = " Player 1 " VSPACE = 2" BORDER = 0&gt;&lt;BR&gt;&lt;/TD&gt;';
+output += '&lt;TD ALIGN = center&gt;&lt;IMG SRC = "images/p0.gif" WIDTH = 38 HEIGHT = 38 NAME = "play2" ALT = " Player 2 " VSPACE = 2" BORDER = 0&gt;&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;';
+output += '&lt;TR&gt;&lt;TD ALIGN = center&gt;&lt;INPUT TYPE = "text" NAME = "score1" SIZE = "3" VALUE = 0 onFocus = "blur();"&gt;&lt;/TD&gt;';
+output += '&lt;TD ALIGN = center&gt;&lt;INPUT TYPE = "text" NAME = "score2" SIZE = "3" VALUE = 0 onFocus = "blur();"&gt;&lt;/TD&gt;&lt;/TR&gt;';
+output += '&lt;TR&gt;&lt;TD COLSPAN = 2 ALIGN = center&gt;&lt;BR&gt;&lt;INPUT TYPE = "button" VALUE = " New Game " onClick = "newGame();"&gt;';
+output += '&lt;BR&gt;&nbsp;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD COLSPAN = 2 BGCOLOR = "#0193ff" ALIGN = center&gt;';
+output += '&lt;BR&gt;&lt;BR&gt;&lt;FONT FACE = "Arial, Helvetica, sans-serif" SIZE = 1&gt;';
+output += '&lt;A HREF = "http://www.groveroad.herts.sch.uk/kids/squares/howtoplay.html" TARGET="_new"&gt;Instructions&lt;/A&gt;&lt;BR&gt;';
+output += '&lt;BR&gt;&lt;/FONT&gt;&lt;/TD&gt;&lt;/TR&gt;';
+output += '&lt;/TABLE&gt;&lt;/FORM&gt;&lt;/TD&gt;';
+output += '&lt;/TR&gt;&lt;/TABLE&gt;';
+document.write(output);
+preload();
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  9.29 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/squares.html/1922369482/125x800/House_Semlist_1b/semlist-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Semlist_1b/semlist-125x600.gif"  ALT="100's of firms that help your Web site be found"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/squares.html/1922369482/125x800/House_Semlist_1b/semlist-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='squares.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/squares.html/398080390/468x60-2/House_TheList_WebHost_3i/webhostlist_leo.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_TheList_WebHost_3i/webhostlist_leo.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/squares.html/398080390/468x60-2/House_TheList_WebHost_3i/webhostlist_leo.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

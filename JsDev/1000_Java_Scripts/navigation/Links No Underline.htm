@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://www.pageresource.com/html/link3.htm -->
+<HTML><HEAD><TITLE>Links: No Underline</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="linking, linking within a page, Linking, HTML tutorial,&#10;  HTML help" 
+name=keywords>
+<META 
+content="How to remove the underlines from links&#10;   your HTML document." 
+name=description><LINK href="Links No Underline_bestanden/tuts.css" 
+type=text/css rel=stylesheet name="hover">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#ffffff topMargin=0 marginheight="0">
+<CENTER><!-- TF 468x60 JScript HORIZ code -->
+<CENTER>
+<SCRIPT language=javascript><!--
+document.write('<scr'+'ipt language=javascript src="http://a.tribalfusion.com/j.ad?site=PageResourcecom&adSpace=HTML&size=468x60&type=horiz&requestID='+((new Date()).getTime() % 2147483648) + Math.random()+'"></scr'+'ipt>');
+//-->
+</SCRIPT>
+<NOSCRIPT><A 
+href="http://a.tribalfusion.com/i.click?site=PageResourcecom&amp;adSpace=HTML&amp;size=468x60&amp;requestID=1779693333" 
+target=_blank><IMG height=60 alt="Click Here" 
+src="Links No Underline_bestanden/adc_acs_polyp_468x60.gif" width=468 
+border=0></A> </NOSCRIPT></CENTER><!-- TF 468x60 JScript HORIZ code --></CENTER>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=12 width="90%" border=0 name="adtable">
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=left><A name=top></A>
+      <CENTER>
+      <H1><SPAN class=heading>Links: No Underline</SPAN></H1><B><I><SPAN 
+      class=subheading>How to remove those underlines from your 
+      links</SPAN></I></B> 
+      <HR noShade SIZE=1>
+      <A href="http://www.pageresource.com/"><IMG height=25 alt=home hspace=0 
+      src="Links No Underline_bestanden/tutsm3.gif" width=88 align=absMiddle 
+      border=0></A> &nbsp;&nbsp; <FONT face=Arial size=-2><SPAN class=link1><A 
+      href="http://www.pageresource.com/html/index.html">Pit Stop</A> 
+      &nbsp;|&nbsp; <A 
+      href="http://www.pageresource.com/html/hclist.htm">Complete List</A> 
+      &nbsp;|&nbsp; <A 
+      href="http://www.pageresource.com/html/index2.htm">Beginners</A> 
+      &nbsp;|&nbsp; <A 
+      href="http://www.pageresource.com/html/textags.htm">Text</A> &nbsp;|&nbsp; 
+      <A href="http://www.pageresource.com/html/linking.htm">Linking</A> 
+      &nbsp;|&nbsp; <A 
+      href="http://www.pageresource.com/html/image1.htm">Images</A> 
+      &nbsp;|&nbsp; <A 
+      href="http://www.pageresource.com/html/index6.htm">Advanced</A> 
+      </SPAN></FONT></CENTER>
+      <HR noShade SIZE=1>
+      <FONT face=Verdana size=-2><B><A 
+      href="http://www.pageresource.com/">Home</A>/<A 
+      href="http://www.pageresource.com/html/index.html">HTML</A>/<A 
+      href="http://www.pageresource.com/html/index6.htm">Advanced</A>/Links: No 
+      Underline </B></FONT>
+      <P>You want a link with no underline, or maybe a page full of 
+      non-underlined links? Well, let's see how to do it. The first thing to 
+      know is that you have to use a <A 
+      href="http://www.pageresource.com/dhtml/indexcss.htm">style sheet</A> 
+      property to do this, so the trick only works in browsers that support 
+      style sheets ( NS4 and IE4 for example). With that out of the way, let's 
+      take a look at how to create the non-underlined link. 
+      <P>In order to create a non-underlined link, you need to add the style=" " 
+      attribute to your link tag. This is where the style sheet property comes 
+      in to play. The property we will use is called text-decoration, and we are 
+      going to set it so that the text has no decoration (the underline is a 
+      decoration). So, the style attribute will look like this: 
+      <P>style="text-decoration:none" 
+      <P>Now, we want to include this attribute in the link tag. So, tack it on 
+      after your url with a space in between the two, like this: 
+      <P>&lt;A HREF="http://www.pageresource.com" 
+      style="text-decoration:none"&gt;The Web Design Resource&lt;/A&gt; 
+      <P>Now you will have a link without an underline, like the one below: 
+      <P><A style="TEXT-DECORATION: none" 
+      href="http://www.pageresource.com/">The Web Design Resource</A> 
+      <P><B><SPAN class=heading>For an Entire Page of Links</SPAN></B> 
+      <P>If you want every link on the page to be non-underlined, you can use a 
+      style sheet shortcut inside the &lt;HEAD&gt;&lt;/HEAD&gt; tags of your 
+      document. The code looks like this: 
+      <P><PRE>&lt;STYLE type="text/css"&gt;
+&lt;!--
+A { text-decoration:none }
+--&gt;
+&lt;/STYLE&gt;
+</PRE>
+      <P>Place this code between your &lt;HEAD&gt;&lt;/HEAD&gt; tags, and then 
+      code your links normally. The style sheet in the head section will make 
+      them all non-underlined. So, if you have this: 
+      <P><PRE>&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;STYLE type="text/css"&gt;
+&lt;!--
+A { text-decoration:none }
+--&gt;
+&lt;/STYLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P&gt;
+&lt;A HREF="http://www.pageresource.com"&gt;The Web Design Resource&lt;/A&gt;
+&lt;P&gt;
+&lt;A HREF="http://www.javascriptcity.com"&gt;JavaScript City&lt;/A&gt;
+&lt;P&gt;
+&lt;A HREF="http://www.pageresource.com/html/"&gt;HTML Pit Stop&lt;/A&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</PRE>
+      <P>All of the links will be non-underlined, and will look like this: 
+      <P><A style="TEXT-DECORATION: none" 
+      href="http://www.pageresource.com/">The Web Design Resource</A> 
+      <P><A style="TEXT-DECORATION: none" 
+      href="http://www.javascriptcity.com/">JavaScript City</A> 
+      <P><A style="TEXT-DECORATION: none" 
+      href="http://www.pageresource.com/html/">HTML Pit Stop</A> 
+      <P>Wonderful, isn't it? Now you can have underline-free links anywhere you 
+      need them. However, non-underlined links may not be recognized as links by 
+      your viewers if they haven't seen this effect before. Then again, if the 
+      link color stands out or is the default blue, you will probably be O.K. So 
+      have fun, and link away! Oh no, did I just write a silly rhyme? Perhaps 
+      I'll write another one when I have more time! All right, I think I'd 
+      better get going now.... 
+      <P>Well, that's all for now (and then some), see you when I write the next 
+      section! <!--<A HREF="mail.htm"> The Email Link</A>. -->
+      <P>
+      <HR noShade SIZE=1>
+
+      <CENTER>
+      <TABLE width="90%" border=0>
+        <TBODY>
+        <TR>
+          <TD><FONT face=Arial size=-1>Have a question on this topic? Try the 
+            <A href="http://www.webxpertz.net/forums/">Support Forums</A>. 
+            </FONT></TD></TR></TBODY></TABLE>
+      <HR width="90%" noShade SIZE=1>
+
+      <CENTER>
+      <TABLE width="90%" border=0>
+        <TBODY>
+        <TR>
+          <TD><FONT face=Arial size=-1>The tutorials and articles on these 
+            pages are © 1997-2002 by John Pollock and may not be reposted 
+            without written permission from the author, and may not be reprinted 
+            for profit. </FONT></TD></TR></TBODY></TABLE></CENTER>
+      <HR width="90%" noShade SIZE=1>
+      </CENTER></TD>
+    <TD vAlign=top align=middle>&nbsp; </TD></TR></TBODY></TABLE></CENTER><BR><!------begin Table------>
+<CENTER>
+<TABLE width=500 border=0>
+  <TBODY>
+  <TR>
+    <TD align=left width=106><A 
+      href="http://www.pageresource.com/html/imap1.htm"><IMG alt=previous 
+      src="Links No Underline_bestanden/prev.jpg" border=0></A> <BR>
+      <CENTER><A href="http://www.pageresource.com/html/imap1.htm">Previous</A> 
+      </CENTER></TD>
+    <TD align=middle>By: <A 
+      href="http://www.pageresource.com/contact.htm">John Pollock</A> </TD><!--
+<TD align="right" width=106>
+ <A HREF="mail.htm"><IMG SRC="../images/next.jpg" border="0" alt="next"></A>
+ <BR>
+ <CENTER>
+ <A HREF="mail.htm">
+ Next</A>
+ </CENTER>
+</TD>
+--></TR></TBODY></TABLE></CENTER><!-----end table----->
+<P>
+<P>
+<HR width=450 noShade SIZE=1>
+
+<CENTER><FONT size=-2><SPAN style="FONT-SIZE: 8pt; FONT-FAMILY: Arial"><A 
+href="http://www.pageresource.com/index.html">Main Page</A> &nbsp;|&nbsp; <A 
+href="http://www.pageresource.com/html/index.html">HTML</A> &nbsp;|&nbsp; <A 
+href="http://www.pageresource.com/jscript/index.html">JavaScript</A> 
+&nbsp;|&nbsp; <A 
+href="http://www.pageresource.com/graphics/index.html">Graphics</A> 
+&nbsp;|&nbsp; <A href="http://www.pageresource.com/dhtml/index.html">DHTML/Style 
+Sheets</A> &nbsp;|&nbsp; <A 
+href="http://www.pageresource.com/asp/index.html">ASP/PHP</A> <BR><A 
+href="http://www.pageresource.com/putweb/index.html">PutWeb/FTP</A> 
+&nbsp;|&nbsp; <A 
+href="http://www.pageresource.com/cgirec/index.html">CGI/Perl</A> &nbsp;|&nbsp; 
+<A href="http://www.pageresource.com/promorec/index.html">Promotion</A> 
+&nbsp;|&nbsp; <A href="http://www.pageresource.com/java/index.html">Java</A> 
+&nbsp;|&nbsp; <A href="http://www.pageresource.com/zine/index.html">Design 
+Articles</A> <BR><A style="CURSOR: help" 
+href="http://www.webxpertz.net/forums/">Support Forums</A> &nbsp;|&nbsp; <A 
+style="CURSOR: help" href="http://www.pageresource.com/cgi-bin/search3.cgi">Site 
+Search</A> &nbsp;|&nbsp; <A style="CURSOR: help" 
+href="http://www.pageresource.com/trouble/index.html">FAQs</A> &nbsp;|&nbsp; <A 
+href="http://www.pageresource.com/privacy.html">Privacy</A> &nbsp;|&nbsp; <A 
+href="http://www.pageresource.com/contact.htm">Contact</A> 
+</SPAN></FONT></CENTER>
+<HR width=450 noShade SIZE=1>
+
+<CENTER><FONT face=Arial size=-2>Copyright © 1997-2002 <A 
+href="http://www.pageresource.com/">The Web Design Resource</A>. All rights 
+reserved. </FONT></CENTER></BODY></HTML>

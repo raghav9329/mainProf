@@ -1,0 +1,580 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Misc.:  Table Maker (Source)</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="date" CONTENT="2000-09-09">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="javascriptsource.com">
+<META NAME="section" CONTENT="Miscellaneous">
+<META NAME="description" CONTENT="This interactive script helps you, the webmaster, see the affects of the TABLE tag attributes.  Just modify the values and you can see the example table immediately!  If you know someone is having trouble learning tables, send them here!">
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=787V20021114144641&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=158V20021115201354&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/table-maker-source.html/1564487126/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_IDE_Blue_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<BASEFONT SIZE=3>
+  <FONT SIZE=6>
+<B><FONT SIZE="+2" FACE="Helvetica,Arial" ALIGN=RIGHT COLOR="#0000FF">
+<b><A HREF="../../Upper1/default.htm" TARGET="_top">
+Home</A> </b><img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <b><A HREF="default.htm" TARGET="_top"><font color="#FF0000">Miscellaneous</font></A> </b>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <FONT COLOR="#006666">Table Maker (Source)</FONT></b></FONT><BR>
+</B><BR>
+  </FONT>
+<TABLE BORDER=0 WIDTH=500 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE=" helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+
+This interactive script helps you, the webmaster, see the affects of the &lt;TABLE&gt; tag attributes.  Just modify the values and you can see the example table immediately!  If you know someone is having trouble learning tables, send them here!<br><hr>
+</td></tr>
+</table>
+<!--  Demonstration -->
+<BODY>
+<a href="table-maker.html">See Table Maker Example</a>
+<P>
+<BR>
+<P>
+<a name="source">
+<TABLE BORDER=0 WIDTH=500 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Misc.:  Table Maker</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as NotePad or SimpleText) and save (Control-s or Apple-s).  The script is yours!<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  8.35 KB  " size="24">
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL TABLE MAKER:
+
+   1.  Paste the FRAMESET code into your HTML document
+   2.  Add the next code into the BODY of your table-maker-left.html  --&gt;
+
+&lt;!-- STEP ONE: Paste the FRAMESET code into your HTML document  --&gt;
+
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;Table Maker&lt;/TITLE&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Original: Andy Augustine  --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+var myTable = new tableObj('','Default',1,1,1,1,2,'','');
+
+function propObj(string,outstring) {
+this.value = string;
+this.out = outstring + string;
+}
+function setValues(form) {
+this.alignment.value=   form.alignment.value;
+this.border.value=  form.border.value;
+this.cellspacing.value = form.cellspacing.value;
+this.cellpadding.value = form.cellpadding.value;
+this.rows.value = form.numrows.options[form.numrows.selectedIndex].text;
+this.cols.value = form.numcols.options[form.numcols.selectedIndex].text;
+this.calign.value =  form.calign.value;
+this.cvalign.value = form.cvalign.value;
+}
+function updateProps() {
+this.alignment.out=   "  ALIGN="   + this.alignment.value;
+this.border.out=  "  BORDER="  + this.border.value;
+this.cellspacing.out = "  CELLSPACING=" + this.cellspacing.value;
+this.cellpadding.out = "  CELLPADDING=" + this.cellpadding.value;
+this.rows.out =    "  ROWS="   + this.rows.value;
+this.cols.out =    "  COLS="   + this.cols.value;
+this.calign.out =  " ALIGN="  + this.calign.value;
+this.cvalign.out = " VALIGN=" + this.cvalign.value;
+}
+function tableObj(align,caption,border,cellpadding,cellspacing,rows,cols,calign,cvalign) {
+this.alignment = new propObj(align,"  ALIGN=");
+this.border = new propObj(border,"  BORDER=");
+this.cellspacing = new propObj(cellspacing,"  CELLSPACING=");
+this.cellpadding = new propObj(cellpadding,"  CELLPADDING=");
+this.rows = new propObj(rows,"  ROWS=");
+this.cols = new propObj(cols,"  COLS=");
+this.calign = new propObj(calign," ALIGN=");
+this.cvalign = new propObj(cvalign," VALIGN=");
+this.setValues = setValues;
+this.updateProps = updateProps;
+}
+function dumpProps(obj,obj_name) {
+var result = "", i ="";
+for (i in obj)
+result += obj_name +"."+ i +" = "+ obj[i].value +"\n";
+return result;
+}
+function dumpTags(obj,obj_name) {
+var result = "", i ="";
+for (i in obj)
+result += obj_name +"."+ i +".out = "+ obj[i].out +"\n";
+return result;
+}
+function drawTable(table) {
+var tabdoc = this.tableframe.document;
+table.updateProps();
+tabdoc.open();
+tabdoc.write('&lt;HTML&gt;&lt;BODY&gt;---Your Table---&lt;br&gt;&lt;br&gt;&lt;br&gt;')
+tabdoc.write('&lt;TABLE ')
+tabdoc.write(table.alignment.out)
+tabdoc.write(table.cellspacing.out)
+tabdoc.write(table.cellpadding.out)
+tabdoc.write(table.border.out)
+tabdoc.write(' &gt;')
+for (var i=1; i &lt;= table.rows.value; i++) {
+tabdoc.write('&lt;TR' +table.cvalign.out+ '&gt;')
+for (var j = 1; j &lt;= table.cols.value; j++) {
+tabdoc.write('&lt;TD ' +table.calign.out+ '&gt;' +(j*i)+ '&lt;/TD&gt;')
+}
+tabdoc.write('&lt;/TR&gt;')
+}
+tabdoc.write('&lt;/TABLE&gt;&lt;/HTML&gt;&lt;/BODY&gt;')
+tabdoc.close()
+}
+function showSource() {
+var opts = 'width=350,height=350,scrollbars=yes,directories=no,status=yes,location=no,toolbar=no';
+var ltag = '&lt;'
+var gtag = '&gt;'
+var sourcewin = window.open('','source',opts)
+sourcewin= window.open('','source')
+sourcewin.status="Cut and paste this info into your web page"
+sourcewin.document.write('&lt;HTML&gt;&lt;BODY BGCOLOR="#FFFFFF" &lt;PRE&gt;&lt;XMP&gt;')
+sourcewin.document.writeln(ltag + 'TABLE ')
+if (myTable.alignment.out != '')
+sourcewin.document.writeln(myTable.alignment.out)
+sourcewin.document.writeln(myTable.border.out)
+sourcewin.document.writeln(myTable.cellspacing.out)
+sourcewin.document.writeln(myTable.cellpadding.out + gtag)
+for (var i=1; i &lt;= myTable.rows.value; i++) {
+sourcewin.document.writeln(ltag+ 'TR' +myTable.cvalign.out+ ' ' +myTable.calign.out+ gtag)
+for (var j = 1; j &lt;= myTable.cols.value; j++) {
+sourcewin.document.writeln(' ' +ltag+ 'TD' +gtag +(j*i)+ ltag+ '/TD' +gtag)
+}
+sourcewin.document.writeln(ltag+ '/TR' +gtag)
+}
+sourcewin.document.writeln(ltag+ '/TABLE' +gtag)
+sourcewin.document.write('&lt;/XMP&gt;&lt;/PRE&gt;&lt;CENTER&gt;')
+sourcewin.document.write('&lt;FORM NAME=menu&gt;&lt;INPUT TYPE="button" ');
+sourcewin.document.write('VALUE="Close" onClick="self.document.clear();self.close()"&gt;')
+sourcewin.document.write('&lt;P&gt;&lt;P&gt;&lt;P&gt;&lt;P&gt;&lt;P&gt;&lt;P&gt;&lt;/FORM&gt;')
+sourcewin.document.write('&lt;/CENTER&gt;&lt;/BODY&gt;&lt;/HTML&gt;')
+sourcewin.document.close()
+}
+// End --&gt;
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+
+&lt;frameset cols="50%,50%" onLoad="parent.myTable.setValues(this.info.tform);parent.drawTable(parent.myTable)"&gt;
+
+&lt;frame src="table-maker-left.html" name="info"&gt;
+&lt;frame src="javascript:void(0)" name="tableframe" marginwidth="4"&gt;
+
+&lt;/frameset&gt;
+&lt;/html&gt;
+
+
+
+&lt;!-- STEP TWO: Add to the BODY of your table-maker-left.html  --&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Begin
+function init() {
+with (document) {
+tform.alignment.value="left"
+tform.align.value="left"
+tform.calign.value="left"
+tform.cvalign.value="center"
+   }
+}
+function clearit(form) {
+form.alignment.value   = "left"
+form.align.value="left"
+form.border.value  = 1
+form.cellspacing.value = 1
+form.cellpadding.value = 1
+form.numrows.selectedIndex = 0
+form.numcols.selectedIndex = 1
+form.calign.value  = ''
+form.cvalign.value = ''
+}
+function isNum(entry) {
+var str = entry.value;
+for (var i = 0; i &lt; str.length; i++) {
+var ch = str.substring(i, i + 1)
+if ((ch &lt; "0" || "9" &lt; ch) && ch != '.') {
+alert("You must enter a number.")
+entry.value=0
+entry.focus()
+entry.select()
+      }
+   }
+}
+// End --&gt;
+&lt;/SCRIPT&gt;
+&lt;/head&gt;
+ 
+&lt;body onLoad="init()" bgcolor="#ffffff"&gt;
+
+&lt;center&gt;&lt;table border=1&gt;&lt;form name="tform"&gt;
+&lt;tr align=center&gt;
+&lt;td&gt;&lt;input type="reset" name="clear" value="Reset to Defaults" onClick="clearit(this.form)"&gt;
+&lt;td&gt;Alignment:&lt;br&gt;
+&lt;input type="radio" name="align" value="left" onClick="document.tform.alignment.value=this.value" checked&gt;Left
+&lt;input type="radio" name="align" value="center" onClick="document.tform.alignment.value=this.value"&gt;Center
+&lt;input type="radio" name="align" value="right" onClick="document.tform.alignment.value=this.value"&gt;Right
+&lt;input type="hidden" name="alignment" value="left"&gt;
+&lt;tr align=center&gt;
+&lt;td colspan=2&gt;Border Width (in Pixels):
+&lt;input name="border" value="1" size="3" onChange="isNum(this)" value=1&gt;
+&lt;br&gt;
+&lt;input type="radio" name="br" value="0" onClick="tform.border.value=0"&gt;0
+&lt;input type="radio" name="br" value="1" onClick="tform.border.value=1" checked&gt;1
+&lt;input type="radio" name="br" value="2" onClick="tform.border.value=2"&gt;2
+&lt;input type="radio" name="br" value="5" onClick="tform.border.value=5"&gt;5
+&lt;input type="radio" name="br" value="10" onClick="tform.border.value=10"&gt;10
+&lt;input type="radio" name="br" value="15" onClick="tform.border.value=15"&gt;15
+&lt;tr&gt;
+&lt;td&gt;Cellpadding:&lt;input name="cellpadding" size=3 value=1 onChange="isNum(this)"&gt;
+&lt;td&gt;Cellspacing:&lt;input name="cellspacing" size=3 value=1 onChange="isNum(this)"&gt;
+&lt;tr align=center&gt;
+&lt;td&gt;Rows:&lt;br&gt;&lt;select name="numrows"&gt;
+&lt;option selected&gt;1 &lt;option&gt;2 &lt;option&gt;3 &lt;option&gt;4 &lt;option&gt;5
+&lt;/select&gt;
+&lt;td&gt;Cols:&lt;br&gt;&lt;select name="numcols"&gt;
+&lt;option&gt;1 &lt;option selected&gt;2 &lt;option&gt;3 &lt;option&gt;4 &lt;option&gt;5
+&lt;/select&gt;
+&lt;tr&gt;
+&lt;td&gt;HORIZONTAL ALIGNMENT (cells):&lt;br&gt;
+&lt;input type="radio" name="calign" value="left" onClick="document.tform.calign.value=this.value" checked&gt;Left
+&lt;input type="radio" name="calign" value="center"onClick="document.tform.calign.value=this.value"&gt;Center
+&lt;input type="radio" name="calign" value="right" onClick="document.tform.calign.value=this.value"&gt;Right
+&lt;td&gt;VERTICAL ALIGNMENT (cells):&lt;BR&gt;
+&lt;input type="radio" name="cvalign" value="top" onClick="document.tform.cvalign.value=this.value"&gt;Top
+&lt;input type="radio" name="cvalign" value="center" onClick="document.tform.cvalign.value=this.value" checked&gt;Center
+&lt;input type="radio" name="cvalign" value="bottom" onClick="document.tform.cvalign.value=this.value"&gt;Bottom
+&lt;tr align=center&gt;
+&lt;td colspan=2&gt;&lt;input type="button" name="drawtable" value="Draw this table!" onClick="parent.myTable.setValues(this.form);parent.drawTable(parent.myTable)"&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=2&gt;The following features correspond to bottom frame:&lt;/TD&gt;
+&lt;/tr&gt;
+&lt;tr align=center&gt;
+&lt;td colspan=2&gt;&lt;input type="button" value="See HTML code for table!" onClick="parent.showSource()"&gt;
+&lt;/tr&gt;
+&lt;tr align=center&gt;
+&lt;td colspan=2&gt;&lt;input type="button" value="View table values" onClick="alert(parent.dumpProps(parent.myTable,'myTable'))"&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;&lt;/table&gt;&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size="-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  8.35 KB  --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/table-maker-source.html/390424283/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Content_Management_1d/jupcontent125x600_new.gif"  ALT="The Premier Event for Content Management Strategies and Solutions"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/table-maker-source.html/390424283/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='table-maker-source.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/table-maker-source.html/332691764/468x60-2/House_AllNetDevices_1c/and-spring2003-750_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_AllNetDevices_1c/and-spring2003-750_new.gif"  ALT="The Digital Ubiquity Forum"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/table-maker-source.html/332691764/468x60-2/House_AllNetDevices_1c/and-spring2003-750_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html></body></html>

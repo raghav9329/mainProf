@@ -1,0 +1,607 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Forms:  User Management</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="Use this script to add and subtract items in different fields. Changes made can be displayed for each field.">
+<META NAME="date" CONTENT="2001-11-02">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Sergei Kouzminiov">
+<META NAME="section" CONTENT="Forms">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  Sergei Kouzminiov (sergei.kouzminov@sympatico.ca) -->
+
+<!-- Begin
+var delimiter = ":";
+function MoveOption (MoveFrom, MoveTo, ToDo) {
+  var SelectFrom = eval('document.main_form.'+MoveFrom);
+  var SelectTo = eval('document.main_form.'+MoveTo);
+  var SelectedIndex = SelectFrom.options.selectedIndex;
+  var container;
+  if (ToDo=='Add') {
+    container=eval('document.main_form.'+ToDo+MoveTo);
+  }
+  if (ToDo=='Remove') {
+    container=eval('document.main_form.'+ToDo+MoveFrom);
+  }
+  if (SelectedIndex == -1) {
+    alert("Please select a person(s) to move.");
+  } else {
+    for (i=0; i<SelectFrom.options.length; i++) {
+      if(SelectFrom.options[i].selected) {
+        var name = SelectFrom.options[i].text;
+        var ID = SelectFrom.options[i].value;
+        SelectFrom.options[i] = null;
+        SelectTo.options[SelectTo.options.length]=new Option (name,ID);
+        i=i-1;
+        if(ToDo=='Add'||ToDo=='Remove') {
+          container.value=container.value+name+delimiter;
+          //container.value=container.value+ID+delimiter;
+        }
+      }
+    }
+	}
+}
+function CheckDuplicates (AddListContainer, RemoveListContainer) {
+	var AddList = eval('document.main_form.'+AddListContainer);
+	var RemoveList = eval('document.main_form.'+RemoveListContainer);
+	var TempAddList = AddList.value;
+	var TempRemoveList = RemoveList.value;
+	if (TempAddList>''&&TempRemoveList>'') {
+    TempAddList = TempAddList.substring(0,TempAddList.length-1);
+    TempRemoveList = TempRemoveList.substring(0,TempRemoveList.length-1);
+    var AddArray = TempAddList.split(delimiter);
+    var RemoveArray = TempRemoveList.split(delimiter);
+    for (i=0; i<AddArray.length; i++) {
+      for (j=0; j<RemoveArray.length; j++) {
+        if (AddArray[i]==RemoveArray[j]) {
+          AddArray[i]='';
+          RemoveArray[j]='';
+          break;
+        }
+      }
+    }
+    AddList.value='';
+    for (i=0; i<AddArray.length; i++) {
+      if (AddArray[i]>'') {
+        AddList.value = AddList.value + AddArray[i] + delimiter;
+      }
+    }
+    RemoveList.value='';
+    for (i=0; i<RemoveArray.length; i++) {
+      if (RemoveArray[i]>'') {
+        RemoveList.value = RemoveList.value + RemoveArray[i] + delimiter;
+      }
+    }
+	}
+}
+function LockChanges() {
+	CheckDuplicates('AddAdmins','RemoveAdmins');
+	CheckDuplicates('AddUsers','RemoveUsers');
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/user-management.html/1718164895/468x60-1/House_IT_IMS_1o/it-ims-spring03-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_IT_IMS_1o/it-ims-spring03-750.gif"  ALT="Increasing Quality Through IT Sourcing & Services"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/user-management.html/1718164895/468x60-1/House_IT_IMS_1o/it-ims-spring03-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0"></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Forms</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>User Management</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Use this script to add and subtract items in different fields. Changes made can be displayed for each field.
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<table align="center">
+<tr><td>
+<FORM name=main_form action="" method=post><INPUT type=hidden name=AddAdmins>
+<INPUT type=hidden name=RemoveAdmins> <INPUT type=hidden name=AddUsers> <INPUT
+type=hidden name=RemoveUsers>
+<div align="center">
+<table cellspacing="0" cellpadding="5" border="0">
+<tbody>
+<tr>
+<td valign="top" align="middle" rowspan="2">Employees<br><select multiple size="12" name="Employees">
+<option>Employee_01<option>Employee_02<option>Employee_03<option>Employee_04<option>Employee_05<option>Employee_06<option>Employee_07<option>Employee_08<option>Employee_09<option>Employee_10</option></select>
+</td>
+<td>
+<p align="center"><input onclick="MoveOption('Employees','Admins','Add');" type="button" value="Admin >>" name=add_admin>
+</p>
+<p align="center"><input onclick="MoveOption('Admins','Employees','Remove');" type="button" value="<< Admin" name="remove_admin">
+</p></td>
+<td valign="top" align="middle">Administrators<br><select multiple size="5" name="Admins">
+<option>Admin_01<option>Admin_02<option>Admin_03<option>Admin_04<option>Admin_05</option></select>
+</td></tr>
+<tr>
+<td>
+<p align="center"><input onclick="MoveOption('Employees','Users','Add');" type="button" value=" User >> " name=add_user>
+</p>
+<p align="center"><input onclick="MoveOption('Users','Employees','Remove');" type="button" value=" << User " name="remove_user">
+</p></td>
+<td valign="top" align="middle">Users<br><select multiple size="5" name="Users">
+<option>User_01<option>User_02<option>User_03<option>User_04<option>User_05</option></select>
+</td></tr>
+</tbody>
+</table>
+</div>
+</FORM>
+</td></tr>
+<tr><td>
+<div align="center"><input onclick="LockChanges();" type="button" value="Submit"></div>
+<BR>
+<div align="center">Click on "Submit" button to lock all changes<BR>and save results in
+appropriate hidden fields.<BR>To browse content click below on field's name:</div>
+<BR>
+<div align="center">
+<a href="javascript:alert(document.main_form.AddAdmins.value);">Add Admins</a>
+<br>
+<a href="javascript:alert(document.main_form.RemoveAdmins.value);">Remove Admins</a>
+<br>
+<a href="javascript:alert(document.main_form.AddUsers.value);">Add Users</a>
+<br>
+<a href="javascript:alert(document.main_form.RemoveUsers.value);">Remove Users</a>
+</div>
+</td></tr>
+</td></tr>
+</table>
+
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Forms:  User Management</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  5.92 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL USER MANAGEMENT:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+&lt;!-- Original:  Sergei Kouzminiov (sergei.kouzminov@sympatico.ca) --&gt;
+
+&lt;!-- Begin
+var delimiter = ":";
+function MoveOption (MoveFrom, MoveTo, ToDo) {
+  var SelectFrom = eval('document.main_form.'+MoveFrom);
+  var SelectTo = eval('document.main_form.'+MoveTo);
+  var SelectedIndex = SelectFrom.options.selectedIndex;
+  var container;
+  if (ToDo=='Add') {
+    container=eval('document.main_form.'+ToDo+MoveTo);
+  }
+  if (ToDo=='Remove') {
+    container=eval('document.main_form.'+ToDo+MoveFrom);
+  }
+  if (SelectedIndex == -1) {
+    alert("Please select a person(s) to move.");
+  } else {
+    for (i=0; i&lt;SelectFrom.options.length; i++) {
+      if(SelectFrom.options[i].selected) {
+        var name = SelectFrom.options[i].text;
+        var ID = SelectFrom.options[i].value;
+        SelectFrom.options[i] = null;
+        SelectTo.options[SelectTo.options.length]=new Option (name,ID);
+        i=i-1;
+        if(ToDo=='Add'||ToDo=='Remove') {
+          container.value=container.value+name+delimiter;
+          //container.value=container.value+ID+delimiter;
+        }
+      }
+    }
+	}
+}
+function CheckDuplicates (AddListContainer, RemoveListContainer) {
+	var AddList = eval('document.main_form.'+AddListContainer);
+	var RemoveList = eval('document.main_form.'+RemoveListContainer);
+	var TempAddList = AddList.value;
+	var TempRemoveList = RemoveList.value;
+	if (TempAddList&gt;''&&TempRemoveList&gt;'') {
+    TempAddList = TempAddList.substring(0,TempAddList.length-1);
+    TempRemoveList = TempRemoveList.substring(0,TempRemoveList.length-1);
+    var AddArray = TempAddList.split(delimiter);
+    var RemoveArray = TempRemoveList.split(delimiter);
+    for (i=0; i&lt;AddArray.length; i++) {
+      for (j=0; j&lt;RemoveArray.length; j++) {
+        if (AddArray[i]==RemoveArray[j]) {
+          AddArray[i]='';
+          RemoveArray[j]='';
+          break;
+        }
+      }
+    }
+    AddList.value='';
+    for (i=0; i&lt;AddArray.length; i++) {
+      if (AddArray[i]&gt;'') {
+        AddList.value = AddList.value + AddArray[i] + delimiter;
+      }
+    }
+    RemoveList.value='';
+    for (i=0; i&lt;RemoveArray.length; i++) {
+      if (RemoveArray[i]&gt;'') {
+        RemoveList.value = RemoveList.value + RemoveArray[i] + delimiter;
+      }
+    }
+	}
+}
+function LockChanges() {
+	CheckDuplicates('AddAdmins','RemoveAdmins');
+	CheckDuplicates('AddUsers','RemoveUsers');
+}
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;table align="center"&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;FORM name=main_form action="" method=post&gt;&lt;INPUT type=hidden name=AddAdmins&gt;
+&lt;INPUT type=hidden name=RemoveAdmins&gt; &lt;INPUT type=hidden name=AddUsers&gt; &lt;INPUT
+type=hidden name=RemoveUsers&gt;
+&lt;div align="center"&gt;
+&lt;table cellspacing="0" cellpadding="5" border="0"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td valign="top" align="middle" rowspan="2"&gt;Employees&lt;br&gt;&lt;select multiple size="12" name="Employees"&gt;
+&lt;option&gt;Employee_01&lt;option&gt;Employee_02&lt;option&gt;Employee_03&lt;option&gt;Employee_04&lt;option&gt;Employee_05&lt;option&gt;Employee_06&lt;option&gt;Employee_07&lt;option&gt;Employee_08&lt;option&gt;Employee_09&lt;option&gt;Employee_10&lt;/option&gt;&lt;/select&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p align="center"&gt;&lt;input onclick="MoveOption('Employees','Admins','Add');" type="button" value="Admin &gt;&gt;" name=add_admin&gt;
+&lt;/p&gt;
+&lt;p align="center"&gt;&lt;input onclick="MoveOption('Admins','Employees','Remove');" type="button" value="&lt;&lt; Admin" name="remove_admin"&gt;
+&lt;/p&gt;&lt;/td&gt;
+&lt;td valign="top" align="middle"&gt;Administrators&lt;br&gt;&lt;select multiple size="5" name="Admins"&gt;
+&lt;option&gt;Admin_01&lt;option&gt;Admin_02&lt;option&gt;Admin_03&lt;option&gt;Admin_04&lt;option&gt;Admin_05&lt;/option&gt;&lt;/select&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;p align="center"&gt;&lt;input onclick="MoveOption('Employees','Users','Add');" type="button" value=" User &gt;&gt; " name=add_user&gt;
+&lt;/p&gt;
+&lt;p align="center"&gt;&lt;input onclick="MoveOption('Users','Employees','Remove');" type="button" value=" &lt;&lt; User " name="remove_user"&gt;
+&lt;/p&gt;&lt;/td&gt;
+&lt;td valign="top" align="middle"&gt;Users&lt;br&gt;&lt;select multiple size="5" name="Users"&gt;
+&lt;option&gt;User_01&lt;option&gt;User_02&lt;option&gt;User_03&lt;option&gt;User_04&lt;option&gt;User_05&lt;/option&gt;&lt;/select&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/FORM&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;div align="center"&gt;&lt;input onclick="LockChanges();" type="button" value="Submit"&gt;&lt;/div&gt;
+&lt;BR&gt;
+&lt;div align="center"&gt;Click on "Submit" button to lock all changes&lt;BR&gt;and save results in
+appropriate hidden fields.&lt;BR&gt;To browse content click below on field's name:&lt;/div&gt;
+&lt;BR&gt;
+&lt;div align="center"&gt;
+&lt;a href="javascript:alert(document.main_form.AddAdmins.value);"&gt;Add Admins&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="javascript:alert(document.main_form.RemoveAdmins.value);"&gt;Remove Admins&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="javascript:alert(document.main_form.AddUsers.value);"&gt;Add Users&lt;/a&gt;
+&lt;br&gt;
+&lt;a href="javascript:alert(document.main_form.RemoveUsers.value);"&gt;Remove Users&lt;/a&gt;
+&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  5.92 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/user-management.html/1664469157/125x800/House_Semlist_1b/semlist-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Semlist_1b/semlist-125x600.gif"  ALT="100's of firms that help your Web site be found"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/user-management.html/1664469157/125x800/House_Semlist_1b/semlist-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='user-management.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/user-management.html/476650556/468x60-2/House_TheList_WebHost_3i/webhostlist_leo.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_TheList_WebHost_3i/webhostlist_leo.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/user-management.html/476650556/468x60-2/House_TheList_WebHost_3i/webhostlist_leo.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

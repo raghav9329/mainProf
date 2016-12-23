@@ -1,0 +1,745 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Calendars:  Dynamic Calendar</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="date" CONTENT="2000-09-09">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Nick Korosi (nfk2000@hotmail.com)">
+<META NAME="section" CONTENT="Calendars">
+<META NAME="description" CONTENT="This calendar allows you to select a month and year and automatically display the a complete calendar for that month in Dynamic HTML.  Great!">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Nick Korosi (nfk2000@hotmail.com) -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var dDate = new Date();
+var dCurMonth = dDate.getMonth();
+var dCurDayOfMonth = dDate.getDate();
+var dCurYear = dDate.getFullYear();
+var objPrevElement = new Object();
+
+function fToggleColor(myElement) {
+var toggleColor = "#ff0000";
+if (myElement.id == "calDateText") {
+if (myElement.color == toggleColor) {
+myElement.color = "";
+} else {
+myElement.color = toggleColor;
+   }
+} else if (myElement.id == "calCell") {
+for (var i in myElement.children) {
+if (myElement.children[i].id == "calDateText") {
+if (myElement.children[i].color == toggleColor) {
+myElement.children[i].color = "";
+} else {
+myElement.children[i].color = toggleColor;
+            }
+         }
+      }
+   }
+}
+function fSetSelectedDay(myElement){
+if (myElement.id == "calCell") {
+if (!isNaN(parseInt(myElement.children["calDateText"].innerText))) {
+myElement.bgColor = "#c0c0c0";
+objPrevElement.bgColor = "";
+document.all.calSelectedDate.value = parseInt(myElement.children["calDateText"].innerText);
+objPrevElement = myElement;
+      }
+   }
+}
+function fGetDaysInMonth(iMonth, iYear) {
+var dPrevDate = new Date(iYear, iMonth, 0);
+return dPrevDate.getDate();
+}
+function fBuildCal(iYear, iMonth, iDayStyle) {
+var aMonth = new Array();
+aMonth[0] = new Array(7);
+aMonth[1] = new Array(7);
+aMonth[2] = new Array(7);
+aMonth[3] = new Array(7);
+aMonth[4] = new Array(7);
+aMonth[5] = new Array(7);
+aMonth[6] = new Array(7);
+var dCalDate = new Date(iYear, iMonth-1, 1);
+var iDayOfFirst = dCalDate.getDay();
+var iDaysInMonth = fGetDaysInMonth(iMonth, iYear);
+var iVarDate = 1;
+var i, d, w;
+if (iDayStyle == 2) {
+aMonth[0][0] = "Sunday";
+aMonth[0][1] = "Monday";
+aMonth[0][2] = "Tuesday";
+aMonth[0][3] = "Wednesday";
+aMonth[0][4] = "Thursday";
+aMonth[0][5] = "Friday";
+aMonth[0][6] = "Saturday";
+} else if (iDayStyle == 1) {
+aMonth[0][0] = "Sun";
+aMonth[0][1] = "Mon";
+aMonth[0][2] = "Tue";
+aMonth[0][3] = "Wed";
+aMonth[0][4] = "Thu";
+aMonth[0][5] = "Fri";
+aMonth[0][6] = "Sat";
+} else {
+aMonth[0][0] = "Su";
+aMonth[0][1] = "Mo";
+aMonth[0][2] = "Tu";
+aMonth[0][3] = "We";
+aMonth[0][4] = "Th";
+aMonth[0][5] = "Fr";
+aMonth[0][6] = "Sa";
+}
+for (d = iDayOfFirst; d < 7; d++) {
+aMonth[1][d] = iVarDate;
+iVarDate++;
+}
+for (w = 2; w < 7; w++) {
+for (d = 0; d < 7; d++) {
+if (iVarDate <= iDaysInMonth) {
+aMonth[w][d] = iVarDate;
+iVarDate++;
+      }
+   }
+}
+return aMonth;
+}
+function fDrawCal(iYear, iMonth, iCellWidth, iCellHeight, sDateTextSize, sDateTextWeight, iDayStyle) {
+var myMonth;
+myMonth = fBuildCal(iYear, iMonth, iDayStyle);
+document.write("<table border='1'>")
+document.write("<tr>");
+document.write("<td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'>" + myMonth[0][0] + "</td>");
+document.write("<td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'>" + myMonth[0][1] + "</td>");
+document.write("<td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'>" + myMonth[0][2] + "</td>");
+document.write("<td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'>" + myMonth[0][3] + "</td>");
+document.write("<td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'>" + myMonth[0][4] + "</td>");
+document.write("<td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'>" + myMonth[0][5] + "</td>");
+document.write("<td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'>" + myMonth[0][6] + "</td>");
+document.write("</tr>");
+for (w = 1; w < 7; w++) {
+document.write("<tr>")
+for (d = 0; d < 7; d++) {
+document.write("<td align='left' valign='top' width='" + iCellWidth + "' height='" + iCellHeight + "' id=calCell style='CURSOR:Hand' onMouseOver='fToggleColor(this)' onMouseOut='fToggleColor(this)' onclick=fSetSelectedDay(this)>");
+if (!isNaN(myMonth[w][d])) {
+document.write("<font id=calDateText onMouseOver='fToggleColor(this)' style='CURSOR:Hand;FONT-FAMILY:Arial;FONT-SIZE:" + sDateTextSize + ";FONT-WEIGHT:" + sDateTextWeight + "' onMouseOut='fToggleColor(this)' onclick=fSetSelectedDay(this)>" + myMonth[w][d] + "</font>");
+} else {
+document.write("<font id=calDateText onMouseOver='fToggleColor(this)' style='CURSOR:Hand;FONT-FAMILY:Arial;FONT-SIZE:" + sDateTextSize + ";FONT-WEIGHT:" + sDateTextWeight + "' onMouseOut='fToggleColor(this)' onclick=fSetSelectedDay(this)>&nbsp;</font>");
+}
+document.write("</td>")
+}
+document.write("</tr>");
+}
+document.write("</table>")
+}
+function fUpdateCal(iYear, iMonth) {
+myMonth = fBuildCal(iYear, iMonth);
+objPrevElement.bgColor = "";
+document.all.calSelectedDate.value = "";
+for (w = 1; w < 7; w++) {
+for (d = 0; d < 7; d++) {
+if (!isNaN(myMonth[w][d])) {
+calDateText[((7*w)+d)-7].innerText = myMonth[w][d];
+} else {
+calDateText[((7*w)+d)-7].innerText = " ";
+         }
+      }
+   }
+}
+// End -->
+</script>
+</head>
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calendars/dynamic.html/1620021744/468x60-1/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calendars/dynamic.html/1620021744/468x60-1/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0"></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Calendars</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Dynamic Calendar</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+This calendar allows you to select a month and year and automatically display the a complete calendar for that month in Dynamic HTML.  Great!
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<script language="JavaScript" for=window event=onload>
+<!-- Begin
+var dCurDate = new Date();
+frmCalendarSample.tbSelMonth.options[dCurDate.getMonth()].selected = true;
+for (i = 0; i < frmCalendarSample.tbSelYear.length; i++)
+if (frmCalendarSample.tbSelYear.options[i].value == dCurDate.getFullYear())
+frmCalendarSample.tbSelYear.options[i].selected = true;
+//  End -->
+</script>
+
+<form name="frmCalendarSample" method="post" action="">
+<input type="hidden" name="calSelectedDate" value="">
+
+<table border="1">
+<tr>
+<td>
+<select name="tbSelMonth" onchange='fUpdateCal(frmCalendarSample.tbSelYear.value, frmCalendarSample.tbSelMonth.value)'>
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+&nbsp;&nbsp;
+<select name="tbSelYear" onchange='fUpdateCal(frmCalendarSample.tbSelYear.value, frmCalendarSample.tbSelMonth.value)'>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<script language="JavaScript">
+var dCurDate = new Date();
+fDrawCal(dCurDate.getFullYear(), dCurDate.getMonth()+1, 30, 30, "12px", "bold", 1);
+</script>
+</td>
+</tr>
+</table>
+</form>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Calendars:  Dynamic Calendar</b>
+<p>Simply click inside the window below, use your cursor to hilight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Apple-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  7.06 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL DYNAMIC CALENDAR:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Original:  Nick Korosi (nfk2000@hotmail.com) --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+var dDate = new Date();
+var dCurMonth = dDate.getMonth();
+var dCurDayOfMonth = dDate.getDate();
+var dCurYear = dDate.getFullYear();
+var objPrevElement = new Object();
+
+function fToggleColor(myElement) {
+var toggleColor = "#ff0000";
+if (myElement.id == "calDateText") {
+if (myElement.color == toggleColor) {
+myElement.color = "";
+} else {
+myElement.color = toggleColor;
+   }
+} else if (myElement.id == "calCell") {
+for (var i in myElement.children) {
+if (myElement.children[i].id == "calDateText") {
+if (myElement.children[i].color == toggleColor) {
+myElement.children[i].color = "";
+} else {
+myElement.children[i].color = toggleColor;
+            }
+         }
+      }
+   }
+}
+function fSetSelectedDay(myElement){
+if (myElement.id == "calCell") {
+if (!isNaN(parseInt(myElement.children["calDateText"].innerText))) {
+myElement.bgColor = "#c0c0c0";
+objPrevElement.bgColor = "";
+document.all.calSelectedDate.value = parseInt(myElement.children["calDateText"].innerText);
+objPrevElement = myElement;
+      }
+   }
+}
+function fGetDaysInMonth(iMonth, iYear) {
+var dPrevDate = new Date(iYear, iMonth, 0);
+return dPrevDate.getDate();
+}
+function fBuildCal(iYear, iMonth, iDayStyle) {
+var aMonth = new Array();
+aMonth[0] = new Array(7);
+aMonth[1] = new Array(7);
+aMonth[2] = new Array(7);
+aMonth[3] = new Array(7);
+aMonth[4] = new Array(7);
+aMonth[5] = new Array(7);
+aMonth[6] = new Array(7);
+var dCalDate = new Date(iYear, iMonth-1, 1);
+var iDayOfFirst = dCalDate.getDay();
+var iDaysInMonth = fGetDaysInMonth(iMonth, iYear);
+var iVarDate = 1;
+var i, d, w;
+if (iDayStyle == 2) {
+aMonth[0][0] = "Sunday";
+aMonth[0][1] = "Monday";
+aMonth[0][2] = "Tuesday";
+aMonth[0][3] = "Wednesday";
+aMonth[0][4] = "Thursday";
+aMonth[0][5] = "Friday";
+aMonth[0][6] = "Saturday";
+} else if (iDayStyle == 1) {
+aMonth[0][0] = "Sun";
+aMonth[0][1] = "Mon";
+aMonth[0][2] = "Tue";
+aMonth[0][3] = "Wed";
+aMonth[0][4] = "Thu";
+aMonth[0][5] = "Fri";
+aMonth[0][6] = "Sat";
+} else {
+aMonth[0][0] = "Su";
+aMonth[0][1] = "Mo";
+aMonth[0][2] = "Tu";
+aMonth[0][3] = "We";
+aMonth[0][4] = "Th";
+aMonth[0][5] = "Fr";
+aMonth[0][6] = "Sa";
+}
+for (d = iDayOfFirst; d &lt; 7; d++) {
+aMonth[1][d] = iVarDate;
+iVarDate++;
+}
+for (w = 2; w &lt; 7; w++) {
+for (d = 0; d &lt; 7; d++) {
+if (iVarDate &lt;= iDaysInMonth) {
+aMonth[w][d] = iVarDate;
+iVarDate++;
+      }
+   }
+}
+return aMonth;
+}
+function fDrawCal(iYear, iMonth, iCellWidth, iCellHeight, sDateTextSize, sDateTextWeight, iDayStyle) {
+var myMonth;
+myMonth = fBuildCal(iYear, iMonth, iDayStyle);
+document.write("&lt;table border='1'&gt;")
+document.write("&lt;tr&gt;");
+document.write("&lt;td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'&gt;" + myMonth[0][0] + "&lt;/td&gt;");
+document.write("&lt;td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'&gt;" + myMonth[0][1] + "&lt;/td&gt;");
+document.write("&lt;td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'&gt;" + myMonth[0][2] + "&lt;/td&gt;");
+document.write("&lt;td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'&gt;" + myMonth[0][3] + "&lt;/td&gt;");
+document.write("&lt;td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'&gt;" + myMonth[0][4] + "&lt;/td&gt;");
+document.write("&lt;td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'&gt;" + myMonth[0][5] + "&lt;/td&gt;");
+document.write("&lt;td align='center' style='FONT-FAMILY:Arial;FONT-SIZE:12px;FONT-WEIGHT: bold'&gt;" + myMonth[0][6] + "&lt;/td&gt;");
+document.write("&lt;/tr&gt;");
+for (w = 1; w &lt; 7; w++) {
+document.write("&lt;tr&gt;")
+for (d = 0; d &lt; 7; d++) {
+document.write("&lt;td align='left' valign='top' width='" + iCellWidth + "' height='" + iCellHeight + "' id=calCell style='CURSOR:Hand' onMouseOver='fToggleColor(this)' onMouseOut='fToggleColor(this)' onclick=fSetSelectedDay(this)&gt;");
+if (!isNaN(myMonth[w][d])) {
+document.write("&lt;font id=calDateText onMouseOver='fToggleColor(this)' style='CURSOR:Hand;FONT-FAMILY:Arial;FONT-SIZE:" + sDateTextSize + ";FONT-WEIGHT:" + sDateTextWeight + "' onMouseOut='fToggleColor(this)' onclick=fSetSelectedDay(this)&gt;" + myMonth[w][d] + "&lt;/font&gt;");
+} else {
+document.write("&lt;font id=calDateText onMouseOver='fToggleColor(this)' style='CURSOR:Hand;FONT-FAMILY:Arial;FONT-SIZE:" + sDateTextSize + ";FONT-WEIGHT:" + sDateTextWeight + "' onMouseOut='fToggleColor(this)' onclick=fSetSelectedDay(this)&gt;&nbsp;&lt;/font&gt;");
+}
+document.write("&lt;/td&gt;")
+}
+document.write("&lt;/tr&gt;");
+}
+document.write("&lt;/table&gt;")
+}
+function fUpdateCal(iYear, iMonth) {
+myMonth = fBuildCal(iYear, iMonth);
+objPrevElement.bgColor = "";
+document.all.calSelectedDate.value = "";
+for (w = 1; w &lt; 7; w++) {
+for (d = 0; d &lt; 7; d++) {
+if (!isNaN(myMonth[w][d])) {
+calDateText[((7*w)+d)-7].innerText = myMonth[w][d];
+} else {
+calDateText[((7*w)+d)-7].innerText = " ";
+         }
+      }
+   }
+}
+// End --&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;script language="JavaScript" for=window event=onload&gt;
+&lt;!-- Begin
+var dCurDate = new Date();
+frmCalendarSample.tbSelMonth.options[dCurDate.getMonth()].selected = true;
+for (i = 0; i &lt; frmCalendarSample.tbSelYear.length; i++)
+if (frmCalendarSample.tbSelYear.options[i].value == dCurDate.getFullYear())
+frmCalendarSample.tbSelYear.options[i].selected = true;
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;form name="frmCalendarSample" method="post" action=""&gt;
+&lt;input type="hidden" name="calSelectedDate" value=""&gt;
+
+&lt;table border="1"&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;select name="tbSelMonth" onchange='fUpdateCal(frmCalendarSample.tbSelYear.value, frmCalendarSample.tbSelMonth.value)'&gt;
+&lt;option value="1"&gt;January&lt;/option&gt;
+&lt;option value="2"&gt;February&lt;/option&gt;
+&lt;option value="3"&gt;March&lt;/option&gt;
+&lt;option value="4"&gt;April&lt;/option&gt;
+&lt;option value="5"&gt;May&lt;/option&gt;
+&lt;option value="6"&gt;June&lt;/option&gt;
+&lt;option value="7"&gt;July&lt;/option&gt;
+&lt;option value="8"&gt;August&lt;/option&gt;
+&lt;option value="9"&gt;September&lt;/option&gt;
+&lt;option value="10"&gt;October&lt;/option&gt;
+&lt;option value="11"&gt;November&lt;/option&gt;
+&lt;option value="12"&gt;December&lt;/option&gt;
+&lt;/select&gt;
+&nbsp;&nbsp;
+&lt;select name="tbSelYear" onchange='fUpdateCal(frmCalendarSample.tbSelYear.value, frmCalendarSample.tbSelMonth.value)'&gt;
+&lt;option value="1998"&gt;1998&lt;/option&gt;
+&lt;option value="1999"&gt;1999&lt;/option&gt;
+&lt;option value="2000"&gt;2000&lt;/option&gt;
+&lt;option value="2001"&gt;2001&lt;/option&gt;
+&lt;option value="2002"&gt;2002&lt;/option&gt;
+&lt;option value="2003"&gt;2003&lt;/option&gt;
+&lt;option value="2004"&gt;2004&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;script language="JavaScript"&gt;
+var dCurDate = new Date();
+fDrawCal(dCurDate.getFullYear(), dCurDate.getMonth()+1, 30, 30, "12px", "bold", 1);
+&lt;/script&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+
+<p><center>
+<font face="arial, helvetica" size="-2">Free JavaScripts provided<br>
+by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
+</center><p>
+
+&lt;!-- Script Size:  7.06 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calendars/dynamic.html/195344320/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Content_Management_1d/jupcontent125x600_new.gif"  ALT="The Premier Event for Content Management Strategies and Solutions"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calendars/dynamic.html/195344320/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='dynamic.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calendars/dynamic.html/522796701/468x60-2/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_esecurity_2c/esecurity-750.gif"  ALT="Reports on security issues of ecommerce environments"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calendars/dynamic.html/522796701/468x60-2/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>
+
+
+

@@ -1,0 +1,1003 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Games:  Video Poker</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="Just a nice basic poker game. Lotsa luck! IE only.">
+<META NAME="date" CONTENT="2001-11-16">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Carl Kaneta">
+<META NAME="section" CONTENT="Games">
+<style type="text/css">
+ a{text-decoration:none}  a:hover{color:red}
+ .txtblu{color=blue;}       .txtblk{color=black;}      .txtwht{color=white;}
+ .bgwht{background=white;}  .bgblk{background=black;}  .bgred{background=red;}
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  Carl Kaneta (carl_kaneta@hotmail.com) -->
+<!-- Web Site:  http://home.earthlink.net/~clkaneta/ -->
+
+<!-- Begin
+var deck=new Array; var hand=new Array(5); var hcrd=new Array(5); var hsut=new Array(5);
+var isPlaying=-1; var betn=1; var dpos=0; var crdts;
+/* ----------------------------------------------------------------------------------------- */
+function initdeck(){
+ crd=0;
+ for(i=0;i<4;i++){
+  if(i==0){st="club";} else if(i==1){st="heart";} else if(i==2){st="diamond";}else{st="spade";}
+  for(c=1;c<14;c++){
+   if(c==1){num="ace";}else if(c==11){num="jack";}
+   else if(c==12){num="queen";}else if(c==13){num="king";}else{num=c;}
+   deck[crd++]=st+"|"+num;
+  } //for c
+ }  //for i
+}
+function Bet(num){
+ if(isPlaying<0){
+  crdts=document.all.crd.innerText * 1;
+  if(num==5){
+   if(crdts>=5){betn=5;}
+   else{betn=crdts;}
+  }else{betn=betn+num;}
+  if((betn>5)||(betn>crdts)){betn=1;}
+  document.all.pbet.innerText=betn;
+  document.all.col1.className="txtblk";document.all.col2.className="txtblk"; document.all.col3.className="txtblk";
+  document.all.col4.className="txtblk"; document.all.col5.className="txtblk";
+  document.all.col11.className="txtblk";document.all.col21.className="txtblk";document.all.col31.className="txtblk";
+  document.all.col41.className="txtblk";document.all.col51.className="txtblk";
+  document.all.col12.className="txtwht";document.all.col22.className="txtwht";document.all.col32.className="txtwht";
+  document.all.col42.className="txtwht";document.all.col52.className="txtwht";
+  document.all.col13.className="txtblk";document.all.col23.className="txtblk";document.all.col33.className="txtblk";
+  document.all.col43.className="txtblk";document.all.col53.className="txtblk";
+  document.all.col14.className="txtwht";document.all.col24.className="txtwht";document.all.col34.className="txtwht";
+  document.all.col44.className="txtwht";document.all.col54.className="txtwht";
+  document.all.col15.className="txtblk";document.all.col25.className="txtblk";document.all.col35.className="txtblk";
+  document.all.col45.className="txtblk";document.all.col55.className="txtblk";
+  document.all.col16.className="txtwht";document.all.col26.className="txtwht";document.all.col36.className="txtwht";
+  document.all.col46.className="txtwht";document.all.col56.className="txtwht";
+  document.all.col17.className="txtblk";document.all.col27.className="txtblk";document.all.col37.className="txtblk";
+  document.all.col47.className="txtblk";document.all.col57.className="txtblk";
+  document.all.col18.className="txtwht";document.all.col28.className="txtwht";document.all.col38.className="txtwht";
+  document.all.col48.className="txtwht";document.all.col58.className="txtwht";
+  document.all.col19.className="txtblk";document.all.col29.className="txtblk";document.all.col39.className="txtblk";
+  document.all.col49.className="txtblk";document.all.col59.className="txtblk";
+  if(betn==1){document.all.col1.className="txtblu";
+   document.all.col11.className="txtblu";document.all.col12.className="txtblu";document.all.col13.className="txtblu";
+   document.all.col14.className="txtblu";document.all.col15.className="txtblu";document.all.col16.className="txtblu";
+   document.all.col17.className="txtblu";document.all.col18.className="txtblu";document.all.col19.className="txtblu";
+  }else if(betn==2){document.all.col2.className="txtblu";
+   document.all.col21.className="txtblu";document.all.col22.className="txtblu";document.all.col23.className="txtblu";
+   document.all.col24.className="txtblu";document.all.col25.className="txtblu";document.all.col26.className="txtblu";
+   document.all.col27.className="txtblu";document.all.col28.className="txtblu";document.all.col29.className="txtblu";
+  }else if(betn==3){document.all.col3.className="txtblu";
+   document.all.col31.className="txtblu";document.all.col32.className="txtblu";document.all.col33.className="txtblu";
+   document.all.col34.className="txtblu";document.all.col35.className="txtblu";document.all.col36.className="txtblu";
+   document.all.col37.className="txtblu";document.all.col38.className="txtblu";document.all.col39.className="txtblu";
+  }else if(betn==4){document.all.col4.className="txtblu";
+   document.all.col41.className="txtblu";document.all.col42.className="txtblu";document.all.col43.className="txtblu";
+   document.all.col44.className="txtblu";document.all.col45.className="txtblu";document.all.col46.className="txtblu";
+   document.all.col47.className="txtblu";document.all.col48.className="txtblu";document.all.col49.className="txtblu";
+  }else {document.all.col5.className="txtblu";
+   document.all.col51.className="txtblu";document.all.col52.className="txtblu";document.all.col53.className="txtblu";
+   document.all.col54.className="txtblu";document.all.col55.className="txtblu";document.all.col56.className="txtblu";
+   document.all.col57.className="txtblu";document.all.col58.className="txtblu";document.all.col59.className="txtblu";
+  }
+ }
+}
+function evalhand(num){
+ isFlush=-1; isStrt=1; isTrips=-1; isFours=-1; Pair=-1; Pair2=-1; isFull=-1;
+ mtch1=0;mtch2=0;mtch3=0;mtch4=0;mtch5=0;
+ document.all.row1.className="bgwht";document.all.row3.className="bgwht";document.all.row5.className="bgwht";
+ document.all.row2.className="bgblk";document.all.row4.className="bgblk";document.all.row6.className="bgblk";
+ document.all.row7.className="bgwht";document.all.row8.className="bgblk";document.all.row9.className="bgwht";
+ document.drwcrd.hold1.checked = false; document.drwcrd.hold2.checked = false;
+ document.drwcrd.hold3.checked = false; document.drwcrd.hold4.checked = false;
+ document.drwcrd.hold5.checked = false;
+ for(i=0;i<5;i++){
+  p = hand[i].indexOf("|");
+  s = hand[i].substring(0,p);
+  c = hand[i].substring(p+1,hand[i].length);
+  hcrd[i]=c; hsut[i]=s;
+  if(hcrd[i]=="ace"){hcrd[i]=14;} else if(hcrd[i]=="jack"){hcrd[i]=11;} else if(hcrd[i]=="queen"){hcrd[i]=12;}
+  else if(hcrd[i]=="king"){hcrd[i]=13;} else {hcrd[i]=hcrd[i]*1;}
+ }
+ for(i=4;i>=0;i--){ // bubble sort
+  for(j=0;j<4;j++){
+   if(hcrd[j]>=hcrd[j+1]){
+    tmp=hcrd[j];       tmp2=hsut[j];
+    hcrd[j]=hcrd[j+1]; hsut[j]=hsut[j+1];
+    hcrd[j+1]=tmp;     hsut[j+1]=tmp2;
+   }
+  }
+ }
+ for(i=4;i>0;i--){ if(hcrd[i]!=hcrd[0]+i){isStrt=-1;} }
+ if((hcrd[0]==2)&&(hcrd[1]==3)&&(hcrd[2]==4)&&(hcrd[3]==5)&&(hcrd[4]==14)){isStrt=1;}
+ if((hsut[0]==hsut[1])&&(hsut[0]==hsut[2])&&(hsut[0]==hsut[3])&&(hsut[0]==hsut[4])){isFlush=1;}
+ if((isStrt<0)&&(isFlush<0)){
+  mtch1=0;
+  for(i=0;i<5;i++){ if(i!=0){if(hcrd[0]==hcrd[i]){mtch1++;}}}
+  mtch2=0;
+  for(i=0;i<5;i++){ if(i!=1){if(hcrd[1]==hcrd[i]){mtch2++;}}}
+  mtch3=0;
+  for(i=0;i<5;i++){ if(i!=2){if(hcrd[2]==hcrd[i]){mtch3++;}}}
+  mtch4=0;
+  for(i=0;i<5;i++){ if(i!=3){if(hcrd[3]==hcrd[i]){mtch4++;}}}
+  mtch5=0;
+  for(i=0;i<5;i++){ if(i!=4){if(hcrd[4]==hcrd[i]){mtch5++;}}}
+  if((mtch1==3)||(mtch2==3)||(mtch3==3)||(mtch4==3)||(mtch5==3)){isFours=1;}
+  if((mtch1==2)||(mtch2==2)||(mtch3==2)||(mtch4==2)||(mtch5==2)){isTrips=1;}
+  if((mtch1+mtch2+mtch3+mtch4+mtch5)==8){isFull=1; isTrips=-1;}
+  if((mtch1+mtch2+mtch3+mtch4+mtch5)==4){Pair2=1;}
+  if((mtch1+mtch2+mtch3+mtch4+mtch5)==2){
+   cval=0;
+   if(mtch1==1){cval=hcrd[0];} if(mtch2==1){cval=hcrd[1];}
+   if(mtch3==1){cval=hcrd[2];} if(mtch4==1){cval=hcrd[3];}
+   if(cval>=10){Pair=1;}
+  }
+ } //end if(isStrt && isFlush)
+ tmp=0;
+ if(isFlush>0){tmp=5;}
+ if(isStrt>0){tmp=6;}
+ if((isFlush>0)&&(isStrt>0)){
+  if(hcrd[0]==10){tmp=1;}
+  else{tmp=2;}
+ }
+ if(isFull>0){tmp=4}
+ if(isFours>0){tmp=3;}
+ if(isTrips>0){tmp=7;}
+ if(Pair2>0){tmp=8;}
+ if(Pair>0){tmp=9;}
+ if(tmp==1){document.all.row1.className="bgred";}  if(tmp==2){document.all.row2.className="bgred";}
+ if(tmp==3){document.all.row3.className="bgred";}  if(tmp==4){document.all.row4.className="bgred";}
+ if(tmp==5){document.all.row5.className="bgred";}  if(tmp==6){document.all.row6.className="bgred";}
+ if(tmp==7){document.all.row7.className="bgred";}  if(tmp==8){document.all.row8.className="bgred";}
+ if(tmp==9){document.all.row9.className="bgred";}
+ if(num>0){endgame(tmp);}
+}
+/* ----------------------------------------------------------------------------------------- */
+function showcard(cnum){
+ p = hand[cnum].indexOf("|");
+ s = hand[cnum].substring(0,p);
+ c = hand[cnum].substring(p+1,hand[cnum].length);
+ if(cnum==0){document.images.card1.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+ else if(cnum==1){document.images.card2.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+ else if(cnum==2){document.images.card3.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+ else if(cnum==3){document.images.card4.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+ else{document.images.card5.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+}
+function deal(){
+ if(isPlaying < 0){ // new game
+  dpos = 0;  isPlaying=1;
+  crdts=document.all.crd.innerText * 1;
+  crdts=crdts-betn;
+  document.all.crd.innerText = crdts;
+  for(i=0;i<500;i++){  //shuffle the cards(mix up the deck)
+   tmp = Math.round(Math.random()*51);  tmp2= Math.round(Math.random()*51);
+   stmp = deck[tmp];  deck[tmp] = deck[tmp2];  deck[tmp2] = stmp;
+  }
+//deck[0]="diamond|ace"; deck[1]="spade|ace"; deck[2]="heart|ace"; deck[3]="club|ace"; deck[4]="club|4";
+  for(i=0;i<5;i++){hand[i]=deck[dpos++];showcard(i);}
+  evalhand(-1);
+  document.all.msgs.innerText="Choose which cards to hold & hit 'Deal'";
+ }else{            // draw
+  if(!document.drwcrd.hold1.checked){hand[0]=deck[dpos++];showcard(0);}
+  if(!document.drwcrd.hold2.checked){hand[1]=deck[dpos++];showcard(1);}
+  if(!document.drwcrd.hold3.checked){hand[2]=deck[dpos++];showcard(2);}
+  if(!document.drwcrd.hold4.checked){hand[3]=deck[dpos++];showcard(3);}
+  if(!document.drwcrd.hold5.checked){hand[4]=deck[dpos++];showcard(4);}
+  evalhand(1);
+ }
+}
+function endgame(hndval){
+ isPlaying=-1;
+ if     (hndval==0){ win=0;       msg="Losing Hand.";}
+ else if(hndval==9){ win=betn;    msg="Pair of 10's or better";}
+ else if(hndval==8){ win=2*betn;  msg="Two Pairs";}
+ else if(hndval==7){ win=3*betn;  msg="Three of a Kind";}
+ else if(hndval==6){ win=4*betn;  msg="Straight";}
+ else if(hndval==5){ win=5*betn;  msg="Flush";}
+ else if(hndval==4){ win=6*betn;  msg="Full House";}
+ else if(hndval==3){ win=8*betn;  msg="Four of a Kind";}
+ else if(hndval==2){ win=10*betn; msg="Straight Flush";}
+ else if(hndval==1){ win=50*betn; msg="Royal Straight Flush"; }
+ crdts=crdts+win;
+ document.all.msgs.innerText=msg;
+ if(crdts==0){
+  alert("You are what we call Broke.");
+  alert("Here's a loan so you can lose some more...");
+  crdts=50;
+ }
+ document.all.crd.innerText = crdts;
+ betn=0;Bet(1);
+}
+function Clickit(num){
+ if(isPlaying>0){
+  if(num==1){document.drwcrd.hold1.checked=!document.drwcrd.hold1.checked;}
+  if(num==2){document.drwcrd.hold2.checked=!document.drwcrd.hold2.checked;}
+  if(num==3){document.drwcrd.hold3.checked=!document.drwcrd.hold3.checked;}
+  if(num==4){document.drwcrd.hold4.checked=!document.drwcrd.hold4.checked;}
+  if(num==5){document.drwcrd.hold5.checked=!document.drwcrd.hold5.checked;}
+ }
+}
+function quit(){window.close();}
+/* ----------------------------------------------------------------------------------------- */
+initdeck();
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff link=blue vlink=blue text=black>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=787V20021114144641&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=158V20021115201354&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/video-poker.html/612151538/468x60-1/Microsoft_Canada_VS_4c/MsftVSnet_IDE_Blue_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Games</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Video Poker</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Just a nice basic poker game. Lotsa luck! IE only.
+<br>
+<br>
+<div align="center"><a href="http://javascript.internet.com/img/video-poker/cards.zip">Download the required image files here</a></div>
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<table align=center border=1>
+ <tr bgcolor="#FFFFD0">
+  <td colspan=5>
+   <table align=center border=0 cellpadding=2 cellspacing=0 width=95%>
+    <tr bgcolor="#FFFFD0">
+     <td valign=bottom align=center>Hand</td>
+     <td align=center id="col1" class="txtblu">Bet<br>1</td>
+     <td align=center id="col2" class="txtblk">Bet<br>2</td>
+     <td align=center id="col3" class="txtblk">Bet<br>3</td>
+     <td align=center id="col4" class="txtblk">Bet<br>4</td>
+     <td align=center id="col5" class="txtblk">Bet<br>5</td>
+    </tr><tr id="row1" class="bgwht">
+     <td>Royal Straight Flush</td>
+     <td align=center id="col11" class="txtblu">50</td>
+     <td align=center id="col21" class="txtblk">100</td>
+     <td align=center id="col31" class="txtblk">150</td>
+     <td align=center id="col41" class="txtblk">200</td>
+     <td align=center id="col51" class="txtblk">250</td>
+    </tr><tr id="row2" class="bgblk">
+     <td><font color=white>Straight Flush</font></td>
+     <td align=center id="col12" class="txtblu">10</td>
+     <td align=center id="col22" class="txtwht">20</td>
+     <td align=center id="col32" class="txtwht">30</td>
+     <td align=center id="col42" class="txtwht">40</td>
+     <td align=center id="col52" class="txtwht">50</td>
+    </tr><tr id="row3" class="bgwht">
+     <td>4 of a Kind</td>
+     <td align=center id="col13" class="txtblu">8</td>
+     <td align=center id="col23" class="txtblk">16</td>
+     <td align=center id="col33" class="txtblk">24</td>
+     <td align=center id="col43" class="txtblk">32</td>
+     <td align=center id="col53" class="txtblk">40</td>
+    </tr><tr id="row4" class="bgblk">
+     <td><font color=white>Full House</font></td>
+     <td align=center id="col14" class="txtblu">6</td>
+     <td align=center id="col24" class="txtwht">12</td>
+     <td align=center id="col34" class="txtwht">18</td>
+     <td align=center id="col44" class="txtwht">24</td>
+     <td align=center id="col54" class="txtwht">30</td>
+    </tr><tr id="row5" class="bgwht">
+     <td>Flush</td>
+     <td align=center id="col15" class="txtblu">5</td>
+     <td align=center id="col25" class="txtblk">10</td>
+     <td align=center id="col35" class="txtblk">15</td>
+     <td align=center id="col45" class="txtblk">20</td>
+     <td align=center id="col55" class="txtblk">25</td>
+    </tr><tr id="row6" class="bgblk">
+     <td><font color=white>Straight</font></td>
+     <td align=center id="col16" class="txtblu">4</td>
+     <td align=center id="col26" class="txtwht">8</td>
+     <td align=center id="col36" class="txtwht">12</td>
+     <td align=center id="col46" class="txtwht">16</td>
+     <td align=center id="col56" class="txtwht">20</td>
+    </tr><tr id="row7" class="bgwht">
+     <td>3 of a Kind</td>
+     <td align=center id="col17" class="txtblu">3</td>
+     <td align=center id="col27" class="txtblk">6</td>
+     <td align=center id="col37" class="txtblk">9</td>
+     <td align=center id="col47" class="txtblk">12</td>
+     <td align=center id="col57" class="txtblk">15</td>
+    </tr><tr id="row8" class="bgblk">
+     <td><font color=white>2 Pair</font></td>
+     <td align=center id="col18" class="txtblu">2</td>
+     <td align=center id="col28" class="txtwht">4</td>
+     <td align=center id="col38" class="txtwht">6</td>
+     <td align=center id="col48" class="txtwht">8</td>
+     <td align=center id="col58" class="txtwht">10</td>
+    </tr><tr id="row9" class="bgwht">
+     <td>Pair 10's +</td>
+     <td align=center id="col19" class="txtblu">1</td>
+     <td align=center id="col29" class="txtblk">2</td>
+     <td align=center id="col39" class="txtblk">3</td>
+     <td align=center id="col49" class="txtblk">4</td>
+     <td align=center id="col59" class="txtblk">5</td>
+    </tr><tr><td colspan=5 height=10></td>
+    </tr>
+   </table>
+  </td>
+ </tr><tr><form name="drwcrd">
+  <td width=80 align=center bgcolor="#FFF000"><img name="card1" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(1);"><br><input type=checkbox name="hold1"><b>Hold</b></td>
+  <td width=80 align=center bgcolor="#FFF000"><img name="card2" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(2);"><br><input type=checkbox name="hold2"><b>Hold</b></td>
+  <td width=80 align=center bgcolor="#FFF000"><img name="card3" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(3);"><br><input type=checkbox name="hold3"><b>Hold</b></td>
+  <td width=80 align=center bgcolor="#FFF000"><img name="card4" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(4);"><br><input type=checkbox name="hold4"><b>Hold</b></td>
+  <td width=80 align=center bgcolor="#FFF000"><img name="card5" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(5);"><br><input type=checkbox name="hold5"><b>Hold</b></td>
+ </tr><tr></form>
+  <td colspan=5 align=center bgcolor="#FFFFD0"><div id="msgs"><b>Hit 'DEAL' to begin</b></div></td>
+ </tr><tr>
+  <td width=80 align=center bgcolor="#FFFFD0"><a href="javascript:Bet(1);"><b>BET:</b></a> <div id="pbet">1<div></td>
+  <td width=80 align=center bgcolor="#FFFFD0"><a href="javascript:Bet(5);"><b>MAX BET</b></a><br>(5)</td>
+  <td width=80 align=center bgcolor="#FFFFD0"><a href="javascript:deal();"><b>DEAL</b></a></td>
+  <td width=80 align=center bgcolor="#FFFFD0"><a href="javascript:quit();"><b>CASH</b><br><b>OUT</b></a></td>
+  <td width=80 align=center bgcolor="#FFFFD0"><b>Credits:</b><div id="crd">100</div></td>
+ </tr>
+<table>
+
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Games:  Video Poker</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  19.25 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- THREE STEPS TO INSTALL VIDEO POKER:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the onLoad event handler into the BODY tag
+  3.  Put the last coding into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;style type="text/css"&gt;
+ a{text-decoration:none}  a:hover{color:red}
+ .txtblu{color=blue;}       .txtblk{color=black;}      .txtwht{color=white;}
+ .bgwht{background=white;}  .bgblk{background=black;}  .bgred{background=red;}
+&lt;/style&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+&lt;!-- Original:  Carl Kaneta (carl_kaneta@hotmail.com) --&gt;
+&lt;!-- Web Site:  http://home.earthlink.net/~clkaneta/ --&gt;
+
+&lt;!-- Begin
+var deck=new Array; var hand=new Array(5); var hcrd=new Array(5); var hsut=new Array(5);
+var isPlaying=-1; var betn=1; var dpos=0; var crdts;
+/* ----------------------------------------------------------------------------------------- */
+function initdeck(){
+ crd=0;
+ for(i=0;i&lt;4;i++){
+  if(i==0){st="club";} else if(i==1){st="heart";} else if(i==2){st="diamond";}else{st="spade";}
+  for(c=1;c&lt;14;c++){
+   if(c==1){num="ace";}else if(c==11){num="jack";}
+   else if(c==12){num="queen";}else if(c==13){num="king";}else{num=c;}
+   deck[crd++]=st+"|"+num;
+  } //for c
+ }  //for i
+}
+function Bet(num){
+ if(isPlaying&lt;0){
+  crdts=document.all.crd.innerText * 1;
+  if(num==5){
+   if(crdts&gt;=5){betn=5;}
+   else{betn=crdts;}
+  }else{betn=betn+num;}
+  if((betn&gt;5)||(betn&gt;crdts)){betn=1;}
+  document.all.pbet.innerText=betn;
+  document.all.col1.className="txtblk";document.all.col2.className="txtblk"; document.all.col3.className="txtblk";
+  document.all.col4.className="txtblk"; document.all.col5.className="txtblk";
+  document.all.col11.className="txtblk";document.all.col21.className="txtblk";document.all.col31.className="txtblk";
+  document.all.col41.className="txtblk";document.all.col51.className="txtblk";
+  document.all.col12.className="txtwht";document.all.col22.className="txtwht";document.all.col32.className="txtwht";
+  document.all.col42.className="txtwht";document.all.col52.className="txtwht";
+  document.all.col13.className="txtblk";document.all.col23.className="txtblk";document.all.col33.className="txtblk";
+  document.all.col43.className="txtblk";document.all.col53.className="txtblk";
+  document.all.col14.className="txtwht";document.all.col24.className="txtwht";document.all.col34.className="txtwht";
+  document.all.col44.className="txtwht";document.all.col54.className="txtwht";
+  document.all.col15.className="txtblk";document.all.col25.className="txtblk";document.all.col35.className="txtblk";
+  document.all.col45.className="txtblk";document.all.col55.className="txtblk";
+  document.all.col16.className="txtwht";document.all.col26.className="txtwht";document.all.col36.className="txtwht";
+  document.all.col46.className="txtwht";document.all.col56.className="txtwht";
+  document.all.col17.className="txtblk";document.all.col27.className="txtblk";document.all.col37.className="txtblk";
+  document.all.col47.className="txtblk";document.all.col57.className="txtblk";
+  document.all.col18.className="txtwht";document.all.col28.className="txtwht";document.all.col38.className="txtwht";
+  document.all.col48.className="txtwht";document.all.col58.className="txtwht";
+  document.all.col19.className="txtblk";document.all.col29.className="txtblk";document.all.col39.className="txtblk";
+  document.all.col49.className="txtblk";document.all.col59.className="txtblk";
+  if(betn==1){document.all.col1.className="txtblu";
+   document.all.col11.className="txtblu";document.all.col12.className="txtblu";document.all.col13.className="txtblu";
+   document.all.col14.className="txtblu";document.all.col15.className="txtblu";document.all.col16.className="txtblu";
+   document.all.col17.className="txtblu";document.all.col18.className="txtblu";document.all.col19.className="txtblu";
+  }else if(betn==2){document.all.col2.className="txtblu";
+   document.all.col21.className="txtblu";document.all.col22.className="txtblu";document.all.col23.className="txtblu";
+   document.all.col24.className="txtblu";document.all.col25.className="txtblu";document.all.col26.className="txtblu";
+   document.all.col27.className="txtblu";document.all.col28.className="txtblu";document.all.col29.className="txtblu";
+  }else if(betn==3){document.all.col3.className="txtblu";
+   document.all.col31.className="txtblu";document.all.col32.className="txtblu";document.all.col33.className="txtblu";
+   document.all.col34.className="txtblu";document.all.col35.className="txtblu";document.all.col36.className="txtblu";
+   document.all.col37.className="txtblu";document.all.col38.className="txtblu";document.all.col39.className="txtblu";
+  }else if(betn==4){document.all.col4.className="txtblu";
+   document.all.col41.className="txtblu";document.all.col42.className="txtblu";document.all.col43.className="txtblu";
+   document.all.col44.className="txtblu";document.all.col45.className="txtblu";document.all.col46.className="txtblu";
+   document.all.col47.className="txtblu";document.all.col48.className="txtblu";document.all.col49.className="txtblu";
+  }else {document.all.col5.className="txtblu";
+   document.all.col51.className="txtblu";document.all.col52.className="txtblu";document.all.col53.className="txtblu";
+   document.all.col54.className="txtblu";document.all.col55.className="txtblu";document.all.col56.className="txtblu";
+   document.all.col57.className="txtblu";document.all.col58.className="txtblu";document.all.col59.className="txtblu";
+  }
+ }
+}
+function evalhand(num){
+ isFlush=-1; isStrt=1; isTrips=-1; isFours=-1; Pair=-1; Pair2=-1; isFull=-1;
+ mtch1=0;mtch2=0;mtch3=0;mtch4=0;mtch5=0;
+ document.all.row1.className="bgwht";document.all.row3.className="bgwht";document.all.row5.className="bgwht";
+ document.all.row2.className="bgblk";document.all.row4.className="bgblk";document.all.row6.className="bgblk";
+ document.all.row7.className="bgwht";document.all.row8.className="bgblk";document.all.row9.className="bgwht";
+ document.drwcrd.hold1.checked = false; document.drwcrd.hold2.checked = false;
+ document.drwcrd.hold3.checked = false; document.drwcrd.hold4.checked = false;
+ document.drwcrd.hold5.checked = false;
+ for(i=0;i&lt;5;i++){
+  p = hand[i].indexOf("|");
+  s = hand[i].substring(0,p);
+  c = hand[i].substring(p+1,hand[i].length);
+  hcrd[i]=c; hsut[i]=s;
+  if(hcrd[i]=="ace"){hcrd[i]=14;} else if(hcrd[i]=="jack"){hcrd[i]=11;} else if(hcrd[i]=="queen"){hcrd[i]=12;}
+  else if(hcrd[i]=="king"){hcrd[i]=13;} else {hcrd[i]=hcrd[i]*1;}
+ }
+ for(i=4;i&gt;=0;i--){ // bubble sort
+  for(j=0;j&lt;4;j++){
+   if(hcrd[j]&gt;=hcrd[j+1]){
+    tmp=hcrd[j];       tmp2=hsut[j];
+    hcrd[j]=hcrd[j+1]; hsut[j]=hsut[j+1];
+    hcrd[j+1]=tmp;     hsut[j+1]=tmp2;
+   }
+  }
+ }
+ for(i=4;i&gt;0;i--){ if(hcrd[i]!=hcrd[0]+i){isStrt=-1;} }
+ if((hcrd[0]==2)&&(hcrd[1]==3)&&(hcrd[2]==4)&&(hcrd[3]==5)&&(hcrd[4]==14)){isStrt=1;}
+ if((hsut[0]==hsut[1])&&(hsut[0]==hsut[2])&&(hsut[0]==hsut[3])&&(hsut[0]==hsut[4])){isFlush=1;}
+ if((isStrt&lt;0)&&(isFlush&lt;0)){
+  mtch1=0;
+  for(i=0;i&lt;5;i++){ if(i!=0){if(hcrd[0]==hcrd[i]){mtch1++;}}}
+  mtch2=0;
+  for(i=0;i&lt;5;i++){ if(i!=1){if(hcrd[1]==hcrd[i]){mtch2++;}}}
+  mtch3=0;
+  for(i=0;i&lt;5;i++){ if(i!=2){if(hcrd[2]==hcrd[i]){mtch3++;}}}
+  mtch4=0;
+  for(i=0;i&lt;5;i++){ if(i!=3){if(hcrd[3]==hcrd[i]){mtch4++;}}}
+  mtch5=0;
+  for(i=0;i&lt;5;i++){ if(i!=4){if(hcrd[4]==hcrd[i]){mtch5++;}}}
+  if((mtch1==3)||(mtch2==3)||(mtch3==3)||(mtch4==3)||(mtch5==3)){isFours=1;}
+  if((mtch1==2)||(mtch2==2)||(mtch3==2)||(mtch4==2)||(mtch5==2)){isTrips=1;}
+  if((mtch1+mtch2+mtch3+mtch4+mtch5)==8){isFull=1; isTrips=-1;}
+  if((mtch1+mtch2+mtch3+mtch4+mtch5)==4){Pair2=1;}
+  if((mtch1+mtch2+mtch3+mtch4+mtch5)==2){
+   cval=0;
+   if(mtch1==1){cval=hcrd[0];} if(mtch2==1){cval=hcrd[1];}
+   if(mtch3==1){cval=hcrd[2];} if(mtch4==1){cval=hcrd[3];}
+   if(cval&gt;=10){Pair=1;}
+  }
+ } //end if(isStrt && isFlush)
+ tmp=0;
+ if(isFlush&gt;0){tmp=5;}
+ if(isStrt&gt;0){tmp=6;}
+ if((isFlush&gt;0)&&(isStrt&gt;0)){
+  if(hcrd[0]==10){tmp=1;}
+  else{tmp=2;}
+ }
+ if(isFull&gt;0){tmp=4}
+ if(isFours&gt;0){tmp=3;}
+ if(isTrips&gt;0){tmp=7;}
+ if(Pair2&gt;0){tmp=8;}
+ if(Pair&gt;0){tmp=9;}
+ if(tmp==1){document.all.row1.className="bgred";}  if(tmp==2){document.all.row2.className="bgred";}
+ if(tmp==3){document.all.row3.className="bgred";}  if(tmp==4){document.all.row4.className="bgred";}
+ if(tmp==5){document.all.row5.className="bgred";}  if(tmp==6){document.all.row6.className="bgred";}
+ if(tmp==7){document.all.row7.className="bgred";}  if(tmp==8){document.all.row8.className="bgred";}
+ if(tmp==9){document.all.row9.className="bgred";}
+ if(num&gt;0){endgame(tmp);}
+}
+/* ----------------------------------------------------------------------------------------- */
+function showcard(cnum){
+ p = hand[cnum].indexOf("|");
+ s = hand[cnum].substring(0,p);
+ c = hand[cnum].substring(p+1,hand[cnum].length);
+ if(cnum==0){document.images.card1.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+ else if(cnum==1){document.images.card2.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+ else if(cnum==2){document.images.card3.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+ else if(cnum==3){document.images.card4.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+ else{document.images.card5.src="http://javascript.internet.com/img/video-poker/"+s+c+".gif";}
+}
+function deal(){
+ if(isPlaying &lt; 0){ // new game
+  dpos = 0;  isPlaying=1;
+  crdts=document.all.crd.innerText * 1;
+  crdts=crdts-betn;
+  document.all.crd.innerText = crdts;
+  for(i=0;i&lt;500;i++){  //shuffle the cards(mix up the deck)
+   tmp = Math.round(Math.random()*51);  tmp2= Math.round(Math.random()*51);
+   stmp = deck[tmp];  deck[tmp] = deck[tmp2];  deck[tmp2] = stmp;
+  }
+//deck[0]="diamond|ace"; deck[1]="spade|ace"; deck[2]="heart|ace"; deck[3]="club|ace"; deck[4]="club|4";
+  for(i=0;i&lt;5;i++){hand[i]=deck[dpos++];showcard(i);}
+  evalhand(-1);
+  document.all.msgs.innerText="Choose which cards to hold & hit 'Deal'";
+ }else{            // draw
+  if(!document.drwcrd.hold1.checked){hand[0]=deck[dpos++];showcard(0);}
+  if(!document.drwcrd.hold2.checked){hand[1]=deck[dpos++];showcard(1);}
+  if(!document.drwcrd.hold3.checked){hand[2]=deck[dpos++];showcard(2);}
+  if(!document.drwcrd.hold4.checked){hand[3]=deck[dpos++];showcard(3);}
+  if(!document.drwcrd.hold5.checked){hand[4]=deck[dpos++];showcard(4);}
+  evalhand(1);
+ }
+}
+function endgame(hndval){
+ isPlaying=-1;
+ if     (hndval==0){ win=0;       msg="Losing Hand.";}
+ else if(hndval==9){ win=betn;    msg="Pair of 10's or better";}
+ else if(hndval==8){ win=2*betn;  msg="Two Pairs";}
+ else if(hndval==7){ win=3*betn;  msg="Three of a Kind";}
+ else if(hndval==6){ win=4*betn;  msg="Straight";}
+ else if(hndval==5){ win=5*betn;  msg="Flush";}
+ else if(hndval==4){ win=6*betn;  msg="Full House";}
+ else if(hndval==3){ win=8*betn;  msg="Four of a Kind";}
+ else if(hndval==2){ win=10*betn; msg="Straight Flush";}
+ else if(hndval==1){ win=50*betn; msg="Royal Straight Flush"; }
+ crdts=crdts+win;
+ document.all.msgs.innerText=msg;
+ if(crdts==0){
+  alert("You are what we call Broke.");
+  alert("Here's a loan so you can lose some more...");
+  crdts=50;
+ }
+ document.all.crd.innerText = crdts;
+ betn=0;Bet(1);
+}
+function Clickit(num){
+ if(isPlaying&gt;0){
+  if(num==1){document.drwcrd.hold1.checked=!document.drwcrd.hold1.checked;}
+  if(num==2){document.drwcrd.hold2.checked=!document.drwcrd.hold2.checked;}
+  if(num==3){document.drwcrd.hold3.checked=!document.drwcrd.hold3.checked;}
+  if(num==4){document.drwcrd.hold4.checked=!document.drwcrd.hold4.checked;}
+  if(num==5){document.drwcrd.hold5.checked=!document.drwcrd.hold5.checked;}
+ }
+}
+function quit(){window.close();}
+/* ----------------------------------------------------------------------------------------- */
+initdeck();
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Insert the onLoad event handler into your BODY tag  --&gt;
+
+&lt;BODY link=blue vlink=blue text=black&gt;
+
+&lt;!-- STEP THREE: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;table align=center border=1&gt;
+ &lt;tr bgcolor="#FFFFD0"&gt;
+  &lt;td colspan=5&gt;
+   &lt;table align=center border=0 cellpadding=2 cellspacing=0 width=95%&gt;
+    &lt;tr bgcolor="#FFFFD0"&gt;
+     &lt;td valign=bottom align=center&gt;Hand&lt;/td&gt;
+     &lt;td align=center id="col1" class="txtblu"&gt;Bet&lt;br&gt;1&lt;/td&gt;
+     &lt;td align=center id="col2" class="txtblk"&gt;Bet&lt;br&gt;2&lt;/td&gt;
+     &lt;td align=center id="col3" class="txtblk"&gt;Bet&lt;br&gt;3&lt;/td&gt;
+     &lt;td align=center id="col4" class="txtblk"&gt;Bet&lt;br&gt;4&lt;/td&gt;
+     &lt;td align=center id="col5" class="txtblk"&gt;Bet&lt;br&gt;5&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr id="row1" class="bgwht"&gt;
+     &lt;td&gt;Royal Straight Flush&lt;/td&gt;
+     &lt;td align=center id="col11" class="txtblu"&gt;50&lt;/td&gt;
+     &lt;td align=center id="col21" class="txtblk"&gt;100&lt;/td&gt;
+     &lt;td align=center id="col31" class="txtblk"&gt;150&lt;/td&gt;
+     &lt;td align=center id="col41" class="txtblk"&gt;200&lt;/td&gt;
+     &lt;td align=center id="col51" class="txtblk"&gt;250&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr id="row2" class="bgblk"&gt;
+     &lt;td&gt;&lt;font color=white&gt;Straight Flush&lt;/font&gt;&lt;/td&gt;
+     &lt;td align=center id="col12" class="txtblu"&gt;10&lt;/td&gt;
+     &lt;td align=center id="col22" class="txtwht"&gt;20&lt;/td&gt;
+     &lt;td align=center id="col32" class="txtwht"&gt;30&lt;/td&gt;
+     &lt;td align=center id="col42" class="txtwht"&gt;40&lt;/td&gt;
+     &lt;td align=center id="col52" class="txtwht"&gt;50&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr id="row3" class="bgwht"&gt;
+     &lt;td&gt;4 of a Kind&lt;/td&gt;
+     &lt;td align=center id="col13" class="txtblu"&gt;8&lt;/td&gt;
+     &lt;td align=center id="col23" class="txtblk"&gt;16&lt;/td&gt;
+     &lt;td align=center id="col33" class="txtblk"&gt;24&lt;/td&gt;
+     &lt;td align=center id="col43" class="txtblk"&gt;32&lt;/td&gt;
+     &lt;td align=center id="col53" class="txtblk"&gt;40&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr id="row4" class="bgblk"&gt;
+     &lt;td&gt;&lt;font color=white&gt;Full House&lt;/font&gt;&lt;/td&gt;
+     &lt;td align=center id="col14" class="txtblu"&gt;6&lt;/td&gt;
+     &lt;td align=center id="col24" class="txtwht"&gt;12&lt;/td&gt;
+     &lt;td align=center id="col34" class="txtwht"&gt;18&lt;/td&gt;
+     &lt;td align=center id="col44" class="txtwht"&gt;24&lt;/td&gt;
+     &lt;td align=center id="col54" class="txtwht"&gt;30&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr id="row5" class="bgwht"&gt;
+     &lt;td&gt;Flush&lt;/td&gt;
+     &lt;td align=center id="col15" class="txtblu"&gt;5&lt;/td&gt;
+     &lt;td align=center id="col25" class="txtblk"&gt;10&lt;/td&gt;
+     &lt;td align=center id="col35" class="txtblk"&gt;15&lt;/td&gt;
+     &lt;td align=center id="col45" class="txtblk"&gt;20&lt;/td&gt;
+     &lt;td align=center id="col55" class="txtblk"&gt;25&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr id="row6" class="bgblk"&gt;
+     &lt;td&gt;&lt;font color=white&gt;Straight&lt;/font&gt;&lt;/td&gt;
+     &lt;td align=center id="col16" class="txtblu"&gt;4&lt;/td&gt;
+     &lt;td align=center id="col26" class="txtwht"&gt;8&lt;/td&gt;
+     &lt;td align=center id="col36" class="txtwht"&gt;12&lt;/td&gt;
+     &lt;td align=center id="col46" class="txtwht"&gt;16&lt;/td&gt;
+     &lt;td align=center id="col56" class="txtwht"&gt;20&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr id="row7" class="bgwht"&gt;
+     &lt;td&gt;3 of a Kind&lt;/td&gt;
+     &lt;td align=center id="col17" class="txtblu"&gt;3&lt;/td&gt;
+     &lt;td align=center id="col27" class="txtblk"&gt;6&lt;/td&gt;
+     &lt;td align=center id="col37" class="txtblk"&gt;9&lt;/td&gt;
+     &lt;td align=center id="col47" class="txtblk"&gt;12&lt;/td&gt;
+     &lt;td align=center id="col57" class="txtblk"&gt;15&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr id="row8" class="bgblk"&gt;
+     &lt;td&gt;&lt;font color=white&gt;2 Pair&lt;/font&gt;&lt;/td&gt;
+     &lt;td align=center id="col18" class="txtblu"&gt;2&lt;/td&gt;
+     &lt;td align=center id="col28" class="txtwht"&gt;4&lt;/td&gt;
+     &lt;td align=center id="col38" class="txtwht"&gt;6&lt;/td&gt;
+     &lt;td align=center id="col48" class="txtwht"&gt;8&lt;/td&gt;
+     &lt;td align=center id="col58" class="txtwht"&gt;10&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr id="row9" class="bgwht"&gt;
+     &lt;td&gt;Pair 10's +&lt;/td&gt;
+     &lt;td align=center id="col19" class="txtblu"&gt;1&lt;/td&gt;
+     &lt;td align=center id="col29" class="txtblk"&gt;2&lt;/td&gt;
+     &lt;td align=center id="col39" class="txtblk"&gt;3&lt;/td&gt;
+     &lt;td align=center id="col49" class="txtblk"&gt;4&lt;/td&gt;
+     &lt;td align=center id="col59" class="txtblk"&gt;5&lt;/td&gt;
+    &lt;/tr&gt;&lt;tr&gt;&lt;td colspan=5 height=10&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+   &lt;/table&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;&lt;form name="drwcrd"&gt;
+  &lt;td width=80 align=center bgcolor="#FFF000"&gt;&lt;img name="card1" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(1);"&gt;&lt;br&gt;&lt;input type=checkbox name="hold1"&gt;&lt;b&gt;Hold&lt;/b&gt;&lt;/td&gt;
+  &lt;td width=80 align=center bgcolor="#FFF000"&gt;&lt;img name="card2" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(2);"&gt;&lt;br&gt;&lt;input type=checkbox name="hold2"&gt;&lt;b&gt;Hold&lt;/b&gt;&lt;/td&gt;
+  &lt;td width=80 align=center bgcolor="#FFF000"&gt;&lt;img name="card3" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(3);"&gt;&lt;br&gt;&lt;input type=checkbox name="hold3"&gt;&lt;b&gt;Hold&lt;/b&gt;&lt;/td&gt;
+  &lt;td width=80 align=center bgcolor="#FFF000"&gt;&lt;img name="card4" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(4);"&gt;&lt;br&gt;&lt;input type=checkbox name="hold4"&gt;&lt;b&gt;Hold&lt;/b&gt;&lt;/td&gt;
+  &lt;td width=80 align=center bgcolor="#FFF000"&gt;&lt;img name="card5" src="http://javascript.internet.com/img/video-poker/cardback.gif" border=0 onClick="Clickit(5);"&gt;&lt;br&gt;&lt;input type=checkbox name="hold5"&gt;&lt;b&gt;Hold&lt;/b&gt;&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;&lt;/form&gt;
+  &lt;td colspan=5 align=center bgcolor="#FFFFD0"&gt;&lt;div id="msgs"&gt;&lt;b&gt;Hit 'DEAL' to begin&lt;/b&gt;&lt;/div&gt;&lt;/td&gt;
+ &lt;/tr&gt;&lt;tr&gt;
+  &lt;td width=80 align=center bgcolor="#FFFFD0"&gt;&lt;a href="javascript:Bet(1);"&gt;&lt;b&gt;BET:&lt;/b&gt;&lt;/a&gt; &lt;div id="pbet"&gt;1&lt;div&gt;&lt;/td&gt;
+  &lt;td width=80 align=center bgcolor="#FFFFD0"&gt;&lt;a href="javascript:Bet(5);"&gt;&lt;b&gt;MAX BET&lt;/b&gt;&lt;/a&gt;&lt;br&gt;(5)&lt;/td&gt;
+  &lt;td width=80 align=center bgcolor="#FFFFD0"&gt;&lt;a href="javascript:deal();"&gt;&lt;b&gt;DEAL&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;td width=80 align=center bgcolor="#FFFFD0"&gt;&lt;a href="javascript:quit();"&gt;&lt;b&gt;CASH&lt;/b&gt;&lt;br&gt;&lt;b&gt;OUT&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;td width=80 align=center bgcolor="#FFFFD0"&gt;&lt;b&gt;Credits:&lt;/b&gt;&lt;div id="crd"&gt;100&lt;/div&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;table&gt;
+
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  19.25 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/video-poker.html/1565088164/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_IT_IMS_1t/it-ims-spring03-125x600.gif"  ALT="Increasing Quality Through IT Sourcing & Services"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/video-poker.html/1565088164/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='video-poker.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/video-poker.html/540896288/468x60-2/House_Career_Channel_17a/jobs-468_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-468_new.gif"  WIDTH=468 HEIGHT=60 ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/video-poker.html/540896288/468x60-2/House_Career_Channel_17a/jobs-468_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

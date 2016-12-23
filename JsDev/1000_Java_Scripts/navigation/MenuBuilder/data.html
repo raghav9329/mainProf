@@ -1,0 +1,361 @@
+<HTML>
+<HEAD>
+<TITLE>Data</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+if (window == top)
+  top.location.href = "Wcbddee6c2b180.html";
+
+function initForm() {
+  displayTree(parent.tree);
+  var str = (parent.tree == 0) ? "Top" : ("M" + parent.tree); // Top or Mx (x is the index of the sub-tree)
+  document.builder.tree.value = str;
+}
+
+function treeLevel(i) {
+  var inuse = saveTree(parent.tree);
+  if (parent.tree != 0) parent.ar[parent.tree].inuse = inuse;
+  if (i == parent.tree) i = 0;
+  parent.tree = i;
+  var str = (i == 0) ? "Top" : ("M" + i); // Top or Mx (x is the index of the sub-tree)
+  document.builder.tree.value = str;
+  displayTree(parent.tree);
+}
+
+function displayTree(i) {
+  for (var j = 1; j < 51; j++) {
+    document.builder["name" + j].value = parent.ar[i][j - 1].name;
+    document.builder["url" + j].value = parent.ar[i][j - 1].url;
+  }
+}
+
+function saveTree(i) {
+  var inuse = 0;
+  for (var j = 1; j < 51; j++) {
+    parent.ar[i][j - 1].name = document.builder["name" + j].value;
+    if (parent.ar[i][j - 1].name != "") inuse = 1;
+    parent.ar[i][j - 1].url = document.builder["url" + j].value;
+  }
+  return inuse;
+}
+
+function finalSave() {
+  var inuse = saveTree(parent.tree);
+  if (parent.tree != 0) parent.ar[parent.tree].inuse = inuse;
+}
+
+// -->
+</SCRIPT>
+</HEAD>
+      <!-- AdSpace site=internetcom&size=468x60&PagePos=10&channel=_CHANNEL_&content_site=_SITE_&feature=_FEATURE_ -->
+      <A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/navigation/MenuBuilder/data.html/1698452557/468x60-1/House_Content_Management_1l/jupcontent750x100_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Content_Management_1l/jupcontent750x100_new.gif"  ALT="The Premier Event for Content Management Strategies and Solutions"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/navigation/MenuBuilder/data.html/1698452557/468x60-1/House_Content_Management_1l/jupcontent750x100_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+      <!-- /AdSpace -->
+<BODY onLoad="initForm()">
+<br><br>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="../default.htm" TARGET="_top"><font color="#FF0000"><b>Navigation</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Menu Builder</b></font></font>
+<FORM NAME="builder">
+<TABLE BORDER="0" CELLPADDING="5" CELLSPACING="0" width="300">
+<TR  BGCOLOR="#669999"><TD><INPUT TYPE="text" SIZE="4" NAME="tree" VALUE="Top" onFocus="treeLevel(0); this.blur();"></TD><TD ALIGN="center"><FONT FACE="Arial,Helvetica,Verdana" SIZE="-1">Name</FONT></TD><TD ALIGN="center"><FONT FACE="Arial,Helvetica,Verdana" SIZE="-1">URL</FONT></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 1 " onClick="treeLevel(1)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name1"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url1"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 2 " onClick="treeLevel(2)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name2"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url2"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 3 " onClick="treeLevel(3)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name3"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url3"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 4 " onClick="treeLevel(4)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name4"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url4"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 5 " onClick="treeLevel(5)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name5"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url5"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 6 " onClick="treeLevel(6)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name6"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url6"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 7 " onClick="treeLevel(7)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name7"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url7"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 8 " onClick="treeLevel(8)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name8"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url8"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 9 " onClick="treeLevel(9)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name9"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url9"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 10 " onClick="treeLevel(10)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name10"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url10"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 11 " onClick="treeLevel(11)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name11"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url11"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 12 " onClick="treeLevel(12)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name12"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url12"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 13 " onClick="treeLevel(13)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name13"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url13"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 14 " onClick="treeLevel(14)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name14"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url14"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 15 " onClick="treeLevel(15)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name15"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url15"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 16 " onClick="treeLevel(16)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name16"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url16"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 17 " onClick="treeLevel(17)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name17"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url17"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 18 " onClick="treeLevel(18)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name18"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url18"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 19 " onClick="treeLevel(19)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name19"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url19"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 20 " onClick="treeLevel(20)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name20"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url20"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 21 " onClick="treeLevel(21)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name21"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url21"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 22 " onClick="treeLevel(22)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name22"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url22"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 23 " onClick="treeLevel(23)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name23"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url23"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 24 " onClick="treeLevel(24)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name24"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url24"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 25 " onClick="treeLevel(25)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name25"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url25"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 26 " onClick="treeLevel(26)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name26"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url26"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 27 " onClick="treeLevel(27)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name27"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url27"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 28 " onClick="treeLevel(28)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name28"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url28"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 29 " onClick="treeLevel(29)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name29"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url29"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 30 " onClick="treeLevel(30)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name30"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url30"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 31 " onClick="treeLevel(31)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name31"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url31"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 32 " onClick="treeLevel(32)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name32"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url32"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 33 " onClick="treeLevel(33)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name33"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url33"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 34 " onClick="treeLevel(34)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name34"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url34"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 35 " onClick="treeLevel(35)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name35"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url35"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 36 " onClick="treeLevel(36)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name36"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url36"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 37 " onClick="treeLevel(37)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name37"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url37"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 38 " onClick="treeLevel(38)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name38"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url38"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 39 " onClick="treeLevel(39)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name39"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url39"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 40 " onClick="treeLevel(40)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name40"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url40"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 41 " onClick="treeLevel(41)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name41"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url41"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 42 " onClick="treeLevel(42)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name42"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url42"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 43 " onClick="treeLevel(43)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name43"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url43"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 44 " onClick="treeLevel(44)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name44"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url44"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 45 " onClick="treeLevel(45)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name45"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url45"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 46 " onClick="treeLevel(46)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name46"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url46"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 47 " onClick="treeLevel(47)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name47"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url47"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 48 " onClick="treeLevel(48)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name48"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url48"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 49 " onClick="treeLevel(49)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name49"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url49"></TD></TR>
+<TR  BGCOLOR="#99cccc"><TD><INPUT TYPE="button" VALUE=" 50 " onClick="treeLevel(50)"></TD><TD><INPUT TYPE="text" SIZE="20" NAME="name50"></TD><TD><INPUT TYPE="text" SIZE="40" NAME="url50"></TD></TR>
+</TABLE>
+</FORM>
+<FONT FACE="Arial,Helvetica,Verdana" SIZE="-1">The text box at the upper left corner of the form displays the current status of the form (the <I>active menu</I>). "Top" means that the visible options (names and URLs) belong to the parent menu (or to the single menu if you aren't creating related menus). "M<I>x</I>" indicates that you are currently working on a sub-menu, where <I>x</I> is the option in the parent menu that governs the current sub-menu.<P>Changing the active menu is very easy. Simply click the corresponding button in the form's left column. In order to return to the parent menu, click the text box in the upper left corner of the form. Alternatively, you can click the button reflecting the active menu (the buttons toggle between the corresponding child menu and the parent menu). You don't need to worry about saving your entries. The form saves your data while you work.<P>If you want to include an inactive option in your menu (an item that doesn't load a site), simply leave the its URL field empty.</FONT>
+<p>
+
+<td>
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Source's Newsletters!</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/navigation/MenuBuilder/data.html/275135407/468x60-2/House_Semlist_1a/semlist-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Semlist_1a/semlist-750.gif"  ALT="100's of firms that help your Web site be found"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/navigation/MenuBuilder/data.html/275135407/468x60-2/House_Semlist_1a/semlist-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</BODY>
+</HTML></HTML>

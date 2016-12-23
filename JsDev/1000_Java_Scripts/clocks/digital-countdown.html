@@ -1,0 +1,575 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Clocks:  Digital Countdown</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="Countdown from any date in digital numbers. Displays days, hours, minutes, and seconds while updating every second. A must see!">
+<META NAME="date" CONTENT="2001-10-02">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="DendE PhisH">
+<META NAME="section" CONTENT="Clocks">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+//Created by DendE PhisH
+function getTime() {
+c1 = new Image(); c1.src = "http://javascript.internet.com/img/digital-countdown/1c.gif";
+c2 = new Image(); c2.src = "http://javascript.internet.com/img/digital-countdown/2c.gif";
+c3 = new Image(); c3.src = "http://javascript.internet.com/img/digital-countdown/3c.gif";
+c4 = new Image(); c4.src = "http://javascript.internet.com/img/digital-countdown/4c.gif";
+c5 = new Image(); c5.src = "http://javascript.internet.com/img/digital-countdown/5c.gif";
+c6 = new Image(); c6.src = "http://javascript.internet.com/img/digital-countdown/6c.gif";
+c7 = new Image(); c7.src = "http://javascript.internet.com/img/digital-countdown/7c.gif";
+c8 = new Image(); c8.src = "http://javascript.internet.com/img/digital-countdown/8c.gif";
+c9 = new Image(); c9.src = "http://javascript.internet.com/img/digital-countdown/9c.gif";
+c0 = new Image(); c0.src = "http://javascript.internet.com/img/digital-countdown/0c.gif";
+Cc = new Image(); Cc.src = "http://javascript.internet.com/img/digital-countdown/Cc.gif";
+now = new Date();
+
+//ENTER BELOW THE DATE YOU WISH TO COUNTDOWN TO
+later = new Date("Jan 1 2004 0:00:01");
+
+days = (later - now) / 1000 / 60 / 60 / 24;
+daysRound = Math.floor(days);
+hours = (later - now) / 1000 / 60 / 60 - (24 * daysRound);
+hoursRound = Math.floor(hours);
+minutes = (later - now) / 1000 /60 - (24 * 60 * daysRound) - (60 * hoursRound);
+minutesRound = Math.floor(minutes);
+seconds = (later - now) / 1000 - (24 * 60 * 60 * daysRound) - (60 * 60 * hoursRound) - (60 * minutesRound);
+secondsRound = Math.round(seconds);
+
+if (secondsRound <= 9) {
+document.images.g.src = c0.src;
+document.images.h.src = eval("c"+secondsRound+".src");
+}
+else {
+document.images.g.src = eval("c"+Math.floor(secondsRound/10)+".src");
+document.images.h.src = eval("c"+(secondsRound%10)+".src");
+}
+if (minutesRound <= 9) {
+document.images.d.src = c0.src;
+document.images.e.src = eval("c"+minutesRound+".src");
+}
+else {
+document.images.d.src = eval("c"+Math.floor(minutesRound/10)+".src");
+document.images.e.src = eval("c"+(minutesRound%10)+".src");
+}
+if (hoursRound <= 9) {
+document.images.y.src = c0.src;
+document.images.z.src = eval("c"+hoursRound+".src");
+}
+else {
+document.images.y.src = eval("c"+Math.floor(hoursRound/10)+".src");
+document.images.z.src = eval("c"+(hoursRound%10)+".src");
+}
+if (daysRound <= 9) {
+document.images.x.src = c0.src;
+document.images.a.src = c0.src;
+document.images.b.src = eval("c"+daysRound+".src");
+}
+if (daysRound <= 99) {
+document.images.x.src = c0.src;
+document.images.a.src = eval("c"+Math.floor((daysRound/10)%10)+".src");
+document.images.b.src = eval("c"+Math.floor(daysRound%10)+".src");
+}
+if (daysRound <= 999){
+document.images.x.src = eval("c"+Math.floor(daysRound/100)+".src");
+document.images.a.src = eval("c"+Math.floor((daysRound/10)%10)+".src");
+document.images.b.src = eval("c"+Math.floor(daysRound%10)+".src");
+}
+newtime = window.setTimeout("getTime();", 1000);
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff onLoad="getTime()">
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=678V20021114144615&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=284V200211152029&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/clocks/digital-countdown.html/914523109/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_IDE_Brown_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Clocks</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Digital Countdown</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Countdown from any date in digital numbers. Displays days, hours, minutes, and seconds while updating every second. A must see!
+<br>
+<br>
+<div align="center"><a href="http://javascript.internet.com/img/digital-countdown/numbers.zip">Download the required image files here</a></div>
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<div align="center">
+<h3>Countdown to New Years (2004)</h3>
+</div>
+
+<center>
+<table><tr><td bgcolor="black" valign="bottom">
+<img height=21 src="0c.gif" width=16 name=x>
+<img height=21 src="0c.gif" width=16 name=a>
+<img height=21 src="0c.gif" width=16 name=b>
+<img height=21 src="http://javascript.internet.com/img/digital-countdown/Cc.gif" width=9 name=c>
+<img height=21 src="0c.gif" width=16 name=y>
+<img height=21 src="0c.gif" width=16 name=z>
+<img height=21 src="http://javascript.internet.com/img/digital-countdown/Cc.gif" width=9 name=cz>
+<img height=21 src="0c.gif" width=16 name=d>
+<img height=21 src="0c.gif" width=16 name=e>
+<img height=21 src="http://javascript.internet.com/img/digital-countdown/Cc.gif" width=9 name=f>
+<img height=21 src="0c.gif" width=16 name=g>
+<img height=21 src="0c.gif" width=16 name=h>
+</td></tr></table>
+</center>
+
+<div align="center">
+<h4>(Days : Hours : Minutes : Seconds)</h4>
+</div>
+
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Clocks:  Digital Countdown</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  4.12 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- THREE STEPS TO INSTALL DIGITAL COUNTDOWN:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the onLoad event handler into the BODY tag
+  3.  Put the last coding into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+//Created by DendE PhisH
+function getTime() {
+c1 = new Image(); c1.src = "1c.gif";
+c2 = new Image(); c2.src = "2c.gif";
+c3 = new Image(); c3.src = "3c.gif";
+c4 = new Image(); c4.src = "4c.gif";
+c5 = new Image(); c5.src = "5c.gif";
+c6 = new Image(); c6.src = "6c.gif";
+c7 = new Image(); c7.src = "7c.gif";
+c8 = new Image(); c8.src = "8c.gif";
+c9 = new Image(); c9.src = "9c.gif";
+c0 = new Image(); c0.src = "0c.gif";
+Cc = new Image(); Cc.src = "Cc.gif";
+now = new Date();
+
+//ENTER BELOW THE DATE YOU WISH TO COUNTDOWN TO
+later = new Date("Jan 1 2004 0:00:01");
+
+days = (later - now) / 1000 / 60 / 60 / 24;
+daysRound = Math.floor(days);
+hours = (later - now) / 1000 / 60 / 60 - (24 * daysRound);
+hoursRound = Math.floor(hours);
+minutes = (later - now) / 1000 /60 - (24 * 60 * daysRound) - (60 * hoursRound);
+minutesRound = Math.floor(minutes);
+seconds = (later - now) / 1000 - (24 * 60 * 60 * daysRound) - (60 * 60 * hoursRound) - (60 * minutesRound);
+secondsRound = Math.round(seconds);
+
+if (secondsRound &lt;= 9) {
+document.images.g.src = c0.src;
+document.images.h.src = eval("c"+secondsRound+".src");
+}
+else {
+document.images.g.src = eval("c"+Math.floor(secondsRound/10)+".src");
+document.images.h.src = eval("c"+(secondsRound%10)+".src");
+}
+if (minutesRound &lt;= 9) {
+document.images.d.src = c0.src;
+document.images.e.src = eval("c"+minutesRound+".src");
+}
+else {
+document.images.d.src = eval("c"+Math.floor(minutesRound/10)+".src");
+document.images.e.src = eval("c"+(minutesRound%10)+".src");
+}
+if (hoursRound &lt;= 9) {
+document.images.y.src = c0.src;
+document.images.z.src = eval("c"+hoursRound+".src");
+}
+else {
+document.images.y.src = eval("c"+Math.floor(hoursRound/10)+".src");
+document.images.z.src = eval("c"+(hoursRound%10)+".src");
+}
+if (daysRound &lt;= 9) {
+document.images.x.src = c0.src;
+document.images.a.src = c0.src;
+document.images.b.src = eval("c"+daysRound+".src");
+}
+if (daysRound &lt;= 99) {
+document.images.x.src = c0.src;
+document.images.a.src = eval("c"+Math.floor((daysRound/10)%10)+".src");
+document.images.b.src = eval("c"+Math.floor(daysRound%10)+".src");
+}
+if (daysRound &lt;= 999){
+document.images.x.src = eval("c"+Math.floor(daysRound/100)+".src");
+document.images.a.src = eval("c"+Math.floor((daysRound/10)%10)+".src");
+document.images.b.src = eval("c"+Math.floor(daysRound%10)+".src");
+}
+newtime = window.setTimeout("getTime();", 1000);
+}
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Insert the onLoad event handler into your BODY tag  --&gt;
+
+&lt;BODY onLoad="getTime()"&gt;
+
+&lt;!-- STEP THREE: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;div align="center"&gt;
+&lt;h3&gt;Countdown to New Years (2004)&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;center&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td bgcolor="black" valign="bottom"&gt;
+&lt;img height=21 src="0c.gif" width=16 name=x&gt;
+&lt;img height=21 src="0c.gif" width=16 name=a&gt;
+&lt;img height=21 src="0c.gif" width=16 name=b&gt;
+&lt;img height=21 src="Cc.gif" width=9 name=c&gt;
+&lt;img height=21 src="0c.gif" width=16 name=y&gt;
+&lt;img height=21 src="0c.gif" width=16 name=z&gt;
+&lt;img height=21 src="Cc.gif" width=9 name=cz&gt;
+&lt;img height=21 src="0c.gif" width=16 name=d&gt;
+&lt;img height=21 src="0c.gif" width=16 name=e&gt;
+&lt;img height=21 src="Cc.gif" width=9 name=f&gt;
+&lt;img height=21 src="0c.gif" width=16 name=g&gt;
+&lt;img height=21 src="0c.gif" width=16 name=h&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/center&gt;
+
+&lt;div align="center"&gt;
+&lt;h4&gt;(Days : Hours : Minutes : Seconds)&lt;/h4&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  4.12 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/clocks/digital-countdown.html/78379919/125x800/House_Semlist_1b/semlist-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Semlist_1b/semlist-125x600.gif"  ALT="100's of firms that help your Web site be found"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/clocks/digital-countdown.html/78379919/125x800/House_Semlist_1b/semlist-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='digital-countdown.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/clocks/digital-countdown.html/11335850/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/clocks/digital-countdown.html/11335850/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

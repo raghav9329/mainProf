@@ -1,0 +1,659 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Misc.:  Stars</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="date" CONTENT="2000-09-09">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="freeware.de">
+<META NAME="section" CONTENT="Miscellaneous">
+<META NAME="description" CONTENT="Probably one of the coolest "layers" effects I've seen, stars actually float around the screen and follow your mouse cursor!  Looks great on a black or white background, try it with both!  Incredible!">
+
+<style type="text/css">
+<!-- Begin CSS
+#a { position: absolute; top: 10px; left: 10px; visibility: visible }
+#b { position: absolute; top: 10px; left: 10px; visibility: visible }
+#c { position: absolute; top: 10px; left: 10px; visibility: visible }
+#d { position: absolute; top: 10px; left: 10px; visibility: visible }
+#e { position: absolute; top: 10px; left: 10px; visibility: visible }
+#f { position: absolute; top: 10px; left: 10px; visibility: visible }
+#g { position: absolute; top: 10px; left: 10px; visibility: visible }
+End CSS -->
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+var i = 0;
+function bgChange() {
+if (i % 2) {
+document.bgColor = 'white';
+document.form.colors.value = "See it on a black background....";
+}
+else {
+document.bgColor = 'black';
+document.form.colors.value = "See it on a white background....";
+   }
+i++;
+}
+// End -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=678V20021114144615&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=284V200211152029&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/stars.html/107043332/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_IDE_Brown_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Miscellaneous</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Stars</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Probably one of the coolest "layers" effects I've seen, stars actually float around the screen and follow your mouse cursor!  Looks great on a black or white background, try it with both!  Incredible!
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<layer name="a0" left=10 top=10 visibility=show bgcolor="#ff0000" clip="0,0,2,2"></layer>
+<layer name="a1" left=10 top=10 visibility=show bgcolor="#ff8000" clip="0,0,2,2"></layer>
+<layer name="a2" left=10 top=10 visibility=show bgcolor="#ffff00" clip="0,0,2,2"></layer>
+<layer name="a3" left=10 top=10 visibility=show bgcolor="#00ff00" clip="0,0,2,2"></layer>
+<layer name="a4" left=10 top=10 visibility=show bgcolor="#0000ff" clip="0,0,2,2"></layer>
+<layer name="a5" left=10 top=10 visibility=show bgcolor="#ff00ff" clip="0,0,2,2"></layer>
+<layer name="a6" left=10 top=10 visibility=show bgcolor="#ffffff" clip="0,0,2,2"></layer>
+
+<div id="starsDiv" style="position:absolute;top:0px;left:0px">
+<div style="position:relative;width:2px;height:2px;background:#ffffff;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#ffff00;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#ffa000;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#ff0000;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#00ff00;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#0000ff;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#FF00FF;font-size:2px;visibility:visible"></div>
+</div>
+
+<script language="JavaScript">
+
+<!-- Original:  freeware.de -->
+<!-- Web Site:  http://freeware.de -->
+<!-- MSIE Fix by:  Kurt Grigg (kurt.grigg@virgin.net) -->
+
+<!--  Begin
+if (document.layers) {
+window.captureEvents(Event.MOUSEMOVE);
+}
+var yBase = 200;
+var xBase = 200;
+var yAmpl = 10;
+var yMax = 40;
+var step = .2;
+var ystep = .5;
+var currStep = 0;
+var tAmpl=1;
+var Xpos = 1;
+var Ypos = 1;
+var i = 0;
+var j = 0;
+if (document.all) {
+function MoveHandler(){
+Xpos = document.body.scrollLeft + event.x;
+Ypos = document.body.scrollTop + event.y;
+}
+document.onmousemove = MoveHandler;
+}
+else if (document.layers) {
+function xMoveHandler(evnt) {
+Xpos = evnt.pageX;
+Ypos = evnt.pageY;
+}
+window.onMouseMove = xMoveHandler;
+}
+function animateLogo() {
+if (document.all) {
+yBase = window.document.body.offsetHeight / 4;
+xBase = window.document.body.offsetWidth / 4;
+}
+else if (document.layers) {
+yBase = window.innerHeight / 4;
+xBase = window.innerWidth / 4;
+}
+if (document.all) {
+for (i = 0 ; i < starsDiv.all.length; i++) {
+starsDiv.all[i].style.top = Ypos + Math.cos((20*Math.sin(currStep/20))+i*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+starsDiv.all[i].style.left = Xpos + Math.sin((20*Math.sin(currStep/20))+i*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+   }
+}
+else if (document.layers) {
+for (j = 0; j < 7; j++) { //7 is number of NS layers!
+var templayer="a" + j;
+document.layers[templayer].top = Ypos + Math.cos((20*Math.sin(currStep/20))+j*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+document.layers[templayer].left =Xpos + Math.sin((20*Math.sin(currStep/20))+j*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+   }
+}
+currStep += step;
+setTimeout("animateLogo()", 10);
+}
+animateLogo();
+// End -->
+</script>
+
+<form name=form>
+<center>
+<input type=button name=colors value="See it on a black background...." onClick="bgChange();">
+</center>
+</form>
+
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Misc.:  Stars</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Apple-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  4.21 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL STARS:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;style type="text/css"&gt;
+&lt;!-- Begin CSS
+#a { position: absolute; top: 10px; left: 10px; visibility: visible }
+#b { position: absolute; top: 10px; left: 10px; visibility: visible }
+#c { position: absolute; top: 10px; left: 10px; visibility: visible }
+#d { position: absolute; top: 10px; left: 10px; visibility: visible }
+#e { position: absolute; top: 10px; left: 10px; visibility: visible }
+#f { position: absolute; top: 10px; left: 10px; visibility: visible }
+#g { position: absolute; top: 10px; left: 10px; visibility: visible }
+End CSS --&gt;
+&lt;/style&gt;
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;layer name="a0" left=10 top=10 visibility=show bgcolor="#ff0000" clip="0,0,2,2"&gt;&lt;/layer&gt;
+&lt;layer name="a1" left=10 top=10 visibility=show bgcolor="#ff8000" clip="0,0,2,2"&gt;&lt;/layer&gt;
+&lt;layer name="a2" left=10 top=10 visibility=show bgcolor="#ffff00" clip="0,0,2,2"&gt;&lt;/layer&gt;
+&lt;layer name="a3" left=10 top=10 visibility=show bgcolor="#00ff00" clip="0,0,2,2"&gt;&lt;/layer&gt;
+&lt;layer name="a4" left=10 top=10 visibility=show bgcolor="#0000ff" clip="0,0,2,2"&gt;&lt;/layer&gt;
+&lt;layer name="a5" left=10 top=10 visibility=show bgcolor="#ff00ff" clip="0,0,2,2"&gt;&lt;/layer&gt;
+&lt;layer name="a6" left=10 top=10 visibility=show bgcolor="#ffffff" clip="0,0,2,2"&gt;&lt;/layer&gt;
+
+&lt;div id="starsDiv" style="position:absolute;top:0px;left:0px"&gt;
+&lt;div style="position:relative;width:2px;height:2px;background:#ffffff;font-size:2px;visibility:visible"&gt;&lt;/div&gt;
+&lt;div style="position:relative;width:2px;height:2px;background:#ffff00;font-size:2px;visibility:visible"&gt;&lt;/div&gt;
+&lt;div style="position:relative;width:2px;height:2px;background:#ffa000;font-size:2px;visibility:visible"&gt;&lt;/div&gt;
+&lt;div style="position:relative;width:2px;height:2px;background:#ff0000;font-size:2px;visibility:visible"&gt;&lt;/div&gt;
+&lt;div style="position:relative;width:2px;height:2px;background:#00ff00;font-size:2px;visibility:visible"&gt;&lt;/div&gt;
+&lt;div style="position:relative;width:2px;height:2px;background:#0000ff;font-size:2px;visibility:visible"&gt;&lt;/div&gt;
+&lt;div style="position:relative;width:2px;height:2px;background:#FF00FF;font-size:2px;visibility:visible"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script language="JavaScript"&gt;
+
+&lt;!-- Original:  freeware.de --&gt;
+&lt;!-- Web Site:  http://freeware.de --&gt;
+&lt;!-- MSIE Fix by:  Kurt Grigg (kurt.grigg@virgin.net) --&gt;
+
+&lt;!--  Begin
+if (document.layers) {
+window.captureEvents(Event.MOUSEMOVE);
+}
+var yBase = 200;
+var xBase = 200;
+var yAmpl = 10;
+var yMax = 40;
+var step = .2;
+var ystep = .5;
+var currStep = 0;
+var tAmpl=1;
+var Xpos = 1;
+var Ypos = 1;
+var i = 0;
+var j = 0;
+if (document.all) {
+function MoveHandler(){
+Xpos = document.body.scrollLeft + event.x;
+Ypos = document.body.scrollTop + event.y;
+}
+document.onmousemove = MoveHandler;
+}
+else if (document.layers) {
+function xMoveHandler(evnt) {
+Xpos = evnt.pageX;
+Ypos = evnt.pageY;
+}
+window.onMouseMove = xMoveHandler;
+}
+function animateLogo() {
+if (document.all) {
+yBase = window.document.body.offsetHeight / 4;
+xBase = window.document.body.offsetWidth / 4;
+}
+else if (document.layers) {
+yBase = window.innerHeight / 4;
+xBase = window.innerWidth / 4;
+}
+if (document.all) {
+for (i = 0 ; i &lt; starsDiv.all.length; i++) {
+starsDiv.all[i].style.top = Ypos + Math.cos((20*Math.sin(currStep/20))+i*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+starsDiv.all[i].style.left = Xpos + Math.sin((20*Math.sin(currStep/20))+i*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+   }
+}
+else if (document.layers) {
+for (j = 0; j &lt; 7; j++) { //7 is number of NS layers!
+var templayer="a" + j;
+document.layers[templayer].top = Ypos + Math.cos((20*Math.sin(currStep/20))+j*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+document.layers[templayer].left =Xpos + Math.sin((20*Math.sin(currStep/20))+j*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+   }
+}
+currStep += step;
+setTimeout("animateLogo()", 10);
+}
+animateLogo();
+// End --&gt;
+&lt;/script&gt;
+
+<p><center>
+<font face="arial, helvetica" size="-2">Free JavaScripts provided<br>
+by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
+</center><p>
+
+&lt;!-- Script Size:  4.21 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/stars.html/728242036/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif"  ALT="The Enterprise IM Strategies & Solutions Event"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/stars.html/728242036/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='stars.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/stars.html/622442651/468x60-2/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_esecurity_2c/esecurity-750.gif"  ALT="Reports on security issues of ecommerce environments"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/stars.html/622442651/468x60-2/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>
+
+
+
+
+<!------------------------------ Script ------------------------------>
+<table width=544 cellspacing=0 cellpadding=1 border=0><tr><td width=10 bgColor="#ffffc0" valign=top><img src="http://javascript.internet.com/img/blank.gif" alt="" width=10 height=4 border=0></td><td width=544 bgColor="#ffffc0"><font face="MS Sans Serif" size="2">
+<!-- Begin Edit -->
+<b>Title:</b> <a name="Stars" href="stars.html">Stars</a><br><b>Contributor:</b>  freeware.de</a>  <br><b>Contributor URL:</b>&nbsp;<a href="http://freeware.de">http://freeware.de</a><br><b>Details:</b> 4.21 KB * Uploaded May 25 2000<br><b>Description:</b>  Probably one of the coolest "layers" effects I've seen, stars actually float around the screen and follow your mouse cursor!  Looks great on a black or white background, try it with both!  Incredible!<br><div align=right>[ <a href="stars.html#source">Get Source Code</a> ]</div></font></td>
+<!-- End Edit  -->
+<td width=10 bgColor="#ffffc0" valign=top><img src="http://javascript.internet.com/img/blank.gif" alt="" width=10 height=4 border=0></td></tr><tr><td height=4 colspan=3 valign=top bgColor="#282828"><img src="http://javascript.internet.com/img/blank.gif" alt="" width=20 height=4 border=0></td></tr></table>
+<!----------------------------- End Script --------------------------->
+<P>
+<P>
+
+
+
+
+
+-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-
+      JavaScript Source Update    - internet.com Corporation
+      http://javascriptsource.com - http://www.internet.com
+-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-
+
+
+ -> Stars
+
+http://miscellaneous.javascriptsource.com/stars.html
+
+4.21 KB * Uploaded May 25 2000
+
+Probably one of the coolest "layers" effects I've seen, stars actually float around the screen and follow your mouse cursor!  Looks great on a black or white background, try it with both!  Incredible!
+
+-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-
+Interested in advertising here or on the whole internet.com Network?
+Just contact Frank Fazio by any of the following methods:
+
+Telephone)  203.662.2997
+Via Email)  mailto:ffazio@internet.com
+Media Kit)  http://www.internet.com/mediakit/
+-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-
+
+And, feel free to link to us!
+
+The JavaScript Source http://javascriptsource.com
+
+A "cut & paste" JavaScript library with tons of free JavaScripts!
+
+-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-^-
+
+** A monthly digest version of this Updates newsletter is available
+** by going to http://e-newsletters.internet.com/javascriptsource.html
+
+internet.com's twelve channels:
+
+Internet News           http://www.internet.com/sections/news.html
+Web Developer           http://www.internet.com/sections/webdev.html
+Internet Technology     http://www.internet.com/sections/it.html
+Linux / Open Source     http://www.internet.com/sections/linux.html
+Windows Internet Tech.  http://www.internet.com/sections/win.html
+E-Commerce / Marketing  http://www.internet.com/sections/marketing.html
+Internet Resources      http://www.internet.com/sections/resources.html
+ISP Resources           http://www.internet.com/sections/isp.html
+Internet Stocks / VC    http://www.internet.com/sections/stocks.html
+Software Downloads      http://www.internet.com/sections/downloads.html
+International           http://www.internet.com/sections/international.html
+Internet Lists          http://www.internet.com/sections/lists.html
+
+
+Newsletter copyright (c) Ronnie T. Moore, 2000
+internet.com Corporation - All rights reserved.
+
+
+
+
+JavaScript "Stars"
+
+http://miscellaneous.javascriptsource.com/stars.html
+
+Probably one of the coolest "layers" effects I've seen, stars actually float around the screen and follow your mouse cursor!  Looks great on a black or white background, try it with both!  Incredible!
+
+
+

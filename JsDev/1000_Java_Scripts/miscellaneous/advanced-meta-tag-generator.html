@@ -1,0 +1,733 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Miscellaneous:  Advanced META Tag Generator</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="This is your tool for creating a complete set of META tags. It's fast, fun, and an easy way to create all kinds of META tags, not just basic ones such as the keyword and description META tag.">
+<META NAME="date" CONTENT="2001-10-05">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Daniel Toljaga">
+<META NAME="section" CONTENT="Miscellaneous">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function create(form) {
+  if (confirm("Are you sure?")) {
+    form.story.value = "Advanced Meta Tag Generator \n" +
+   "author: Daniel Toljaga (http://www.bosniak.com) \n" +
+   "Instructions: Simply copy the following lines of code and insert them " +
+      "between the <HEAD> and </HEAD> tags in your HTML document. That's it! \n\n";
+    if (form.input1.value != "") {
+      form.story.value +="<META NAME=\"Title\" CONTENT=\"" +
+      form.input1.value + "\">\n";
+    }
+    if (form.input2.value != "") {
+      form.story.value +="<META NAME=\"Author\" CONTENT=\"" +
+      form.input2.value + "\">\n";
+    }
+    if (form.input3.value != "") {
+      form.story.value +="<META NAME=\"Subject\" CONTENT=\"" +
+      form.input3.value + "\">\n";
+    }
+    if (form.input4.value != "") {
+      form.story.value +="<META NAME=\"Description\" CONTENT=\"" +
+      form.input4.value + "\">\n";
+    }
+    if (form.input5.value != "") {
+      form.story.value +="<META NAME=\"Keywords\" CONTENT=\"" +
+      form.input5.value + "\">\n";
+    }
+    if (form.input6.value != "") {
+      form.story.value +="<META NAME=\"Generator\" CONTENT=\"" +
+      form.input6.value + "\">\n";
+    }
+    if (form.input7.value != "") {
+      form.story.value +="<META NAME=\"Language\" CONTENT=\"" +
+      form.input7.value + "\">\n";
+    }
+    if (form.input8.value != "") {
+      form.story.value +="<META NAME=\"Expires\" CONTENT=\"" +
+      form.input8.value + "\">\n";
+    }
+    if (form.input9.value != "") {
+      form.story.value +="<META NAME=\"Abstract\" CONTENT=\"" +
+      form.input9.value + "\">\n";
+    }
+    if (form.input10.value != "") {
+      form.story.value +="<META NAME=\"Copyright\" CONTENT=\"© " +
+      form.input10.value + "\">\n";
+    }
+    if (form.input11.value != "") {
+      form.story.value +="<META NAME=\"Designer\" CONTENT=\"" +
+      form.input11.value + "\">\n";
+    }
+    if (form.input12.value != "") {
+      form.story.value +="<META NAME=\"Publisher\" CONTENT=\"" +
+      form.input12.value + "\">\n";
+    }
+    if (form.input13.value != "") {
+      form.story.value +="<META NAME=\"Revisit-After\" CONTENT=\"" +
+      form.input13.value + " \Days\">\n";
+    }
+    if (form.input14.value != "") {
+      form.story.value +="<META NAME=\"Distribution\" CONTENT=\"" +
+      form.input14.options[form.input14.selectedIndex].value + "\">\n";
+    }
+    if (form.input15.value != "") {
+      form.story.value +="<META NAME=\"Robots\" CONTENT=\"" +
+      form.input15.options[form.input15.selectedIndex].value + "\">\n";
+    }
+  }
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=787V20021114144641&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=158V20021115201354&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/advanced-meta-tag-generator.html/827668032/468x60-1/Microsoft_Canada_VS_4c/MsftVSnet_IDE_Blue_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Miscellaneous</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Advanced META Tag Generator</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+This is your tool for creating a complete set of META tags. It's fast, fun, and an easy way to create all kinds of META tags, not just basic ones such as the keyword and description META tag.
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<div align="center">
+  <center>
+    <p align="left">&nbsp;</p>
+    <table class=normal  WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+  <tr>
+    <td><center><font face="verdana" size="4">Advanced META Tag Generator</font></center>
+    <form>
+      <div align="center"><center><table class=normal  BORDER="0" CELLPADDING="2">
+        <tr>
+          <td>Title:</td>
+          <td><input TYPE="text" NAME="input1" SIZE="40"></td>
+        </tr>
+        <!-- The author META tag defines the name of the author of the document being read. -->
+        <tr>
+          <td>Author:</td>
+          <td><input TYPE="text" NAME="input2" SIZE="40"></td>
+        </tr>
+        <tr>
+          <td>Subject:</td>
+          <td><input TYPE="text" NAME="input3" SIZE="40"></td>
+        </tr>
+        <tr>
+          <td>Description:</td>
+          <td><input TYPE="text" NAME="input4" SIZE="40"></td>
+        </tr>
+        <tr>
+          <td>Keywords:</td>
+          <td><input TYPE="text" NAME="input5" SIZE="40"></td>
+        </tr>
+        <tr>
+          <td>Generator:</td>
+          <td><input TYPE="text" NAME="input6" SIZE="40"></td>
+        </tr>
+        <tr>
+          <td>Language:</td>
+          <td><input TYPE="text" NAME="input7" SIZE="40"></td>
+        </tr>
+        <!-- The expires META tag defines the expiration date and time of the document being
+        indexed and requires RFC1123 date format, for example: Thu, 04 Oct 2010 14:21:20 GMT -->
+        <tr>
+          <td>Expires:</td>
+          <td><input TYPE="text" NAME="input8" SIZE="40"></td>
+        </tr>
+        <!-- The abstract META tag is a one line sentence which gives an overview of the entire webpage -->
+        <tr>
+          <td>Abstract:</td>
+          <td><input TYPE="text" NAME="input9" SIZE="40"></td>
+        </tr>
+       <!-- Copyright: no need to add ©, it will be added automatically -->
+        <tr>
+          <td>Copyright:</td>
+          <td><input TYPE="text" NAME="input10" SIZE="40"></td>
+        </tr>
+       <!-- Designer = Webmaster -->
+        <tr>
+          <td>Designer:</td>
+          <td><input TYPE="text" NAME="input11" SIZE="40"></td>
+        </tr>
+       <!-- Publisher: Company that publishes material being read or sold on a web site -->
+        <tr>
+          <td>Publisher:</td>
+          <td><input TYPE="text" NAME="input12" SIZE="40"></td>
+        </tr>
+        <!-- The Revisit META tag defines how often a search engine or spider should
+        come to your website for re-indexing. For example: 2 Days, 3 Days, 4 Days, etc.
+        Note: Just ad number(s), word Days will be added automatically -->
+        <tr>
+          <td>Revisit-After:</td>
+          <td><input TYPE="text" NAME="input13" SIZE="40"></td>
+        </tr>
+        <!-- Distribution: Global (indicates that your webpage is intended for
+        mass distribution to everyone), Local (intended for local distribution
+        of your document), and IU - Internal Use (not intended for public distribution). -->
+        <tr>
+          <td>Distribution:</td>
+          <td><select NAME="input14" size="1">
+             <option VALUE="" SELECTED>Select One</option>
+            <option VALUE="Global">1. Global</option>
+            <option VALUE="Local">2. Local</option>
+            <option VALUE="IU">3. Intern Use</option>
+          </select></td>
+        <tr>
+          <td>Robots:</td>
+          <td><select NAME="input15" size="1">
+            <option VALUE="" SELECTED>Select One</option>
+            <option VALUE="All">1. All</option>
+            <option VALUE="None">2. None</option>
+            <option VALUE="Index">3. Index</option>
+            <option VALUE="No Index">4. No Index</option>
+            <option VALUE="Follow">5. Follow</option>
+            <option VALUE="No Follow">6. No Follow</option>
+          </select></td>
+        </tr>
+        </tr>
+      </table>
+      </center></div><blockquote>
+        <p><input TYPE="button" VALUE="Create META tags" ONCLICK="create(this.form)"> <input
+        TYPE="reset" VALUE="Clear All"> <textarea WRAP NAME="story" ROWS="12" COLS="65"></textarea>
+        </p>
+      </blockquote>
+    </form>
+    </td>
+  </tr>
+</table>
+  </center>
+</div>
+
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Miscellaneous:  Advanced META Tag Generator</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  8.47 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL ADVANCED META TAG GENERATOR:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+function create(form) {
+  if (confirm("Are you sure?")) {
+    form.story.value = "Advanced Meta Tag Generator \n" +
+   "author: Daniel Toljaga (http://www.bosniak.com) \n" +
+   "Instructions: Simply copy the following lines of code and insert them " +
+      "between the &lt;HEAD&gt; and &lt;/HEAD&gt; tags in your HTML document. That's it! \n\n";
+    if (form.input1.value != "") {
+      form.story.value +="&lt;META NAME=\"Title\" CONTENT=\"" +
+      form.input1.value + "\"&gt;\n";
+    }
+    if (form.input2.value != "") {
+      form.story.value +="&lt;META NAME=\"Author\" CONTENT=\"" +
+      form.input2.value + "\"&gt;\n";
+    }
+    if (form.input3.value != "") {
+      form.story.value +="&lt;META NAME=\"Subject\" CONTENT=\"" +
+      form.input3.value + "\"&gt;\n";
+    }
+    if (form.input4.value != "") {
+      form.story.value +="&lt;META NAME=\"Description\" CONTENT=\"" +
+      form.input4.value + "\"&gt;\n";
+    }
+    if (form.input5.value != "") {
+      form.story.value +="&lt;META NAME=\"Keywords\" CONTENT=\"" +
+      form.input5.value + "\"&gt;\n";
+    }
+    if (form.input6.value != "") {
+      form.story.value +="&lt;META NAME=\"Generator\" CONTENT=\"" +
+      form.input6.value + "\"&gt;\n";
+    }
+    if (form.input7.value != "") {
+      form.story.value +="&lt;META NAME=\"Language\" CONTENT=\"" +
+      form.input7.value + "\"&gt;\n";
+    }
+    if (form.input8.value != "") {
+      form.story.value +="&lt;META NAME=\"Expires\" CONTENT=\"" +
+      form.input8.value + "\"&gt;\n";
+    }
+    if (form.input9.value != "") {
+      form.story.value +="&lt;META NAME=\"Abstract\" CONTENT=\"" +
+      form.input9.value + "\"&gt;\n";
+    }
+    if (form.input10.value != "") {
+      form.story.value +="&lt;META NAME=\"Copyright\" CONTENT=\"© " +
+      form.input10.value + "\"&gt;\n";
+    }
+    if (form.input11.value != "") {
+      form.story.value +="&lt;META NAME=\"Designer\" CONTENT=\"" +
+      form.input11.value + "\"&gt;\n";
+    }
+    if (form.input12.value != "") {
+      form.story.value +="&lt;META NAME=\"Publisher\" CONTENT=\"" +
+      form.input12.value + "\"&gt;\n";
+    }
+    if (form.input13.value != "") {
+      form.story.value +="&lt;META NAME=\"Revisit-After\" CONTENT=\"" +
+      form.input13.value + " \Days\"&gt;\n";
+    }
+    if (form.input14.value != "") {
+      form.story.value +="&lt;META NAME=\"Distribution\" CONTENT=\"" +
+      form.input14.options[form.input14.selectedIndex].value + "\"&gt;\n";
+    }
+    if (form.input15.value != "") {
+      form.story.value +="&lt;META NAME=\"Robots\" CONTENT=\"" +
+      form.input15.options[form.input15.selectedIndex].value + "\"&gt;\n";
+    }
+  }
+}
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;div align="center"&gt;
+  &lt;center&gt;
+    &lt;p align="left"&gt;&nbsp;&lt;/p&gt;
+    &lt;table class=normal  WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;center&gt;&lt;font face="verdana" size="4"&gt;Advanced META Tag Generator&lt;/font&gt;&lt;/center&gt;
+    &lt;form&gt;
+      &lt;div align="center"&gt;&lt;center&gt;&lt;table class=normal  BORDER="0" CELLPADDING="2"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Title:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input1" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- The author META tag defines the name of the author of the document being read. --&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Author:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input2" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Subject:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input3" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Description:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input4" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Keywords:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input5" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Generator:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input6" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Language:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input7" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- The expires META tag defines the expiration date and time of the document being
+        indexed and requires RFC1123 date format, for example: Thu, 04 Oct 2010 14:21:20 GMT --&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Expires:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input8" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- The abstract META tag is a one line sentence which gives an overview of the entire webpage --&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Abstract:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input9" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+       &lt;!-- Copyright: no need to add ©, it will be added automatically --&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Copyright:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input10" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+       &lt;!-- Designer = Webmaster --&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Designer:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input11" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+       &lt;!-- Publisher: Company that publishes material being read or sold on a web site --&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Publisher:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input12" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- The Revisit META tag defines how often a search engine or spider should
+        come to your website for re-indexing. For example: 2 Days, 3 Days, 4 Days, etc.
+        Note: Just ad number(s), word Days will be added automatically --&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Revisit-After:&lt;/td&gt;
+          &lt;td&gt;&lt;input TYPE="text" NAME="input13" SIZE="40"&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;!-- Distribution: Global (indicates that your webpage is intended for
+        mass distribution to everyone), Local (intended for local distribution
+        of your document), and IU - Internal Use (not intended for public distribution). --&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Distribution:&lt;/td&gt;
+          &lt;td&gt;&lt;select NAME="input14" size="1"&gt;
+             &lt;option VALUE="" SELECTED&gt;Select One&lt;/option&gt;
+            &lt;option VALUE="Global"&gt;1. Global&lt;/option&gt;
+            &lt;option VALUE="Local"&gt;2. Local&lt;/option&gt;
+            &lt;option VALUE="IU"&gt;3. Intern Use&lt;/option&gt;
+          &lt;/select&gt;&lt;/td&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Robots:&lt;/td&gt;
+          &lt;td&gt;&lt;select NAME="input15" size="1"&gt;
+            &lt;option VALUE="" SELECTED&gt;Select One&lt;/option&gt;
+            &lt;option VALUE="All"&gt;1. All&lt;/option&gt;
+            &lt;option VALUE="None"&gt;2. None&lt;/option&gt;
+            &lt;option VALUE="Index"&gt;3. Index&lt;/option&gt;
+            &lt;option VALUE="No Index"&gt;4. No Index&lt;/option&gt;
+            &lt;option VALUE="Follow"&gt;5. Follow&lt;/option&gt;
+            &lt;option VALUE="No Follow"&gt;6. No Follow&lt;/option&gt;
+          &lt;/select&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;/center&gt;&lt;/div&gt;&lt;blockquote&gt;
+        &lt;p&gt;&lt;input TYPE="button" VALUE="Create META tags" ONCLICK="create(this.form)"&gt; &lt;input
+        TYPE="reset" VALUE="Clear All"&gt; &lt;textarea WRAP NAME="story" ROWS="12" COLS="65"&gt;&lt;/textarea&gt;
+        &lt;/p&gt;
+      &lt;/blockquote&gt;
+    &lt;/form&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+  &lt;/center&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  8.47 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/advanced-meta-tag-generator.html/1997852337/125x800/House_Commerce_Partners_4l/Commerce125x600_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Commerce_Partners_4l/Commerce125x600_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/advanced-meta-tag-generator.html/1997852337/125x800/House_Commerce_Partners_4l/Commerce125x600_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='advanced-meta-tag-generator.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/advanced-meta-tag-generator.html/753808189/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/advanced-meta-tag-generator.html/753808189/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

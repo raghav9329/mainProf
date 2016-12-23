@@ -1,0 +1,699 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Navigation:  Tab Control Simulation</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="Tabs are a good way to simplify a page with a complex form.  Using collapsible divs, this JavaScript makes it simple to divide a form into smaller parts.">
+<META NAME="date" CONTENT="2002-11-21">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Joar Vatnaland">
+<META NAME="section" CONTENT="Navigation">
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  Joar Vatnaland (joar@accelrys.com ) -->
+<style type="text/css">
+
+.pane {
+  display : none;
+  }
+td.tabs {
+  border-top : medium outset green;
+  border-left : medium outset green;
+  }
+div.tabs {
+  background-color : #00ffff;
+  cursor : hand;
+  }
+</style>
+<!-- following style not necessary -->
+<style type="text/css">
+body {
+  background-color : #eeccee;
+  }
+input.txt {
+  position : absolute;
+  left : 120px;
+  }
+input.chk {
+  position : relative;
+  }
+</style>
+
+<script type="text/javascript">
+var currentPaneStyle = 0;
+var currentTab = 0;
+
+function tabstrip()
+{
+   this.tabs = new Array();
+   this.add = addTab;
+   this.write = writeTabstrip;
+}
+
+function tab(caption,content)
+{
+  this.setId = setId;
+  this.caption = caption;
+  this.content = content;
+  this.write = writeTab;
+  this.writeContent = writePane;
+}
+
+
+
+function addTab(tab)
+{
+  tab.setId("tab" + this.tabs.length);
+  this.tabs[this.tabs.length] = tab;
+}
+
+function setId(id)
+{
+  this.id = id;
+}
+
+function initiate()
+{
+  var div = document.getElementById("tab0");
+  showPane(div);
+}
+
+function showPane(div)
+{
+  if(currentTab != 0)
+  {
+    currentTab.style.backgroundColor = "#00ffff";
+  }
+  div.style.backgroundColor = "#ccccff";
+  currentTab = div;
+
+  if(currentPaneStyle != 0)
+    currentPaneStyle.display = "none";
+  var paneId = "pn_" + div.id;
+  var objPaneStyle = document.getElementById(paneId).style;
+  objPaneStyle.display = "block";
+  currentPaneStyle = objPaneStyle;
+}
+
+function SubmitForm()
+{
+   window.alert("Form submitted.  This would normally take you to another page");
+   // normally, you would here check the form and submit it.
+   // if the form has the name 'tabform', then it is submitted
+   // with tabform.submit();
+}
+
+function writePane()
+{
+  document.write("<div class='pane' id='pn_" + this.id + "'>" + this.content + "</div>");
+}
+
+function writeTab()
+{
+   document.write("<td class='tabs'><div class='tabs' id='" + this.id + "' onclick='showPane(this)'>" + this.caption + "</div></td>");
+}
+
+function writeTabstrip()
+{
+  document.write("<table class='tabs'><tr>");
+  for(var i = 0; i < this.tabs.length; i++)
+  {
+    this.tabs[i].write();
+  }
+  document.write("</tr></table>");
+  
+  for(var k = 0; k < this.tabs.length; k++)
+  {
+    this.tabs[k].writeContent();
+  }
+  initiate();
+}
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff onUnload="spawntopfivewindow();">
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=678V20021114144615&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=284V200211152029&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/navigation/tab-control-simulation.html/1307406950/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_IDE_Brown_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Navigation</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Tab Control Simulation</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Tabs are a good way to simplify a page with a complex form.  Using collapsible divs, this JavaScript makes it simple to divide a form into smaller parts.
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  Joar Vatnaland (joar@accelrys.com ) -->
+<script language="Javascript" src="fctrack.js">
+</script>
+
+<h1>The JavaScript tab control</h1>
+<!-- netscape requires a form to show input controls -->
+<form name="tabform" method="post" action="somepage">
+<script type="text/javascript">
+var pane1 = "<table border=1><tr><td>Operating system:<br><input type='radio' name='rComp' checked>Windows</input><br><input type='radio' name='rComp'>Mac</input><br><input type='radio' name='rComp'>Unix</input></td><td rowspan=2>Preferred download location:<br><input type='radio' name='rSrv' checked>USA (Florida)</input><br><input type='radio' name='rSrv'>Europe (UK)</input><br><input type='radio' name='rSrv'>Europe (Sweden)</input><br><input type='radio' name='rSrv'>Asia (Japan)</input><br><input type='radio' name='rSrv'>Asia (Taiwan)</input></td></tr><tr><td>Preferred format:<br><select name='selFormat'><option>HTML</option><option>PDF</option><option>Word</option><option>ASCII text</option><option>XML</option></select></td></tr></table>";
+
+var pane2 = "First name: <input type='text' class='txt' name='inpFirst' size=20></input><br>Last name: <input type='text' class='txt' name='inpLast' size=20></input><br>Address 1: <input type='text' class='txt' name='inpAdr1' size=20></input><br>Address 2: <input type='text' class='txt' name='inpAdr2' size=20></input><br>City : <input type='text' class='txt' name='inpCity' size=20></input><br>Postcode/ZIP: <input type='text' class='txt' name='inpPC' size=20></input><br>E-Mail: <input type='text' class='txt' name='inpEmail' size=20></input>";
+
+var pane3 = "Enter message here:<br><textarea cols=50 rows=6></textarea>";
+
+var pane4 = "<table border=1><tr><td width=100><input name='cSport' type='checkbox' class='chk'>Sport</input><br><input type='checkbox' class='chk' name='cGifts'>Gifts</input><br><input type='checkbox' class='chk' name='cHealth'>Health</input><br></td><td width=100><input name='cInet' type='checkbox' class='chk'>Internet</input><br><input type='checkbox' class='chk' name='cGames'>Games</input><br><input type='checkbox' class='chk' name='cTech'>Technology</input></td><td width=100><input name='cBooks' type='checkbox' class='chk'>Books</input><br><input type='checkbox' name='cFash'>Fashion</input><br><input type='checkbox' class='chk' name='cCars'>Cars</input><br></td></tr></table>";
+
+var pane5 = "<hr><p>This is a test of a javascript simulating a tab control<hr>";
+
+var ts = new tabstrip();
+var t1 = new tab("System",pane1);
+var t2 = new tab("Personal",pane2);
+var t3 = new tab("Message",pane3);
+var t4 = new tab("Interests",pane4);
+var t5 = new tab("About",pane5);
+ts.add(t1);
+ts.add(t2);
+ts.add(t3);
+ts.add(t4);
+ts.add(t5);
+
+ts.write();
+</script>
+</form>
+<button onclick="SubmitForm()">Submit</button>
+
+
+
+
+
+<br><br>
+<a href="http://www.fortunecity.co.uk/js/fctrack.js">Download .js</a>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Navigation:  Tab Control Simulation</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  6.92 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- THREE STEPS TO INSTALL TAB CONTROL SIMULATION:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the onLoad event handler into the BODY tag
+  3.  Put the last coding into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+&lt;!-- Original:  Joar Vatnaland (joar@accelrys.com ) --&gt;
+&lt;style type="text/css"&gt;
+
+.pane {
+  display : none;
+  }
+td.tabs {
+  border-top : medium outset green;
+  border-left : medium outset green;
+  }
+div.tabs {
+  background-color : #00ffff;
+  cursor : hand;
+  }
+&lt;/style&gt;
+&lt;!-- following style not necessary --&gt;
+&lt;style type="text/css"&gt;
+body {
+  background-color : #eeccee;
+  }
+input.txt {
+  position : absolute;
+  left : 120px;
+  }
+input.chk {
+  position : relative;
+  }
+&lt;/style&gt;
+
+&lt;script type="text/javascript"&gt;
+var currentPaneStyle = 0;
+var currentTab = 0;
+
+function tabstrip()
+{
+   this.tabs = new Array();
+   this.add = addTab;
+   this.write = writeTabstrip;
+}
+
+function tab(caption,content)
+{
+  this.setId = setId;
+  this.caption = caption;
+  this.content = content;
+  this.write = writeTab;
+  this.writeContent = writePane;
+}
+
+
+
+function addTab(tab)
+{
+  tab.setId("tab" + this.tabs.length);
+  this.tabs[this.tabs.length] = tab;
+}
+
+function setId(id)
+{
+  this.id = id;
+}
+
+function initiate()
+{
+  var div = document.getElementById("tab0");
+  showPane(div);
+}
+
+function showPane(div)
+{
+  if(currentTab != 0)
+  {
+    currentTab.style.backgroundColor = "#00ffff";
+  }
+  div.style.backgroundColor = "#ccccff";
+  currentTab = div;
+
+  if(currentPaneStyle != 0)
+    currentPaneStyle.display = "none";
+  var paneId = "pn_" + div.id;
+  var objPaneStyle = document.getElementById(paneId).style;
+  objPaneStyle.display = "block";
+  currentPaneStyle = objPaneStyle;
+}
+
+function SubmitForm()
+{
+   window.alert("Form submitted.  This would normally take you to another page");
+   // normally, you would here check the form and submit it.
+   // if the form has the name 'tabform', then it is submitted
+   // with tabform.submit();
+}
+
+function writePane()
+{
+  document.write("&lt;div class='pane' id='pn_" + this.id + "'&gt;" + this.content + "&lt;/div&gt;");
+}
+
+function writeTab()
+{
+   document.write("&lt;td class='tabs'&gt;&lt;div class='tabs' id='" + this.id + "' onclick='showPane(this)'&gt;" + this.caption + "&lt;/div&gt;&lt;/td&gt;");
+}
+
+function writeTabstrip()
+{
+  document.write("&lt;table class='tabs'&gt;&lt;tr&gt;");
+  for(var i = 0; i &lt; this.tabs.length; i++)
+  {
+    this.tabs[i].write();
+  }
+  document.write("&lt;/tr&gt;&lt;/table&gt;");
+  
+  for(var k = 0; k &lt; this.tabs.length; k++)
+  {
+    this.tabs[k].writeContent();
+  }
+  initiate();
+}
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Insert the onLoad event handler into your BODY tag  --&gt;
+
+&lt;BODY onUnload="spawntopfivewindow();"&gt;
+
+&lt;!-- STEP THREE: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+&lt;!-- Original:  Joar Vatnaland (joar@accelrys.com ) --&gt;
+&lt;script language="Javascript" src="fctrack.js"&gt;
+&lt;/script&gt;
+
+&lt;h1&gt;The JavaScript tab control&lt;/h1&gt;
+&lt;!-- netscape requires a form to show input controls --&gt;
+&lt;form name="tabform" method="post" action="somepage"&gt;
+&lt;script type="text/javascript"&gt;
+var pane1 = "&lt;table border=1&gt;&lt;tr&gt;&lt;td&gt;Operating system:&lt;br&gt;&lt;input type='radio' name='rComp' checked&gt;Windows&lt;/input&gt;&lt;br&gt;&lt;input type='radio' name='rComp'&gt;Mac&lt;/input&gt;&lt;br&gt;&lt;input type='radio' name='rComp'&gt;Unix&lt;/input&gt;&lt;/td&gt;&lt;td rowspan=2&gt;Preferred download location:&lt;br&gt;&lt;input type='radio' name='rSrv' checked&gt;USA (Florida)&lt;/input&gt;&lt;br&gt;&lt;input type='radio' name='rSrv'&gt;Europe (UK)&lt;/input&gt;&lt;br&gt;&lt;input type='radio' name='rSrv'&gt;Europe (Sweden)&lt;/input&gt;&lt;br&gt;&lt;input type='radio' name='rSrv'&gt;Asia (Japan)&lt;/input&gt;&lt;br&gt;&lt;input type='radio' name='rSrv'&gt;Asia (Taiwan)&lt;/input&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Preferred format:&lt;br&gt;&lt;select name='selFormat'&gt;&lt;option&gt;HTML&lt;/option&gt;&lt;option&gt;PDF&lt;/option&gt;&lt;option&gt;Word&lt;/option&gt;&lt;option&gt;ASCII text&lt;/option&gt;&lt;option&gt;XML&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;";
+
+var pane2 = "First name: &lt;input type='text' class='txt' name='inpFirst' size=20&gt;&lt;/input&gt;&lt;br&gt;Last name: &lt;input type='text' class='txt' name='inpLast' size=20&gt;&lt;/input&gt;&lt;br&gt;Address 1: &lt;input type='text' class='txt' name='inpAdr1' size=20&gt;&lt;/input&gt;&lt;br&gt;Address 2: &lt;input type='text' class='txt' name='inpAdr2' size=20&gt;&lt;/input&gt;&lt;br&gt;City : &lt;input type='text' class='txt' name='inpCity' size=20&gt;&lt;/input&gt;&lt;br&gt;Postcode/ZIP: &lt;input type='text' class='txt' name='inpPC' size=20&gt;&lt;/input&gt;&lt;br&gt;E-Mail: &lt;input type='text' class='txt' name='inpEmail' size=20&gt;&lt;/input&gt;";
+
+var pane3 = "Enter message here:&lt;br&gt;&lt;textarea cols=50 rows=6&gt;&lt;/textarea&gt;";
+
+var pane4 = "&lt;table border=1&gt;&lt;tr&gt;&lt;td width=100&gt;&lt;input name='cSport' type='checkbox' class='chk'&gt;Sport&lt;/input&gt;&lt;br&gt;&lt;input type='checkbox' class='chk' name='cGifts'&gt;Gifts&lt;/input&gt;&lt;br&gt;&lt;input type='checkbox' class='chk' name='cHealth'&gt;Health&lt;/input&gt;&lt;br&gt;&lt;/td&gt;&lt;td width=100&gt;&lt;input name='cInet' type='checkbox' class='chk'&gt;Internet&lt;/input&gt;&lt;br&gt;&lt;input type='checkbox' class='chk' name='cGames'&gt;Games&lt;/input&gt;&lt;br&gt;&lt;input type='checkbox' class='chk' name='cTech'&gt;Technology&lt;/input&gt;&lt;/td&gt;&lt;td width=100&gt;&lt;input name='cBooks' type='checkbox' class='chk'&gt;Books&lt;/input&gt;&lt;br&gt;&lt;input type='checkbox' name='cFash'&gt;Fashion&lt;/input&gt;&lt;br&gt;&lt;input type='checkbox' class='chk' name='cCars'&gt;Cars&lt;/input&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;";
+
+var pane5 = "&lt;hr&gt;&lt;p&gt;This is a test of a javascript simulating a tab control&lt;hr&gt;";
+
+var ts = new tabstrip();
+var t1 = new tab("System",pane1);
+var t2 = new tab("Personal",pane2);
+var t3 = new tab("Message",pane3);
+var t4 = new tab("Interests",pane4);
+var t5 = new tab("About",pane5);
+ts.add(t1);
+ts.add(t2);
+ts.add(t3);
+ts.add(t4);
+ts.add(t5);
+
+ts.write();
+&lt;/script&gt;
+&lt;/form&gt;
+&lt;button onclick="SubmitForm()"&gt;Submit&lt;/button&gt;
+
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+&lt;a href="http://www.fortunecity.co.uk/js/fctrack.js"&gt;Download .js&lt;/a&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  6.92 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/navigation/tab-control-simulation.html/1966228268/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Content_Management_1d/jupcontent125x600_new.gif"  ALT="The Premier Event for Content Management Strategies and Solutions"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/navigation/tab-control-simulation.html/1966228268/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='tab-control-simulation.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/navigation/tab-control-simulation.html/740726203/468x60-2/House_AllNetDevices_1c/and-spring2003-750_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_AllNetDevices_1c/and-spring2003-750_new.gif"  ALT="The Digital Ubiquity Forum"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/navigation/tab-control-simulation.html/740726203/468x60-2/House_AllNetDevices_1c/and-spring2003-750_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>
+

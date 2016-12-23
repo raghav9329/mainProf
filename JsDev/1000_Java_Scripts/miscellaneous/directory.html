@@ -1,0 +1,562 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Misc.:  Directory</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="date" CONTENT="2000-09-09">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="javascriptsource.com">
+<META NAME="section" CONTENT="Miscellaneous">
+<META NAME="description" CONTENT="If you were thinking about creating a searchable directory, this script can help.  Just cut and paste the script, edit the appropriate directory information, and you have your own Javascript directory!">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function initArray() {
+this.length = initArray.arguments.length;
+for (var i = 0; i < this.length; i++) {
+this[i] = initArray.arguments[i];
+   }
+}
+var rcrd = new initArray("4b","5b","8b","8b");
+/* Simply "load" this array with your names appropriate to the letters. (A=0,
+Z=25)  If you have no names beginning with "I", for example, simply do not
+define that record (rcrd[8]) just as we have done here.  The "backslash r" is
+used to initiate a new line in the display on screen. */
+rcrd[0] = "Gracie Allen, Bookkeeping, Tel. 234-5678 ext 13"
++ "\rHarold Ammons, Engineering, Tel. 777-0987 ext 23"
++ "\rJames Atkin, Research and Development, Tel. 777-0933 ext 17";
+rcrd[1] = "George Burns, Public Relations, Tel. 232-5178 ext 91"
++ "\rAnne Byzantine, Political Liasson, Tel. 456-0987 ext 33";
+rcrd[2] = "Harrison Czar, Administration, Tel. 232-5178 ext 12";
+rcrd[3] = "Dillard Dally, Corporate Efficiency, Tel. 232-5178 ext 88 "
++ "email: dillydally@corp.com"
++ "\rSandy Dodge, Secretarial, Tel. 456-6543 ext 44";
+rcrd[4] = "Heloise Eloise, Human Relations, Tel. 232-2909 ext 59"
++ "\rJerry Ezzard, Political Liasson, Tel. 456-9800 ext 41";
+rcrd[5] = "George Fatchance, Corporate Lending, Tel. 546-7712 ext 19"
++ "\rBjorn Fjord, Foreign Relations, Tel. 456-6651 ext 28";
+rcrd[6] = "Oprah Gagnon, Media Relations, Tel. 232-5178 ext 12";
+rcrd[7] = "Sally Hopkins, Administration, Tel. 339-7081 ext 3";
+rcrd[9] = "Bo Jackson, Public Relations, Tel. 232-5178 ext 12"
++ "\rAnne Johnson, Political Liasson, Tel. 456-0987 ext 33";
+rcrd[10] = "Gary Kapperson, Public Relations, Tel. 232-5178 ext 12"
++ "\rAdam Kotch, Political Liasson, Tel. 456-5543 ext 31";
+rcrd[11] = "Bunny Lane, Operations, Tel. 232-3812 ext 16"
++ "\rFranz Lizt, Entertainment Operations, Tel. 456-0987 ext 90";
+rcrd[12] = "Drake Mallard, Administration, Tel. 712-6622 ext 4"
++ "\rAllison Majors, Operations, Tel. 456-6908 ext 24";
+rcrd[13] = "George Nabors, Marketing, Tel. 232-4009 ext 11"
++ "\rTabitha Noonan, Accounts Receivable, Tel. 332-6755 ext 57";
+rcrd[15] = "Mary Payton, Accounts Receivable, Tel. 217-2233 ext 58"
++ "\rJohn Pyne, Marketing, Tel. 456-5002 ext 2";
+rcrd[17] = "Claude Raines, Corporate History, Tel. 533-2203 ext 14"
++ "\rBabs Reese, Marketing, Tel. 456-0987 ext 33";
+rcrd[18] = "Terri Samuelson, Public Relations, Tel. 232-4090 ext 62"
++ "\rSally Smith, Marketing, Tel. 456-3321 ext 65";
+rcrd[19] = "John Thomas, Administration, Tel. 598-7202 ext 66"
++ "\rThomas Tuttle, Political Liasson, Tel. 456-5231 ext 15";
+rcrd[21] = "Sarah Vaughn, Administration, Tel. 232-7211 ext 68"
++ "\rVictor Victor, Engineering, Tel. 456-7450 ext 23";
+rcrd[22] = "George Watkins, Research and Development, Tel. 882-2834 ext 63"
++ "\rAnne Wylie, Mailroom, Tel. 855-2200 ext 42";
+rcrd[24] = "Patti Yarrow, Administration, Tel. 232-5178 ext 12";
+function dataBase(isnform) {
+for (var i = 0; i < 26; i++) {
+if (isnform.alpha[i].checked) {
+recnum = isnform.alpha[i].value;
+   }
+}
+if (rcrd[recnum] != null) {
+document.isnform.display.value = rcrd[recnum];
+}
+else document.isnform.display.value = "Sorry, no listings for that letter.";
+}
+// End -->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/directory.html/500864202/468x60-1/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/directory.html/500864202/468x60-1/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0"></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<BASEFONT SIZE=3>
+  <FONT SIZE=6>
+<B><FONT SIZE="+2" FACE="Helvetica,Arial" ALIGN=RIGHT COLOR="#0000FF">
+<b><A HREF="../../Upper1/default.htm" TARGET="_top">
+Home</A> </b><img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <b><A HREF="default.htm" TARGET="_top"><font color="#FF0000">Miscellaneous</font></A> </b>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <FONT COLOR="#006666">Directory</FONT></b></FONT><BR>
+</B><BR>
+  </FONT>
+<TABLE BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><TD><font FACE=" helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+
+If you were thinking about creating a searchable directory, this script can help.  Just cut and paste the script, edit the appropriate directory information, and you have your own Javascript directory!<br><hr>
+</td></tr>
+</table>
+<!--  Demonstration -->
+<BODY>
+<CENTER>
+<FORM NAME="isnform">
+<TABLE BORDER=0 WIDTH=486>
+<TR><TD><B>Company Directory</B></TD>
+<TD>
+<INPUT TYPE="radio" NAME="alpha" VALUE="0" CHECKED>A</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="1">B</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="2">C</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="3">D</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="4">E</TD></TR>
+<TR><TD></TD><TD><INPUT TYPE="radio" NAME="alpha" VALUE="5">F</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="6">G</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="7">H</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="8">I</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="9">J</TD></TR>
+<TR><TD><FONT SIZE=1><B>Instructions: </B> Simply "click the letter of the
+first</FONT></TD><TD><INPUT TYPE="radio" NAME="alpha" VALUE="10">K</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="11">L</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="12">M</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="13">N</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="14">O</TD></TR>
+<TR><TD><FONT SIZE=1>initial of the last name of the person
+desired.</FONT></TD><TD><INPUT TYPE="radio" NAME="alpha" VALUE="15">P</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="16">Q</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="17">R</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="18">S</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="19">T</TD></TR>
+<TR><TD><FONT SIZE=1>Then "click" the Find button.</FONT></TD><TD><INPUT TYPE="radio" NAME="alpha" VALUE="20">U</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="21">V</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="22">W</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="23">X</TD>
+<TD><INPUT TYPE="radio" NAME="alpha" VALUE="24">Y</TD></TR>
+<TR><TD ALIGN=CENTER><INPUT TYPE="button" NAME="but" VALUE=" Find " onClick="dataBase(this.form)"></TD><TD></TD><TD></TD><TD><INPUT
+TYPE="radio" NAME="alpha" VALUE="25">Z</TD>
+</TR></TABLE>
+<TABLE BORDER=0 WIDTH=486>
+<TR><TD ALIGN=CENTER>Telephone Directory Results<BR>
+<TEXTAREA NAME="display" ROWS=4 COLS=55 WRAP=yes>
+</TEXTAREA></TD></TR>
+</TABLE>
+</FORM>
+<P>
+<BR>
+<P>
+<a name="source">
+<TABLE BORDER=0 WIDTH=500 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Misc.:  Directory</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as NotePad or SimpleText) and save (Control-s or Apple-s).  The script is yours!<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  5.74 KB  " size="24">
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL DIRECTORY:
+
+   1.  Paste the coding into the HEAD of your HTML document
+   2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Copy this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+function initArray() {
+this.length = initArray.arguments.length;
+for (var i = 0; i &lt; this.length; i++) {
+this[i] = initArray.arguments[i];
+   }
+}
+var rcrd = new initArray("4b","5b","8b","8b");
+/* Simply "load" this array with your names appropriate to the letters. (A=0,
+Z=25)  If you have no names beginning with "I", for example, simply do not
+define that record (rcrd[8]) just as we have done here.  The "backslash r" is
+used to initiate a new line in the display on screen. */
+rcrd[0] = "Gracie Allen, Bookkeeping, Tel. 234-5678 ext 13"
++ "\rHarold Ammons, Engineering, Tel. 777-0987 ext 23"
++ "\rJames Atkin, Research and Development, Tel. 777-0933 ext 17";
+rcrd[1] = "George Burns, Public Relations, Tel. 232-5178 ext 91"
++ "\rAnne Byzantine, Political Liasson, Tel. 456-0987 ext 33";
+rcrd[2] = "Harrison Czar, Administration, Tel. 232-5178 ext 12";
+rcrd[3] = "Dillard Dally, Corporate Efficiency, Tel. 232-5178 ext 88 "
++ "email: dillydally@corp.com"
++ "\rSandy Dodge, Secretarial, Tel. 456-6543 ext 44";
+rcrd[4] = "Heloise Eloise, Human Relations, Tel. 232-2909 ext 59"
++ "\rJerry Ezzard, Political Liasson, Tel. 456-9800 ext 41";
+rcrd[5] = "George Fatchance, Corporate Lending, Tel. 546-7712 ext 19"
++ "\rBjorn Fjord, Foreign Relations, Tel. 456-6651 ext 28";
+rcrd[6] = "Oprah Gagnon, Media Relations, Tel. 232-5178 ext 12";
+rcrd[7] = "Sally Hopkins, Administration, Tel. 339-7081 ext 3";
+rcrd[9] = "Bo Jackson, Public Relations, Tel. 232-5178 ext 12"
++ "\rAnne Johnson, Political Liasson, Tel. 456-0987 ext 33";
+rcrd[10] = "Gary Kapperson, Public Relations, Tel. 232-5178 ext 12"
++ "\rAdam Kotch, Political Liasson, Tel. 456-5543 ext 31";
+rcrd[11] = "Bunny Lane, Operations, Tel. 232-3812 ext 16"
++ "\rFranz Lizt, Entertainment Operations, Tel. 456-0987 ext 90";
+rcrd[12] = "Drake Mallard, Administration, Tel. 712-6622 ext 4"
++ "\rAllison Majors, Operations, Tel. 456-6908 ext 24";
+rcrd[13] = "George Nabors, Marketing, Tel. 232-4009 ext 11"
++ "\rTabitha Noonan, Accounts Receivable, Tel. 332-6755 ext 57";
+rcrd[15] = "Mary Payton, Accounts Receivable, Tel. 217-2233 ext 58"
++ "\rJohn Pyne, Marketing, Tel. 456-5002 ext 2";
+rcrd[17] = "Claude Raines, Corporate History, Tel. 533-2203 ext 14"
++ "\rBabs Reese, Marketing, Tel. 456-0987 ext 33";
+rcrd[18] = "Terri Samuelson, Public Relations, Tel. 232-4090 ext 62"
++ "\rSally Smith, Marketing, Tel. 456-3321 ext 65";
+rcrd[19] = "John Thomas, Administration, Tel. 598-7202 ext 66"
++ "\rThomas Tuttle, Political Liasson, Tel. 456-5231 ext 15";
+rcrd[21] = "Sarah Vaughn, Administration, Tel. 232-7211 ext 68"
++ "\rVictor Victor, Engineering, Tel. 456-7450 ext 23";
+rcrd[22] = "George Watkins, Research and Development, Tel. 882-2834 ext 63"
++ "\rAnne Wylie, Mailroom, Tel. 855-2200 ext 42";
+rcrd[24] = "Patti Yarrow, Administration, Tel. 232-5178 ext 12";
+function dataBase(isnform) {
+for (var i = 0; i &lt; 26; i++) {
+if (isnform.alpha[i].checked) {
+recnum = isnform.alpha[i].value;
+   }
+}
+if (rcrd[recnum] != null) {
+document.isnform.display.value = rcrd[recnum];
+}
+else document.isnform.display.value = "Sorry, no listings for that letter.";
+}
+// End --&gt;
+&lt;/SCRIPT&gt;
+
+&lt;!-- STEP TWO: Put this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;CENTER&gt;
+&lt;FORM NAME="isnform"&gt;
+&lt;TABLE BORDER=0 WIDTH=486&gt;
+&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Company Directory&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;
+&lt;INPUT TYPE="radio" NAME="alpha" VALUE="0" CHECKED&gt;A&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="1"&gt;B&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="2"&gt;C&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="3"&gt;D&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="4"&gt;E&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD&gt;&lt;/TD&gt;&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="5"&gt;F&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="6"&gt;G&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="7"&gt;H&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="8"&gt;I&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="9"&gt;J&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD&gt;&lt;FONT SIZE=1&gt;&lt;B&gt;Instructions: &lt;/B&gt; Simply "click the letter of the
+first&lt;/FONT&gt;&lt;/TD&gt;&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="10"&gt;K&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="11"&gt;L&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="12"&gt;M&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="13"&gt;N&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="14"&gt;O&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD&gt;&lt;FONT SIZE=1&gt;initial of the last name of the person
+desired.&lt;/FONT&gt;&lt;/TD&gt;&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="15"&gt;P&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="16"&gt;Q&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="17"&gt;R&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="18"&gt;S&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="19"&gt;T&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD&gt;&lt;FONT SIZE=1&gt;Then "click" the Find button.&lt;/FONT&gt;&lt;/TD&gt;&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="20"&gt;U&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="21"&gt;V&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="22"&gt;W&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="23"&gt;X&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="alpha" VALUE="24"&gt;Y&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD ALIGN=CENTER&gt;&lt;INPUT TYPE="button" NAME="but" VALUE=" Find " onClick="dataBase(this.form)"&gt;&lt;/TD&gt;&lt;TD&gt;&lt;/TD&gt;&lt;TD&gt;&lt;/TD&gt;&lt;TD&gt;&lt;INPUT
+TYPE="radio" NAME="alpha" VALUE="25"&gt;Z&lt;/TD&gt;
+&lt;/TR&gt;&lt;/TABLE&gt;
+&lt;TABLE BORDER=0 WIDTH=486&gt;
+&lt;TR&gt;&lt;TD ALIGN=CENTER&gt;Telephone Directory Results&lt;BR&gt;
+&lt;TEXTAREA NAME="display" ROWS=4 COLS=55 WRAP=yes&gt;
+&lt;/TEXTAREA&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;/TABLE&gt;
+&lt;/FORM&gt;
+&lt;/CENTER&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size="-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  5.74 KB  --&gt;
+</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/directory.html/1988998835/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Content_Management_1d/jupcontent125x600_new.gif"  ALT="The Premier Event for Content Management Strategies and Solutions"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/directory.html/1988998835/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='directory.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/directory.html/665916282/468x60-2/House_Content_Management_1l/jupcontent750x100_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Content_Management_1l/jupcontent750x100_new.gif"  ALT="The Premier Event for Content Management Strategies and Solutions"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/miscellaneous/directory.html/665916282/468x60-2/House_Content_Management_1l/jupcontent750x100_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html></body></html>

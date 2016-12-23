@@ -1,0 +1,33 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="javascript">
+    function reed()
+{
+var red = document.one.red.value;
+alert ("This is just a demo, in the real thing it will direct the user to whatever site you specify.");
+}
+</script>
+</head>
+<body bgcolor="#FFFFFF">
+<P>Enter info below. None required</P>
+<HR>
+<P>Home Info.</P>
+<form name="one">
+<P>First Name: <input type="text" name="fname" onchange="javascript:copy()"></P>
+<P>Last Name: <input type="text" name="lname" onchange="javascript:copy()"></P>
+<HR>
+<P><input type="button" value="Update"></P>
+<P>First Name: <input type="text" name="ffname"></P>
+<P>Last Name: <input type="text" name="llname"></P>
+<P>Redirect To: <input type="text" name="red" value="javascript:history.back(-1)"></P>
+<P><input type="button" value="Submit" onclick="reed()"><input type="reset"></P>
+</form>
+<SCRIPT LANGUAGE="javascript">
+   function copy()
+   {
+document.one.ffname.value = document.one.fname.value;
+document.one.llname.value = document.one.lname.value;
+}
+</SCRIPT>
+</body>
+</html></html>

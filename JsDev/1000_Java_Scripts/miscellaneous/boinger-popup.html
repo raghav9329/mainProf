@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<script>
+// Copyright 2001 by www.CodeBelly.com
+// Do *not* remove this heading.
+
+// If you want the popup window to maintain focus, add this
+// onblur event to the body tag or the popup page:
+// <body onblur="self.focus()">
+
+// Set the variables, as indicated below:
+
+// Set dimensions and positions for the two window states.
+
+var SmallSizeWidth  = 200;
+var SmallSizeHeight = 200;
+var SmallSizeX      = 100;
+var SmallSizeY      = 100;
+
+var LargeSizeWidth  = 400;
+var LargeSizeHeight = 200;
+var LargeSizeX      = 100;
+var LargeSizeY      = 100;
+
+// Set to Small or Large for the starting state.
+
+var whichSize       = "Small";
+
+// Set the speed for the changes (milliseconds).
+
+var speed           = 1500;
+
+// Do not edit below this line.
+// ============================
+var bV = parseInt(navigator.appVersion)
+var t = null;
+function GrowShrink(){ 
+if (bV >= 4){
+if (whichSize == "Small"){
+self.resizeTo(LargeSizeWidth,LargeSizeHeight);
+self.moveTo(LargeSizeX,LargeSizeY);
+whichSize = "Large";
+}else{
+self.resizeTo(SmallSizeWidth,SmallSizeHeight);
+self.moveTo(SmallSizeX,SmallSizeY);
+whichSize = "Small";      
+}
+t=setTimeout('GrowShrink()', speed);
+}}
+GrowShrink();
+</script>
+</head>
+<body>
+Content Here
+</body>
+</html></html>

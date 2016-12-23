@@ -1,0 +1,1060 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Calendars:  Deluxe Calendar Generator</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="This calendar script allows the user to change titles, fonts, and colors, plus it adds links, gives instructions, and creates a new page to be saved. Based on an older script by
+Matthew D. Krieg.">
+<META NAME="date" CONTENT="2002-09-16">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Nikola Vrtis">
+<META NAME="section" CONTENT="Calendars">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  Nikola Vrtis (nikki@vrtisworks.com ) Matthew D. Krieg (battlebots102001@yahoo.com) -->
+<!-- Web Site:  http://www.vrtisworks.com/kiki/ -->
+
+<SCRIPT LANGUAGE="JavaScript">
+function make()
+{
+
+var days = new Array("","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+for(i=0; i<9; i++) {
+if(window.document.calendar_form.font1[i].checked == true)
+ var font1 = window.document.calendar_form.font1[i].value }
+
+for(i=0; i<9; i++) {
+if(window.document.calendar_form.font2[i].checked == true)
+ var font2 = window.document.calendar_form.font2[i].value }
+
+var code = "";
+
+code += "<html><head><title>";
+
+code += window.document.calendar_form.name.value;
+
+code += "Events in ";
+
+var month = window.document.calendar_form.which_month.options[window.document.calendar_form.which_month.selectedIndex].text;
+
+code += month;
+
+code += " ";
+
+code += window.document.calendar_form.year.value;
+
+code += "</title></head>\n<body bgcolor=\"";
+
+code += window.document.calendar_form.color1.value;
+
+code += "\">\n";
+
+code += "<center>";
+
+code += "<p><font size=\"8pt\" color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" face=\"" + font1 + "," + font2 + "\">";
+
+code += window.document.calendar_form.name.value;
+
+code += "<br>\n";
+
+code += month;
+
+code += " ";
+
+code += window.document.calendar_form.year.value;
+
+code += "<br>\n";
+
+code += window.document.calendar_form.prod.value;
+
+code += " Events</font></p>\n";
+
+code += "<p><font size=\"3pt\" color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" face=\"" + font1 + "," + font2 + "\"><a href=\"";
+
+code += window.document.calendar_form.sect.value;
+
+code +="\">Return to Area Home Page</a> &#166;&#166; <a href=\"";
+
+code += window.document.calendar_form.home.value;
+
+code += "\">Return to Site Home Page</a></font></p>\n";
+
+code += "<table width=\"100%\" cellpadding=\"3\" cellspacing=\"1\" border=\"2\" bgcolor=\"#";
+
+code += window.document.calendar_form.color3.value;
+
+code += "\">\n";
+
+var num_of_days = parseInt(window.document.calendar_form.how_many_days.options[window.document.calendar_form.how_many_days.selectedIndex].text);
+
+var loop = 0;
+
+var day_loop = window.document.calendar_form.which_day.selectedIndex;
+
+while(loop<num_of_days)
+
+{
+if(day_loop >= days.length)
+
+{ day_loop = 1; }
+
+loop++;
+
+code += "<tr>\n";
+
+code += "<td width=\"25%\">";
+
+code += "<font color=\"#";
+
+code += window.document.calendar_form.color4.value;
+
+code += "\" size=\"4pt\" face=\"" + font1 + "," + font2 + "\">";
+
+code += days[day_loop];
+
+code += "  ~  ";
+
+code += window.document.calendar_form.which_month.selectedIndex;
+
+code += "/";
+
+code += loop;
+
+code += "/";
+
+code += window.document.calendar_form.year.value;
+
+code += "</font>";
+
+code += "</td>\n";
+
+code += "<td>";
+
+code += "<font color=\"#";
+
+code += window.document.calendar_form.color4.value;
+
+code += "\" size=\"4pt\" face=\"" + font1 + "," + font2 + "\">";
+
+code += window.document.calendar_form.elements[loop+2].value;
+
+code += "&nbsp;</font>";
+
+code += "</td>\n";
+
+code += "</tr>\n";
+
+day_loop++;
+
+}
+
+code += "</table>\n";
+
+code += "<p><font size=\"3pt\" color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" face=\"" + font1 + "," + font2 + "\"><a href=\"";
+
+code += window.document.calendar_form.sect.value;
+
+code +="\">Return to Area Home Page</a> &#166;&#166; <a href=\"";
+
+code += window.document.calendar_form.home.value;
+
+code += "\">Return to Site Home Page</a></font></p>\n";
+
+code += "</center>\n";
+
+code += "<p><font color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" size=\"4pt\" face=\"" + font1 + "," + font2 + "\">";
+
+code += window.document.calendar_form.note.value;
+
+code += "</font></p>\n";
+
+code += "<p><font color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" size=\"2pt\" face=\"" + font1 + "," + font2 + "\">Created with a calendar generator originally coded by Matthew D. Krieg (battlebots102001@yahoo.com) and modified by Nikola Vrtis (nikki@vrtisworks.com). The calendar generator and other scripts can be found at The JavaScript Source (www.javascriptsource.com).</font></p></body></html>\n";
+
+msgWindow=window.open("","displayWindow","toolbar=yes,width=640,height=480,directories=no,status=no,scrollbars=yes,resize=yes,menubar=yes");
+msgWindow.document.write(code);
+msgWindow.document.close();
+
+}
+
+function regular() {
+window.open("http://www.vrtisworks.com/kiki/fun/minical.htm","newWindow","toolbar=no,width=300,height=400,directories=no,status=no,scrollbars=yes,resize=yes,menubar=no")
+}
+
+</script>
+
+
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=442V20021114144724&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=670V20021115201526&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=442V20021114144724&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=442V20021114144724&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=442V20021114144724&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=442V20021114144724&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calendars/deluxe-calendar-generator.html/906632449/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_HW_Blue_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Calendars</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Deluxe Calendar Generator</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+This calendar script allows the user to change titles, fonts, and colors, plus it adds links, gives instructions, and creates a new page to be saved. Based on an older script by
+Matthew D. Krieg.
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<!-- Original:  Nikola Vrtis (nikki@vrtisworks.com ) -->
+<!-- Web Site:  http://www.vrtisworks.com/kiki/ -->
+<form>Click here to open <input type=button value="a reference calendar" onClick="regular()"></form></p>
+
+<p><b>Event input suggestions:</b> If the event has an explanation, give it a brief title, followed by a colon (:), followed by the explanation. Separate events by typing <br> between the end of one event and the beginning of the next event (this puts the new event on its own line). HTML codes for bold and italic will also work.</p>
+</font>
+<form name="calendar_form">
+
+<table border="2" cellpadding="1" cellspacing="1" width="100%" bgcolor="#eeeeee">
+
+<tr>
+
+<td>Choose a month: <select name="which_month">
+<option>select one
+<option>January
+<option>February
+<option>March
+<option>April
+<option>May
+<option>June
+<option>July
+<option>August
+<option>September
+<option>October
+<option>November
+<option>December
+</select></td>
+
+<td>Number of days that month: <select name="how_many_days">
+<option>select one
+<option>31
+<option>30
+<option>29
+<option>28
+</select></td>
+
+<td>Day that the month starts on: <select name="which_day">
+<option>select one
+<option>Sunday
+<option>Monday
+<option>Tuesday
+<option>Wednesday
+<option>Thursday
+<option>Friday
+<option>Saturday
+</select></td>
+</tr>
+
+<tr>
+<td>What happens on the 1st? <textarea name="on_1" rows="3" cols="25"></textarea></td>
+<td>What happens on the 2nd? <textarea name="on_2" rows="3" cols="25"></textarea></td>
+<td>What happens on the 3rd? <textarea name="on_3" rows="3" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td>What happens on the 4th? <textarea name="on_4" rows="3" cols="25"></textarea></td>
+<td>What happens on the 5th? <textarea name="on_5" rows="3" cols="25"></textarea></td>
+<td>What happens on the 6th? <textarea name="on_6" rows="3" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td>What happens on the 7th? <textarea name="on_7" rows="3" cols="25"></textarea></td>
+<td>What happens on the 8th? <textarea name="on_8" rows="3" cols="25"></textarea></td>
+<td>What happens on the 9th? <textarea name="on_9" rows="3" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td>What happens on the 10th? <textarea name="on_10" rows="3" cols="25"></textarea></td>
+<td>What happens on the 11th? <textarea name="on_11" rows="3" cols="25"></textarea></td>
+<td>What happens on the 12th? <textarea name="on_12" rows="3" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td>What happens on the 13th? <textarea name="on_13" rows="3" cols="25"></textarea></td>
+<td>What happens on the 14th? <textarea name="on_14" rows="3" cols="25"></textarea></td>
+<td>What happens on the 15th? <textarea name="on_15" rows="3" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td>What happens on the 16th? <textarea name="on_16" rows="3" cols="25"></textarea></td>
+<td>What happens on the 17th? <textarea name="on_17" rows="3" cols="25"></textarea></td>
+<td>What happens on the 18th? <textarea name="on_18" rows="3" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td>What happens on the 19th? <textarea name="on_19" rows="3" cols="25"></textarea></td>
+<td>What happens on the 20th? <textarea name="on_20" rows="3" cols="25"></textarea></td>
+<td>What happens on the 21st? <textarea name="on_21" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+<td>What happens on the 22nd? <textarea name="on_22" rows="3" cols="25"></textarea></td>
+<td>What happens on the 23th? <textarea name="on_23" rows="3" cols="25"></textarea></td>
+<td>What happens on the 24th? <textarea name="on_24" rows="3" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td>What happens on the 25th? <textarea name="on_25" rows="3" cols="25"></textarea></td>
+<td>What happens on the 26th? <textarea name="on_26" rows="3" cols="25"></textarea></td>
+<td>What happens on the 27th? <textarea name="on_27" rows="3" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td>What happens on the 28th? <textarea name="on_28" rows="3" cols="25"></textarea></td>
+<td>What happens on the 29th? <textarea name="on_29" rows="3" cols="25"></textarea></td>
+<td>What happens on the 30th? <textarea name="on_30" rows="3" cols="25"></textarea></td>
+</tr>
+
+<tr>
+<td>What happens on the 31st? <textarea name="on_31" rows="3" cols="25"></textarea></td>
+<td colspan="2"><p><b>The four-digit year for this calendar is:</b><input type="text" size="4" maxlength="4" name="year"></p>
+</td>
+</tr>
+</table>
+
+<font face="Arial,Helvetica">
+<p><b>The name of the company or organization:</b> <input type="text" size="20" name="name"><br><i>Note: OK to leave blank, but the title of the calendar will be a line lower than normal.</i></p>
+<p><b>These events are for this product or service type:</b> <input type="text" size="20" name="prod"><br><i>Note: Use the singular form; leave blank if not associated with a product or service.</i></p>
+<p><b>The index page of this Web site:</b> <input type="text" size="10" name="home"><br><i>Note: If the index page located in a different directory, you'll need to include that information; if you're not sure how to do that, put in the full URL of the index page, but do not include the <b>http://</b> .</i></p>
+<p><b>This page is associated with this area of the Web site:</b> <input type="text" size="10" name="sect"><br><i>Note: Type in the area's home page name.</i></p>
+<p><b>Text for the bottom of the calendar page:</b> <input type="text" size="30" name="note"><br><i>Note: Include here any copyright information or contact information for your Web site; you may use HTML, but all <b>"</b> should be written as <b>\"</b> .</i></p>
+<p><i>Note: For the following color options, type in the hexadecimal code; do not include the # sign. Keep in mind that unvisited links will be blue and visited links will be purple - so if you pick 0000CC as your page background, the unvisited links will be invisible, and if you pick 660099 as your page background, the visited links will be invisible. If you need helping choosing colors, <a href="http://www.vrtisworks.com/kiki/fun/color.htm" target="_blank">please open this page</a> (a new page will open in front of this one).</i><br>
+<b>Color for background of page:</b><input type="text" size="6" maxlength="6" name="color1"><br>
+<b>Color for text outside of calendar:</b><input type="text" size="6" maxlength="6" name="color2"><br>
+<b>Color of calendar:</b><input type="text" size="6" maxlength="6" name="color3"><br>
+<b>Color for text inside of calendar:</b><input type="text" size="6" maxlength="6" name="color4"></p>
+
+<p><b>Choose your first choice for the text font:</b><br>
+<input type="radio" name="font1" value="Arial" checked><font face="Arial">Arial</font> &nbsp;&nbsp; <input type="radio" name="font1" value="Comic Sans MS"><font face="Comic Sans MS">Comic Sans MS</font> &nbsp;&nbsp; <input type="radio" name="font1" value="Trebuchet MS"><font face="Trebuchet MS">Trebuchet MS</font> &nbsp;&nbsp; <input type="radio" name="font1" value="Verdana"><font face="Verdana">Verdana</font><br>
+<input type="radio" name="font1" value="Arial Black"><font face="Arial Black">Arial Black</font> &nbsp;&nbsp; <input type="radio" name="font1" value="Impact"><font face="Impact">Impact</font><br>
+<input type="radio" name="font1" value="Courier New"><font face="Courier New">Courier New</font> &nbsp;&nbsp; <input type="radio" name="font1" value="Georgia"><font face="Georgia">Georgia</font> &nbsp;&nbsp;<input type="radio" name="font1" value="Times New Roman"><font face="Times New Roman">Times New Roman</font><br>
+<i>Note: Fonts have been grouped by similarity. If two selections look the same, that means that you do not have one or more fonts installed. (Chances are that the missing fonts will look like Times New Roman or Arial.)</i></p>
+
+<p><b>Choose your second choice for the text font:</b><br>
+<input type="radio" name="font2" value="Arial"><font face="Arial">Arial</font> &nbsp;&nbsp; <input type="radio" name="font2" value="Comic Sans MS"><font face="Comic Sans MS">Comic Sans MS</font> &nbsp;&nbsp; <input type="radio" name="font2" value="Trebuchet MS"><font face="Trebuchet MS">Trebuchet MS</font> &nbsp;&nbsp; <input type="radio" name="font2" value="Verdana"><font face="Verdana" checked>Verdana</font><br>
+<input type="radio" name="font2" value="Arial Black"><font face="Arial Black">Arial Black</font> &nbsp;&nbsp; <input type="radio" name="font2" value="Impact"><font face="Impact">Impact</font><br>
+<input type="radio" name="font2" value="Courier New"><font face="Courier New">Courier New</font> &nbsp;&nbsp; <input type="radio" name="font2" value="Georgia"><font face="Georgia">Georgia</font> &nbsp;&nbsp;<input type="radio" name="font2" value="Times New Roman"><font face="Times New Roman">Times New Roman</font><br>
+<i>Note: Your second font should be selected from the same group as your first font. The second font only shows up if the first font is not on the viewer's computer.</i></p>
+
+<p><b>Internet Explorer (PC) Instructions:</b> When you press "Make Calendar," the calendar will be generated in a new window. Check to make sure there are no errors. If there are any errors, come back to this window and make the changes; then press "Make Calendar" again. If the calendar is all right, then go to the File menu at the top of the calendar page, then select Save As. Make certain under "Save as type:" the type is "Web Page, HTML only (*.htm,*.html)". Name the document the correct name with .htm or .html as the extension, make sure you know where you can find the file, and click on Save. Once you have saved the file, upload to your Web site in the same directory as the area home page.</p>
+
+<p><b>Netscape (PC) Instructions:</b> When you press "Make Calendar," the calendar will be generated in a new window. Check to make sure there are no errors. If there are any errors, come back to this window and make the changes; then press "Make Calendar" again. If the calendar is all right, then go to the File menu at the top of the calendar page, then select Save As. Make certain under "Save as type:" the type is "Plain Text (*.txt)". Name the document the correct name with .htm or .html as the extension, make sure you know where you can find the file, and click on Save. Once you have saved the file, upload to your Web site in the same directory as the area home page.</p>
+
+<p>Clicking the "New Calendar" button will clear this form.</p>
+<p><input type="button" value="make calendar" onClick="make();">&nbsp;<input type="reset" value="new calendar"></p>
+</font>
+</form>
+
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Calendars:  Deluxe Calendar Generator</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  18.00 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL DELUXE CALENDAR GENERATOR:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+&lt;!-- Original:  Nikola Vrtis (nikki@vrtisworks.com ) Matthew D. Krieg (battlebots102001@yahoo.com) --&gt;
+&lt;!-- Web Site:  http://www.vrtisworks.com/kiki/ --&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+function make()
+{
+
+var days = new Array("","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+for(i=0; i&lt;9; i++) {
+if(window.document.calendar_form.font1[i].checked == true)
+ var font1 = window.document.calendar_form.font1[i].value }
+
+for(i=0; i&lt;9; i++) {
+if(window.document.calendar_form.font2[i].checked == true)
+ var font2 = window.document.calendar_form.font2[i].value }
+
+var code = "";
+
+code += "&lt;html&gt;&lt;head&gt;&lt;title&gt;";
+
+code += window.document.calendar_form.name.value;
+
+code += "Events in ";
+
+var month = window.document.calendar_form.which_month.options[window.document.calendar_form.which_month.selectedIndex].text;
+
+code += month;
+
+code += " ";
+
+code += window.document.calendar_form.year.value;
+
+code += "&lt;/title&gt;&lt;/head&gt;\n&lt;body bgcolor=\"";
+
+code += window.document.calendar_form.color1.value;
+
+code += "\"&gt;\n";
+
+code += "&lt;center&gt;";
+
+code += "&lt;p&gt;&lt;font size=\"8pt\" color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" face=\"" + font1 + "," + font2 + "\"&gt;";
+
+code += window.document.calendar_form.name.value;
+
+code += "&lt;br&gt;\n";
+
+code += month;
+
+code += " ";
+
+code += window.document.calendar_form.year.value;
+
+code += "&lt;br&gt;\n";
+
+code += window.document.calendar_form.prod.value;
+
+code += " Events&lt;/font&gt;&lt;/p&gt;\n";
+
+code += "&lt;p&gt;&lt;font size=\"3pt\" color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" face=\"" + font1 + "," + font2 + "\"&gt;&lt;a href=\"";
+
+code += window.document.calendar_form.sect.value;
+
+code +="\"&gt;Return to Area Home Page&lt;/a&gt; &#166;&#166; &lt;a href=\"";
+
+code += window.document.calendar_form.home.value;
+
+code += "\"&gt;Return to Site Home Page&lt;/a&gt;&lt;/font&gt;&lt;/p&gt;\n";
+
+code += "&lt;table width=\"100%\" cellpadding=\"3\" cellspacing=\"1\" border=\"2\" bgcolor=\"#";
+
+code += window.document.calendar_form.color3.value;
+
+code += "\"&gt;\n";
+
+var num_of_days = parseInt(window.document.calendar_form.how_many_days.options[window.document.calendar_form.how_many_days.selectedIndex].text);
+
+var loop = 0;
+
+var day_loop = window.document.calendar_form.which_day.selectedIndex;
+
+while(loop&lt;num_of_days)
+
+{
+if(day_loop &gt;= days.length)
+
+{ day_loop = 1; }
+
+loop++;
+
+code += "&lt;tr&gt;\n";
+
+code += "&lt;td width=\"25%\"&gt;";
+
+code += "&lt;font color=\"#";
+
+code += window.document.calendar_form.color4.value;
+
+code += "\" size=\"4pt\" face=\"" + font1 + "," + font2 + "\"&gt;";
+
+code += days[day_loop];
+
+code += "  ~  ";
+
+code += window.document.calendar_form.which_month.selectedIndex;
+
+code += "/";
+
+code += loop;
+
+code += "/";
+
+code += window.document.calendar_form.year.value;
+
+code += "&lt;/font&gt;";
+
+code += "&lt;/td&gt;\n";
+
+code += "&lt;td&gt;";
+
+code += "&lt;font color=\"#";
+
+code += window.document.calendar_form.color4.value;
+
+code += "\" size=\"4pt\" face=\"" + font1 + "," + font2 + "\"&gt;";
+
+code += window.document.calendar_form.elements[loop+2].value;
+
+code += "&nbsp;&lt;/font&gt;";
+
+code += "&lt;/td&gt;\n";
+
+code += "&lt;/tr&gt;\n";
+
+day_loop++;
+
+}
+
+code += "&lt;/table&gt;\n";
+
+code += "&lt;p&gt;&lt;font size=\"3pt\" color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" face=\"" + font1 + "," + font2 + "\"&gt;&lt;a href=\"";
+
+code += window.document.calendar_form.sect.value;
+
+code +="\"&gt;Return to Area Home Page&lt;/a&gt; &#166;&#166; &lt;a href=\"";
+
+code += window.document.calendar_form.home.value;
+
+code += "\"&gt;Return to Site Home Page&lt;/a&gt;&lt;/font&gt;&lt;/p&gt;\n";
+
+code += "&lt;/center&gt;\n";
+
+code += "&lt;p&gt;&lt;font color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" size=\"4pt\" face=\"" + font1 + "," + font2 + "\"&gt;";
+
+code += window.document.calendar_form.note.value;
+
+code += "&lt;/font&gt;&lt;/p&gt;\n";
+
+code += "&lt;p&gt;&lt;font color=\"#";
+
+code += window.document.calendar_form.color2.value;
+
+code += "\" size=\"2pt\" face=\"" + font1 + "," + font2 + "\"&gt;Created with a calendar generator originally coded by Matthew D. Krieg (battlebots102001@yahoo.com) and modified by Nikola Vrtis (nikki@vrtisworks.com). The calendar generator and other scripts can be found at The JavaScript Source (www.javascriptsource.com).&lt;/font&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;\n";
+
+msgWindow=window.open("","displayWindow","toolbar=yes,width=640,height=480,directories=no,status=no,scrollbars=yes,resize=yes,menubar=yes");
+msgWindow.document.write(code);
+msgWindow.document.close();
+
+}
+
+function regular() {
+window.open("http://www.vrtisworks.com/kiki/fun/minical.htm","newWindow","toolbar=no,width=300,height=400,directories=no,status=no,scrollbars=yes,resize=yes,menubar=no")
+}
+
+&lt;/script&gt;
+
+
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;!-- Original:  Nikola Vrtis (nikki@vrtisworks.com ) --&gt;
+&lt;!-- Web Site:  http://www.vrtisworks.com/kiki/ --&gt;
+&lt;form&gt;Click here to open &lt;input type=button value="a reference calendar" onClick="regular()"&gt;&lt;/form&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Event input suggestions:&lt;/b&gt; If the event has an explanation, give it a brief title, followed by a colon (:), followed by the explanation. Separate events by typing &lt;br&gt; between the end of one event and the beginning of the next event (this puts the new event on its own line). HTML codes for bold and italic will also work.&lt;/p&gt;
+&lt;/font&gt;
+&lt;form name="calendar_form"&gt;
+
+&lt;table border="2" cellpadding="1" cellspacing="1" width="100%" bgcolor="#eeeeee"&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;Choose a month: &lt;select name="which_month"&gt;
+&lt;option&gt;select one
+&lt;option&gt;January
+&lt;option&gt;February
+&lt;option&gt;March
+&lt;option&gt;April
+&lt;option&gt;May
+&lt;option&gt;June
+&lt;option&gt;July
+&lt;option&gt;August
+&lt;option&gt;September
+&lt;option&gt;October
+&lt;option&gt;November
+&lt;option&gt;December
+&lt;/select&gt;&lt;/td&gt;
+
+&lt;td&gt;Number of days that month: &lt;select name="how_many_days"&gt;
+&lt;option&gt;select one
+&lt;option&gt;31
+&lt;option&gt;30
+&lt;option&gt;29
+&lt;option&gt;28
+&lt;/select&gt;&lt;/td&gt;
+
+&lt;td&gt;Day that the month starts on: &lt;select name="which_day"&gt;
+&lt;option&gt;select one
+&lt;option&gt;Sunday
+&lt;option&gt;Monday
+&lt;option&gt;Tuesday
+&lt;option&gt;Wednesday
+&lt;option&gt;Thursday
+&lt;option&gt;Friday
+&lt;option&gt;Saturday
+&lt;/select&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 1st? &lt;textarea name="on_1" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 2nd? &lt;textarea name="on_2" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 3rd? &lt;textarea name="on_3" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 4th? &lt;textarea name="on_4" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 5th? &lt;textarea name="on_5" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 6th? &lt;textarea name="on_6" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 7th? &lt;textarea name="on_7" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 8th? &lt;textarea name="on_8" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 9th? &lt;textarea name="on_9" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 10th? &lt;textarea name="on_10" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 11th? &lt;textarea name="on_11" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 12th? &lt;textarea name="on_12" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 13th? &lt;textarea name="on_13" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 14th? &lt;textarea name="on_14" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 15th? &lt;textarea name="on_15" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 16th? &lt;textarea name="on_16" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 17th? &lt;textarea name="on_17" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 18th? &lt;textarea name="on_18" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 19th? &lt;textarea name="on_19" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 20th? &lt;textarea name="on_20" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 21st? &lt;textarea name="on_21" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 22nd? &lt;textarea name="on_22" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 23th? &lt;textarea name="on_23" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 24th? &lt;textarea name="on_24" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 25th? &lt;textarea name="on_25" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 26th? &lt;textarea name="on_26" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 27th? &lt;textarea name="on_27" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 28th? &lt;textarea name="on_28" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 29th? &lt;textarea name="on_29" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td&gt;What happens on the 30th? &lt;textarea name="on_30" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;What happens on the 31st? &lt;textarea name="on_31" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;td colspan="2"&gt;&lt;p&gt;&lt;b&gt;The four-digit year for this calendar is:&lt;/b&gt;&lt;input type="text" size="4" maxlength="4" name="year"&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;font face="Arial,Helvetica"&gt;
+&lt;p&gt;&lt;b&gt;The name of the company or organization:&lt;/b&gt; &lt;input type="text" size="20" name="name"&gt;&lt;br&gt;&lt;i&gt;Note: OK to leave blank, but the title of the calendar will be a line lower than normal.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;These events are for this product or service type:&lt;/b&gt; &lt;input type="text" size="20" name="prod"&gt;&lt;br&gt;&lt;i&gt;Note: Use the singular form; leave blank if not associated with a product or service.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;The index page of this Web site:&lt;/b&gt; &lt;input type="text" size="10" name="home"&gt;&lt;br&gt;&lt;i&gt;Note: If the index page located in a different directory, you'll need to include that information; if you're not sure how to do that, put in the full URL of the index page, but do not include the &lt;b&gt;http://&lt;/b&gt; .&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;This page is associated with this area of the Web site:&lt;/b&gt; &lt;input type="text" size="10" name="sect"&gt;&lt;br&gt;&lt;i&gt;Note: Type in the area's home page name.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Text for the bottom of the calendar page:&lt;/b&gt; &lt;input type="text" size="30" name="note"&gt;&lt;br&gt;&lt;i&gt;Note: Include here any copyright information or contact information for your Web site; you may use HTML, but all &lt;b&gt;"&lt;/b&gt; should be written as &lt;b&gt;\"&lt;/b&gt; .&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Note: For the following color options, type in the hexadecimal code; do not include the # sign. Keep in mind that unvisited links will be blue and visited links will be purple - so if you pick 0000CC as your page background, the unvisited links will be invisible, and if you pick 660099 as your page background, the visited links will be invisible. If you need helping choosing colors, &lt;a href="http://www.vrtisworks.com/kiki/fun/color.htm" target="_blank"&gt;please open this page&lt;/a&gt; (a new page will open in front of this one).&lt;/i&gt;&lt;br&gt;
+&lt;b&gt;Color for background of page:&lt;/b&gt;&lt;input type="text" size="6" maxlength="6" name="color1"&gt;&lt;br&gt;
+&lt;b&gt;Color for text outside of calendar:&lt;/b&gt;&lt;input type="text" size="6" maxlength="6" name="color2"&gt;&lt;br&gt;
+&lt;b&gt;Color of calendar:&lt;/b&gt;&lt;input type="text" size="6" maxlength="6" name="color3"&gt;&lt;br&gt;
+&lt;b&gt;Color for text inside of calendar:&lt;/b&gt;&lt;input type="text" size="6" maxlength="6" name="color4"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Choose your first choice for the text font:&lt;/b&gt;&lt;br&gt;
+&lt;input type="radio" name="font1" value="Arial" checked&gt;&lt;font face="Arial"&gt;Arial&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font1" value="Comic Sans MS"&gt;&lt;font face="Comic Sans MS"&gt;Comic Sans MS&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font1" value="Trebuchet MS"&gt;&lt;font face="Trebuchet MS"&gt;Trebuchet MS&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font1" value="Verdana"&gt;&lt;font face="Verdana"&gt;Verdana&lt;/font&gt;&lt;br&gt;
+&lt;input type="radio" name="font1" value="Arial Black"&gt;&lt;font face="Arial Black"&gt;Arial Black&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font1" value="Impact"&gt;&lt;font face="Impact"&gt;Impact&lt;/font&gt;&lt;br&gt;
+&lt;input type="radio" name="font1" value="Courier New"&gt;&lt;font face="Courier New"&gt;Courier New&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font1" value="Georgia"&gt;&lt;font face="Georgia"&gt;Georgia&lt;/font&gt; &nbsp;&nbsp;&lt;input type="radio" name="font1" value="Times New Roman"&gt;&lt;font face="Times New Roman"&gt;Times New Roman&lt;/font&gt;&lt;br&gt;
+&lt;i&gt;Note: Fonts have been grouped by similarity. If two selections look the same, that means that you do not have one or more fonts installed. (Chances are that the missing fonts will look like Times New Roman or Arial.)&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Choose your second choice for the text font:&lt;/b&gt;&lt;br&gt;
+&lt;input type="radio" name="font2" value="Arial"&gt;&lt;font face="Arial"&gt;Arial&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font2" value="Comic Sans MS"&gt;&lt;font face="Comic Sans MS"&gt;Comic Sans MS&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font2" value="Trebuchet MS"&gt;&lt;font face="Trebuchet MS"&gt;Trebuchet MS&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font2" value="Verdana"&gt;&lt;font face="Verdana" checked&gt;Verdana&lt;/font&gt;&lt;br&gt;
+&lt;input type="radio" name="font2" value="Arial Black"&gt;&lt;font face="Arial Black"&gt;Arial Black&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font2" value="Impact"&gt;&lt;font face="Impact"&gt;Impact&lt;/font&gt;&lt;br&gt;
+&lt;input type="radio" name="font2" value="Courier New"&gt;&lt;font face="Courier New"&gt;Courier New&lt;/font&gt; &nbsp;&nbsp; &lt;input type="radio" name="font2" value="Georgia"&gt;&lt;font face="Georgia"&gt;Georgia&lt;/font&gt; &nbsp;&nbsp;&lt;input type="radio" name="font2" value="Times New Roman"&gt;&lt;font face="Times New Roman"&gt;Times New Roman&lt;/font&gt;&lt;br&gt;
+&lt;i&gt;Note: Your second font should be selected from the same group as your first font. The second font only shows up if the first font is not on the viewer's computer.&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Internet Explorer (PC) Instructions:&lt;/b&gt; When you press "Make Calendar," the calendar will be generated in a new window. Check to make sure there are no errors. If there are any errors, come back to this window and make the changes; then press "Make Calendar" again. If the calendar is all right, then go to the File menu at the top of the calendar page, then select Save As. Make certain under "Save as type:" the type is "Web Page, HTML only (*.htm,*.html)". Name the document the correct name with .htm or .html as the extension, make sure you know where you can find the file, and click on Save. Once you have saved the file, upload to your Web site in the same directory as the area home page.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Netscape (PC) Instructions:&lt;/b&gt; When you press "Make Calendar," the calendar will be generated in a new window. Check to make sure there are no errors. If there are any errors, come back to this window and make the changes; then press "Make Calendar" again. If the calendar is all right, then go to the File menu at the top of the calendar page, then select Save As. Make certain under "Save as type:" the type is "Plain Text (*.txt)". Name the document the correct name with .htm or .html as the extension, make sure you know where you can find the file, and click on Save. Once you have saved the file, upload to your Web site in the same directory as the area home page.&lt;/p&gt;
+
+&lt;p&gt;Clicking the "New Calendar" button will clear this form.&lt;/p&gt;
+&lt;p&gt;&lt;input type="button" value="make calendar" onClick="make();"&gt;&nbsp;&lt;input type="reset" value="new calendar"&gt;&lt;/p&gt;
+&lt;/font&gt;
+&lt;/form&gt;
+
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  18.00 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calendars/deluxe-calendar-generator.html/453165765/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_IT_IMS_1t/it-ims-spring03-125x600.gif"  ALT="Increasing Quality Through IT Sourcing & Services"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calendars/deluxe-calendar-generator.html/453165765/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='deluxe-calendar-generator.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calendars/deluxe-calendar-generator.html/69964558/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calendars/deluxe-calendar-generator.html/69964558/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>
+

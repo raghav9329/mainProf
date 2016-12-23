@@ -17,8 +17,14 @@ source ~/.bashrc
 #export PATH=$PATH:/Users/maatkins/tools/gradle-2.4/bin
 # from setting up bash profile for team 2 developer
 
-echo sourcing Volumes-dev-svb_vagrant-tools-bash_profile.sh 
-source /Volumes/dev/svb-vagrant/tools/bash_profile.sh
+#echo sourcing Volumes-dev-svb_vagrant-tools-bash_profile.sh 
+#source /Volumes/dev/svb-vagrant/tools/bash_profile.sh
+# 12/21/16 bit of a change after checking out new svb-vagrant repo.
+# the bash_profile.sh file and the rest of the tools dir went away.
+echo sourcing the vagrant bashprofile file
+source /Users/maatkins/.fmrVagRepo_bash_profile.sh
+
+
 # the following is a test, this line taken out of the 
 # vagrant/toos/bash_profile at line #93  
 # I want what is below not what is at #93

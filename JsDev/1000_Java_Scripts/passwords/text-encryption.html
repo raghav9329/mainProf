@@ -1,0 +1,896 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Password Protection:  Text Encryption</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="date" CONTENT="2000-09-09">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Tomislav Sereg (tsereg@net.hr)">
+<META NAME="section" CONTENT="Password Protection">
+<META NAME="description" CONTENT="This JavaScript library provides encryption using simple, text-oriented method called column transposition. The idea is to write the plain text in block on the row-first bases. The text is then read column-first. The trick is in that the columns are not read from left to right, but in the order specified by the encryption key. Transliteration is also used.">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Tomislav Sereg (tsereg@net.hr) -->
+<!-- Web Site:  http://www.inet.hr/~tsereg/jse -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function doSecure() {
+alert( 'JavaScript 1.2 or above required.' );
+}
+function doUnsecure() {
+alert( 'JavaScript 1.2 or above required.' );
+}
+// End -->
+</script>
+<script language="JavaScript1.2">
+<!-- Begin
+function permutationGenerator(nNumElements) {
+this.nNumElements     = nNumElements;
+this.antranspositions = new Array;
+var k = 0;
+for (i = 0; i < nNumElements - 1; i++)
+for (j = i + 1; j < nNumElements; j++)
+this.antranspositions[ k++ ] = ( i << 8 ) | j;
+// keep two positions as lo and hi byte!
+this.nNumtranspositions = k;
+this.fromCycle = permutationGenerator_fromCycle;
+}
+function permutationGenerator_fromCycle(anCycle) {
+var anpermutation = new Array(this.nNumElements);
+for (var i = 0; i < this.nNumElements; i++) anpermutation[i] = i;
+for (var i = 0; i < anCycle.length; i++) {
+var nT = this.antranspositions[anCycle[i]];
+var n1 = nT & 255;
+var n2 = (nT >> 8) & 255;
+nT = anpermutation[n1];
+anpermutation[n1] = anpermutation[n2];
+anpermutation[n2] = nT;
+}
+return anpermutation;
+}
+function password(strpasswd) {
+this.strpasswd = strpasswd;
+this.getHashValue   = password_getHashValue;
+this.getpermutation = password_getpermutation;
+}
+function password_getHashValue() {
+var m = 907633409;
+var a = 65599;
+var h = 0;
+for (var i = 0; i < this.strpasswd.length; i++) 
+h = (h % m) * a + this.strpasswd.charCodeAt(i);
+return h;
+}
+function password_getpermutation() {
+var nNUMELEMENTS = 13;
+var nCYCLELENGTH = 21;
+pg = new permutationGenerator(nNUMELEMENTS);
+var anCycle = new Array(nCYCLELENGTH);
+var npred   = this.getHashValue();
+for (var i = 0; i < nCYCLELENGTH; i++) {
+npred = 314159269 * npred + 907633409;
+anCycle[i] = npred % pg.nNumtranspositions;
+}
+return pg.fromCycle(anCycle);
+}
+function SecureContext(strText, strSignature, bEscape) {
+this.strSIGNATURE = strSignature || '';
+this.bESCApE      = bEscape || false;
+this.strText = strText;
+this.escape        = SecureContext_escape;
+this.unescape      = SecureContext_unescape;
+this.transliterate = SecureContext_transliterate;
+this.encypher      = SecureContext_encypher;
+this.decypher      = SecureContext_decypher;
+this.sign          = SecureContext_sign;
+this.unsign        = SecureContext_unsign;
+this.secure   = SecureContext_secure;
+this.unsecure = SecureContext_unsecure;
+}
+function SecureContext_escape(strToEscape) {
+var strEscaped = '';
+for (var i = 0; i < strToEscape.length; i++) {
+var chT = strToEscape.charAt( i );
+switch(chT) {
+case '\r': strEscaped += '\\r'; break;
+case '\n': strEscaped += '\\n'; break;
+case '\\': strEscaped += '\\\\'; break;
+default: strEscaped += chT;
+   }
+}
+return strEscaped;
+}
+function SecureContext_unescape(strToUnescape) {
+var strUnescaped = '';
+var i = 0;
+while (i < strToUnescape.length) {
+var chT = strToUnescape.charAt(i++);
+if ('\\' == chT) {
+chT = strToUnescape.charAt( i++ );
+switch( chT ) {
+case 'r': strUnescaped += '\r'; break;
+case 'n': strUnescaped += '\n'; break;
+case '\\': strUnescaped += '\\'; break;
+default: // not possible
+   }
+}
+else strUnescaped += chT;
+}
+return strUnescaped;
+}
+function SecureContext_transliterate(btransliterate) {
+var strDest = '';
+
+var nTextIter  = 0;
+var nTexttrail = 0;
+
+while (nTextIter < this.strText.length) {
+var strRun = '';
+var cSkipped   = 0;
+while (cSkipped < 7 && nTextIter < this.strText.length) {
+var chT = this.strText.charAt(nTextIter++);
+if (-1 == strRun.indexOf(chT)) {
+strRun += chT;
+cSkipped = 0;
+}
+else cSkipped++;
+}
+while (nTexttrail < nTextIter) {
+var nRunIdx = strRun.indexOf(this.strText.charAt(nTexttrail++));
+if (btransliterate) {
+nRunIdx++
+if (nRunIdx == strRun.length) nRunIdx = 0;
+}
+else {
+nRunIdx--;
+if (nRunIdx == -1) nRunIdx += strRun.length;
+}
+strDest += strRun.charAt(nRunIdx);
+   }
+}
+this.strText = strDest;
+}
+function SecureContext_encypher(anperm) {
+var strEncyph = '';
+var nCols     = anperm.length;
+var nRows     = this.strText.length / nCols;
+for (var i = 0; i < nCols; i++) {
+var k = anperm[ i ];
+for (var j = 0; j < nRows; j++) {
+strEncyph += this.strText.charAt(k);
+k         += nCols;
+   }
+}
+this.strText = strEncyph;
+}
+function SecureContext_decypher(anperm) {
+var nRows    = anperm.length;
+var nCols    = this.strText.length / nRows;
+var anRowOfs = new Array;
+for (var i = 0 ; i < nRows; i++) anRowOfs[ anperm[ i ] ] = i * nCols;
+var strplain = '';
+for (var i = 0; i < nCols; i++) {
+for (var j = 0; j < nRows; j++)
+strplain += this.strText.charAt(anRowOfs[ j ] + i);
+}
+this.strText = strplain;
+}
+function SecureContext_sign(nCols) {
+if (this.bESCApE) {
+this.strText      = this.escape(this.strText);
+this.strSIGNATURE = this.escape(this.strSIGNATURE);
+}
+var nTextLen     = this.strText.length + this.strSIGNATURE.length;
+var nMissingCols = nCols - (nTextLen % nCols);
+var strpadding   = '';  
+if (nMissingCols < nCols)
+for (var i = 0; i < nMissingCols; i++) strpadding += ' ';
+var x = this.strText.length;
+this.strText +=  strpadding + this.strSIGNATURE;
+}
+function SecureContext_unsign(nCols) {
+if (this.bESCApE) {
+this.strText      = this.unescape(this.strText);
+this.strSIGNATURE = this.unescape(this.strSIGNATURE);
+}
+if ('' == this.strSIGNATURE) return true;
+var nTextLen = this.strText.lastIndexOf(this.strSIGNATURE);
+if (-1 == nTextLen) return false;
+this.strText = this.strText.substr(0, nTextLen);
+return true;
+}
+function SecureContext_secure(strpasswd) {
+var passwd = new password(strpasswd);
+var anperm   = passwd.getpermutation()
+this.sign(anperm.length);
+this.transliterate(true);
+this.encypher(anperm);
+}
+function SecureContext_unsecure(strpasswd) {
+var passwd = new password(strpasswd);
+var anperm = passwd.getpermutation()
+this.decypher(anperm);
+this.transliterate(false);
+return this.unsign(anperm.length);
+}
+// End -->
+</script>
+
+<script language="JavaScript1.2">
+<!-- Begin
+function doSecure() {
+var sc = new SecureContext(document.frmSecurity.txtUnsecure.value, 
+document.frmSecurity.txtSign.value, document.frmSecurity.chkNewLines.checked);
+sc.secure(document.frmSecurity.txtPassw.value);
+document.frmSecurity.txtSecure.value = sc.strText;
+document.frmSecurity.txtUnsecure.value = '';
+}
+function doUnsecure() {
+var sc = new SecureContext(document.frmSecurity.txtSecure.value, 
+document.frmSecurity.txtSign.value, document.frmSecurity.chkNewLines.checked);
+if (!sc.unsecure(document.frmSecurity.txtPassw.value)) 
+alert('Invalid password used.');
+document.frmSecurity.txtSecure.value = '';
+document.frmSecurity.txtUnsecure.value = sc.strText;
+}
+//  End -->
+</script>
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=787V20021114144641&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=158V20021115201354&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/passwords/text-encryption.html/772196116/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_IDE_Blue_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Password Protection</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Text Encryption</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+This JavaScript library provides encryption using simple, text-oriented method called column transposition. The idea is to write the plain text in block on the row-first bases. The text is then read column-first. The trick is in that the columns are not read from left to right, but in the order specified by the encryption key. Transliteration is also used.
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<center>
+<table border=1>
+<tr>
+<td>Instructions:<p>
+<ol>
+<li>Input the password into the password field.</li>
+<li>Optionally, input the signature into the signature field:</li>
+<li>Input the plain text into the plain text field.</li>
+<li>Press the SECURE button and observe the encrypted text.</li>
+<li>Press the UNSECURE button and look at the decrypted text.</li>
+<li>Check the 'new lines used' if you used new lines in the plain text</li>
+</ol>
+<form name=frmSecurity>
+<p>Password: <input type=text name=txtPassw size=20 value="12345678">
+Optional signature: <input type=text name=txtSign size=20><br>
+<input type=checkbox name=chkNewLines value="1"> New lines used</p>
+<table border=0>
+<tr>
+<td><p>Plain text:</p></td>
+<td></td>
+<td><p>Encrypted text:</p></td>
+</tr>
+<tr>
+<td><textarea rows=4 name=txtUnsecure cols=20 wrap=virtual>the quick brown fox jumps over the lazy dog</textarea></td>
+<td align=center><input type=button value="SECURE &gt;&gt;"
+name=btnSecure onclick="doSecure()"><br>
+<input type=button value="&lt;&lt; UNSECURE"
+name=btnUnsecure onclick="doUnsecure()"></td>
+<td><textarea rows=4 name=txtSecure cols=20 wrap=virtual></textarea></td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</center>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Password Protection:  Text Encryption</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Apple-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  8.32 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL TEXT ENCRYPTION:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Original:  Tomislav Sereg (tsereg@net.hr) --&gt;
+&lt;!-- Web Site:  http://www.inet.hr/~tsereg/jse --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+function doSecure() {
+alert( 'JavaScript 1.2 or above required.' );
+}
+function doUnsecure() {
+alert( 'JavaScript 1.2 or above required.' );
+}
+// End --&gt;
+&lt;/script&gt;
+&lt;script language="JavaScript1.2"&gt;
+&lt;!-- Begin
+function permutationGenerator(nNumElements) {
+this.nNumElements     = nNumElements;
+this.antranspositions = new Array;
+var k = 0;
+for (i = 0; i &lt; nNumElements - 1; i++)
+for (j = i + 1; j &lt; nNumElements; j++)
+this.antranspositions[ k++ ] = ( i &lt;&lt; 8 ) | j;
+// keep two positions as lo and hi byte!
+this.nNumtranspositions = k;
+this.fromCycle = permutationGenerator_fromCycle;
+}
+function permutationGenerator_fromCycle(anCycle) {
+var anpermutation = new Array(this.nNumElements);
+for (var i = 0; i &lt; this.nNumElements; i++) anpermutation[i] = i;
+for (var i = 0; i &lt; anCycle.length; i++) {
+var nT = this.antranspositions[anCycle[i]];
+var n1 = nT & 255;
+var n2 = (nT &gt;&gt; 8) & 255;
+nT = anpermutation[n1];
+anpermutation[n1] = anpermutation[n2];
+anpermutation[n2] = nT;
+}
+return anpermutation;
+}
+function password(strpasswd) {
+this.strpasswd = strpasswd;
+this.getHashValue   = password_getHashValue;
+this.getpermutation = password_getpermutation;
+}
+function password_getHashValue() {
+var m = 907633409;
+var a = 65599;
+var h = 0;
+for (var i = 0; i &lt; this.strpasswd.length; i++) 
+h = (h % m) * a + this.strpasswd.charCodeAt(i);
+return h;
+}
+function password_getpermutation() {
+var nNUMELEMENTS = 13;
+var nCYCLELENGTH = 21;
+pg = new permutationGenerator(nNUMELEMENTS);
+var anCycle = new Array(nCYCLELENGTH);
+var npred   = this.getHashValue();
+for (var i = 0; i &lt; nCYCLELENGTH; i++) {
+npred = 314159269 * npred + 907633409;
+anCycle[i] = npred % pg.nNumtranspositions;
+}
+return pg.fromCycle(anCycle);
+}
+function SecureContext(strText, strSignature, bEscape) {
+this.strSIGNATURE = strSignature || '';
+this.bESCApE      = bEscape || false;
+this.strText = strText;
+this.escape        = SecureContext_escape;
+this.unescape      = SecureContext_unescape;
+this.transliterate = SecureContext_transliterate;
+this.encypher      = SecureContext_encypher;
+this.decypher      = SecureContext_decypher;
+this.sign          = SecureContext_sign;
+this.unsign        = SecureContext_unsign;
+this.secure   = SecureContext_secure;
+this.unsecure = SecureContext_unsecure;
+}
+function SecureContext_escape(strToEscape) {
+var strEscaped = '';
+for (var i = 0; i &lt; strToEscape.length; i++) {
+var chT = strToEscape.charAt( i );
+switch(chT) {
+case '\r': strEscaped += '\\r'; break;
+case '\n': strEscaped += '\\n'; break;
+case '\\': strEscaped += '\\\\'; break;
+default: strEscaped += chT;
+   }
+}
+return strEscaped;
+}
+function SecureContext_unescape(strToUnescape) {
+var strUnescaped = '';
+var i = 0;
+while (i &lt; strToUnescape.length) {
+var chT = strToUnescape.charAt(i++);
+if ('\\' == chT) {
+chT = strToUnescape.charAt( i++ );
+switch( chT ) {
+case 'r': strUnescaped += '\r'; break;
+case 'n': strUnescaped += '\n'; break;
+case '\\': strUnescaped += '\\'; break;
+default: // not possible
+   }
+}
+else strUnescaped += chT;
+}
+return strUnescaped;
+}
+function SecureContext_transliterate(btransliterate) {
+var strDest = '';
+
+var nTextIter  = 0;
+var nTexttrail = 0;
+
+while (nTextIter &lt; this.strText.length) {
+var strRun = '';
+var cSkipped   = 0;
+while (cSkipped &lt; 7 && nTextIter &lt; this.strText.length) {
+var chT = this.strText.charAt(nTextIter++);
+if (-1 == strRun.indexOf(chT)) {
+strRun += chT;
+cSkipped = 0;
+}
+else cSkipped++;
+}
+while (nTexttrail &lt; nTextIter) {
+var nRunIdx = strRun.indexOf(this.strText.charAt(nTexttrail++));
+if (btransliterate) {
+nRunIdx++
+if (nRunIdx == strRun.length) nRunIdx = 0;
+}
+else {
+nRunIdx--;
+if (nRunIdx == -1) nRunIdx += strRun.length;
+}
+strDest += strRun.charAt(nRunIdx);
+   }
+}
+this.strText = strDest;
+}
+function SecureContext_encypher(anperm) {
+var strEncyph = '';
+var nCols     = anperm.length;
+var nRows     = this.strText.length / nCols;
+for (var i = 0; i &lt; nCols; i++) {
+var k = anperm[ i ];
+for (var j = 0; j &lt; nRows; j++) {
+strEncyph += this.strText.charAt(k);
+k         += nCols;
+   }
+}
+this.strText = strEncyph;
+}
+function SecureContext_decypher(anperm) {
+var nRows    = anperm.length;
+var nCols    = this.strText.length / nRows;
+var anRowOfs = new Array;
+for (var i = 0 ; i &lt; nRows; i++) anRowOfs[ anperm[ i ] ] = i * nCols;
+var strplain = '';
+for (var i = 0; i &lt; nCols; i++) {
+for (var j = 0; j &lt; nRows; j++)
+strplain += this.strText.charAt(anRowOfs[ j ] + i);
+}
+this.strText = strplain;
+}
+function SecureContext_sign(nCols) {
+if (this.bESCApE) {
+this.strText      = this.escape(this.strText);
+this.strSIGNATURE = this.escape(this.strSIGNATURE);
+}
+var nTextLen     = this.strText.length + this.strSIGNATURE.length;
+var nMissingCols = nCols - (nTextLen % nCols);
+var strpadding   = '';  
+if (nMissingCols &lt; nCols)
+for (var i = 0; i &lt; nMissingCols; i++) strpadding += ' ';
+var x = this.strText.length;
+this.strText +=  strpadding + this.strSIGNATURE;
+}
+function SecureContext_unsign(nCols) {
+if (this.bESCApE) {
+this.strText      = this.unescape(this.strText);
+this.strSIGNATURE = this.unescape(this.strSIGNATURE);
+}
+if ('' == this.strSIGNATURE) return true;
+var nTextLen = this.strText.lastIndexOf(this.strSIGNATURE);
+if (-1 == nTextLen) return false;
+this.strText = this.strText.substr(0, nTextLen);
+return true;
+}
+function SecureContext_secure(strpasswd) {
+var passwd = new password(strpasswd);
+var anperm   = passwd.getpermutation()
+this.sign(anperm.length);
+this.transliterate(true);
+this.encypher(anperm);
+}
+function SecureContext_unsecure(strpasswd) {
+var passwd = new password(strpasswd);
+var anperm = passwd.getpermutation()
+this.decypher(anperm);
+this.transliterate(false);
+return this.unsign(anperm.length);
+}
+// End --&gt;
+&lt;/script&gt;
+
+&lt;script language="JavaScript1.2"&gt;
+&lt;!-- Begin
+function doSecure() {
+var sc = new SecureContext(document.frmSecurity.txtUnsecure.value, 
+document.frmSecurity.txtSign.value, document.frmSecurity.chkNewLines.checked);
+sc.secure(document.frmSecurity.txtPassw.value);
+document.frmSecurity.txtSecure.value = sc.strText;
+document.frmSecurity.txtUnsecure.value = '';
+}
+function doUnsecure() {
+var sc = new SecureContext(document.frmSecurity.txtSecure.value, 
+document.frmSecurity.txtSign.value, document.frmSecurity.chkNewLines.checked);
+if (!sc.unsecure(document.frmSecurity.txtPassw.value)) 
+alert('Invalid password used.');
+document.frmSecurity.txtSecure.value = '';
+document.frmSecurity.txtUnsecure.value = sc.strText;
+}
+//  End --&gt;
+&lt;/script&gt;
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;center&gt;
+&lt;table border=1&gt;
+&lt;tr&gt;
+&lt;td&gt;Instructions:&lt;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Input the password into the password field.&lt;/li&gt;
+&lt;li&gt;Optionally, input the signature into the signature field:&lt;/li&gt;
+&lt;li&gt;Input the plain text into the plain text field.&lt;/li&gt;
+&lt;li&gt;Press the SECURE button and observe the encrypted text.&lt;/li&gt;
+&lt;li&gt;Press the UNSECURE button and look at the decrypted text.&lt;/li&gt;
+&lt;li&gt;Check the 'new lines used' if you used new lines in the plain text&lt;/li&gt;
+&lt;/ol&gt;
+&lt;form name=frmSecurity&gt;
+&lt;p&gt;Password: &lt;input type=text name=txtPassw size=20 value="12345678"&gt;
+Optional signature: &lt;input type=text name=txtSign size=20&gt;&lt;br&gt;
+&lt;input type=checkbox name=chkNewLines value="1"&gt; New lines used&lt;/p&gt;
+&lt;table border=0&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;p&gt;Plain text:&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Encrypted text:&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;textarea rows=4 name=txtUnsecure cols=20 wrap=virtual&gt;the quick brown fox jumps over the lazy dog&lt;/textarea&gt;&lt;/td&gt;
+&lt;td align=center&gt;&lt;input type=button value="SECURE &gt;&gt;"
+name=btnSecure onclick="doSecure()"&gt;&lt;br&gt;
+&lt;input type=button value="&lt;&lt; UNSECURE"
+name=btnUnsecure onclick="doUnsecure()"&gt;&lt;/td&gt;
+&lt;td&gt;&lt;textarea rows=4 name=txtSecure cols=20 wrap=virtual&gt;&lt;/textarea&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+<p><center>
+<font face="arial, helvetica" size="-2">Free JavaScripts provided<br>
+by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
+</center><p>
+
+&lt;!-- Script Size:  8.32 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/passwords/text-encryption.html/1196498766/125x800/House_Commerce_Partners_4l/Commerce125x600_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Commerce_Partners_4l/Commerce125x600_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/passwords/text-encryption.html/1196498766/125x800/House_Commerce_Partners_4l/Commerce125x600_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='text-encryption.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/passwords/text-encryption.html/1525984936/468x60-2/House_IT_IMS_1o/it-ims-spring03-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_IT_IMS_1o/it-ims-spring03-750.gif"  ALT="Increasing Quality Through IT Sourcing & Services"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/passwords/text-encryption.html/1525984936/468x60-2/House_IT_IMS_1o/it-ims-spring03-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

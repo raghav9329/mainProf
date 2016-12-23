@@ -1,0 +1,851 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Page Details:  Color Picker</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="date" CONTENT="2000-09-09">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Luis Romero (luisromero7987@aol.com)">
+<META NAME="section" CONTENT="Page Details">
+<META NAME="description" CONTENT="Uses an imagemap to allow you to select any color box and see the hexadecimal html value for that color.">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Luis Romero (luisromero7987@aol.com) -->
+<!-- Web Site:  http://www.geocities.com/lr7987 -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function showColor(val) {
+document.colorform.hexval.value = val;
+}
+//  End -->
+</script>
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=787V20021114144641&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=158V20021115201354&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=787V20021114144641&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/page-details/color-picker.html/1215359763/468x60-1/Microsoft_Canada_VS_4c/MsftVSnet_IDE_Blue_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Page Details</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Color Picker</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Uses an imagemap to allow you to select any color box and see the hexadecimal html value for that color.
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<center>
+<form name=colorform>
+Color Picker<br>
+<map name="colmap">
+<area shape="rect" coords="1,1,7,10" href="javascript:showColor('color-picker.html#00FF00')">
+<area shape="rect" coords="9,1,15,10" href="javascript:showColor('color-picker.html#00FF33')">
+<area shape="rect" coords="17,1,23,10" href="javascript:showColor('color-picker.html#00FF66')">
+<area shape="rect" coords="25,1,31,10" href="javascript:showColor('color-picker.html#00FF99')">
+<area shape="rect" coords="33,1,39,10" href="javascript:showColor('color-picker.html#00FFCC')">
+<area shape="rect" coords="41,1,47,10" href="javascript:showColor('color-picker.html#00FFFF')">
+<area shape="rect" coords="49,1,55,10" href="javascript:showColor('color-picker.html#33FF00')">
+<area shape="rect" coords="57,1,63,10" href="javascript:showColor('color-picker.html#33FF33')">
+<area shape="rect" coords="65,1,71,10" href="javascript:showColor('color-picker.html#33FF66')">
+<area shape="rect" coords="73,1,79,10" href="javascript:showColor('color-picker.html#33FF99')">
+<area shape="rect" coords="81,1,87,10" href="javascript:showColor('color-picker.html#33FFCC')">
+<area shape="rect" coords="89,1,95,10" href="javascript:showColor('color-picker.html#33FFFF')">
+<area shape="rect" coords="97,1,103,10" href="javascript:showColor('color-picker.html#66FF00')">
+<area shape="rect" coords="105,1,111,10" href="javascript:showColor('color-picker.html#66FF33')">
+<area shape="rect" coords="113,1,119,10" href="javascript:showColor('color-picker.html#66FF66')">
+<area shape="rect" coords="121,1,127,10" href="javascript:showColor('color-picker.html#66FF99')">
+<area shape="rect" coords="129,1,135,10" href="javascript:showColor('color-picker.html#66FFCC')">
+<area shape="rect" coords="137,1,143,10" href="javascript:showColor('color-picker.html#66FFFF')">
+<area shape="rect" coords="145,1,151,10" href="javascript:showColor('color-picker.html#99FF00')">
+<area shape="rect" coords="153,1,159,10" href="javascript:showColor('color-picker.html#99FF33')">
+<area shape="rect" coords="161,1,167,10" href="javascript:showColor('color-picker.html#99FF66')">
+<area shape="rect" coords="169,1,175,10" href="javascript:showColor('color-picker.html#99FF99')">
+<area shape="rect" coords="177,1,183,10" href="javascript:showColor('color-picker.html#99FFCC')">
+<area shape="rect" coords="185,1,191,10" href="javascript:showColor('color-picker.html#99FFFF')">
+<area shape="rect" coords="193,1,199,10" href="javascript:showColor('color-picker.html#CCFF00')">
+<area shape="rect" coords="201,1,207,10" href="javascript:showColor('color-picker.html#CCFF33')">
+<area shape="rect" coords="209,1,215,10" href="javascript:showColor('color-picker.html#CCFF66')">
+<area shape="rect" coords="217,1,223,10" href="javascript:showColor('color-picker.html#CCFF99')">
+<area shape="rect" coords="225,1,231,10" href="javascript:showColor('color-picker.html#CCFFCC')">
+<area shape="rect" coords="233,1,239,10" href="javascript:showColor('color-picker.html#CCFFFF')">
+<area shape="rect" coords="241,1,247,10" href="javascript:showColor('color-picker.html#FFFF00')">
+<area shape="rect" coords="249,1,255,10" href="javascript:showColor('color-picker.html#FFFF33')">
+<area shape="rect" coords="257,1,263,10" href="javascript:showColor('color-picker.html#FFFF66')">
+<area shape="rect" coords="265,1,271,10" href="javascript:showColor('color-picker.html#FFFF99')">
+<area shape="rect" coords="273,1,279,10" href="javascript:showColor('color-picker.html#FFFFCC')">
+<area shape="rect" coords="281,1,287,10" href="javascript:showColor('color-picker.html#FFFFFF')">
+<area shape="rect" coords="1,12,7,21" href="javascript:showColor('color-picker.html#00CC00')">
+<area shape="rect" coords="9,12,15,21" href="javascript:showColor('color-picker.html#00CC33')">
+<area shape="rect" coords="17,12,23,21" href="javascript:showColor('color-picker.html#00CC66')">
+<area shape="rect" coords="25,12,31,21" href="javascript:showColor('color-picker.html#00CC99')">
+<area shape="rect" coords="33,12,39,21" href="javascript:showColor('color-picker.html#00CCCC')">
+<area shape="rect" coords="41,12,47,21" href="javascript:showColor('color-picker.html#00CCFF')">
+<area shape="rect" coords="49,12,55,21" href="javascript:showColor('color-picker.html#33CC00')">
+<area shape="rect" coords="57,12,63,21" href="javascript:showColor('color-picker.html#33CC33')">
+<area shape="rect" coords="65,12,71,21" href="javascript:showColor('color-picker.html#33CC66')">
+<area shape="rect" coords="73,12,79,21" href="javascript:showColor('color-picker.html#33CC99')">
+<area shape="rect" coords="81,12,87,21" href="javascript:showColor('color-picker.html#33CCCC')">
+<area shape="rect" coords="89,12,95,21" href="javascript:showColor('color-picker.html#33CCFF')">
+<area shape="rect" coords="97,12,103,21" href="javascript:showColor('color-picker.html#66CC00')">
+<area shape="rect" coords="105,12,111,21" href="javascript:showColor('color-picker.html#66CC33')">
+<area shape="rect" coords="113,12,119,21" href="javascript:showColor('color-picker.html#66CC66')">
+<area shape="rect" coords="121,12,127,21" href="javascript:showColor('color-picker.html#66CC99')">
+<area shape="rect" coords="129,12,135,21" href="javascript:showColor('color-picker.html#66CCCC')">
+<area shape="rect" coords="137,12,143,21" href="javascript:showColor('color-picker.html#66CCFF')">
+<area shape="rect" coords="145,12,151,21" href="javascript:showColor('color-picker.html#99CC00')">
+<area shape="rect" coords="153,12,159,21" href="javascript:showColor('color-picker.html#99CC33')">
+<area shape="rect" coords="161,12,167,21" href="javascript:showColor('color-picker.html#99CC66')">
+<area shape="rect" coords="169,12,175,21" href="javascript:showColor('color-picker.html#99CC99')">
+<area shape="rect" coords="177,12,183,21" href="javascript:showColor('color-picker.html#99CCCC')">
+<area shape="rect" coords="185,12,191,21" href="javascript:showColor('color-picker.html#99CCFF')">
+<area shape="rect" coords="193,12,199,21" href="javascript:showColor('color-picker.html#CCCC00')">
+<area shape="rect" coords="201,12,207,21" href="javascript:showColor('color-picker.html#CCCC33')">
+<area shape="rect" coords="209,12,215,21" href="javascript:showColor('color-picker.html#CCCC66')">
+<area shape="rect" coords="217,12,223,21" href="javascript:showColor('color-picker.html#CCCC99')">
+<area shape="rect" coords="225,12,231,21" href="javascript:showColor('color-picker.html#CCCCCC')">
+<area shape="rect" coords="233,12,239,21" href="javascript:showColor('color-picker.html#CCCCFF')">
+<area shape="rect" coords="241,12,247,21" href="javascript:showColor('color-picker.html#FFCC00')">
+<area shape="rect" coords="249,12,255,21" href="javascript:showColor('color-picker.html#FFCC33')">
+<area shape="rect" coords="257,12,263,21" href="javascript:showColor('color-picker.html#FFCC66')">
+<area shape="rect" coords="265,12,271,21" href="javascript:showColor('color-picker.html#FFCC99')">
+<area shape="rect" coords="273,12,279,21" href="javascript:showColor('color-picker.html#FFCCCC')">
+<area shape="rect" coords="281,12,287,21" href="javascript:showColor('color-picker.html#FFCCFF')">
+<area shape="rect" coords="1,23,7,32" href="javascript:showColor('color-picker.html#009900')">
+<area shape="rect" coords="9,23,15,32" href="javascript:showColor('color-picker.html#009933')">
+<area shape="rect" coords="17,23,23,32" href="javascript:showColor('color-picker.html#009966')">
+<area shape="rect" coords="25,23,31,32" href="javascript:showColor('color-picker.html#009999')">
+<area shape="rect" coords="33,23,39,32" href="javascript:showColor('color-picker.html#0099CC')">
+<area shape="rect" coords="41,23,47,32" href="javascript:showColor('color-picker.html#0099FF')">
+<area shape="rect" coords="49,23,55,32" href="javascript:showColor('color-picker.html#339900')">
+<area shape="rect" coords="57,23,63,32" href="javascript:showColor('color-picker.html#339933')">
+<area shape="rect" coords="65,23,71,32" href="javascript:showColor('color-picker.html#339966')">
+<area shape="rect" coords="73,23,79,32" href="javascript:showColor('color-picker.html#339999')">
+<area shape="rect" coords="81,23,87,32" href="javascript:showColor('color-picker.html#3399CC')">
+<area shape="rect" coords="89,23,95,32" href="javascript:showColor('color-picker.html#3399FF')">
+<area shape="rect" coords="97,23,103,32" href="javascript:showColor('color-picker.html#669900')">
+<area shape="rect" coords="105,23,111,32" href="javascript:showColor('color-picker.html#669933')">
+<area shape="rect" coords="113,23,119,32" href="javascript:showColor('color-picker.html#669966')">
+<area shape="rect" coords="121,23,127,32" href="javascript:showColor('color-picker.html#669999')">
+<area shape="rect" coords="129,23,135,32" href="javascript:showColor('color-picker.html#6699CC')">
+<area shape="rect" coords="137,23,143,32" href="javascript:showColor('color-picker.html#6699FF')">
+<area shape="rect" coords="145,23,151,32" href="javascript:showColor('color-picker.html#999900')">
+<area shape="rect" coords="153,23,159,32" href="javascript:showColor('color-picker.html#999933')">
+<area shape="rect" coords="161,23,167,32" href="javascript:showColor('color-picker.html#999966')">
+<area shape="rect" coords="169,23,175,32" href="javascript:showColor('color-picker.html#999999')">
+<area shape="rect" coords="177,23,183,32" href="javascript:showColor('color-picker.html#9999CC')">
+<area shape="rect" coords="185,23,191,32" href="javascript:showColor('color-picker.html#9999FF')">
+<area shape="rect" coords="193,23,199,32" href="javascript:showColor('color-picker.html#CC9900')">
+<area shape="rect" coords="201,23,207,32" href="javascript:showColor('color-picker.html#CC9933')">
+<area shape="rect" coords="209,23,215,32" href="javascript:showColor('color-picker.html#CC9966')">
+<area shape="rect" coords="217,23,223,32" href="javascript:showColor('color-picker.html#CC9999')">
+<area shape="rect" coords="225,23,231,32" href="javascript:showColor('color-picker.html#CC99CC')">
+<area shape="rect" coords="233,23,239,32" href="javascript:showColor('color-picker.html#CC99FF')">
+<area shape="rect" coords="241,23,247,32" href="javascript:showColor('color-picker.html#FF9900')">
+<area shape="rect" coords="249,23,255,32" href="javascript:showColor('color-picker.html#FF9933')">
+<area shape="rect" coords="257,23,263,32" href="javascript:showColor('color-picker.html#FF9966')">
+<area shape="rect" coords="265,23,271,32" href="javascript:showColor('color-picker.html#FF9999')">
+<area shape="rect" coords="273,23,279,32" href="javascript:showColor('color-picker.html#FF99CC')">
+<area shape="rect" coords="281,23,287,32" href="javascript:showColor('color-picker.html#FF99FF')">
+<area shape="rect" coords="1,34,7,43" href="javascript:showColor('color-picker.html#006600')">
+<area shape="rect" coords="9,34,15,43" href="javascript:showColor('color-picker.html#006633')">
+<area shape="rect" coords="17,34,23,43" href="javascript:showColor('color-picker.html#006666')">
+<area shape="rect" coords="25,34,31,43" href="javascript:showColor('color-picker.html#006699')">
+<area shape="rect" coords="33,34,39,43" href="javascript:showColor('color-picker.html#0066CC')">
+<area shape="rect" coords="41,34,47,43" href="javascript:showColor('color-picker.html#0066FF')">
+<area shape="rect" coords="49,34,55,43" href="javascript:showColor('color-picker.html#336600')">
+<area shape="rect" coords="57,34,63,43" href="javascript:showColor('color-picker.html#336633')">
+<area shape="rect" coords="65,34,71,43" href="javascript:showColor('color-picker.html#336666')">
+<area shape="rect" coords="73,34,79,43" href="javascript:showColor('color-picker.html#336699')">
+<area shape="rect" coords="81,34,87,43" href="javascript:showColor('color-picker.html#3366CC')">
+<area shape="rect" coords="89,34,95,43" href="javascript:showColor('color-picker.html#3366FF')">
+<area shape="rect" coords="97,34,103,43" href="javascript:showColor('color-picker.html#666600')">
+<area shape="rect" coords="105,34,111,43" href="javascript:showColor('color-picker.html#666633')">
+<area shape="rect" coords="113,34,119,43" href="javascript:showColor('color-picker.html#666666')">
+<area shape="rect" coords="121,34,127,43" href="javascript:showColor('color-picker.html#666699')">
+<area shape="rect" coords="129,34,135,43" href="javascript:showColor('color-picker.html#6666CC')">
+<area shape="rect" coords="137,34,143,43" href="javascript:showColor('color-picker.html#6666FF')">
+<area shape="rect" coords="145,34,151,43" href="javascript:showColor('color-picker.html#996600')">
+<area shape="rect" coords="153,34,159,43" href="javascript:showColor('color-picker.html#996633')">
+<area shape="rect" coords="161,34,167,43" href="javascript:showColor('color-picker.html#996666')">
+<area shape="rect" coords="169,34,175,43" href="javascript:showColor('color-picker.html#996699')">
+<area shape="rect" coords="177,34,183,43" href="javascript:showColor('color-picker.html#9966CC')">
+<area shape="rect" coords="185,34,191,43" href="javascript:showColor('color-picker.html#9966FF')">
+<area shape="rect" coords="193,34,199,43" href="javascript:showColor('color-picker.html#CC6600')">
+<area shape="rect" coords="201,34,207,43" href="javascript:showColor('color-picker.html#CC6633')">
+<area shape="rect" coords="209,34,215,43" href="javascript:showColor('color-picker.html#CC6666')">
+<area shape="rect" coords="217,34,223,43" href="javascript:showColor('color-picker.html#CC6699')">
+<area shape="rect" coords="225,34,231,43" href="javascript:showColor('color-picker.html#CC66CC')">
+<area shape="rect" coords="233,34,239,43" href="javascript:showColor('color-picker.html#CC66FF')">
+<area shape="rect" coords="241,34,247,43" href="javascript:showColor('color-picker.html#FF6600')">
+<area shape="rect" coords="249,34,255,43" href="javascript:showColor('color-picker.html#FF6633')">
+<area shape="rect" coords="257,34,263,43" href="javascript:showColor('color-picker.html#FF6666')">
+<area shape="rect" coords="265,34,271,43" href="javascript:showColor('color-picker.html#FF6699')">
+<area shape="rect" coords="273,34,279,43" href="javascript:showColor('color-picker.html#FF66CC')">
+<area shape="rect" coords="281,34,287,43" href="javascript:showColor('color-picker.html#FF66FF')">
+<area shape="rect" coords="1,45,7,54" href="javascript:showColor('color-picker.html#003300')">
+<area shape="rect" coords="9,45,15,54" href="javascript:showColor('color-picker.html#003333')">
+<area shape="rect" coords="17,45,23,54" href="javascript:showColor('color-picker.html#003366')">
+<area shape="rect" coords="25,45,31,54" href="javascript:showColor('color-picker.html#003399')">
+<area shape="rect" coords="33,45,39,54" href="javascript:showColor('color-picker.html#0033CC')">
+<area shape="rect" coords="41,45,47,54" href="javascript:showColor('color-picker.html#0033FF')">
+<area shape="rect" coords="49,45,55,54" href="javascript:showColor('color-picker.html#333300')">
+<area shape="rect" coords="57,45,63,54" href="javascript:showColor('color-picker.html#333333')">
+<area shape="rect" coords="65,45,71,54" href="javascript:showColor('color-picker.html#333366')">
+<area shape="rect" coords="73,45,79,54" href="javascript:showColor('color-picker.html#333399')">
+<area shape="rect" coords="81,45,87,54" href="javascript:showColor('color-picker.html#3333CC')">
+<area shape="rect" coords="89,45,95,54" href="javascript:showColor('color-picker.html#3333FF')">
+<area shape="rect" coords="97,45,103,54" href="javascript:showColor('color-picker.html#663300')">
+<area shape="rect" coords="105,45,111,54" href="javascript:showColor('color-picker.html#663333')">
+<area shape="rect" coords="113,45,119,54" href="javascript:showColor('color-picker.html#663366')">
+<area shape="rect" coords="121,45,127,54" href="javascript:showColor('color-picker.html#663399')">
+<area shape="rect" coords="129,45,135,54" href="javascript:showColor('color-picker.html#6633CC')">
+<area shape="rect" coords="137,45,143,54" href="javascript:showColor('color-picker.html#6633FF')">
+<area shape="rect" coords="145,45,151,54" href="javascript:showColor('color-picker.html#993300')">
+<area shape="rect" coords="153,45,159,54" href="javascript:showColor('color-picker.html#993333')">
+<area shape="rect" coords="161,45,167,54" href="javascript:showColor('color-picker.html#993366')">
+<area shape="rect" coords="169,45,175,54" href="javascript:showColor('color-picker.html#993399')">
+<area shape="rect" coords="177,45,183,54" href="javascript:showColor('color-picker.html#9933CC')">
+<area shape="rect" coords="185,45,191,54" href="javascript:showColor('color-picker.html#9933FF')">
+<area shape="rect" coords="193,45,199,54" href="javascript:showColor('color-picker.html#CC3300')">
+<area shape="rect" coords="201,45,207,54" href="javascript:showColor('color-picker.html#CC3333')">
+<area shape="rect" coords="209,45,215,54" href="javascript:showColor('color-picker.html#CC3366')">
+<area shape="rect" coords="217,45,223,54" href="javascript:showColor('color-picker.html#CC3399')">
+<area shape="rect" coords="225,45,231,54" href="javascript:showColor('color-picker.html#CC33CC')">
+<area shape="rect" coords="233,45,239,54" href="javascript:showColor('color-picker.html#CC33FF')">
+<area shape="rect" coords="241,45,247,54" href="javascript:showColor('color-picker.html#FF3300')">
+<area shape="rect" coords="249,45,255,54" href="javascript:showColor('color-picker.html#FF3333')">
+<area shape="rect" coords="257,45,263,54" href="javascript:showColor('color-picker.html#FF3366')">
+<area shape="rect" coords="265,45,271,54" href="javascript:showColor('color-picker.html#FF3399')">
+<area shape="rect" coords="273,45,279,54" href="javascript:showColor('color-picker.html#FF33CC')">
+<area shape="rect" coords="281,45,287,54" href="javascript:showColor('color-picker.html#FF33FF')">
+<area shape="rect" coords="1,56,7,65" href="javascript:showColor('color-picker.html#000000')">
+<area shape="rect" coords="9,56,15,65" href="javascript:showColor('color-picker.html#000033')">
+<area shape="rect" coords="17,56,23,65" href="javascript:showColor('color-picker.html#000066')">
+<area shape="rect" coords="25,56,31,65" href="javascript:showColor('color-picker.html#000099')">
+<area shape="rect" coords="33,56,39,65" href="javascript:showColor('color-picker.html#0000CC')">
+<area shape="rect" coords="41,56,47,65" href="javascript:showColor('color-picker.html#0000FF')">
+<area shape="rect" coords="49,56,55,65" href="javascript:showColor('color-picker.html#330000')">
+<area shape="rect" coords="57,56,63,65" href="javascript:showColor('color-picker.html#330033')">
+<area shape="rect" coords="65,56,71,65" href="javascript:showColor('color-picker.html#330066')">
+<area shape="rect" coords="73,56,79,65" href="javascript:showColor('color-picker.html#330099')">
+<area shape="rect" coords="81,56,87,65" href="javascript:showColor('color-picker.html#3300CC')">
+<area shape="rect" coords="89,56,95,65" href="javascript:showColor('color-picker.html#3300FF')">
+<area shape="rect" coords="97,56,103,65" href="javascript:showColor('color-picker.html#660000')">
+<area shape="rect" coords="105,56,111,65" href="javascript:showColor('color-picker.html#660033')">
+<area shape="rect" coords="113,56,119,65" href="javascript:showColor('color-picker.html#660066')">
+<area shape="rect" coords="121,56,127,65" href="javascript:showColor('color-picker.html#660099')">
+<area shape="rect" coords="129,56,135,65" href="javascript:showColor('color-picker.html#6600CC')">
+<area shape="rect" coords="137,56,143,65" href="javascript:showColor('color-picker.html#6600FF')">
+<area shape="rect" coords="145,56,151,65" href="javascript:showColor('color-picker.html#990000')">
+<area shape="rect" coords="153,56,159,65" href="javascript:showColor('color-picker.html#990033')">
+<area shape="rect" coords="161,56,167,65" href="javascript:showColor('color-picker.html#990066')">
+<area shape="rect" coords="169,56,175,65" href="javascript:showColor('color-picker.html#990099')">
+<area shape="rect" coords="177,56,183,65" href="javascript:showColor('color-picker.html#9900CC')">
+<area shape="rect" coords="185,56,191,65" href="javascript:showColor('color-picker.html#9900FF')">
+<area shape="rect" coords="193,56,199,65" href="javascript:showColor('color-picker.html#CC0000')">
+<area shape="rect" coords="201,56,207,65" href="javascript:showColor('color-picker.html#CC0033')">
+<area shape="rect" coords="209,56,215,65" href="javascript:showColor('color-picker.html#CC0066')">
+<area shape="rect" coords="217,56,223,65" href="javascript:showColor('color-picker.html#CC0099')">
+<area shape="rect" coords="225,56,231,65" href="javascript:showColor('color-picker.html#CC00CC')">
+<area shape="rect" coords="233,56,239,65" href="javascript:showColor('color-picker.html#CC00FF')">
+<area shape="rect" coords="241,56,247,65" href="javascript:showColor('color-picker.html#FF0000')">
+<area shape="rect" coords="249,56,255,65" href="javascript:showColor('color-picker.html#FF0033')">
+<area shape="rect" coords="257,56,263,65" href="javascript:showColor('color-picker.html#FF0066')">
+<area shape="rect" coords="265,56,271,65" href="javascript:showColor('color-picker.html#FF0099')">
+<area shape="rect" coords="273,56,279,65" href="javascript:showColor('color-picker.html#FF00CC')">
+<area shape="rect" coords="281,56,287,65" href="javascript:showColor('color-picker.html#FF00FF')">
+</map>
+<a><img usemap="#colmap" src="http://javascript.internet.com/img/color-picker/colortable.gif" border=0 width=289 height=67></a><br>
+<br>
+Click a box and the hexadecimal color will be shown below.<br>
+<input type=text name=hexval size=10 readonly>
+</form>
+</center>
+<br><br>
+To use this script you must right<br>
+click the color table image above,<br>
+save it to your computer, and then<br>
+upload it to your web server.
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Page Details:  Color Picker</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Apple-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  18.35 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL COLOR PICKER:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Original:  Luis Romero (luisromero7987@aol.com) --&gt;
+&lt;!-- Web Site:  http://www.geocities.com/lr7987 --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+function showColor(val) {
+document.colorform.hexval.value = val;
+}
+//  End --&gt;
+&lt;/script&gt;
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;center&gt;
+&lt;form name=colorform&gt;
+Color Picker&lt;br&gt;
+&lt;map name="colmap"&gt;
+&lt;area shape="rect" coords="1,1,7,10" href="javascript:showColor('#00FF00')"&gt;
+&lt;area shape="rect" coords="9,1,15,10" href="javascript:showColor('#00FF33')"&gt;
+&lt;area shape="rect" coords="17,1,23,10" href="javascript:showColor('#00FF66')"&gt;
+&lt;area shape="rect" coords="25,1,31,10" href="javascript:showColor('#00FF99')"&gt;
+&lt;area shape="rect" coords="33,1,39,10" href="javascript:showColor('#00FFCC')"&gt;
+&lt;area shape="rect" coords="41,1,47,10" href="javascript:showColor('#00FFFF')"&gt;
+&lt;area shape="rect" coords="49,1,55,10" href="javascript:showColor('#33FF00')"&gt;
+&lt;area shape="rect" coords="57,1,63,10" href="javascript:showColor('#33FF33')"&gt;
+&lt;area shape="rect" coords="65,1,71,10" href="javascript:showColor('#33FF66')"&gt;
+&lt;area shape="rect" coords="73,1,79,10" href="javascript:showColor('#33FF99')"&gt;
+&lt;area shape="rect" coords="81,1,87,10" href="javascript:showColor('#33FFCC')"&gt;
+&lt;area shape="rect" coords="89,1,95,10" href="javascript:showColor('#33FFFF')"&gt;
+&lt;area shape="rect" coords="97,1,103,10" href="javascript:showColor('#66FF00')"&gt;
+&lt;area shape="rect" coords="105,1,111,10" href="javascript:showColor('#66FF33')"&gt;
+&lt;area shape="rect" coords="113,1,119,10" href="javascript:showColor('#66FF66')"&gt;
+&lt;area shape="rect" coords="121,1,127,10" href="javascript:showColor('#66FF99')"&gt;
+&lt;area shape="rect" coords="129,1,135,10" href="javascript:showColor('#66FFCC')"&gt;
+&lt;area shape="rect" coords="137,1,143,10" href="javascript:showColor('#66FFFF')"&gt;
+&lt;area shape="rect" coords="145,1,151,10" href="javascript:showColor('#99FF00')"&gt;
+&lt;area shape="rect" coords="153,1,159,10" href="javascript:showColor('#99FF33')"&gt;
+&lt;area shape="rect" coords="161,1,167,10" href="javascript:showColor('#99FF66')"&gt;
+&lt;area shape="rect" coords="169,1,175,10" href="javascript:showColor('#99FF99')"&gt;
+&lt;area shape="rect" coords="177,1,183,10" href="javascript:showColor('#99FFCC')"&gt;
+&lt;area shape="rect" coords="185,1,191,10" href="javascript:showColor('#99FFFF')"&gt;
+&lt;area shape="rect" coords="193,1,199,10" href="javascript:showColor('#CCFF00')"&gt;
+&lt;area shape="rect" coords="201,1,207,10" href="javascript:showColor('#CCFF33')"&gt;
+&lt;area shape="rect" coords="209,1,215,10" href="javascript:showColor('#CCFF66')"&gt;
+&lt;area shape="rect" coords="217,1,223,10" href="javascript:showColor('#CCFF99')"&gt;
+&lt;area shape="rect" coords="225,1,231,10" href="javascript:showColor('#CCFFCC')"&gt;
+&lt;area shape="rect" coords="233,1,239,10" href="javascript:showColor('#CCFFFF')"&gt;
+&lt;area shape="rect" coords="241,1,247,10" href="javascript:showColor('#FFFF00')"&gt;
+&lt;area shape="rect" coords="249,1,255,10" href="javascript:showColor('#FFFF33')"&gt;
+&lt;area shape="rect" coords="257,1,263,10" href="javascript:showColor('#FFFF66')"&gt;
+&lt;area shape="rect" coords="265,1,271,10" href="javascript:showColor('#FFFF99')"&gt;
+&lt;area shape="rect" coords="273,1,279,10" href="javascript:showColor('#FFFFCC')"&gt;
+&lt;area shape="rect" coords="281,1,287,10" href="javascript:showColor('#FFFFFF')"&gt;
+&lt;area shape="rect" coords="1,12,7,21" href="javascript:showColor('#00CC00')"&gt;
+&lt;area shape="rect" coords="9,12,15,21" href="javascript:showColor('#00CC33')"&gt;
+&lt;area shape="rect" coords="17,12,23,21" href="javascript:showColor('#00CC66')"&gt;
+&lt;area shape="rect" coords="25,12,31,21" href="javascript:showColor('#00CC99')"&gt;
+&lt;area shape="rect" coords="33,12,39,21" href="javascript:showColor('#00CCCC')"&gt;
+&lt;area shape="rect" coords="41,12,47,21" href="javascript:showColor('#00CCFF')"&gt;
+&lt;area shape="rect" coords="49,12,55,21" href="javascript:showColor('#33CC00')"&gt;
+&lt;area shape="rect" coords="57,12,63,21" href="javascript:showColor('#33CC33')"&gt;
+&lt;area shape="rect" coords="65,12,71,21" href="javascript:showColor('#33CC66')"&gt;
+&lt;area shape="rect" coords="73,12,79,21" href="javascript:showColor('#33CC99')"&gt;
+&lt;area shape="rect" coords="81,12,87,21" href="javascript:showColor('#33CCCC')"&gt;
+&lt;area shape="rect" coords="89,12,95,21" href="javascript:showColor('#33CCFF')"&gt;
+&lt;area shape="rect" coords="97,12,103,21" href="javascript:showColor('#66CC00')"&gt;
+&lt;area shape="rect" coords="105,12,111,21" href="javascript:showColor('#66CC33')"&gt;
+&lt;area shape="rect" coords="113,12,119,21" href="javascript:showColor('#66CC66')"&gt;
+&lt;area shape="rect" coords="121,12,127,21" href="javascript:showColor('#66CC99')"&gt;
+&lt;area shape="rect" coords="129,12,135,21" href="javascript:showColor('#66CCCC')"&gt;
+&lt;area shape="rect" coords="137,12,143,21" href="javascript:showColor('#66CCFF')"&gt;
+&lt;area shape="rect" coords="145,12,151,21" href="javascript:showColor('#99CC00')"&gt;
+&lt;area shape="rect" coords="153,12,159,21" href="javascript:showColor('#99CC33')"&gt;
+&lt;area shape="rect" coords="161,12,167,21" href="javascript:showColor('#99CC66')"&gt;
+&lt;area shape="rect" coords="169,12,175,21" href="javascript:showColor('#99CC99')"&gt;
+&lt;area shape="rect" coords="177,12,183,21" href="javascript:showColor('#99CCCC')"&gt;
+&lt;area shape="rect" coords="185,12,191,21" href="javascript:showColor('#99CCFF')"&gt;
+&lt;area shape="rect" coords="193,12,199,21" href="javascript:showColor('#CCCC00')"&gt;
+&lt;area shape="rect" coords="201,12,207,21" href="javascript:showColor('#CCCC33')"&gt;
+&lt;area shape="rect" coords="209,12,215,21" href="javascript:showColor('#CCCC66')"&gt;
+&lt;area shape="rect" coords="217,12,223,21" href="javascript:showColor('#CCCC99')"&gt;
+&lt;area shape="rect" coords="225,12,231,21" href="javascript:showColor('#CCCCCC')"&gt;
+&lt;area shape="rect" coords="233,12,239,21" href="javascript:showColor('#CCCCFF')"&gt;
+&lt;area shape="rect" coords="241,12,247,21" href="javascript:showColor('#FFCC00')"&gt;
+&lt;area shape="rect" coords="249,12,255,21" href="javascript:showColor('#FFCC33')"&gt;
+&lt;area shape="rect" coords="257,12,263,21" href="javascript:showColor('#FFCC66')"&gt;
+&lt;area shape="rect" coords="265,12,271,21" href="javascript:showColor('#FFCC99')"&gt;
+&lt;area shape="rect" coords="273,12,279,21" href="javascript:showColor('#FFCCCC')"&gt;
+&lt;area shape="rect" coords="281,12,287,21" href="javascript:showColor('#FFCCFF')"&gt;
+&lt;area shape="rect" coords="1,23,7,32" href="javascript:showColor('#009900')"&gt;
+&lt;area shape="rect" coords="9,23,15,32" href="javascript:showColor('#009933')"&gt;
+&lt;area shape="rect" coords="17,23,23,32" href="javascript:showColor('#009966')"&gt;
+&lt;area shape="rect" coords="25,23,31,32" href="javascript:showColor('#009999')"&gt;
+&lt;area shape="rect" coords="33,23,39,32" href="javascript:showColor('#0099CC')"&gt;
+&lt;area shape="rect" coords="41,23,47,32" href="javascript:showColor('#0099FF')"&gt;
+&lt;area shape="rect" coords="49,23,55,32" href="javascript:showColor('#339900')"&gt;
+&lt;area shape="rect" coords="57,23,63,32" href="javascript:showColor('#339933')"&gt;
+&lt;area shape="rect" coords="65,23,71,32" href="javascript:showColor('#339966')"&gt;
+&lt;area shape="rect" coords="73,23,79,32" href="javascript:showColor('#339999')"&gt;
+&lt;area shape="rect" coords="81,23,87,32" href="javascript:showColor('#3399CC')"&gt;
+&lt;area shape="rect" coords="89,23,95,32" href="javascript:showColor('#3399FF')"&gt;
+&lt;area shape="rect" coords="97,23,103,32" href="javascript:showColor('#669900')"&gt;
+&lt;area shape="rect" coords="105,23,111,32" href="javascript:showColor('#669933')"&gt;
+&lt;area shape="rect" coords="113,23,119,32" href="javascript:showColor('#669966')"&gt;
+&lt;area shape="rect" coords="121,23,127,32" href="javascript:showColor('#669999')"&gt;
+&lt;area shape="rect" coords="129,23,135,32" href="javascript:showColor('#6699CC')"&gt;
+&lt;area shape="rect" coords="137,23,143,32" href="javascript:showColor('#6699FF')"&gt;
+&lt;area shape="rect" coords="145,23,151,32" href="javascript:showColor('#999900')"&gt;
+&lt;area shape="rect" coords="153,23,159,32" href="javascript:showColor('#999933')"&gt;
+&lt;area shape="rect" coords="161,23,167,32" href="javascript:showColor('#999966')"&gt;
+&lt;area shape="rect" coords="169,23,175,32" href="javascript:showColor('#999999')"&gt;
+&lt;area shape="rect" coords="177,23,183,32" href="javascript:showColor('#9999CC')"&gt;
+&lt;area shape="rect" coords="185,23,191,32" href="javascript:showColor('#9999FF')"&gt;
+&lt;area shape="rect" coords="193,23,199,32" href="javascript:showColor('#CC9900')"&gt;
+&lt;area shape="rect" coords="201,23,207,32" href="javascript:showColor('#CC9933')"&gt;
+&lt;area shape="rect" coords="209,23,215,32" href="javascript:showColor('#CC9966')"&gt;
+&lt;area shape="rect" coords="217,23,223,32" href="javascript:showColor('#CC9999')"&gt;
+&lt;area shape="rect" coords="225,23,231,32" href="javascript:showColor('#CC99CC')"&gt;
+&lt;area shape="rect" coords="233,23,239,32" href="javascript:showColor('#CC99FF')"&gt;
+&lt;area shape="rect" coords="241,23,247,32" href="javascript:showColor('#FF9900')"&gt;
+&lt;area shape="rect" coords="249,23,255,32" href="javascript:showColor('#FF9933')"&gt;
+&lt;area shape="rect" coords="257,23,263,32" href="javascript:showColor('#FF9966')"&gt;
+&lt;area shape="rect" coords="265,23,271,32" href="javascript:showColor('#FF9999')"&gt;
+&lt;area shape="rect" coords="273,23,279,32" href="javascript:showColor('#FF99CC')"&gt;
+&lt;area shape="rect" coords="281,23,287,32" href="javascript:showColor('#FF99FF')"&gt;
+&lt;area shape="rect" coords="1,34,7,43" href="javascript:showColor('#006600')"&gt;
+&lt;area shape="rect" coords="9,34,15,43" href="javascript:showColor('#006633')"&gt;
+&lt;area shape="rect" coords="17,34,23,43" href="javascript:showColor('#006666')"&gt;
+&lt;area shape="rect" coords="25,34,31,43" href="javascript:showColor('#006699')"&gt;
+&lt;area shape="rect" coords="33,34,39,43" href="javascript:showColor('#0066CC')"&gt;
+&lt;area shape="rect" coords="41,34,47,43" href="javascript:showColor('#0066FF')"&gt;
+&lt;area shape="rect" coords="49,34,55,43" href="javascript:showColor('#336600')"&gt;
+&lt;area shape="rect" coords="57,34,63,43" href="javascript:showColor('#336633')"&gt;
+&lt;area shape="rect" coords="65,34,71,43" href="javascript:showColor('#336666')"&gt;
+&lt;area shape="rect" coords="73,34,79,43" href="javascript:showColor('#336699')"&gt;
+&lt;area shape="rect" coords="81,34,87,43" href="javascript:showColor('#3366CC')"&gt;
+&lt;area shape="rect" coords="89,34,95,43" href="javascript:showColor('#3366FF')"&gt;
+&lt;area shape="rect" coords="97,34,103,43" href="javascript:showColor('#666600')"&gt;
+&lt;area shape="rect" coords="105,34,111,43" href="javascript:showColor('#666633')"&gt;
+&lt;area shape="rect" coords="113,34,119,43" href="javascript:showColor('#666666')"&gt;
+&lt;area shape="rect" coords="121,34,127,43" href="javascript:showColor('#666699')"&gt;
+&lt;area shape="rect" coords="129,34,135,43" href="javascript:showColor('#6666CC')"&gt;
+&lt;area shape="rect" coords="137,34,143,43" href="javascript:showColor('#6666FF')"&gt;
+&lt;area shape="rect" coords="145,34,151,43" href="javascript:showColor('#996600')"&gt;
+&lt;area shape="rect" coords="153,34,159,43" href="javascript:showColor('#996633')"&gt;
+&lt;area shape="rect" coords="161,34,167,43" href="javascript:showColor('#996666')"&gt;
+&lt;area shape="rect" coords="169,34,175,43" href="javascript:showColor('#996699')"&gt;
+&lt;area shape="rect" coords="177,34,183,43" href="javascript:showColor('#9966CC')"&gt;
+&lt;area shape="rect" coords="185,34,191,43" href="javascript:showColor('#9966FF')"&gt;
+&lt;area shape="rect" coords="193,34,199,43" href="javascript:showColor('#CC6600')"&gt;
+&lt;area shape="rect" coords="201,34,207,43" href="javascript:showColor('#CC6633')"&gt;
+&lt;area shape="rect" coords="209,34,215,43" href="javascript:showColor('#CC6666')"&gt;
+&lt;area shape="rect" coords="217,34,223,43" href="javascript:showColor('#CC6699')"&gt;
+&lt;area shape="rect" coords="225,34,231,43" href="javascript:showColor('#CC66CC')"&gt;
+&lt;area shape="rect" coords="233,34,239,43" href="javascript:showColor('#CC66FF')"&gt;
+&lt;area shape="rect" coords="241,34,247,43" href="javascript:showColor('#FF6600')"&gt;
+&lt;area shape="rect" coords="249,34,255,43" href="javascript:showColor('#FF6633')"&gt;
+&lt;area shape="rect" coords="257,34,263,43" href="javascript:showColor('#FF6666')"&gt;
+&lt;area shape="rect" coords="265,34,271,43" href="javascript:showColor('#FF6699')"&gt;
+&lt;area shape="rect" coords="273,34,279,43" href="javascript:showColor('#FF66CC')"&gt;
+&lt;area shape="rect" coords="281,34,287,43" href="javascript:showColor('#FF66FF')"&gt;
+&lt;area shape="rect" coords="1,45,7,54" href="javascript:showColor('#003300')"&gt;
+&lt;area shape="rect" coords="9,45,15,54" href="javascript:showColor('#003333')"&gt;
+&lt;area shape="rect" coords="17,45,23,54" href="javascript:showColor('#003366')"&gt;
+&lt;area shape="rect" coords="25,45,31,54" href="javascript:showColor('#003399')"&gt;
+&lt;area shape="rect" coords="33,45,39,54" href="javascript:showColor('#0033CC')"&gt;
+&lt;area shape="rect" coords="41,45,47,54" href="javascript:showColor('#0033FF')"&gt;
+&lt;area shape="rect" coords="49,45,55,54" href="javascript:showColor('#333300')"&gt;
+&lt;area shape="rect" coords="57,45,63,54" href="javascript:showColor('#333333')"&gt;
+&lt;area shape="rect" coords="65,45,71,54" href="javascript:showColor('#333366')"&gt;
+&lt;area shape="rect" coords="73,45,79,54" href="javascript:showColor('#333399')"&gt;
+&lt;area shape="rect" coords="81,45,87,54" href="javascript:showColor('#3333CC')"&gt;
+&lt;area shape="rect" coords="89,45,95,54" href="javascript:showColor('#3333FF')"&gt;
+&lt;area shape="rect" coords="97,45,103,54" href="javascript:showColor('#663300')"&gt;
+&lt;area shape="rect" coords="105,45,111,54" href="javascript:showColor('#663333')"&gt;
+&lt;area shape="rect" coords="113,45,119,54" href="javascript:showColor('#663366')"&gt;
+&lt;area shape="rect" coords="121,45,127,54" href="javascript:showColor('#663399')"&gt;
+&lt;area shape="rect" coords="129,45,135,54" href="javascript:showColor('#6633CC')"&gt;
+&lt;area shape="rect" coords="137,45,143,54" href="javascript:showColor('#6633FF')"&gt;
+&lt;area shape="rect" coords="145,45,151,54" href="javascript:showColor('#993300')"&gt;
+&lt;area shape="rect" coords="153,45,159,54" href="javascript:showColor('#993333')"&gt;
+&lt;area shape="rect" coords="161,45,167,54" href="javascript:showColor('#993366')"&gt;
+&lt;area shape="rect" coords="169,45,175,54" href="javascript:showColor('#993399')"&gt;
+&lt;area shape="rect" coords="177,45,183,54" href="javascript:showColor('#9933CC')"&gt;
+&lt;area shape="rect" coords="185,45,191,54" href="javascript:showColor('#9933FF')"&gt;
+&lt;area shape="rect" coords="193,45,199,54" href="javascript:showColor('#CC3300')"&gt;
+&lt;area shape="rect" coords="201,45,207,54" href="javascript:showColor('#CC3333')"&gt;
+&lt;area shape="rect" coords="209,45,215,54" href="javascript:showColor('#CC3366')"&gt;
+&lt;area shape="rect" coords="217,45,223,54" href="javascript:showColor('#CC3399')"&gt;
+&lt;area shape="rect" coords="225,45,231,54" href="javascript:showColor('#CC33CC')"&gt;
+&lt;area shape="rect" coords="233,45,239,54" href="javascript:showColor('#CC33FF')"&gt;
+&lt;area shape="rect" coords="241,45,247,54" href="javascript:showColor('#FF3300')"&gt;
+&lt;area shape="rect" coords="249,45,255,54" href="javascript:showColor('#FF3333')"&gt;
+&lt;area shape="rect" coords="257,45,263,54" href="javascript:showColor('#FF3366')"&gt;
+&lt;area shape="rect" coords="265,45,271,54" href="javascript:showColor('#FF3399')"&gt;
+&lt;area shape="rect" coords="273,45,279,54" href="javascript:showColor('#FF33CC')"&gt;
+&lt;area shape="rect" coords="281,45,287,54" href="javascript:showColor('#FF33FF')"&gt;
+&lt;area shape="rect" coords="1,56,7,65" href="javascript:showColor('#000000')"&gt;
+&lt;area shape="rect" coords="9,56,15,65" href="javascript:showColor('#000033')"&gt;
+&lt;area shape="rect" coords="17,56,23,65" href="javascript:showColor('#000066')"&gt;
+&lt;area shape="rect" coords="25,56,31,65" href="javascript:showColor('#000099')"&gt;
+&lt;area shape="rect" coords="33,56,39,65" href="javascript:showColor('#0000CC')"&gt;
+&lt;area shape="rect" coords="41,56,47,65" href="javascript:showColor('#0000FF')"&gt;
+&lt;area shape="rect" coords="49,56,55,65" href="javascript:showColor('#330000')"&gt;
+&lt;area shape="rect" coords="57,56,63,65" href="javascript:showColor('#330033')"&gt;
+&lt;area shape="rect" coords="65,56,71,65" href="javascript:showColor('#330066')"&gt;
+&lt;area shape="rect" coords="73,56,79,65" href="javascript:showColor('#330099')"&gt;
+&lt;area shape="rect" coords="81,56,87,65" href="javascript:showColor('#3300CC')"&gt;
+&lt;area shape="rect" coords="89,56,95,65" href="javascript:showColor('#3300FF')"&gt;
+&lt;area shape="rect" coords="97,56,103,65" href="javascript:showColor('#660000')"&gt;
+&lt;area shape="rect" coords="105,56,111,65" href="javascript:showColor('#660033')"&gt;
+&lt;area shape="rect" coords="113,56,119,65" href="javascript:showColor('#660066')"&gt;
+&lt;area shape="rect" coords="121,56,127,65" href="javascript:showColor('#660099')"&gt;
+&lt;area shape="rect" coords="129,56,135,65" href="javascript:showColor('#6600CC')"&gt;
+&lt;area shape="rect" coords="137,56,143,65" href="javascript:showColor('#6600FF')"&gt;
+&lt;area shape="rect" coords="145,56,151,65" href="javascript:showColor('#990000')"&gt;
+&lt;area shape="rect" coords="153,56,159,65" href="javascript:showColor('#990033')"&gt;
+&lt;area shape="rect" coords="161,56,167,65" href="javascript:showColor('#990066')"&gt;
+&lt;area shape="rect" coords="169,56,175,65" href="javascript:showColor('#990099')"&gt;
+&lt;area shape="rect" coords="177,56,183,65" href="javascript:showColor('#9900CC')"&gt;
+&lt;area shape="rect" coords="185,56,191,65" href="javascript:showColor('#9900FF')"&gt;
+&lt;area shape="rect" coords="193,56,199,65" href="javascript:showColor('#CC0000')"&gt;
+&lt;area shape="rect" coords="201,56,207,65" href="javascript:showColor('#CC0033')"&gt;
+&lt;area shape="rect" coords="209,56,215,65" href="javascript:showColor('#CC0066')"&gt;
+&lt;area shape="rect" coords="217,56,223,65" href="javascript:showColor('#CC0099')"&gt;
+&lt;area shape="rect" coords="225,56,231,65" href="javascript:showColor('#CC00CC')"&gt;
+&lt;area shape="rect" coords="233,56,239,65" href="javascript:showColor('#CC00FF')"&gt;
+&lt;area shape="rect" coords="241,56,247,65" href="javascript:showColor('#FF0000')"&gt;
+&lt;area shape="rect" coords="249,56,255,65" href="javascript:showColor('#FF0033')"&gt;
+&lt;area shape="rect" coords="257,56,263,65" href="javascript:showColor('#FF0066')"&gt;
+&lt;area shape="rect" coords="265,56,271,65" href="javascript:showColor('#FF0099')"&gt;
+&lt;area shape="rect" coords="273,56,279,65" href="javascript:showColor('#FF00CC')"&gt;
+&lt;area shape="rect" coords="281,56,287,65" href="javascript:showColor('#FF00FF')"&gt;
+&lt;/map&gt;
+&lt;a&gt;&lt;img usemap="#colmap" src="colortable.gif" border=0 width=289 height=67&gt;&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;
+Click a box and the hexadecimal color will be shown below.&lt;br&gt;
+&lt;input type=text name=hexval size=10 readonly&gt;
+&lt;/form&gt;
+&lt;/center&gt;
+
+<p><center>
+<font face="arial, helvetica" size="-2">Free JavaScripts provided<br>
+by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
+</center><p>
+
+&lt;!-- Script Size:  18.35 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/page-details/color-picker.html/1439129614/125x800/House_Hier_Menus_1j/hm-125x600_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Hier_Menus_1j/hm-125x600_new.gif"  ALT="Hiermennus - Menus that pop up and pop out"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/page-details/color-picker.html/1439129614/125x800/House_Hier_Menus_1j/hm-125x600_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='color-picker.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/page-details/color-picker.html/800799364/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/page-details/color-picker.html/800799364/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

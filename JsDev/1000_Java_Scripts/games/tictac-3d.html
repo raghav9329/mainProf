@@ -1,0 +1,1260 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Games:  TicTac 3D</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="Play this 3-D version of tic-tac-toe.  Play against a friend or the computer.  Get 4 in a row to win!">
+<META NAME="date" CONTENT="2001-04-12">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Lutz Tautenhahn">
+<META NAME="section" CONTENT="Games">
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=442V20021114144724&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=670V20021115201526&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=442V20021114144724&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=442V20021114144724&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=442V20021114144724&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=442V20021114144724&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/tictac-3d.html/456842659/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_HW_Blue_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Games</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>TicTac 3D</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Play this 3-D version of tic-tac-toe against a friend or the computer.  Get 4 in a row to win!
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<BR>
+<a href="tictac-3d-demo.html" Target="_new">Play the Game!</a>
+<br>
+<br>
+<a href="http://javascript.internet.com/img/tictac-3d/tictac-3d.zip">Download the images for this game</a>
+<BR>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Games:  TicTac 3D</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  26.44 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- THREE STEPS TO INSTALL TICTAC 3D:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the onLoad event handler into the BODY tag
+  3.  Put the last coding into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Original:  Lutz Tautenhahn (lutz.tautenhahn@wirtschaft.tu-chemnitz.de) --&gt;
+&lt;!-- Web Site:  http://www.tu-chemnitz.de/~luta/stroke/online.html --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+var i, j, k, RotAng, XMouseOver, YMouseOver, LastEvent, IsOver=true, IsStart0;
+var Max, NDraw, Start, I_Sel, J_Sel, Start0;
+var NeedBallDown, MoveCount, MaxMoveCount;
+IsPlayer = new Array(2);
+Level = new Array(2);  
+Fld = new Array(4);
+for (i=0; i&lt;4; i++)
+  Fld[i] = new Array(4);
+for (i=0; i&lt;4; i++)
+{ for (j=0; j&lt;4; j++)
+    Fld[i][j] = new Array(4);  
+}
+ScreenFld = new Array(4);
+for (i=0; i&lt;4; i++)
+  ScreenFld[i] = new Array(4);
+for (i=0; i&lt;4; i++)
+{ for (j=0; j&lt;4; j++)
+    ScreenFld[i][j] = new Array(2);  
+}
+FldCount = new Array(4);
+for (i=0; i&lt;4; i++)
+  FldCount[i] = new Array(4);
+Value = new Array(4);
+for (i=0; i&lt;4; i++)
+  Value[i] = new Array(4);
+History = new Array(64);
+for (i=0; i&lt;64; i++)
+  History[i] = new Array(2);
+Pic= new Array(4);
+Pic[0] = new Image(); Pic[0].src = "tt3d_0.gif";
+Pic[1] = new Image(); Pic[1].src = "tt3dred.gif";
+Pic[2] = new Image(); Pic[2].src = "tt3d_1.gif";
+Pic[3] = new Image(); Pic[3].src = "tt3dblue.gif";
+
+IsStart0=true;
+IsPlayer[0]=true;
+IsPlayer[1]=false;
+Level[0]=2;
+Level[1]=3;
+
+function Init()
+{ var ii, jj, kk;
+  for (ii=0; ii&lt;4; ii++)
+  { for (jj=0; jj&lt;4; jj++)
+    { for (kk=0; kk&lt;4; kk++)
+        Fld[ii][jj][kk]=0;
+      FldCount[ii][jj]=0;
+    }
+  }
+  if (IsStart0) Start0=true;
+  else Start0=false;
+  LastEvent="";
+  NeedBallDown=0;
+  I_Sel=-1; J_Sel=-1;
+  MoveCount=0;
+  MaxMoveCount=0;
+  RotAng=0;
+  XMouseOver=-1;
+  YMouseOver=-1;
+  RefreshScreen();
+  IsOver=false;
+}
+
+function SetOption(nn, mm)
+{ if (nn&lt;2) 
+  { if (mm==0)
+      IsPlayer[nn]=true;
+    else
+      IsPlayer[nn]=false;
+  }
+  else IsStart0=mm; 
+}
+
+function SetLevel(nn, mm)
+{ Level[nn]=mm;
+}
+
+function Timer()
+{ if (IsOver) return;
+  if (NeedBallDown==0)
+  { if ((((MoveCount+Start0)%2==1)&&(IsPlayer[0]))||
+        (((MoveCount+Start0)%2==0)&&(IsPlayer[1])));
+    else
+    { if (LastEvent=="") GetBestMove(((MoveCount+1+Start0)%2)*2-1);
+      if (LastEvent=="TurnLeft") { TurnLeft(); LastEvent=""; }
+      if (LastEvent=="TurnRight") { TurnRight(); LastEvent=""; }
+      if (LastEvent=="Back") { Back(); LastEvent=""; }
+      if (LastEvent=="Replay") { Replay(); LastEvent=""; }        
+    }
+  }
+  if (NeedBallDown&gt;0)
+  { if (Fld[I_Sel][J_Sel][NeedBallDown-1]==0)
+    { if (NeedBallDown&lt;4) 
+        window.document.images[13*(YMouseOver+3-NeedBallDown)+XMouseOver].src = Pic[2].src;
+      if ((MoveCount+Start0)%2==1)
+        window.document.images[13*(YMouseOver+4-NeedBallDown)+XMouseOver].src = Pic[1].src;
+      else
+        window.document.images[13*(YMouseOver+4-NeedBallDown)+XMouseOver].src = Pic[3].src;
+    }
+    if (NeedBallDown&gt;1)
+    { if (Fld[I_Sel][J_Sel][NeedBallDown-2]!=0)
+        NeedBallDown=1;
+    }
+    if (NeedBallDown==1)
+    { window.document.OptionsForm.Moves.value=MoveCount+1; 
+      MakeMove();
+    }
+    NeedBallDown--;
+  }
+}
+
+function TurnLeft()
+{ if (NeedBallDown&gt;0) { LastEvent="TurnLeft"; return; }
+  RotAng--;
+  if (RotAng&lt;0) RotAng=7;
+  RefreshScreen();
+}
+
+function TurnRight()
+{ if (NeedBallDown&gt;0) { LastEvent="TurnRight"; return; }
+  RotAng++;
+  if (RotAng&gt;7) RotAng=0;
+  RefreshScreen();
+}
+
+function Back()
+{ if (NeedBallDown&gt;0) { LastEvent="Back"; return; }
+  if (MoveCount&gt;0)
+  { IsOver=false;
+    MoveCount--;
+    var ii=History[MoveCount][0];
+    var jj=History[MoveCount][1];
+    var kk=--FldCount[ii][jj];
+    Fld[ii][jj][kk]=0;
+    window.document.OptionsForm.Moves.value=MoveCount;
+    RefreshPic(ii, jj, kk);
+  }
+}
+
+function Replay()
+{ if (NeedBallDown&gt;0) { LastEvent="Replay"; return; }
+  if (MoveCount&lt;MaxMoveCount)
+  { I_Sel=History[MoveCount][0];
+    J_Sel=History[MoveCount][1];
+    window.document.OptionsForm.Moves.value=MoveCount+1;
+    MakeMove();      
+    RefreshPic(I_Sel, J_Sel, FldCount[I_Sel][J_Sel]-1);
+  }
+}
+
+function MakeMove()
+{ var ccol, kk;
+  ccol=((MoveCount+1+Start0)%2)*2-1;
+  kk=FldCount[I_Sel][J_Sel]++;
+  Fld[I_Sel][J_Sel][kk]=ccol;
+  if (History[MoveCount][0]!=I_Sel)
+  { History[MoveCount][0]=I_Sel;
+    MaxMoveCount=MoveCount+1;
+  }
+  if (History[MoveCount][1]!=J_Sel)
+  { History[MoveCount][1]=J_Sel;
+    MaxMoveCount=MoveCount+1;
+  }
+  MoveCount++;
+  if (MaxMoveCount&lt;MoveCount)
+    MaxMoveCount=MoveCount;
+  IsOver=IsWinning(I_Sel, J_Sel, kk, ccol);
+  if (IsOver)
+  { if (ccol&lt;0) alert("Red has won !");
+    else alert("Blue has won !");
+  }
+  else
+  { if (MoveCount==64)
+    { IsOver=true;
+      alert("Draw !");
+    }
+  }
+}
+
+function GetBestMove(theCol)
+{ var ii, jj, kk, zz, vv, vvbest, nn, cc=theCol;
+  var iiw,jjw,kkw,wwcount;
+  var LLevel=Level[(MoveCount+1+Start0)%2];
+  I_Sel=-1; J_Sel=-1;
+  for (ii=0; ii&lt;4; ii++)
+  { for (jj=0; jj&lt;4; jj++)
+    { if ((kk=FldCount[ii][jj])&lt;4)
+      { Fld[ii][jj][kk]=cc;
+        if (IsWinning(ii, jj, kk, cc))
+        { Fld[ii][jj][kk]=0;
+          Select(ii, jj);
+          return;
+        }
+        Fld[ii][jj][kk]=0;
+      }
+    }
+  }
+  nn=0;
+  for (ii=0; ii&lt;4; ii++)
+  { for (jj=0; jj&lt;4; jj++)
+    { Value[ii][jj]=0;
+      if ((kk=FldCount[ii][jj])&lt;4)
+      { nn++;
+        Fld[ii][jj][kk]=-cc;
+        if (IsWinning(ii, jj, kk, -cc))
+        { Fld[ii][jj][kk]=0;
+          Select(ii, jj);
+          return;
+        }
+        Fld[ii][jj][kk]=0;
+      }
+    }
+  }
+  if (LLevel&gt;2)
+  { for (ii=0; ii&lt;4; ii++)
+    { for (jj=0; jj&lt;4; jj++)
+      { if ((kk=FldCount[ii][jj])&lt;4)
+        { wwcount=0;
+          Fld[ii][jj][kk]=cc;
+          if (kk&lt;3)
+          { if ((wwcount=CanWin(ii,jj,kk+1,cc))==2)
+            { Fld[ii][jj][kk]=0;
+              Select(ii, jj);
+              return;
+            }
+          }
+          if (wwcount&gt;=0)
+          { for (iiw=0; iiw&lt;4; iiw++)     
+            { for (jjw=0; jjw&lt;4; jjw++)
+              { if ((kkw=FldCount[iiw][jjw])&lt;4)
+                { if (!((ii==iiw)&&(jj==jjw)))
+                  { Fld[iiw][jjw][kkw]=cc;
+                    if (IsWinning(iiw, jjw, kkw, cc))
+                      wwcount++;
+                    Fld[iiw][jjw][kkw]=0;
+                    if (wwcount&gt;1)
+                    { Fld[ii][jj][kk]=0;
+                      Select(ii, jj);
+                      return;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          Fld[ii][jj][kk]=0;
+        }
+      }
+    }
+  }
+  if (LLevel&gt;3)
+  { for (ii=0; ii&lt;4; ii++)
+    { for (jj=0; jj&lt;4; jj++)
+      { if ((kk=FldCount[ii][jj])&lt;4)
+        { vv=0;
+          Fld[ii][jj][kk]=cc;
+          if (kk&lt;3)
+          { Fld[ii][jj][kk+1]=-cc;
+            if (IsWinning(ii, jj, kk+1, -cc))
+              vv=-1;
+            Fld[ii][jj][kk+1]=0;
+          }
+          if (vv==0)
+          { Fld[ii][jj][kk]=-cc;
+            if(kk&lt;3)
+            { Fld[ii][jj][kk+1]=cc;
+              if (IsWinning(ii, jj, kk+1, cc))
+                Value[ii][jj]=-200;
+              Fld[ii][jj][kk+1]=0;
+            }
+            for (iiw=0; iiw&lt;4; iiw++)     
+            { for (jjw=0; jjw&lt;4; jjw++)
+              { if ((kkw=FldCount[iiw][jjw])&lt;4)
+                { if (!((ii==iiw)&&(jj==jjw)))
+                  { if ((vv=CanWin(iiw,jjw,kkw,-cc))==2)
+                    { Fld[ii][jj][kk]=0;
+                      Select(ii, jj);
+                      return;
+                    }
+                    if (vv==-1)
+                    Value[ii][jj]=-100;
+                  }
+                }
+              }
+            }
+            Fld[ii][jj][kk]=cc;
+            if (kk&lt;3)
+            { Fld[ii][jj][kk+1]=-cc;
+              for (iiw=0; iiw&lt;4; iiw++)     
+              { for (jjw=0; jjw&lt;4; jjw++)
+                { if ((kkw=FldCount[iiw][jjw])&lt;4)
+                  { if (!((ii==iiw)&&(jj==jjw)))
+                    { if (CanWin(iiw,jjw,kkw,-cc)==2)
+                        Value[ii][jj]=-5000;
+                    }
+                  }
+                }
+              }
+              Fld[ii][jj][kk+1]=0;
+            }
+          }
+          Fld[ii][jj][kk]=0;
+        }
+      }
+    }
+  }
+  if (nn==0)
+  { IsOver=true; return; }
+  zz=0;  
+  nn=0;
+  for (ii=0; ii&lt;4; ii++)
+  { for (jj=0; jj&lt;4; jj++)
+    { if ((kk=FldCount[ii][jj])&lt;4)
+      { Fld[ii][jj][kk]=cc;
+        if (kk&lt;3)
+        { Fld[ii][jj][kk+1]=-cc;
+          if (IsWinning(ii, jj, kk+1, -cc))
+          { vv=-8100; 
+            Fld[ii][jj][kk+1]=0;
+          }
+          else
+          { Fld[ii][jj][kk+1]=0;
+            vv=GetValue(ii, jj, kk, cc);
+          }
+        } 
+        else
+          vv=GetValue(ii, jj, kk, cc);
+        if (LLevel&lt;2) vv%=200;
+        if (LLevel&lt;3) vv+=Math.floor(Math.random()*108);
+        if (LLevel==3) vv+=Math.floor(Math.random()*27);
+        Value[ii][jj]+=vv;
+        if (zz==0) vvbest=Value[ii][jj];
+        zz++;
+        if (Value[ii][jj]==vvbest)
+          nn++;
+        if (Value[ii][jj]&gt;vvbest)
+        { nn=1;
+          vvbest=Value[ii][jj];
+        }
+        Fld[ii][jj][kk]=0;
+      }
+    }
+  }
+  zz=Math.floor(Math.random()*nn);
+  nn=-1;
+  for (ii=0; ii&lt;4; ii++)
+  { for (jj=0; jj&lt;4; jj++)
+    { if ((kk=FldCount[ii][jj])&lt;4)
+      { if (vvbest==Value[ii][jj])
+        { nn++;
+          if (nn==zz)
+          { Select(ii, jj);
+            return;
+          }
+        }
+      }
+    }
+  }
+}
+
+function CanWin(ii, jj, kk, cc)
+{ var kkl, kkk=kk-1;
+  var vv=0;
+  do
+  { kkk++;
+    Fld[ii][jj][kkk]=-cc;
+    if ((IsWinning(ii, jj, kkk, -cc)))
+    { for (kkl=kk; kkl&lt;=kkk; kkl++)
+        Fld[ii][jj][kkl]=0;
+      if (kkk==kk) return(-1);
+      else return(vv);
+    }
+    Fld[ii][jj][kkk]=cc;
+    if ((IsWinning(ii, jj, kkk, cc))&&(kkk&lt;3))
+    { if (kkk==kk) vv++;
+      Fld[ii][jj][kkk]=-cc;
+      Fld[ii][jj][kkk+1]=cc;
+      if ((IsWinning(ii, jj, kkk+1, cc)))
+      { for (kkl=kk; kkl&lt;=kkk+1; kkl++)
+          Fld[ii][jj][kkl]=0;
+        return(2);
+      }
+      Fld[ii][jj][kkk+1]=0;
+    }
+    Fld[ii][jj][kkk]=-cc;
+  }
+  while (kkk&lt;3);
+  for (kkl=kk; kkl&lt;=kkk; kkl++)
+    Fld[ii][jj][kkl]=0;
+  return(vv);
+}
+
+function GetValue(ii, jj, kk, ccol)
+{ var ll, cc, ccount1, ccount2, vval=0;
+  var dd1, dd2, ddv, ddd, ddr;
+  if (MoveCount%2==0)
+  { dd1=1;
+    dd2=1;
+    ddv=(3-kk)*2;
+    ddd=4; ddr=4;
+    if (kk==2)
+    { ddd=8; ddr=8; }
+  }
+  else
+  { dd1=1;
+    dd2=1;
+    ddv=(3-kk)*(3-kk)+1;
+    ddd=4; ddr=4;
+    if (kk==2)
+    { ddd=8; ddr=8; }
+  }
+  var ss1=0;
+  var ss2=0;
+  var ww1count=3*dd1;
+  var ww1=0;
+  var ww2count=2*dd2;
+  var ww2=0;
+  ccount1=0;
+  ccount2=0;
+  for (ll=0; ll&lt;4; ll++)
+  { if ((cc=Fld[ll][jj][kk])==ccol) ccount1+=dd1;
+    if (cc==-ccol) ccount2+=dd2;
+  }
+  if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+  else
+  { vval+=(ccount1+1)*(ccount2+1)*ddv;
+    ss1+=ccount1-dd1; ss2+=ccount2;
+    if (ccount1&gt;=ww1count) ww1++;
+    if (ccount2&gt;=ww2count) ww2++;
+  }
+  ccount1=0;
+  ccount2=0;
+  for (ll=0; ll&lt;4; ll++)
+  { if ((cc=Fld[ii][ll][kk])==ccol) ccount1+=dd1;
+    if (cc==-ccol) ccount2+=dd2;
+  }
+  if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+  else
+  { vval+=(ccount1+1)*(ccount2+1)*ddv;
+    ss1+=ccount1-dd1; ss2+=ccount2;
+    if (ccount1&gt;=ww1count) ww1++;
+    if (ccount2&gt;=ww2count) ww2++;
+  }
+  ccount1=0;
+  ccount2=0;
+  for (ll=0; ll&lt;=kk; ll++)
+  { if ((cc=Fld[ii][jj][ll])==ccol) ccount1+=dd1;
+    if (cc==-ccol) ccount2+=dd2;
+  }
+  if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+  else
+  { vval+=(ccount1+1)*(ccount2+1)*ddv;
+    ss1+=ccount1-dd1; ss2+=ccount2;
+    if (ccount1&gt;=ww1count) ww1++;
+    if (ccount2&gt;=ww2count) ww2++;
+  }
+  if (jj==kk)
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[ii][ll][ll])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddd;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    }
+  }
+  if ((3-jj)==kk)
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[ii][3-ll][ll])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddd;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    }
+  }
+  if (ii==kk)
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[ll][jj][ll])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddd;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    }
+  }
+  if ((3-ii)==kk)
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[3-ll][jj][ll])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddd;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    }
+  }
+  if (jj==ii)
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[ll][ll][kk])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddd;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    }
+  }                          
+  if ((3-jj)==ii)
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[ll][3-ll][kk])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddd;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    }
+  }                        
+  if ((ii==jj)&&(jj==kk))
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[ll][ll][ll])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddr;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    }
+  }
+  if ((ii==kk)&&((3-jj)==kk))
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[ll][3-ll][ll])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddr;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    } 
+  }
+  if ((ii==jj)&&(jj==(3-kk)))
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[ll][ll][3-ll])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddr;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    }
+  }
+  if (((3-ii)==kk)&&(jj==kk))
+  { ccount1=0;
+    ccount2=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if ((cc=Fld[3-ll][ll][ll])==ccol) ccount1+=dd1;
+      if (cc==-ccol) ccount2+=dd2;
+    }
+    if ((ccount1&gt;dd1)&&(ccount2&gt;0));
+    else
+    { vval+=(ccount1+1)*(ccount2+1)*ddr;
+      ss1+=ccount1-dd1; ss2+=ccount2;
+      if (ccount1&gt;=ww1count) ww1++;
+      if (ccount2&gt;=ww2count) ww2++;
+    }
+  } 
+  if (ww1&gt;1) vval+=ww1*4000;
+  if (ss1&gt;3*dd1) vval+=(ss1-3*dd1)*20;
+  if ((ww2&gt;=1)&&(ss2&gt;2*dd2)) vval+=(ss2-2*dd2)*(kk+1)*50;
+  if (ww2&gt;1) vval+=ww2*500;
+  return(vval);
+}
+
+function IsWinning(ii, jj, kk, ccol)
+{ var ll, ccount;
+  ccount=0;
+  for (ll=0; ll&lt;4; ll++)
+  { if (Fld[ll][jj][kk]==ccol) ccount++;
+  }
+  if (ccount==4) return(true);
+  ccount=0;
+  for (ll=0; ll&lt;4; ll++)
+  { if (Fld[ii][ll][kk]==ccol) ccount++;
+  }
+  if (ccount==4) return(true);
+  ccount=0;
+  for (ll=0; ll&lt;=kk; ll++)
+  { if (Fld[ii][jj][ll]==ccol) ccount++;
+  }
+  if (ccount==4) return(true);
+  if (jj==kk)
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[ii][ll][ll]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  if ((3-jj)==kk)
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[ii][3-ll][ll]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  if (ii==kk)
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[ll][jj][ll]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  if ((3-ii)==kk)
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[3-ll][jj][ll]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  if (jj==ii)
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[ll][ll][kk]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  if ((3-jj)==ii)
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[ll][3-ll][kk]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  if ((ii==jj)&&(jj==kk))
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[ll][ll][ll]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  if ((ii==kk)&&((3-jj)==kk))
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[ll][3-ll][ll]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  if ((ii==jj)&&(jj==(3-kk)))
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[ll][ll][3-ll]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  if (((3-ii)==kk)&&(jj==kk))
+  { ccount=0;
+    for (ll=0; ll&lt;4; ll++)
+    { if (Fld[3-ll][ll][ll]==ccol) ccount++;
+    }
+    if (ccount==4) return(true);
+  }
+  return(false);
+}
+
+function Select(ii, jj)
+{ I_Sel=ii;
+  J_Sel=jj;
+  XMouseOver=ScreenFld[ii][jj][0];
+  YMouseOver=ScreenFld[ii][jj][1];
+  NeedBallDown=4;
+}
+
+function Clicked(xx, yy)
+{ if (IsOver) return;
+  if (NeedBallDown&gt;0) return;
+  MouseOut();
+  MouseOver(xx, yy);
+  if (XMouseOver&gt;=0)
+    NeedBallDown=4;
+  window.document.OptionsForm.Moves.focus();
+  window.document.OptionsForm.Moves.blur();
+}  
+
+function MouseOver(xx, yy)
+{ if (IsOver) return;
+  if (XMouseOver&gt;=0) return;
+  if ((((MoveCount+Start0)%2==1)&&(IsPlayer[0]))||
+      (((MoveCount+Start0)%2==0)&&(IsPlayer[1])))
+  { if (NeedBallDown==0)
+    { for (ii=0; ii&lt;4; ii++)
+      { for (jj=0; jj&lt;4; jj++)
+        { if ((ScreenFld[ii][jj][0]==xx)&&(ScreenFld[ii][jj][1]==yy))
+          { if (Fld[ii][jj][3]==0)
+            { if ((MoveCount+Start0)%2==1)
+                window.document.images[13*yy+xx].src = Pic[1].src;
+              else
+                window.document.images[13*yy+xx].src = Pic[3].src;
+              XMouseOver=xx;
+              YMouseOver=yy;
+              I_Sel=ii;
+              J_Sel=jj;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+function MouseOut()
+{ if (IsOver) return;
+  if (XMouseOver&gt;=0)
+  { if (NeedBallDown==0)
+    { for (ii=0; ii&lt;4; ii++)
+      { for (jj=0; jj&lt;4; jj++)
+        { if ((ScreenFld[ii][jj][0]==XMouseOver)&&(ScreenFld[ii][jj][1]==YMouseOver))
+            window.document.images[13*YMouseOver+XMouseOver].src = Pic[2+Fld[ii][jj][3]].src;
+        }
+      }
+      XMouseOver=-1;
+    }
+  }
+}  
+
+function RefreshPic(ii, jj, kk)
+{ var xx=ScreenFld[ii][jj][0];
+  var yy=ScreenFld[ii][jj][1];
+  window.document.images[13*(yy+3-kk)+xx].src = Pic[2+Fld[ii][jj][kk]].src;
+}
+
+function RefreshScreen()
+{ var ii, jj, kk, xx, yy;
+  for (ii=0; ii&lt;13; ii++)
+  { for (jj=0; jj&lt;13; jj++)
+      window.document.images[13*ii+jj].src = Pic[0].src;
+  }
+  for (ii=0; ii&lt;4; ii++)
+  { for (jj=0; jj&lt;4; jj++)
+    { if (RotAng==0) { xx=3*ii+jj; yy=9-2*jj+ii; }
+      if (RotAng==1) { xx=3*ii+3-jj; yy=9-2*jj+3-ii; }
+      if (RotAng==2) { xx=3*(3-jj)+ii; yy=9-2*ii+(3-jj); }
+      if (RotAng==3) { xx=3*(3-jj)+3-ii; yy=9-2*ii+3-(3-jj); }
+      if (RotAng==4) { xx=3*(3-ii)+(3-jj); yy=9-2*(3-jj)+(3-ii); }
+      if (RotAng==5) { xx=3*(3-ii)+3-(3-jj); yy=9-2*(3-jj)+3-(3-ii); }
+      if (RotAng==6) { xx=3*jj+(3-ii); yy=9-2*(3-ii)+jj; }
+      if (RotAng==7) { xx=3*jj+3-(3-ii); yy=9-2*(3-ii)+3-jj; }
+      ScreenFld[ii][jj][0]=xx;
+      ScreenFld[ii][jj][1]=yy-3;     
+      for (kk=0; kk&lt;4; kk++)
+        window.document.images[13*(yy-kk)+xx].src = Pic[2+Fld[ii][jj][kk]].src;
+    }
+  }
+  window.document.OptionsForm.Moves.value=MoveCount;
+}
+
+function Resize()
+{ if(navigator.appName == "Netscape") history.go(0);
+}
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Insert the onLoad event handler into your BODY tag  --&gt;
+
+&lt;BODY onResize="javascript:Resize()"&gt;
+
+&lt;!-- STEP THREE: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;DIV ALIGN=center&gt;
+&lt;table noborder cellpadding=10 cellspacing=0 width=650 heigth=390&gt;
+&lt;tr height=100%&gt;
+  &lt;td width=60%&gt;
+    &lt;table border cellpadding=10 cellspacing=0 bgcolor=#FFFFCC width=100%&gt;&lt;tr&gt;&lt;td&gt;
+      &lt;table noborder cellpadding=0 cellspacing=0&gt;&lt;tr&gt;&lt;td&gt;
+      &lt;script language="JavaScript"&gt;
+      document.open("text/plain");
+      for (j=0; j &lt; 13; j++)
+      { for (i=0; i &lt; 13; i++)
+          document.write("&lt;a href=\"javascript:Clicked("+i+","+j+")\" onMouseOver=\"MouseOver("+i+","+j+")\" onMouseOut=\"MouseOut()\"&gt;&lt;IMG src=\"tt3d_0.gif\" border=0&gt;&lt;/a&gt;");
+        document.writeln("&lt;BR&gt;");
+      }
+      document.close();
+      &lt;/script&gt;
+      &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+    &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+  &lt;/td&gt;
+  &lt;td width=40%&gt;&lt;form name="OptionsForm"&gt;
+      &lt;table noborder cellpadding=0 cellspacing=0 width=100%&gt;
+      &lt;tr&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;
+        &lt;table border cellpadding=2 cellspacing=0 width=100%&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;input type=radio name="Red" checked value="Red: Player" onClick="javascript:SetOption(0,0)"&gt; Red: Player&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;input type=radio name="Red" value="Red: Computer" onClick="javascript:SetOption(0,1)"&gt; Red: Computer&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&nbsp;Level: 
+                &lt;input type=radio name="RedLevel" value="1" onClick="javascript:SetLevel(0,1)"&gt;1
+                &lt;input type=radio name="RedLevel" checked value="2" onClick="javascript:SetLevel(0,2)"&gt;2
+                &lt;input type=radio name="RedLevel" value="3" onClick="javascript:SetLevel(0,3)"&gt;3
+                &lt;input type=radio name="RedLevel" value="4" onClick="javascript:SetLevel(0,4)"&gt;4
+        &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;      
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;
+        &lt;table border cellpadding=2 cellspacing=0 width=100%&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;input type=radio name="Blue" value="Blue: Player" onClick="javascript:SetOption(1,0)"&gt; Blue: Player&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;input type=radio name="Blue" checked value="Blue: Computer" onClick="javascript:SetOption(1,1)"&gt; Blue: Computer&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&nbsp;Level: 
+                &lt;input type=radio name="BlueLevel" value="1" onClick="javascript:SetLevel(1,1)"&gt;1
+                &lt;input type=radio name="BlueLevel" value="2" onClick="javascript:SetLevel(1,2)"&gt;2
+                &lt;input type=radio name="BlueLevel" checked value="3" onClick="javascript:SetLevel(1,3)"&gt;3
+                &lt;input type=radio name="BlueLevel" value="4" onClick="javascript:SetLevel(1,4)"&gt;4
+        &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;
+        &lt;table border cellpadding=2 cellspacing=0 width=100%&gt;
+        &lt;tr&gt;&lt;td width=50%&gt;&lt;input type=radio name="Start" checked value="Red" onClick="javascript:SetOption(2,1)"&gt; Red begins&lt;/td&gt;
+        &lt;td&gt;&lt;input type=radio name="Start" value="Blue" onClick="javascript:SetOption(2,0)"&gt; Blue begins&lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;
+        &lt;table border cellpadding=2 cellspacing=0 width=100%&gt;&lt;tr&gt;
+        &lt;td width=30% align=center&gt;&lt;input type=button value="&lt;-" width=60 style="width:60" onClick="javascript:TurnLeft()"&gt;&lt;/td&gt;
+        &lt;td width=40% align=center&gt;&lt;input type=button value="NEW" width=80 style="width:80" onClick="javascript:Init()"&gt;&lt;/td&gt;
+        &lt;td width=30% align=center&gt;&lt;input type=button value="-&gt;" width=60 style="width:60" onClick="javascript:TurnRight()"&gt;&lt;/td&gt;
+        &lt;/tr&gt;&lt;/table&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;&nbsp;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;
+        &lt;table border cellpadding=2 cellspacing=0 width=100%&gt;&lt;tr&gt;
+        &lt;td width=40% align=center&gt;&lt;input type=button value="&lt;&lt;" width=80 style="width:80" onClick="javascript:Back()"&gt;&lt;/td&gt;
+        &lt;td width=20% align=center&gt;&lt;input size=3 name="Moves"&gt;&lt;/td&gt;
+        &lt;td width=40% align=center&gt;&lt;input type=button value="&gt;&gt;" width=80 style="width:80" onClick="javascript:Replay()"&gt;&lt;/td&gt;
+        &lt;/tr&gt;&lt;/table&gt;
+      &lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+  &lt;/form&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/DIV&gt;
+&lt;script language="JavaScript"&gt;
+Init();
+setInterval("Timer()",400);
+&lt;/script&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  26.44 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/tictac-3d.html/1909054595/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Content_Management_1d/jupcontent125x600_new.gif"  ALT="The Premier Event for Content Management Strategies and Solutions"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/tictac-3d.html/1909054595/125x800/House_Content_Management_1d/jupcontent125x600_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='tictac-3d.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/tictac-3d.html/251567894/468x60-2/House_Semlist_1a/semlist-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Semlist_1a/semlist-750.gif"  ALT="100's of firms that help your Web site be found"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/tictac-3d.html/251567894/468x60-2/House_Semlist_1a/semlist-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

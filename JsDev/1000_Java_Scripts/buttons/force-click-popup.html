@@ -1,0 +1,65 @@
+<html>
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+/*
+Source: http://www.vippro.de/javascripts
+*/
+
+function OK() {
+document.formular.field.value = "ok";
+alert("Thank you for your acceptance!");
+self.close();
+}
+
+function SetToNull() { // First Netscape-Fix
+document.formular.field.value = "";
+}
+
+function LoadAgain() {
+
+if (document.formular.field.value == "") {
+now=new Date(); //Second Netscape-Fix
+b = window.open(self.location, 's'+now.getTime(), "width=400,height=200,location=0,menubar=0,personalbar=0,status=0");
+b.focus();
+}
+}
+
+function NoKeys(e) {
+
+var message = "You cannot use the keyboard. Please click the Accept-button!";
+
+if (window.Event) {
+if ((e.which)||(e.modifiers & Event.CONTROL_MASK|Event.META_MASK))
+alert(message);
+return false;
+}
+else if((event.altKey)||(event.shiftKey)||(event.ctrlKey)||(event.keyCode))
+alert(message);
+return false;
+}
+
+if (window.Event) {
+document.captureEvents(Event.KEYDOWN)
+}
+document.onkeydown = NoKeys;
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY onLoad="SetToNull()" onUnload="LoadAgain()">
+<br>
+<center>
+Please confirm that you accept our conditions:
+<form name="formular">
+<input type=hidden name="field" value="">
+<input type=button name="accept" value=" Accept " onClick="OK()">
+</form>
+</center>
+
+</body>
+</html>

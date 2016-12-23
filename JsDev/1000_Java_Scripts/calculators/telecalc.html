@@ -1,0 +1,1157 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Calculators:  TeleCalc</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="This script works as a regular calculator it also is great with stats. When clicking on "more options" new buttons appear, enter your number and then click the "Add" button keep doing so until all numbers are in. Then you can check for min, max, average and even open a window with all the statistics by clicking the "Sta" button.">
+<META NAME="date" CONTENT="2003-12-31">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Zion Gabay">
+<META NAME="section" CONTENT="Calculators">
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  Zion Gabay (ZionG@adhawk.net ) -->
+<!-- Web Site:  http://www.adhawk.net -->
+<SCRIPT >
+
+LastOper     = '';
+TempVal      = 0;
+NewNum       = 'Y';
+Memval       = 0;
+Dotused      = "N";
+Curroption   = 4;
+Maxoption    = 19;
+FirstinXonY  = '';
+
+Statelements = [0];
+n            = 0;
+Ave          = 0;
+Max          = 1.1111111234;
+Min          = 1.1111111234;
+Dummymaxmin  = 1.1111111234;
+Sum          = 0;
+
+additionalfunctions = ["x^2", "2^x", "x^y", "x^3", " n!  ", "Log", " Pi ", " h ", "Tan", "Cot", "Sin", "Cos", "Add", "Sum", "Ave", "Max", "Min", " n ", "Clr St", "Sta"];  
+
+
+
+function backspace() 
+{
+  strlen = document.calc.Results.value.length;
+  if (strlen > 1 && document.calc.Results.value != "0."){document.calc.Results.value =  document.calc.Results.value.substring(0,strlen-1);}
+  document.calc.EQ.focus();
+}
+
+function Onediv()
+{
+  if (document.calc.Results.value == '0.')
+  { 
+    document.calc.Results.value = "Can't Devide By 0";
+  } 
+  else
+  {
+    document.calc.Results.value = 1 / document.calc.Results.value;
+    NewNum = "Y";
+  }
+  document.calc.EQ.focus();
+}
+
+function MoreOptions()
+{
+  if (Curroption > Maxoption) {Curroption = 0;}
+  document.calc.opt1.value = additionalfunctions[Curroption++];
+  if (Curroption > Maxoption) {Curroption = 0;}
+  document.calc.opt2.value = additionalfunctions[Curroption++];
+  if (Curroption > Maxoption) {Curroption = 0;}
+  document.calc.opt3.value = additionalfunctions[Curroption++];
+  if (Curroption > Maxoption) {Curroption = 0;}
+  document.calc.opt4.value = additionalfunctions[Curroption++];
+  document.calc.EQ.focus();
+}
+
+function Advfunction(Pos)
+{
+  Pos += Curroption;
+  Pos -= 4;
+  if (Pos < 0) {Pos = Maxoption + Pos;}
+  if (Pos == 0) {document.calc.Results.value *= document.calc.Results.value;}
+  if (Pos == 1) {
+                  Temp = 1;
+                  for (var I = 0 ;I < document.calc.Results.value; I++) 
+                  {
+                   Temp *= 2;
+                  } 
+                  document.calc.Results.value = Temp;
+                }
+  if (Pos == 2)  {
+                  if (FirstinXonY == '') 
+                  {
+                    FirstinXonY = document.calc.Results.value;
+                  }
+                  else
+                  {
+                    Temp = FirstinXonY;
+                    for (var I = 1 ;I < document.calc.Results.value; I++) 
+                    {
+                     Temp *= FirstinXonY;
+                    } 
+                    document.calc.Results.value = Temp;
+                    FirstinXonY = '';
+                  }
+                } 
+   if (Pos == 4){Temp = 0; for (var I = 1; I <= document.calc.Results.value;I++) {Temp += I} document.calc.Results.value = Temp;}
+   if (Pos == 6){document.calc.Results.value =  3.14159265359;}            
+   if (Pos == 12)
+                {
+                 Statelements[++n] = document.calc.Results.value; 
+                 Expres = "Sum = + +" + Sum + " + " + "+" + document.calc.Results.value;
+                 eval(Expres);
+                 Ave = Sum/n;
+                 Max = 1 * Max;
+                 Min = 1 * Min;
+                 if (Max < document.calc.Results.value || Max == Dummymaxmin) {Max = document.calc.Results.value;}
+                 if (Min > document.calc.Results.value || Min == Dummymaxmin) {Min = document.calc.Results.value;}  
+                }
+   if (Pos == 13){document.calc.Results.value = Sum;} 
+   if (Pos == 14){document.calc.Results.value = Ave;} 
+   if (Pos == 15){if (n > 0) {document.calc.Results.value = Max;}} 
+   if (Pos == 16){if (n > 0) {document.calc.Results.value = Min;}} 
+   if (Pos == 17){document.calc.Results.value = n;} 
+   if (Pos == 18)
+                {
+                 Statelements = [0];
+                 n            = 0;
+                 Ave          = 0;
+                 Max          = 1.1111111234;
+                 Min          = 1.1111111234;
+                 Dummymaxmin  = 1.1111111234;
+                 Sum          = 0;                 
+                }
+   if (Pos == 19)
+                {
+                 if (n > 0)
+                 {
+                   myWindow = window.open("", "newwin", "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,copyhistory=0,width=200,height=180,left=400,top=300");
+                   myWindow.document.open();
+                   myWindow.document.write("<HTML><HEAD>");
+                   myWindow.document.write("<TITLE>Statistics</TITLE>");
+                   myWindow.document.write("</HEAD><FORM><BODY BGCOLOR=#FFFFFF TEXT=black>\n<CENTER>");
+                   myWindow.document.write("<TABLE ALIGN=CENTER>");
+                   myWindow.document.write("<TR><TD><B>n</B></TD><TD>: "  , n  , "</TD></TR>");
+                   myWindow.document.write("<TR><TD><B>Sum</B></TD><TD>: ", Sum, "</TD></TR>");
+                   myWindow.document.write("<TR><TD><B>Ave</B></TD><TD>: ", Ave, "</TD></TR>");
+                   myWindow.document.write("<TR><TD><B>Max</B></TD><TD>: ", Max, "</TD></TR>");
+                   myWindow.document.write("<TR><TD><B>Min</B></TD><TD>: ", Min, "</TD></TR>");
+                   myWindow.document.write("</TABLE>");
+                   myWindow.document.write(" <BR><INPUT TYPE='SUBMIT' VALUE='OK' onClick='window.close()'</FORM>\n</CENTER>");
+                   myWindow.document.write("</BODY></HTML>");
+                   myWindow.document.close();
+                 }
+                 else
+                 {
+                   myWindow = window.open("", "newwin", "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,copyhistory=0,width=200,height=180,left=400,top=300");
+                   myWindow.document.open();
+                   myWindow.document.write("<HTML><HEAD>");
+                   myWindow.document.write("<TITLE> No Statistics</TITLE>");
+                   myWindow.document.write("</HEAD><FORM><BODY BGCOLOR=#FFFFFF TEXT=BLACK>\n<CENTER>");
+                   myWindow.document.write("<U><B>No Statistics</B></U><BR><BR>You did not add any item<BR>to the statistics<BR>To add items, use The<BR>'Add' Button");
+                   myWindow.document.write("<BR><BR><INPUT TYPE='SUBMIT' VALUE='OK' onClick='window.close()'</FORM></CENTER>");
+                   myWindow.document.write("</BODY></HTML>");
+                   myWindow.document.close();
+                 }
+                }
+
+  NewNum = 'Y';
+}
+     
+function SQRT()
+{
+  document.calc.Results.value = sqrt( document.calc.Results.value);
+  NewNum = "Y";
+  document.calc.EQ.focus();
+}
+
+function Percent()
+{
+  document.calc.Results.value *= TempVal / 100;
+  Dotused = "N";
+  NewNum = "Y";
+  document.calc.EQ.focus();
+}
+
+function Oper(OP)
+{
+  if (LastOper == "+")
+  {
+     num1 = document.calc.Results.value;
+     Command = eval ("'+' + num1 +  '+' + TempVal");
+     document.calc.Results.value= eval (Command);
+  } 
+   
+  if (LastOper == "-")
+  {
+     num1 = document.calc.Results.value;
+     Command = "(document.calc.Results.value = TempVal - num1)";
+     eval (Command);
+  } 
+
+  if (LastOper == "*")
+  {
+     num1 = document.calc.Results.value;
+     Command = "(document.calc.Results.value = TempVal * num1)";
+     eval (Command);
+  } 
+
+  if (LastOper == "/")
+  {
+    if (document.calc.Results.value == '0.')
+    { 
+      document.calc.Results.value = "Can't Devide By 0";
+    } 
+    else
+    {
+      num1 = document.calc.Results.value;
+      Command = "(document.calc.Results.value = TempVal / num1)";
+      eval (Command);
+    }
+  } 
+ if (OP != "=")
+ {
+   document.calc.oper.value = " " + OP;
+ }
+ else
+ {
+   document.calc.oper.value ="";
+ }
+ NewNum = "Y";
+ LastOper = OP;
+ TempVal = document.calc.Results.value ;
+ document.calc.EQ.focus();
+ FirstinXonY = '';
+
+}
+
+function Analyzethis(Key)
+{
+  if (Key >= "0" && Key <= "9" )
+  {
+    Digit(Key);
+  }
+  if (Key == "*" || Key == "-" || Key == "\\" || Key == "+" || Key == "=")
+  {
+    Oper(Key);
+  }
+  document.calc.EQ.focus();
+}
+
+function Memory(Mode)
+{
+    if (Mode == "Clear")
+    {
+       document.calc.Mem.value="";
+       Memval = 0;     
+    } 
+    if (Mode == "Set")
+    {
+        document.calc.Mem.value = "M";
+        Memval = document.calc.Results.value;
+    } 
+    if (Mode == "Add")
+    {
+        document.calc.Mem.value = "M";
+        Command = eval("'+' + document.calc.Results.value + '+' + Memval");
+        Memval = eval (Command);
+    } 
+    if (Mode == "Read")
+    {
+        document.calc.Results.value = Memval;
+        NewNum = "Y";
+    }    
+    document.calc.EQ.focus();
+}
+
+function Dot()
+{ 
+  if (NewNum == "Y")
+  {
+    document.calc.Results.value = "0.";
+    Dotused = "Y";
+    NewNum = "N";
+  }
+  if (Dotused == "N")
+  {
+    document.calc.Results.value += ".";
+    Dotused = "Y";
+  }	
+  document.calc.EQ.focus();
+}
+
+function Changesign()
+{
+  document.calc.Results.value *= -1;
+  document.calc.EQ.focus();
+}
+
+function Digit(DG)
+{
+  if (NewNum == "Y") 
+  {
+    document.calc.Results.value=DG;
+    Dotused = "N";
+  }
+  else
+  {
+    document.calc.Results.value= document.calc.Results.value + DG;
+  }
+
+  if (document.calc.Results.value == '0')
+  {
+   document.calc.Results.value = '0.'
+  }
+  else
+  {
+   NewNum = "N";
+  }
+  document.calc.EQ.focus();
+}
+
+function Clear (Type)
+{
+  document.calc.Results.value = '0.'; 
+  NewNum = 'Y';
+  if (Type == "ALL")
+  {
+     document.calc.oper.value ="";
+     LastOper = '';
+     TempVal = 0;
+  }
+  document.calc.EQ.focus();
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff onLoad="document.calc.EQ.focus()">
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=678V20021114144615&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=284V200211152029&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calculators/telecalc.html/875542279/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_IDE_Brown_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Calculators</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>TeleCalc</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+This script works as a regular calculator it also is great with stats. When clicking on "more options" new buttons appear, enter your number and then click the "Add" button keep doing so until all numbers are in. Then you can check for min, max, average and even open a window with all the statistics by clicking the "Sta" button.
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  Zion Gabay (ZionG@adhawk.net ) -->
+<!-- Web Site:  http://www.adhawk.net -->
+<CENTER>
+   <FORM NAME=calc>
+   <IMG src="telecalc.gif"><BR>
+   <TABLE border=5>
+   <TR>
+       <TD COLSPAN = 6><INPUT TYPE = Text NAME=Results size=19 VALUE = '0.'  align=right  onFocus="this.blur()" >
+                       <INPUT TYPE = text NAME=oper    size=1  VALUE = ''    align=center onFocus="this.blur()">  
+       </TD>
+   </TR>
+   <TR>
+       <TD align=center><INPUT TYPE = TEXT MAXLENGTH=1 SIZE=1 NAME=Mem onFocus="this.blur()"></TD>
+       <TD COLSPAN = 2 align=center> <INPUT TYPE=button VALUE='BkSp' onClick="backspace()"></TD>
+       <TD COLSPAN = 2 align=center> <INPUT TYPE=button VALUE='&nbsp;&nbsp;CE&nbsp' onClick="Clear('Res')"></TD>
+       <TD COLSPAN = 1 align=center> <INPUT TYPE=button VALUE='&nbsp;C&nbsp' onClick="Clear('ALL')"></TD>
+   </TR>     
+
+   <TR>
+       <TD align=center><INPUT TYPE = button VALUE='MC' onClick="Memory('Clear')"></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;7&nbsp' onClick="Digit(7)" NAME='D7'></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;8&nbsp' onClick="Digit(8)" NAME='D8'></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;9&nbsp' onClick="Digit(9)" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;/&nbsp;' onClick=" Oper('/') "></TD>
+       <TD align=center><INPUT TYPE = button VALUE='sqr' onClick="SQRT()"></TD>
+   </TR>
+
+   <TR>
+       <TD align=center><INPUT TYPE = button VALUE='MR' onClick="Memory('Read')" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;4&nbsp' onClick="Digit(4)" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;5&nbsp' onClick="Digit(5)" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;6&nbsp' onClick="Digit(6)" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;* ' onClick=" Oper('*')"></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;%&nbsp' onClick="Percent()"></TD>
+   </TR>
+
+   <TR>
+       <TD align=center><INPUT TYPE = button VALUE='MS' onClick="Memory('Set')" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;1&nbsp' onClick="Digit(1)" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;2&nbsp' onClick="Digit(2)" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;3&nbsp' onClick="Digit(3)" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;-&nbsp' onClick="Oper('-')" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='1/x' onClick="Onediv()"></TD>
+   </TR>
+
+   <TR>
+       <TD align=center><INPUT TYPE = button VALUE='M+' onClick="Memory('Add')"></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;0&nbsp' onClick="Digit(0)" ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='+/-' onClick="Changesign()"></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp; .&nbsp' onClick="Dot()"></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp;+'  onClick=" Oper('+') " ></TD>
+       <TD align=center><INPUT TYPE = button VALUE='&nbsp=&nbsp ' onClick=" Oper('=')" NAME='EQ' onKeypress="Analyzethis('1')" ></TD>
+   </TR>
+</TABLE>
+<INPUT TYPE=button NAME=addfeatures VALUE="More Options" onClick="MoreOptions()">
+<TABLE border=0>
+<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</TD>
+<TD>
+<TABLE border=4>
+   <TR>
+       <TD><INPUT TYPE = button VALUE="x^2"  NAME=opt1 onClick="Advfunction(0)" onFocus="document.calc.EQ.focus()"></TD>
+       <TD><INPUT TYPE = button VALUE="2^x"  NAME=opt2 onClick="Advfunction(1)" onFocus="document.calc.EQ.focus()"></TD>
+       <TD><INPUT TYPE = button VALUE="x^y"  NAME=opt3 onClick="Advfunction(2)" onFocus="document.calc.EQ.focus()"></TD>
+       <TD><INPUT TYPE = button VALUE="x^3"  NAME=opt4 onClick="Advfunction(3)" onFocus="document.calc.EQ.focus()"></TD>
+   </TR>
+</TABLE>
+</TD>
+ <TD><IMG src="remote.gif" border=0 onClick="window.close()"></TD></TR>
+</TABLE>
+</CENTER>
+</FORM>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Calculators:  TeleCalc</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  15.60 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- THREE STEPS TO INSTALL TELECALC:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the onLoad event handler into the BODY tag
+  3.  Put the last coding into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+&lt;!-- Original:  Zion Gabay (ZionG@adhawk.net ) --&gt;
+&lt;!-- Web Site:  http://www.adhawk.net --&gt;
+&lt;SCRIPT &gt;
+
+LastOper     = '';
+TempVal      = 0;
+NewNum       = 'Y';
+Memval       = 0;
+Dotused      = "N";
+Curroption   = 4;
+Maxoption    = 19;
+FirstinXonY  = '';
+
+Statelements = [0];
+n            = 0;
+Ave          = 0;
+Max          = 1.1111111234;
+Min          = 1.1111111234;
+Dummymaxmin  = 1.1111111234;
+Sum          = 0;
+
+additionalfunctions = ["x^2", "2^x", "x^y", "x^3", " n!  ", "Log", " Pi ", " h ", "Tan", "Cot", "Sin", "Cos", "Add", "Sum", "Ave", "Max", "Min", " n ", "Clr St", "Sta"];  
+
+
+
+function backspace() 
+{
+  strlen = document.calc.Results.value.length;
+  if (strlen &gt; 1 && document.calc.Results.value != "0."){document.calc.Results.value =  document.calc.Results.value.substring(0,strlen-1);}
+  document.calc.EQ.focus();
+}
+
+function Onediv()
+{
+  if (document.calc.Results.value == '0.')
+  { 
+    document.calc.Results.value = "Can't Devide By 0";
+  } 
+  else
+  {
+    document.calc.Results.value = 1 / document.calc.Results.value;
+    NewNum = "Y";
+  }
+  document.calc.EQ.focus();
+}
+
+function MoreOptions()
+{
+  if (Curroption &gt; Maxoption) {Curroption = 0;}
+  document.calc.opt1.value = additionalfunctions[Curroption++];
+  if (Curroption &gt; Maxoption) {Curroption = 0;}
+  document.calc.opt2.value = additionalfunctions[Curroption++];
+  if (Curroption &gt; Maxoption) {Curroption = 0;}
+  document.calc.opt3.value = additionalfunctions[Curroption++];
+  if (Curroption &gt; Maxoption) {Curroption = 0;}
+  document.calc.opt4.value = additionalfunctions[Curroption++];
+  document.calc.EQ.focus();
+}
+
+function Advfunction(Pos)
+{
+  Pos += Curroption;
+  Pos -= 4;
+  if (Pos &lt; 0) {Pos = Maxoption + Pos;}
+  if (Pos == 0) {document.calc.Results.value *= document.calc.Results.value;}
+  if (Pos == 1) {
+                  Temp = 1;
+                  for (var I = 0 ;I &lt; document.calc.Results.value; I++) 
+                  {
+                   Temp *= 2;
+                  } 
+                  document.calc.Results.value = Temp;
+                }
+  if (Pos == 2)  {
+                  if (FirstinXonY == '') 
+                  {
+                    FirstinXonY = document.calc.Results.value;
+                  }
+                  else
+                  {
+                    Temp = FirstinXonY;
+                    for (var I = 1 ;I &lt; document.calc.Results.value; I++) 
+                    {
+                     Temp *= FirstinXonY;
+                    } 
+                    document.calc.Results.value = Temp;
+                    FirstinXonY = '';
+                  }
+                } 
+   if (Pos == 4){Temp = 0; for (var I = 1; I &lt;= document.calc.Results.value;I++) {Temp += I} document.calc.Results.value = Temp;}
+   if (Pos == 6){document.calc.Results.value =  3.14159265359;}            
+   if (Pos == 12)
+                {
+                 Statelements[++n] = document.calc.Results.value; 
+                 Expres = "Sum = + +" + Sum + " + " + "+" + document.calc.Results.value;
+                 eval(Expres);
+                 Ave = Sum/n;
+                 Max = 1 * Max;
+                 Min = 1 * Min;
+                 if (Max &lt; document.calc.Results.value || Max == Dummymaxmin) {Max = document.calc.Results.value;}
+                 if (Min &gt; document.calc.Results.value || Min == Dummymaxmin) {Min = document.calc.Results.value;}  
+                }
+   if (Pos == 13){document.calc.Results.value = Sum;} 
+   if (Pos == 14){document.calc.Results.value = Ave;} 
+   if (Pos == 15){if (n &gt; 0) {document.calc.Results.value = Max;}} 
+   if (Pos == 16){if (n &gt; 0) {document.calc.Results.value = Min;}} 
+   if (Pos == 17){document.calc.Results.value = n;} 
+   if (Pos == 18)
+                {
+                 Statelements = [0];
+                 n            = 0;
+                 Ave          = 0;
+                 Max          = 1.1111111234;
+                 Min          = 1.1111111234;
+                 Dummymaxmin  = 1.1111111234;
+                 Sum          = 0;                 
+                }
+   if (Pos == 19)
+                {
+                 if (n &gt; 0)
+                 {
+                   myWindow = window.open("", "newwin", "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,copyhistory=0,width=200,height=180,left=400,top=300");
+                   myWindow.document.open();
+                   myWindow.document.write("&lt;HTML&gt;&lt;HEAD&gt;");
+                   myWindow.document.write("&lt;TITLE&gt;Statistics&lt;/TITLE&gt;");
+                   myWindow.document.write("&lt;/HEAD&gt;&lt;FORM&gt;&lt;BODY BGCOLOR=#FFFFFF TEXT=black&gt;\n&lt;CENTER&gt;");
+                   myWindow.document.write("&lt;TABLE ALIGN=CENTER&gt;");
+                   myWindow.document.write("&lt;TR&gt;&lt;TD&gt;&lt;B&gt;n&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;: "  , n  , "&lt;/TD&gt;&lt;/TR&gt;");
+                   myWindow.document.write("&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Sum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;: ", Sum, "&lt;/TD&gt;&lt;/TR&gt;");
+                   myWindow.document.write("&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Ave&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;: ", Ave, "&lt;/TD&gt;&lt;/TR&gt;");
+                   myWindow.document.write("&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Max&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;: ", Max, "&lt;/TD&gt;&lt;/TR&gt;");
+                   myWindow.document.write("&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Min&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;: ", Min, "&lt;/TD&gt;&lt;/TR&gt;");
+                   myWindow.document.write("&lt;/TABLE&gt;");
+                   myWindow.document.write(" &lt;BR&gt;&lt;INPUT TYPE='SUBMIT' VALUE='OK' onClick='window.close()'&lt;/FORM&gt;\n&lt;/CENTER&gt;");
+                   myWindow.document.write("&lt;/BODY&gt;&lt;/HTML&gt;");
+                   myWindow.document.close();
+                 }
+                 else
+                 {
+                   myWindow = window.open("", "newwin", "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,copyhistory=0,width=200,height=180,left=400,top=300");
+                   myWindow.document.open();
+                   myWindow.document.write("&lt;HTML&gt;&lt;HEAD&gt;");
+                   myWindow.document.write("&lt;TITLE&gt; No Statistics&lt;/TITLE&gt;");
+                   myWindow.document.write("&lt;/HEAD&gt;&lt;FORM&gt;&lt;BODY BGCOLOR=#FFFFFF TEXT=BLACK&gt;\n&lt;CENTER&gt;");
+                   myWindow.document.write("&lt;U&gt;&lt;B&gt;No Statistics&lt;/B&gt;&lt;/U&gt;&lt;BR&gt;&lt;BR&gt;You did not add any item&lt;BR&gt;to the statistics&lt;BR&gt;To add items, use The&lt;BR&gt;'Add' Button");
+                   myWindow.document.write("&lt;BR&gt;&lt;BR&gt;&lt;INPUT TYPE='SUBMIT' VALUE='OK' onClick='window.close()'&lt;/FORM&gt;&lt;/CENTER&gt;");
+                   myWindow.document.write("&lt;/BODY&gt;&lt;/HTML&gt;");
+                   myWindow.document.close();
+                 }
+                }
+
+  NewNum = 'Y';
+}
+     
+function SQRT()
+{
+  document.calc.Results.value = sqrt( document.calc.Results.value);
+  NewNum = "Y";
+  document.calc.EQ.focus();
+}
+
+function Percent()
+{
+  document.calc.Results.value *= TempVal / 100;
+  Dotused = "N";
+  NewNum = "Y";
+  document.calc.EQ.focus();
+}
+
+function Oper(OP)
+{
+  if (LastOper == "+")
+  {
+     num1 = document.calc.Results.value;
+     Command = eval ("'+' + num1 +  '+' + TempVal");
+     document.calc.Results.value= eval (Command);
+  } 
+   
+  if (LastOper == "-")
+  {
+     num1 = document.calc.Results.value;
+     Command = "(document.calc.Results.value = TempVal - num1)";
+     eval (Command);
+  } 
+
+  if (LastOper == "*")
+  {
+     num1 = document.calc.Results.value;
+     Command = "(document.calc.Results.value = TempVal * num1)";
+     eval (Command);
+  } 
+
+  if (LastOper == "/")
+  {
+    if (document.calc.Results.value == '0.')
+    { 
+      document.calc.Results.value = "Can't Devide By 0";
+    } 
+    else
+    {
+      num1 = document.calc.Results.value;
+      Command = "(document.calc.Results.value = TempVal / num1)";
+      eval (Command);
+    }
+  } 
+ if (OP != "=")
+ {
+   document.calc.oper.value = " " + OP;
+ }
+ else
+ {
+   document.calc.oper.value ="";
+ }
+ NewNum = "Y";
+ LastOper = OP;
+ TempVal = document.calc.Results.value ;
+ document.calc.EQ.focus();
+ FirstinXonY = '';
+
+}
+
+function Analyzethis(Key)
+{
+  if (Key &gt;= "0" && Key &lt;= "9" )
+  {
+    Digit(Key);
+  }
+  if (Key == "*" || Key == "-" || Key == "\\" || Key == "+" || Key == "=")
+  {
+    Oper(Key);
+  }
+  document.calc.EQ.focus();
+}
+
+function Memory(Mode)
+{
+    if (Mode == "Clear")
+    {
+       document.calc.Mem.value="";
+       Memval = 0;     
+    } 
+    if (Mode == "Set")
+    {
+        document.calc.Mem.value = "M";
+        Memval = document.calc.Results.value;
+    } 
+    if (Mode == "Add")
+    {
+        document.calc.Mem.value = "M";
+        Command = eval("'+' + document.calc.Results.value + '+' + Memval");
+        Memval = eval (Command);
+    } 
+    if (Mode == "Read")
+    {
+        document.calc.Results.value = Memval;
+        NewNum = "Y";
+    }    
+    document.calc.EQ.focus();
+}
+
+function Dot()
+{ 
+  if (NewNum == "Y")
+  {
+    document.calc.Results.value = "0.";
+    Dotused = "Y";
+    NewNum = "N";
+  }
+  if (Dotused == "N")
+  {
+    document.calc.Results.value += ".";
+    Dotused = "Y";
+  }	
+  document.calc.EQ.focus();
+}
+
+function Changesign()
+{
+  document.calc.Results.value *= -1;
+  document.calc.EQ.focus();
+}
+
+function Digit(DG)
+{
+  if (NewNum == "Y") 
+  {
+    document.calc.Results.value=DG;
+    Dotused = "N";
+  }
+  else
+  {
+    document.calc.Results.value= document.calc.Results.value + DG;
+  }
+
+  if (document.calc.Results.value == '0')
+  {
+   document.calc.Results.value = '0.'
+  }
+  else
+  {
+   NewNum = "N";
+  }
+  document.calc.EQ.focus();
+}
+
+function Clear (Type)
+{
+  document.calc.Results.value = '0.'; 
+  NewNum = 'Y';
+  if (Type == "ALL")
+  {
+     document.calc.oper.value ="";
+     LastOper = '';
+     TempVal = 0;
+  }
+  document.calc.EQ.focus();
+}
+
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Insert the onLoad event handler into your BODY tag  --&gt;
+
+&lt;BODY onLoad="document.calc.EQ.focus()"&gt;
+
+&lt;!-- STEP THREE: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+&lt;!-- Original:  Zion Gabay (ZionG@adhawk.net ) --&gt;
+&lt;!-- Web Site:  http://www.adhawk.net --&gt;
+&lt;CENTER&gt;
+   &lt;FORM NAME=calc&gt;
+   &lt;IMG src="telecalc.gif"&gt;&lt;BR&gt;
+   &lt;TABLE border=5&gt;
+   &lt;TR&gt;
+       &lt;TD COLSPAN = 6&gt;&lt;INPUT TYPE = Text NAME=Results size=19 VALUE = '0.'  align=right  onFocus="this.blur()" &gt;
+                       &lt;INPUT TYPE = text NAME=oper    size=1  VALUE = ''    align=center onFocus="this.blur()"&gt;  
+       &lt;/TD&gt;
+   &lt;/TR&gt;
+   &lt;TR&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = TEXT MAXLENGTH=1 SIZE=1 NAME=Mem onFocus="this.blur()"&gt;&lt;/TD&gt;
+       &lt;TD COLSPAN = 2 align=center&gt; &lt;INPUT TYPE=button VALUE='BkSp' onClick="backspace()"&gt;&lt;/TD&gt;
+       &lt;TD COLSPAN = 2 align=center&gt; &lt;INPUT TYPE=button VALUE='&nbsp;&nbsp;CE&nbsp' onClick="Clear('Res')"&gt;&lt;/TD&gt;
+       &lt;TD COLSPAN = 1 align=center&gt; &lt;INPUT TYPE=button VALUE='&nbsp;C&nbsp' onClick="Clear('ALL')"&gt;&lt;/TD&gt;
+   &lt;/TR&gt;     
+
+   &lt;TR&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='MC' onClick="Memory('Clear')"&gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;7&nbsp' onClick="Digit(7)" NAME='D7'&gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;8&nbsp' onClick="Digit(8)" NAME='D8'&gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;9&nbsp' onClick="Digit(9)" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;/&nbsp;' onClick=" Oper('/') "&gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='sqr' onClick="SQRT()"&gt;&lt;/TD&gt;
+   &lt;/TR&gt;
+
+   &lt;TR&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='MR' onClick="Memory('Read')" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;4&nbsp' onClick="Digit(4)" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;5&nbsp' onClick="Digit(5)" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;6&nbsp' onClick="Digit(6)" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;* ' onClick=" Oper('*')"&gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;%&nbsp' onClick="Percent()"&gt;&lt;/TD&gt;
+   &lt;/TR&gt;
+
+   &lt;TR&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='MS' onClick="Memory('Set')" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;1&nbsp' onClick="Digit(1)" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;2&nbsp' onClick="Digit(2)" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;3&nbsp' onClick="Digit(3)" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;-&nbsp' onClick="Oper('-')" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='1/x' onClick="Onediv()"&gt;&lt;/TD&gt;
+   &lt;/TR&gt;
+
+   &lt;TR&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='M+' onClick="Memory('Add')"&gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;0&nbsp' onClick="Digit(0)" &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='+/-' onClick="Changesign()"&gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp; .&nbsp' onClick="Dot()"&gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp;+'  onClick=" Oper('+') " &gt;&lt;/TD&gt;
+       &lt;TD align=center&gt;&lt;INPUT TYPE = button VALUE='&nbsp=&nbsp ' onClick=" Oper('=')" NAME='EQ' onKeypress="Analyzethis('1')" &gt;&lt;/TD&gt;
+   &lt;/TR&gt;
+&lt;/TABLE&gt;
+&lt;INPUT TYPE=button NAME=addfeatures VALUE="More Options" onClick="MoreOptions()"&gt;
+&lt;TABLE border=0&gt;
+&lt;TD&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&lt;/TD&gt;
+&lt;TD&gt;
+&lt;TABLE border=4&gt;
+   &lt;TR&gt;
+       &lt;TD&gt;&lt;INPUT TYPE = button VALUE="x^2"  NAME=opt1 onClick="Advfunction(0)" onFocus="document.calc.EQ.focus()"&gt;&lt;/TD&gt;
+       &lt;TD&gt;&lt;INPUT TYPE = button VALUE="2^x"  NAME=opt2 onClick="Advfunction(1)" onFocus="document.calc.EQ.focus()"&gt;&lt;/TD&gt;
+       &lt;TD&gt;&lt;INPUT TYPE = button VALUE="x^y"  NAME=opt3 onClick="Advfunction(2)" onFocus="document.calc.EQ.focus()"&gt;&lt;/TD&gt;
+       &lt;TD&gt;&lt;INPUT TYPE = button VALUE="x^3"  NAME=opt4 onClick="Advfunction(3)" onFocus="document.calc.EQ.focus()"&gt;&lt;/TD&gt;
+   &lt;/TR&gt;
+&lt;/TABLE&gt;
+&lt;/TD&gt;
+ &lt;TD&gt;&lt;IMG src="remote.gif" border=0 onClick="window.close()"&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;/TABLE&gt;
+&lt;/CENTER&gt;
+&lt;/FORM&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  15.60 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calculators/telecalc.html/189750182/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_IT_IMS_1t/it-ims-spring03-125x600.gif"  ALT="Increasing Quality Through IT Sourcing & Services"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calculators/telecalc.html/189750182/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='telecalc.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calculators/telecalc.html/1432357378/468x60-2/House_IT_IMS_1o/it-ims-spring03-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_IT_IMS_1o/it-ims-spring03-750.gif"  ALT="Increasing Quality Through IT Sourcing & Services"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calculators/telecalc.html/1432357378/468x60-2/House_IT_IMS_1o/it-ims-spring03-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>
+

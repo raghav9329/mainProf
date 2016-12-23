@@ -1,0 +1,1004 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Calendars:  Event Calendar Code Generator</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="This script generates code for an event calendar instead of having to do the tedious task of making one each month. This completely simplifies the table making involved. Just punch in your data and cut and paste the code.">
+<META NAME="date" CONTENT="2002-03-13">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Matthew D. Krieg">
+<META NAME="section" CONTENT="Calendars">
+<SCRIPT LANGUAGE="JavaScript">
+
+
+
+<!-- This script and many more are available free online at -->
+
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Original:  Matthew D. Krieg (battlebots102001@yahoo.com) -->
+
+<!-- Web Site:  http://geocities.com/battlebots102001/javascript_gizmos/index.htm -->
+
+<!-- Begin
+
+function make()
+
+{
+
+var days = new Array("","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var code = "";
+
+code += "<center>";
+
+code += "<font size=\"10pt\" color=\"#ff00CC\">";
+
+var month = window.document.calendar_form.which_month.options[window.document.calendar_form.which_month.selectedIndex].text;
+
+code += month;
+
+code += "</font>";
+
+code += "</center>\n";
+
+code += "<table width=\"75%\" cellpadding=\"3\" cellspacing=\"1\" border=\"2\" bgcolor=\"#EEEEEE\">\n";
+
+var num_of_days = parseInt(window.document.calendar_form.how_many_days.options[window.document.calendar_form.how_many_days.selectedIndex].text);
+
+var loop = 0;
+
+var day_loop = window.document.calendar_form.which_day.selectedIndex;
+
+while(loop<num_of_days)
+
+{
+
+if(day_loop >= days.length)
+
+{
+
+day_loop = 1;
+
+}
+
+loop++;
+
+code += "<tr>\n";
+
+code += "<td width=\"0%\">";
+
+code += "<font color=\"#009900\" size=\"4pt\" family=\"ariel\">" 
+
+code += days[day_loop];
+
+code += "  ";
+
+code += window.document.calendar_form.which_month.selectedIndex;
+
+code += "/";
+
+code += loop;
+
+code += "/";
+
+code += window.document.calendar_form.year.value;
+
+code += ":</font>";
+
+code += "</td>\n";
+
+code += "<td>";
+
+code += "<font color=\"#009900\" size=\"4pt\" family=\"ariel\">";
+
+code += window.document.calendar_form.elements[loop+2].value;
+
+code += "</font>";
+
+code += "</td>\n";
+
+code += "</tr>\n";
+
+day_loop++;
+
+}
+
+code += "</table>";
+
+window.document.calendar_form.source_code.value = code;
+
+}
+
+//  End -->
+
+</script>
+
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calendars/event-calendar-code-generator.html/1919640704/468x60-1/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calendars/event-calendar-code-generator.html/1919640704/468x60-1/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0"></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Calendars</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Event Calendar Code Generator</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+This script generates code for an event calendar instead of having to do the tedious task of making one each month. This completely simplifies the table making involved. Just punch in your data and cut and paste the code.
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<form name="calendar_form">
+
+<table border='2' cellpadding='1' cellspacing='1' WIDTH='75%' bgcolor='#eeeeee'>
+
+<tr>
+
+<td>Choose a month<select name="which_month">
+
+<option>select one
+
+<option>January
+
+<option>February
+
+<option>March
+
+<option>April
+
+<option>May
+
+<option>June
+
+<option>July
+
+<option>August
+
+<option>September
+
+<option>October
+
+<option>November
+
+<option>December
+
+</select></td>
+
+<td>how many days in that month<select name="how_many_days">
+
+<option>select one
+
+<option>31
+
+<option>30
+
+<option>29
+
+<option>28
+
+</select>
+
+</td>
+
+<td>Which day does that start on
+
+<select name="which_day">
+
+<option>select one
+
+<option>Sunday
+
+<option>Monday
+
+<option>Tuesday
+
+<option>Wednesday
+
+<option>Thursday
+
+<option>Friday
+
+<option>Saturday
+
+</select>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 1st<textarea name="on_1" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 2nd<textarea name="on_2" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 3rd<textarea name="on_3" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 4th<textarea name="on_4" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 5th<textarea name="on_5" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 6th<textarea name="on_6" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 7th<textarea name="on_7" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 8th<textarea name="on_8" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 9th<textarea name="on_9" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 10th<textarea name="on_10" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 11th<textarea name="on_11" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 12th<textarea name="on_12" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 13th<textarea name="on_13" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 14th<textarea name="on_14" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 15th<textarea name="on_15" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 16th<textarea name="on_16" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 17th<textarea name="on_17" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 18th<textarea name="on_18" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 19th<textarea name="on_19" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 20th<textarea name="on_20" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 21st<textarea name="on_21" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 22nd<textarea name="on_22" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 23th<textarea name="on_23" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 24th<textarea name="on_24" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 25th<textarea name="on_25" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 26th<textarea name="on_26" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 27th<textarea name="on_27" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 28th<textarea name="on_28" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 29th<textarea name="on_29" rows="3" cols="25"></textarea></td>
+
+<td>What happens on the 30th<textarea name="on_30" rows="3" cols="25"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>What happens on the 31st<textarea name="on_31" rows="3" cols="25"></textarea></td>
+
+<td></td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+<center>
+
+<h2>The Year Is:<input type="text" size="4" name="year" value="????"></h2>
+
+<textarea rows="20" cols=80" name="source_code">
+
+The source code will appear here
+
+</textarea><hr>
+
+<input type="button" value="make calendar" onClick="make();">
+
+<input type="button" value="higlight all" onClick="window.document.calendar_form.source_code.select();">
+
+<input type="reset" value="new calendar">
+
+</center>
+
+</form>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Calendars:  Event Calendar Code Generator</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  7.53 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL EVENT CALENDAR CODE GENERATOR:
+
+
+
+  1.  Copy the coding into the HEAD of your HTML document
+
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+
+
+&lt;HEAD&gt;
+
+
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+
+
+&lt;!-- This script and many more are available free online at --&gt;
+
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Original:  Matthew D. Krieg (battlebots102001@yahoo.com) --&gt;
+
+&lt;!-- Web Site:  http://geocities.com/battlebots102001/javascript_gizmos/index.htm --&gt;
+
+&lt;!-- Begin
+
+function make()
+
+{
+
+var days = new Array("","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+var code = "";
+
+code += "&lt;center&gt;";
+
+code += "&lt;font size=\"10pt\" color=\"#ff00CC\"&gt;";
+
+var month = window.document.calendar_form.which_month.options[window.document.calendar_form.which_month.selectedIndex].text;
+
+code += month;
+
+code += "&lt;/font&gt;";
+
+code += "&lt;/center&gt;\n";
+
+code += "&lt;table width=\"100%\" cellpadding=\"3\" cellspacing=\"1\" border=\"2\" bgcolor=\"#EEEEEE\"&gt;\n";
+
+var num_of_days = parseInt(window.document.calendar_form.how_many_days.options[window.document.calendar_form.how_many_days.selectedIndex].text);
+
+var loop = 0;
+
+var day_loop = window.document.calendar_form.which_day.selectedIndex;
+
+while(loop&lt;num_of_days)
+
+{
+
+if(day_loop &gt;= days.length)
+
+{
+
+day_loop = 1;
+
+}
+
+loop++;
+
+code += "&lt;tr&gt;\n";
+
+code += "&lt;td width=\"0%\"&gt;";
+
+code += "&lt;font color=\"#009900\" size=\"4pt\" family=\"ariel\"&gt;" 
+
+code += days[day_loop];
+
+code += "  ";
+
+code += window.document.calendar_form.which_month.selectedIndex;
+
+code += "/";
+
+code += loop;
+
+code += "/";
+
+code += window.document.calendar_form.year.value;
+
+code += ":&lt;/font&gt;";
+
+code += "&lt;/td&gt;\n";
+
+code += "&lt;td&gt;";
+
+code += "&lt;font color=\"#009900\" size=\"4pt\" family=\"ariel\"&gt;";
+
+code += window.document.calendar_form.elements[loop+2].value;
+
+code += "&lt;/font&gt;";
+
+code += "&lt;/td&gt;\n";
+
+code += "&lt;/tr&gt;\n";
+
+day_loop++;
+
+}
+
+code += "&lt;/table&gt;";
+
+window.document.calendar_form.source_code.value = code;
+
+}
+
+//  End --&gt;
+
+&lt;/script&gt;
+
+
+
+&lt;/HEAD&gt;
+
+
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+
+
+&lt;BODY&gt;
+
+
+
+&lt;form name="calendar_form"&gt;
+
+&lt;table border='2' cellpadding='1' cellspacing='1' width='100%' bgcolor='#eeeeee'&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;Choose a month&lt;select name="which_month"&gt;
+
+&lt;option&gt;select one
+
+&lt;option&gt;January
+
+&lt;option&gt;February
+
+&lt;option&gt;March
+
+&lt;option&gt;April
+
+&lt;option&gt;May
+
+&lt;option&gt;June
+
+&lt;option&gt;July
+
+&lt;option&gt;August
+
+&lt;option&gt;September
+
+&lt;option&gt;October
+
+&lt;option&gt;November
+
+&lt;option&gt;December
+
+&lt;/select&gt;&lt;/td&gt;
+
+&lt;td&gt;how many days in that month&lt;select name="how_many_days"&gt;
+
+&lt;option&gt;select one
+
+&lt;option&gt;31
+
+&lt;option&gt;30
+
+&lt;option&gt;29
+
+&lt;option&gt;28
+
+&lt;/select&gt;
+
+&lt;/td&gt;
+
+&lt;td&gt;Which day does that start on
+
+&lt;select name="which_day"&gt;
+
+&lt;option&gt;select one
+
+&lt;option&gt;Sunday
+
+&lt;option&gt;Monday
+
+&lt;option&gt;Tuesday
+
+&lt;option&gt;Wednesday
+
+&lt;option&gt;Thursday
+
+&lt;option&gt;Friday
+
+&lt;option&gt;Saturday
+
+&lt;/select&gt;
+
+&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 1st&lt;textarea name="on_1" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 2nd&lt;textarea name="on_2" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 3rd&lt;textarea name="on_3" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 4th&lt;textarea name="on_4" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 5th&lt;textarea name="on_5" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 6th&lt;textarea name="on_6" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 7th&lt;textarea name="on_7" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 8th&lt;textarea name="on_8" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 9th&lt;textarea name="on_9" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 10th&lt;textarea name="on_10" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 11th&lt;textarea name="on_11" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 12th&lt;textarea name="on_12" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 13th&lt;textarea name="on_13" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 14th&lt;textarea name="on_14" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 15th&lt;textarea name="on_15" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 16th&lt;textarea name="on_16" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 17th&lt;textarea name="on_17" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 18th&lt;textarea name="on_18" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 19th&lt;textarea name="on_19" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 20th&lt;textarea name="on_20" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 21st&lt;textarea name="on_21" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 22nd&lt;textarea name="on_22" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 23th&lt;textarea name="on_23" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 24th&lt;textarea name="on_24" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 25th&lt;textarea name="on_25" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 26th&lt;textarea name="on_26" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 27th&lt;textarea name="on_27" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 28th&lt;textarea name="on_28" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 29th&lt;textarea name="on_29" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;What happens on the 30th&lt;textarea name="on_30" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;What happens on the 31st&lt;textarea name="on_31" rows="3" cols="25"&gt;&lt;/textarea&gt;&lt;/td&gt;
+
+&lt;td&gt;&lt;/td&gt;
+
+&lt;td&gt;&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;/table&gt;
+
+&lt;center&gt;
+
+&lt;h2&gt;The Year Is:&lt;input type="text" size="4" name="year" value="????"&gt;&lt;/h2&gt;
+
+&lt;textarea rows="20" cols=80" name="source_code"&gt;
+
+The source code will appear here
+
+&lt;/textarea&gt;&lt;hr&gt;
+
+&lt;input type="button" value="make calendar" onClick="make();"&gt;
+
+&lt;input type="button" value="higlight all" onClick="window.document.calendar_form.source_code.select();"&gt;
+
+&lt;input type="reset" value="new calendar"&gt;
+
+&lt;/center&gt;
+
+&lt;/form&gt;
+
+
+
+&lt;p&gt;&lt;center&gt;
+
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+
+&lt;/center&gt;&lt;p&gt;
+
+
+
+&lt;!-- Script Size:  7.53 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calendars/event-calendar-code-generator.html/1703877041/125x800/House_Counter_2e/counterpre-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Counter_2e/counterpre-125x600.gif"  ALT="Track who is coming to your website and from where"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calendars/event-calendar-code-generator.html/1703877041/125x800/House_Counter_2e/counterpre-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='event-calendar-code-generator.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/calendars/event-calendar-code-generator.html/68666605/468x60-2/House_Content_Management_1l/jupcontent750x100_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Content_Management_1l/jupcontent750x100_new.gif"  ALT="The Premier Event for Content Management Strategies and Solutions"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/calendars/event-calendar-code-generator.html/68666605/468x60-2/House_Content_Management_1l/jupcontent750x100_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>
+
+

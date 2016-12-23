@@ -1,0 +1,753 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Forms:  Email Address Validation</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="This is an e-mail address validation function. It allows the usual user@domain syntax, but in addition allows user@[ip] format as well as "User with Spaces"@domain or [ip], all of which are legal syntax, according to W3C. It also checks that the user hasn't done anything silly like having multiple @'s or continuous .'s in the address (e.g. jim@b@c.com and jim@c..b.co.uk).">
+<META NAME="date" CONTENT="2001-04-04">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Sandeep Tamhankar">
+<META NAME="section" CONTENT="Forms">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- V1.1.3: Sandeep V. Tamhankar (stamhankar@hotmail.com) -->
+<!-- Original:  Sandeep V. Tamhankar (stamhankar@hotmail.com) -->
+<!-- Changes:
+/* 1.1.4: Fixed a bug where upper ASCII characters (i.e. accented letters
+international characters) were allowed.
+
+1.1.3: Added the restriction to only accept addresses ending in two
+letters (interpreted to be a country code) or one of the known
+TLDs (com, net, org, edu, int, mil, gov, arpa), including the
+new ones (biz, aero, name, coop, info, pro, museum).  One can
+easily update the list (if ICANN adds even more TLDs in the
+future) by updating the knownDomsPat variable near the
+top of the function.  Also, I added a variable at the top
+of the function that determines whether or not TLDs should be
+checked at all.  This is good if you are using this function
+internally (i.e. intranet site) where hostnames don't have to 
+conform to W3C standards and thus internal organization e-mail
+addresses don't have to either.
+Changed some of the logic so that the function will work properly
+with Netscape 6.
+
+1.1.2: Fixed a bug where trailing . in e-mail address was passing
+(the bug is actually in the weak regexp engine of the browser; I
+simplified the regexps to make it work).
+
+1.1.1: Removed restriction that countries must be preceded by a domain,
+so abc@host.uk is now legal.  However, there's still the 
+restriction that an address must end in a two or three letter
+word.
+
+1.1: Rewrote most of the function to conform more closely to RFC 822.
+
+1.0: Original  */
+// -->
+
+<!-- Begin
+function emailCheck (emailStr) {
+
+/* The following variable tells the rest of the function whether or not
+to verify that the address ends in a two-letter country or well-known
+TLD.  1 means check it, 0 means don't. */
+
+var checkTLD=1;
+
+/* The following is the list of known TLDs that an e-mail address must end with. */
+
+var knownDomsPat=/^(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum)$/;
+
+/* The following pattern is used to check if the entered e-mail address
+fits the user@domain format.  It also is used to separate the username
+from the domain. */
+
+var emailPat=/^(.+)@(.+)$/;
+
+/* The following string represents the pattern for matching all special
+characters.  We don't want to allow special characters in the address. 
+These characters include ( ) < > @ , ; : \ " . [ ] */
+
+var specialChars="\\(\\)><@,;:\\\\\\\"\\.\\[\\]";
+
+/* The following string represents the range of characters allowed in a 
+username or domainname.  It really states which chars aren't allowed.*/
+
+var validChars="\[^\\s" + specialChars + "\]";
+
+/* The following pattern applies if the "user" is a quoted string (in
+which case, there are no rules about which characters are allowed
+and which aren't; anything goes).  E.g. "jiminy cricket"@disney.com
+is a legal e-mail address. */
+
+var quotedUser="(\"[^\"]*\")";
+
+/* The following pattern applies for domains that are IP addresses,
+rather than symbolic names.  E.g. joe@[123.124.233.4] is a legal
+e-mail address. NOTE: The square brackets are required. */
+
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+
+/* The following string represents an atom (basically a series of non-special characters.) */
+
+var atom=validChars + '+';
+
+/* The following string represents one word in the typical username.
+For example, in john.doe@somewhere.com, john and doe are words.
+Basically, a word is either an atom or quoted string. */
+
+var word="(" + atom + "|" + quotedUser + ")";
+
+// The following pattern describes the structure of the user
+
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+
+/* The following pattern describes the structure of a normal symbolic
+domain, as opposed to ipDomainPat, shown above. */
+
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+
+/* Finally, let's start trying to figure out if the supplied address is valid. */
+
+/* Begin with the coarse pattern to simply break up user@domain into
+different pieces that are easy to analyze. */
+
+var matchArray=emailStr.match(emailPat);
+
+if (matchArray==null) {
+
+/* Too many/few @'s or something; basically, this address doesn't
+even fit the general mould of a valid e-mail address. */
+
+alert("Email address seems incorrect (check @ and .'s)");
+return false;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+
+// Start by checking that only basic ASCII characters are in the strings (0-127).
+
+for (i=0; i<user.length; i++) {
+if (user.charCodeAt(i)>127) {
+alert("Ths username contains invalid characters.");
+return false;
+   }
+}
+for (i=0; i<domain.length; i++) {
+if (domain.charCodeAt(i)>127) {
+alert("Ths domain name contains invalid characters.");
+return false;
+   }
+}
+
+// See if "user" is valid 
+
+if (user.match(userPat)==null) {
+
+// user is not valid
+
+alert("The username doesn't seem to be valid.");
+return false;
+}
+
+/* if the e-mail address is at an IP address (as opposed to a symbolic
+host name) make sure the IP address is valid. */
+
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+
+// this is an IP address
+
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+   }
+}
+return true;
+}
+
+// Domain is symbolic name.  Check if it's valid.
+ 
+var atomPat=new RegExp("^" + atom + "$");
+var domArr=domain.split(".");
+var len=domArr.length;
+for (i=0;i<len;i++) {
+if (domArr[i].search(atomPat)==-1) {
+alert("The domain name does not seem to be valid.");
+return false;
+   }
+}
+
+/* domain name seems valid, but now make sure that it ends in a
+known top-level domain (like com, edu, gov) or a two-letter word,
+representing country (uk, nl), and that there's a hostname preceding 
+the domain or country. */
+
+if (checkTLD && domArr[domArr.length-1].length!=2 && 
+domArr[domArr.length-1].search(knownDomsPat)==-1) {
+alert("The address must end in a well-known domain or two letter " + "country.");
+return false;
+}
+
+// Make sure there's a host name preceding the domain.
+
+if (len<2) {
+alert("This address is missing a hostname!");
+return false;
+}
+
+// If we've gotten this far, everything's valid!
+return true;
+}
+
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/email-address-validation.html/84713630/468x60-1/House_Career_Channel_17a/jobs-468_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-468_new.gif"  WIDTH=468 HEIGHT=60 ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/email-address-validation.html/84713630/468x60-1/House_Career_Channel_17a/jobs-468_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0"></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Forms</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Email Address Validation</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+This is an e-mail address validation function. It allows the usual user@domain syntax, but in addition allows user@[ip] format as well as "User with Spaces"@domain or [ip], all of which are legal syntax, according to W3C. It also checks that the user hasn't done anything silly like having multiple @'s or continuous .'s in the address (e.g. jim@b@c.com and jim@c..b.co.uk).
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<form name=emailform onSubmit="return emailCheck(this.email.value)">
+Your Email Address:  <input type=text name="email"><br>
+<input type=submit value="Submit">
+</form>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Forms:  Email Address Validation</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  6.98 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL EMAIL ADDRESS VALIDATION:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- V1.1.3: Sandeep V. Tamhankar (stamhankar@hotmail.com) --&gt;
+&lt;!-- Original:  Sandeep V. Tamhankar (stamhankar@hotmail.com) --&gt;
+&lt;!-- Changes:
+/* 1.1.4: Fixed a bug where upper ASCII characters (i.e. accented letters
+international characters) were allowed.
+
+1.1.3: Added the restriction to only accept addresses ending in two
+letters (interpreted to be a country code) or one of the known
+TLDs (com, net, org, edu, int, mil, gov, arpa), including the
+new ones (biz, aero, name, coop, info, pro, museum).  One can
+easily update the list (if ICANN adds even more TLDs in the
+future) by updating the knownDomsPat variable near the
+top of the function.  Also, I added a variable at the top
+of the function that determines whether or not TLDs should be
+checked at all.  This is good if you are using this function
+internally (i.e. intranet site) where hostnames don't have to 
+conform to W3C standards and thus internal organization e-mail
+addresses don't have to either.
+Changed some of the logic so that the function will work properly
+with Netscape 6.
+
+1.1.2: Fixed a bug where trailing . in e-mail address was passing
+(the bug is actually in the weak regexp engine of the browser; I
+simplified the regexps to make it work).
+
+1.1.1: Removed restriction that countries must be preceded by a domain,
+so abc@host.uk is now legal.  However, there's still the 
+restriction that an address must end in a two or three letter
+word.
+
+1.1: Rewrote most of the function to conform more closely to RFC 822.
+
+1.0: Original  */
+// --&gt;
+
+&lt;!-- Begin
+function emailCheck (emailStr) {
+
+/* The following variable tells the rest of the function whether or not
+to verify that the address ends in a two-letter country or well-known
+TLD.  1 means check it, 0 means don't. */
+
+var checkTLD=1;
+
+/* The following is the list of known TLDs that an e-mail address must end with. */
+
+var knownDomsPat=/^(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum)$/;
+
+/* The following pattern is used to check if the entered e-mail address
+fits the user@domain format.  It also is used to separate the username
+from the domain. */
+
+var emailPat=/^(.+)@(.+)$/;
+
+/* The following string represents the pattern for matching all special
+characters.  We don't want to allow special characters in the address. 
+These characters include ( ) &lt; &gt; @ , ; : \ " . [ ] */
+
+var specialChars="\\(\\)&gt;&lt;@,;:\\\\\\\"\\.\\[\\]";
+
+/* The following string represents the range of characters allowed in a 
+username or domainname.  It really states which chars aren't allowed.*/
+
+var validChars="\[^\\s" + specialChars + "\]";
+
+/* The following pattern applies if the "user" is a quoted string (in
+which case, there are no rules about which characters are allowed
+and which aren't; anything goes).  E.g. "jiminy cricket"@disney.com
+is a legal e-mail address. */
+
+var quotedUser="(\"[^\"]*\")";
+
+/* The following pattern applies for domains that are IP addresses,
+rather than symbolic names.  E.g. joe@[123.124.233.4] is a legal
+e-mail address. NOTE: The square brackets are required. */
+
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+
+/* The following string represents an atom (basically a series of non-special characters.) */
+
+var atom=validChars + '+';
+
+/* The following string represents one word in the typical username.
+For example, in john.doe@somewhere.com, john and doe are words.
+Basically, a word is either an atom or quoted string. */
+
+var word="(" + atom + "|" + quotedUser + ")";
+
+// The following pattern describes the structure of the user
+
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+
+/* The following pattern describes the structure of a normal symbolic
+domain, as opposed to ipDomainPat, shown above. */
+
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+
+/* Finally, let's start trying to figure out if the supplied address is valid. */
+
+/* Begin with the coarse pattern to simply break up user@domain into
+different pieces that are easy to analyze. */
+
+var matchArray=emailStr.match(emailPat);
+
+if (matchArray==null) {
+
+/* Too many/few @'s or something; basically, this address doesn't
+even fit the general mould of a valid e-mail address. */
+
+alert("Email address seems incorrect (check @ and .'s)");
+return false;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+
+// Start by checking that only basic ASCII characters are in the strings (0-127).
+
+for (i=0; i&lt;user.length; i++) {
+if (user.charCodeAt(i)&gt;127) {
+alert("Ths username contains invalid characters.");
+return false;
+   }
+}
+for (i=0; i&lt;domain.length; i++) {
+if (domain.charCodeAt(i)&gt;127) {
+alert("Ths domain name contains invalid characters.");
+return false;
+   }
+}
+
+// See if "user" is valid 
+
+if (user.match(userPat)==null) {
+
+// user is not valid
+
+alert("The username doesn't seem to be valid.");
+return false;
+}
+
+/* if the e-mail address is at an IP address (as opposed to a symbolic
+host name) make sure the IP address is valid. */
+
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+
+// this is an IP address
+
+for (var i=1;i&lt;=4;i++) {
+if (IPArray[i]&gt;255) {
+alert("Destination IP address is invalid!");
+return false;
+   }
+}
+return true;
+}
+
+// Domain is symbolic name.  Check if it's valid.
+ 
+var atomPat=new RegExp("^" + atom + "$");
+var domArr=domain.split(".");
+var len=domArr.length;
+for (i=0;i&lt;len;i++) {
+if (domArr[i].search(atomPat)==-1) {
+alert("The domain name does not seem to be valid.");
+return false;
+   }
+}
+
+/* domain name seems valid, but now make sure that it ends in a
+known top-level domain (like com, edu, gov) or a two-letter word,
+representing country (uk, nl), and that there's a hostname preceding 
+the domain or country. */
+
+if (checkTLD && domArr[domArr.length-1].length!=2 && 
+domArr[domArr.length-1].search(knownDomsPat)==-1) {
+alert("The address must end in a well-known domain or two letter " + "country.");
+return false;
+}
+
+// Make sure there's a host name preceding the domain.
+
+if (len&lt;2) {
+alert("This address is missing a hostname!");
+return false;
+}
+
+// If we've gotten this far, everything's valid!
+return true;
+}
+
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;form name=emailform onSubmit="return emailCheck(this.email.value)"&gt;
+Your Email Address:  &lt;input type=text name="email"&gt;&lt;br&gt;
+&lt;input type=submit value="Submit"&gt;
+&lt;/form&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  6.98 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/email-address-validation.html/1585155796/125x800/House_Semlist_1b/semlist-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Semlist_1b/semlist-125x600.gif"  ALT="100's of firms that help your Web site be found"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/email-address-validation.html/1585155796/125x800/House_Semlist_1b/semlist-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='email-address-validation.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/email-address-validation.html/840644289/468x60-2/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_esecurity_2c/esecurity-750.gif"  ALT="Reports on security issues of ecommerce environments"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/email-address-validation.html/840644289/468x60-2/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/get
+~MSle0~/unitCount
 
 # Last Substitute Search Pattern:
 ~MSle0&intDirCount
@@ -17,11 +17,11 @@
 $integrationDirCount
 
 # Command Line History (newest to oldest):
-:q
-:wq
-:q!
-:w
 :wq!
+:wq
+:w
+:q
+:q!
 :n
 :bp
 :N
@@ -39,6 +39,11 @@ $integrationDirCount
 :W
 
 # Search String History (newest to oldest):
+?/unitCount
+?/mock
+?/_
+?/generate
+?/report
 ?/get
 ?/DotFiles
 ?/lsdot
@@ -54,11 +59,6 @@ $integrationDirCount
 ?/payment
 ?/days
 ?/setd
-?/Forc
-?/Forced
-?/Out
-?/out
-?/forced
 
 # Expression History (newest to oldest):
 
@@ -68,51 +68,117 @@ $integrationDirCount
 
 # Registers:
 "0	LINE	0
-	alias lldot='ls -alFd .*'
-"1	LINE	0
-	
+	One concept I don't want to is the amount of trash already there.
+""1	LINE	0
+	nnnnnnnnnEnnnnnnEnnnnnnäú4nnnnn©³ËnnnnPKnnnn®nnnnnnnnPKÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿnn
 "2	LINE	0
-	  chromeDriver: './node_modules/webdriver-manager/selenium/chromedriver_2.25',
+	nnnnMInnnnÿÿÿÿÿÿÿÿ;nnnnnnnnnníAÿÿÿÿAccounts/Svb/com.microsoft.__Messages/Conversation History/nnnnnnnnnnnnnnnnnn<³ËnnnnPK,nnnnnnn-n
 "3	LINE	0
-	  seleniumServerJar: './node_modules/webdriver-manager/selenium/selenium-server-standalone-2.53.1.jar',
+	nnnnMInnnnÿÿÿÿÿÿÿÿDnnnnnnnnnníAÿÿÿÿAccounts/Svb/com.microsoft.__Messages/Deleted Items/Untitled Folder/nnnnnnnnnnnnnnnnnnÆ²ËnnnnPK-n
 "4	LINE	0
-	    "update-web-core-ui": "npm update svb-web-core-ui && cd node_modules/svb-web-core-ui && npm install && npm run build -- --env=mock --common=true && cd ../..",
+	nnnnMIÏOÿÿÿÿÿÿÿÿSnnnnnnnnnníAÿÿÿÿAccounts/Svb/com.microsoft.__Messages/Deleted Items/__message_attachment__15004.xmlnn,|nnnnnn,|nnnnnn6ËnnnnPK-n
 "5	LINE	0
-	    "generate-payments": "protractor protractor-lengthy.conf.js",
-"6	LINE	0
-	    "mock-protractor-tablet": "protractor protractor.conf.tablet.js",
+	nnnnMIycFZÿÿÿÿÿÿÿÿSnnnnnnnnnníAÿÿÿÿAccounts/Svb/com.microsoft.__Messages/Deleted Items/__message_attachment__14885.xmlnn5)nnnnnn5)nnnnnn[ËnnnnPK-n
 "7	LINE	0
-	    "mock-protractor-mobile": "protractor protractor.conf.mobile.js",
+	One concept I don't want to is the amount of trash already there.
 "8	LINE	0
-	    "mock-protractor": "protractor protractor-mock.conf.js",
+	Jack,
+	I hope you are well.  I wanted to reach out to you for advice or suggestion.
+	Background:  We both worked at Credit.com in the 2013 - 2014 time frame.
+	
+	desire to pursue roles in Product Management  
+	
+	
+	
+	
+	
+	Dr. Cominsky
+	You and I have a common friend and past, and I am interested in your opinion on a subject and if possible suggestions on direction or approach.
+	 
 "9	LINE	0
-	    "comment-json": "^1.1.3",
+	    "build-all-mock": "npm run build-mock; npm run build-core-mock",
 "a	CHAR	0
 	iqaecpa�kb�kb�kb�kb�kbqecpapp1lxxxlllllllah�kb�kbqaeccoh`�kb1llxxxxlllllllllllhhhhlllllll;i; host   ; host   ; bbbbbbbb llliqallhlhiecOra�kb�kb�kboracle1llllllll
-""-	CHAR	0
-	l
+"-	CHAR	0
+	 
 
 # File marks:
 'C  4  0  ~/newFile
 'K  2  0  ~/newFile
 'S  3  0  ~/newFile
-'0  236  0  ~/.shellfuncsT2
-'1  39  11  ~/.atkmhrc
-'2  7  0  ~/.svbrc
-'3  2  0  ~/Mark/JsDev/Calc-v2/.gitignore
-'4  6  2  ~/Mark/JsDev/calculator/conf.js
-'5  36  0  /private/tmp/test/package.json
-'6  21  4  /private/tmp/test/package.json
-'7  32  4  /private/tmp/test/package.json
-'8  39  5  /private/tmp/test/package.json
-'9  55  4  /private/tmp/test/package.json
+'0  1  0  ~/.bash_profile
+'1  25  49  ~/.bash_profile
+'2  149  0  ~/.bashrc
+'3  870  1  ~/.shellfuncsT2
+'4  183  0  ~/.shellfuncsT2
+'5  117097  39  /private/tmp/Outlook for Mac Archive.olm
+'6  839  0  ~/.shellfuncsT2
+'7  34  46  /Volumes/dev/svb-web-payments/package.json
+'8  58  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
+'9  1  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/saveSuccessModalValidation/payeeNicknameValidation.test.js
 
 # Jumplist (newest first):
+-'  1  0  ~/.bash_profile
+-'  25  49  ~/.bash_profile
+-'  149  0  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  870  1  ~/.shellfuncsT2
+-'  58  1  ~/.shellfuncsT2
+-'  57  6  ~/.shellfuncsT2
+-'  1  0  ~/.shellfuncsT2
+-'  183  0  ~/.shellfuncsT2
+-'  117097  39  /private/tmp/Outlook for Mac Archive.olm
+-'  4126818  0  /private/tmp/Outlook for Mac Archive.olm
+-'  4110069  0  /private/tmp/Outlook for Mac Archive.olm
+-'  327  0  /private/tmp/Outlook for Mac Archive.olm
+-'  1  0  /private/tmp/Outlook for Mac Archive.olm
+-'  839  0  ~/.shellfuncsT2
+-'  34  46  /Volumes/dev/svb-web-payments/package.json
+-'  32  8  /Volumes/dev/svb-web-payments/package.json
+-'  24  80  /Volumes/dev/svb-web-payments/package.json
+-'  18  62  /Volumes/dev/svb-web-payments/package.json
+-'  17  82  /Volumes/dev/svb-web-payments/package.json
+-'  16  36  /Volumes/dev/svb-web-payments/package.json
+-'  1  0  /Volumes/dev/svb-web-payments/package.json
+-'  58  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
+-'  60  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
+-'  1  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/saveSuccessModalValidation/payeeNicknameValidation.test.js
+-'  91  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/saveSuccessModalValidation/payeeNicknameValidation.test.js
+-'  1  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/freeFormValidation/payeeNameValidation.test.js
+-'  67  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/freeFormValidation/payeeNameValidation.test.js
+-'  1  4  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/paymentFormTestHelper.js
+-'  39  8  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/paymentFormTestHelper.js
+-'  2  4  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/paymentFormTestHelper.js
+-'  10  0  ~/Mark/LetterToJackMacyMark?LynnCominsky.txt
+-'  1  0  ~/Mark/LetterToJackMacyMark?LynnCominsky.txt
+-'  36  0  ~/Mark/mainrun.java
+-'  1  0  ~/Mark/mainrun.java
+-'  13  28  ~/Mark/LetterToJackMacyMark?LynnCominsky.txt
+-'  20  28  ~/Mark/LetterToJackMacyMark?LynnCominsky.txt
+-'  1  0  ~/Mark/JsDev/Calc-v2/package.json
+-'  29  0  ~/Mark/JsDev/Calc-v2/package.json
+-'  14  4  ~/Mark/JsDev/Calc-v2/package.json
+-'  18  35  ~/Mark/JsDev/Calc-v2/origWorking_package_json.file
+-'  20  5  ~/Mark/JsDev/Calc-v2/origWorking_package_json.file
+-'  1  0  ~/Mark/JsDev/Calc-v2/origWorking_package_json.file
+-'  87  13  ~/Mark/JsDev/Calc-v2/origWorking_package_json.file
+-'  118  30  ~/Mark/JsDev/Calc-v2/origWorking_package_json.file
+-'  103  17  ~/Mark/JsDev/Calc-v2/origWorking_package_json.file
+-'  101  17  ~/Mark/JsDev/Calc-v2/origWorking_package_json.file
+-'  88  18  ~/Mark/JsDev/Calc-v2/origWorking_package_json.file
+-'  73  13  ~/Mark/JsDev/Calc-v2/package.json
+-'  1  0  ~/Mark/JsDev/Calc-v2/spec.js
+-'  61  0  ~/Mark/JsDev/Calc-v2/orig_package_json.file
+-'  1  0  ~/Mark/JsDev/Calc-v2/orig_package_json.file
+-'  33  2  ~/Mark/JsDev/Calc-v2/package.json
+-'  41  0  ~/Mark/JsDev/Calc-v2/package.json
+-'  53  0  ~/Mark/JsDev/Calc-v2/InitialWhnIStarted_package.json
+-'  1  0  ~/Mark/JsDev/Calc-v2/InitialWhnIStarted_package.json
 -'  236  0  ~/.shellfuncsT2
 -'  161  17  ~/.shellfuncsT2
 -'  54  1  ~/.shellfuncsT2
 -'  53  9  ~/.shellfuncsT2
--'  1  0  ~/.shellfuncsT2
 -'  39  11  ~/.atkmhrc
 -'  1  0  ~/.atkmhrc
 -'  7  0  ~/.svbrc
@@ -149,76 +215,48 @@ $integrationDirCount
 -'  1  0  ~/Mark/JsDev/calculator/npm-debug.log
 -'  47  0  ~/Mark/JsDev/calculator/juliemr_github_spec.js
 -'  1  0  ~/Mark/JsDev/calculator/juliemr_github_spec.js
--'  1  0  ~/Mark/JsDev/calculator/go
--'  1  0  ~/Mark/JsDev/calculator/conf.js.save
--'  1  0  ~/Mark/JsDev/calculator/README.md
--'  7  8  ~/getDeeperDskStructFile
--'  1  0  ~/getDeeperDskStructFile
--'  3  69  ~/getDeeperDskStructFile
--'  11  0  ~/Desktop/[Grease|Tamper] Monkey Murano_Auth.user.js
--'  1  0  ~/Desktop/[Grease|Tamper] Monkey Murano_Auth.user.js
--'  1  0  /Volumes/dev/svb-web-payments/reports/integration/chrome.int-test-results.xml
--'  4  9  /Volumes/dev/svb-web-payments/reports/integration/int-test-results.xml
--'  1  0  /Volumes/dev/svb-web-payments/reports/integration/int-test-results.xml
--'  331  0  /Volumes/dev/svb-web-payments/integration/scenarios/payeee.test.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/payeee.test.js
--'  99  0  /Volumes/dev/svb-scripts/build_web_payments.sh
--'  1  0  /Volumes/dev/svb-scripts/deploy.sh
--'  1  0  /Volumes/dev/svb-scripts/build_web_payments.sh
--'  1  0  /Volumes/dev/svb-scripts/build_env.sh
--'  1  0  /Volumes/dev/svb-scripts/build.sh
--'  1  0  /Volumes/dev/svb-scripts/Zero
--'  1  0  /Volumes/dev/svb-scripts/README.md
--'  3  26  /private/tmp/clientlogsettingpolicy.xml
--'  1  0  /private/tmp/clientlogsettingpolicy.xml
--'  48  0  /private/tmp/avpolicy.xml
--'  1  0  /private/tmp/avpolicy.xml
--'  11  1  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
--'  6  53  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
--'  5  39  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
--'  20  38  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
--'  15  37  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
--'  1  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
--'  19  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
--'  60  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
--'  59  0  /Volumes/dev/svb-web-payments/protractor-mock.conf.js
--'  1  0  /Volumes/dev/svb-web-payments/protractor-lengthy.conf.js
--'  1  0  /Volumes/dev/svb-web-payments/protractor.conf_zap.js
--'  1  0  /Volumes/dev/svb-web-payments/protractor.conf.tablet.js
--'  1  0  /Volumes/dev/svb-web-payments/protractor.conf.mobile.js
--'  133  0  ~/.shellfuncsT3
--'  1  0  ~/.shellfuncsT3
--'  47  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentTable.test.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentTable.test.js
--'  143  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
--'  1  0  /Volumes/dev/svb-web-billpay/.git/MERGE_MSG
--'  13  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentTable.test.js
--'  1  0  /Volumes/dev/svb-web-payments/integration/scenarios/payment_home_status.test.js
--'  108  0  /Volumes/dev/svb-web-payments/integration/scenarios/payment_home_status.test.js
--'  109  0  /Volumes/dev/svb-web-payments/integration/scenarios/payment_home_status.test.js
--'  51  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentTable.test.js
--'  134  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
--'  142  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
--'  102  4  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
--'  38  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
--'  25  3  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
--'  24  3  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
--'  4  0  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
--'  3  39  /Volumes/dev/svb-web-payments/integration/mockBackend/paymentsFilter.test.js
 
 # History of marks within files (newest to oldest):
 
+> ~/.bash_profile
+	"	1	0
+	^	25	50
+	.	25	49
+	+	16	0
+	+	17	0
+	+	20	0
+	+	16	0
+	+	17	1
+	+	21	0
+	+	20	0
+	+	33	0
+	+	30	40
+	+	32	5
+	+	31	44
+	+	20	1
+	+	21	1
+	+	26	0
+	+	25	49
+
+> ~/.fmrVagRepo_bash_profile.sh
+	"	2	60
+	^	2	61
+	.	2	60
+	+	2	60
+
+> ~/.bashrc
+	"	149	0
+
 > ~/.shellfuncsT2
-	"	236	0
-	^	708	81
-	.	708	80
+	"	870	1
+	^	870	2
+	.	871	0
 	+	527	1
 	+	529	0
-	+	620	0
-	+	819	0
-	+	818	1
-	+	819	47
+	+	622	0
+	+	821	0
+	+	820	1
+	+	821	47
 	+	5	0
 	+	25	0
 	+	23	4
@@ -226,27 +264,111 @@ $integrationDirCount
 	+	21	9
 	+	20	3
 	+	19	8
-	+	841	22
-	+	844	26
-	+	839	7
-	+	841	26
-	+	853	28
+	+	843	22
+	+	846	26
+	+	841	7
+	+	843	26
+	+	855	28
 	+	530	42
 	+	531	3
 	+	530	62
 	+	541	55
 	+	543	0
 	+	542	0
-	+	699	76
-	+	709	0
-	+	708	80
+	+	701	76
+	+	711	0
+	+	710	80
+	+	552	0
+	+	871	0
 
 > ~/.atkmhrc
-	"	39	11
+	"	4	0
 	^	39	12
 	.	39	11
 	+	38	0
 	+	39	11
+
+> /private/tmp/Outlook for Mac Archive.olm
+	"	117097	39
+	.	4126819	0
+	+	4126819	0
+
+> /Volumes/dev/svb-web-payments/package.json
+	"	34	46
+
+> /Volumes/dev/svb-web-payments/protractor-mock.conf.js
+	"	58	0
+
+> /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/saveSuccessModalValidation/payeeNicknameValidation.test.js
+	"	1	0
+
+> /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/freeFormValidation/payeeNameValidation.test.js
+	"	1	0
+
+> /Volumes/dev/svb-web-payments/integration/mockBackend/paymentFormValidation/paymentFormTestHelper.js
+	"	1	4
+
+> ~/Mark/LetterToJackMacyMark?LynnCominsky.txt
+	"	10	0
+	^	10	0
+	.	11	0
+	+	20	92
+	+	20	29
+	+	20	125
+	+	20	28
+	+	1	0
+	+	20	28
+	+	20	28
+	+	22	0
+	+	20	138
+	+	23	163
+	+	25	88
+	+	27	56
+	+	30	109
+	+	31	2
+	+	30	81
+	+	34	54
+	+	39	0
+	+	34	89
+	+	32	13
+	+	33	65
+	+	35	0
+	+	33	0
+	+	35	0
+	+	37	38
+	+	16	0
+	+	15	23
+	+	21	95
+	+	23	49
+	+	25	0
+	+	24	0
+	+	25	60
+	+	12	99
+	+	13	28
+	+	14	0
+	+	13	28
+	+	11	0
+
+> ~/Mark/mainrun.java
+	"	36	0
+
+> ~/Mark/JsDev/Calc-v2/package.json
+	"	1	0
+	.	14	0
+	+	33	0
+	+	14	0
+
+> ~/Mark/JsDev/Calc-v2/origWorking_package_json.file
+	"	18	35
+
+> ~/Mark/JsDev/Calc-v2/spec.js
+	"	1	0
+
+> ~/Mark/JsDev/Calc-v2/orig_package_json.file
+	"	61	0
+
+> ~/Mark/JsDev/Calc-v2/InitialWhnIStarted_package.json
+	"	53	0
 
 > /usr/share/vim/vim73/doc/help.txt
 	"	2	0
@@ -540,9 +662,6 @@ $integrationDirCount
 > /private/tmp/avpolicy.xml
 	"	48	0
 
-> /Volumes/dev/svb-web-payments/protractor-mock.conf.js
-	"	11	1
-
 > /Volumes/dev/svb-web-payments/mock-server.js
 	"	41	0
 
@@ -704,22 +823,6 @@ $integrationDirCount
 > ~/Desktop/Murano_Auth.user.js
 	"	1	0
 
-> ~/.bash_profile
-	"	25	44
-	^	25	45
-	.	25	44
-	+	16	0
-	+	17	0
-	+	20	0
-	+	16	0
-	+	17	1
-	+	21	0
-	+	20	0
-	+	27	0
-	+	24	40
-	+	26	5
-	+	25	44
-
 > /Volumes/dev/svb-vagrant/tools/publishPomsToNexus.py
 	"	1	0
 
@@ -796,252 +899,3 @@ $integrationDirCount
 	+	3	7
 	+	2	7
 	+	5	14
-
-> ~/altTemp/atkmhDraw_io-Test.xml
-	"	1	0
-
-> /private/var/folders/3y/gqj3m73j4wx0rj817mgh_0_mgsyy4f/T/bash-fc-1478303524
-	"	1	0
-	^	1	0
-	.	1	0
-	+	1	0
-
-> ~/.bashrc
-	"	149	35
-	^	148	36
-	.	149	35
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	154	0
-	+	147	0
-	+	148	36
-	+	154	0
-	+	154	0
-	+	154	0
-	+	153	12
-	+	150	36
-	+	148	35
-	+	149	35
-
-> ~/.svbshellFuncs
-	"	1	0
-	^	1	2
-	.	1	0
-	+	787	4
-	+	778	37
-	+	773	16
-	+	777	13
-	+	776	0
-	+	774	9
-	+	776	9
-	+	778	12
-	+	780	12
-	+	783	12
-	+	788	9
-	+	785	10
-	+	788	9
-	+	775	6
-	+	776	7
-	+	774	7
-	+	778	11
-	+	780	11
-	+	783	11
-	+	785	9
-	+	788	8
-	+	788	0
-	+	788	9
-	+	774	10
-	+	780	17
-	+	781	18
-	+	772	44
-	+	774	0
-	+	776	0
-	+	778	9
-	+	785	0
-	+	788	0
-	+	697	3
-	+	718	29
-	+	646	9
-	+	633	0
-	+	648	0
-	+	828	0
-	+	793	33
-	+	792	38
-	+	793	41
-	+	802	0
-	+	827	9
-	+	793	41
-	+	790	16
-	+	795	0
-	+	598	0
-	+	597	1
-	+	598	17
-	+	597	20
-	+	795	45
-	+	799	36
-	+	825	0
-	+	802	0
-	+	519	0
-	+	804	0
-	+	801	7
-	+	805	36
-	+	799	37
-	+	806	19
-	+	805	15
-	+	822	0
-	+	793	31
-	+	796	18
-	+	793	19
-	+	804	18
-	+	805	18
-	+	806	18
-	+	811	49
-	+	813	44
-	+	807	7
-	+	799	61
-	+	797	39
-	+	799	54
-	+	803	38
-	+	804	34
-	+	808	1
-	+	744	7
-	+	770	9
-	+	745	0
-	+	745	0
-	+	744	13
-	+	745	9
-	+	770	12
-	+	808	39
-	+	811	58
-	+	809	39
-	+	813	52
-	+	815	0
-	+	816	35
-	+	819	0
-	+	816	18
-	+	819	1
-	+	810	42
-	+	818	23
-	+	816	31
-	+	818	62
-	+	817	56
-	+	830	0
-	+	1	0
-
-> /Volumes/dev/svb-web-billpay/test/integration/scenarios/addPayee.test.js
-	"	1	0
-
-> /Volumes/dev/svb-web-billpay/test/integration/scenarios/paymentConfirmationOverlay.test.js
-	"	1	0
-
-> /Volumes/dev/svb-web-billpay/test/integration/scenarios/paymentDisplay.test.js
-	"	307	0
-
-> /Volumes/dev/svb-web-billpay/test/integration/scenarios/paymentReviewModel.test.js
-	"	18	0
-
-> /Volumes/dev/svb-web-billpay/test/integration/components/SelectElement.js
-	"	45	0
-
-> /Volumes/dev/svb-web-billpay/test/integration/components/ValidatedInput.js
-	"	46	0
-
-> /Volumes/dev/svb-web-billpay/app/src/factories/csrf/csrfResourceFactory.js
-	"	1	0
-
-> /Volumes/dev/svb-web-billpay/app/src/factories/csrf/csrfServiceFactory.js
-	"	1	0
-
-> /Volumes/dev/svb-web-billpay/app/src/factories/csrf/csrfServiceFactory.test.js
-	"	1	0
-
-> /Volumes/dev/svb-service-ooba/src/test/java/com/svb/murano/ooba/integration/BaseOOBAIntegrationTest.java
-	"	59	0

@@ -1,0 +1,407 @@
+<html>
+<head>
+	<STYLE type="text/css">
+
+BODY
+{
+    FONT-FAMILY: 'Comic Sans MS', Arial, Courier;
+    BACKGROUND-COLOR: yellow
+}
+TD
+{
+	FONT-WEIGHT: bold;
+    FONT-SIZE: 15pt;
+    WIDTH: 20pt;
+    CURSOR: crosshair;
+    COLOR: black;
+    FONT-FAMILY: Wingdings;
+    HEIGHT: 20pt;
+    BACKGROUND-COLOR: palegreen;
+    TEXT-ALIGN: center
+}
+
+H5
+{
+    MARGIN-TOP: 0px;
+    MARGIN-BOTTOM: 0px
+}
+
+	</STYLE>
+<script language="javascript"><!--
+
+var maxcritters=25;
+var score=0;
+var currentDate=new Date()
+var start;
+start=currentDate.valueOf();
+var bestTime=50
+var bestAverage=2.00
+
+
+function putscore(){
+	scoreDate=new Date()
+	var now=scoreDate.valueOf();
+	document.all.score.innerHTML=score ;  
+	document.all.time.innerHTML=(now-start)/1000;  
+	document.all.average.innerHTML=Math.round((now-start)/score)/1000;  
+	
+	if (score==maxcritters){
+		if (  (now-start)/1000 < bestTime ) {
+			alert("NEW RECORD");
+			bestTime=(now-start)/1000
+			bestAverage=Math.round((now-start)/score)/1000;  
+			document.all.besttime.innerHTML=bestTime ;  
+			document.all.bestavg.innerHTML=bestAverage ;  
+		}
+	}
+}
+
+function reset(){
+	
+		alert('GAME OVER - CLICK OK TO PLAY AGAIN!');
+		
+		score=0;
+		var resetDate=new Date()
+		start=resetDate.valueOf();
+		putscore();
+}
+
+function highlight(cell)
+{
+oncell=false
+	switch(cell)
+	{
+		case "cell_10" : if(document.all.cell_10.innerHTML=="J"){document.all.cell_10.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_11" : if(document.all.cell_11.innerHTML=="J"){document.all.cell_11.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_12" : if(document.all.cell_12.innerHTML=="J"){document.all.cell_12.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_13" : if(document.all.cell_13.innerHTML=="J"){document.all.cell_13.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_14" : if(document.all.cell_14.innerHTML=="J"){document.all.cell_14.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_15" : if(document.all.cell_15.innerHTML=="J"){document.all.cell_15.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_16" : if(document.all.cell_16.innerHTML=="J"){document.all.cell_16.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_17" : if(document.all.cell_17.innerHTML=="J"){document.all.cell_17.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_18" : if(document.all.cell_18.innerHTML=="J"){document.all.cell_18.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_19" : if(document.all.cell_19.innerHTML=="J"){document.all.cell_19.innerHTML="&nbsp";oncell=true;} break ;
+
+		case "cell_20" : if(document.all.cell_20.innerHTML=="J"){document.all.cell_20.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_21" : if(document.all.cell_21.innerHTML=="J"){document.all.cell_21.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_22" : if(document.all.cell_22.innerHTML=="J"){document.all.cell_22.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_23" : if(document.all.cell_23.innerHTML=="J"){document.all.cell_23.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_24" : if(document.all.cell_24.innerHTML=="J"){document.all.cell_24.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_25" : if(document.all.cell_25.innerHTML=="J"){document.all.cell_25.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_26" : if(document.all.cell_26.innerHTML=="J"){document.all.cell_26.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_27" : if(document.all.cell_27.innerHTML=="J"){document.all.cell_27.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_28" : if(document.all.cell_28.innerHTML=="J"){document.all.cell_28.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_29" : if(document.all.cell_29.innerHTML=="J"){document.all.cell_29.innerHTML="&nbsp";oncell=true;} break ;
+
+		case "cell_30" : if(document.all.cell_30.innerHTML=="J"){document.all.cell_30.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_31" : if(document.all.cell_31.innerHTML=="J"){document.all.cell_31.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_32" : if(document.all.cell_32.innerHTML=="J"){document.all.cell_32.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_33" : if(document.all.cell_33.innerHTML=="J"){document.all.cell_33.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_34" : if(document.all.cell_34.innerHTML=="J"){document.all.cell_34.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_35" : if(document.all.cell_35.innerHTML=="J"){document.all.cell_35.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_36" : if(document.all.cell_36.innerHTML=="J"){document.all.cell_36.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_37" : if(document.all.cell_37.innerHTML=="J"){document.all.cell_37.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_38" : if(document.all.cell_38.innerHTML=="J"){document.all.cell_38.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_39" : if(document.all.cell_39.innerHTML=="J"){document.all.cell_39.innerHTML="&nbsp";oncell=true;} break ;
+
+		case "cell_40" : if(document.all.cell_40.innerHTML=="J"){document.all.cell_40.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_41" : if(document.all.cell_41.innerHTML=="J"){document.all.cell_41.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_42" : if(document.all.cell_42.innerHTML=="J"){document.all.cell_42.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_43" : if(document.all.cell_43.innerHTML=="J"){document.all.cell_43.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_44" : if(document.all.cell_44.innerHTML=="J"){document.all.cell_44.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_45" : if(document.all.cell_45.innerHTML=="J"){document.all.cell_45.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_46" : if(document.all.cell_46.innerHTML=="J"){document.all.cell_46.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_47" : if(document.all.cell_47.innerHTML=="J"){document.all.cell_47.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_48" : if(document.all.cell_48.innerHTML=="J"){document.all.cell_48.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_49" : if(document.all.cell_49.innerHTML=="J"){document.all.cell_49.innerHTML="&nbsp";oncell=true;} break ;
+
+		case "cell_50" : if(document.all.cell_50.innerHTML=="J"){document.all.cell_50.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_51" : if(document.all.cell_51.innerHTML=="J"){document.all.cell_51.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_52" : if(document.all.cell_52.innerHTML=="J"){document.all.cell_52.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_53" : if(document.all.cell_53.innerHTML=="J"){document.all.cell_53.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_54" : if(document.all.cell_54.innerHTML=="J"){document.all.cell_54.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_55" : if(document.all.cell_55.innerHTML=="J"){document.all.cell_55.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_56" : if(document.all.cell_56.innerHTML=="J"){document.all.cell_56.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_57" : if(document.all.cell_57.innerHTML=="J"){document.all.cell_57.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_58" : if(document.all.cell_58.innerHTML=="J"){document.all.cell_58.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_59" : if(document.all.cell_59.innerHTML=="J"){document.all.cell_59.innerHTML="&nbsp";oncell=true;} break ;
+
+		case "cell_60" : if(document.all.cell_60.innerHTML=="J"){document.all.cell_60.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_61" : if(document.all.cell_61.innerHTML=="J"){document.all.cell_61.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_62" : if(document.all.cell_62.innerHTML=="J"){document.all.cell_62.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_63" : if(document.all.cell_63.innerHTML=="J"){document.all.cell_63.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_64" : if(document.all.cell_64.innerHTML=="J"){document.all.cell_64.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_65" : if(document.all.cell_65.innerHTML=="J"){document.all.cell_65.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_66" : if(document.all.cell_66.innerHTML=="J"){document.all.cell_66.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_67" : if(document.all.cell_67.innerHTML=="J"){document.all.cell_67.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_68" : if(document.all.cell_68.innerHTML=="J"){document.all.cell_68.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_69" : if(document.all.cell_69.innerHTML=="J"){document.all.cell_69.innerHTML="&nbsp";oncell=true;} break ;
+
+		case "cell_70" : if(document.all.cell_70.innerHTML=="J"){document.all.cell_70.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_71" : if(document.all.cell_71.innerHTML=="J"){document.all.cell_71.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_72" : if(document.all.cell_72.innerHTML=="J"){document.all.cell_72.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_73" : if(document.all.cell_73.innerHTML=="J"){document.all.cell_73.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_74" : if(document.all.cell_74.innerHTML=="J"){document.all.cell_74.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_75" : if(document.all.cell_75.innerHTML=="J"){document.all.cell_75.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_76" : if(document.all.cell_76.innerHTML=="J"){document.all.cell_76.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_77" : if(document.all.cell_77.innerHTML=="J"){document.all.cell_77.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_78" : if(document.all.cell_78.innerHTML=="J"){document.all.cell_78.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_79" : if(document.all.cell_79.innerHTML=="J"){document.all.cell_79.innerHTML="&nbsp";oncell=true;} break ;
+ 
+		case "cell_80" : if(document.all.cell_80.innerHTML=="J"){document.all.cell_80.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_81" : if(document.all.cell_81.innerHTML=="J"){document.all.cell_81.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_82" : if(document.all.cell_82.innerHTML=="J"){document.all.cell_82.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_83" : if(document.all.cell_83.innerHTML=="J"){document.all.cell_83.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_84" : if(document.all.cell_84.innerHTML=="J"){document.all.cell_84.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_85" : if(document.all.cell_85.innerHTML=="J"){document.all.cell_85.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_86" : if(document.all.cell_86.innerHTML=="J"){document.all.cell_86.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_87" : if(document.all.cell_87.innerHTML=="J"){document.all.cell_87.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_88" : if(document.all.cell_88.innerHTML=="J"){document.all.cell_88.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_89" : if(document.all.cell_89.innerHTML=="J"){document.all.cell_89.innerHTML="&nbsp";oncell=true;} break ;
+
+		case "cell_90" : if(document.all.cell_90.innerHTML=="J"){document.all.cell_90.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_91" : if(document.all.cell_91.innerHTML=="J"){document.all.cell_91.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_92" : if(document.all.cell_92.innerHTML=="J"){document.all.cell_92.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_93" : if(document.all.cell_93.innerHTML=="J"){document.all.cell_93.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_94" : if(document.all.cell_94.innerHTML=="J"){document.all.cell_94.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_95" : if(document.all.cell_95.innerHTML=="J"){document.all.cell_95.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_96" : if(document.all.cell_96.innerHTML=="J"){document.all.cell_96.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_97" : if(document.all.cell_97.innerHTML=="J"){document.all.cell_97.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_98" : if(document.all.cell_98.innerHTML=="J"){document.all.cell_98.innerHTML="&nbsp";oncell=true;} break ;
+		case "cell_99" : if(document.all.cell_99.innerHTML=="J"){document.all.cell_99.innerHTML="&nbsp";oncell=true;} break ;
+
+	}
+
+if (oncell==true) {
+	var r=Math.round(90*Math.random()) +10;  // 90 = 0-89   +10 = 10-99
+
+	switch(r)
+	{
+		case 10 : document.all.cell_10.innerHTML="J"; break ;
+		case 11 : document.all.cell_11.innerHTML="J"; break ;
+		case 12 : document.all.cell_12.innerHTML="J"; break ;
+		case 13 : document.all.cell_13.innerHTML="J"; break ;
+		case 14 : document.all.cell_14.innerHTML="J"; break ;
+		case 15 : document.all.cell_15.innerHTML="J"; break ;
+		case 16 : document.all.cell_16.innerHTML="J"; break ;
+		case 17 : document.all.cell_17.innerHTML="J"; break ;
+		case 18 : document.all.cell_18.innerHTML="J"; break ;
+		case 19 : document.all.cell_19.innerHTML="J"; break ;
+		case 20 : document.all.cell_20.innerHTML="J"; break ;
+		case 21 : document.all.cell_21.innerHTML="J"; break ;
+		case 22 : document.all.cell_22.innerHTML="J"; break ;
+		case 23 : document.all.cell_23.innerHTML="J"; break ;
+		case 24 : document.all.cell_24.innerHTML="J"; break ;
+		case 25 : document.all.cell_25.innerHTML="J"; break ;
+		case 26 : document.all.cell_26.innerHTML="J"; break ;
+		case 27 : document.all.cell_27.innerHTML="J"; break ;
+		case 28 : document.all.cell_28.innerHTML="J"; break ;
+		case 29 : document.all.cell_29.innerHTML="J"; break ;
+		case 30 : document.all.cell_30.innerHTML="J"; break ;
+		case 31 : document.all.cell_31.innerHTML="J"; break ;
+		case 32 : document.all.cell_32.innerHTML="J"; break ;
+		case 33 : document.all.cell_33.innerHTML="J"; break ;
+		case 34 : document.all.cell_34.innerHTML="J"; break ;
+		case 35 : document.all.cell_35.innerHTML="J"; break ;
+		case 36 : document.all.cell_36.innerHTML="J"; break ;
+		case 37 : document.all.cell_37.innerHTML="J"; break ;
+		case 38 : document.all.cell_38.innerHTML="J"; break ;
+		case 39 : document.all.cell_39.innerHTML="J"; break ;
+		case 40 : document.all.cell_40.innerHTML="J"; break ;
+		case 41 : document.all.cell_41.innerHTML="J"; break ;
+		case 42 : document.all.cell_42.innerHTML="J"; break ;
+		case 43 : document.all.cell_43.innerHTML="J"; break ;
+		case 44 : document.all.cell_44.innerHTML="J"; break ;
+		case 45 : document.all.cell_45.innerHTML="J"; break ;
+		case 46 : document.all.cell_46.innerHTML="J"; break ;
+		case 47 : document.all.cell_47.innerHTML="J"; break ;
+		case 48 : document.all.cell_48.innerHTML="J"; break ;
+		case 49 : document.all.cell_49.innerHTML="J"; break ;
+		case 50 : document.all.cell_50.innerHTML="J"; break ;
+		case 51 : document.all.cell_51.innerHTML="J"; break ;
+		case 52 : document.all.cell_52.innerHTML="J"; break ;
+		case 53 : document.all.cell_53.innerHTML="J"; break ;
+		case 54 : document.all.cell_54.innerHTML="J"; break ;
+		case 55 : document.all.cell_55.innerHTML="J"; break ;
+		case 56 : document.all.cell_56.innerHTML="J"; break ;
+		case 57 : document.all.cell_57.innerHTML="J"; break ;
+		case 58 : document.all.cell_58.innerHTML="J"; break ;
+		case 59 : document.all.cell_59.innerHTML="J"; break ;
+		case 60 : document.all.cell_60.innerHTML="J"; break ;
+		case 61 : document.all.cell_61.innerHTML="J"; break ;
+		case 62 : document.all.cell_62.innerHTML="J"; break ;
+		case 63 : document.all.cell_63.innerHTML="J"; break ;
+		case 64 : document.all.cell_64.innerHTML="J"; break ;
+		case 65 : document.all.cell_65.innerHTML="J"; break ;
+		case 66 : document.all.cell_66.innerHTML="J"; break ;
+		case 67 : document.all.cell_67.innerHTML="J"; break ;
+		case 68 : document.all.cell_68.innerHTML="J"; break ;
+		case 69 : document.all.cell_69.innerHTML="J"; break ;
+		case 70 : document.all.cell_70.innerHTML="J"; break ;
+		case 71 : document.all.cell_71.innerHTML="J"; break ;
+		case 72 : document.all.cell_72.innerHTML="J"; break ;
+		case 73 : document.all.cell_73.innerHTML="J"; break ;
+		case 74 : document.all.cell_74.innerHTML="J"; break ;
+		case 75 : document.all.cell_75.innerHTML="J"; break ;
+		case 76 : document.all.cell_76.innerHTML="J"; break ;
+		case 77 : document.all.cell_77.innerHTML="J"; break ;
+		case 78 : document.all.cell_78.innerHTML="J"; break ;
+		case 79 : document.all.cell_79.innerHTML="J"; break ;
+		case 80 : document.all.cell_80.innerHTML="J"; break ;
+		case 81 : document.all.cell_81.innerHTML="J"; break ;
+		case 82 : document.all.cell_82.innerHTML="J"; break ;
+		case 83 : document.all.cell_83.innerHTML="J"; break ;
+		case 84 : document.all.cell_84.innerHTML="J"; break ;
+		case 85 : document.all.cell_85.innerHTML="J"; break ;
+		case 86 : document.all.cell_86.innerHTML="J"; break ;
+		case 87 : document.all.cell_87.innerHTML="J"; break ;
+		case 88 : document.all.cell_88.innerHTML="J"; break ;
+		case 89 : document.all.cell_89.innerHTML="J"; break ;
+		case 90 : document.all.cell_90.innerHTML="J"; break ;
+		case 91 : document.all.cell_91.innerHTML="J"; break ;
+		case 92 : document.all.cell_92.innerHTML="J"; break ;
+		case 93 : document.all.cell_93.innerHTML="J"; break ;
+		case 94 : document.all.cell_94.innerHTML="J"; break ;
+		case 95 : document.all.cell_95.innerHTML="J"; break ;
+		case 96 : document.all.cell_96.innerHTML="J"; break ;
+		case 97 : document.all.cell_97.innerHTML="J"; break ;
+		case 98 : document.all.cell_98.innerHTML="J"; break ;
+		case 99 : document.all.cell_99.innerHTML="J"; break ;
+		default : document.all.cell_10.innerHTML="J"; break ;
+
+	}
+
+	score=score+1;
+	putscore();
+}
+	if(score==maxcritters){
+		reset();
+	}
+}
+--></script>
+</head>
+<body>
+<h2 align="center"><U>CRITTER THWACKING - A 
+STRESS RELIEVER</U></h2>
+<h5 align="center"><FONT color=red>How quickly can YOU wipe out the critters?</FONT></h5>
+<H5 align=center>CRITTERS THWACKED=<span id="score">0</span> &nbsp;|&nbsp; TIME=<span id="time">0</span> secs &nbsp;|&nbsp; AVERAGE=<span id="average">0</span> secs</H5>
+<h5 align="center"><FONT color=orangered>BEST TIME=<span id="besttime">50</span> secs</FONT> &nbsp;|&nbsp; <FONT 
+color=red>   BEST AVERAGE=<span id="bestavg">2.00</span> 
+secs</FONT> </h5>
+
+<table border="1" align="center" cellspacing="0" cellpadding="0">
+	<tr>
+		<td id="cell_10" onclick="highlight('cell_10');return true;">J</td>
+		<td id="cell_11" onclick="highlight('cell_11');return true;">&nbsp;</td>
+		<td id="cell_12" onclick="highlight('cell_12');return true;">&nbsp;</td>
+		<td id="cell_13" onclick="highlight('cell_13');return true;">&nbsp;</td>
+		<td id="cell_14" onclick="highlight('cell_14');return true;">&nbsp;</td>
+		<td id="cell_15" onclick="highlight('cell_15');return true;">&nbsp;</td>
+		<td id="cell_16" onclick="highlight('cell_16');return true;">&nbsp;</td>
+		<td id="cell_17" onclick="highlight('cell_17');return true;">&nbsp;</td>
+		<td id="cell_18" onclick="highlight('cell_18');return true;">&nbsp;</td>
+		<td id="cell_19" onclick="highlight('cell_19');return true;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell_20" onclick="highlight('cell_20');return true;">&nbsp;</td>
+		<td id="cell_21" onclick="highlight('cell_21');return true;">&nbsp;</td>
+		<td id="cell_22" onclick="highlight('cell_22');return true;">&nbsp;</td>
+		<td id="cell_23" onclick="highlight('cell_23');return true;">&nbsp;</td>
+		<td id="cell_24" onclick="highlight('cell_24');return true;">&nbsp;</td>
+		<td id="cell_25" onclick="highlight('cell_25');return true;">&nbsp;</td>
+		<td id="cell_26" onclick="highlight('cell_26');return true;">&nbsp;</td>
+		<td id="cell_27" onclick="highlight('cell_27');return true;">&nbsp;</td>
+		<td id="cell_28" onclick="highlight('cell_28');return true;">&nbsp;</td>
+		<td id="cell_29" onclick="highlight('cell_29');return true;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell_30" onclick="highlight('cell_30');return true;">&nbsp;</td>
+		<td id="cell_31" onclick="highlight('cell_31');return true;">&nbsp;</td>
+		<td id="cell_32" onclick="highlight('cell_32');return true;">&nbsp;</td>
+		<td id="cell_33" onclick="highlight('cell_33');return true;">&nbsp;</td>
+		<td id="cell_34" onclick="highlight('cell_34');return true;">&nbsp;</td>
+		<td id="cell_35" onclick="highlight('cell_35');return true;">&nbsp;</td>
+		<td id="cell_36" onclick="highlight('cell_36');return true;">&nbsp;</td>
+		<td id="cell_37" onclick="highlight('cell_37');return true;">&nbsp;</td>
+		<td id="cell_38" onclick="highlight('cell_38');return true;">&nbsp;</td>
+		<td id="cell_39" onclick="highlight('cell_39');return true;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell_40" onclick="highlight('cell_40');return true;">&nbsp;</td>
+		<td id="cell_41" onclick="highlight('cell_41');return true;">&nbsp;</td>
+		<td id="cell_42" onclick="highlight('cell_42');return true;">&nbsp;</td>
+		<td id="cell_43" onclick="highlight('cell_43');return true;">&nbsp;</td>
+		<td id="cell_44" onclick="highlight('cell_44');return true;">&nbsp;</td>
+		<td id="cell_45" onclick="highlight('cell_45');return true;">&nbsp;</td>
+		<td id="cell_46" onclick="highlight('cell_46');return true;">&nbsp;</td>
+		<td id="cell_47" onclick="highlight('cell_47');return true;">&nbsp;</td>
+		<td id="cell_48" onclick="highlight('cell_48');return true;">&nbsp;</td>
+		<td id="cell_49" onclick="highlight('cell_49');return true;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell_50" onclick="highlight('cell_50');return true;">&nbsp;</td>
+		<td id="cell_51" onclick="highlight('cell_51');return true;">&nbsp;</td>
+		<td id="cell_52" onclick="highlight('cell_52');return true;">&nbsp;</td>
+		<td id="cell_53" onclick="highlight('cell_53');return true;">&nbsp;</td>
+		<td id="cell_54" onclick="highlight('cell_54');return true;">&nbsp;</td>
+		<td id="cell_55" onclick="highlight('cell_55');return true;">&nbsp;</td>
+		<td id="cell_56" onclick="highlight('cell_56');return true;">&nbsp;</td>
+		<td id="cell_57" onclick="highlight('cell_57');return true;">&nbsp;</td>
+		<td id="cell_58" onclick="highlight('cell_58');return true;">&nbsp;</td>
+		<td id="cell_59" onclick="highlight('cell_59');return true;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell_60" onclick="highlight('cell_60');return true;">&nbsp;</td>
+		<td id="cell_61" onclick="highlight('cell_61');return true;">&nbsp;</td>
+		<td id="cell_62" onclick="highlight('cell_62');return true;">&nbsp;</td>
+		<td id="cell_63" onclick="highlight('cell_63');return true;">&nbsp;</td>
+		<td id="cell_64" onclick="highlight('cell_64');return true;">&nbsp;</td>
+		<td id="cell_65" onclick="highlight('cell_65');return true;">&nbsp;</td>
+		<td id="cell_66" onclick="highlight('cell_66');return true;">&nbsp;</td>
+		<td id="cell_67" onclick="highlight('cell_67');return true;">&nbsp;</td>
+		<td id="cell_68" onclick="highlight('cell_68');return true;">&nbsp;</td>
+		<td id="cell_69" onclick="highlight('cell_69');return true;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell_70" onclick="highlight('cell_70');return true;">&nbsp;</td>
+		<td id="cell_71" onclick="highlight('cell_71');return true;">&nbsp;</td>
+		<td id="cell_72" onclick="highlight('cell_72');return true;">&nbsp;</td>
+		<td id="cell_73" onclick="highlight('cell_73');return true;">&nbsp;</td>
+		<td id="cell_74" onclick="highlight('cell_74');return true;">&nbsp;</td>
+		<td id="cell_75" onclick="highlight('cell_75');return true;">&nbsp;</td>
+		<td id="cell_76" onclick="highlight('cell_76');return true;">&nbsp;</td>
+		<td id="cell_77" onclick="highlight('cell_77');return true;">&nbsp;</td>
+		<td id="cell_78" onclick="highlight('cell_78');return true;">&nbsp;</td>
+		<td id="cell_79" onclick="highlight('cell_79');return true;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell_80" onclick="highlight('cell_80');return true;">&nbsp;</td>
+		<td id="cell_81" onclick="highlight('cell_81');return true;">&nbsp;</td>
+		<td id="cell_82" onclick="highlight('cell_82');return true;">&nbsp;</td>
+		<td id="cell_83" onclick="highlight('cell_83');return true;">&nbsp;</td>
+		<td id="cell_84" onclick="highlight('cell_84');return true;">&nbsp;</td>
+		<td id="cell_85" onclick="highlight('cell_85');return true;">&nbsp;</td>
+		<td id="cell_86" onclick="highlight('cell_86');return true;">&nbsp;</td>
+		<td id="cell_87" onclick="highlight('cell_87');return true;">&nbsp;</td>
+		<td id="cell_88" onclick="highlight('cell_88');return true;">&nbsp;</td>
+		<td id="cell_89" onclick="highlight('cell_89');return true;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell_90" onclick="highlight('cell_90');return true;">&nbsp;</td>
+		<td id="cell_91" onclick="highlight('cell_91');return true;">&nbsp;</td>
+		<td id="cell_92" onclick="highlight('cell_92');return true;">&nbsp;</td>
+		<td id="cell_93" onclick="highlight('cell_93');return true;">&nbsp;</td>
+		<td id="cell_94" onclick="highlight('cell_94');return true;">&nbsp;</td>
+		<td id="cell_95" onclick="highlight('cell_95');return true;">&nbsp;</td>
+		<td id="cell_96" onclick="highlight('cell_96');return true;">&nbsp;</td>
+		<td id="cell_97" onclick="highlight('cell_97');return true;">&nbsp;</td>
+		<td id="cell_98" onclick="highlight('cell_98');return true;">&nbsp;</td>
+		<td id="cell_99" onclick="highlight('cell_99');return true;">&nbsp;</td>
+	</tr>
+</table>
+<br>
+<H5 align=center><SPAN style="CURSOR: hand" 
+onclick="javascript:reset(); return true;"><FONT color=red><U>Quit Current 
+Game</U></FONT></SPAN></H5>
+</body>
+</html>

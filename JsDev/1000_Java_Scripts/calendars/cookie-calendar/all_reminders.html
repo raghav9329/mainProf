@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>a month of reminders</title>
+	
+	<script language="javascript" src="cengine.js"></script>
+	<script language="javascript" src="other_scripts.js"></script>
+	<script language="javascript">
+	<!--
+	
+	var mymonth = getCookie('whichmonth');
+	var mpos = 0;
+	
+	var remindtable = "";
+	remindtable += "<table width='400' bgcolor='#000000' border='0' cellpadding='1' cellspacing='0'>";
+	remindtable += "<tr>";
+	remindtable += "<td align='center'>";
+	
+	remindtable += "<table width='100%' bgcolor='#eeeeee' border='0' cellpadding='1' cellspacing='0'>";
+	remindtable += "<tr>";
+	remindtable += "<td align='center'><font face='verdana,arial,helvetica'><b>";
+	remindtable += "All reminders for " + months[mymonth];
+	remindtable += "<p></b></font></td>";
+	remindtable += "</tr>";
+	remindtable += "<tr><td>&nbsp;</td></tr>";
+	remindtable += "<td align='center'>";
+	
+	remindtable += "<table border='0' cellpadding='0' cellspacing='0'>";
+	remindtable += "<tr>";
+	remindtable += "<td><font face='verdana,arial,helvetica' size='2'>";
+	
+	var anyreminders = false;
+	for(var i = 1; i < monthlen[mymonth]; i++) {
+		
+		var acookie = months[mymonth] + i;
+		var aremind = getCookie(acookie);
+		
+		if(document.cookie && aremind) {
+			
+			aremind = aremind.split("|");
+			
+			remindtable += "<b>" + months[mymonth] + " " + i + "</b>";
+			remindtable += "<ul>";
+			for(var x = 0; x < aremind.length; x++) {
+				remindtable += "<li> " + aremind[x];
+			}
+			remindtable += "</ul>";
+			
+			anyreminders = true;
+		}
+		remindtable += "<p>";
+	}
+	
+	if(!anyreminders) {
+		remindtable += "There are no reminders.";
+	}
+	
+	remindtable += "</td>";
+	remindtable += "</tr>";
+	remindtable += "</table>";
+	
+	remindtable += "</font></td>";
+	remindtable += "</tr>";
+	remindtable += "</table>";
+	
+	remindtable += "</font></td>";
+	remindtable += "</tr>";
+	remindtable += "</table>";
+	
+	//-->
+	</script>
+	
+</head>
+
+<body bgcolor="#ffffff" text="#" link="#" alink="#" vlink="#" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+<p><br>
+
+<div align="center">
+<script language="javascript">
+<!--
+	document.write(remindtable);
+//-->
+</script>
+</div>
+
+</body>
+</html></html>

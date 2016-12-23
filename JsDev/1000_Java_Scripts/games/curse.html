@@ -1,0 +1,857 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Games:  CurseBot</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="date" CONTENT="2000-09-09">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Cut-N-Paste JavaScript">
+<META NAME="section" CONTENT="Games">
+<META NAME="description" CONTENT="JavaScrpt uses the dynamic random() function to write random curses.  Users may collect as many curse phrases as they want, or can endure.  The CurseBot keeps 'em coming!">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+isn1="*00Your mouth spews*01You are*02Your mother wears*03Your"
++" Village Priest is*04Your Eleventh Child will be*05Your Mate"
++"rnal Ancestors are*06Your Personal Trainer is*07Your spouse "
++"thinks you are*08Your mind resembles*09Your chances for the "
++"future are*10Your mother-in-law loves*11Your closest friend "
++"is*12Your breath resembles*13Your right nostril is dripping*"
++"14Your politics are*15Your cherished desires are*16Your next"
++" meal should be*17Your bedroom resembles*18Your refrigerator"
++" smells like*19Your manners are no better than*20I saw you e"
++"ating and enjoying*21Next Friday you will consume*22May you "
++"wallow in*23May you swim in*24May you drown in*25May you tak"
++"e simple pleasure in*26May you find your hot tub filled with"
++"*27May you find your kitchen sink overflowing with*28May you"
++" be immersed in*29You secretly aspire to drink*30May you din"
++"e often on*31May you be caught dining on*32May you become an"
++" obsessive collector of*33May you find your car filled with*"
++"34May you blurt out that your boss is the*35Your garden shou"
++"ld be flooded with*36May your basement overflow with*37May y"
++"our underwear be filled with*38May your drawers be filled wi"
++"th*39May you float forever in*40May your feet be encased in*"
++"41May you be forever entombed in*42I hate to tell you, but t"
++"here, caught in your teeth is*43May you step in*44May your c"
++"aptors feed you on*45The talk around the office is that you "
++"eat*46May your private parts be encrusted with*47May the sta"
++"ins on your clothing be only*48May your porridge be infused "
++"with*49Your sock drawer is now filled with*50Your supervisor"
++" secretly saves*51Caution: Someone knows about your foot fetish"
++"*52May you die of*53Remeber that day you first tasted"
++"*54May all your wastebaskets suddently overflow wit"
++"h*55May your roof drip*56May you be without garlic to spice "
++"your meal of *57May your trough be filled with*58May your hi"
++"p pockets overflow with*59May your doctor prescribe*60May yo"
++"u trip and fall into*61Yeah? Well, your Mentor wears combat "
++"boots filled with*62So what if I like anchovies and*63You re"
++"lish*64I'm going to tell.  You play with*65Your body reeks o"
++"f*66May your in-basket overflow with*67May your inlaws learn"
++" of your fondness for*68May you smear yourself with*69Your w"
++"ish is granted: drink*70Everyone knows you bathe in*71"; 
+isn2="*00aniline*01virescent*02aquamarine*03ashy*04atramentous"
++"*05aureate*06bloody*07bluish*08brinded*09bronze*10cadaverous"
++"*11cadmium*12carmine*13carnadine*14carroty*15cerulean*16citr"
++"ine*17cloudy*18cochineal*19crimson*20crude*21cyanic*22cymoph"
++"anous*23dappled*24diaphanous*25dingy*26drab*27dun*28emerald*"
++"29erubescent*30fallow*31flashy*32flavous*33florid*34florid*3"
++"5foggy*36fulvid*37fulvous*38fuscous*39garish*40gaudy*41gauzy"
++"*42ghastly*43glaucous*44gray*45greenish*46harlequin*47hueles"
++"s*48impervious*49infuscated*50iridescent*51jaundiced*52khaki"
++"*53lack-luster*54lavender*55leaden*56limpid*57liver-colored*"
++"58lurid*59luteous*60mantled*61maroon*62matted*63milky*64mist"
++"y*65misty*66motley*67mottled*68ocherous*69opacous*70opaline*"
++"71orangish*72pallid*73pallorous*74pellucid*75piebald*76polyc"
++"hromatic*77porraceous*78puce*79purplish*80red*81roseate*82ro"
++"uged*83rubicund*84ruddy*85russet*86rusty*87rusty*88sallow*89"
++"sacharine*90scarlet*91shady*92skewbald*93smalty*94smoky*95ye"
++"llowish*96somber*97striated*98tallowy*99";
+isn3="*00abomination*01soilure*02abscess*03averruncation*04bel"
++"ch*05carbuncle*06caries*07carrion*08catamenia*09cesspool*10c"
++"heese-parings*11coarseness*12compost*13contaminate*14contami"
++"nation*15coprolite*16corruption*17dandruff*18decay*19defedat"
++"ion*20defilement*21discharge*22disgorgement*23draff*24draggl"
++"etail*25drainage*26dregs*27drool*28dry-rot*29dung*30dunghill"
++"*31dunghill*32earth-closet*33effusion*34eliminant*35emanatio"
++"n*36emission*37eructate*38evacuation*39excrement*40excreta*4"
++"1excretion*42expectorate*43extravasation*44exudation*45fecul"
++"ence*46fetor*47filth*48foulings*49foulness*50garbage*51grime"
++"*52guano*53hog-wash*54immundity*55impurity*56infection*57kec"
++"k*58leucorrhea*59maggots*60manure*61matter*62mildew*63mire*6"
++"4mold*65mucidness*66muck*67mucor*68mud*69nastiness*70off-scu"
++"m*71offal*72ordure*73paracentesis*74perspiration*75pollution"
++"*76purulence*77pus*78putrescence*79quagmire*80refuse*81rheum"
++"*82rot*83rubigo*84scurf*85secretion*86silt*87slabber*88slave"
++"r*89slime*90slobber*91slop*92slosh*93slubber*94sludge*95slus"
++"h*96smudge*97smutch*98soiliness*99";
+isn4="*00accreting*01accruing*02aggrandizing*03aggravating*04a"
++"scending*05augmenting*06billowing*07biting*08breathing*09bro"
++"wsing*10budding*11cacating*12caressing*13cherishing*14chewin"
++"g*15chomping*16clasping*17coddling*18coveting*19craving*20cr"
++"eating*21cuddling*22dandling*23dilating*24distending*25dottl"
++"ing*26draining*27dripping*28ejecting*29eliminating*30evacuat"
++"ing*31exhaling*32expanding*33expelling*34extending*35extrava"
++"sating*36exuding*37fingering*38fondling*39foraging*40gnawing"
++"*41growing*42heaving*43imbedding*44infusing*45ingesting*46in"
++"tumescing*47kissing*48licking*49littering*50masticating*51mu"
++"ltiplying*52needing*53nestling*54nuzzling*55obtruding*56obtu"
++"ding*57ogling*58oozing*59osculating*60patulating*61plucking*" +"62plundering*63protruding*64puffing*65pugging*66puking*67pur"
++"sing*68ravening*69regurgitating*70rejecting*71relishing*72re" +"quiring*73ruining*74savoring*75savoring*76secreting*77sippin"
++"g*78smelling*79smothering*80sneezing*81spoiling*82stealing*8"
++"3subjoining*84subsisting*85succoring*86sucking*87supping*88s"
++"wigging*89swilling*90sheep-eyeing*91tasting*92tasting*93thie"
++"ving*94tippling*95touching*96turgescing*97wanting*98waxing*99";
+isn5="*00anterior cavity*01anterior gland*02anterior hole*03an"
++"terior muscle*04anterior orifice*05anterior pores*06dirt cav"
++"ity*07dirt hole*08dirt orifice*09dirt pores*10excreting cavi"
++"ty*11excreting gullet*12excreting holes*13excreting hollow*1"
++"4excreting nooks*15excreting orifices*16excreting slot*17exc"
++"reting void*18eye orifices*19eye pores*20eye voids*21navel o"
++"rifice*22ooze cavity*23ooze gullet*24ooze hole*25ooze nooks*"
++"26ooze orifices*27ooze slot*28ooze void*29refuse cavity*30re"
++"fuse gullet*31refuse hole*32refuse hollow*33refuse nooks*34r"
++"efuse orifice*35refuse slot*36refuse spaces*37refuse void*38"
++"secret cavity*39secret gland*40secret hole*41secret muscle*4"
++"2secret orifice*43secret pore*44secret slot*45secret void*46"
++"slime cavity*47slime gullet*48slime hole*49slime hollow*50sl"
++"ime muscle*51slime nooks*52slime openings*53slime orifices*5"
++"4slime pores*55slime slot*56slime spaces*57slime void*58swea"
++"t cavities*59sweat cavity*60sweat gullet*61sweat hole*62swea"
++"t hollow*63sweat nooks*64sweat openings*65sweat orifices*66s"
++"weat pores*67sweat slot*68sweat spaces*69sweat void*70undera"
++"rm cavity*71underarm gullet*72underarm hole*73underarm hollo"
++"w*74underarm muscle*75underarm nooks*76underarm openings*77u"
++"nderarm orifices*78underarm pores*79underarm slot*80underarm"
++" spaces*81underarm void*82unmentionable cavity*83unmentionab"
++"le gullet*84unmentionable hole*85unmentionable hollow*86unme"
++"ntionable muscle*87unmentionable nook*88unmentionable openin"
++"gs*89unmentionable orifices*90unmentionable pores*91unmentio"
++"nable slot*92unmentionable spaces*93unmentionable void*94war"
++"t cavity*95wart gullet*96wart holes*97wart hollows*98wart no"
++"oks*99";
+isn6="*00Bluthian*01Neranian*02Warterian*03Xanterian*04Bexian*"
++"05Cledugian*06Chugnetian*07Chyderian*08Dygian*09Danthian*10D"
++"eechnetian*11Eegrudgian*12Eichhornian*13Foognidian*14Fuhbagi"
++"an*15Fidwoortian*16Fahdgian*17Feeshian*18Gharzan*19Gaazhogia"
++"n*20Geeshworgian*21Gitchshidian*22Goopragian*23Gughokian*24H"
++"aagpokian*25Herwadian*26Hijkakian*27Hoolpodian*28Huquadian*2"
++"9Jadtypian*30Jezchupian*31Jymptordian*32Kurkian*33Koodgian*3"
++"4Lyxian*35Madrigian*36Nastian*37Abysmian*38Ickian*39Vomitian"
++"*40Putridgian*41Quensbian*42Tawgrian*43Perdian*44Tiliwidian*"
++"45Czerian*46Sizludian*47Kherbugian*48Quisnaglian*49Xertydigi"
++"an*50Mudgrubbian*51Boogfudian*52Lilgoogian*53Luthdrungian*54"
++"Jugrudian*55Derrydinian*56Vudgnagian*57Vooptedgian*58Quooxmu"
++"dgian*59Babbletogian*60Bugturgoorian*61Hogsodian*62Trufpatia"
++"n*63Sowslinkian*64Crabkrudian*65Chartreudian*66Schnigerian*6"
++"7Zitsneakian*68Cystrigian*69Crongian*70Kterigadian*71";
+isn7="*00Slizidge*01Burtidge*02Tisd*03Turt*04Bunt*05Burd*06Sac"
++"und*07Trund*08Crezd*09Hnot*10Jeck*11Kontluger*12Chitter*13Ch"
++"unt*14Chooytop*15Chingdap*16Dyagenob*17Dugwart*18Pooper*19Ug"
++"ly*20Abomination*21Fudwhomper*22Turtleg*23Waggletop*24Yaghor"
++"d*25Marmwarb*26Yemzid*27Phutgrab*28Fetsmell*29Schaber*30Nerd"
++"nort*31Papperflabian*32Nudnuge*33Whiperbirt*34Sibbergrunt*35"
++"Saberdunt*36Thigwhip*37Whippinthig*38Zyzygdung*39Papchung*40"
++"Stinkbug*41Fardschid*42Yellowsnot*43Mucousdripper*44Purplebu"
++"tt*45Hemorhonk*46Bladderpuff*47Hohogridge*48Klitbunkit*49Wax"
++"slimer*50Footfungus*51Floppydwart*52Danglidwid*53Slimepole*5"
++"4Sillywalker*55Flat Toed Whump*56Clingbeetle*57Leecheater*58"
++"Maggotdangler*59Windpasser*60Fondlepiddle*61Crotchbug*62Toes"
++"meller*63Slimemaggot*64Navelworm*65Earspider*66Noseleech*67N"
++"ostrilworm*68Wedgiewart*69Cankerlicker*70Pimple Popper*71"; 
+var picker = "";
+var picker1 = "";
+var pos = 0;
+var pose = 0;
+var curse = "";
+var hinum = 0;
+var ndx1 = "";
+var ndx2 = "";
+function srand() {
+today=new Date();
+rand=today.getTime();
+picker="a"+rand;
+picker=picker.charAt((picker.length-4))
++picker.charAt((picker.length-5));
+pos=picker;
+}
+function getCurse(form) {
+srand();
+hinum=70;
+correct_it();
+pos=isn1.indexOf(ndx1);
+pose=isn1.indexOf(ndx2);
+curse=isn1.substring((pos+3),pose);
+srand();
+hinum = 98;
+correct_it();
+pos=isn2.indexOf(ndx1);
+pose=isn2.indexOf(ndx2);
+curse+=" the "+isn2.substring((pos+3),pose);
+srand();
+hinum=98;
+correct_it();
+pos=isn3.indexOf(ndx1);
+pose = isn3.indexOf(ndx2);
+curse+=" "+isn3.substring((pos+3),pose)+"\r";
+srand();
+hinum=98;
+correct_it();
+pos=isn4.indexOf(ndx1);
+pose=isn4.indexOf(ndx2);
+curse+=isn4.substring((pos+3),pose);
+srand();
+hinum=98;
+correct_it();
+pos=isn5.indexOf(ndx1);
+pose=isn5.indexOf(ndx2);
+curse+=" from the "+isn5.substring((pos+3),pose);
+srand();
+hinum=70;
+correct_it();
+pos=isn6.indexOf(ndx1);
+pose=isn6.indexOf(ndx2);
+curse+=" of a "+isn6.substring((pos+3),pose);
+srand();
+hinum=70;
+correct_it();
+pos = isn7.indexOf(ndx1);
+pose = isn7.indexOf(ndx2);
+curse+=" "+isn7.substring((pos+3),pose)+".";
+}
+ function correct_it() {
+if (pos<0) {
+pos=00;
+}
+if (pos>hinum) {
+pos=pos-30;
+}
+ndx1="*"+pos;
+pos++;
+if (pos<10) {
+ndx2="*0"+pos;
+}
+else {
+ndx2="*"+pos;
+   }
+}
+function getReload() {
+history.go(0);
+}
+// End -->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=843V2002111414475&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=233V20021115201453&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=843V2002111414475&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/curse.html/146036756/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_HW_Brown_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<BASEFONT SIZE=3>
+  <FONT SIZE=6>
+<B><FONT SIZE="+2" FACE="Helvetica,Arial" ALIGN=RIGHT COLOR="#0000FF">
+<b><A HREF="../../Upper1/default.htm" TARGET="_top">
+Home</A> </b><img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <b><A HREF="default.htm" TARGET="_top"><font color="#FF0000">Games</font></A> </b>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <FONT COLOR="#006666">CurseBot</FONT></b></FONT><BR>
+</B><BR>
+  </FONT>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+
+JavaScrpt uses the dynamic <tt>random()</tt> function to write random curses.  Users may collect as many curse phrases as they want, or can endure.  The CurseBot keeps 'em coming!
+<br>
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<BODY>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+getCurse();
+document.write("<TABLE WIDTH=486 BORDER=2><TR><TD ALIGN=CENTER>" + "<FONT SIZE='+2' COLOR='maroon'><B>" + curse + "</B></TD></TR></TABLE>");
+// End Hiding -->
+</SCRIPT>
+<TABLE WIDTH=486 BORDER="0">
+<TR><TD ALIGN=CENTER>
+<FORM METHOD=POST>
+<P><INPUT TYPE="button" VALUE="Click Here for a New Curse" onClick="getReload()">
+</FORM>
+</TD></TR></TABLE>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Games:  CurseBot</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Apple-s).  The script is yours!!!<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  11.70 KB  " size="24">
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL CURSEBOT:
+
+   1.  Paste the coding into the HEAD of your HTML document
+   2.  Put the last coding into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Copy this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Original:  Cut-N-Paste JavaScript --&gt;
+
+&lt;!-- Begin
+isn1="*00Your mouth spews*01You are*02Your mother wears*03Your"
++" Village Priest is*04Your Eleventh Child will be*05Your Mate"
++"rnal Ancestors are*06Your Personal Trainer is*07Your spouse "
++"thinks you are*08Your mind resembles*09Your chances for the "
++"future are*10Your mother-in-law loves*11Your closest friend "
++"is*12Your breath resembles*13Your right nostril is dripping*"
++"14Your politics are*15Your cherished desires are*16Your next"
++" meal should be*17Your bedroom resembles*18Your refrigerator"
++" smells like*19Your manners are no better than*20I saw you e"
++"ating and enjoying*21Next Friday you will consume*22May you "
++"wallow in*23May you swim in*24May you drown in*25May you tak"
++"e simple pleasure in*26May you find your hot tub filled with"
++"*27May you find your kitchen sink overflowing with*28May you"
++" be immersed in*29You secretly aspire to drink*30May you din"
++"e often on*31May you be caught dining on*32May you become an"
++" obsessive collector of*33May you find your car filled with*"
++"34May you blurt out that your boss is the*35Your garden shou"
++"ld be flooded with*36May your basement overflow with*37May y"
++"our underwear be filled with*38May your drawers be filled wi"
++"th*39May you float forever in*40May your feet be encased in*"
++"41May you be forever entombed in*42I hate to tell you, but t"
++"here, caught in your teeth is*43May you step in*44May your c"
++"aptors feed you on*45The talk around the office is that you "
++"eat*46May your private parts be encrusted with*47May the sta"
++"ins on your clothing be only*48May your porridge be infused "
++"with*49Your sock drawer is now filled with*50Your supervisor"
++" secretly saves*51Caution: Someone knows about your foot fetish"
++"*52May you die of*53Remeber that day you first tasted"
++"*54May all your wastebaskets suddently overflow wit"
++"h*55May your roof drip*56May you be without garlic to spice "
++"your meal of *57May your trough be filled with*58May your hi"
++"p pockets overflow with*59May your doctor prescribe*60May yo"
++"u trip and fall into*61Yeah? Well, your Mentor wears combat "
++"boots filled with*62So what if I like anchovies and*63You re"
++"lish*64I'm going to tell.  You play with*65Your body reeks o"
++"f*66May your in-basket overflow with*67May your inlaws learn"
++" of your fondness for*68May you smear yourself with*69Your w"
++"ish is granted: drink*70Everyone knows you bathe in*71"; 
+isn2="*00aniline*01virescent*02aquamarine*03ashy*04atramentous"
++"*05aureate*06bloody*07bluish*08brinded*09bronze*10cadaverous"
++"*11cadmium*12carmine*13carnadine*14carroty*15cerulean*16citr"
++"ine*17cloudy*18cochineal*19crimson*20crude*21cyanic*22cymoph"
++"anous*23dappled*24diaphanous*25dingy*26drab*27dun*28emerald*"
++"29erubescent*30fallow*31flashy*32flavous*33florid*34florid*3"
++"5foggy*36fulvid*37fulvous*38fuscous*39garish*40gaudy*41gauzy"
++"*42ghastly*43glaucous*44gray*45greenish*46harlequin*47hueles"
++"s*48impervious*49infuscated*50iridescent*51jaundiced*52khaki"
++"*53lack-luster*54lavender*55leaden*56limpid*57liver-colored*"
++"58lurid*59luteous*60mantled*61maroon*62matted*63milky*64mist"
++"y*65misty*66motley*67mottled*68ocherous*69opacous*70opaline*"
++"71orangish*72pallid*73pallorous*74pellucid*75piebald*76polyc"
++"hromatic*77porraceous*78puce*79purplish*80red*81roseate*82ro"
++"uged*83rubicund*84ruddy*85russet*86rusty*87rusty*88sallow*89"
++"sacharine*90scarlet*91shady*92skewbald*93smalty*94smoky*95ye"
++"llowish*96somber*97striated*98tallowy*99";
+isn3="*00abomination*01soilure*02abscess*03averruncation*04bel"
++"ch*05carbuncle*06caries*07carrion*08catamenia*09cesspool*10c"
++"heese-parings*11coarseness*12compost*13contaminate*14contami"
++"nation*15coprolite*16corruption*17dandruff*18decay*19defedat"
++"ion*20defilement*21discharge*22disgorgement*23draff*24draggl"
++"etail*25drainage*26dregs*27drool*28dry-rot*29dung*30dunghill"
++"*31dunghill*32earth-closet*33effusion*34eliminant*35emanatio"
++"n*36emission*37eructate*38evacuation*39excrement*40excreta*4"
++"1excretion*42expectorate*43extravasation*44exudation*45fecul"
++"ence*46fetor*47filth*48foulings*49foulness*50garbage*51grime"
++"*52guano*53hog-wash*54immundity*55impurity*56infection*57kec"
++"k*58leucorrhea*59maggots*60manure*61matter*62mildew*63mire*6"
++"4mold*65mucidness*66muck*67mucor*68mud*69nastiness*70off-scu"
++"m*71offal*72ordure*73paracentesis*74perspiration*75pollution"
++"*76purulence*77pus*78putrescence*79quagmire*80refuse*81rheum"
++"*82rot*83rubigo*84scurf*85secretion*86silt*87slabber*88slave"
++"r*89slime*90slobber*91slop*92slosh*93slubber*94sludge*95slus"
++"h*96smudge*97smutch*98soiliness*99";
+isn4="*00accreting*01accruing*02aggrandizing*03aggravating*04a"
++"scending*05augmenting*06billowing*07biting*08breathing*09bro"
++"wsing*10budding*11cacating*12caressing*13cherishing*14chewin"
++"g*15chomping*16clasping*17coddling*18coveting*19craving*20cr"
++"eating*21cuddling*22dandling*23dilating*24distending*25dottl"
++"ing*26draining*27dripping*28ejecting*29eliminating*30evacuat"
++"ing*31exhaling*32expanding*33expelling*34extending*35extrava"
++"sating*36exuding*37fingering*38fondling*39foraging*40gnawing"
++"*41growing*42heaving*43imbedding*44infusing*45ingesting*46in"
++"tumescing*47kissing*48licking*49littering*50masticating*51mu"
++"ltiplying*52needing*53nestling*54nuzzling*55obtruding*56obtu"
++"ding*57ogling*58oozing*59osculating*60patulating*61plucking*" +"62plundering*63protruding*64puffing*65pugging*66puking*67pur"
++"sing*68ravening*69regurgitating*70rejecting*71relishing*72re" +"quiring*73ruining*74savoring*75savoring*76secreting*77sippin"
++"g*78smelling*79smothering*80sneezing*81spoiling*82stealing*8"
++"3subjoining*84subsisting*85succoring*86sucking*87supping*88s"
++"wigging*89swilling*90sheep-eyeing*91tasting*92tasting*93thie"
++"ving*94tippling*95touching*96turgescing*97wanting*98waxing*99";
+isn5="*00anterior cavity*01anterior gland*02anterior hole*03an"
++"terior muscle*04anterior orifice*05anterior pores*06dirt cav"
++"ity*07dirt hole*08dirt orifice*09dirt pores*10excreting cavi"
++"ty*11excreting gullet*12excreting holes*13excreting hollow*1"
++"4excreting nooks*15excreting orifices*16excreting slot*17exc"
++"reting void*18eye orifices*19eye pores*20eye voids*21navel o"
++"rifice*22ooze cavity*23ooze gullet*24ooze hole*25ooze nooks*"
++"26ooze orifices*27ooze slot*28ooze void*29refuse cavity*30re"
++"fuse gullet*31refuse hole*32refuse hollow*33refuse nooks*34r"
++"efuse orifice*35refuse slot*36refuse spaces*37refuse void*38"
++"secret cavity*39secret gland*40secret hole*41secret muscle*4"
++"2secret orifice*43secret pore*44secret slot*45secret void*46"
++"slime cavity*47slime gullet*48slime hole*49slime hollow*50sl"
++"ime muscle*51slime nooks*52slime openings*53slime orifices*5"
++"4slime pores*55slime slot*56slime spaces*57slime void*58swea"
++"t cavities*59sweat cavity*60sweat gullet*61sweat hole*62swea"
++"t hollow*63sweat nooks*64sweat openings*65sweat orifices*66s"
++"weat pores*67sweat slot*68sweat spaces*69sweat void*70undera"
++"rm cavity*71underarm gullet*72underarm hole*73underarm hollo"
++"w*74underarm muscle*75underarm nooks*76underarm openings*77u"
++"nderarm orifices*78underarm pores*79underarm slot*80underarm"
++" spaces*81underarm void*82unmentionable cavity*83unmentionab"
++"le gullet*84unmentionable hole*85unmentionable hollow*86unme"
++"ntionable muscle*87unmentionable nook*88unmentionable openin"
++"gs*89unmentionable orifices*90unmentionable pores*91unmentio"
++"nable slot*92unmentionable spaces*93unmentionable void*94war"
++"t cavity*95wart gullet*96wart holes*97wart hollows*98wart no"
++"oks*99";
+isn6="*00Bluthian*01Neranian*02Warterian*03Xanterian*04Bexian*"
++"05Cledugian*06Chugnetian*07Chyderian*08Dygian*09Danthian*10D"
++"eechnetian*11Eegrudgian*12Eichhornian*13Foognidian*14Fuhbagi"
++"an*15Fidwoortian*16Fahdgian*17Feeshian*18Gharzan*19Gaazhogia"
++"n*20Geeshworgian*21Gitchshidian*22Goopragian*23Gughokian*24H"
++"aagpokian*25Herwadian*26Hijkakian*27Hoolpodian*28Huquadian*2"
++"9Jadtypian*30Jezchupian*31Jymptordian*32Kurkian*33Koodgian*3"
++"4Lyxian*35Madrigian*36Nastian*37Abysmian*38Ickian*39Vomitian"
++"*40Putridgian*41Quensbian*42Tawgrian*43Perdian*44Tiliwidian*"
++"45Czerian*46Sizludian*47Kherbugian*48Quisnaglian*49Xertydigi"
++"an*50Mudgrubbian*51Boogfudian*52Lilgoogian*53Luthdrungian*54"
++"Jugrudian*55Derrydinian*56Vudgnagian*57Vooptedgian*58Quooxmu"
++"dgian*59Babbletogian*60Bugturgoorian*61Hogsodian*62Trufpatia"
++"n*63Sowslinkian*64Crabkrudian*65Chartreudian*66Schnigerian*6"
++"7Zitsneakian*68Cystrigian*69Crongian*70Kterigadian*71";
+isn7="*00Slizidge*01Burtidge*02Tisd*03Turt*04Bunt*05Burd*06Sac"
++"und*07Trund*08Crezd*09Hnot*10Jeck*11Kontluger*12Chitter*13Ch"
++"unt*14Chooytop*15Chingdap*16Dyagenob*17Dugwart*18Pooper*19Ug"
++"ly*20Abomination*21Fudwhomper*22Turtleg*23Waggletop*24Yaghor"
++"d*25Marmwarb*26Yemzid*27Phutgrab*28Fetsmell*29Schaber*30Nerd"
++"nort*31Papperflabian*32Nudnuge*33Whiperbirt*34Sibbergrunt*35"
++"Saberdunt*36Thigwhip*37Whippinthig*38Zyzygdung*39Papchung*40"
++"Stinkbug*41Fardschid*42Yellowsnot*43Mucousdripper*44Purplebu"
++"tt*45Hemorhonk*46Bladderpuff*47Hohogridge*48Klitbunkit*49Wax"
++"slimer*50Footfungus*51Floppydwart*52Danglidwid*53Slimepole*5"
++"4Sillywalker*55Flat Toed Whump*56Clingbeetle*57Leecheater*58"
++"Maggotdangler*59Windpasser*60Fondlepiddle*61Crotchbug*62Toes"
++"meller*63Slimemaggot*64Navelworm*65Earspider*66Noseleech*67N"
++"ostrilworm*68Wedgiewart*69Cankerlicker*70Pimple Popper*71"; 
+var picker = "";
+var picker1 = "";
+var pos = 0;
+var pose = 0;
+var curse = "";
+var hinum = 0;
+var ndx1 = "";
+var ndx2 = "";
+function srand() {
+today=new Date();
+rand=today.getTime();
+picker="a"+rand;
+picker=picker.charAt((picker.length-4))
++picker.charAt((picker.length-5));
+pos=picker;
+}
+function getCurse(form) {
+srand();
+hinum=70;
+correct_it();
+pos=isn1.indexOf(ndx1);
+pose=isn1.indexOf(ndx2);
+curse=isn1.substring((pos+3),pose);
+srand();
+hinum = 98;
+correct_it();
+pos=isn2.indexOf(ndx1);
+pose=isn2.indexOf(ndx2);
+curse+=" the "+isn2.substring((pos+3),pose);
+srand();
+hinum=98;
+correct_it();
+pos=isn3.indexOf(ndx1);
+pose = isn3.indexOf(ndx2);
+curse+=" "+isn3.substring((pos+3),pose)+"\r";
+srand();
+hinum=98;
+correct_it();
+pos=isn4.indexOf(ndx1);
+pose=isn4.indexOf(ndx2);
+curse+=isn4.substring((pos+3),pose);
+srand();
+hinum=98;
+correct_it();
+pos=isn5.indexOf(ndx1);
+pose=isn5.indexOf(ndx2);
+curse+=" from the "+isn5.substring((pos+3),pose);
+srand();
+hinum=70;
+correct_it();
+pos=isn6.indexOf(ndx1);
+pose=isn6.indexOf(ndx2);
+curse+=" of a "+isn6.substring((pos+3),pose);
+srand();
+hinum=70;
+correct_it();
+pos = isn7.indexOf(ndx1);
+pose = isn7.indexOf(ndx2);
+curse+=" "+isn7.substring((pos+3),pose)+".";
+}
+function correct_it() {
+if (pos&lt;0) {
+pos=00;
+}
+if (pos&gt;hinum) {
+pos=pos-30;
+}
+ndx1="*"+pos;
+pos++;
+if (pos&lt;10) {
+ndx2="*0"+pos;
+}
+else {
+ndx2="*"+pos;
+   }
+}
+function getReload() {
+history.go(0);
+}
+// End --&gt;
+&lt;/SCRIPT&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Begin
+getCurse();
+document.write("&lt;TABLE WIDTH=486 BORDER=2&gt;&lt;TR&gt;&lt;TD ALIGN=CENTER&gt;" + "&lt;FONT SIZE='+2' COLOR='maroon'&gt;&lt;B&gt;" + curse + "&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;");
+// End Hiding --&gt;
+&lt;/SCRIPT&gt;
+&lt;TABLE WIDTH=486 BORDER="0"&gt;
+&lt;TR&gt;&lt;TD ALIGN=CENTER&gt;
+&lt;FORM METHOD=POST&gt;
+&lt;P&gt;&lt;INPUT TYPE="button" VALUE="Click Here for a New Curse" onClick="getReload()"&gt;
+&lt;/FORM&gt;
+&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size="-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  11.70 KB  --&gt;
+</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/curse.html/930055130/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_IT_IMS_1t/it-ims-spring03-125x600.gif"  ALT="Increasing Quality Through IT Sourcing & Services"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/curse.html/930055130/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='curse.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/games/curse.html/1401568055/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/games/curse.html/1401568055/468x60-2/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html></body></html>

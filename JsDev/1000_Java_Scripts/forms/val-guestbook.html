@@ -1,0 +1,698 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Forms:  Guestbook Validation</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="date" CONTENT="2000-09-09">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="javascriptsource.com">
+<META NAME="section" CONTENT="Forms">
+<META NAME="description" CONTENT="Use JavaScript to ensure that all elements of a guestbook are properly filled out before mailing.">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function toName()
+     {
+var toNameval=document.forms[0].elements[1].value;
+toNameval = "mailto:" + toNameval + "?subject=Guest Book example";
+this.document.mail.action = toNameval;
+}
+function Reset() {
+document.forms[0].elements[0].value = "";
+document.forms[0].elements[1].value = "";
+document.forms[0].elements[2].value = navigator.appName + " " + navigator.appVersion;  
+document.forms[0].elements[3].value = "";
+document.forms[0].elements[4].value = "";
+document.forms[0].elements[5].value = "";
+document.forms[0].elements[0].focus();
+}
+function submitForms() {
+if ( (isName() ) && (isEmail()) && (isBrowser()) && (isCountry()) && (isComment()) && (isFavorite()) )
+if (confirm("\nYou're about to e-mail the form.\n\nClick on YES to submit.\n\nClick on NO to abort."))
+{
+var emailAddress=document.forms[0].elements[1].value
+alert("\nYour submission will now be made to:\n\n\n\n"+emailAddress+"\n\n\n\nThank you!");
+return true;
+}
+else
+{
+alert("\nYou have chosen to abort the submission.");
+return false;      
+}
+else
+return false;
+}
+function isName() {
+var str = document.forms[0].elements[0].value;
+if (str == "") {
+alert("\nThe NAME field is blank.\n\nPlease enter your name.")
+document.forms[0].elements[0].focus();
+return false;
+}
+for (var i = 0; i < str.length; i++) 
+{
+var ch = str.substring(i, i + 1);
+if (((ch < "a" || "z" < ch) && (ch < "A" || "Z" < ch)) && ch != ' ') 
+{
+alert("\nThe NAME field only accepts letters & spaces.\n\nPlease re-enter your name.");
+document.forms[0].elements[0].select();
+document.forms[0].elements[0].focus();
+return false;
+   }
+}
+return true;
+}
+function isEmail()
+{
+emailAddress=document.forms[0].elements[1].value;
+if (document.forms[0].elements[1].value == "") {
+alert("\nThe E-MAIL field is blank.\n\nPlease enter your e-mail address.")
+document.forms[0].elements[1].focus();
+return false; 
+}
+if (document.forms[0].elements[1].value.indexOf ('@',0) == -1 || 
+document.forms[0].elements[1].value.indexOf ('.',0) == -1)
+{
+alert("\nThe E-MAIL field requires a \"@\" and a \".\"be used.\n\nPlease re-enter your e-mail address.")
+document.forms[0].elements[1].select();
+document.forms[0].elements[1].focus();
+return false;
+}
+else
+{
+toName();
+return true;
+}
+}
+function isBrowser()
+{
+if (document.forms[0].elements[2].value != navigator.appName + " " + navigator.appVersion)
+{
+if (confirm("\nYou've changed your browser type.\n\nClick on OK to keep changes.\n\nClick on Cancel to restore detected browser.")) 
+return true
+else
+{
+document.forms[0].elements[2].value = navigator.appName + " " + navigator.appVersion;
+return true;      
+   }
+}
+else
+return true;
+}
+function isCountry() {
+var str = document.forms[0].elements[3].value;
+if (str == "") {
+alert("\nThe COUNTRY field is blank.\n\nPlease enter your country.")
+document.forms[0].elements[3].focus();
+return false;
+}
+for (var i = 0; i < str.length; i++) {
+var ch = str.substring(i, i + 1);
+if (((ch < "a" || "z" < ch) && (ch < "A" || "Z" < ch)) && ch != ' ') 
+{
+alert("\nThe COUNTRY field only accepts letters & spaces.\n\nPlease re-enter your country.");
+document.forms[0].elements[3].select();
+document.forms[0].elements[3].focus();
+return false;
+   }
+}
+return true;
+}
+function isComment() {
+if (document.forms[0].elements[4].value == "") {
+if (confirm("\nYou're about to submit without leaving a comment.\n\nClick on CANCEL to include a comment.\n\nClick on OK to continue without a comment.")) 
+return true
+else
+{
+document.forms[0].elements[4].focus();
+return false;      
+}
+}
+else
+return true   
+}
+function isFavorite() {
+if (document.forms[0].elements[5].value == "") {
+if (confirm("\nYou're about to submit without listing your favorite sites.\n\nClick on CANCEL to include favorites.\n\nClick on OK to continue without listing favorites.")) 
+return true
+else
+{
+document.forms[0].elements[5].focus();
+return false;      
+   }
+}
+else
+return true   
+}
+// End -->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff onLoad="Reset()">
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/val-guestbook.html/511892819/468x60-1/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-leo_new.gif"  ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/val-guestbook.html/511892819/468x60-1/House_Career_Channel_17a/jobs-leo_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0"></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<BASEFONT SIZE=3>
+  <FONT SIZE=6>
+<B><FONT SIZE="+2" FACE="Helvetica,Arial" ALIGN=RIGHT COLOR="#0000FF">
+<b><A HREF="../../Upper1/default.htm" TARGET="_top">
+Home</A> </b><img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <b><A HREF="default.htm" TARGET="_top"><font color="#FF0000">Forms</font></A> </b>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}"> <FONT COLOR="#006666">Guestbook Validation</FONT></b></FONT><BR>
+</B><BR>
+  </FONT>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+
+Use JavaScript to ensure that all elements of a guestbook are properly filled out before mailing.
+<br>
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<BODY>
+<CENTER>
+<FORM ENCTYPE="text/plain" NAME="mail" METHOD='GET' onSubmit="return submitForms()">
+<TABLE BORDER=0 WIDTH=400>
+<TR>
+<TD align="center"> <FONT COLOR=800000><STRONG>Enter your name:</STRONG></FONT></TD>
+<TD align="center"> <FONT COLOR=800000><STRONG>Enter your e-mail address:</STRONG></FONT></TD>
+</TR>
+<TR>
+<TD align="center"> <INPUT TYPE="text" NAME="name"   SIZE=30 MAXLENGTH=40 ></TD>
+</TD>
+<TD align="center"> <INPUT TYPE="text" NAME="email"   SIZE=30 MAXLENGTH=40 ></TD>
+</TR>
+<TR>
+<TD align="center"> <FONT COLOR=800000><STRONG>Your browser </STRONG></FONT></TD>
+<TD align="center"> <FONT COLOR=800000><STRONG>Enter your country:</STRONG></FONT></TD>
+</TR>
+<TR>
+<TD align="center"> <INPUT TYPE="text" NAME="browser" SIZE=30 MAXLENGTH=60></TD>
+<TD align="center"> <INPUT TYPE="text" NAME="country" SIZE=30 MAXLENGTH=60>
+</TD>
+</TR>
+</TABLE>
+<CENTER> 
+<FONT COLOR=800000><STRONG>Leave a comment or suggestion:</strong> </font><BR>
+<TEXTAREA NAME="comments" ROWS=5 COLS=50 wrap=yes>Comments?  Suggestions?</TEXTAREA><P><P>
+<FONT COLOR=800000><STRONG>List your favorite sites:</STRONG></FONT><BR>
+<TD align="center"><TEXTAREA NAME="favorites" ROWS=5 COLS=50 wrap=yes>
+Any sites I should take a look at?</TEXTAREA>
+<P><P>
+<INPUT TYPE="submit" VALUE="Submit"><center><INPUT TYPE="reset" VALUE="Reset" onClick="Reset()">
+</FORM>
+</CENTER>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Form:  Guestbook Validation</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Apple-s).  The script is yours!!!<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  5.95 KB  " size="24">
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- THREE STEPS TO INSTALL GUESTBOOK VALIDATION:
+
+   1.  Paste the specified coding into the HEAD of your HTML document
+   2.  Add the onLoad event handler into the BODY tag
+   3.  Put the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Copy this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+	  
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+var emailAddress="youremailaddress";
+function toName()
+     {
+var toNameval=document.forms[0].elements[1].value;
+toNameval = "mailto:youre-mailaddress.com?subject=Guest Book example";
+this.document.mail.action = toNameval;
+}
+function Reset() {
+document.forms[0].elements[0].value = "";
+document.forms[0].elements[1].value = "";
+document.forms[0].elements[2].value = navigator.appName + " " + navigator.appVersion;  
+document.forms[0].elements[3].value = "";
+document.forms[0].elements[4].value = "";
+document.forms[0].elements[5].value = "";
+document.forms[0].elements[0].focus();
+}
+function submitForms() {
+if ( (isName() ) && (isEmail()) && (isBrowser()) && (isCountry()) && (isComment()) && (isFavorite()) )
+if (confirm("\nYou're about to e-mail the form.\n\nClick on YES to submit.\n\nClick on NO to abort."))
+{ 
+alert("\nYour submission will now be made to :\n\n"+emailAddress+"\n\n\nThank you!");
+return true;
+}
+else
+{
+alert("\nYou have chosen to abort the submission.");
+return false;      
+}
+else
+return false;
+}
+function isName() {
+var str = document.forms[0].elements[0].value;
+if (str == "") {
+alert("\nThe NAME field is blank.\n\nPlease enter your name.")
+document.forms[0].elements[0].focus();
+return false;
+}
+for (var i = 0; i &lt; str.length; i++) 
+{
+var ch = str.substring(i, i + 1);
+if (((ch &lt; "a" || "z" &lt; ch) && (ch &lt; "A" || "Z" &lt; ch)) && ch != ' ') 
+{
+alert("\nThe NAME field only accepts letters & spaces.\n\nPlease re-enter your name.");
+document.forms[0].elements[0].select();
+document.forms[0].elements[0].focus();
+return false;
+   }
+}
+return true;
+}
+function isEmail()
+{
+emailAddress=document.forms[0].elements[1].value;
+if (document.forms[0].elements[1].value == "") {
+alert("\nThe E-MAIL field is blank.\n\nPlease enter your e-mail address.")
+document.forms[0].elements[1].focus();
+return false; 
+}
+if (document.forms[0].elements[1].value.indexOf ('@',0) == -1 || 
+document.forms[0].elements[1].value.indexOf ('.',0) == -1)
+{
+alert("\nThe E-MAIL field requires a \"@\" and a \".\"be used.\n\nPlease re-enter your e-mail address.")
+document.forms[0].elements[1].select();
+document.forms[0].elements[1].focus();
+return false;
+}
+else
+{
+toName();
+return true;
+}
+}
+function isBrowser()
+{
+if (document.forms[0].elements[2].value != navigator.appName + " " + navigator.appVersion)
+{
+if (confirm("\nYou've changed your browser type.\n\nClick on OK to keep changes.\n\nClick on Cancel to restore detected browser.")) 
+return true
+else
+{
+document.forms[0].elements[2].value = navigator.appName + " " + navigator.appVersion;
+return true;      
+   }
+}
+else
+return true;
+}
+function isCountry() {
+var str = document.forms[0].elements[3].value;
+if (str == "") {
+alert("\nThe COUNTRY field is blank.\n\nPlease enter your country.")
+document.forms[0].elements[3].focus();
+return false;
+}
+for (var i = 0; i &lt; str.length; i++) {
+var ch = str.substring(i, i + 1);
+if (((ch &lt; "a" || "z" &lt; ch) && (ch &lt; "A" || "Z" &lt; ch)) && ch != ' ') 
+{
+alert("\nThe COUNTRY field only accepts letters & spaces.\n\nPlease re-enter your country.");
+document.forms[0].elements[3].select();
+document.forms[0].elements[3].focus();
+return false;
+   }
+}
+return true;
+}
+function isComment() {
+if (document.forms[0].elements[4].value == "") {
+if (confirm("\nYou're about to submit without leaving a comment.\n\nClick on CANCEL to include a comment.\n\nClick on OK to continue without a comment.")) 
+return true
+else
+{
+document.forms[0].elements[4].focus();
+return false;      
+}
+}
+else
+return true   
+}
+function isFavorite() {
+if (document.forms[0].elements[5].value == "") {
+if (confirm("\nYou're about to submit without listing your favorite sites.\n\nClick on CANCEL to include favorites.\n\nClick on OK to continue without listing favorites.")) 
+return true
+else
+{
+document.forms[0].elements[5].focus();
+return false;      
+   }
+}
+else
+return true   
+}
+// End --&gt;
+&lt;/SCRIPT&gt;
+
+&lt;!-- STEP TWO: Add the onLoad event handler into the BODY tag  --&gt;
+
+&lt;BODY onLoad="Reset()"&gt;
+
+&lt;!-- STEP THREE: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;CENTER&gt;
+&lt;FORM ENCTYPE="text/plain" NAME="mail" METHOD='GET' ACTION='mailto:youremailaddress' onSubmit="return submitForms()"&gt;
+&lt;TABLE BORDER=0 WIDTH=400&gt;
+&lt;TR&gt;
+&lt;TD align="center"&gt; &lt;FONT COLOR=800000&gt;&lt;STRONG&gt;Enter your name:&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/TD&gt;
+&lt;TD align="center"&gt; &lt;FONT COLOR=800000&gt;&lt;STRONG&gt;Enter your e-mail address:&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD align="center"&gt; &lt;INPUT TYPE="text" NAME="name"   SIZE=30 MAXLENGTH=40 &gt;&lt;/TD&gt;
+&lt;/TD&gt;
+&lt;TD align="center"&gt; &lt;INPUT TYPE="text" NAME="email"   SIZE=30 MAXLENGTH=40 &gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD align="center"&gt; &lt;FONT COLOR=800000&gt;&lt;STRONG&gt;Your browser &lt;/STRONG&gt;&lt;/FONT&gt;&lt;/TD&gt;
+&lt;TD align="center"&gt; &lt;FONT COLOR=800000&gt;&lt;STRONG&gt;Enter your country:&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD align="center"&gt; &lt;INPUT TYPE="text" NAME="browser" SIZE=30 MAXLENGTH=60&gt;&lt;/TD&gt;
+&lt;TD align="center"&gt; &lt;INPUT TYPE="text" NAME="country" SIZE=30 MAXLENGTH=60&gt;
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TABLE&gt;
+&lt;CENTER&gt; 
+&lt;FONT COLOR=800000&gt;&lt;STRONG&gt;Leave a comment or suggestion:&lt;/strong&gt; &lt;/font&gt;&lt;BR&gt;
+&lt;TEXTAREA NAME="comments" ROWS=5 COLS=50 wrap=yes&gt;Comments?  Suggestions?&lt;/TEXTAREA&gt;&lt;P&gt;&lt;P&gt;
+&lt;FONT COLOR=800000&gt;&lt;STRONG&gt;List your favorite sites:&lt;/STRONG&gt;&lt;/FONT&gt;&lt;BR&gt;
+&lt;TD align="center"&gt;&lt;TEXTAREA NAME="favorites" ROWS=5 COLS=50 wrap=yes&gt;
+Any sites I should take a look at?&lt;/TEXTAREA&gt;
+&lt;P&gt;&lt;P&gt;
+&lt;INPUT TYPE="submit" VALUE="Submit"&gt;&lt;center&gt;&lt;INPUT TYPE="reset" VALUE="Reset" onClick="Reset()"&gt;
+&lt;/FORM&gt;
+&lt;/CENTER&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size="-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  5.95 KB  --&gt;
+</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+<SCRIPT>
+document.forms[0].elements[2].value = navigator.appName + " " + navigator.appVersion;
+</SCRIPT>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/val-guestbook.html/649761237/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif"  ALT="The Enterprise IM Strategies & Solutions Event"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/val-guestbook.html/649761237/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='val-guestbook.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/val-guestbook.html/1743776125/468x60-2/House_InstantMessagingSprg03_1a/imp-spring2003-leo.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_InstantMessagingSprg03_1a/imp-spring2003-leo.gif"  ALT="The Enterprise IM Strategies & Solutions Event"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/val-guestbook.html/1743776125/468x60-2/House_InstantMessagingSprg03_1a/imp-spring2003-leo.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html></body></html>

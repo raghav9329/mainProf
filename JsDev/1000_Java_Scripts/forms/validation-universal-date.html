@@ -1,0 +1,1436 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Forms:  Validation (Universal Date)</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="Validate dates in your form using this universal script.  Will work with any date format and the code is fully commented for easy modification.  Great!">
+<META NAME="date" CONTENT="2001-03-01">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Sandeep Tamhankar">
+<META NAME="section" CONTENT="Forms">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Sandeep Tamhankar (stamhankar@hotmail.com) -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+/* Here's the list of tokens we support:
+   m (or M) : month number, one or two digits.
+   mm (or MM) : month number, strictly two digits (i.e. April is 04).
+   d (or D) : day number, one or two digits.
+   dd (or DD) : day number, strictly two digits.
+   y (or Y) : year, two or four digits.
+   yy (or YY) : year, strictly two digits.
+   yyyy (or YYYY) : year, strictly four digits.
+   mon : abbreviated month name (April is apr, Apr, APR, etc.)
+   Mon : abbreviated month name, mixed-case (i.e. April is Apr only).
+   MON : abbreviated month name, all upper-case (i.e. April is APR only).
+   mon_strict : abbreviated month name, all lower-case (i.e. April is apr 
+         only).
+   month : full month name (April is april, April, APRIL, etc.)
+   Month : full month name, mixed-case (i.e. April only).
+   MONTH: full month name, all upper-case (i.e. APRIL only).
+   month_strict : full month name, all lower-case (i.e. april only).
+   h (or H) : hour, one or two digits.
+   hh (or HH) : hour, strictly two digits.
+   min (or MIN): minutes, one or two digits.
+   mins (or MINS) : minutes, strictly two digits.
+   s (or S) : seconds, one or two digits.
+   ss (or SS) : seconds, strictly two digits.
+   ampm (or AMPM) : am/pm setting.  Valid values to match this token are
+         am, pm, AM, PM, a.m., p.m., A.M., P.M.
+*/
+// Be careful with this pattern.  Longer tokens should be placed before shorter
+// tokens to disambiguate them.  For example, parsing "mon_strict" should 
+// result in one token "mon_strict" and not two tokens "mon" and a literal
+// "_strict".
+
+var tokPat=new RegExp("^month_strict|month|Month|MONTH|yyyy|YYYY|mins|MINS|mon_strict|ampm|AMPM|mon|Mon|MON|min|MIN|dd|DD|mm|MM|yy|YY|hh|HH|ss|SS|m|M|d|D|y|Y|h|H|s|S");
+
+// lowerMonArr is used to map months to their numeric values.
+
+var lowerMonArr={jan:1, feb:2, mar:3, apr:4, may:5, jun:6, jul:7, aug:8, sep:9, oct:10, nov:11, dec:12}
+
+// monPatArr contains regular expressions used for matching abbreviated months
+// in a date string.
+
+var monPatArr=new Array();
+monPatArr['mon_strict']=new RegExp(/jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec/);
+monPatArr['Mon']=new RegExp(/Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec/);
+monPatArr['MON']=new RegExp(/JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC/);
+monPatArr['mon']=new RegExp("jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec",'i');
+
+// monthPatArr contains regular expressions used for matching full months
+// in a date string.
+
+var monthPatArr=new Array();
+monthPatArr['month']=new RegExp(/^january|february|march|april|may|june|july|august|september|october|november|december/i);
+monthPatArr['Month']=new RegExp(/^January|February|March|April|May|June|July|August|September|October|November|December/);
+monthPatArr['MONTH']=new RegExp(/^JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER/);
+monthPatArr['month_strict']=new RegExp(/^january|february|march|april|may|june|july|august|september|october|november|december/);
+
+// cutoffYear is the cut-off for assigning "19" or "20" as century.  Any
+// two-digit year >= cutoffYear will get a century of "19", and everything
+// else gets a century of "20".
+
+var cutoffYear=50;
+
+// FormatToken is a datatype we use for storing extracted tokens from the
+// format string.
+
+function FormatToken (token, type) {
+this.token=token;
+this.type=type;
+}
+
+function parseFormatString (formatStr) {
+var tokArr=new Array;
+var tokInd=0;
+var strInd=0;
+var foundTok=0;
+    
+while (strInd < formatStr.length) {
+if (formatStr.charAt(strInd)=="%" &&
+(matchArray=formatStr.substr(strInd+1).match(tokPat)) != null) {
+strInd+=matchArray[0].length+1;
+tokArr[tokInd++]=new FormatToken(matchArray[0],"symbolic");
+} else {
+
+// No token matched current position, so current character should 
+// be saved as a required literal.
+
+if (tokInd>0 && tokArr[tokInd-1].type=="literal") {
+
+// Literal tokens can be combined.Just add to the last token.
+
+tokArr[tokInd-1].token+=formatStr.charAt(strInd++);
+}
+else {
+tokArr[tokInd++]=new FormatToken(formatStr.charAt(strInd++), "literal");
+      }
+   }
+}
+return tokArr;
+}
+
+/* buildDate does all the real work.It takes a date string and format string,
+ tries to match the two up, and returns a Date object (with the supplied date
+ string value).If a date string doesn't contain all the fields that a Date
+ object contains (for example, a date string with just the month), all
+ unprovided fields are defaulted to those characteristics of the current
+ date. Time fields that aren't provided default to 0.Thus, a date string
+ like "3/30/2000" in "%mm/%dd/%yyyy" format results in a Date object for that
+ date at midnight.formatStr is a free-form string that indicates special
+ tokens via the % character.Here are some examples that will return a Date
+ object:
+
+ buildDate('3/30/2000','%mm/%dd/%y') // March 30, 2000
+ buildDate('March 30, 2000','%Mon %d, %y') // Same as above.
+ buildDate('Here is the date: 30-3-00','Here is the date: %dd-%m-%yy')
+
+ If the format string does not match the string provided, an error message
+ (i.e. String object) is returned.Thus, to see if buildDate succeeded, the
+ caller can use the "typeof" command on the return value.For example,
+ here's the dateCheck function, which returns true if a given date is
+ valid,and false otherwise (and reports an error in the false case):
+
+ function dateCheck(dateStr,formatStr) {
+ var myObj=buildDate(dateStr,formatStr);
+ if (typeof myObj=="object") {
+ // We got a Date object, so good.
+ return true;
+ } else {
+ // We got an error string.
+ alert(myObj);
+ return false;
+ }
+ }
+
+*/
+
+function buildDate(dateStr,formatStr) {
+// parse the format string first.
+var tokArr=parseFormatString(formatStr);
+var strInd=0;
+var tokInd=0;
+var intMonth;
+var intDay;
+var intYear;
+var intHour;
+var intMin;
+var intSec;
+var ampm="";
+var strOffset;
+
+// Create a date object with the current date so that if the user only
+// gives a month or day string, we can still return a valid date.
+
+var curdate=new Date();
+intMonth=curdate.getMonth()+1;
+intDay=curdate.getDate();
+intYear=curdate.getFullYear();
+
+// Default time to midnight, so that if given just date info, we return
+// a Date object for that date at midnight.
+
+intHour=0;
+intMin=0;
+intSec=0;
+
+// Walk across dateStr, matching the parsed formatStr until we find a 
+// mismatch or succeed.
+
+while (strInd < dateStr.length && tokInd < tokArr.length) {
+
+// Start with the easy case of matching a literal.
+
+if (tokArr[tokInd].type=="literal") {
+if (dateStr.indexOf(tokArr[tokInd].token,strInd)==strInd) {
+
+// The current position in the string does match the format 
+// pattern.
+
+strInd+=tokArr[tokInd++].token.length;
+continue;
+}
+else {
+
+// ACK! There was a mismatch; return error.
+
+return "\"" + dateStr + "\" does not conform to the expected format: " + formatStr;
+   }
+}
+
+// If we get here, we're matching to a symbolic token.
+switch (tokArr[tokInd].token) {
+case 'm':
+case 'M':
+case 'd':
+case 'D':
+case 'h':
+case 'H':
+case 'min':
+case 'MIN':
+case 's':
+case 'S':
+
+// Extract one or two characters from the date-time string and if 
+// it's a number, save it as the month, day, hour, or minute, as
+// appropriate.
+
+curChar=dateStr.charAt(strInd);
+nextChar=dateStr.charAt(strInd+1);
+matchArr=dateStr.substr(strInd).match(/^\d{1,2}/);
+if (matchArr==null) {
+
+// First character isn't a number; there's a mismatch between
+// the pattern and date string, so return error.
+
+switch (tokArr[tokInd].token.toLowerCase()) {
+case 'd': var unit="day"; break;
+case 'm': var unit="month"; break;
+case 'h': var unit="hour"; break;
+case 'min': var unit="minute"; break;
+case 's': var unit="second"; break;
+}
+return "Bad " + unit + " \"" + curChar + "\" or \"" + curChar +
+nextChar + "\".";
+}
+strOffset=matchArr[0].length;
+switch (tokArr[tokInd].token.toLowerCase()) {
+case 'd': intDay=parseInt(matchArr[0],10); break;
+case 'm': intMonth=parseInt(matchArr[0],10); break;
+case 'h': intHour=parseInt(matchArr[0],10); break;
+case 'min': intMin=parseInt(matchArr[0],10); break;
+case 's': intSec=parseInt(matchArr[0],10); break;
+}
+break;
+case 'mm':
+case 'MM':
+case 'dd':
+case 'DD':
+case 'hh':
+case 'HH':
+case 'mins':
+case 'MINS':
+case 'ss':
+case 'SS':
+
+// Extract two characters from the date string and if it's a 
+// number, save it as the month, day, or hour, as appropriate.
+
+strOffset=2;
+matchArr=dateStr.substr(strInd).match(/^\d{2}/);
+if (matchArr==null) {
+
+// The two characters aren't a number; there's a mismatch 
+// between the pattern and date string, so return an error
+// message.
+
+switch (tokArr[tokInd].token.toLowerCase()) {
+case 'dd': var unit="day"; break;
+case 'mm': var unit="month"; break;
+case 'hh': var unit="hour"; break;
+case 'mins': var unit="minute"; break;
+case 'ss': var unit="second"; break;
+}
+return "Bad " + unit + " \"" + dateStr.substr(strInd,2) + 
+"\".";
+}
+switch (tokArr[tokInd].token.toLowerCase()) {
+case 'dd': intDay=parseInt(matchArr[0],10); break;
+case 'mm': intMonth=parseInt(matchArr[0],10); break;
+case 'hh': intHour=parseInt(matchArr[0],10); break;
+case 'mins': intMin=parseInt(matchArr[0],10); break;
+case 'ss': intSec=parseInt(matchArr[0],10); break;
+}
+break;
+case 'y':
+case 'Y':
+
+// Extract two or four characters from the date string and if it's
+// a number, save it as the year.Convert two-digit years to four
+// digit years by assigning a century of '19' if the year is >= 
+// cutoffYear, and '20' otherwise.
+
+if (dateStr.substr(strInd,4).search(/\d{4}/) != -1) {
+
+// Four digit year.
+
+intYear=parseInt(dateStr.substr(strInd,4),10);
+strOffset=4;
+}
+else {
+if (dateStr.substr(strInd,2).search(/\d{2}/) != -1) {
+
+// Two digit year.
+
+intYear=parseInt(dateStr.substr(strInd,2),10);
+if (intYear>=cutoffYear) {
+intYear+=1900;
+}
+else {
+intYear+=2000;
+}
+strOffset=2;
+}
+else {
+
+// Bad year; return error.
+
+return "Bad year \"" + dateStr.substr(strInd,2) + 
+"\". Must be two or four digits.";
+   }
+}
+break;
+case 'yy':
+case 'YY':
+
+// Extract two characters from the date string and if it's a 
+// number, save it as the year.Convert two-digit years to four 
+// digit years by assigning a century of '19' if the year is >= 
+// cutoffYear, and '20' otherwise.
+
+if (dateStr.substr(strInd,2).search(/\d{2}/) != -1) {
+
+// Two digit year.
+
+intYear=parseInt(dateStr.substr(strInd,2),10);
+if (intYear>=cutoffYear) {
+intYear+=1900;
+}
+else {
+intYear+=2000;
+}
+strOffset=2;
+} else {
+// Bad year; return error
+return "Bad year \"" + dateStr.substr(strInd,2) + 
+"\". Must be two digits.";
+}
+break;
+case 'yyyy':
+case 'YYYY':
+
+// Extract four characters from the date string and if it's a 
+// number, save it as the year.
+
+if (dateStr.substr(strInd,4).search(/\d{4}/) != -1) {
+
+// Four digit year.
+
+intYear=parseInt(dateStr.substr(strInd,4),10);
+strOffset=4;
+}
+else {
+
+// Bad year; return error.
+
+return "Bad year \"" + dateStr.substr(strInd,4) + 
+"\". Must be four digits.";
+}
+break;
+case 'mon':
+case 'Mon':
+case 'MON':
+case 'mon_strict':
+
+// Extract three characters from dateStr and parse them as 
+// lower-case, mixed-case, or upper-case abbreviated months,
+// as appropriate.
+
+monPat=monPatArr[tokArr[tokInd].token];
+if (dateStr.substr(strInd,3).search(monPat) != -1) {
+intMonth=lowerMonArr[dateStr.substr(strInd,3).toLowerCase()];
+}
+else {
+
+// Bad month, return error.
+
+switch (tokArr[tokInd].token) {
+case 'mon_strict': caseStat="lower-case"; break;
+case 'Mon': caseStat="mixed-case"; break;
+case 'MON': caseStat="upper-case"; break;
+case 'mon': caseStat="between Jan and Dec"; break;
+}
+return "Bad month \"" + dateStr.substr(strInd,3) + 
+"\". Must be " + caseStat + ".";
+}
+strOffset=3;
+break;
+case 'month':
+case 'Month':
+case 'MONTH':
+case 'month_strict':
+
+// Extract a full month name at strInd from dateStr if possible.
+
+monPat=monthPatArr[tokArr[tokInd].token];
+matchArray=dateStr.substr(strInd).match(monPat);
+if (matchArray==null) {
+
+// Bad month, return error.
+
+return "Can't find a month beginning at \"" +
+dateStr.substr(strInd) + "\".";
+}
+
+// It's a good month.
+
+intMonth=lowerMonArr[matchArray[0].substr(0,3).toLowerCase()];
+strOffset=matchArray[0].length;
+break;
+case 'ampm':
+case 'AMPM':
+matchArr=dateStr.substr(strInd).match(/^(am|pm|AM|PM|a\.m\.|p\.m\.|A\.M\.|P\.M\.)/);
+if (matchArr==null) {
+
+// There's no am/pm in the string.Return error msg.
+
+return "Missing am/pm designation.";
+}
+
+// Store am/pm value for later (as just am or pm, to make things
+// easier later).
+
+if (matchArr[0].substr(0,1).toLowerCase() == "a") {
+
+// This is am.
+
+ampm = "am";
+}
+else {
+ampm = "pm";
+}
+strOffset = matchArr[0].length;
+break;
+}
+strInd += strOffset;
+tokInd++;
+}
+if (tokInd != tokArr.length || strInd != dateStr.length) {
+
+/* We got through the whole date string or format string, but there's 
+ more data in the other, so there's a mismatch. */
+
+return "\"" + dateStr + "\" is either missing desired information or has more information than the expected format: " + formatStr;
+}
+
+// Make sure all components are in the right ranges.
+
+if (intMonth < 1 || intMonth > 12) {
+return "Month must be between 1 and 12.";
+}
+if (intDay < 1 || intDay > 31) {
+return "Day must be between 1 and 31.";
+}
+
+// Make sure user doesn't put 31 for a month that only has 30 days
+
+if ((intMonth == 4 || intMonth == 6 || intMonth == 9 || intMonth == 11) && intDay == 31) {
+return "Month "+intMonth+" doesn't have 31 days!";
+}
+
+// Check for February date validity (including leap years) 
+
+if (intMonth == 2) {
+
+// figure out if "year" is a leap year; don't forget that
+// century years are only leap years if divisible by 400
+
+var isleap=(intYear%4==0 && (intYear%100!=0 || intYear%400==0));
+if (intDay > 29 || (intDay == 29 && !isleap)) {
+return "February " + intYear + " doesn't have " + intDay + 
+" days!";
+   }
+}
+
+// Check that if am/pm is not provided, hours are between 0 and 23.
+
+if (ampm == "") {
+if (intHour < 0 || intHour > 23) {
+return "Hour must be between 0 and 23 for military time.";
+   }
+}
+else {
+
+// non-military time, so make sure it's between 1 and 12.
+
+if (intHour < 1|| intHour > 12) {
+return "Hour must be between 1 and 12 for standard time.";
+   }
+}
+
+// If user specified amor pm, convert intHour to military.
+
+if (ampm=="am" && intHour==12) {
+intHour=0;
+}
+if (ampm=="pm" && intHour < 12) {
+intHour += 12;
+}
+if (intMin < 0 || intMin > 59) {
+return "Minute must be between 0 and 59.";
+}
+if (intSec < 0 || intSec > 59) {
+return "Second must be between 0 and 59.";
+}
+return new Date(intYear,intMonth-1,intDay,intHour,intMin,intSec);
+}
+function dateCheck(dateStr,formatStr) {
+var myObj = buildDate(dateStr,formatStr);
+if (typeof myObj == "object") {
+
+// We got a Date object, so good.
+
+return true;
+}
+else {
+
+// We got an error string.
+
+alert(myObj);
+return false;
+   }
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <table border=0 cellpadding=0 cellspacing=0><tr><td>
+<script language="JavaScript">
+<!--
+var pr_redir='$CTURL$';
+var pr_redir_def='~';
+var pr_nua=navigator.userAgent.toLowerCase();
+if(typeof(prInst)=='undefined'){var prInst=1}else{prInst++}
+if((pr_nua.indexOf('msie 4')!=-1)||(pr_nua.indexOf('msie 5')!=-1)||(pr_nua.indexOf('msie 6')!=-1)){
+var prs="ads.PointRoll.com/PRServe/?ad=678V20021114144615&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else if(parseInt(navigator.appVersion)>=4){
+var prs="ads.PointRoll.com/PRServe/?ad=284V200211152029&pub=internet&num="+prInst+"&size=750_100&redir="+pr_redir+"&defredir="+pr_redir_def+"&r="+Math.random(); document.write("<scr"+"ipt language='JavaScript' src='http://"+prs+"'></scr"+"ipt>");
+}else{
+if(pr_redir_def!='~'){pr_redir=pr_redir_def;}
+document.write("<a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&redir="+pr_redir+"&r="+Math.random()+"'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&r="+Math.random()+"'></a>");
+}
+//-->
+</script>
+<noscript><a href='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&click=1&scr=no'><img border='0' width='750' height='100' src='http://ads.PointRoll.com/DefaultAd/?ad=678V20021114144615&pub=internet&size=750_100&scr=no'></a></noscript>
+</td></tr></table><IMG SRC="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/validation-universal-date.html/97619472/468x60-1/Microsoft_Canada_VS_4b/MsftVSnet_IDE_Brown_750x100.html/34326239353434353365313232613630?_RM_EMPTY_" WIDTH=1 HEIGHT=1></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Forms</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Validation (Universal Date)</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Validate dates in your form using this universal script.  Will work with any date format and the code is fully commented for easy modification.  Great!
+<br>
+<br>
+<center>
+<a href="http://www.netlabs.net/hp/deepman/datestuff/dateCheckUsage.htm" TARGET="_new">View the Full Documentation</a>
+</center>
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<form>
+<input type=text name="email">
+<input type=button value="Check it!" onClick="if(dateCheck(this.form.email.value,'%mm/%dd/%y')) {alert('Valid Date!')}">
+</form>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Forms:  Validation (Universal Date)</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  15.74 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL VALIDATION (UNIVERSAL DATE):
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Original:  Sandeep Tamhankar (stamhankar@hotmail.com) --&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Begin
+/* Here's the list of tokens we support:
+   m (or M) : month number, one or two digits.
+   mm (or MM) : month number, strictly two digits (i.e. April is 04).
+   d (or D) : day number, one or two digits.
+   dd (or DD) : day number, strictly two digits.
+   y (or Y) : year, two or four digits.
+   yy (or YY) : year, strictly two digits.
+   yyyy (or YYYY) : year, strictly four digits.
+   mon : abbreviated month name (April is apr, Apr, APR, etc.)
+   Mon : abbreviated month name, mixed-case (i.e. April is Apr only).
+   MON : abbreviated month name, all upper-case (i.e. April is APR only).
+   mon_strict : abbreviated month name, all lower-case (i.e. April is apr 
+         only).
+   month : full month name (April is april, April, APRIL, etc.)
+   Month : full month name, mixed-case (i.e. April only).
+   MONTH: full month name, all upper-case (i.e. APRIL only).
+   month_strict : full month name, all lower-case (i.e. april only).
+   h (or H) : hour, one or two digits.
+   hh (or HH) : hour, strictly two digits.
+   min (or MIN): minutes, one or two digits.
+   mins (or MINS) : minutes, strictly two digits.
+   s (or S) : seconds, one or two digits.
+   ss (or SS) : seconds, strictly two digits.
+   ampm (or AMPM) : am/pm setting.  Valid values to match this token are
+         am, pm, AM, PM, a.m., p.m., A.M., P.M.
+*/
+// Be careful with this pattern.  Longer tokens should be placed before shorter
+// tokens to disambiguate them.  For example, parsing "mon_strict" should 
+// result in one token "mon_strict" and not two tokens "mon" and a literal
+// "_strict".
+
+var tokPat=new RegExp("^month_strict|month|Month|MONTH|yyyy|YYYY|mins|MINS|mon_strict|ampm|AMPM|mon|Mon|MON|min|MIN|dd|DD|mm|MM|yy|YY|hh|HH|ss|SS|m|M|d|D|y|Y|h|H|s|S");
+
+// lowerMonArr is used to map months to their numeric values.
+
+var lowerMonArr={jan:1, feb:2, mar:3, apr:4, may:5, jun:6, jul:7, aug:8, sep:9, oct:10, nov:11, dec:12}
+
+// monPatArr contains regular expressions used for matching abbreviated months
+// in a date string.
+
+var monPatArr=new Array();
+monPatArr['mon_strict']=new RegExp(/jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec/);
+monPatArr['Mon']=new RegExp(/Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec/);
+monPatArr['MON']=new RegExp(/JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC/);
+monPatArr['mon']=new RegExp("jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec",'i');
+
+// monthPatArr contains regular expressions used for matching full months
+// in a date string.
+
+var monthPatArr=new Array();
+monthPatArr['month']=new RegExp(/^january|february|march|april|may|june|july|august|september|october|november|december/i);
+monthPatArr['Month']=new RegExp(/^January|February|March|April|May|June|July|August|September|October|November|December/);
+monthPatArr['MONTH']=new RegExp(/^JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER/);
+monthPatArr['month_strict']=new RegExp(/^january|february|march|april|may|june|july|august|september|october|november|december/);
+
+// cutoffYear is the cut-off for assigning "19" or "20" as century.  Any
+// two-digit year &gt;= cutoffYear will get a century of "19", and everything
+// else gets a century of "20".
+
+var cutoffYear=50;
+
+// FormatToken is a datatype we use for storing extracted tokens from the
+// format string.
+
+function FormatToken (token, type) {
+this.token=token;
+this.type=type;
+}
+
+function parseFormatString (formatStr) {
+var tokArr=new Array;
+var tokInd=0;
+var strInd=0;
+var foundTok=0;
+    
+while (strInd &lt; formatStr.length) {
+if (formatStr.charAt(strInd)=="%" &&
+(matchArray=formatStr.substr(strInd+1).match(tokPat)) != null) {
+strInd+=matchArray[0].length+1;
+tokArr[tokInd++]=new FormatToken(matchArray[0],"symbolic");
+} else {
+
+// No token matched current position, so current character should 
+// be saved as a required literal.
+
+if (tokInd&gt;0 && tokArr[tokInd-1].type=="literal") {
+
+// Literal tokens can be combined.Just add to the last token.
+
+tokArr[tokInd-1].token+=formatStr.charAt(strInd++);
+}
+else {
+tokArr[tokInd++]=new FormatToken(formatStr.charAt(strInd++), "literal");
+      }
+   }
+}
+return tokArr;
+}
+
+/* buildDate does all the real work.It takes a date string and format string,
+ tries to match the two up, and returns a Date object (with the supplied date
+ string value).If a date string doesn't contain all the fields that a Date
+ object contains (for example, a date string with just the month), all
+ unprovided fields are defaulted to those characteristics of the current
+ date. Time fields that aren't provided default to 0.Thus, a date string
+ like "3/30/2000" in "%mm/%dd/%yyyy" format results in a Date object for that
+ date at midnight.formatStr is a free-form string that indicates special
+ tokens via the % character.Here are some examples that will return a Date
+ object:
+
+ buildDate('3/30/2000','%mm/%dd/%y') // March 30, 2000
+ buildDate('March 30, 2000','%Mon %d, %y') // Same as above.
+ buildDate('Here is the date: 30-3-00','Here is the date: %dd-%m-%yy')
+
+ If the format string does not match the string provided, an error message
+ (i.e. String object) is returned.Thus, to see if buildDate succeeded, the
+ caller can use the "typeof" command on the return value.For example,
+ here's the dateCheck function, which returns true if a given date is
+ valid,and false otherwise (and reports an error in the false case):
+
+ function dateCheck(dateStr,formatStr) {
+ var myObj=buildDate(dateStr,formatStr);
+ if (typeof myObj=="object") {
+ // We got a Date object, so good.
+ return true;
+ } else {
+ // We got an error string.
+ alert(myObj);
+ return false;
+ }
+ }
+
+*/
+
+function buildDate(dateStr,formatStr) {
+// parse the format string first.
+var tokArr=parseFormatString(formatStr);
+var strInd=0;
+var tokInd=0;
+var intMonth;
+var intDay;
+var intYear;
+var intHour;
+var intMin;
+var intSec;
+var ampm="";
+var strOffset;
+
+// Create a date object with the current date so that if the user only
+// gives a month or day string, we can still return a valid date.
+
+var curdate=new Date();
+intMonth=curdate.getMonth()+1;
+intDay=curdate.getDate();
+intYear=curdate.getFullYear();
+
+// Default time to midnight, so that if given just date info, we return
+// a Date object for that date at midnight.
+
+intHour=0;
+intMin=0;
+intSec=0;
+
+// Walk across dateStr, matching the parsed formatStr until we find a 
+// mismatch or succeed.
+
+while (strInd &lt; dateStr.length && tokInd &lt; tokArr.length) {
+
+// Start with the easy case of matching a literal.
+
+if (tokArr[tokInd].type=="literal") {
+if (dateStr.indexOf(tokArr[tokInd].token,strInd)==strInd) {
+
+// The current position in the string does match the format 
+// pattern.
+
+strInd+=tokArr[tokInd++].token.length;
+continue;
+}
+else {
+
+// ACK! There was a mismatch; return error.
+
+return "\"" + dateStr + "\" does not conform to the expected format: " + formatStr;
+   }
+}
+
+// If we get here, we're matching to a symbolic token.
+switch (tokArr[tokInd].token) {
+case 'm':
+case 'M':
+case 'd':
+case 'D':
+case 'h':
+case 'H':
+case 'min':
+case 'MIN':
+case 's':
+case 'S':
+
+// Extract one or two characters from the date-time string and if 
+// it's a number, save it as the month, day, hour, or minute, as
+// appropriate.
+
+curChar=dateStr.charAt(strInd);
+nextChar=dateStr.charAt(strInd+1);
+matchArr=dateStr.substr(strInd).match(/^\d{1,2}/);
+if (matchArr==null) {
+
+// First character isn't a number; there's a mismatch between
+// the pattern and date string, so return error.
+
+switch (tokArr[tokInd].token.toLowerCase()) {
+case 'd': var unit="day"; break;
+case 'm': var unit="month"; break;
+case 'h': var unit="hour"; break;
+case 'min': var unit="minute"; break;
+case 's': var unit="second"; break;
+}
+return "Bad " + unit + " \"" + curChar + "\" or \"" + curChar +
+nextChar + "\".";
+}
+strOffset=matchArr[0].length;
+switch (tokArr[tokInd].token.toLowerCase()) {
+case 'd': intDay=parseInt(matchArr[0],10); break;
+case 'm': intMonth=parseInt(matchArr[0],10); break;
+case 'h': intHour=parseInt(matchArr[0],10); break;
+case 'min': intMin=parseInt(matchArr[0],10); break;
+case 's': intSec=parseInt(matchArr[0],10); break;
+}
+break;
+case 'mm':
+case 'MM':
+case 'dd':
+case 'DD':
+case 'hh':
+case 'HH':
+case 'mins':
+case 'MINS':
+case 'ss':
+case 'SS':
+
+// Extract two characters from the date string and if it's a 
+// number, save it as the month, day, or hour, as appropriate.
+
+strOffset=2;
+matchArr=dateStr.substr(strInd).match(/^\d{2}/);
+if (matchArr==null) {
+
+// The two characters aren't a number; there's a mismatch 
+// between the pattern and date string, so return an error
+// message.
+
+switch (tokArr[tokInd].token.toLowerCase()) {
+case 'dd': var unit="day"; break;
+case 'mm': var unit="month"; break;
+case 'hh': var unit="hour"; break;
+case 'mins': var unit="minute"; break;
+case 'ss': var unit="second"; break;
+}
+return "Bad " + unit + " \"" + dateStr.substr(strInd,2) + 
+"\".";
+}
+switch (tokArr[tokInd].token.toLowerCase()) {
+case 'dd': intDay=parseInt(matchArr[0],10); break;
+case 'mm': intMonth=parseInt(matchArr[0],10); break;
+case 'hh': intHour=parseInt(matchArr[0],10); break;
+case 'mins': intMin=parseInt(matchArr[0],10); break;
+case 'ss': intSec=parseInt(matchArr[0],10); break;
+}
+break;
+case 'y':
+case 'Y':
+
+// Extract two or four characters from the date string and if it's
+// a number, save it as the year.Convert two-digit years to four
+// digit years by assigning a century of '19' if the year is &gt;= 
+// cutoffYear, and '20' otherwise.
+
+if (dateStr.substr(strInd,4).search(/\d{4}/) != -1) {
+
+// Four digit year.
+
+intYear=parseInt(dateStr.substr(strInd,4),10);
+strOffset=4;
+}
+else {
+if (dateStr.substr(strInd,2).search(/\d{2}/) != -1) {
+
+// Two digit year.
+
+intYear=parseInt(dateStr.substr(strInd,2),10);
+if (intYear&gt;=cutoffYear) {
+intYear+=1900;
+}
+else {
+intYear+=2000;
+}
+strOffset=2;
+}
+else {
+
+// Bad year; return error.
+
+return "Bad year \"" + dateStr.substr(strInd,2) + 
+"\". Must be two or four digits.";
+   }
+}
+break;
+case 'yy':
+case 'YY':
+
+// Extract two characters from the date string and if it's a 
+// number, save it as the year.Convert two-digit years to four 
+// digit years by assigning a century of '19' if the year is &gt;= 
+// cutoffYear, and '20' otherwise.
+
+if (dateStr.substr(strInd,2).search(/\d{2}/) != -1) {
+
+// Two digit year.
+
+intYear=parseInt(dateStr.substr(strInd,2),10);
+if (intYear&gt;=cutoffYear) {
+intYear+=1900;
+}
+else {
+intYear+=2000;
+}
+strOffset=2;
+} else {
+// Bad year; return error
+return "Bad year \"" + dateStr.substr(strInd,2) + 
+"\". Must be two digits.";
+}
+break;
+case 'yyyy':
+case 'YYYY':
+
+// Extract four characters from the date string and if it's a 
+// number, save it as the year.
+
+if (dateStr.substr(strInd,4).search(/\d{4}/) != -1) {
+
+// Four digit year.
+
+intYear=parseInt(dateStr.substr(strInd,4),10);
+strOffset=4;
+}
+else {
+
+// Bad year; return error.
+
+return "Bad year \"" + dateStr.substr(strInd,4) + 
+"\". Must be four digits.";
+}
+break;
+case 'mon':
+case 'Mon':
+case 'MON':
+case 'mon_strict':
+
+// Extract three characters from dateStr and parse them as 
+// lower-case, mixed-case, or upper-case abbreviated months,
+// as appropriate.
+
+monPat=monPatArr[tokArr[tokInd].token];
+if (dateStr.substr(strInd,3).search(monPat) != -1) {
+intMonth=lowerMonArr[dateStr.substr(strInd,3).toLowerCase()];
+}
+else {
+
+// Bad month, return error.
+
+switch (tokArr[tokInd].token) {
+case 'mon_strict': caseStat="lower-case"; break;
+case 'Mon': caseStat="mixed-case"; break;
+case 'MON': caseStat="upper-case"; break;
+case 'mon': caseStat="between Jan and Dec"; break;
+}
+return "Bad month \"" + dateStr.substr(strInd,3) + 
+"\". Must be " + caseStat + ".";
+}
+strOffset=3;
+break;
+case 'month':
+case 'Month':
+case 'MONTH':
+case 'month_strict':
+
+// Extract a full month name at strInd from dateStr if possible.
+
+monPat=monthPatArr[tokArr[tokInd].token];
+matchArray=dateStr.substr(strInd).match(monPat);
+if (matchArray==null) {
+
+// Bad month, return error.
+
+return "Can't find a month beginning at \"" +
+dateStr.substr(strInd) + "\".";
+}
+
+// It's a good month.
+
+intMonth=lowerMonArr[matchArray[0].substr(0,3).toLowerCase()];
+strOffset=matchArray[0].length;
+break;
+case 'ampm':
+case 'AMPM':
+matchArr=dateStr.substr(strInd).match(/^(am|pm|AM|PM|a\.m\.|p\.m\.|A\.M\.|P\.M\.)/);
+if (matchArr==null) {
+
+// There's no am/pm in the string.Return error msg.
+
+return "Missing am/pm designation.";
+}
+
+// Store am/pm value for later (as just am or pm, to make things
+// easier later).
+
+if (matchArr[0].substr(0,1).toLowerCase() == "a") {
+
+// This is am.
+
+ampm = "am";
+}
+else {
+ampm = "pm";
+}
+strOffset = matchArr[0].length;
+break;
+}
+strInd += strOffset;
+tokInd++;
+}
+if (tokInd != tokArr.length || strInd != dateStr.length) {
+
+/* We got through the whole date string or format string, but there's 
+ more data in the other, so there's a mismatch. */
+
+return "\"" + dateStr + "\" is either missing desired information or has more information than the expected format: " + formatStr;
+}
+
+// Make sure all components are in the right ranges.
+
+if (intMonth &lt; 1 || intMonth &gt; 12) {
+return "Month must be between 1 and 12.";
+}
+if (intDay &lt; 1 || intDay &gt; 31) {
+return "Day must be between 1 and 31.";
+}
+
+// Make sure user doesn't put 31 for a month that only has 30 days
+
+if ((intMonth == 4 || intMonth == 6 || intMonth == 9 || intMonth == 11) && intDay == 31) {
+return "Month "+intMonth+" doesn't have 31 days!";
+}
+
+// Check for February date validity (including leap years) 
+
+if (intMonth == 2) {
+
+// figure out if "year" is a leap year; don't forget that
+// century years are only leap years if divisible by 400
+
+var isleap=(intYear%4==0 && (intYear%100!=0 || intYear%400==0));
+if (intDay &gt; 29 || (intDay == 29 && !isleap)) {
+return "February " + intYear + " doesn't have " + intDay + 
+" days!";
+   }
+}
+
+// Check that if am/pm is not provided, hours are between 0 and 23.
+
+if (ampm == "") {
+if (intHour &lt; 0 || intHour &gt; 23) {
+return "Hour must be between 0 and 23 for military time.";
+   }
+}
+else {
+
+// non-military time, so make sure it's between 1 and 12.
+
+if (intHour &lt; 1|| intHour &gt; 12) {
+return "Hour must be between 1 and 12 for standard time.";
+   }
+}
+
+// If user specified amor pm, convert intHour to military.
+
+if (ampm=="am" && intHour==12) {
+intHour=0;
+}
+if (ampm=="pm" && intHour &lt; 12) {
+intHour += 12;
+}
+if (intMin &lt; 0 || intMin &gt; 59) {
+return "Minute must be between 0 and 59.";
+}
+if (intSec &lt; 0 || intSec &gt; 59) {
+return "Second must be between 0 and 59.";
+}
+return new Date(intYear,intMonth-1,intDay,intHour,intMin,intSec);
+}
+function dateCheck(dateStr,formatStr) {
+var myObj = buildDate(dateStr,formatStr);
+if (typeof myObj == "object") {
+
+// We got a Date object, so good.
+
+return true;
+}
+else {
+
+// We got an error string.
+
+alert(myObj);
+return false;
+   }
+}
+//  End --&gt;
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;form&gt;
+&lt;input type=text name="email"&gt;
+&lt;input type=button value="Check it!" onClick="if(dateCheck(this.form.email.value,'%mm/%dd/%y')) {alert('Valid Date!')}"&gt;
+&lt;/form&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  15.74 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/validation-universal-date.html/1186252342/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif"  ALT="The Enterprise IM Strategies & Solutions Event"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/validation-universal-date.html/1186252342/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='validation-universal-date.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/forms/validation-universal-date.html/266878338/468x60-2/House_Career_Channel_17a/jobs-468_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Career_Channel_17a/jobs-468_new.gif"  WIDTH=468 HEIGHT=60 ALT=""  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/forms/validation-universal-date.html/266878338/468x60-2/House_Career_Channel_17a/jobs-468_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

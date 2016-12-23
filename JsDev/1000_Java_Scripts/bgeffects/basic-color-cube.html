@@ -1,0 +1,857 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  BG Effects:  Basic Color Cube</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="This creative script lets you choose the background color using a color cube. You can also do a reverse search using hexadecimal, RGB, or just the name of the colors.">
+<META NAME="date" CONTENT="2001-07-25">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Brad Garrick">
+<META NAME="section" CONTENT="BG Effects">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!--//Heres the code for the RGB in paint.
+function rgb(x)
+  {
+  var value=0;
+  var value_array=new Array("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f");
+  var first=x.charAt(0);
+  var second=x.charAt(1);
+  var a=0;
+  var b=0;
+  while (value_array[value]!=first)
+    {
+    value++;
+    a=a+16;
+    }
+  value="0";
+  while (value_array[value]!=second)
+    {
+    value++;
+    b++;
+    }
+  x=a+b;
+  return x;
+  }
+// end RGB in paint-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Heres the code to type in you own Hexadecimal value
+function changeBack()
+  {
+  var hex=window.document.f.c.value;
+  document.bgColor=hex;
+  var hex1=hex.charAt(0);
+  if (hex1!="#")
+    {
+    hex=document.bgColor;
+    }
+  var red=hex.substring (1,3);
+  var rdd=rgb(red);
+  document.bb.re.value=rdd;
+  var green=hex.substring (3,5);
+  var grn=rgb(green);
+  document.cc.gr.value=grn;
+  var blue=hex.substring (5,7);
+  var blue1=rgb(blue);
+  document.dd.bl.value=blue1;
+  }
+// End own Hexadecimal-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--Here\'s the code to type in your own RGB
+  function changeBackRGB()
+  {
+  var red=window.document.bb.re.value;
+  var green=window.document.cc.gr.value;
+  var blue=window.document.dd.bl.value;
+  red1=rgb_hex(red);
+  green1=rgb_hex(green);
+  blue1=rgb_hex(blue);
+  var hex="#"+red1+green1+blue1;
+  document.bgColor=hex;
+  document.f.c.value=hex;
+  }
+// End your own RGB-->
+
+//<!-- Change from RGB to hexadecimal
+function rgb_hex(colour)
+{
+ var rgb_array=new Array("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f");
+if (colour==0)
+  {
+  var colour="00";
+  return colour;
+  }
+else
+  {
+  var y=colour/16;
+  var y=y+"a";
+  if (y.indexOf(".")==-1)
+    {
+    var hex2="0";
+    var u=y.indexOf("a");
+    var q=y.substring(0,u);
+    var hex1=rgb_array[q];
+    }
+  else
+    {
+    var l=y.split(".");
+    var q=l[0];
+    var z=q*16;
+    var xyz=colour-z;
+    var hex1=rgb_array[q];
+    var hex2=rgb_array[xyz];
+    }
+  var colour=hex1+hex2;
+  return colour;
+  }
+}
+// end-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--Here\'s the background changer for the cube
+leftclick=0;
+
+function r(hval)
+  {
+    if (leftclick==0)
+      {
+      document.bgColor=hval;
+      document.f.c.value=hval;
+      var red=hval.substring (1,3);
+      var rdd=rgb(red);
+      document.bb.re.value=rdd;
+      var green=hval.substring (3,5);
+      var grn=rgb(green);
+      document.cc.gr.value=grn;
+      var blue=hval.substring (5,7);
+      var blue1=rgb(blue);
+      document.dd.bl.value=blue1;
+      document.colour1.colour2.value="";
+      }
+  }
+//end changer
+//Heres the lock button
+function lock()
+  {
+  if (leftclick==0)
+    {
+    leftclick=1;
+    }
+  else
+    {
+    leftclick=0;
+    }
+  }
+//end lock-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--  Reverse Lookup Color
+function changeColor()
+{
+var clr=window.document.colour1.colour2.value;
+document.f.c.value=clr;
+var clr=changeBack();
+var clr=changeBackRGB();
+}
+// End Reverse Lookup Color-->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/bgeffects/basic-color-cube.html/945564404/468x60-1/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_esecurity_2c/esecurity-750.gif"  ALT="Reports on security issues of ecommerce environments"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/bgeffects/basic-color-cube.html/945564404/468x60-1/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0"></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>BG Effects</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Basic Color Cube</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+This creative script lets you choose the background color using a color cube. You can also do a reverse search using hexadecimal, RGB, or just the name of the colors.
+<hr>
+</td></tr>
+</table>
+<!-- Demonstration -->
+<center>
+<h3>Color Cube</H3></center>
+<center>Click on a color to lock it.<br>Click on any square to unlock.</center>
+<center>
+<table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Cube Maker
+var hex_Red=new Array("00","33","66","99","cc","ff");
+var hex_Green=new Array("00","33","66","99","cc","ff");
+var hex_Blue=new Array("00","33","66","99","cc","ff");
+var hexred="00";
+var hexgreen="00";
+var hexblue="00";
+var red=0;
+var green=0;
+var blue=0;
+var x=0;
+var y=0;
+var z=0;
+var xyz=0;
+
+while (y<6)
+  {
+  window.document.write("<tr>");
+  var x=0;
+  var hexblue=hex_Blue[blue];
+    while (x<6)
+    {
+    var z=0;
+    var hexgreen=hex_Green[green];
+      while (z<6)
+      {
+      var hexred=hex_Red[red];
+      var hexadecimal="#"+hexred+hexgreen+hexblue;
+      window.document.write("<td bgColor="+hexadecimal+"><a href=\"javascript:lock()\" onmouseover=\"r(\'"+hexadecimal+"\'); return true\"><img src=\"\" border=\"0\" height=\"20\" width=\"20\"/></a></td>");
+      z++;
+      red++;
+      if (red==6)
+      {
+      red=0;
+      }
+      }
+    x++;
+    green++;
+    if (green==6)
+    {
+    green=0;
+    }
+    xyz++;
+    if (xyz==3)
+    {
+    window.document.write("</tr>");
+    xyz=0;
+    }
+    }
+  y++;
+  blue++
+  if (blue==6)
+  {
+  blue=0;
+  }
+  }
+// End color cube. -->
+</script>
+
+</table>
+</center>
+
+<center><form name="f" onSubmit="changeBack(); return false;"><input type="text" name="c" size="7"></form></center>
+
+<center>Here's the color code to match up the RGB in paint.</center>
+<table align="center">
+  <tr>
+     <td align="center" width="100">Red</td>
+     <td align="center" width="100">Green</td>
+     <td align="center" width="100">Blue</td>
+  </tr>
+  <tr>
+     <td align="center"><form name="bb" onSubmit="changeBackRGB(); return false;"><input type="text" name="re" size="2"></form></td>
+     <td align="center"><form name="cc" onSubmit="changeBackRGB(); return false;"><input type="text" name="gr" size="2"></form></td>
+     <td align="center"><form name="dd" onSubmit="changeBackRGB(); return false;"><input type="text" name="bl" size="2"></form></td>
+  </tr>
+</table>
+
+<center>
+<table>
+
+<tr><td align="center"><form><input type="button" value="Reverse Lookup - Hexadecimal" size="10" onClick="changeBack(); return false;"></form></td>
+<td align="center"><form><input type="button" value="Reverse Lookup - RGB" size="10" onClick="changeBackRGB(); return false;" ></form></td></tr>
+
+<tr><td align="center" colspan="2"><form><input type="button" value="Reverse Lookup - Color (ex. Red, Green...)" size="15" onClick="changeColor()"; return false;"></form></td></tr>
+
+<tr><td align="center" colspan="2"><form name="colour1" onSubmit="changeColor(); return false;"><input type="text" name="colour2" size="7"></form></td></tr>
+
+</table>
+</center>
+
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  BG Effects:  Basic Color Cube</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  7.03 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- TWO STEPS TO INSTALL BASIC COLOR CUBE:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the last code into the BODY of your HTML document  --&gt;
+
+&lt;!-- STEP ONE: Paste this code into the HEAD of your HTML document  --&gt;
+
+&lt;HEAD&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+
+&lt;!-- This script and many more are available free online at --&gt;
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!--//Heres the code for the RGB in paint.
+function rgb(x)
+  {
+  var value=0;
+  var value_array=new Array("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f");
+  var first=x.charAt(0);
+  var second=x.charAt(1);
+  var a=0;
+  var b=0;
+  while (value_array[value]!=first)
+    {
+    value++;
+    a=a+16;
+    }
+  value="0";
+  while (value_array[value]!=second)
+    {
+    value++;
+    b++;
+    }
+  x=a+b;
+  return x;
+  }
+// end RGB in paint--&gt;
+&lt;/script&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Heres the code to type in you own Hexadecimal value
+function changeBack()
+  {
+  var hex=window.document.f.c.value;
+  document.bgColor=hex;
+  var hex1=hex.charAt(0);
+  if (hex1!="#")
+    {
+    hex=document.bgColor;
+    }
+  var red=hex.substring (1,3);
+  var rdd=rgb(red);
+  document.bb.re.value=rdd;
+  var green=hex.substring (3,5);
+  var grn=rgb(green);
+  document.cc.gr.value=grn;
+  var blue=hex.substring (5,7);
+  var blue1=rgb(blue);
+  document.dd.bl.value=blue1;
+  }
+// End own Hexadecimal--&gt;
+&lt;/script&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!--Here\'s the code to type in your own RGB
+  function changeBackRGB()
+  {
+  var red=window.document.bb.re.value;
+  var green=window.document.cc.gr.value;
+  var blue=window.document.dd.bl.value;
+  red1=rgb_hex(red);
+  green1=rgb_hex(green);
+  blue1=rgb_hex(blue);
+  var hex="#"+red1+green1+blue1;
+  document.bgColor=hex;
+  document.f.c.value=hex;
+  }
+// End your own RGB--&gt;
+
+//&lt;!-- Change from RGB to hexadecimal
+function rgb_hex(colour)
+{
+ var rgb_array=new Array("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f");
+if (colour==0)
+  {
+  var colour="00";
+  return colour;
+  }
+else
+  {
+  var y=colour/16;
+  var y=y+"a";
+  if (y.indexOf(".")==-1)
+    {
+    var hex2="0";
+    var u=y.indexOf("a");
+    var q=y.substring(0,u);
+    var hex1=rgb_array[q];
+    }
+  else
+    {
+    var l=y.split(".");
+    var q=l[0];
+    var z=q*16;
+    var xyz=colour-z;
+    var hex1=rgb_array[q];
+    var hex2=rgb_array[xyz];
+    }
+  var colour=hex1+hex2;
+  return colour;
+  }
+}
+// end--&gt;
+&lt;/script&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!--Here\'s the background changer for the cube
+leftclick=0;
+
+function r(hval)
+  {
+    if (leftclick==0)
+      {
+      document.bgColor=hval;
+      document.f.c.value=hval;
+      var red=hval.substring (1,3);
+      var rdd=rgb(red);
+      document.bb.re.value=rdd;
+      var green=hval.substring (3,5);
+      var grn=rgb(green);
+      document.cc.gr.value=grn;
+      var blue=hval.substring (5,7);
+      var blue1=rgb(blue);
+      document.dd.bl.value=blue1;
+      document.colour1.colour2.value="";
+      }
+  }
+//end changer
+//Heres the lock button
+function lock()
+  {
+  if (leftclick==0)
+    {
+    leftclick=1;
+    }
+  else
+    {
+    leftclick=0;
+    }
+  }
+//end lock--&gt;
+&lt;/script&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!--  Reverse Lookup Color
+function changeColor()
+{
+var clr=window.document.colour1.colour2.value;
+document.f.c.value=clr;
+var clr=changeBack();
+var clr=changeBackRGB();
+}
+// End Reverse Lookup Color--&gt;
+&lt;/script&gt;
+
+&lt;/HEAD&gt;
+
+&lt;!-- STEP TWO: Copy this code into the BODY of your HTML document  --&gt;
+
+&lt;BODY&gt;
+
+&lt;center&gt;
+&lt;h3&gt;Color Cube&lt;/H3&gt;&lt;/center&gt;
+&lt;center&gt;Click on a color to lock it.&lt;br&gt;Click on any square to unlock.&lt;/center&gt;
+&lt;center&gt;
+&lt;table&gt;
+
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;!-- Cube Maker
+var hex_Red=new Array("00","33","66","99","cc","ff");
+var hex_Green=new Array("00","33","66","99","cc","ff");
+var hex_Blue=new Array("00","33","66","99","cc","ff");
+var hexred="00";
+var hexgreen="00";
+var hexblue="00";
+var red=0;
+var green=0;
+var blue=0;
+var x=0;
+var y=0;
+var z=0;
+var xyz=0;
+
+while (y&lt;6)
+  {
+  window.document.write("&lt;tr&gt;");
+  var x=0;
+  var hexblue=hex_Blue[blue];
+    while (x&lt;6)
+    {
+    var z=0;
+    var hexgreen=hex_Green[green];
+      while (z&lt;6)
+      {
+      var hexred=hex_Red[red];
+      var hexadecimal="#"+hexred+hexgreen+hexblue;
+      window.document.write("&lt;td bgColor="+hexadecimal+"&gt;&lt;a href=\"javascript:lock()\" onmouseover=\"r(\'"+hexadecimal+"\'); return true\"&gt;&lt;img src=\"\" border=\"0\" height=\"20\" width=\"20\"/&gt;&lt;/a&gt;&lt;/td&gt;");
+      z++;
+      red++;
+      if (red==6)
+      {
+      red=0;
+      }
+      }
+    x++;
+    green++;
+    if (green==6)
+    {
+    green=0;
+    }
+    xyz++;
+    if (xyz==3)
+    {
+    window.document.write("&lt;/tr&gt;");
+    xyz=0;
+    }
+    }
+  y++;
+  blue++
+  if (blue==6)
+  {
+  blue=0;
+  }
+  }
+// End color cube. --&gt;
+&lt;/script&gt;
+
+&lt;/table&gt;
+&lt;/center&gt;
+
+&lt;center&gt;&lt;form name="f" onSubmit="changeBack(); return false;"&gt;&lt;input type="text" name="c" size="7"&gt;&lt;/form&gt;&lt;/center&gt;
+
+&lt;center&gt;Here's the color code to match up the RGB in paint.&lt;/center&gt;
+&lt;table align="center"&gt;
+  &lt;tr&gt;
+     &lt;td align="center" width="100"&gt;Red&lt;/td&gt;
+     &lt;td align="center" width="100"&gt;Green&lt;/td&gt;
+     &lt;td align="center" width="100"&gt;Blue&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+     &lt;td align="center"&gt;&lt;form name="bb" onSubmit="changeBackRGB(); return false;"&gt;&lt;input type="text" name="re" size="2"&gt;&lt;/form&gt;&lt;/td&gt;
+     &lt;td align="center"&gt;&lt;form name="cc" onSubmit="changeBackRGB(); return false;"&gt;&lt;input type="text" name="gr" size="2"&gt;&lt;/form&gt;&lt;/td&gt;
+     &lt;td align="center"&gt;&lt;form name="dd" onSubmit="changeBackRGB(); return false;"&gt;&lt;input type="text" name="bl" size="2"&gt;&lt;/form&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;center&gt;
+&lt;table&gt;
+
+&lt;tr&gt;&lt;td align="center"&gt;&lt;form&gt;&lt;input type="button" value="Reverse Lookup - Hexadecimal" size="10" onClick="changeBack(); return false;"&gt;&lt;/form&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;form&gt;&lt;input type="button" value="Reverse Lookup - RGB" size="10" onClick="changeBackRGB(); return false;" &gt;&lt;/form&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td align="center" colspan="2"&gt;&lt;form&gt;&lt;input type="button" value="Reverse Lookup - Color (ex. Red, Green...)" size="15" onClick="changeColor()"; return false;"&gt;&lt;/form&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;tr&gt;&lt;td align="center" colspan="2"&gt;&lt;form name="colour1" onSubmit="changeColor(); return false;"&gt;&lt;input type="text" name="colour2" size="7"&gt;&lt;/form&gt;&lt;/td&gt;&lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;/center&gt;
+
+
+&lt;p&gt;&lt;center&gt;
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+&lt;/center&gt;&lt;p&gt;
+
+&lt;!-- Script Size:  7.03 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/bgeffects/basic-color-cube.html/684271217/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif"  ALT="The Enterprise IM Strategies & Solutions Event"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/bgeffects/basic-color-cube.html/684271217/125x800/House_InstantMessagingSprg03_1l/imp-spring2003-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='basic-color-cube.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/bgeffects/basic-color-cube.html/1873580680/468x60-2/House_IT_IMS_1o/it-ims-spring03-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_IT_IMS_1o/it-ims-spring03-750.gif"  ALT="Increasing Quality Through IT Sourcing & Services"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/bgeffects/basic-color-cube.html/1873580680/468x60-2/House_IT_IMS_1o/it-ims-spring03-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>

@@ -1,0 +1,677 @@
+<HTML>
+<HEAD>
+<TITLE>The JavaScript Source:  Clocks:  Mouse Trail Clock</TITLE>
+<META HTTP-EQUIV="The JavaScript Source" CONTENT = "no-cache">
+<META NAME="description" CONTENT="Just a neat little trick, a display of date/time around the mouse pointer">
+<META NAME="date" CONTENT="2002-06-20">
+<META NAME="channel" CONTENT="Web Developer">
+<META NAME="author" CONTENT="Amy Cook">
+<META NAME="section" CONTENT="Clocks">
+
+</HEAD>
+
+<BODY BGCOLOR=#ffffff vlink=#0000ff>
+
+<BR>
+<center>
+<table cellpadding=10 cellspacing=0 border=0 width="100%">
+   <tr><td align=center>
+   <A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/clocks/mouse-trail-clock.html/199853193/468x60-1/House_Content_Management_1l/jupcontent750x100_new.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_Content_Management_1l/jupcontent750x100_new.gif"  ALT="The Premier Event for Content Management Strategies and Solutions"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/clocks/mouse-trail-clock.html/199853193/468x60-1/House_Content_Management_1l/jupcontent750x100_new.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0"></td></tr>
+</table>
+
+<BR>
+<BR>
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td width="99%" align=center>
+
+<basefont size=3>
+<FONT SIZE="+2" FACE="Helvetica,Arial">
+<A HREF="../../Upper1/default.htm" TARGET="_top"><FONT COLOR="#0000FF"><b>Home</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<A HREF="default.htm" TARGET="_top"><font color="#FF0000"><b>Clocks</b></font></A>
+<img src="http://javascript.internet.com/img/arrow.gif" height=13 width=7 border=0 alt="}">
+<FONT COLOR="#006666"><b>Mouse Trail Clock</b></font></font>
+<BR>
+<BR>
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td><font FACE="helvetica,arial,geneva">
+<br>
+<br>
+<!-- Description --><!--content_start-->
+Just a neat little trick, a display of date/time around the mouse pointer
+<hr>
+</td></tr>
+</table>
+<center><a href="mousetrailclock.html">Check out the clock</a></center>
+<P>
+<P>
+<a name="source">
+<table BORDER=0 WIDTH=486 CELLPADDING=3 CELLSPACING=0>
+<tr><td BGCOLOR=yellow><font FACE="helvetica,arial,geneva"><b>The JavaScript Source:  Clocks:  Mouse Trail Clock</b>
+<p>Simply click inside the window below, use your cursor to highlight the script, and copy (type Control-c or Apple-c) the script into a new file in your text editor (such as Note Pad or Simple Text) and save (Control-s or Command-s).  The script is yours!!!
+<br><br></font></td></tr>
+<tr><td BGCOLOR=yellow ALIGN=CENTER>
+<form NAME="copy">
+
+<DIV align="center">
+<input type=button value="Highlight All" onClick="javascript:this.form.txt.focus();this.form.txt.select();">&nbsp;&nbsp;&nbsp;&nbsp;
+<INPUT TYPE="text" NAME="total" VALUE="Script Size:  7.48 KB" size=24>
+</DIV>
+
+<textarea NAME="txt" ROWS=20 COLS=75 WRAP=VIRTUAL>
+
+&lt;!-- ONE STEP TO INSTALL MOUSE TRAIL CLOCK:
+
+
+
+  1.  Copy the coding into the BODY of your HTML document  --&gt;
+
+
+
+&lt;!-- STEP ONE: Paste this code into the BODY of your HTML document  --&gt;
+
+
+
+&lt;BODY&gt;
+
+
+
+&lt;!-- This script and many more are available free online at --&gt;
+
+&lt;!-- The JavaScript Source!! http://javascript.internet.com --&gt;
+
+&lt;!-- Original:  Amy Cook (ncgoddess@msn.com ) --&gt;
+
+&lt;!-- Web Site:  http://ncgoddess.com/script.html --&gt;
+
+&lt;script language="JavaScript"&gt;
+
+dCol='000000';//date colour.
+
+fCol='000000';//face colour.
+
+sCol='000000';//seconds colour.
+
+mCol='000000';//minutes colour.
+
+hCol='000000';//hours colour.
+
+ClockHeight=40;
+
+ClockWidth=40;
+
+ClockFromMouseY=0;
+
+ClockFromMouseX=100;
+
+
+
+//Alter nothing below! Alignments will be lost!
+
+
+
+d=new Array("SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY");
+
+m=new Array("JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER");
+
+date=new Date();
+
+day=date.getDate();
+
+year=date.getYear();
+
+if (year &lt; 2000) year=year+1900;
+
+TodaysDate=" "+d[date.getDay()]+" "+day+" "+m[date.getMonth()]+" "+year;
+
+D=TodaysDate.split('');
+
+H='...';
+
+H=H.split('');
+
+M='....';
+
+M=M.split('');
+
+S='.....';
+
+S=S.split('');
+
+Face='1 2 3 4 5 6 7 8 9 10 11 12';
+
+font='Arial';
+
+size=1;
+
+speed=0.6;
+
+ns=(document.layers);
+
+ie=(document.all);
+
+Face=Face.split(' ');
+
+n=Face.length;
+
+a=size*10;
+
+ymouse=0;
+
+xmouse=0;
+
+scrll=0;
+
+props="&lt;font face="+font+" size="+size+" color="+fCol+"&gt;&lt;B&gt;";
+
+props2="&lt;font face="+font+" size="+size+" color="+dCol+"&gt;&lt;B&gt;";
+
+Split=360/n;
+
+Dsplit=360/D.length;
+
+HandHeight=ClockHeight/4.5
+
+HandWidth=ClockWidth/4.5
+
+HandY=-7;
+
+HandX=-2.5;
+
+scrll=0;
+
+step=0.06;
+
+currStep=0;
+
+y=new Array();x=new Array();Y=new Array();X=new Array();
+
+for (i=0; i &lt; n; i++){y[i]=0;x[i]=0;Y[i]=0;X[i]=0}
+
+Dy=new Array();Dx=new Array();DY=new Array();DX=new Array();
+
+for (i=0; i &lt; D.length; i++){Dy[i]=0;Dx[i]=0;DY[i]=0;DX[i]=0}
+
+if (ns){
+
+for (i=0; i &lt; D.length; i++)
+
+document.write('&lt;layer name="nsDate'+i+'" top=0 left=0 height='+a+' width='+a+'&gt;&lt;center&gt;'+props2+D[i]+'&lt;/font&gt;&lt;/center&gt;&lt;/layer&gt;');
+
+for (i=0; i &lt; n; i++)
+
+document.write('&lt;layer name="nsFace'+i+'" top=0 left=0 height='+a+' width='+a+'&gt;&lt;center&gt;'+props+Face[i]+'&lt;/font&gt;&lt;/center&gt;&lt;/layer&gt;');
+
+for (i=0; i &lt; S.length; i++)
+
+document.write('&lt;layer name=nsSeconds'+i+' top=0 left=0 width=15 height=15&gt;&lt;font face=Arial size=3 color='+sCol+'&gt;&lt;center&gt;&lt;b&gt;'+S[i]+'&lt;/b&gt;&lt;/center&gt;&lt;/font&gt;&lt;/layer&gt;');
+
+for (i=0; i &lt; M.length; i++)
+
+document.write('&lt;layer name=nsMinutes'+i+' top=0 left=0 width=15 height=15&gt;&lt;font face=Arial size=3 color='+mCol+'&gt;&lt;center&gt;&lt;b&gt;'+M[i]+'&lt;/b&gt;&lt;/center&gt;&lt;/font&gt;&lt;/layer&gt;');
+
+for (i=0; i &lt; H.length; i++)
+
+document.write('&lt;layer name=nsHours'+i+' top=0 left=0 width=15 height=15&gt;&lt;font face=Arial size=3 color='+hCol+'&gt;&lt;center&gt;&lt;b&gt;'+H[i]+'&lt;/b&gt;&lt;/center&gt;&lt;/font&gt;&lt;/layer&gt;');
+
+}
+
+if (ie){
+
+document.write('&lt;div id="Od" style="position:absolute;top:0px;left:0px"&gt;&lt;div style="position:relative"&gt;');
+
+for (i=0; i &lt; D.length; i++)
+
+document.write('&lt;div id="ieDate" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center"&gt;'+props2+D[i]+'&lt;/B&gt;&lt;/font&gt;&lt;/div&gt;');
+
+document.write('&lt;/div&gt;&lt;/div&gt;');
+
+document.write('&lt;div id="Of" style="position:absolute;top:0px;left:0px"&gt;&lt;div style="position:relative"&gt;');
+
+for (i=0; i &lt; n; i++)
+
+document.write('&lt;div id="ieFace" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center"&gt;'+props+Face[i]+'&lt;/B&gt;&lt;/font&gt;&lt;/div&gt;');
+
+document.write('&lt;/div&gt;&lt;/div&gt;');
+
+document.write('&lt;div id="Oh" style="position:absolute;top:0px;left:0px"&gt;&lt;div style="position:relative"&gt;');
+
+for (i=0; i &lt; H.length; i++)
+
+document.write('&lt;div id="ieHours" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+hCol+';text-align:center;font-weight:bold"&gt;'+H[i]+'&lt;/div&gt;');
+
+document.write('&lt;/div&gt;&lt;/div&gt;');
+
+document.write('&lt;div id="Om" style="position:absolute;top:0px;left:0px"&gt;&lt;div style="position:relative"&gt;');
+
+for (i=0; i &lt; M.length; i++)
+
+document.write('&lt;div id="ieMinutes" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+mCol+';text-align:center;font-weight:bold"&gt;'+M[i]+'&lt;/div&gt;');
+
+document.write('&lt;/div&gt;&lt;/div&gt;')
+
+document.write('&lt;div id="Os" style="position:absolute;top:0px;left:0px"&gt;&lt;div style="position:relative"&gt;');
+
+for (i=0; i &lt; S.length; i++)
+
+document.write('&lt;div id="ieSeconds" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+sCol+';text-align:center;font-weight:bold"&gt;'+S[i]+'&lt;/div&gt;');
+
+document.write('&lt;/div&gt;&lt;/div&gt;')
+
+}
+
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+
+ymouse = (ns)?evnt.pageY+ClockFromMouseY-(window.pageYOffset):event.y+ClockFromMouseY;
+
+xmouse = (ns)?evnt.pageX+ClockFromMouseX:event.x+ClockFromMouseX;
+
+}
+
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+
+function ClockAndAssign(){
+
+time = new Date ();
+
+secs = time.getSeconds();
+
+sec = -1.57 + Math.PI * secs/30;
+
+mins = time.getMinutes();
+
+min = -1.57 + Math.PI * mins/30;
+
+hr = time.getHours();
+
+hrs = -1.575 + Math.PI * hr/6+Math.PI*parseInt(time.getMinutes())/360;
+
+if (ie){
+
+Od.style.top=window.document.body.scrollTop;
+
+Of.style.top=window.document.body.scrollTop;
+
+Oh.style.top=window.document.body.scrollTop;
+
+Om.style.top=window.document.body.scrollTop;
+
+Os.style.top=window.document.body.scrollTop;
+
+}
+
+for (i=0; i &lt; n; i++){
+
+ var F=(ns)?document.layers['nsFace'+i]:ieFace[i].style;
+
+ F.top=y[i] + ClockHeight*Math.sin(-1.0471 + i*Split*Math.PI/180)+scrll;
+
+ F.left=x[i] + ClockWidth*Math.cos(-1.0471 + i*Split*Math.PI/180);
+
+ }
+
+for (i=0; i &lt; H.length; i++){
+
+ var HL=(ns)?document.layers['nsHours'+i]:ieHours[i].style;
+
+ HL.top=y[i]+HandY+(i*HandHeight)*Math.sin(hrs)+scrll;
+
+ HL.left=x[i]+HandX+(i*HandWidth)*Math.cos(hrs);
+
+ }
+
+for (i=0; i &lt; M.length; i++){
+
+ var ML=(ns)?document.layers['nsMinutes'+i]:ieMinutes[i].style;
+
+ ML.top=y[i]+HandY+(i*HandHeight)*Math.sin(min)+scrll;
+
+ ML.left=x[i]+HandX+(i*HandWidth)*Math.cos(min);
+
+ }
+
+for (i=0; i &lt; S.length; i++){
+
+ var SL=(ns)?document.layers['nsSeconds'+i]:ieSeconds[i].style;
+
+ SL.top=y[i]+HandY+(i*HandHeight)*Math.sin(sec)+scrll;
+
+ SL.left=x[i]+HandX+(i*HandWidth)*Math.cos(sec);
+
+ }
+
+for (i=0; i &lt; D.length; i++){
+
+ var DL=(ns)?document.layers['nsDate'+i]:ieDate[i].style;
+
+ DL.top=Dy[i] + ClockHeight*1.5*Math.sin(currStep+i*Dsplit*Math.PI/180)+scrll;
+
+ DL.left=Dx[i] + ClockWidth*1.5*Math.cos(currStep+i*Dsplit*Math.PI/180);
+
+ }
+
+currStep-=step;
+
+}
+
+function Delay(){
+
+scrll=(ns)?window.pageYOffset:0;
+
+Dy[0]=Math.round(DY[0]+=((ymouse)-DY[0])*speed);
+
+Dx[0]=Math.round(DX[0]+=((xmouse)-DX[0])*speed);
+
+for (i=1; i &lt; D.length; i++){
+
+Dy[i]=Math.round(DY[i]+=(Dy[i-1]-DY[i])*speed);
+
+Dx[i]=Math.round(DX[i]+=(Dx[i-1]-DX[i])*speed);
+
+}
+
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+
+for (i=1; i &lt; n; i++){
+
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+
+ClockAndAssign();
+
+setTimeout('Delay()',20);
+
+}
+
+if (ns||ie)window.onload=Delay;
+
+&lt;/script&gt;
+
+
+
+
+
+&lt;p&gt;&lt;center&gt;
+
+&lt;font face="arial, helvetica" size"-2"&gt;Free JavaScripts provided&lt;br&gt;
+
+by &lt;a href="http://javascriptsource.com"&gt;The JavaScript Source&lt;/a&gt;&lt;/font&gt;
+
+&lt;/center&gt;&lt;p&gt;
+
+
+
+&lt;!-- Script Size:  7.48 KB --&gt;</textarea><br><font FACE="helvetica,arial,geneva"><a href="../link-us.html">Did you use this script?&nbsp;&nbsp;Do you like this site?&nbsp;&nbsp;Please link to us!</a></font></td></tr>
+
+</table>
+</form>
+<!--content_stop-->
+
+<p>
+
+<td>
+<!--   Begin 125X800 Ad Code  -->
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/clocks/mouse-trail-clock.html/1919551765/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_IT_IMS_1t/it-ims-spring03-125x600.gif"  ALT="Increasing Quality Through IT Sourcing & Services"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/clocks/mouse-trail-clock.html/1919551765/125x800/House_IT_IMS_1t/it-ims-spring03-125x600.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+<!--   End 125X800 Ad Code  -->
+</td></tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function getCookieVal (offset) {
+var endstr = document.cookie.indexOf(";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+var arg = name + "=";
+var alen = arg.length;
+var clen = document.cookie.length;
+var i = 0;
+while (i < clen) {
+var j = i + alen;
+if (document.cookie.substring(i, j) == arg)
+return getCookieVal (j);
+i = document.cookie.indexOf(" ", i) + 1;
+if (i == 0)
+break;
+}
+return null;
+}
+function SetCookie (name, value) {
+var argv = SetCookie.arguments;
+var argc = SetCookie.arguments.length;
+var expires = (argc > 2) ? argv[2] : null;
+var path = "/"; //(argc > 3) ? argv[3] : null;
+var domain = (argc > 4) ? argv[4] : null;
+var secure = (argc > 5) ? argv[5] : false;
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" +
+expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) +
+((domain == null) ? "" : ("; domain=" + domain)) +
+((secure == true) ? "; secure" : "");
+}
+
+var emailcookie = GetCookie('email_address');
+if (emailcookie == null) {
+emailcookie = 'your email here';
+}
+
+function chk(email, formname)
+{
+invalid = "";
+
+if (!email)
+invalid = "No email address found!  Try reloading the page then use the 'email a script' feature again.";
+
+else {
+
+if ( (email.indexOf("@") == -1) || (email.indexOf(".") == -1) )
+invalid += "\n\nInvalid email address.  Your email address is missing an '@' sign and a '.' in the domain name (like '.com').  Please check your address then submit again.";
+
+if (email.indexOf("youremailhere") > -1)
+invalid += "\n\nInvalid email address.  Make sure your email address included your username, the '@' sign, and the domain name (like '.com').";
+
+if (email.indexOf("\\") > -1)
+invalid += "\n\nEmail address contains an invalid back-slash (\\) character.  Remove the character and submit again.";
+
+if (email.indexOf("/") > -1)
+invalid += "\n\nEmail address contains an invalid forward-slash (/) character.  Remove the character and submit again.";
+
+if (email.indexOf("'") > -1)
+invalid += "\n\nEmail address contains an invalid apostrophe (') character.  Remove the character and submit again.";
+
+if (email.indexOf("zaz.com.br") > -1)
+invalid += "\n\nPlease do not use an email address that has an autoresponder set up for it.  Thanks.";
+
+if (email.indexOf("!") > -1)
+invalid += "\n\nEmail address contains an invalid exclamation point (!) character.  Remove the character or correct the email address then submit again.";
+
+if ( (email.indexOf(",") > -1) || (email.indexOf(";") > -1) )
+invalid += "\n\nPlease only enter one email address in the box at a time.  Remove the extra addresses and submit again.";
+
+if (email.indexOf("?subject") > -1)
+invalid += "\n\nPlease do not add '?subject=...' to your email address.  Scriptbot will send you the script with a pre-defined subject already.  Please remove the '?subject=...' from your email address and submit again.";
+}
+
+if (invalid == "")
+   {
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', email, largeExpDate);
+   if (formname == "scriptbot")
+      {
+      page = "http://javascript.internet.com/sent.html?" + email;
+      window.open(page, "AdWindow", "width=650,height=200");
+      }
+   return true;
+}
+else
+   {
+   alert("Oops, something is wrong...." + invalid);
+   return false;
+   }
+}
+
+function updateNewsletters() {
+with (document.forms["newslettersignup"]) {
+emailStr = email.value;
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]"; // remove   ( ) < > @ , ; : \ " . [ ]    */
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+alert("Email address seems incorrect (check @ and .'s)");
+return false;;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+alert("The username doesn't seem to be valid.");
+return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+      }
+   }
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+alert("The domain name doesn't seem to be valid.");
+return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+alert("The address must end in a three-letter domain, or two letter country.");
+return false;
+}
+if (len<2) {
+var errStr="This address is missing a hostname!";
+alert(errStr);
+return false;
+}
+List_Name.value = newsletter.options[newsletter.selectedIndex].value
+		+ nltype.options[nltype.selectedIndex].value;
+
+   var largeExpDate = new Date();
+   largeExpDate.setTime(largeExpDate.getTime() + (31 * 24 * 3600 * 1000));
+   SetCookie('email_address', emailStr, largeExpDate);
+
+return true;
+   }
+}
+// End -->
+</script>
+
+<p>
+<center>
+
+<table cellpadding=0 cellspacing=0 border=0 width="620">
+<tr>
+<td align=left>
+
+<table cellpadding=0 cellspacing=0 border=1 bgcolor=#ffffcc>
+<tr><td align=center valign=middle>
+
+<table cellpadding=5 cellspacing=10 border=0 bgcolor=#ffffcc>
+<tr><td colspan=4 align=center valign=bottom>
+<font face="arial, helvetica" size="-1"><a href="http://e-newsletters.internet.com/javascriptsource.html">Sign up for the JavaScript Weekly</a></font></td></tr>
+<tr>
+<td>
+
+<form action="http://e-newsletters.internet.com/cgi-bin/subscribe" method=POST>
+<TABLE>
+  <TR>
+    <td>
+	<FONT SIZE="-1">
+	<div align="center"><input type=checkbox name="List_Name" value="javascript-com-text">Text &nbsp;&nbsp;
+	<input type=checkbox name="List_Name" value="javascript-com-html" checked>HTML
+
+	<br>
+	<div align="center"><input name="email" size="15" value="my@email">&nbsp;&nbsp;
+	<input type="hidden" name="redirect_ok" value="http://e-newsletters.internet.com/thankyou_new.html">
+	<input type="submit" name="Submit" value="Join"></div>
+    </td>
+  </TR>
+</TABLE>
+</form>
+
+</td>
+</tr>
+</table>
+<font face="arial, helvetica" size="-1"><a href="http://www.internet.com/corporate/privacy/privacypolicy.html">internet.com Privacy Policy</a></font>
+</td></tr></table>
+
+
+</TD>
+
+<td align=right>
+
+<form name="scriptbot" action="/cgi-bin/scriptbot.cgi" method="POST" onSubmit="return chk(document.scriptbot.email.value, 'scriptbot')">
+
+<input type=hidden name=filename value='mouse-trail-clock.html'>
+
+<table border=1 cellspacing=0 cellpadding=20><tr bgcolor=#ebebeb>
+<td align=center><tt>We'll send this script to you!<p></tt>
+<SCRIPT>
+<!-- Begin
+document.write('<input type=text size=25 name=email value="'+emailcookie+'" onFocus="if(this.value==\'your email here\')this.value=\'\'\">');
+// End -->
+</SCRIPT>
+
+<input type=submit value="Send it!">
+<p><font size="-2">(just click "Send it!" once!)</font></td></tr>
+</table></form>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td align=right><font face="arial" size="-2"><div align=right><span class="address">
+[ <A HREF="../feedback.html" ONMOUSEOVER="window.status='Comments, questions, suggestions, or gripes, we want to hear from you!'; return true" ONMOUSEOUT="window.status=''; return true">Contact Us!</A> ]<BR>
+
+[ <A HREF="http://forums.internet.com/WebX?14@%5e3027@.ee6b313" ONMOUSEOVER="window.status='Visit our JavaScript Forum for assistance!'; return true" ONMOUSEOUT="window.status=' '; return true">JavaScript Forum</A> ]<br>
+
+[ <A HREF="../contribute/default.htm" ONMOUSEOVER="window.status='Submit your script creation to us and it could be featured on our site!'; return true" ONMOUSEOUT="window.status=''; return true">Submit Your Script!</A> ]<p>
+
+</span></div></font></td>
+</tr></table>
+
+<DIV ALIGN="CENTER">
+<!--   Begin 468X60 Ad Code (750X100 max)   -->
+
+<A HREF="http://javascript.internet.com/RealMedia/ads/click_lx.cgi/intm/webdev/javascript.internet.com/clocks/mouse-trail-clock.html/1820175173/468x60-2/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630" target="_top"><IMG SRC="http://javascript.internet.com/RealMedia/ads/Creatives/House_esecurity_2c/esecurity-750.gif"  ALT="Reports on security issues of ecommerce environments"  BORDER="0"></A><img src="http://javascript.internet.com/RealMedia/ads/adstream_lx.cgi/intm/webdev/javascript.internet.com/clocks/mouse-trail-clock.html/1820175173/468x60-2/House_esecurity_2c/esecurity-750.gif/34326239353434353365313232613630?_RM_EMPTY_" Width="1" Height="1" Border="0">
+
+<!--   End 468X60 Ad Code (750X100 max)   -->
+</DIV>
+
+<CENTER>
+<SPAN CLASS="foot">Copyright 2003 Jupitermedia Corporation All Rights Reserved.</SPAN><BR>
+<A HREF="http://www.internet.com/corporate/legal.html" CLASS="foot">Legal Notices</A>,  <A HREF="http://www.internet.com/corporate/reprints.html#Licensing" CLASS="foot">Licensing</A>, <A HREF="http://www.internet.com/corporate/reprints.html#Reprints" CLASS="foot">Reprints</A>, & <A HREF="http://www.internet.com/corporate/reprints.html#Permissions" CLASS="foot">Permissions</A>,  <A HREF="http://www.internet.com/corporate/privacy/privacypolicy.html" CLASS="foot">Privacy Policy</A>.<BR><A HREF="http://www.internet.com"><IMG SRC="/img/URL.gif" ALT="http://www.internet.com/" WIDTH="161" HEIGHT="18" BORDER="0"></A></CENTER>
+
+
+</center>
+</body></html>
+
+
