@@ -1,5 +1,19 @@
 Git_Tips
 
+12/22/16
+List a Repo’s Branches ( All of them )
+git ls-remote --heads http://stash.dev.svbank.com/scm/mur/svb-web-payments.git
+From
+http://stackoverflow.com/questions/8223906/how-to-check-if-remote-branch-exists-on-a-given-remote-repository
+
+12/20/16
+git diff when the file name has changed
+git diff HEAD:./oldfilename newfilename
+Additionally
+git diff HEAD:path/to/oldfilename newfilename
+From:
+http://stackoverflow.com/questions/5730460/how-to-do-a-git-diff-on-moved-renamed-file
+
 10/14/16
 Getting rid of continual .metadata and .recommenders and any other such filesÉ..
 you need to add and commit every thing that you are interested inÉ.. 

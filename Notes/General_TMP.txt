@@ -1,6 +1,36 @@
 General_TMP
 
 
+12/20/16 from email Dmytro Sotnyk <DSotnyk@svb.com> 12/14/16
+
+Question was raised on the previous meeting and it seems that we need to be on the same page about:
+	•	what is encryption
+	•	what is hashing
+	•	what is symmetric and asymmetric encryption
+	•	how fast and trusted they are
+So, let me provide few simple articles from Wikipedia
+https://en.wikipedia.org/wiki/Encryption
+https://en.wikipedia.org/wiki/Symmetric-key_algorithm
+https://en.wikipedia.org/wiki/Public-key_cryptography
+https://en.wikipedia.org/wiki/Hybrid_cryptosystem
+https://en.wikipedia.org/wiki/Message_authentication_code
+https://en.wikipedia.org/wiki/Hash-based_message_authentication_code
+https://en.wikipedia.org/wiki/Digital_signature
+https://en.wikipedia.org/wiki/Hash_function
+https://en.wikipedia.org/wiki/MD5
+https://en.wikipedia.org/wiki/SHA-1
+https://en.wikipedia.org/wiki/SHA-2
+https://en.wikipedia.org/wiki/SHA-3
+
+Now about the security, 3 articles attached, here is the public small part of the investigation/implementation, made for Data Lake protection of the retailer and for HDP platform improvement. Really hope that someday this solution will be the part of Hadoop/Hive.
+ItÕs for your internal usage, because I still had no chance to publish them officially.
+
+Some benchmarking here - https://github.com/yarnd/cryptotest-poc Yes, I invented the wheel and created own micro-benchmarking library, this was faster than read manuals on existing solutions and doubt on results.
+
+
+
+
+
 AND fixVersion = "Unscheduled" AND lables = "common_auth"
 
 

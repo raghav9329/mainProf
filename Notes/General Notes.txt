@@ -1,9 +1,10 @@
 General Notes
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 
 pulled from 
 http://stash.dev.svbank.com/projects/API/repos/engdocs/browse/principles/testing.md
-Testing at Standard Treasury
+Testing at Standard Treasury  ( ?? Stash Reposiory ??  )
+[ wondered if the spell check changed the above to Std Treasure ?? ]
 
 There are multiple types of tests recognized by our engineering organization.
 Unit: Fast tests that cover a specific method or function. Sockets not allowed, heavy use of mock
@@ -11,7 +12,14 @@ Functional: that combine multiple classes or systems. Single process, mocked ban
 Integration: Tests that depend on external processes, Multi-process, no mocks, synchronization required. Typically this runs on a specialized cluster.
 Simulation: Simulation tests run expensive tests under varying degrees of load and realistic use patterns using a probabilistic load use case generator.
 
+===========================
 
+I appreciate your interest in my availability, but I am currently focused directly on San Francisco.
+
+ 
+Thank you for the consideration
+
+=============================
 
 
 6/20/16
