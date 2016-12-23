@@ -1,1 +1,0 @@
-READ ME about how Notes are exported as Text Files. I’ve got the small app Notes Exporter.App on the Mac Desk top. Click this app and it goes and grabbs all the notes and saves them as text files. An improvement to this would be to have the export process save as Text files instead of the HTML files It saves now. 1/19/16 Looking for that better app now.
