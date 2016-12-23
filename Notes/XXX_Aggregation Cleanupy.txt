@@ -1,0 +1,817 @@
+XXX_Aggregation Cleanup.txt
+
+This file is the landing location for the contents of many previous text files that I will be removing from the repo
+
+File names here:
+XXX_A_Regression_planning
+IN_Work
+ToDo_General
+Testing Notes
+Observed_provblems
+Murano-Repo-Dependencies
+Sprint Regression Automation
+
+
+
+
+
+
+
+Body of file with file name first
+XXX_A_Regression_planning
+
+7-20-2016
+Regression has got to work backward.  Meaning I need to capture want is current regression.
+What was built in the past has now changed.
+
+
+7-18-2016
+Product entry:  because we are eConnected limited, user login cannot be considered part of Murano payments.
+What I will consider is an entitled user getting the Union Jack 
+
+I need to identify regression concepts that exist for each Sprint.
+Sprint 1  what is key
+Sprint 2  What is key
+. . . . .
+Sprint 17 what was key
+
+Sprint 2016-07
+. . . . .
+Spring 2016-13
+Sprint 2016-14
+
+========================================================
+
+IN_Work
+::Note:: = Entries need a Closed indication maybe ÒclosedÓ right before the date
+
+
+Nick.satija@gmail    Nick Satija
+
+qa user account
+qa client
+
+8/16 TAG TESTS
+
+8/15 Color conditional formatting on markFinalQA Excel sheet on Account number cells
+8/15 Nolio  Checkend in on with Supriya
+8/15 Stories:  Get fully unto speed on ALL in this sprint.
+8/15 Finish Excel Sheets for David What can I get out of UAT ??
+8/15  Clean up below
+
+
+8/10  Still need to  Clean this up
+
+8/8/16
+Service Requests Jenkins  Checked up on this:  no news	
+Service Requests Nolio    Checked up on this: no news
+
+Help request DT Vagrant
+
+My own help Set other VMs up with 2nd network access and try out Chrome on Win 7, on Win 10, etc
+
+
+Test Infrastructure
+	•	Page Documentation 
+
+Testing the $VERSION table Connection pool
+	•	Need VishalÕs help for parameter setting
+	•	Need John JohnsonÕs approval for account connection
+
+
+Windows VM 
+	•	Take the technique for Ie and apply to FF and Chrome.  Maybe even try Safari.
+
+
+BACK LOG
+Regression Testing
+Tests Automation
+	•	on QA
+	•	on Win VMs
+
+DB Connection Pool test
+Sonar: By Team View
+Integration testing
+	•	what is the nature of the execution environment
+New DotFiles solution
+
+
+====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  
+DONE !
+====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  ====  
+
+
+
+7/26/16 Done Closed
+MPAY-1917IN DEV5 sub-tasksPayment audit report amount total
+This is Last Sprints Bonus. 
+Gherkins are done 
+Test see to be complete.  Testing now7/26 10:02
+
+Finish
+
+MPAY-1724DRAFT1 sub-taskPayee Name on Payment Summary
+Gherkins in place.  Need Test 
+
+
+MPAY-2035DRAFT1 sub-taskPayment Audit Totals only for successful events
+Gherkins : Status
+Tests : This needs the TC written for the already completed story
+
+
+MPAY-1940DRAFT1 sub-taskAdd Payment Date to Payment Audit Report
+Gherkins : Done
+Tests : Over Done.  Need to cut down
+
+
+7-18-2016
+Comments on 1279 capturing so as to communicate all at once.
+
+4 Given: I have access to the audit report page and land on it and filtered by client name: ÒClient A"
+When: I type a valid char(s) into client filter field 
+but I donÕt select a value from the dropdown by clicking out
+Then: Client text-box defaults back to "Client AÓ
+Question:  what action is taken?  This G only talks about what isnÕt done, and yet there is still output. 
+Some action is not mentioned in this G.
+Also, ItÕs does
+
+
+
+
+
+5/2/16  Text for the Mpay 1538 test case
+
+XAction:
+Global Faster payment System Limit 100K
+ ** Not a Per user Calculation, but a system wide Transaction limitation
+ ** By Per user, meaning it cannot be configured differently
+ ** All FASTER Payment System entries are graded in this manner
+
+Client Transaction (CliXaction ) 51 K
+
+User Level Transaction ( ULXaction) 25 K
+
+
+Cumulative :
+
+Cumulive Client Limit   80K
+
+Cumulative User Limit   55K
+
+==============================================
+TransAction: 
+Pay system Per transaction Limit 100K
+Only for  asdfasflasdf               
+adsfa;lskja;lksfjl;aksdjfl;kajsfl;aksdfpasupioasudf
+asdfaiopsfuoaisaiosdfasdiofasodifuaosdf
+
+==============================================
+Cumulative: 
+ksjf;alkjq34;klrjq23;l4k5j2;lkjkl 
+j;lkj235;klj5l23;k4j23;l4kj23 ;2
+23;lk5j23;lkj23l45;kb2 52
+asfcas
+casf 
+==============================================
+
+
+4/28/16  
+Our Product Limits expensive db hits via a db caching refresh process.  
+This 15 cache refresh is prohibitive for testing db changes and the effect on code execution.
+Using  CA Nolio has allowed me to perform continual application module deployments
+effectively accomplish DB refresh and see a change in the application.
+
+Limit Testing: Having gotten some solid ground under my feet with db refresh late in day, the next move will at a high level followÉÉ
+
+First : find proper control over Faster Payment , system wide limit.
+Payments.Payment_type.MAX_SYS_TRAN_AMT This value is set to 100K
+Setting all client Max Values to greater than this limit allows me to expose any FASTER payment being made to run into this limit first. Changing this value and observing its change in the app behavior.
+This is done, but I need to extend with a number of users and clients in order to exercise the limit.
+
+Second: With other Clients using NON_FASTER Payment system I can configure Client Cumulative limits without
+bumping into the system wide FASTER Limit.  User per transaction limits are set to < cumulative limit,
+but > cumulative limit / 2.  In this way I can get a good read with just a few payments made.
+
+
+Third: Client Transaction limits are implemented not because the product needs them to operate, but to
+provide a safety net for mis configured dbs since we donÕt have a UI to elegantly see these configuration 
+at this time. The CliXaction limit has to be set lower than the lower than the UserXaction limit ( or set eh UserXaction limit higher for the test
+
+
+4-20-16
+CSRF  is top of lis
+1510 user setup on UAT: Abhi
+
+! 1511  Has precedence This is closable on UAT 
+1508 Abhi says it should be simple
+
+End ============================== of today
+
+4/7/16 I need a Note to capture Regression Automation
+ == 4-20 this is an ongoing effort.
+
+
+4/4/16 Starting entry into the Service Api Layer test investigation.  This may become itÕs own note.
+
+
+
+2/9/16 This is not an ongoing list.  
+Add and delete
+
+--------------------------------------------------------------------------------
+What do I want in a current Work Repo ???
+sounds - Done
+Images - Done
+dotfiles - Done
+notes - Open
+sourceCode_MarkDev - Open
+???
+???
+???
+
+
+Cleanup 889
+
+2/9/16 Story review Sprint 14
+
+Books Opened:
+
+2/8/16:
+Learning PHP MySQL & JavaScript
+JavaScript & AJAX for Dummies
+Javaotes6.pdf  David J. Eck
+
+====================================================================================
+ToDo_General
+
+10/31/16
+Reset the dot file concept and process.
+Keep the Mark/Dotfiles as the source.
+make all edits in Mark/Dotfiles.  Deploy back to the user root 
+Do deploy with Mark/Dotfiles shellScript
+This will alleviate the getDotFiles function that gets more than IÕm concerned withÉ.. 
+
+
+
+10/27/16
+Enter hours
+straighten out the shell functions
+within the same file
+	•	Get old ones moved off to say the top of the file
+	•	get the new ones that improve the old ones at the bottom
+	•	get the function names worked out 
+	•	put in a help/usage switch ( low pri )
+
+
+
+9/9/16
+Need to get that one story in Srint 15,16,17 that Sunny Validated but we never had any Test/Task for the story.
+Was to make a test and make sure with Sunny I wrote them correctly.
+
+9/8/16
+
+Get uid/pid to all things
+Jira
+confluence
+Slack
+email
+lynx
+stash
+nolio
+jenkins
+É
+SVB uid / newpas1*
+
+One thing I did with nick:
+git checkout -b <branch name >  in my case it was
+bugfix/MPAY-2235-add-a-client-cumulative-test-pair
+
+
+
+9/7/16
+Pull all 0.1.5 Test Reporting
+ ++ Will need a test/task for story 2007
+
+SusanÕs Acceptance Matrix:
+ ++ create a task for this work
+
+Ask if we are going to get email test reports daily ?
+
+Manage Sprint 18 testing
+Finish IffMpeg setup
+Get password to Jira Confluence
+
+QA Test Process:
+ ++ Complete glass fish, grizzly jersey, gradle
+
+
+
+Backup Notes:
+ ++ Fix File names
+
+get RSNYC to restart where it left off when it is needed to be stopped
+
+7/12/16
+Finish Testing 1792- Done
+Read me for the excel sheet
+Regression test for all sprints
+Testing for Sprint 14
+David T Configuration. - Done but still configuring Vagrant
+Automate running all the git file roundup scripts
+
+
+6/17 VisualVM  
+David Tee is using this. I look interesting
+
+
+4/22/16  Need an alias or some such that goes and gets all operating dot files and copies them into the ~Mark directory where ever they to.
+
+Need to finish the genDiskStructure script
+tree -La 2 > to output file  I have this called from an alias but it is only for 
+$home.  I need one that goes and recored all the directories in /Applications.
+Also this might be tree -L 1 cus I might not need the second layer É. looking
+
+3/16/16  Sort of a reboot 
+
+Move the Mark Repos into MarkGit
+Rename MarkGit
+Rest desktop Image links after MarGit rename
+
+
+
+++++ Personal Above this line
+++++ Professional below line
+
+
+5/4/16 Backup Notes
+
+
+/* end of 3/16/16 reboot
+-------------------------------
+2/4/16 I need a tips and tricks place to make entries
+for now will be in a general loc and will need to get movedÉ.
+
+Properly organize DotFiles __ All Unix Configs  2/9/16 mostly done
+
+Get all music off old phone
+
+What are all the URL Apps that were sent to me by Aditi staffing.   What are they for.
+
+
++++  Personal above this line
+
+2/23/16  I need to rewrite / add to my max daily cumulative and 
+spread my testing over a number of funding accounts.
+
+2/17/16  Need to go back over 306 : Max Daily by client ID
+There are two tests that werenÕt run, and I didnÕt run the others that were passes.  
+This fell on last Friday.  3/16/16 follow up.  This was done and the feature completed
+
+2/17/16  Eric:  test infrastructure process : EXECUTION SETUP
+
+
+--------------------------------------------------------------
+
+Build environment like DaveÕs 2/9/16 Back some time ago THEY said not to.
+Get Mac Slack App Done 1/21/16
+
+1/21/16 Do tickets 806, 107, 807 in that order 
+1/14/16 IntelliJ installed
+1/13/16 Win7 VMs for IE 9, 10, 11 installed
+1/11/16 Worked MPAY-817 ( my entry )
+
+Start on the entire list of tickets / stories in Sprint 12 2/9/16 completed some time back
+
+1/13/16 Ñ Not Done:  Refactor this list.
+
+Should be: 
+Not Done
+------------
+Done
+
+ÉÉÉÉÉÉÉÉÉÉÉ.. ( dot dot dot means current/today )
+
+
+1/7/16
+---------------------------------------------------------------------------
+1/6/16  
+
+Eric wants me to get Vbox installed and get IE for MAC..
+	•	Requires Admin Rights Ñ DONE !  1/13/16
+
+Install Eclipse
+	•	Must have Java SE 6 Runtime first  Ñ Done earlier than 1/13/16
+	•	Probably should install Java ** Requires Admin Rights ! - Done
+
+Looking at Zephyr Test Cases Started
+VPN Must Have !! - DONE !
+
+---------------------------------------------------------------------------
+1/5/16
+Need email from PayrollÉ - Not Done !  Asked Again
+
+Download the DotFiles.zip -Not done
+
+What are all the URL Apps that were sent to me by Aditi staffing.
+What are they for.
+
+
+
+---------------------------------------------------------------------------
+1/4/16
+Get a list of the build machines  - Not done
+Get a list of the test machines  - Not done
+Learn how to do builds  - Not done
+Learn how to deploy  - Not done
+
+
+Getting a handle on email sent to me from Corporate
+
+
+
+====================================================================================
+Testing Notes
+
+5/2/16 Pulling data out of 1500.1_setup Mpay 1538
+All the users research data.  I donÕt want this as a test case.
+
+
+TransAction Max Amount per Payment is $6,500.00
+
+USER ID Usr Login    CLIENT_ID
+------------------------------------------
+1460520 adbrain_fps 5163755
+1460576 adbrainfps2 5163755
+-1460523 adbrain_fps_bacs 5163758   What did the Ò-Ò Mean ?  I know something ???
+1460579 adbrainfpsbacs2 5163758
+1460524 adbrain_fps_chaps 5163759
+1460600 adbrainfpsnopay1 5163759
+1460580 adbrainfpschaps2 5163759
+1460528 sussex_fps 5163763
+1460531 sussex_fps_bacs 5163766
+1460532 sussex_fps_chaps 5163767
+1460599 adbrainfpsnopay 5163789
+1460597 adbrainfps2016 5163789
+
+
+adbrain_fps          	ok
+adbrainfps2		ok
+adbrain_fps_bacs     	NO Mk No Summ
+adbrainfpsbacs2        	ok	
+adbrain_fps_chaps    	No Mk No Summ
+adbrainfpsnopay1      	No Mk Got Sum
+adbrainfpschaps2     	ok
+sussex_fps            	trouble but can get there
+sussex_fps_bacs  	NO Mk No Summ
+sussex_fps_chaps     	NO Mk No Summ
+adbrainfpsnopay       	No Mk Got Sum
+adbrainfps2016     	Sum, mkPay_ButNoFund
+
+===============
+Additional layout config testing
+This text in the description area of jira test ( or ticket )
+Gives you a table with two heading columns
+and 4 or 5 rows of data
+
+||Heading 1||Heading 2||
+|Col A1|Col A2|
+|y             
+ asdfas    
+asdf         |       x    |
+|        yy   |       xx    |
+|        yyy   |       xxx    |
+|        yyyy   |       xxxx    |
+
+======================================
+
+
+
+
+
+3/21/16
+The CSRF service issues one token per session, so we would like the webapp to only request a token once and then re use it if it is still within the same session. This seems to be working in the local environment but not in dev
+
+Open the MakePayment form and open the inspection tool.
+open the Network-tab in the inspection tool
+Make a payment, click the submit button on the Review dialog
+Immediately find an entry in the network tab <chrome> token/  <firefox> 200 POST /csrf/services/rest/ssrf/vi/token/   
+On either [ ch | ff ] view the Network Response tab ( within Networks )  
+Copy te string  that follows 'token:'    This string is the token.
+
+copy this down.
+
+Log out and log back in make a payment and reveiw the token response.  
+
+Expect:  It must be different
+
+From within the same session, make another payment.
+
+Expect: it should be the same value since the last login and same recent payment.
+
+
+
+3-1-2016
+Protractor test in the Integration/scenarios directorygrep 
+
+
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ find . *.test.js  -type f -print0 | xargs -0 grep "expect" | wc -l
+ 
+ 
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ ll
+total 136
+drwxr-xr-x  10 maatkins  SVBANKDOM\Domain Users    340 Mar  1 18:21 ./
+drwxr-xr-x  10 maatkins  SVBANKDOM\Domain Users    340 Feb 19 11:23 ../
+-rw-r--r--   1 maatkins  SVBANKDOM\Domain Users  12288 Mar  1 18:22 .ptor_user4_bacs_chapsScenario.test.js.swp
+-rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   3451 Feb 24 11:21 cumulativeLimitDailyUserlimitScenario.test.db.js
+-rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   2757 Feb 24 11:21 cumulativeLimitScenario.test.db.js
+-rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   7283 Feb 24 11:21 paymentDisplay.test.db.js
+-rw-r--r--   1 maatkins  SVBANKDOM\Domain Users  13705 Feb 24 11:21 ptor_user2_allScenario.test.js
+-rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   6076 Feb 24 11:21 ptor_user3_allScenario.test.js
+-rw-r--r--   1 maatkins  SVBANKDOM\Domain Users   2317 Feb  9 13:52 ptor_user4_bacs_chapsScenario.test.js
+-rw-r--r--   1 maatkins  SVBANKDOM\Domain Users  10997 Feb 24 11:21 ptor_user5_allScenario.test.js
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *.js | wc -l  =
+     183
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *.js |less
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect cumulativeLimitD* | wc -l  =  5
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect cumulativeLimitS* | wc -l  = 5
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect pay* | wc -l  = 41
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user2* | wc -l == 48
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user3* | wc -l == 36
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user4* | wc -l  == 5
+maatkins@CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ grep expect *user5* | wc -l  == 43
+maatkins @CHB-M-LPT90034:~/svb-web-payments/integration/scenarios$ 
+
+
+Feb 24th had this as he list
+NAME
+ Mur Scheduler Payments
+ Mur Web Core UI
+ Mur Web Payment
+ Mur Service Payments
+ Mur Entitlement Service
+ Mur Service Accounts
+ Mur Svc Lib - Exception
+ Mur Svc Lib - Logger
+ Mur Svc Lib - DBConnector
+ Mur Svc Lib - Http Client
+ Mur Svc Lib - Mappers
+ Mur Svc Lib - Monitoring
+ Mur Svc Lib - Auth
+2/17/16 Since we are sprint specific this file should be moved to the sprint specific details
+Likely this will be deprecated or a least become a one or capture or something.
+
+=== Contents moved into sprint 12 & 13 documents ===
+
+2/18/16
+General Notes:  These are not sprint specific
+
+
+/***************************************************************
+** 
+**  These are being used to test cumulative Limits
+** 
+***************************************************************/
+
+select * from payment where payment_id = 886;
+
+select * from payment order by amount DESC;
+
+select * from payment order by payment_id DESC;
+
+// 5163756  qa adbrain_bacs
+
+// 5173182 dev adbrain_bacs
+
+SELECT SUM(P.AMOUNT)
+              FROM PAYMENT P
+              WHERE P.CLIENT_ID = 5163756 AND P.PAYMENT_DATE = TRUNC(SYSDATE);
+            
+              
+
+select * from payment order by payment_id DESC;
+
+
+select * from payment where client_id = 5173182 order by payment_date DESC, payment_id DESC;
+
+select count(*) from payment where client_id = 5163756 AND PAYMENT_DATE = TRUNC(SYSDATE);
+
+
+https://murano.qa4.svbconnect.com/entitlement/service/rest/private/entitlement/v1/sessionEntitlements?entitlements=PAYMENT_FREE_FORM
+REST Interface :  this tells you the currently logged in UID, ClientID xaction limits, etc.
+
+**** The 302 query is É.
+
+
+// adbrain_fps user
+SELECT SUM(P.AMOUNT)
+              FROM PAYMENT P
+              WHERE P.CREATOR_ID = 1460520 AND P.PAYMENT_DATE = TRUNC(SYSDATE)
+              AND P.FUNDING_ACCOUNT_IDENTIFIER = 18998239;
+
+adbrain_fps UserID == Creator_ID == 1460520
+adbrainfps2 UserID == Creator_ID == 1460576
+
+Funding_account_id == 2011[2181] == 18998239
+Funding_account_id == 2010[5436] == 7391192
+Funding_account_id == 2011[2203] == 18998240
+Funding_account_id == 2011[3714] == 21707232
+Funding_account_id == 2011[2211] == 18998241
+    
+
+[3:49] 
+CREATOR_ID = user id
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+end.
+
+
+====================================================================================
+
+Observed_provblems
+
+These are problems that donÕt warrant a bug, but if they repeated 
+
+
+4/12/16:  having changed the payment cutoff time it was not picked up with a new login
+Usually the value is set at 23:55.  I was setting at 22:30 and they then 22:45.
+
+I saw it switch to 22:45 and then it went back to 22:30 and stayed there only switching to 
+22:45 after another browser(this one Chrome ) logged in and go the right value.
+
+
+
+====================================================================================
+Murano-Repo-Dependencies
+
+
+
+10/27/16 Close this file
+These dependencies are intrarepo dependencies. All repo product will build and start independently on their own.  i.e.. they donÕt need each other.
+
+svn-service-payments
+
+// Dependencies required for the project
+dependencies {
+    runtime project(':modules:encryption')
+    providedCompile "javax.servlet:servlet-api:2.5"
+    providedRuntime 'javax.servlet:jstl:1.1.2'
+
+    compile 'com.svb.murano.common:mur-java-lib-interfaces:1.1.0'
+    compile 'com.svb.murano.common:mur-java-lib-exception:3.2.0'
+    compile 'com.svb.murano.common:mur-java-lib-logger:4.0.0'
+    compile 'com.svb.murano.common:mur-java-lib-mappers:1.0.7'
+
+    compile 'com.svb.murano.common:mur-java-lib-dbconnector:1.4.1'
+    compile 'com.svb.murano.common:mur-java-lib-httpclient:6.2.2'
+    compile 'com.svb.murano.common:mur-java-lib-monitoring:4.1.19'
+    compile 'com.svb.murano.common:mur-java-lib-auth:3.2.4'
+
+
+    compile "com.fasterxml.jackson.core:jackson-databind:2.6.1"
+    compile "com.fasterxml.jackson.core:jackson-core:2.6.1"
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.1'
+    compile 'org.glassfish.jersey.connectors:jersey-apache-connector:2.22.1'
+
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.6.1"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.6.1"
+
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.1'
+    compile 'org.glassfish.jersey.core:jersey-client:2.22.1'
+    compile 'org.glassfish.jersey.core:jersey-server:2.22.1'
+    compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.22.1'
+    compile 'org.glassfish.jersey.ext:jersey-spring3:2.22.1'
+
+    compile 'org.slf4j:slf4j-api:1.7.2'
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+    compile 'ch.qos.logback:logback-core:1.1.3'
+
+    runtime 'org.springframework:spring-core:4.1.6.RELEASE'
+    compile 'org.springframework:spring-test:4.1.6.RELEASE'
+
+    compile 'org.json:json:20141113'
+
+    // MyBatis configuration
+    compile 'org.mybatis:mybatis:3.2.8'
+
+    compile 'javax.json:javax.json-api:1.0'
+
+    compile 'org.glassfish.jersey.ext:jersey-bean-validation:2.22.1'
+    
+    runtime fileTree(dir: 'lib', include: '*.jar')
+    runtime fileTree(dir: 'modules/encryption/build/libs', include: '*.jar')
+
+    testCompile 'org.jmockit:jmockit:1.8'
+    testCompile 'org.testng:testng:6.8.21'
+    testCompile 'org.uncommons:reportng:1.1.4'
+
+    testCompile 'org.glassfish.jersey.test-framework:jersey-test-framework-core:2.22.1'
+    testCompile 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:2.22.1'
+    testCompile 'com.github.fge:json-schema-validator:2.2.6'
+    testCompile 'org.hamcrest:hamcrest-all:1.3'
+    testCompile 'weblogic.jndi:wlfullclient:10.3.4.0'
+
+    // https://discuss.gradle.org/t/provide-support-for-per-unit-test-coverage-reports-in-sonarqube/397
+    // using version 3.2 (April 2015) see: http://mvnrepository.com/artifact/org.codehaus.sonar-plugins.java/sonar-jacoco-listeners
+    //testRuntime 'org.codehaus.sonar-plugins.java:sonar-jacoco-listeners:3.2'
+
+
+
+
+
+====================================================================================
+Sprint Regression Automation
+7-1-16 it occurs to me that I need to name my files 
+as they relate to the sprints.
+Removing the A*, B*, C*, etc.
+
+No Testcases until Sprint 3
+Test will be identified by MPAY value.Test step
+Ex: Sprint 3 212.1,2,3 thatÕs all there are
+Ex: Sprint 3 216.1..4   There are four test steps
+
+Sprint 2016-07
+
+Old Sprint naming format
+
+Sprint  
+Sprint  
+Sprint 15 
+Sprint 14 
+
+Sprint 13 
+Sprint 12 
+
+Sprint 11 
+
+Sprint 10
+
+Sprint 9:q
+
+Sprint 8
+
+Sprint 7
+
+Sprint 6
+
+Sprint 5
+
+
+Sprint 4 
+
+Sprint 3 Stories are 97, 98, 161, 166
+352
+278
+277
+276
+266
+259
+257 Login as a specific user and view the payment home list of payments 
+  -1.0  will need to search for specifics
+243 Not sure these test apply to the store criteria
+217 login & nav to make payment. make a payment.  No Nickname given at the end.  
+  -1.0 ricksanchez newpas1*  Does this user have links .  ThatÕs what the test is about
+  -1.1 Are there other users who can meet the same requirement showing links ??
+
+216 Security Questions(?? actor Resturant Childhood ??) correct landing page on success  :  This stuff already happens  So, at this time, this test is un necessary
+
+214.1 Negative test with user who cannot get to MPay.  but is the user UK ok ?
+
+213
+	•	1 UK legit Login, but NO LINK for payments  An un entitled user  LetÕs try adbrainfps2016   Vishal just gave me this user on 4-14-16
+	▪	 No longer considering adbrainfps2016 . he went out of proper use just about the time the sun went down on the day of creation.
+	▪	Now user the followingÉ.. adbrainnoviewnomake
+	•	 
+	•	2 User: paulsulyok / newpas1*. Interesting UK user
+	•	 
+212.1 negative Login test
+	•	1 login page commit with non UK uid pid
+	•	1.1 The key may be related to UK login but not UK payment  letÕs use one of the auditReport logins ttoller is the audit user
+	•	 
+	•	1.2 Because the third test gets a login b no Payment
+
+Any tests that do not have the security questions are no longer valid in the std workflow
+
+
+
+
+====================================================================================
+
+
+
+
+====================================================================================
+
+
+
+
+
+end.
+
+
+
+
+
+
+
+
