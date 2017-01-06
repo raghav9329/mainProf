@@ -31,14 +31,15 @@ public class CreateList {
 * loop execute from x==2 to numOfElements
 * otherwise x = 0 to numOfElements
 ********************************************************* */
-		
+	
 		
 		//ListNode tempNode;
 		// insteresting test data
 		// 3180 gives 3179 twice at the end and is not handled
 		// 3190 did the same I keep getting dups at 9,9 19,19, 29,39,49, etc x start at 4 +=5
-		int numOfElements = 84190 ;
-		//int numOfElements = 4190 ;
+		//int numOfElements = 84190 ;
+		int numOfElements = 8419 ;
+		//int numOfkkkElements = 4190 ;
 		//int numOfElements = 17 ;
 		//int numOfElements = 20 ;
 		

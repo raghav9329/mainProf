@@ -12,7 +12,7 @@ public class mainrun{
 		//		    this date will represent the current instant, or "now".
 		java.util.Date startTime = calendar.getTime();	
 	
-		int myLoopCount = 875000;
+		int myLoopCount = 6875000;
 		
 		for (int testVal = 1 ; testVal < myLoopCount; testVal ++)	{
 	    	
