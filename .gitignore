@@ -2,6 +2,7 @@
 *.swp
 *.class
 .metadata
+npm-debug.log
 
 JavaDev/.metadata
 JavaDev/*/.metadata

@@ -2,7 +2,9 @@ package TestsAlpha;
 
 import java.io.File;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
@@ -23,25 +25,7 @@ public class PersInfoPage {
 	
 	public void openBrowser(){
 		System.setProperty("webdriver.gecko.driver","C:\\SeleniumWebDriver\\FireFoxDriver\\geckodriver.exe");
-		/* Initial development :  No special techniques tried  */
-		// FirefoxDriver driver = new FirefoxDriver();
-		
 
-		/* Second attempt from 
-		 * http://www.software-testing-tutorials-automation.com/2015/03/how-to-handle-ssl-certificate-error-in.html */	
-		/*
-		ProfilesIni firProfiles = new ProfilesIni();
-		FirefoxProfile wbdrverprofile = firProfiles.getProfile("CertificateIssue"); 
-		wbdrverprofile.setAcceptUntrustedCertificates(true); 
-		wbdrverprofile.setAssumeUntrustedCertificateIssuer(false);
-		   
-//		WebDriver driver = new FirefoxDriver(wbdrverprofile);
-		FirefoxDriver driver = new FirefoxDriver(wbdrverprofile);
-		
-		*
-		*	End of Second attempt
-		*/ 
-		
 
 		/* Third Try from: 
 		 * http://stackoverflow.com/questions/19158473/selenium-webdriver-surpressing-untrusted-connection-message-in-firefox */
@@ -56,6 +40,16 @@ public class PersInfoPage {
         driver.get("https://dit3.deltadentalins.com");
 
         System.out.println("Application title is ============="+driver.getTitle());
+        
+        WebElement getQuotesButton = driver.findElement(By.id("getPlans"));
+        
+       //getQuotesButton.click();
+        
+        driver.get("https://dit3.deltadentalins.com/indEnroll?issuerCode=DELTA");
+        
+        WebElement initialZipCd = driver.findElement(By.id("zip"));
+        
+        initialZipCd.sendKeys("94949");
 
         //driver.quit();
         
