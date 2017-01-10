@@ -70,7 +70,7 @@ describe('Protractor Demo App', function() {
 		if (this.enrol1_button.getText('Enroll'))
 			this.enrol1_button.click();	
 		
-		browser.sleep(4450);
+		browser.sleep(14450);
 		
   });
   
@@ -83,29 +83,11 @@ describe('Protractor Demo App', function() {
 */
   
 
-	it('it should be the Pers Info Page ', function(){
+	it('it should nav to the zip&dependents dlg  ', function(){
 		// check for proper title - but not right now
 
-		browser.sleep(450);
-		
-	
-   
+		browser.sleep(4450);
 
-	//var some_string = 'Personal Info | Enrollment | Delta Dental Insurance Company';
-	// my_title = browser.getTitle();
-	some_name = browser.getTitle().then(function(webpagetitle){
-      if (webpagetitle === 'Personal Info | Enrollment | Delta Dental Insurance Company'){
-        return 'Personal Info | Enrollment | Delta Dental Insurance Company';
-      }else{
-        return 'ERROR'
-      } 
-    });
-	
-	console.log(some_name);
-	
-    //expect(some_name).toEqual('Personal Info | Enrollment | Delta Dental Insurance Company');
-   
-	
 	});
 
 
