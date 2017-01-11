@@ -70,71 +70,50 @@ describe('Protractor Demo App', function() {
   
 
   
-it('it should have nagigated to the Pers Info Page ', function(){
+it('it should be the Pers Info Page ', function(){
 	
 // https://dit3.deltadentalins.com/enroll/personal-info	
-		browser.sleep(150);
-		expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/personal-info');
-		console.log('Pers Info page URL Check complete');
-});
-
-it('it should fill in the First Name on the Pers Info Page ', function(){
 	
-		var testString = "atkmhFname";
+
+		browser.sleep(150);
+		console.log('On page title -> Pers Info page');
+	
 		browser.sleep(450);	
 		var persFname = element(by.id('firstName'));
 		browser.sleep(450);	
-		//persFname.sendKeys('atkmhFname');
-		persFname.sendKeys(testString);
+		persFname.sendKeys('atkmhFname');
+		console.log('Pers Info-> Fname ');
 		
-		//expect(persFname.getAttribute('value')).toEqual('notTheCorrectValue');
-		expect(persFname.getAttribute('value')).toEqual(testString);
 		
-		console.log('Pers Info-> Fname Complete ');
-});		
-	
-it('it should fill in the Last Name on the Pers Info Page ', function(){
-		var testString = 'atkmhLname';
 		var persLname =  element(by.id('lastName'));
 		browser.sleep(450);	
-		//persLname.sendKeys('atkmhLname');
-		persLname.sendKeys(testString);
-		
-		//expect(persFname.getAttribute('value')).toEqual('an_Incorrect_Value');
-		expect(persFname.getAttribute('value')).toEqual(testString);
+		persLname.sendKeys('atkmhLname');
+		console.log('Pers Info-> Lname');
 		
 		
-		console.log('Pers Info-> Lname Complete');
-});		
 		
-it('it should make a Gender selection of MALE on the Pers Info Page ', function(){		
 		//var genderSelect = element(by.css('.gender'));
 		var genderSelect = element(by.id('gender'));
 		genderSelect.$('[value="Male"]').click();
-		console.log('Pers Info-> Gender Complete');
+		console.log('Pers Info-> Gender');
 		
-});
-
-it('it should fill in the Month on the Pers Info Page ', function(){
+		
 	
 		var bd_Month = element(by.id('month'));
 		bd_Month.sendKeys('02');
-		console.log('Pers Info-> Month Complete');
+		console.log('Pers Info-> Month');
 		
-});
-
-it('it should fill in the Day on the Pers Info Page ', function(){
+		
+		
 		var bd_Day = element(by.id('day'));
 		bd_Day.sendKeys('18');
-		console.log('Pers Info-> Day Complete');
+		console.log('Pers Info-> Day');
 		
-});
-
-it('it should fill in the Year on the Pers Info Page ', function(){
+		
 		
 		var bd_Year = element(by.id('year'));
 		bd_Year.sendKeys('1958');
-		console.log('Pers Info-> Year Complete');
+		console.log('Pers Info-> Year');
 		
 		
 		
@@ -171,15 +150,13 @@ it('it should fill in the Year on the Pers Info Page ', function(){
 		expect(zip_Addr.getAttribute('value')).toEqual('94949');
 		console.log('Pers Info-> Compare Zip');
 	
-		// a little weak here: lack of coding description
-		// I should add unclicking then reSelecting so the below flows
-		// http://stackoverflow.com/questions/27866054/how-to-set-a-radio-button-value-in-protractor
+		
 		expect(element(by.id('diffmail')).isSelected()).toBeTruthy()
 		
 
 			
 		var phone_Type = element(by.id('contactType'));
-		phone_Type.$('[value="HOME"]').click();
+		genderSelect.$('[value="HOME"]').click();
 		console.log('Pers Info-> Phone Type');
 		
 		
@@ -188,23 +165,12 @@ it('it should fill in the Year on the Pers Info Page ', function(){
 		console.log('Pers Info-> Phone Number');
 		
 		var email_Addr = element(by.id('email'));
-		email_Addr.sendKeys('antidisestablishment@somedomain.net');
-
-		var radio_BrokerYes = element(by.id('brokerYes'));
-		radio_BrokerYes.click();
-		
-		browser.sleep(850);		
-		
-		
-	
-		var radio_BrokerNo = element(by.id('brokerNo'));
-		radio_BrokerNo.click();
-		
+		email_Addr.sendKeys('antidisestablishment@dungheap.poo');
 		
 		
 		//expect(getAhhQuoteButton.getText()).toEqual('Get A Quote');
 
-//browser.pause();
+browser.pause();
 });
 
 
