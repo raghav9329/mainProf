@@ -1,0 +1,13 @@
+1/10/17
+
+Progractor in Eclipse
+google:  using eclipse for protractor work
+Returned: http://stackoverflow.com/questions/32200154/how-can-we-use-protractor-in-eclipse 
+with instructions for installing tern.java  and accepting permissions.
+
+https://github.com/angular/protractor
+
+http://www.protractortest.org/#/  which is really  http://angular.github.io/protractor
+
+
+Installing Protractor stuff for Eclipse
