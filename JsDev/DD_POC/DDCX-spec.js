@@ -55,7 +55,8 @@ describe('Protractor Demo App', function() {
 		commitSearch4Plans_go.click();
 		browser.sleep(250);
 		
-		this.enrol1_button = element(by.css('.primaryBtn '));
+		//this.enrol1_button = element(by.css('.primaryBtn '));
+		this.enrol1_button = element(by.id('applyQuotesPage'));
 		
 		this.enrol1_button.getText().then(function (text) {
 			console.log('button text is = ', text);
@@ -221,7 +222,11 @@ it('should set the broker radio button to NO', function(){
 it('should find the PersInfo Next button and click it', function(){		
 		//var persInfoNextPage_Button = element(by.id('nextButton')).click();
 		persInfoNextPage_Button = element(by.id('nextButton')).click();
-		console.log('Pers Info-> Click Next ');
+		console.log('Pers Info-> Click Next: Waiting .. ... .... ');
+		
+		/*This should block until   */
+		browser.wait(element(by.css('.select-gender')).isPresent());
+		console.log('browser wait for dependent 1 Relationship_1 line has been moved past.')
 });
 
 //===================================================================================
@@ -236,10 +241,7 @@ it('should land on the Dependents page',function(){
 });
 
 
-
 it('should let me select dependent relationship SPOUSE',function(){
-	
-		
 	var dependent_Relationship = element(by.css('.select-gender'));
 	dependent_Relationship.$('[value="Spouse"]').click();
 	console.log('Dependent 1 Info-> Dependent Identified');
@@ -300,6 +302,15 @@ it('should find the Overlay Continue button and click Continue', function(){
 
 //===================================================================================
 
+it('should land on the Facilities page', function(){
+	// add the URL check , but for now just move on......
+	browser.wait(element(by.id('page-footer')).isPresent());
+	browser.sleep(3450);	
+	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/facilities/dependent/1484165877324');
+	console.log('Landed on the facilities page: moving to my 1st Facility');
+});
+
+
 it('should find facility ID DC053682', function() {
 	browser.sleep(3450);
 	var selectAFacility = element(by.id('DC053682'));
@@ -307,7 +318,7 @@ it('should find facility ID DC053682', function() {
 	console.log('Facilities Info-> First Facility Selected ');
 });
 
-it('should click the next button to commit 1st facility ID   ', function() {	
+it('should click the next button to commit 1st facility ID', function() {	
 	browser.sleep(2450);	
 	facilitiesNextPage_Button = element(by.id('nextButton')).click();
 	console.log('Facilities Info-> Facility 1 Selected Next Button ');
@@ -336,7 +347,7 @@ it('should click the next button to commit 2nd facility ID   ', function() {
 
 
 
-});// end of main Describe Protractor Demo Appi
+});// end of main Describe Protractor Demo App
 
 
 //===================================================================================
