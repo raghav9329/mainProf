@@ -1,3 +1,22 @@
+1/12/17
+Google: expect(browser.getCurrentUrl()).toEqual
+which was just some code I was using regurlarly.  ( I"ve been tring to pin down nonAngular Wait For examples )
+http://engineering.wingify.com/posts/angularapp-e2e-testing-with-protractor/
+has some interesting points.  specifically
+Angular is :  element(by.css('#elementid').click(); 
+Non Angular would be : browser.driver.findElement(by.css('#elementid')).click();
+which honestly is famaliar and maybe makes sense.
+
+So, the question is.  Whey is this working ???
+  var howManyWillBeCovered = element(by.id('coverage_type'));
+  var commitSearch4Plans_go = element(by.id('btn_saveBig'));
+  var firstEnrollButton = element(by.id('applyQuotesPage'));
+
+
+
+
+
+
 1/10/17
 
 Progractor in Eclipse

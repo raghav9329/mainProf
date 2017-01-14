@@ -7,5 +7,8 @@ exports.config = {
   chromeDriver: './node_modules/webdriver-manager/selenium/chromedriver_2.25',
   onPrepare: function(){
    browser.driver.manage().window().setSize(950,950);
+  },
+capabilities: {
+	  browserName: 'chrome'
   }
 }

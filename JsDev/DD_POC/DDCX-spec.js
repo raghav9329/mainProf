@@ -1,16 +1,17 @@
 // spec.jsG
-
+"use strict"
 describe('Protractor Demo App', function() {
 
 
   browser.ignoreSynchronization = true;
- // var getAQuoteButton = element(by.css('.button'));
-  var zipField = element(by.id("zip"));
-  var howManyWillBeCovered = element(by.id('coverage_type'));
-  var commitSearch4Plans_go = element(by.id('btn_saveBig'));
-  var firstEnrollButton = element(by.id('applyQuotesPage'));
+//  var getAQuoteButton = element(by.css('.button'));
+//  var zipField = element(by.id("zip"));
+//  var howManyWillBeCovered = element(by.id('coverage_type'));
+//  var commitSearch4Plans_go = element(by.id('btn_saveBig'));
+//  var firstEnrollButton = element(by.id('applyQuotesPage'));
 
   browser.get('http://dit3.deltadentalins.com/');
+//  browser.get('http://mot.deltadentalins.com/');
 
 // onPrepare: 
   beforeEach(function() {
@@ -48,10 +49,20 @@ describe('Protractor Demo App', function() {
   });	
 		
 	it('should land on the zip and quantity dialog ', function() {
+		var zipField = element(by.id("zip"));
+		var howManyWillBeCovered = element(by.id('coverage_type'));
+		var commitSearch4Plans_go = element(by.id('btn_saveBig'));
+		var firstEnrollButton = element(by.id('applyQuotesPage'));
+		
   		browser.sleep(250);
 		zipField.sendKeys("94949");
 		browser.sleep(150);
-		howManyWillBeCovered.sendKeys("2");
+		//howManyWillBeCovered.sendKeys("2");
+    
+		//????/ Is this written correctly ??
+		howManyWillBeCovered.$('[value="Self One"]').click();
+		//????/ Is this written correctly ??
+
 		commitSearch4Plans_go.click();
 		browser.sleep(250);
 		
@@ -76,6 +87,7 @@ it('should have nagigated to the Pers Info Page ', function(){
 // https://dit3.deltadentalins.com/enroll/personal-info	
 		browser.sleep(150);
 		expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/personal-info');
+//		expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/personal-info');
 		console.log('Pers Info page URL Check complete');
 });
 
@@ -136,8 +148,8 @@ it('should fill in the Year on the Pers Info Page ', function(){
 		
 		
 it('should fill in SSN with a reasonable value', function(){
-		var ssn = element(by.id('ssn'));
-		ssn.sendKeys('546757867');
+		var ssn_Field = element(by.id('ssn'));
+		ssn_Field.sendKeys('546757867');
 		console.log('Pers Info-> SSN');
 });		
 
@@ -198,21 +210,18 @@ it('should set an email id', function(){
 		var email_Addr = element(by.id('email'));
 		email_Addr.sendKeys('antidisestablishment@somedomain.net');
 		console.log('Pers Info-> Email Set');
-		
 });		
 
+it('scroll down', function (){ browser.executeScript('window.scrollTo(0,5000);');});
 
 it('should set the broker radio button to YES', function(){		
 		var radio_BrokerYes = element(by.id('brokerYes'));
 		radio_BrokerYes.click();
-		
-		browser.sleep(250);		
 		console.log('Pers Info-> Broker RadBtn YES');
 });		
 
 
 it('should set the broker radio button to NO', function(){		
-	
 		var radio_BrokerNo = element(by.id('brokerNo'));
 		radio_BrokerNo.click();
 		console.log('Pers Info-> Broker RadBtn NO ');
@@ -220,9 +229,12 @@ it('should set the broker radio button to NO', function(){
 
 
 it('should find the PersInfo Next button and click it', function(){		
-		//var persInfoNextPage_Button = element(by.id('nextButton')).click();
-		persInfoNextPage_Button = element(by.id('nextButton')).click();
+		var persInfoNextPage_Button = element(by.id('nextButton'));
+		persInfoNextPage_Button.click();
 		console.log('Pers Info-> Click Next: Waiting .. ... .... ');
+	
+	/* ToDo: right here when execution settles, put the next section
+	 * in it's own It('',fcn() {etc});   */	
 		
 		/*This should block until   */
 		browser.wait(element(by.css('.select-gender')).isPresent());
@@ -234,8 +246,9 @@ it('should find the PersInfo Next button and click it', function(){
 it('should land on the Dependents page',function(){
 	// add the URL check , but for now just move on......
 	browser.wait(element(by.id('page-footer')).isPresent());
-	browser.sleep(3450);	
+	browser.sleep(1500);	
 	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/dependents');
+//	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/dependents');
 	console.log('Landed on the dependents page: moving to my 1st Dep');
 	
 });
@@ -287,15 +300,16 @@ it('should find and set dependent 1 bday Year ', function(){
 
 
 it('should find the Dependent 1 Next button and click it', function(){		
-	//var persInfoNextPage_Button = element(by.id('nextButton')).click();
-	dependent1NextPage_Button = element(by.id('nextButton')).click();
+	var dependent1NextPage_Button = element(by.id('nextButton'));
+	dependent1NextPage_Button.click();
 	console.log('Dependent 1 Info-> Click Next ');
 });
 
 it('should find the Overlay Continue button and click Continue', function(){		
-	browser.sleep(4450);			
-	//var persInfoNextPage_Button = element(by.id('nextButton')).click();
-	overlayContinue_Button = element(by.id('overlayContinueBtn')).click();
+	browser.sleep(2000);			
+
+	var overlayContinue_Button = element(by.id('overlayContinueBtn'));
+	overlayContinue_Button.click();
 	console.log('Dependent 1 Info-> Overlay Continue Button Click ');	
 });
 
@@ -305,49 +319,178 @@ it('should find the Overlay Continue button and click Continue', function(){
 it('should land on the Facilities page', function(){
 	// add the URL check , but for now just move on......
 	browser.wait(element(by.id('page-footer')).isPresent());
-	browser.sleep(3450);	
-	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/facilities/dependent/1484165877324');
+	browser.sleep(1450);	
+//	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/facilities/dependent/1484165877324');
+
+	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/facilities');
+//	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/facilities');
 	console.log('Landed on the facilities page: moving to my 1st Facility');
 });
 
 
 it('should find facility ID DC053682', function() {
-	browser.sleep(3450);
+	browser.sleep(1450);
 	var selectAFacility = element(by.id('DC053682'));
 	selectAFacility.click();
 	console.log('Facilities Info-> First Facility Selected ');
 });
 
 it('should click the next button to commit 1st facility ID', function() {	
-	browser.sleep(2450);	
-	facilitiesNextPage_Button = element(by.id('nextButton')).click();
+	browser.sleep(1450);	
+	var facilitiesNextPage1stUse_Button = element(by.id('nextButton'));
+	facilitiesNextPage1stUse_Button.click();
 	console.log('Facilities Info-> Facility 1 Selected Next Button ');
 });
 
 it('should find facility ID DC055009', function(){
-	browser.sleep(2450);
+	browser.sleep(3450);
 	var selectAFacility = element(by.id('DC055009'));
 	selectAFacility.click();
 	console.log('Facilities Info-> Second Facility Selected ');
 });
 
-it('should click the next button to commit 2nd facility ID   ', function() {	
-	browser.sleep(2450);
-	dependent1NextPage_Button = element(by.id('nextButton')).click();
+it('should click the next button to commit 2nd facility ID', function() {	
+	browser.sleep(1450);
+	var facilitiesNextPage2ndUse_Button = element(by.id('nextButton'));
+	facilitiesNextPage2ndUse_Button.click();
+	// is that var name above confusing ??? Im on the 
+	// facilities page but am naming dependent bla bla bla
+	// Just "next page" is likely to be good enough
 	console.log('Facilities Info-> Facility 2 Selected Next Button ');
 
 	
-	browser.pause();
+	//browser.pause();
 	
 });
 
 //===================================================================================
+it('should land on the Payment Information page', function(){
+	browser.wait(element(by.id('page-footer')).isPresent());
+	browser.sleep(450);	
+	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/payment');
+//	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/payment');
+	console.log('Payment Page-> Landed on the Payment page: Moving to Card details');
+});
 
 
+it('should find the card holder name field', function(){
+	var cardholder_Name = element(by.id('cardName'));
+	cardholder_Name.sendKeys('AtkmhFname AtkmhLastname')
+	console.log('Payment Page-> Card Holder name entered');
+	browser.sleep(200);	
+});
 
 
+it('should find the card number field', function(){
+	var card_Number = "340000000000009";
+	var cardnumber_Field = element(by.id('ccCapture'));
+	cardnumber_Field.sendKeys(card_Number);
+	console.log('Payment Page-> Card Number entered');
+	browser.sleep(200);	
 
+});
+
+
+it('should find the card expiration month field', function(){
+	var cardExpiration_Month = element(by.id('expMo'));
+	cardExpiration_Month.sendKeys('12');
+	console.log('Payment Page-> Card Expiration Month entered');
+	browser.sleep(200);	
+});
+
+it('should find the card expiration year field', function(){
+	var cardExpiration_Year = element(by.id('expYr'));
+	cardExpiration_Year.sendKeys('2017');
+	console.log('Payment Page-> Card Expiration Year entered');
+	browser.sleep(200);	
+});
+
+
+it('should find the card security code field', function(){
+	var cardSecurity_Code = element(by.id('cvcCapture'));
+	cardSecurity_Code.sendKeys('3141');
+	console.log('Payment Page-> Card Security Code entered');
+	browser.sleep(200);	
+});
+
+
+//it('scroll down', function (){ browser.executeScript('window.scrollTo(0,2100);');});
+
+
+it('should find the I Agree To The Authorization Stmt', function(){
+	//var auth_CheckBox = browser.findElement(by.id('auth'));
+	//var auth_CheckBox = browser.findElement(by.css('.fieldset.checkboxes.review'));
+	//var auth_CheckBox = browser.findElement(by.css("input[id*=auth]"));
+	var auth_CheckBox = element(by.css('input[id="auth"]'));
+	auth_CheckBox.click();
+	browser.sleep(1500);	
+	
+	
+
+	auth_CheckBox.click();
+	auth_CheckBox.click();
+	auth_CheckBox.click();
+	expect(element(by.id('auth')).isSelected()).toBeTruthy();
+});
+
+
+it('should find the I Agree To The Authorization Stmt', function(){
+	var submit_PaymentButton = element(by.id('nextButton'));
+	submit_PaymentButton.click();
+	browser.sleep(4500);	
+
+	
+//browser.pause();
+});
+
+
+//===================================================================================
+
+it('should land on the Payment Reciept page', function(){
+	browser.sleep(4450);
+	browser.wait(element(by.id('page-footer')).isPresent());
+		
+	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/receipt');
+//	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/receipt');
+	console.log('Landed on the Payment Receipt: reviewing Plan summary & Applicants');
+//	browser.pause();
+});
+
+it('should find the plan summary and click to display it', function(){
+	var planSummary_Container = element(by.cssContainingText('.details-header', 'Plan Summary'));
+	planSummary_Container.click(); // Should Open
+	browser.sleep(4000);
+	planSummary_Container.click(); // Should close
+	console.log('Payment Receipt Page-> Plan Summary Clicked and displayed');
+	browser.sleep(200);	
+	
+	
+//	browser.pause();
+});
+
+
+it('should find the plan applicants and click to display it', function(){
+	var planSummary_Container = element(by.cssContainingText('.details-header', 'Applicants'));
+	planSummary_Container.click(); // Should Open
+	browser.sleep(4000);
+	planSummary_Container.click(); // Should close
+	console.log('Payment Receipt Page-> Plan Summary Clicked and displayed');
+	browser.sleep(200);	
+	
+	
+	browser.pause();
+});
+
+//===================================================================================
 });// end of main Describe Protractor Demo App
+
+
+
+
+
+
+
+
 
 
 //===================================================================================
@@ -374,23 +517,6 @@ it('should click the next button to commit 2nd facility ID   ', function() {
    
 	browser.pause(); 
 
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
  *
  *
  *
