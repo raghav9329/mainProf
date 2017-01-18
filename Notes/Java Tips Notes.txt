@@ -1,0 +1,6 @@
+google: explain "<" in  driverThread = new ThreadLocal<WebDriverWrapper>()
+Discussion about WebDriver Objects : DriverFactory : ThreadLocal
+http://seleniumautomationhelper.blogspot.com/2014/02/initializing-webdriver-object-as-thread.html
+
+More on a similar thread
+https://rationaleemotions.wordpress.com/2013/07/31/parallel-webdriver-executions-using-testng/
