@@ -1,9 +1,8 @@
 // conf.js
 exports.config = {
   framework: 'jasmine',
-  directConnect: true,
+  //directConnect: true,
   //seleniumAddress: 'http://localhost:4444/wd/hub',
-  //seleniumAddress: 'http://localhost:7055/wd/hub',
   specs: ['DDCX-spec.js'],
   //seleniumServerJar: './node_modules/webdriver-manager/selenium/selenium-server-standalone-2.53.1.jar',
   seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
@@ -14,6 +13,12 @@ exports.config = {
    browser.driver.manage().window().setSize(950,950);
   },
 capabilities: {
-	  browserName: 'firefox'
+	browserName: 'chrome',
+	//browserName: 'firefox'
   }
+//  multiCapabilities: [{
+//	  'browserName': 'chrome'
+//	}, {
+//	  'browserName': 'firefox'
+//	}]
 }

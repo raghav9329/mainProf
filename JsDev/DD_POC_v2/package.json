@@ -1,0 +1,22 @@
+{
+  "name": "delta-dental_proof-of-concept",
+  "version": "0.0.2",
+
+  "main": "DDCX-conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "protractor": "protractor",
+    "****************************Build******************************": "",
+    "*************************Unit Tests****************************": "",
+    "*************************Deployment****************************": ""
+  },
+  "author": "",
+  "license": "none",
+  "description": "Delta Dental Customer Experience Proof of concept",
+  "devDependencies": {
+    "protractor": "4.0.10",
+    "protractor-jasmine2-html-reporter": "0.0.6",
+    "vinyl-source-stream": "1.1.0",
+    "webdriver-manager": "10.2.6"
+  }
+}

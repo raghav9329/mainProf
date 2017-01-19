@@ -2,15 +2,15 @@ Mac_Tips
 
 
 mounting and unmounting thumb drives.
-When the eject goes badÉÉ.
+When the eject goes bad .
 
 http://osxdaily.com/2013/05/13/mount-unmount-drives-from-the-command-line-in-mac-os-x/
 
-command line:  diskutil unmount /dev/<diskName>
-it may complain and say to use the 
+command line:  diskutil unmount /dev/<diskName>
+it may complain and say to use the 
 diskutil unmountDisk command with /dev/<diskname> as the argument
 
-this successfully returned 
+this successfully returned 
 Unmountof all volumes on <diskname> was successful
 
 
@@ -20,4 +20,4 @@ All good . woot^2
 
 youtube conversion
 https://www.onlinevideoconverter.com/
-www.clipconverter.cc  seems to deny getting downloads if there is a video track
+www.clipconverter.cc  seems to deny getting downloads if there is a video track
