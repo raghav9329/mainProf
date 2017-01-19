@@ -10,8 +10,8 @@ describe('Protractor Demo App', function() {
 //  var commitSearch4Plans_go = element(by.id('btn_saveBig'));
 //  var firstEnrollButton = element(by.id('applyQuotesPage'));
 
-  browser.get('http://dit3.deltadentalins.com/');
-//  browser.get('http://mot.deltadentalins.com/');
+//  browser.get('http://dit3.deltadentalins.com/');
+  browser.get('http://mot.deltadentalins.com/');
 
 // onPrepare: 
   beforeEach(function() {
@@ -86,8 +86,8 @@ it('should have nagigated to the Pers Info Page ', function(){
 	
 // https://dit3.deltadentalins.com/enroll/personal-info	
 		browser.sleep(150);
-		expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/personal-info');
-//		expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/personal-info');
+//		expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/personal-info');
+		expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/personal-info');
 		console.log('Pers Info page URL Check complete');
 });
 
@@ -247,8 +247,8 @@ it('should land on the Dependents page',function(){
 	// add the URL check , but for now just move on......
 	browser.wait(element(by.id('page-footer')).isPresent());
 	browser.sleep(1500);	
-	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/dependents');
-//	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/dependents');
+//	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/dependents');
+	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/dependents');
 	console.log('Landed on the dependents page: moving to my 1st Dep');
 	
 });
@@ -322,8 +322,8 @@ it('should land on the Facilities page', function(){
 	browser.sleep(1450);	
 //	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/facilities/dependent/1484165877324');
 
-	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/facilities');
-//	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/facilities');
+//	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/facilities');
+	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/facilities');
 	console.log('Landed on the facilities page: moving to my 1st Facility');
 });
 
@@ -367,8 +367,8 @@ it('should click the next button to commit 2nd facility ID', function() {
 it('should land on the Payment Information page', function(){
 	browser.wait(element(by.id('page-footer')).isPresent());
 	browser.sleep(450);	
-	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/payment');
-//	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/payment');
+//	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/payment');
+	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/payment');
 	console.log('Payment Page-> Landed on the Payment page: Moving to Card details');
 });
 
@@ -450,8 +450,8 @@ it('should land on the Payment Reciept page', function(){
 	browser.sleep(4450);
 	browser.wait(element(by.id('page-footer')).isPresent());
 		
-	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/receipt');
-//	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/receipt');
+//	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/receipt');
+	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/receipt');
 	console.log('Landed on the Payment Receipt: reviewing Plan summary & Applicants');
 //	browser.pause();
 });
