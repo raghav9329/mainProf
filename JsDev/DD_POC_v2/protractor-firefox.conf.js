@@ -3,7 +3,7 @@ exports.config = {
   framework: 'jasmine',
   //directConnect: true,
   //seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['DDCX-spec.js'],
+  specs: ['DDCX-HP-5Pg2Dp.test.js'],
   //seleniumServerJar: './node_modules/webdriver-manager/selenium/selenium-server-standalone-2.53.1.jar',
   seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
   //chromeDriver: './node_modules/webdriver-manager/selenium/chromedriver_2.25',
@@ -13,7 +13,6 @@ exports.config = {
    browser.driver.manage().window().setSize(950,950);
   },
 capabilities: {
-	browserName: 'chrome',
-	// browserName: 'firefox'
+	browserName: 'firefox'
   }
 }

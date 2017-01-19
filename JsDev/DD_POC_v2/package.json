@@ -2,13 +2,15 @@
   "name": "delta-dental_proof-of-concept",
   "version": "0.0.2",
 
-  "main": "DDCX-conf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "protractor": "protractor",
     "****************************Build******************************": "",
     "*************************Unit Tests****************************": "",
-    "*************************Deployment****************************": ""
+    "********************Ingegration Tests**************************": "",
+    "protractor-chrome": "protractor protractor-chrome.conf.js",
+    "protractor-firefox": "protractor protractor-firefox.conf.js",
+    "****************************Tools******************************": ""
   },
   "author": "",
   "license": "none",
