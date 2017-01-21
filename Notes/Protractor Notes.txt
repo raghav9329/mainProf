@@ -1,3 +1,11 @@
+1/20/17
+Need to get the following under my belt
+Js Call back concept
+Js Prot Jasmine Site, read
+Js github docs directory
+Js Promises
+Js .then
+
 1/18/17
 npm bugs conf.js    will run some debugging 
 

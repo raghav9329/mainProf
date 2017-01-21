@@ -4,19 +4,11 @@ describe('Protractor Demo App', function() {
 
 
   browser.ignoreSynchronization = true;
-//  var getAQuoteButton = element(by.css('.button'));
-//  var zipField = element(by.id("zip"));
-//  var howManyWillBeCovered = element(by.id('coverage_type'));
-//  var commitSearch4Plans_go = element(by.id('btn_saveBig'));
-//  var firstEnrollButton = element(by.id('applyQuotesPage'));
 
   browser.get('http://dit3.deltadentalins.com/');
 //  browser.get('http://mot.deltadentalins.com/');
 
-// onPrepare: 
   beforeEach(function() {
-    //recho "Second Echo stmt added... first below in src"
-    //console.log("Output: beforeEach(function()...  Also call made to URL prot-demo");
     //browser.get('http://dit3.deltadentalins.com/');
   });
   
@@ -38,14 +30,11 @@ describe('Protractor Demo App', function() {
 		// was from 
 		//http://stackoverflow.com/questions/30702111/getting-the-button-text-in-protractor
 		this.getAQuote_button = element(by.css('.button'));
-		
 		this.getAQuote_button.getText().then(function (text) {
 			console.log('button text is = ', text);
 		});
-		
 		if (this.getAQuote_button.getText('Get A Quote'))
 			this.getAQuote_button.click();
-		
   });	
 		
 	it('should land on the zip and quantity dialog ', function() {
@@ -56,7 +45,7 @@ describe('Protractor Demo App', function() {
 		var commitSearch4Plans_go = element(by.id('btn_saveBig'));
 		var firstEnrollButton = element(by.id('applyQuotesPage'));
 		
-  		browser.sleep(250);
+  		browser.sleep(100);
 		zipField.sendKeys("94949");
 		browser.sleep(150);
 		//howManyWillBeCovered.sendKeys("2");
@@ -66,25 +55,22 @@ describe('Protractor Demo App', function() {
 		//????/ Is this written correctly ??
 
 		commitSearch4Plans_go.click();
-		browser.sleep(250);
+		browser.sleep(150);
 		
 		//this.enrol1_button = element(by.css('.primaryBtn '));
 		this.enrol1_button = element(by.id('applyQuotesPage'));
-		
 		this.enrol1_button.getText().then(function (text) {
 			console.log('button text is = ', text);
 		});
-		
 		if (this.enrol1_button.getText('Enroll'))
 			this.enrol1_button.click();	
 		
-		browser.sleep(250);
-		//browser.pause();
+		browser.sleep(150);
   });
   
 //===================================================================================
   
-it('should have nagigated to the Pers Info Page ', function(){
+it('should have navigated to the Pers Info Page ', function(){
 // Is the folling line to personal-info supposed to be there ??	
 // https://dit3.deltadentalins.com/enroll/personal-info	
 		browser.sleep(150);
@@ -94,11 +80,10 @@ it('should have nagigated to the Pers Info Page ', function(){
 });
 
 it('should fill in the First Name on the Pers Info Page ', function(){
-	
 		var testString = "atkmhFname";
-		browser.sleep(250);	
+		browser.sleep(150);	
 		var persFname = element(by.id('firstName'));
-		browser.sleep(250);	
+		browser.sleep(150);	
 		//persFname.sendKeys('atkmhFname');
 		persFname.sendKeys(testString);
 		
@@ -111,7 +96,7 @@ it('should fill in the First Name on the Pers Info Page ', function(){
 it('should fill in the Last Name on the Pers Info Page ', function(){
 		var testString = 'atkmhLname';
 		var persLname =  element(by.id('lastName'));
-		browser.sleep(250);	
+		browser.sleep(150);	
 		//persLname.sendKeys('atkmhLname');
 		persLname.sendKeys(testString);
 		//expect(persFname.getAttribute('value')).toEqual('an_Incorrect_Value');
@@ -180,7 +165,7 @@ it('should set the state field to CA', function(){
 
 
 it('should set the zip code address I"m using', function(){		
-		browser.sleep(250);	
+		browser.sleep(150);	
 		var zip_Addr = element(by.id('zipCode'));
 		expect(zip_Addr.getAttribute('value')).toEqual('94949');
 		console.log('Pers Info-> Compare Zip');
@@ -248,7 +233,7 @@ it('should find the PersInfo Next button and click it', function(){
 it('should land on the Dependents page',function(){
 	// add the URL check , but for now just move on......
 	browser.wait(element(by.id('page-footer')).isPresent());
-	browser.sleep(1500);	
+	browser.sleep(750);	
 	expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/enroll/dependents');
 //	expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/dependents');
 	console.log('Landed on the dependents page: moving to my 1st Dep');
@@ -308,7 +293,7 @@ it('should find the Dependent 1 Next button and click it', function(){
 });
 
 it('should find the Overlay Continue button and click Continue', function(){		
-	browser.sleep(2000);			
+	browser.sleep(750);// was 2000
 
 	var overlayContinue_Button = element(by.id('overlayContinueBtn'));
 	overlayContinue_Button.click();
@@ -485,45 +470,4 @@ it('should find the plan applicants and click to display it', function(){
 
 //===================================================================================
 });// end of main Describe Protractor Demo App
-
-
-
-
-
-
-
-
-
-
-//===================================================================================
-/*  Local Repo of lost / unused / unnecessary code
- * 
- *    it('should have a title', function() {
-    expect(browser.getTitle()).toEqual('Individual & Families');
-    console.log("Individual & Families page");
-  });
- * 
- * 
- *	var some_string = 'Personal Info | Enrollment | Delta Dental Insurance Company';
-	my_title = browser.getTitle();
-	some_name = browser.getTitle().then(function(webpagetitle){
-      if (webpagetitle === 'Personal Info | Enrollment | Delta Dental Insurance Company'){
-        return 'ERROR';
-      }else{
-        return 'Personal Info | Enrollment | Delta Dental Insurance Company'
-      } 
-    });
-	
-	console.log(some_name);
-	expect(some_name).toEqual('Personal Info | Enrollment | Delta Dental Insurance Company');
-   
-	browser.pause(); 
-
- *
- *
- *
- *
- */
-
-
 
