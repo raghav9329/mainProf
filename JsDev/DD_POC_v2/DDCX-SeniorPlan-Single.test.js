@@ -10,7 +10,7 @@ describe('Delta Dental Senior plan work flow', function() {
 	var testDomain_Name  = "deltadentalins.com";
 	var server = "";
 	var dit3Url = "https://dit3.deltadentalins.com/";
-	var sleepDuration = 240;
+	var sleepDuration = 80;// miliseconds 80 < 1/10 of a second
 	
 	beforeAll(function () {
 		//var url = protocol.concat(host_mot, '.', testDomain_Name);
@@ -149,32 +149,83 @@ describe('Navigate to the Start page',function(){
 	describe('Personal Info Page, preValidate(), fillOut(), postValidate()', function(){
 		
 			var fieldFirstName		= element(by.id('firstName'));
-			var fieldMidInitial		= '';
-			var fieldLastName		= '';
-			var fieldGenderSelect	= '';
-			var fieldBdMM			='';
-			var fieldBdDD			= '';
-			var fieldBdYyyy			= '';
-			var fieldSsn			= '';
-			var fieldHomeAddr		= '';
-			var fieldCity			= '';
-			var fieldState			= '';
-			var fieldZipCode		= '';
-			var fieldPhoneSelect	= '';
-			var fieldPhoneNumber	= '';
-			var fieldEmailAddr		= '';
-			var chkBoxPaperless		= '';
-			var RadBtnBrokerY		= '';
-			var RadBtnBrokerN		= '';
-			var linkBackToQuote		= '';
-			var PageButtonNext		= '';
+			var fieldMidInitial		= element(by.id('lastName'));
+			var fieldLastName		= element(by.id('lastName'));
+			var fieldGenderSelect	= element(by.id('gender'));
+			var fieldBdMM			= element(by.id('month'));
+			var fieldBdDD			= element(by.id('day'));
+			var fieldBdYyyy			= element(by.id('year'));
+			var fieldSsn			= element(by.id('ssn'));
+			var fieldHomeAddr		= element(by.id('streetAddress'));
+			var fieldCity			= element(by.id('city'));
+			var fieldState			= element(by.id('state'));
+			var fieldZipCode		= element(by.id('zipCode'));
+			var chkBoxDiffMailAddr	= element(by.id('diffmail'));
+			var fieldPhoneSelect	= element(by.id('contactType'));
+			var fieldPhoneNumber	= element(by.id('contactNumber'));
+			var fieldEmailAddr		= element(by.id('email'));
+			var chkBoxPaperless		= element(by.id('paperless'));
+			var RadBtnBrokerY		= element(by.id('brokerYes'));
+			var RadBtnBrokerN		= element(by.id('brokerNo'));
+			var linkBackToQuote		= element(by.id('backToQuote'));
+			var PageButtonNext		= element(by.id('nextButton'));
 			
-		it('should evaluate details on the pers Info Page ', function(){
+		it('pers 1: should evaluate details on the pers Info Page ', function(){
+			/* this test is and the definitions in the describe are the 
+			 * kind of things that should be going in the page object model testing  
+			 * *************************************************************************/
+				expect(fieldFirstName.isDisplayed()).toBe(true);
+				expect(fieldMidInitial.isDisplayed()).toBe(true);
+				expect(fieldLastName.isDisplayed()).toBe(true);
+				expect(fieldGenderSelect.isDisplayed()).toBe(true);
+				expect(fieldBdMM.isDisplayed()).toBe(true);
+				expect(fieldBdDD.isDisplayed()).toBe(true);
+				expect(fieldBdYyyy.isDisplayed()).toBe(true);
+				expect(fieldSsn.isDisplayed()).toBe(true);
+				
+				expect(fieldHomeAddr.isDisplayed()).toBe(true);
+				expect(fieldCity.isDisplayed()).toBe(true);
+				expect(fieldState.isDisplayed()).toBe(true);
+				expect(fieldZipCode.isDisplayed()).toBe(true);
+				expect(chkBoxDiffMailAddr.isDisplayed()).toBe(true);
+				expect(fieldPhoneSelect.isDisplayed()).toBe(true);
+			
+				expect(fieldPhoneNumber.isDisplayed()).toBe(true);
+				expect(fieldEmailAddr.isDisplayed()).toBe(true);
+				expect(chkBoxPaperless.isDisplayed()).toBe(true);
+				expect(RadBtnBrokerY.isDisplayed()).toBe(true);
+				expect(RadBtnBrokerN.isDisplayed()).toBe(true);
+				expect(linkBackToQuote.isDisplayed()).toBe(true);
+				expect(PageButtonNext.isDisplayed()).toBe(true);
+				console.log('Just did an expect on evey element on the page');
+				console.log('well almost every element.  Need to eval the hidden addredd');
+				console.log('thest last two lines are notes for ToDo.....');
+		});// end of it pers 1
+		
+		it('it pers 2, should Allow Data entry for the fields under test ', function(){
+			fieldFirstName.sendKeys('TestFn');
+			fieldLastName.sendKeys('LnTest');
+			fieldGenderSelect.$('[value="Nonbinary"]').click();
+			
+			fieldBdMM.sendKeys('06');
+			fieldBdDD.sendKeys('22');
+			fieldBdYyyy.sendKeys('1982');
+			
+			fieldSsn.sendKeys('587459329')
+			fieldHomeAddr.sendKeys('100 First Street Floor 4');
+			// Loose focus and I need to do some check  
+			// Maybe her's where It pers 2 ends and it pers 3 starts ??? 
+			
+		/*	fieldCity
+			fieldState
+			fieldZipCode
+			*/
 			
 			
-			
-			
+			browser.pause();
 		});
+		
+		
 
 	});// end describe personal info page.
 	
