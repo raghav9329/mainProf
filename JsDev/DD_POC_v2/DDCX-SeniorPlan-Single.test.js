@@ -60,11 +60,25 @@ describe('Delta Dental Senior plan work flow', function() {
 			browser.wait(ExpctCond.elementToBeClickable(zipField),5000);
 			zipField.sendKeys(zipValue);
 			
-			//var testString = zipField.getText();
-			//console.log('debug: testString is" ',testString.value);
+		
+			this.debugTestVar = element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
+			//console.log('debugTestVarVaue via Attribute is: ', debugTestVar.getAttribute('value'))
+
+			//this.debugTestVar.getText().then(function (text) {
+			this.debugTestVar.getAttribute('value').then(function (text) {
+				console.log('the zip field text is = ', text);
+			});
 			
-			//expect(zipField.getText()).toEqual('94105');
-			//console.log('zip Code Entered and checked to be: ', '94105');
+		
+			
+			////if (this.debugTestVar.getText(zipValue))
+			//if (this.debugTestVar.getAttribute('value').toEqual('94949'))
+			//	console.log('Woot^3 ',zipValue);
+			//else console.log('fudderupper. We did not get a proper zip code');
+	
+			
+		//	expect(debugTestVar.getText()).toEqual('94105');
+		//	console.log('zip Code Entered and checked to be: ', '94105');
 		
 			
 			var howManyWillBeCovered = element(by.id('coverage_type'));
@@ -94,48 +108,18 @@ describe('Delta Dental Senior plan work flow', function() {
 			var stringPageTitle = "::Individual & Families::";
 			expect(browser.getTitle()).toEqual(stringPageTitle);
 			console.log('Page Title found to be: ',stringPageTitle);
-			
-			/* See that zipValue is defined above some 30 lines */
+	
+		
+			// See that zipValue is defined above some 30 lines 
+			// but do I reall need to do this?  Is it any more readable ?
 			var zipCodeUnderTest = zipValue;
 			
-			var mySearchCondition = element(by.cssContainingText(zipCodeUnderTest));
-			expect(mySearchCondition.isDisplayed()).toBeTruthy();
+			var mySearchCondition = element(by.id('psc_zip'));
+			expect(mySearchCondition.getText()).toEqual(zipValue);
 			console.log('Found zipCode we are testing', zipCodeUnderTest);
 			
 			//browser.pause();	
-			
-			
-		/* Just hanging on to this until I get past the dialog continually
-		it('should allow me to enter zip and qty to cover ', function(){
-		 	expect( element(by.css('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all'))   );
-			var zipField = element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));
-			var howManyWillBeCovered = element(by.id('coverage_type'));
-			var searchForPlans_Go = element(by.id('btn_saveBig'));
-			var zipValue = "94105";
-			var coverageSelection = "Self";
-			
-			zipField.sendKeys(zipValue);
-			console.log('zip Code Entered: ', zipValue);
-			
-			//var qtyDropDown = protractor.ExpectedConditions;
-			var ExpCond = protractor.ExpectedConditions;
-			// Waits for the element with id 'coverage_type' to be clickable.
-			                   //browser.wait(qtyDropDown.elementToBeClickable($('coverage_type')),5000);
-			//browser.wait(qtyDropDown.elementToBeClickable(howManyWillBeCovered),5000);
-			browser.wait(ExpCond.elementToBeClickable(howManyWillBeCovered),5000);
-		                      //browser.sleep(150);	
-			                   //howManyWillBeCovered.$('[value = coverageSelection]').click();
-			howManyWillBeCovered.$('[value="Self"]').click();
-			console.log('Single coverage selected with: ',coverageSelection);
-			
-			searchForPlans_Go.click();
-			console.log('Search for Dental Plans filed out Button Clicked');
 
-			//expect( 
-			//expect link to Senior is visable
-			
-			browser.pause();
-		 */	
 			
 			
 		});// end of it(3)
