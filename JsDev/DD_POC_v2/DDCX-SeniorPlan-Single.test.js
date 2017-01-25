@@ -10,7 +10,7 @@ describe('Delta Dental Senior plan work flow', function() {
 	var testDomain_Name  = "deltadentalins.com";
 	var server = "";
 	var dit3Url = "https://dit3.deltadentalins.com/";
-	var sleepDuration = 780;// miliseconds 80 < 1/10 of a secondj
+	var sleepDuration = 380;// miliseconds 80 < 1/10 of a secondj
 
 	browser.ignoreSynchronization = true;	
 	
@@ -167,8 +167,8 @@ describe('Navigate to the Start page',function(){
 			var fieldPhoneNumber	= element(by.id('contactNumber'));
 			var fieldEmailAddr		= element(by.id('email'));
 			var chkBoxPaperless		= element(by.id('paperless'));
-			var RadBtnBrokerY		= element(by.id('brokerYes'));
-			var RadBtnBrokerN		= element(by.id('brokerNo'));
+			var RadBtnBrokerYes		= element(by.id('brokerYes'));
+			var RadBtnBrokerNo		= element(by.id('brokerNo'));
 			var linkBackToQuote		= element(by.id('backToQuote'));
 			var PageButtonNext		= element(by.id('nextButton'));
 	/************************************************************************/	
@@ -178,6 +178,11 @@ describe('Navigate to the Start page',function(){
 			var hiddenfieldCity		= element(by.id('mailingCity'));
 			var hiddenfieldState	= element(by.id('mailingState'));
 			var hiddenfieldZipCode	= element(by.id('mailingZipCode'));
+		
+	/************************************************************************/	
+	/**   Right after email and paperless, there is the broker buttons   ****/	
+	/************************************************************************/	
+			var hiddenfieldBrokerNum=element(by.id('brokerNumber'));
 			
 		it('pers 1: should evaluate details on the pers Info Page ', function(){
 			/* this test is and the definitions in the describe are the 
@@ -196,25 +201,29 @@ describe('Navigate to the Start page',function(){
 				expect(fieldCity.isDisplayed()).toBe(true);
 				expect(fieldState.isDisplayed()).toBe(true);
 				expect(fieldZipCode.isDisplayed()).toBe(true);
+				
 				expect(chkBoxDiffMailAddr.isDisplayed()).toBe(true);
-				expect(fieldPhoneSelect.isDisplayed()).toBe(true);
 			
+				expect(fieldPhoneSelect.isDisplayed()).toBe(true);
 				expect(fieldPhoneNumber.isDisplayed()).toBe(true);
 				expect(fieldEmailAddr.isDisplayed()).toBe(true);
 				expect(chkBoxPaperless.isDisplayed()).toBe(true);
-				expect(RadBtnBrokerY.isDisplayed()).toBe(true);
-				expect(RadBtnBrokerN.isDisplayed()).toBe(true);
+				expect(RadBtnBrokerYes.isDisplayed()).toBe(true);
+				expect(RadBtnBrokerNo.isDisplayed()).toBe(true);
 				expect(linkBackToQuote.isDisplayed()).toBe(true);
 				expect(PageButtonNext.isDisplayed()).toBe(true);
-				console.log('Just did an expect on evey element on the page');
+				console.log('Just did an expect on evey currently visable element on the page');
 				//console.log('well almost every element.  Need to eval the hidden addredd');
 				//console.log('thest last two lines are notes for ToDo.....');
 		});// end of it pers 1
 		
 		it('it pers 2, should Allow Data entry for the fields under test ', function(){
-			fieldFirstName.sendKeys('TestFn');
-			fieldLastName.sendKeys('LnTest');
-			fieldGenderSelect.$('[value="Nonbinary"]').click();
+			var genderStringValue = "Non Binary";
+			var phoneTypeSelect = "Home";
+			fieldFirstName.sendKeys('TestFirstName');
+			fieldLastName.sendKeys('LastNameTest');
+			/*Gender Drop down next*/
+			element(by.cssContainingText('option', genderStringValue)).click();
 			
 			fieldBdMM.sendKeys('06');
 			fieldBdDD.sendKeys('22');
@@ -229,67 +238,88 @@ describe('Navigate to the Start page',function(){
 			// check value fieldState.sendKeys('');
 			// check value fieldZipCode
 			
+			fieldPhoneSelect.$('[value="HOME"]').click();
+			fieldPhoneNumber.sendKeys('4155551212');
+			
+			fieldEmailAddr.sendKeys('idString@someDomain.net')
+			
 		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
 		});// end of it pers 2 
+	
 		
-		it('it pers 3: should eval mailing address entry',function(){
-			expect(hiddenfieldMailAddr.isDisplayed()).toBe(false);
-			console.log('should pass mailing addr displayed false')
-			
-		//	this.hiddenfieldMailAddr.isDisplayed().then(function(text){
-		//		console.log('Im trying to get the true/false Value if mailaddr.isdiaplayed', text)
-		//	});
-			
-			chkBoxDiffMailAddr.click();
+		it('it pers 4: should eval mailing address entry',function(){
+		
+		/*	1/25/17 10:55 is this even doing anythign.  it is necessary ???	
+			//expect(hiddenfieldMailAddr.isDisplayed()).toBe(false);
 			expect(hiddenfieldMailAddr.isDisplayed()).toBe(true);
-			console.log('post check box click, should pass mailing addr displayed true')
+			console.log('should pass mailing addr displayed ! false')
+			*/
 	
 			
-			if (chkBoxDiffMailAddr.isSelected()) {
-				return chkBoxDiffMailAddr.click();
-			}
+		/*  Clean up following needed.  If checkbox is selected, click to un select to display alternate addr fields */	
+		
+		/*	chkBoxDiffMailAddr.click();
+			expect(hiddenfieldMailAddr.isDisplayed()).toBe(true);
+			console.log('post check box click, should pass mailing addr displayed true')*/
+	
+		/*	if (!chkBoxDiffMailAddr.isSelected()) {
+				//return chkBoxDiffMailAddr.click();
+				 chkBoxDiffMailAddr.click();
+			}  */
+
+			
+		// this is a test:  Do we now get access to the hidden fields below ??	
+			element(by.name('diffMail')).isSelected().then(function(selected) {
+			    if (selected) {
+			        element(by.name('diffMail')).click();// to Un Select
+			    }
+			});
+			
 
 			hiddenfieldMailAddr.sendKeys('100 First Street Floor 4');
-			hiddenfieldCity.sendKeys('San Francisco');
-			hiddenfieldState.sendKeys('California');
-			hiddenfieldZipCode.sendKeys('94105');
+	
+		/* *** As focus is lost, there is an AJAX event right here      */
+			hiddenfieldCity.sendKeys('San Francisco');  // this just likely a check
+		
+			hiddenfieldState.sendKeys('California');// this just likely a check
+		
+			hiddenfieldZipCode.sendKeys('94105');// this just likely a check
+	browser.sleep(8000)	;
+		}); // end of it pers 4
+		
+		it('it pers 5: should access & validate the broker selection and entry ',function (){
+			if (chkBoxPaperless.isSelected()){
+				chkBoxPaperless.isSelected().click();
+				console.log('it pers 5: paperless was selected. Clicked it to unselect');
+			}else{
+				console.log('it pers 5: there was some prblem unselecting the paperless checkbox');
+			}
 			
-			browser.sleep(15000);
-			browser.pause();
-		}); // end of it pers 3
+		}); // end of it pers 5
 		
+		it('it pers 6: should validate all field entry values and click next', function(){
+			//expect(element(by.id('brokerNo')).isSelected()).toBe(true);
+			if ( RadBtnBrokerNo.isSelected() ) {
+				RadBtnBrokerYes.click();
+				console.log('it pers 6: found brokerNo selected: switched to brokerYes!');
+			}else{
+				console.log('it pers 6: there was some problem switching BrokerNo to Yes');
+			}
 		
+			if ( hiddenfieldBrokerNum.isDisplayed() ) {
+				expect(hiddenfieldBrokerNum.isDisplayed()).toBe(true);
+				hiddenfieldBrokerNum.sendKeys('2012836');
+				console.log('it pers 6: after brokerYes select Broker number got text value');
+			}else{
+				console.log('it pers 6: hiddenfieldBrokerNum Was Not Displated. No Date entered');
+			}
+		browser.sleep(5000);	
+		});// end of it Pers 6
 		
-		
-		
-		
-///*		it('it pers 3: Should eval mailing address entry',function (){
-//			var ExpctCond = protractor.ExpectedConditions;
-//
-//			console.log('here is a simple raw exposed logging entry');
-//			
-////			if (chkBoxDiffMailAddr.isSelected()) {
-////				return chkBoxDiffMailAddr.click();
-////				console.log('boolean evaluation showed is selected');
-////				console.log('I"ve clicked the check box to display the fields');
-////			}
-//			
-//			chkBoxDiffMailAddr.click();
-//			expect(hiddenfieldMailAddr.isDisplayed()).toBe(true);
-//			console.log('hiddenfieldMailAddr is found displayed to be true');
-//
-////			if (!hiddenfieldMailAddr.isDisplayed()){
-////				console.log('Hidden fied is hidden');
-////			}
-//			
-//			hiddenfieldMailAddr.sendKeys('');
-//			hiddenfieldCity
-//			hiddenfieldState
-//			hiddenfieldZipCode
-//			
-//			browser.pause();
-//		});// current end of it pers 3       */
-		
+		it('it pers 7: Evaluate all field correctness, find the Next button, click it',function(){
+			console.log('it pers 7: currently an empty spec');
+			browser.sleep(5000);
+		});// end of it pers 7
 
 	});// end describe personal info page.
 	
