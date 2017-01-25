@@ -10,7 +10,9 @@ describe('Delta Dental Senior plan work flow', function() {
 	var testDomain_Name  = "deltadentalins.com";
 	var server = "";
 	var dit3Url = "https://dit3.deltadentalins.com/";
-	var sleepDuration = 80;// miliseconds 80 < 1/10 of a second
+	var sleepDuration = 780;// miliseconds 80 < 1/10 of a secondj
+
+	browser.ignoreSynchronization = true;	
 	
 	beforeAll(function () {
 		//var url = protocol.concat(host_mot, '.', testDomain_Name);
@@ -169,6 +171,13 @@ describe('Navigate to the Start page',function(){
 			var RadBtnBrokerN		= element(by.id('brokerNo'));
 			var linkBackToQuote		= element(by.id('backToQuote'));
 			var PageButtonNext		= element(by.id('nextButton'));
+	/************************************************************************/	
+	/**   Right after State and zipCode are the following hidden fields  ****/	
+	/************************************************************************/	
+			var hiddenfieldMailAddr	= element(by.id('mailingAddress'));
+			var hiddenfieldCity		= element(by.id('mailingCity'));
+			var hiddenfieldState	= element(by.id('mailingState'));
+			var hiddenfieldZipCode	= element(by.id('mailingZipCode'));
 			
 		it('pers 1: should evaluate details on the pers Info Page ', function(){
 			/* this test is and the definitions in the describe are the 
@@ -198,8 +207,8 @@ describe('Navigate to the Start page',function(){
 				expect(linkBackToQuote.isDisplayed()).toBe(true);
 				expect(PageButtonNext.isDisplayed()).toBe(true);
 				console.log('Just did an expect on evey element on the page');
-				console.log('well almost every element.  Need to eval the hidden addredd');
-				console.log('thest last two lines are notes for ToDo.....');
+				//console.log('well almost every element.  Need to eval the hidden addredd');
+				//console.log('thest last two lines are notes for ToDo.....');
 		});// end of it pers 1
 		
 		it('it pers 2, should Allow Data entry for the fields under test ', function(){
@@ -216,15 +225,70 @@ describe('Navigate to the Start page',function(){
 			// Loose focus and I need to do some check  
 			// Maybe her's where It pers 2 ends and it pers 3 starts ??? 
 			
-		/*	fieldCity
-			fieldState
-			fieldZipCode
-			*/
+			fieldCity.sendKeys('San Francisco');
+			// check value fieldState.sendKeys('');
+			// check value fieldZipCode
 			
-			
-			browser.pause();
-		});
+		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
+		});// end of it pers 2 
 		
+		it('it pers 3: should eval mailing address entry',function(){
+			expect(hiddenfieldMailAddr.isDisplayed()).toBe(false);
+			console.log('should pass mailing addr displayed false')
+			
+		//	this.hiddenfieldMailAddr.isDisplayed().then(function(text){
+		//		console.log('Im trying to get the true/false Value if mailaddr.isdiaplayed', text)
+		//	});
+			
+			chkBoxDiffMailAddr.click();
+			expect(hiddenfieldMailAddr.isDisplayed()).toBe(true);
+			console.log('post check box click, should pass mailing addr displayed true')
+	
+			
+			if (chkBoxDiffMailAddr.isSelected()) {
+				return chkBoxDiffMailAddr.click();
+			}
+
+			hiddenfieldMailAddr.sendKeys('100 First Street Floor 4');
+			hiddenfieldCity.sendKeys('San Francisco');
+			hiddenfieldState.sendKeys('California');
+			hiddenfieldZipCode.sendKeys('94105');
+			
+			browser.sleep(15000);
+			browser.pause();
+		}); // end of it pers 3
+		
+		
+		
+		
+		
+		
+///*		it('it pers 3: Should eval mailing address entry',function (){
+//			var ExpctCond = protractor.ExpectedConditions;
+//
+//			console.log('here is a simple raw exposed logging entry');
+//			
+////			if (chkBoxDiffMailAddr.isSelected()) {
+////				return chkBoxDiffMailAddr.click();
+////				console.log('boolean evaluation showed is selected');
+////				console.log('I"ve clicked the check box to display the fields');
+////			}
+//			
+//			chkBoxDiffMailAddr.click();
+//			expect(hiddenfieldMailAddr.isDisplayed()).toBe(true);
+//			console.log('hiddenfieldMailAddr is found displayed to be true');
+//
+////			if (!hiddenfieldMailAddr.isDisplayed()){
+////				console.log('Hidden fied is hidden');
+////			}
+//			
+//			hiddenfieldMailAddr.sendKeys('');
+//			hiddenfieldCity
+//			hiddenfieldState
+//			hiddenfieldZipCode
+//			
+//			browser.pause();
+//		});// current end of it pers 3       */
 		
 
 	});// end describe personal info page.
