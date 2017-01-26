@@ -1,6 +1,12 @@
 //spec DDCX-SeniorPlan-Single.js
 "use strict"
-
+// Todo
+/* Get text console.log on every one of the dots in the console 
+ *  figure out what the dots actuall mean
+ * Figure out It Pers 6 ( second output: mabe I need it pers 6A to resolve this
+ * 
+ * 
+ */
 describe('Delta Dental Senior plan work flow', function() {
 	// JavaScriptTheGoodParts.pdf pg25 refs global obj var MYAPP = {};
 	// Limit the exposure global vars have 
@@ -281,17 +287,18 @@ describe('Navigate to the Start page',function(){
 			//expect(element(by.id('brokerNo')).isSelected()).toBe(true);
 			if ( RadBtnBrokerNo.isSelected() ) {
 				RadBtnBrokerYes.click();
-				console.log('it pers 6: found brokerNo selected: switched to brokerYes!');
+				console.log('it pers 6: found brokerNo, switched to brokerYes!');
 			}else{
-				console.log('it pers 6: there was some problem switching BrokerNo to Yes');
+				console.log('it pers 6: did not find BrokerNo. So, it was not switched to Yes');
 			}
 		
 			if ( hiddenfieldBrokerNum.isDisplayed() ) {
-				expect(hiddenfieldBrokerNum.isDisplayed()).toBe(true);
 				hiddenfieldBrokerNum.sendKeys('2012836');
-				console.log('it pers 6: after brokerYes select Broker number got text value');
+				expect(hiddenfieldBrokerNum.isDisplayed());
+//				hiddenfieldBrokerNum.sendKeys('2012836');
+				console.log('it pers 6: after brokerYes selected & number entered');
 			}else{
-				console.log('it pers 6: hiddenfieldBrokerNum Was Not Displated. No Date entered');
+				console.log('it pers 6: hiddenfieldBrokerNum Was Not Displayed. NoBroker num Entered');
 			}
 		});// end of it Pers 6
 		
@@ -300,6 +307,15 @@ describe('Navigate to the Start page',function(){
 			var protVarBrokerName = 'CHARLES DARROW';
 			
 			chkBoxPaperless.click();
+			
+			var el = element(by.id('brokerName'));
+			el.getText().then(function(text){
+				console.log(text);
+			});
+	
+	console.log('it pers 7: finished evaluating all fields: sleeping 2 sec.....');
+	browser.sleep(2000);
+			
 //			console.log('it pers 7: currently an empty spec');
 		
 /* *********
@@ -361,16 +377,10 @@ describe('Navigate to the Start page',function(){
 		//		expect(thisTest.getAttribute('value')).toContain(protVarBrokerName);
 			
 				
-				var el = element(by.id('brokerName'));
-					el.getText().then(function(text){
-						console.log(text);
-					});
-			
-			console.log('it pers 7: finished evaluating all fields: sleeping.....');
-			browser.sleep(10000);
+
 		});// end of it pers 7
 
 	});// end describe personal info page.
 	
-
+	console.log('end of encompasing describe.  Done !')
 }); // end of describe('Delta Dental Senior plan work flow
