@@ -222,6 +222,7 @@ describe('Navigate to the Start page',function(){
 			var phoneTypeSelect = "Home";
 			fieldFirstName.sendKeys('TestFirstName');
 			fieldLastName.sendKeys('LastNameTest');
+
 			/*Gender Drop down next*/
 			element(by.cssContainingText('option', genderStringValue)).click();
 			
@@ -231,60 +232,39 @@ describe('Navigate to the Start page',function(){
 			
 			fieldSsn.sendKeys('587459329')
 			fieldHomeAddr.sendKeys('100 First Street Floor 4');
-			// Loose focus and I need to do some check  
-			// Maybe her's where It pers 2 ends and it pers 3 starts ??? 
+	// Loose focus and I need to do some check  
+	// Maybe her's where It pers 2 ends and it pers 3 starts ??? 
 			
 			fieldCity.sendKeys('San Francisco');
-			// check value fieldState.sendKeys('');
-			// check value fieldZipCode
+	// check value fieldState.sendKeys('');
+	// check value fieldZipCode
 			
 			fieldPhoneSelect.$('[value="HOME"]').click();
 			fieldPhoneNumber.sendKeys('4155551212');
 			
 			fieldEmailAddr.sendKeys('idString@someDomain.net')
-			
 		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
 		});// end of it pers 2 
 	
 		
 		it('it pers 4: should eval mailing address entry',function(){
-		
-		/*	1/25/17 10:55 is this even doing anythign.  it is necessary ???	
-			//expect(hiddenfieldMailAddr.isDisplayed()).toBe(false);
-			expect(hiddenfieldMailAddr.isDisplayed()).toBe(true);
-			console.log('should pass mailing addr displayed ! false')
-			*/
-	
-			
-		/*  Clean up following needed.  If checkbox is selected, click to un select to display alternate addr fields */	
-		
-		/*	chkBoxDiffMailAddr.click();
-			expect(hiddenfieldMailAddr.isDisplayed()).toBe(true);
-			console.log('post check box click, should pass mailing addr displayed true')*/
-	
-		/*	if (!chkBoxDiffMailAddr.isSelected()) {
-				//return chkBoxDiffMailAddr.click();
-				 chkBoxDiffMailAddr.click();
-			}  */
-
 			
 		// this is a test:  Do we now get access to the hidden fields below ??	
+		// looks like we're keeping it
 			element(by.name('diffMail')).isSelected().then(function(selected) {
 			    if (selected) {
 			        element(by.name('diffMail')).click();// to Un Select
 			    }
 			});
-			
 
 			hiddenfieldMailAddr.sendKeys('100 First Street Floor 4');
 	
 		/* *** As focus is lost, there is an AJAX event right here      */
 			hiddenfieldCity.sendKeys('San Francisco');  // this just likely a check
-		
 			hiddenfieldState.sendKeys('California');// this just likely a check
-		
 			hiddenfieldZipCode.sendKeys('94105');// this just likely a check
-	browser.sleep(8000)	;
+			
+	
 		}); // end of it pers 4
 		
 		it('it pers 5: should access & validate the broker selection and entry ',function (){
@@ -294,8 +274,8 @@ describe('Navigate to the Start page',function(){
 			}else{
 				console.log('it pers 5: there was some prblem unselecting the paperless checkbox');
 			}
-			
 		}); // end of it pers 5
+	
 		
 		it('it pers 6: should validate all field entry values and click next', function(){
 			//expect(element(by.id('brokerNo')).isSelected()).toBe(true);
@@ -313,12 +293,81 @@ describe('Navigate to the Start page',function(){
 			}else{
 				console.log('it pers 6: hiddenfieldBrokerNum Was Not Displated. No Date entered');
 			}
-		browser.sleep(5000);	
 		});// end of it Pers 6
 		
 		it('it pers 7: Evaluate all field correctness, find the Next button, click it',function(){
-			console.log('it pers 7: currently an empty spec');
-			browser.sleep(5000);
+			var text1 = "TestFirstName";
+			var protVarBrokerName = 'CHARLES DARROW';
+			
+			chkBoxPaperless.click();
+//			console.log('it pers 7: currently an empty spec');
+		
+/* *********
+ * This was the intended second test of the block.  It doesn't work
+ * expect(fieldFirstName.getAttribute('value').toBe('TestFirstName'));  */
+/* ********                                 or.toEqual...
+ * This was the intended second test of the block.  It doesn't work
+ * expect(fieldFirstName.getAttribute('value').toBe('TestFirstName'));  
+ *                                         or .toEqual 
+ * */
+
+/* ********
+ * This was the third try it doesn't work 
+ * 	expect(element(by.model('firstName')).getAttribute('value').toEqual('TestFirstName'));
+ * 
+ */			
+
+/* *******
+* This was my final attepmt
+*browser.findElement(by.id('firstName')).getText().then(function(text){
+*				
+*		if (text1===text){
+*		//expect(text1.toEqual(text));
+*		//console.log('it pers 7-getText: first name found properly')
+*		}
+*	});
+ */			
+			
+//		  /*expect(fieldMidInitial */
+//			expect(fieldLastName.getAttribute('value').toEqual('LastNameTest'));
+//			expect(fieldGenderSelect.getAttribute('value').toEqual('Non Binary'));
+//			expect(fieldBdMM.getAttribute('value').toEqual('06'));
+//			expect(fieldBdDD.getAttribute('value').tooEqual('22'));
+//			expect(fieldBdYyyy.getAttribute('value').toEqual('1982'));
+//			expect(fieldSsn.getAttribute('value').toEqual('587459329'));
+//			
+//			expect(fieldHomeAddr.toEqual('100 1st St Fl 4'));
+//			expect(fieldCity.toEqual('San Francisco'));
+//			expect(fieldState.toEqual('CA'));
+//			expect(fieldZipCode.toEqual('94105'));
+			
+		  /*expect(chkBoxDiffMailAddr.toEqual('')); */
+		
+//			expect(hiddenfieldMailAddr.toEqual('100 1st St Fl 4'));
+//			expect(hiddenfieldCity.toEqual('San Francisco'));
+//			expect(hiddenfieldState.toEqual('CA'));
+//			expect(hiddenfieldZipCode.toEqual('94105'));	
+//			expect(fieldPhoneSelect.toEqual('Home'));
+//			expect(fieldPhoneNumber.toEqual('415-555-1212'));
+//			expect(fieldEmailAddr.toEqual('idString@someDomain.net'));
+		  /*expect(chkBoxPaperless.toEqual('')); */
+		  /*expect(RadBtnBrokerYes.toEqual('')); */
+		  /*expect(RadBtnBrokerNo.toEqual(''));  */
+		  /*expect(linkBackToQuote.toEqual('')); */
+		  /*expect(PageButtonNext.toEqual(''));  */
+
+			
+		//	var thisTest = element(by.id('brokerName')); 
+		//		expect(thisTest.getAttribute('value')).toContain(protVarBrokerName);
+			
+				
+				var el = element(by.id('brokerName'));
+					el.getText().then(function(text){
+						console.log(text);
+					});
+			
+			console.log('it pers 7: finished evaluating all fields: sleeping.....');
+			browser.sleep(10000);
 		});// end of it pers 7
 
 	});// end describe personal info page.

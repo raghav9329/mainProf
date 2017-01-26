@@ -465,7 +465,7 @@ it('should find the plan applicants and click to display it', function(){
 	browser.sleep(200);	
 	
 	
-	browser.pause();
+//	browser.pause();
 });
 
 //===================================================================================
