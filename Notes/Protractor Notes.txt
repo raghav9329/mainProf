@@ -1,3 +1,39 @@
+1/26/17
+checkbox evaluation
+expect(element(by.model('value1')).isSelected()).toBeTruthy();
+shuould work ???
+http://stackoverflow.com/questions/12485217/how-to-validate-when-a-checkbox-is-checked-in-angularjs-e2e-tests
+
+I don't know if I will be able to get this to work.  sure would like to
+Protractor: Trying to read text after writing to text box for e2e testing
+http://stackoverflow.com/questions/28158199/protractor-trying-to-read-text-after-writing-to-text-box-for-e2e-testing
+element(by.model('first_name')).getAttribute('value').then(function (value) {
+    expect(value).to.equal('Frank');
+});
+
+
+How to make restapi call from jasmine-protractor for non-angular app
+http://stackoverflow.com/questions/41146876/how-to-make-restapi-call-from-jasmine-protractor-for-non-angular-app
+
+1/25/17
+produce XML Report 
+https://github.com/angular/protractor/blob/master/docs/faq.md#the-result-of-gettext-from-an-input-element-is-always-empty
+How do I produce an XML report of my test results?
+
+
+example used to get the hidden postal address field to show up in the Senior test
+http://stackoverflow.com/questions/28062394/protractor-if-checkbox-isselected-bug
+
+best example of dropdown selection was at 
+http://stackoverflow.com/questions/19599450/how-to-select-option-in-drop-down-protractorjs-e2e-tests
+element(by.cssContainingText('option', 'BeaverBox Testing')).click();
+
+1/23/17
+http://stackoverflow.com/questions/19058637/how-to-click-a-link-whose-href-has-a-certain-substring-in-selenium
+I need to click the link who's href has substring "long" in it. How can I do this?
+driver.findElement(By.cssSelector("a[href*='long']")).click();
+
+
 1/20/17
 Need to get the following under my belt
 Js Call back concept

@@ -389,33 +389,40 @@ describe('Navigate to the Start page',function(){
 	});// end describe personal info page.
 	
 	describe('Facilities Page, expect-wait, Select(), Submit()', function(){	
-
-			var ExpctCond = protractor.ExpectedConditions;
+		var ExpctCond = protractor.ExpectedConditions;
 		
 		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
-			var search4ZipButton = element(by.css('.btn.multi-btn.primary.inline-block'));
-			var search4ZipBtnById= element(by.id('search-facilities'));
-//			var ExpctCond = protractor.ExpectedConditions;
-			
-			//browser.wait(ExpctCond.elementToBeVisable() ???  )//   why did I write this ????
-		/* ---------------------------------------------------------------------------------------*/	
-			//browser.wait(ExpctCond.visibilityOf('search4ZipButton',5000));
-			//	console.log('Facs Search button found by CSS wait')
-			//browser.wait(ExpctCond.elementToBeClickable('search4ZipBtnById'),5000);	
-			//	console.log('Facs Search button found by ID wait')
-			
 			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),5000);
 			console.log('exactly like the visibilityOf Example');
-			
 		});// end of it facs 1
 	
-		it('it facs 2: use expected condition to let the page stabilize Test 1', function() {
-			
+		it('it facs 2: use expected condition to let the page stabilize Test 2', function() {
 			browser.wait(ExpctCond.elementToBeClickable($('#search-facilities')),5000);
 			console.log('exactly like the element to be clickable example');
 			
-			browser.sleep(5000);
+			browser.sleep(500);
 		});// end of it facs 2
+		
+		//it should evaluate to the facilities page "title" , function() { });
+		//"Facilities | Enrollment | Delta Dental Insurance Company"
+		// Not doing this right now, maybe never..............................
+		
+		it('it facs 3: should find a radio button and select it', function(){
+			var GengleDentalSanFrancisc = 'DC144101';// last one on default generated list
+			var facilitiesToSelectBtn = element(by.id('DC055237'));
+			
+			if (facilitiesToSelectBtn.isDisplayed()){
+					facilitiesToSelectBtn.click();
+					console.log('it facs 3: The Facilities button was found and click()');
+			}else{
+				console.log('it facs 3: The radio button to pick was not Diaplayed');
+			}
+
+			browser.sleep(5000);
+		});
+		
+		
+	
 	});
 	
 	console.log('end of encompasing describe.  Done !')
