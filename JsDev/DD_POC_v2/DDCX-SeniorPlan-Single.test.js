@@ -318,6 +318,7 @@ describe('Navigate to the Start page',function(){
 	
 	
 	// PageButtonNext
+	//TO DO		 I've got to rename PageButtonNext to PersPageNextButton
 		if(PageButtonNext.isDisplayed()){
 			PageButtonNext.click();
 			console.log('it pers 7: Last thing: Page button found and clicked....');
@@ -393,12 +394,12 @@ describe('Navigate to the Start page',function(){
 		
 		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
 			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),5000);
-			console.log('exactly like the visibilityOf Example');
+			console.log('it facs 1: Exactly like the visibilityOf Example');
 		});// end of it facs 1
 	
 		it('it facs 2: use expected condition to let the page stabilize Test 2', function() {
 			browser.wait(ExpctCond.elementToBeClickable($('#search-facilities')),5000);
-			console.log('exactly like the element to be clickable example');
+			console.log('it facs 2: Exactly like the element to be clickable example');
 			
 			browser.sleep(500);
 		});// end of it facs 2
@@ -409,8 +410,9 @@ describe('Navigate to the Start page',function(){
 		
 		it('it facs 3: should find a radio button and select it', function(){
 			var GengleDentalSanFrancisc = 'DC144101';// last one on default generated list
-			var facilitiesToSelectBtn = element(by.id('DC055237'));
+			var facilitiesToSelectBtn = element(by.id(GengleDentalSanFrancisc));  // DC055237 is not visible default
 			
+			browser.wait(ExpctCond.visibilityOf(facilitiesToSelectBtn),5000)
 			if (facilitiesToSelectBtn.isDisplayed()){
 					facilitiesToSelectBtn.click();
 					console.log('it facs 3: The Facilities button was found and click()');
@@ -418,11 +420,51 @@ describe('Navigate to the Start page',function(){
 				console.log('it facs 3: The radio button to pick was not Diaplayed');
 			}
 
+//			browser.sleep(5000);
+		});// end of it facs 3
+		
+		it('it facs 4: select the link More( down arrow to display hidden info )', function() {
+			console.log('it facs 4: In order to get the more info part of my selection \
+					http://stackoverflow.com/questions/21237976/how-to-get-the-parent-of-an-element \
+					http://stackoverflow.com/questions/23720398/protractor-how-to-locate-a-sibling-of-a-given-element \
+					http://stackoverflow.com/questions/25390171/protractor-select-next-sibling-of-the-current-element ');
+			
+			browser.sleep(500);
+		});// end of it facs 4	
+		
+		it('it facs 5: find the next button and click()', function() {
+			var facsNextButton = element(by.id('nextButton'));
+			
+			if (facsNextButton.isDisplayed()){
+				facsNextButton.click();
+				console.log('it facs 5: Facilities page finished. Next button clicked')
+			}else{
+				console.log('it facs 5: facsNextButton.isDisplayed in order to click() failed');
+			}
 			browser.sleep(5000);
+		});// end of it facs 5
+	}); // end of describe Facilities Page
+	
+	describe('Payment Information page', function(){
+		var ExpctCond = protractor.ExpectedConditions;
+		
+		it('it Pmnt 1: Use Expected Condtion to leat page stabilize3', function() {
+			browser.wait(ExpctCond.visibilityOf($('#cardName')),5000);
+			console.log('it Pmnt 1: Exactly like the visibilityOf Example');
+		});// end of it facs 
+	
+		it('it Pmnt 2: Should all basic personal info data ', function (){
+			
 		});
 		
+		it('it Pmnt 3: Should find and uncheck the billing address CheckBox', function(){
+			
+		});
 		
-	
+		it('it Pmnt 4: Should find and fill out the data in the hidden fields', function(){
+			
+		});	
+		
 	});
 	
 	console.log('end of encompasing describe.  Done !')
