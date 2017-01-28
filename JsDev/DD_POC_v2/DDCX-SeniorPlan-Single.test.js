@@ -4,7 +4,7 @@
 /* Get text console.log on every one of the dots in the console 
  *  figure out what the dots actuall mean
  * Figure out It Pers 6 ( second output: mabe I need it pers 6A to resolve this
- * 
+ * Field validation for every page where there are fields that can be evaluated for correctness
  * 
  */
 describe('Delta Dental Senior plan work flow', function() {
@@ -34,32 +34,35 @@ describe('Delta Dental Senior plan work flow', function() {
 	afterEach(function() {
 		//browser.sleep(sleepDuration);
 	});
+	
+	it('it Parent Describe: Senior plan workflow',function(){
+		console.log('it Parent Describe Start:  Senior Plan workflow')
+	});
 
-
-describe('Navigate to the Start page',function(){	
-		it('should land on the dit3 home page', function(){	
+	describe('Navigate to the Start page',function(){	
+		it('it Nav  1: should land on the dit3 home page', function(){	
 			 expect(browser.getCurrentUrl()).toEqual(dit3Url);
-			 console.log('Current URL where we landed is: ',dit3Url)
-		});
+			 console.log('it Nav  1: Current URL where we landed is: ',dit3Url)
+		});// end it nav 1
 	});// end describe(Nav2StartPage)
 	
 	describe('Start the Plan Selection Process via Get A Quote Button', function() {
 		var getAQuote_Button = element(by.css('.button'));
 	
-		it('should find the Get A Quote button element and activate the button', function(){
+		it('it strt 1: should find the Get A Quote button element and activate the button', function(){
 			expect(getAQuote_Button.isPresent()).toBe(true);//.then(function()
 			getAQuote_Button.click();
-			console.log('Found the GetAQuote button and clicked it');
+			console.log('it strt 1: Found the GetAQuote button and clicked it');
 		});// end of it(1)
 
-		it('it 2: should find the proper dialog to start the quote process',function(){
+		it('it strt 2: should find the proper dialog to start the quote process',function(){
 			var dlg_SearchForDenPlans = element(by.id('ui-dialog-title-searchQuoteDialog'));
 			expect( dlg_SearchForDenPlans.isPresent()).toBe(true);
-			console.log('Found the Search for Dental Plans dialog');
+			console.log('it strt 2: Found the Search for Dental Plans dialog');
 		}); //end of it(2)
 	
 		// seems like this should be broken up
-		it('it 2A: should allow me to enter zip and qty to cover ', function(){
+		it('it strt2A: should allow me to enter zip and qty to cover ', function(){
 			expect( element(by.css('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all'))   );
 			
 			/* Waits for the element with id 'coverage_type' to be clickable. 
@@ -70,17 +73,17 @@ describe('Navigate to the Start page',function(){
 			var zipField = element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
 			browser.wait(ExpctCond.elementToBeClickable(zipField),5000);
 			zipField.sendKeys(zipValue);
-			console.log('entered date in zipField: ', zipValue);
+			console.log('it strt2A: entered date in zipField: ', zipValue);
 		});// end of it(2A) 
 		
-		it('it 2B: special debug step.  should check the text in the field via Attribute',function (){
+		it('it strt2B: special debug step.  should check the text in the field via Attribute',function (){
 			this.debugTestVar = element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
 			this.debugTestVar.getAttribute('value').then(function (text) {
-				console.log('debugout: checking text in zip field.  value is = ', text);
+				console.log('it strt2B: debugout- checking text in zip field.  value is = ', text);
 			});// end of this.debugTestVar.getAttrib....
 		}); // end of it(2B)
 		
-		it('it 3: should evaluate the single coverage selection', function(){
+		it('it strt 3: should evaluate the single coverage selection', function(){
 			var howManyWillBeCovered = element(by.id('coverage_type'));
 			var coverageSelection = "Self";   //HUMMMM	var coverageSelection = 'Self';  // notice the difference in qoutes
 			var ExpctCond = protractor.ExpectedConditions; // same name new scope
@@ -92,34 +95,34 @@ describe('Navigate to the Start page',function(){
 			//expect(howManyWillBeCovered.getAttribute('value')).toEqual('1');
 			//expect(howManyWillBeCovered(by.selectedOption('value'))).toEqual('1');
 			//expect(element(by.model('coverage_type')).$('option:checked').getText()).toEqual('1');
-			console.log('Single coverage selected with: ',coverageSelection);
+			console.log('it strt 3: Single coverage selected with: ',coverageSelection);
 		});// end of it(3)	
 				
-		it('it:4 should find the dialog button and click it', function(){
+		it('it strt 4: should find the dialog button and click it', function(){
 			var searchForPlans_GoButton = element(by.id('btn_saveBig'));	
 			expect( searchForPlans_GoButton.isPresent()).toBe(true);	
 			searchForPlans_GoButton.click();
-			console.log('Search for Dental Plans button found and Button Clicked');
+			console.log('it strt 4: Search for Dental Plans button found and Button Clicked');
 		});	// end of it(4)
 			
 			
-		it('it:5 should locate the page titlem properly', function () {
+		it('it strt 5: should locate the page titlem properly', function () {
 			var stringPageTitle = "::Individual & Families::";
 			expect(browser.getTitle()).toEqual(stringPageTitle);
-			console.log('Page Title found to be: ',stringPageTitle);
+			console.log('it strt 5: Page Title found to be: ',stringPageTitle);
 		});// end of it(5)	
 			
-		it('should find the proper zip code identified for the three plans', function(){	
+		it('it strt 5: should find the proper zip code identified for the three plans', function(){	
 			// See that zipValue is defined above some 30 lines 
 			// but do I reall need to do this?  Is it any more readable ?
 			var zipCodeUnderTest = '94105';
 			var mySearchCondition = element(by.id('psc_zip'));
 			
 			expect(mySearchCondition.getText()).toEqual(zipCodeUnderTest);
-			console.log('Found zipCode we are testing', zipCodeUnderTest);
+			console.log('it strt 6: Found zipCode we are testing', zipCodeUnderTest);
 		});// end of it(6)
 	
-		it('it 7: should find the text of the link for Senior plan' , function(){
+		it('it strt 7: should find the text of the link for Senior plan' , function(){
 			//  Previous Idea I think.... not usedvar ExpctCond = protractor.ExpectedConditions;
 			var seniorPlanLink = element(by.id('planRowsBody_72230')).element(By.tagName('a'));
 			
@@ -131,31 +134,36 @@ describe('Navigate to the Start page',function(){
 			//browser.wait(ExpctCond.textToBePresentInElementValue)
 			
 			seniorPlanLink.click();
-			console.log('senior plan link found and clicked.');
+			console.log('it strt 7: senior plan link found and clicked.');
 		
 			//browser.pause();
 		});
 			
-		it('it 8: should evaluate page correctness before clicking the button', function(){
+		it('it strt 8: should evaluate page correctness before clicking the button', function(){
 			// left as an exercise to complete.
 			// evaluate page correctness
 			var enrollButton = element(by.cssContainingText('.enrollBtn', 'Enroll'));
 			enrollButton.click();
-			console.log('Enroll Button found and clicked.');
+			console.log('it strt 8: Enroll Button found and clicked.');
 
 		}); // end of it 8
 		
-		it('it 9: should evaluate the landing page', function(){
-			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
-			expect(browser.getTitle()).toEqual(pageTitleString);
-			console.log('got to page: ',pageTitleString );	
-			//browser.pause();
-		});  // end of it 9
+//		it('it strt 9: should evaluate the landing page', function(){
+//			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
+//			expect(browser.getTitle()).toEqual(pageTitleString);
+//			console.log('it strt 9: landed on page: ',pageTitleString );	
+//			//browser.pause();
+//		});  // end of it 9
 	
 	});// end describe('Start the Plan Selection Processh
 	
 	describe('Personal Info Page, preValidate(), fillOut(), postValidate()', function(){
-		
+		it('it Pers 0: Personal Info Page validation',function(){
+			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
+			expect(browser.getTitle()).toEqual(pageTitleString);
+			console.log('it strt 9: landed on page: ',pageTitleString );	
+//			console.log('it Pers 0: output.....');
+		});
 			var fieldFirstName		= element(by.id('firstName'));
 			var fieldMidInitial		= element(by.id('lastName'));
 			var fieldLastName		= element(by.id('lastName'));
@@ -176,7 +184,7 @@ describe('Navigate to the Start page',function(){
 			var RadBtnBrokerYes		= element(by.id('brokerYes'));
 			var RadBtnBrokerNo		= element(by.id('brokerNo'));
 			var linkBackToQuote		= element(by.id('backToQuote'));
-			var PageButtonNext		= element(by.id('nextButton'));
+			var persPageButtonNext	= element(by.id('nextButton'));
 	/************************************************************************/	
 	/**   Right after State and zipCode are the following hidden fields  ****/	
 	/************************************************************************/	
@@ -190,23 +198,23 @@ describe('Navigate to the Start page',function(){
 	/************************************************************************/	
 			var hiddenfieldBrokerNum=element(by.id('brokerNumber'));
 			
-		it('pers 1: should evaluate details on the pers Info Page ', function(){
+		it('it pers 1: should evaluate details on the pers Info Page ', function(){
 			/* this test is and the definitions in the describe are the 
 			 * kind of things that should be going in the page object model testing  
 			 * *************************************************************************/
-				expect(fieldFirstName.isDisplayed()).toBe(true);
-				expect(fieldMidInitial.isDisplayed()).toBe(true);
-				expect(fieldLastName.isDisplayed()).toBe(true);
-				expect(fieldGenderSelect.isDisplayed()).toBe(true);
-				expect(fieldBdMM.isDisplayed()).toBe(true);
-				expect(fieldBdDD.isDisplayed()).toBe(true);
-				expect(fieldBdYyyy.isDisplayed()).toBe(true);
-				expect(fieldSsn.isDisplayed()).toBe(true);
+				expect(fieldFirstName.isDisplayed())	.toBe(true);
+				expect(fieldMidInitial.isDisplayed())	.toBe(true);
+				expect(fieldLastName.isDisplayed())		.toBe(true);
+				expect(fieldGenderSelect.isDisplayed())	.toBe(true);
+				expect(fieldBdMM.isDisplayed())			.toBe(true);
+				expect(fieldBdDD.isDisplayed())			.toBe(true);
+				expect(fieldBdYyyy.isDisplayed())		.toBe(true);
+				expect(fieldSsn.isDisplayed())			.toBe(true);
 				
-				expect(fieldHomeAddr.isDisplayed()).toBe(true);
-				expect(fieldCity.isDisplayed()).toBe(true);
-				expect(fieldState.isDisplayed()).toBe(true);
-				expect(fieldZipCode.isDisplayed()).toBe(true);
+				expect(fieldHomeAddr.isDisplayed())		.toBe(true);
+				expect(fieldCity.isDisplayed())			.toBe(true);
+				expect(fieldState.isDisplayed())		.toBe(true);
+				expect(fieldZipCode.isDisplayed())		.toBe(true);
 				
 				expect(chkBoxDiffMailAddr.isDisplayed()).toBe(true);
 			
@@ -217,8 +225,8 @@ describe('Navigate to the Start page',function(){
 				expect(RadBtnBrokerYes.isDisplayed()).toBe(true);
 				expect(RadBtnBrokerNo.isDisplayed()).toBe(true);
 				expect(linkBackToQuote.isDisplayed()).toBe(true);
-				expect(PageButtonNext.isDisplayed()).toBe(true);
-				console.log('Just did an expect on evey currently visable element on the page');
+				expect(persPageButtonNext.isDisplayed()).toBe(true);
+				console.log('it pers 1: Just did an expect on evey currently visable element on the page');
 				//console.log('well almost every element.  Need to eval the hidden addredd');
 				//console.log('thest last two lines are notes for ToDo.....');
 		});// end of it pers 1
@@ -250,6 +258,7 @@ describe('Navigate to the Start page',function(){
 			
 			fieldEmailAddr.sendKeys('idString@someDomain.net')
 		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
+			console.log('it pers 2: finished2,No3: currently NO EVALUATION of 2 .... FIX THAT !!!')
 		});// end of it pers 2 
 	
 		
@@ -270,7 +279,7 @@ describe('Navigate to the Start page',function(){
 			hiddenfieldState.sendKeys('California');// this just likely a check
 			hiddenfieldZipCode.sendKeys('94105');// this just likely a check
 			
-	
+			console.log('it pers 4: completed the hidden fields after clicking diffMail');
 		}); // end of it pers 4
 		
 		it('it pers 5: should access & validate the broker selection and entry ',function (){
@@ -283,113 +292,68 @@ describe('Navigate to the Start page',function(){
 		}); // end of it pers 5
 	
 		
-		it('it pers 6: should validate all field entry values and click next', function(){
+		it('it pers6A: should validate BNO is selected and clicks BYES to enable BNUM', function(){
 			//expect(element(by.id('brokerNo')).isSelected()).toBe(true);
 			if ( RadBtnBrokerNo.isSelected() ) {
 				RadBtnBrokerYes.click();
-				console.log('it pers 6: found brokerNo, switched to brokerYes!');
+				console.log('it pers6A: found brokerNo, switched to brokerYes!');
 			}else{
-				console.log('it pers 6: did not find BrokerNo. So, it was not switched to Yes');
+				console.log('it pers6A: did not find BrokerNo. So, it was not switched to Yes');
 			}
-		
+		});// end it pers 6A
+			
+		it('it pers6B: should newly visable fields, enter BNUM and click next', function(){
+			
 			if ( hiddenfieldBrokerNum.isDisplayed() ) {
 				hiddenfieldBrokerNum.sendKeys('2012836');
-				expect(hiddenfieldBrokerNum.isDisplayed());
+//				expect(hiddenfieldBrokerNum.isDisplayed());
 //				hiddenfieldBrokerNum.sendKeys('2012836');
-				console.log('it pers 6: after brokerYes selected & number entered');
+				console.log('it pers6B: hiddenfieldBrokerNum was displayed BNUM entered');
 			}else{
-				console.log('it pers 6: hiddenfieldBrokerNum Was Not Displayed. NoBroker num Entered');
+				console.log('it pers6B: hiddenfieldBrokerNum Was Not Displayed. NoBroker num Entered');
 			}
-		});// end of it Pers 6
+		});// end of it Pers6B
 		
-		it('it pers 7: Evaluate all field correctness, find the Next button, click it',function(){
+		it('it pers6C: Evaluate all field correctness, find the Next button, click it',function(){
 			var text1 = "TestFirstName";
-			var protVarBrokerName = 'CHARLES DARROW';
+			var protVarBrokerName = 'CHARLES DARROW';d
+			var testErrorString ='antidisestabilshment';// use of this needs to be completed.
 			
 			chkBoxPaperless.click();
+			chkBoxPaperless.click();
+
 			
 			var el = element(by.id('brokerName'));
-			el.getText().then(function(text){
-				console.log(text);
+//			el.getAttribute('value').then(function(text){
+//				console.log(text);
+//			});
+			
+			el.getAttribute('value').then( function(text){
+				if(text === protVarBrokerName){
+					console.log('it pers6C: Broker Name field contains',protVarBrokerName);
+				}else{
+					console.log('it pers6C: Error, expected: ' ,protVarBrokerName,' found: ', text);
+				}
 			});
+		});
 	
 	//console.log('it pers 7: finished evaluating all fields: sleeping 2 sec.....');
 	//browser.sleep(2000);
 	
-	
-	// PageButtonNext
-	//TO DO		 I've got to rename PageButtonNext to PersPageNextButton
-		if(PageButtonNext.isDisplayed()){
-			PageButtonNext.click();
+	it('it pers 7:',function (){
+		if(persPageButtonNext.isDisplayed()){
+			persPageButtonNext.click();
 			console.log('it pers 7: Last thing: Page button found and clicked....');
 		}
 		browser.sleep(1000);	
-//			console.log('it pers 7: currently an empty spec');
 		
-/* *********
- * This was the intended second test of the block.  It doesn't work
- * expect(fieldFirstName.getAttribute('value').toBe('TestFirstName'));  */
-/* ********                                 or.toEqual...
- * This was the intended second test of the block.  It doesn't work
- * expect(fieldFirstName.getAttribute('value').toBe('TestFirstName'));  
- *                                         or .toEqual 
- * */
-
-/* ********
- * This was the third try it doesn't work 
- * 	expect(element(by.model('firstName')).getAttribute('value').toEqual('TestFirstName'));
- * 
- */			
-
-/* *******
-* This was my final attepmt
-*browser.findElement(by.id('firstName')).getText().then(function(text){
-*				
-*		if (text1===text){
-*		//expect(text1.toEqual(text));
-*		//console.log('it pers 7-getText: first name found properly')
-*		}
-*	});
- */			
-			
-//		  /*expect(fieldMidInitial */
-//			expect(fieldLastName.getAttribute('value').toEqual('LastNameTest'));
-//			expect(fieldGenderSelect.getAttribute('value').toEqual('Non Binary'));
-//			expect(fieldBdMM.getAttribute('value').toEqual('06'));
-//			expect(fieldBdDD.getAttribute('value').tooEqual('22'));
-//			expect(fieldBdYyyy.getAttribute('value').toEqual('1982'));
-//			expect(fieldSsn.getAttribute('value').toEqual('587459329'));
-//			
-//			expect(fieldHomeAddr.toEqual('100 1st St Fl 4'));
-//			expect(fieldCity.toEqual('San Francisco'));
-//			expect(fieldState.toEqual('CA'));
-//			expect(fieldZipCode.toEqual('94105'));
-			
-		  /*expect(chkBoxDiffMailAddr.toEqual('')); */
-		
-//			expect(hiddenfieldMailAddr.toEqual('100 1st St Fl 4'));
-//			expect(hiddenfieldCity.toEqual('San Francisco'));
-//			expect(hiddenfieldState.toEqual('CA'));
-//			expect(hiddenfieldZipCode.toEqual('94105'));	
-//			expect(fieldPhoneSelect.toEqual('Home'));
-//			expect(fieldPhoneNumber.toEqual('415-555-1212'));
-//			expect(fieldEmailAddr.toEqual('idString@someDomain.net'));
-		  /*expect(chkBoxPaperless.toEqual('')); */
-		  /*expect(RadBtnBrokerYes.toEqual('')); */
-		  /*expect(RadBtnBrokerNo.toEqual(''));  */
-		  /*expect(linkBackToQuote.toEqual('')); */
-		  /*expect(PageButtonNext.toEqual(''));  */
-
-			
-		//	var thisTest = element(by.id('brokerName')); 
-		//		expect(thisTest.getAttribute('value')).toContain(protVarBrokerName);
-			
-				
 
 		});// end of it pers 7
 	});// end describe personal info page.
 	
 	describe('Facilities Page, expect-wait, Select(), Submit()', function(){	
+		// TO DO:  field validation for where ever it there
+		// Intent is to mimic the approach used on the personal info page
 		var ExpctCond = protractor.ExpectedConditions;
 		
 		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
@@ -446,15 +410,38 @@ describe('Navigate to the Start page',function(){
 	}); // end of describe Facilities Page
 	
 	describe('Payment Information page', function(){
+		// TO DO: Field validation like the personal info page
 		var ExpctCond = protractor.ExpectedConditions;
 		
 		it('it Pmnt 1: Use Expected Condtion to leat page stabilize3', function() {
-			browser.wait(ExpctCond.visibilityOf($('#cardName')),5000);
-			console.log('it Pmnt 1: Exactly like the visibilityOf Example');
-		});// end of it facs 
+			browser.wait(ExpctCond.visibilityOf($('#cardName')),8500); // ie: element(by.id('cardName')
+			console.log('it Pmnt 1: #cardName Exactly like the visibilityOf Example');
+		});// end of it Pmnt 1
+		
+		it('it Pmnt1A: Use Expected Condtion to leat page stabilize3', function() {
+			browser.wait(ExpctCond.visibilityOf($('#nextButton')),8500);// ie: element(by.id('nextButton')
+			console.log('it Pmnt1A: #nextButton Exactly like the visibilityOf Example');
+		});// end of it Pmnt 1A
+
+		it('it Pmnt1B: Use Expected Condtion to leat page stabilize3', function() {
+				// here is the validation of all the fields defined in the describe
+			console.log('it Pmnt1B: Validation of all fields complete');
+		});// end of it Pmnt 1B
 	
 		it('it Pmnt 2: Should all basic personal info data ', function (){
-			
+			var stringCardName 	= 'Fn_OneHundredAnd Ln_ThirtyFiveDollars' ;
+			var testErrorString	= 'bla bla bla'
+			var el 				= element(by.id('cardName'));
+
+//			element(by.id('cardName')).sendKeys(stringCardName);
+			element(by.id('cardName')).sendKeys(testErrorString);
+			el.getAttribute('value').then(function (text){
+				if(text === stringCardName) {
+				console.log('it Pmnt 2: Card Name was found to equal', stringCardName);
+				}else{
+					console.log('it Pmnt 2: Error, did not find ', stringCardName);
+				}
+			});
 		});
 		
 		it('it Pmnt 3: Should find and uncheck the billing address CheckBox', function(){
@@ -466,6 +453,7 @@ describe('Navigate to the Start page',function(){
 		});	
 		
 	});
-	
-	console.log('end of encompasing describe.  Done !')
+
+//	console.log('end of encompasing describe.  Done !')  // Curiously found that this runs and outputs FIRST !!
+
 }); // end of describe('Delta Dental Senior plan work flow
