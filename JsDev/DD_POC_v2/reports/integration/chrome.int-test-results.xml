@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="focused specs" timestamp="2017-01-27T13:17:02" hostname="localhost" time="36.663" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="focused specs" name="it Parent Describe: Senior plan workflow" time="0.393" />
+ </testsuite>
+ <testsuite name="focused specs.Navigate to the Start page" timestamp="2017-01-27T13:17:03" hostname="localhost" time="0.412" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="focused specs.Navigate to the Start page" name="it Nav  1: should land on the dit3 home page" time="0.411" />
+ </testsuite>
+ <testsuite name="focused specs.Start the Plan Selection Process via Get A Quote Button" timestamp="2017-01-27T13:17:03" hostname="localhost" time="12.345" errors="0" tests="10" skipped="0" disabled="0" failures="0">
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt 1: should find the Get A Quote button element and activate the button" time="1.863" />
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt 2: should find the proper dialog to start the quote process" time="0.471" />
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt2A: should allow me to enter zip and qty to cover " time="1.017" />
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt2B: special debug step.  should check the text in the field via Attribute" time="0.432" />
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt 3: should evaluate the single coverage selection" time="0.696" />
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt 4: should find the dialog button and click it" time="2.944" />
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt 5: should locate the page titlem properly" time="0.469" />
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt 5: should find the proper zip code identified for the three plans" time="0.461" />
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt 7: should find the text of the link for Senior plan" time="1.781" />
+  <testcase classname="focused specs.Start the Plan Selection Process via Get A Quote Button" name="it strt 8: should evaluate page correctness before clicking the button" time="2.211" />
+ </testsuite>
+ <testsuite name="focused specs.Personal Info Page, preValidate(), fillOut(), postValidate()" timestamp="2017-01-27T13:17:15" hostname="localhost" time="9.241" errors="0" tests="8" skipped="0" disabled="0" failures="0">
+  <testcase classname="focused specs.Personal Info Page, preValidate(), fillOut(), postValidate()" name="it Pers 0: Personal Info Page validation" time="0.464" />
+  <testcase classname="focused specs.Personal Info Page, preValidate(), fillOut(), postValidate()" name="it pers 1: should evaluate details on the pers Info Page " time="1.747" />
+  <testcase classname="focused specs.Personal Info Page, preValidate(), fillOut(), postValidate()" name="it pers 2, should Allow Data entry for the fields under test " time="2.227" />
+  <testcase classname="focused specs.Personal Info Page, preValidate(), fillOut(), postValidate()" name="it pers 4: should eval mailing address entry" time="1.299" />
+  <testcase classname="focused specs.Personal Info Page, preValidate(), fillOut(), postValidate()" name="it pers 5: should access &amp; validate the broker selection and entry " time="0.586" />
+  <testcase classname="focused specs.Personal Info Page, preValidate(), fillOut(), postValidate()" name="it pers6A: should validate BNO is selected and clicks BYES to enable BNUM" time="0.536" />
+  <testcase classname="focused specs.Personal Info Page, preValidate(), fillOut(), postValidate()" name="it pers6B: should newly visable fields, enter BNUM and click next" time="0.566" />
+  <testcase classname="focused specs.Personal Info Page, preValidate(), fillOut(), postValidate()" name="it pers 7: Evaluate all field correctness, find the Next button, click it" time="1.815" />
+ </testsuite>
+ <testsuite name="focused specs.Facilities Page, expect-wait, Select(), Submit()" timestamp="2017-01-27T13:17:25" hostname="localhost" time="11.732" errors="0" tests="5" skipped="0" disabled="0" failures="0">
+  <testcase classname="focused specs.Facilities Page, expect-wait, Select(), Submit()" name="it facs 1: use expected condition to let the page stabilize Test 1" time="3.535" />
+  <testcase classname="focused specs.Facilities Page, expect-wait, Select(), Submit()" name="it facs 2: use expected condition to let the page stabilize Test 2" time="1.023" />
+  <testcase classname="focused specs.Facilities Page, expect-wait, Select(), Submit()" name="it facs 3: should find a radio button and select it" time="0.718" />
+  <testcase classname="focused specs.Facilities Page, expect-wait, Select(), Submit()" name="it facs 4: select the link More( down arrow to display hidden info )" time="0.891" />
+  <testcase classname="focused specs.Facilities Page, expect-wait, Select(), Submit()" name="it facs 5: find the next button and click()" time="5.564" />
+ </testsuite>
+ <testsuite name="focused specs.Payment Information page" timestamp="2017-01-27T13:17:36" hostname="localhost" time="2.502" errors="0" tests="6" skipped="0" disabled="0" failures="0">
+  <testcase classname="focused specs.Payment Information page" name="it Pmnt 1: Use Expected Condtion to leat page stabilize3" time="0.491" />
+  <testcase classname="focused specs.Payment Information page" name="it Pmnt1A: Use Expected Condtion to leat page stabilize3" time="0.48" />
+  <testcase classname="focused specs.Payment Information page" name="it Pmnt1B: Use Expected Condtion to leat page stabilize3" time="0.383" />
+  <testcase classname="focused specs.Payment Information page" name="it Pmnt 2: Should all basic personal info data " time="0.383" />
+  <testcase classname="focused specs.Payment Information page" name="it Pmnt 3: Should find and uncheck the billing address CheckBox" time="0.382" />
+  <testcase classname="focused specs.Payment Information page" name="it Pmnt 4: Should find and fill out the data in the hidden fields" time="0.382" />
+ </testsuite>
+ <testsuite name="focused specs.Delta Dental Senior plan work flow" timestamp="2017-01-27T13:17:39" hostname="localhost" time="0" errors="0" tests="0" skipped="0" disabled="0" failures="0">
+ </testsuite>
+</testsuites>

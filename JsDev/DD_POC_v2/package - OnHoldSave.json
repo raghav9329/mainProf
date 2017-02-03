@@ -17,12 +17,6 @@
   "license": "none",
   "description": "Delta Dental Customer Experience Proof of concept",
   "devDependencies": {
-    "gulp": "3.9.0",
-    "gulp-shell": "0.5.2",
-    "gulp-util": "3.0.7",
-    "jasmine-reporters": "^2.2.0",
-    "jasmine-xml2html-converter": "0.0.2",
-    "jasmine-spec-reporter": "2.4.0",
     "protractor": "4.0.10",
     "protractor-jasmine2-html-reporter": "0.0.6",
     "vinyl-source-stream": "1.1.0",

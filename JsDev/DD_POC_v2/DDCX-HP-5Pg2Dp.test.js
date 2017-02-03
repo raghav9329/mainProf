@@ -1,7 +1,7 @@
 // spec.jsG
 "use strict"
 describe('Protractor Demo App', function() {
-
+	var ExpCond = protractor.ExpectedConditions;
 
   browser.ignoreSynchronization = true;
 
@@ -78,6 +78,13 @@ it('should have navigated to the Pers Info Page ', function(){
 //		expect(browser.getCurrentUrl()).toEqual('https://mot.deltadentalins.com/enroll/personal-info');
 		console.log('Pers Info page URL Check complete');
 });
+
+it('should should wait for the next button before starting date entry ', function(){
+	browser.wait(ExpCond.elementToBeClicable($('#nextButton')),5000);
+	expect(browser.isElementPresent(by.id('firstName'))).toBe(true);
+	console.log('We waited for the next button to be clickable before entering data');
+	});
+
 
 it('should fill in the First Name on the Pers Info Page ', function(){
 		var testString = "atkmhFname";
