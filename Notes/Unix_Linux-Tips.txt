@@ -4,9 +4,9 @@ Unix_Linux-Tips
 http://tecadmin.net/bash-shell-test-if-file-or-directory-exists/#
 
 16 APRIL 2014
-Bash Shell Ð Test If File or Directory Exists  Written by Rahul K.
+Bash Shell Ð Test If File or Directory Exists  Written by Rahul K.
 
- 
+ 
 While working with bash programming, we many times need to check if file already exists, create new files, inserts data in files. Also some times we required to execute other scripts from other scripts.
 
 This article has few details about testing file and directories existence in system. Which can be very helpful for you while writing shell scripting.
@@ -18,14 +18,14 @@ If we required to add some content or need to create files from script. First ma
 #!/bin/bash
 if [ -f /tmp/testfile.log ]
 then
-    echo "File exists"
+    echo "File exists"
 fi
 The above statements can be also write using test keyword as below
 
 #!/bin/bash
 if test -f /tmp/testfile.log
 then
-    echo "File exists"
+    echo "File exists"
 fi
 Or in a single line we can write it as below. This is very useful while writing in shell scripting.
 
@@ -41,7 +41,7 @@ Sometimes we need to create files inside a specific directory or need directory 
 
 if [ -d /tmp/mydir ]
 then
-    echo "Directory exists"
+    echo "Directory exists"
 fi
 The above statements can be also write using test keyword as below
 
@@ -49,7 +49,7 @@ The above statements can be also write using test keyword as below
 
 if test -d /tmp/mydir
 then
-    echo "Directory exists"
+    echo "Directory exists"
 fi
 Or in a single line we can write it as below
 
@@ -58,9 +58,9 @@ Or in a single line we can write it as below
 3. Bash Shell Ð Create File Directory only if not Exists
 This is the best practice to check file existence before creating them else you will get error message.
 
-For File:   [ ! -f /tmp/testfile.log ] && touch /tmp/testfile.log
+For File:   [ ! -f /tmp/testfile.log ] && touch /tmp/testfile.log
 
-For Directory:   [ ! -d /tmp/mydir  ] && mkdir /tmp/mydir
+For Directory:   [ ! -d /tmp/mydir  ] && mkdir /tmp/mydir
 
 9/7/2016
 Special Mac Command line user of PostFix as an SMTP daemon on the mac
@@ -71,7 +71,7 @@ edit /Systems/Library/LaunchDaemons/org.postfix.master.plist following inst abov
 
 
 http://butlerpc.net/blog/2012/02/execute-a-command-for-each-file-in-a-directory-recursively-on-linux/
-find . -type f -name '*.php' -exec sed -i 's/    /\t/g' {} \;
+find . -type f -name '*.php' -exec sed -i 's/    /\t/g' {} \;
 Explanation:
 
 find lists all files, one per line, in the current directory and all subdirectories recursively
@@ -79,7 +79,7 @@ find lists all files, one per line, in the current directory and all subdirector
 -type f only list files, not directories.
 -name Ô*.phpÕ only if the name matches * (wildcard) with Ò.phpÓ at the end
 -exec execute the following command for each result that matched
-sed -i Ôs/    /\t/gÕ replace, or substitute, one string for another. IÕm searching for four consecutive spaces and replacing with t, meaning tab character. the /g at the end means global, replace each instance wherever it may appear in the file on each line. -i means Òedit file in placeÓ so the modified file is saved back to itself.
+sed -i Ôs/    /\t/gÕ replace, or substitute, one string for another. IÕm searching for four consecutive spaces and replacing with t, meaning tab character. the /g at the end means global, replace each instance wherever it may appear in the file on each line. -i means Òedit file in placeÓ so the modified file is saved back to itself.
 {} this inputs the file for the sed command
 \; I think this finishes the -exec parameter for find. DonÕt forget the backslash
 
@@ -109,7 +109,7 @@ then commit and push
 git status will no longer report it
 
 
-2/4/16  nice tip
+2/4/16  nice tip
 How to diff common files between two directories
 diff -srq dir1 dir2 | grep identical
 

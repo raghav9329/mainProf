@@ -1,3 +1,32 @@
+1/31/17
+Protractor js example for loop :  Also good page object modeling...
+http://stackoverflow.com/questions/19998109/can-i-divide-my-tests-into-separate-specs-and-then-call-them-from-another-or-is
+
+Http Status Codes
+http://stackoverflow.com/questions/25137881/how-to-use-protractor-to-get-the-response-status-code-and-response-text
+https://rogerkeays.com/how-to-get-the-http-status-code-in-selenium-webdriver
+RogerKeays solution is java specific lookinf for JS solution
+
+Testability : Wait for : 
+https://www.npmjs.com/package/testability-browser-bindings
+https://github.com/alfonso-presa/testability.js
+https://github.com/alfonso-presa/protractor-testability-plugin
+
+page-Object Intro
+https://github.com/angular/protractor/blob/master/docs/page-objects.md
+
+
+1/30/17
+Note on waiting for non angular pages to load completely
+http://stackoverflow.com/questions/33301476/how-to-wait-the-page-to-test-is-loaded-in-non-angular-site
+
+One possible solution to the Test For AJAX call
+G: protractor js non angular page testing detecting AJAX request
+http://stackoverflow.com/questions/3596583/javascript-detect-an-ajax-event
+
+Must develop notes and philosophy about what is vaild testing 
+What is simply trivial navigation, and what is testing something ?
+
 1/26/17
 checkbox evaluation
 expect(element(by.model('value1')).isSelected()).toBeTruthy();
