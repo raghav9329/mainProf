@@ -7,7 +7,7 @@
  * Field validation for every page where there are fields that can be evaluated for correctness
  * 
  */
-describe('Delta Dental Senior plan work flow', function() {
+//describe('Delta Dental Senior plan work flow', function() {
 	// JavaScriptTheGoodParts.pdf pg25 refs global obj var MYAPP = {};
 	// Limit the exposure global vars have 
 	var protocol        = "https://"
@@ -16,6 +16,7 @@ describe('Delta Dental Senior plan work flow', function() {
 	var testDomain_Name  = "deltadentalins.com";
 	var server = "";
 	var dit3Url = "https://dit3.deltadentalins.com/";
+	var motUrl	= "https://mot.deltadentalins.com/"
 	var sleepDuration = 380;// miliseconds 80 < 1/10 of a secondj
 
 	browser.ignoreSynchronization = true;	
@@ -123,18 +124,22 @@ describe('Delta Dental Senior plan work flow', function() {
 		});// end of it(6)
 	
 		it('it strt 7: should find the text of the link for Senior plan' , function(){
-			//  Previous Idea I think.... not usedvar ExpctCond = protractor.ExpectedConditions;
-			var seniorPlanLink = element(by.id('planRowsBody_72230')).element(By.tagName('a'));
+//		it('it strt 7: should find the text of the link for Individual/Family Dental Protram' , function(){
+
+			var seniorPlanLink = element(by.id('planRowsBody_72230')).element(By.tagName('a'));  // CAA50 Senior Plan Link
+			//var seniorPlanLink = element(by.id('planRowsBody_70424')).element(By.tagName('a'));// CAA54 Individual Family Dental Plan
 			
 			/* as much as I would like to zero in exactly on the link.....  *s
 			 * the following srPlnLink definition is not finding the link to click
 			 */
-			//var seniorPlanLink = element(by.cssContainingText('.planDetails','DeltaCare®  USA CAA50 Senior Dental Program')).element(By.tagName('a'));
+//var seniorPlanLink = element(by.cssContainingText('.planDetails','DeltaCare®  USA CAA50 Senior Dental Program')).element(By.tagName('a'));
+// Senior Plan CAA50 was deleted by Product Management
 			
 			//browser.wait(ExpctCond.textToBePresentInElementValue)
 			
 			seniorPlanLink.click();
-			console.log('it strt 7: senior plan link found and clicked.');
+			console.log('it strt 7: senior plan link found and clicked.');// senior Plan depracated
+//			console.log('it strt 7: Individual/Family Dental Program link found and clicked.');
 		
 			//browser.pause();
 		});
@@ -316,40 +321,47 @@ describe('Delta Dental Senior plan work flow', function() {
 		
 		it('it pers6C: Evaluate all field correctness, find the Next button, click it',function(){
 			var text1 = "TestFirstName";
-			var protVarBrokerName = 'CHARLES DARROW';d
+			var protVarBrokerName = 'CHARLES DARROW';
 			var testErrorString ='antidisestabilshment';// use of this needs to be completed.
 			
 			chkBoxPaperless.click();
 			chkBoxPaperless.click();
 
 			
-			var el = element(by.id('brokerName'));
+			var elementBrokerName = element(by.id('brokerName'));
 //			el.getAttribute('value').then(function(text){
 //				console.log(text);
 //			});
 			
-			el.getAttribute('value').then( function(text){
+			elementBrokerName.getAttribute('value').then( function(text){
 				if(text === protVarBrokerName){
 					console.log('it pers6C: Broker Name field contains',protVarBrokerName);
 				}else{
-					console.log('it pers6C: Error, expected: ' ,protVarBrokerName,' found: ', text);
+					console.log('it pers6C: Error, expected: ' ,protVarBrokerName,' found: ', text, ' anthing there ???');
 				}
 			});
+			expect(elementBrokerName.getAttribute('value')).toEqual(protVarBrokerName);
+
+	//		expect(elementBrokerName.getAttribute('value')).toEqual('');
+			/* 
+			 * When the broker service is broken and doesn't return a value
+			 * Then the line above searching for null('')String passes
+			 *  */
 		});
 	
-	//console.log('it pers 7: finished evaluating all fields: sleeping 2 sec.....');
-	//browser.sleep(2000);
-	
-	it('it pers 7:',function (){
-		if(persPageButtonNext.isDisplayed()){
-			persPageButtonNext.click();
-			console.log('it pers 7: Last thing: Page button found and clicked....');
-		}
-		browser.sleep(1000);	
-		
+		it('it pers 7:',function (){
+			// persPabeButtonNext Defined at the beginning of the describe
+			if(persPageButtonNext.isDisplayed()){
+				persPageButtonNext.click();
+				console.log('it pers 7: Personal Info Page Next button found and clicked....');
+				}
 
-		});// end of it pers 7
+			});// end of it pers 7
 	});// end describe personal info page.
+
+// I need to put in a dependent page click Next .  No dependent
+	// this because they killed the senior plan
+	
 	
 	describe('Facilities Page, expect-wait, Select(), Submit()', function(){	
 		// TO DO:  field validation for where ever it there
@@ -384,9 +396,12 @@ describe('Delta Dental Senior plan work flow', function() {
 				console.log('it facs 3: The radio button to pick was not Diaplayed');
 			}
 
-//			browser.sleep(5000);
 		});// end of it facs 3
-		
+	
+	/* *******************************************
+	 * There is un finished work below
+	 * Navigating to the More Link is not yet done
+	 **********************************************/	
 		it('it facs 4: select the link More( down arrow to display hidden info )', function() {
 			console.log('it facs 4: In order to get the more info part of my selection \
 					http://stackoverflow.com/questions/21237976/how-to-get-the-parent-of-an-element \
@@ -405,7 +420,7 @@ describe('Delta Dental Senior plan work flow', function() {
 			}else{
 				console.log('it facs 5: facsNextButton.isDisplayed in order to click() failed');
 			}
-			browser.sleep(5000);
+			browser.sleep(500);
 		});// end of it facs 5
 	}); // end of describe Facilities Page
 	
@@ -413,47 +428,196 @@ describe('Delta Dental Senior plan work flow', function() {
 		// TO DO: Field validation like the personal info page
 		var ExpctCond = protractor.ExpectedConditions;
 		
-		it('it Pmnt 1: Use Expected Condtion to leat page stabilize3', function() {
-			browser.wait(ExpctCond.visibilityOf($('#cardName')),8500); // ie: element(by.id('cardName')
-			console.log('it Pmnt 1: #cardName Exactly like the visibilityOf Example');
-		});// end of it Pmnt 1
-		
 		it('it Pmnt1A: Use Expected Condtion to leat page stabilize3', function() {
-			browser.wait(ExpctCond.visibilityOf($('#nextButton')),8500);// ie: element(by.id('nextButton')
-			console.log('it Pmnt1A: #nextButton Exactly like the visibilityOf Example');
-		});// end of it Pmnt 1A
-
+			browser.wait(ExpctCond.visibilityOf($('#cardName')),8500); // ie: element(by.id('cardName')
+			console.log('it Pmnt1A: #cardName Exactly like the visibilityOf Example');
+		});// end of it Pmnt1A
+		
 		it('it Pmnt1B: Use Expected Condtion to leat page stabilize3', function() {
-				// here is the validation of all the fields defined in the describe
-			console.log('it Pmnt1B: Validation of all fields complete');
+			browser.wait(ExpctCond.visibilityOf($('#nextButton')),8500);// ie: element(by.id('nextButton')
+			console.log('it Pmnt1B: #nextButton Exactly like the visibilityOf Example');
 		});// end of it Pmnt 1B
-	
-		it('it Pmnt 2: Should all basic personal info data ', function (){
-			var stringCardName 	= 'Fn_OneHundredAnd Ln_ThirtyFiveDollars' ;
-			var testErrorString	= 'bla bla bla'
-			var el 				= element(by.id('cardName'));
 
-//			element(by.id('cardName')).sendKeys(stringCardName);
-			element(by.id('cardName')).sendKeys(testErrorString);
-			el.getAttribute('value').then(function (text){
-				if(text === stringCardName) {
-				console.log('it Pmnt 2: Card Name was found to equal', stringCardName);
+	
+		/* **************************
+		 *  Ok important point.
+		 *  I've decided that I don't need to check my input values, and so There needs to be a 
+		 *  TODO to remove all input checks,  
+		 *  But  I must validate all input values where ever they are displayed 
+		 *  at the final stages of a workflow.
+		 *  */
+		
+		it('it Pmnt 2: Should all basic personal info data ', function (){
+			var stringCardText 	= 'FnOneHundredAnd LnThirtyFiveDollars' ;
+			var testErrorString	= 'bla bla bla'
+			var cCardField		= element(by.id('cardName'));
+
+			//element(by.id('cardName')).sendKeys(stringCardName);
+			cCardField.sendKeys(stringCardText);
+			//el.getAttribute('value').then(function (text){
+			cCardField.getAttribute('value').then(function (text){
+				if(text === stringCardText) {
+					console.log('it Pmnt 2: Card Name was found to equal', stringCardText);
 				}else{
-					console.log('it Pmnt 2: Error, did not find ', stringCardName);
+					console.log('it Pmnt 2: Error, did not find ', stringCardText);
 				}
+			
+				expect(cCardField.getAttribute('value')).toEqual(stringCardText);
 			});
 		});
+
+		it('it Pmnt 3A: Should find and fill out the card number', function(){
+			var visaCardNumberFor00CentsString	= '4121630071281885';
+			var amexCardnumberFor80CentsString	= '370000999999990';
+			var testCard = amexCardnumberFor80CentsString;	
+			//var testCard = visaCardNumberFor00CentsString;	
+			element(by.id('ccCapture')).sendKeys(testCard);
+			console.log('it Pmnt3A:',testCard, 'for payment $$$.00  entered.')
+		});
 		
-		it('it Pmnt 3: Should find and uncheck the billing address CheckBox', function(){
+		it('it Pmnt 3B: Should find and fill out the card expiration', function(){
+			var mmCardExpString = '12';
+			var yyyyCardExpString = '2017';
+			
+			element(by.id('expMo')).sendKeys(mmCardExpString);
+			element(by.id('expYr')).sendKeys(yyyyCardExpString);
+			console.log('it Pmnt3B: Month and Year Card Expiration entered')
 			
 		});
 		
-		it('it Pmnt 4: Should find and fill out the data in the hidden fields', function(){
+		it('it Pmnt 3C: Should find and fill out the card security code', function(){
+			var securityCodeString = '314' ;  // 3 chars ( any dig ) for non Amex sec code
+			element(by.id('cvcCapture')).sendKeys(securityCodeString);
+			console.log('it Pmnt3C: security code entered');
 			
-		});	
+
+		});
 		
-	});
+		
+//		it('it Pmnt 3D: Should find and select the Same Billing Addr ChkBox', function(){
+//			var sameBillingCheckBox	= element(by.id('sameBilling'));
+//			
+//			element(by.id('sameBilling')).getAttribute('checked').then(function(checked){
+//				if (!checked){
+//					/*  browser.sleep(3000);  */
+//					sameBillingCheckBox.click();
+//					console.log('it Pmnt3D: detected BillAddressSame Box NOT Checked. clicking')
+//					}else{
+//					console.log('it Pmnt3D: detected default Box(-checked-) ');
+//					}
+//				}); // end of if(!selected)	 // is this supposed to be live 
+//				// or will it work with it removed.  It's shouldn't !!!
+//				
+//				expect(sameBillingCheckBox.isSelected()).toBe(true);
+//			
+//		});
+	
+		
+		
+
+//	
+//		
+//		// Should make these variables global that are captured after enter and loose focus
+//		it('it Pmnt 4: Should Validate the Street Address fields for Billing Address', function(){
+//			var sameBillingStAddrString		= '100 1st St Fl 4';
+//			var billingStreetAddrField		= element(by.id('sb_street'));
+//		
+////			billingStreetAddrField.getAttribute('value').then( function (stAddrText){
+//// this line above did work.  it returned null
+//// I would get Validation Failed
+//			billingStreetAddrField.getText().then( function (stAddrText){
+//				if(stAddrText === sameBillingStAddrString ){
+//					console.log('it Pmnt 4: Street Address validation correct: I got ',stAddrText );
+//				}else{
+//					console.log('it Pmnt 4: Street Address FAILED validation ',stAddrText );
+//				} 
+//
+//			}); // end function (stAddrText)
+//		});// end of it Pmnt 4
+
+		
+		
+//		
+//		// Should make these globals that are captured after enter and loose focus
+//		it('it Pmnt 5: Should Validate the City State Zip Address fields for Billing Address', function(){
+//			var sameBillingLocalString		= 'San Francisco, CA 94105';
+//			var billingCityStZipField		= element(by.id('sb_locality'));
+//
+////			billingCityStZipField.getAttribute('value').then( function (localityText){
+//// this line above did work.  it returned null
+//// I would get Validation Failed
+//			billingCityStZipField.getText().then( function (localityText){
+//				if(localityText === sameBillingLocalString ){
+//					console.log('it Pmnt 5: Street Address validation correct: I got ',localityText);
+//				}else{
+//					console.log('it Pmnt 5: Street Address FAILED validation ', localityText);
+//				} // end if
+//			}); // end function (stAddrText)
+//		
+//		});// end of it Pmnt 5
+//		
+		
+		it('it Pmnt 6: Should find the Auth Check box and put in a Check Mark', function(){
+			
+			////////////////   expiriment  to send TAB  //////////////////////
+				//process.exit(1);
+			
+			
+			browser.sleep(3000);
+			console.log('defining the variables for Action');
+				var myTabAction	  = browser.actions().sendKeys(protractor.Key.TAB);
+				//var mySpaceAction = browser.actions().sendKeys(protractor.Key.SPACE);
+			console.log('First Action Tab');
+				myTabAction.perform();
+				browser.actions().sendKeys(protractor.Key.TAB).perform();
+				browser.actions().sendKeys(protractor.Key.TAB).perform();
+				browser.actions().sendKeys(protractor.Key.TAB).perform();
+//			console.log('First Tab complete.');
+//			
+//			console.log('Second Action Tab');
+//				myTabAction.perform();
+//			console.log('Second Tab complete.');
+//
+//			console.log('Third Action Tab');
+//				myTabAction.perform();
+//			console.log('Third Tab complete.');
+//
+//			console.log('Now the Space Action Tab');
+//				mySpaceAction.perform();
+			console.log('Space Action complete.');
+			browser.sleep(3000);
+				process.exit(1);
+			});// end of it Pmnt 6
+		
+//		it('it Pmnt 7: Should find the Auth Check Box and click it', function(){
+////			var authChkBox	= element(by.id('auth'));
+//			var authChkBox	= element(by.css('input[id="auth"]'));
+//			
+//
+//
+////			authChkBox.getAttribute('checked').then( function (checked){
+//			element(by.css('input[id="auth"]')).getAttribute('checked').then( function (checked){
+//				if (!checked){
+//					authChkBox.click();
+//					authChkBox.click();
+//					authChkBox.click();
+//					expect(authChkBox.isSelected()).toBe(true);
+//					console.log('it Pmnt 7: Auth Chk NOT Checked . Clicked.  Then Expect it is checked');
+//				}else {
+//					console.log('it Pmnt 7: Auth Chk WAS ALREADY Selected !!!! ?????')
+//					
+//				}
+//			});
+//			
+//		expect(element(by.id('auth')).isSelected()).toBeTruthy();
+//			console.log('console logging: it Pmnt 7');
+//		browser.sleep(250);
+//		process.exit(1);
+//			
+//		});	// end of it Pmnt 7:
+		
+	});// end of some Describe  ( like the last one  )
 
 //	console.log('end of encompasing describe.  Done !')  // Curiously found that this runs and outputs FIRST !!
 
-}); // end of describe('Delta Dental Senior plan work flow
+//}); // end of describe('Delta Dental Senior plan work flow
