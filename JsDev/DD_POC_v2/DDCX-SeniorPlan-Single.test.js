@@ -223,13 +223,13 @@
 				
 				expect(chkBoxDiffMailAddr.isDisplayed()).toBe(true);
 			
-				expect(fieldPhoneSelect.isDisplayed()).toBe(true);
-				expect(fieldPhoneNumber.isDisplayed()).toBe(true);
-				expect(fieldEmailAddr.isDisplayed()).toBe(true);
-				expect(chkBoxPaperless.isDisplayed()).toBe(true);
-				expect(RadBtnBrokerYes.isDisplayed()).toBe(true);
-				expect(RadBtnBrokerNo.isDisplayed()).toBe(true);
-				expect(linkBackToQuote.isDisplayed()).toBe(true);
+				expect(fieldPhoneSelect.isDisplayed())	.toBe(true);
+				expect(fieldPhoneNumber.isDisplayed())	.toBe(true);
+				expect(fieldEmailAddr.isDisplayed())	.toBe(true);
+				expect(chkBoxPaperless.isDisplayed())	.toBe(true);
+				expect(RadBtnBrokerYes.isDisplayed())	.toBe(true);
+				expect(RadBtnBrokerNo.isDisplayed())	.toBe(true);
+				expect(linkBackToQuote.isDisplayed())	.toBe(true);
 				expect(persPageButtonNext.isDisplayed()).toBe(true);
 				console.log('it pers 1: Just did an expect on evey currently visable element on the page');
 				//console.log('well almost every element.  Need to eval the hidden addredd');
@@ -359,7 +359,7 @@
 			});// end of it pers 7
 	});// end describe personal info page.
 
-// I need to put in a dependent page click Next .  No dependent
+// I need to put in a "dependent" page click Next .  No dependent
 	// this because they killed the senior plan
 	
 	
@@ -482,112 +482,104 @@
 			element(by.id('expMo')).sendKeys(mmCardExpString);
 			element(by.id('expYr')).sendKeys(yyyyCardExpString);
 			console.log('it Pmnt3B: Month and Year Card Expiration entered')
-			
 		});
+		
 		
 		it('it Pmnt 3C: Should find and fill out the card security code', function(){
 			var securityCodeString = '314' ;  // 3 chars ( any dig ) for non Amex sec code
 			element(by.id('cvcCapture')).sendKeys(securityCodeString);
 			console.log('it Pmnt3C: security code entered');
-			
-
 		});
 		
 		
-//		it('it Pmnt 3D: Should find and select the Same Billing Addr ChkBox', function(){
-//			var sameBillingCheckBox	= element(by.id('sameBilling'));
-//			
-//			element(by.id('sameBilling')).getAttribute('checked').then(function(checked){
-//				if (!checked){
-//					/*  browser.sleep(3000);  */
-//					sameBillingCheckBox.click();
-//					console.log('it Pmnt3D: detected BillAddressSame Box NOT Checked. clicking')
-//					}else{
-//					console.log('it Pmnt3D: detected default Box(-checked-) ');
-//					}
-//				}); // end of if(!selected)	 // is this supposed to be live 
-//				// or will it work with it removed.  It's shouldn't !!!
-//				
-//				expect(sameBillingCheckBox.isSelected()).toBe(true);
-//			
-//		});
+		it('it Pmnt 3D: Should find and select the Same Billing Addr ChkBox', function(){
+			var sameBillingCheckBox	= element(by.id('sameBilling'));
+			
+			element(by.id('sameBilling')).getAttribute('checked').then(function(checked){
+				if (!checked){
+					/*  browser.sleep(3000);  */
+					sameBillingCheckBox.click();
+					console.log('it Pmnt3D: detected BillAddressSame Box NOT Checked. clicking')
+					}else{
+					console.log('it Pmnt3D: detected default Box(-checked-) ');
+					}
+				}); 
+				
+				expect(sameBillingCheckBox.isSelected()).toBe(true);
+		});
+	
 	
 		
+		// Should make these variables global that are captured after enter and loose focus
+		it('it Pmnt 4: Should Validate the Street Address fields for Billing Address', function(){
+			var sameBillingStAddrString		= '100 1st St Fl 4';
+			var billingStreetAddrField		= element(by.id('sb_street'));
 		
+			/* The following line fails. Leaving here to show the odd example */	
+			/*billingStreetAddrField.getAttribute('value').then( function (stAddrText){ */
+			billingStreetAddrField.getText().then( function (stAddrText){
+				if(stAddrText === sameBillingStAddrString ){
+					console.log('it Pmnt 4: Street Address validation correct: I got ',stAddrText );
+				}else{
+					console.log('it Pmnt 4: Street Address FAILED validation ',stAddrText );
+				} 
 
-//	
-//		
-//		// Should make these variables global that are captured after enter and loose focus
-//		it('it Pmnt 4: Should Validate the Street Address fields for Billing Address', function(){
-//			var sameBillingStAddrString		= '100 1st St Fl 4';
-//			var billingStreetAddrField		= element(by.id('sb_street'));
-//		
-////			billingStreetAddrField.getAttribute('value').then( function (stAddrText){
-//// this line above did work.  it returned null
-//// I would get Validation Failed
-//			billingStreetAddrField.getText().then( function (stAddrText){
-//				if(stAddrText === sameBillingStAddrString ){
-//					console.log('it Pmnt 4: Street Address validation correct: I got ',stAddrText );
-//				}else{
-//					console.log('it Pmnt 4: Street Address FAILED validation ',stAddrText );
-//				} 
-//
-//			}); // end function (stAddrText)
-//		});// end of it Pmnt 4
+			}); // end function
+		});// end of it Pmnt 4
 
 		
 		
-//		
-//		// Should make these globals that are captured after enter and loose focus
-//		it('it Pmnt 5: Should Validate the City State Zip Address fields for Billing Address', function(){
-//			var sameBillingLocalString		= 'San Francisco, CA 94105';
-//			var billingCityStZipField		= element(by.id('sb_locality'));
-//
-////			billingCityStZipField.getAttribute('value').then( function (localityText){
-//// this line above did work.  it returned null
-//// I would get Validation Failed
-//			billingCityStZipField.getText().then( function (localityText){
-//				if(localityText === sameBillingLocalString ){
-//					console.log('it Pmnt 5: Street Address validation correct: I got ',localityText);
-//				}else{
-//					console.log('it Pmnt 5: Street Address FAILED validation ', localityText);
-//				} // end if
-//			}); // end function (stAddrText)
-//		
-//		});// end of it Pmnt 5
-//		
 		
-		it('it Pmnt 6: Should find the Auth Check box and put in a Check Mark', function(){
+		// Should make these globals that are captured after enter and loose focus
+		it('it Pmnt 5: Should Validate the City State Zip Address fields for Billing Address', function(){
+			var sameBillingLocalString		= 'San Francisco, CA 94105';
+			var billingCityStZipField		= element(by.id('sb_locality'));
+
 			
-			////////////////   expiriment  to send TAB  //////////////////////
-				//process.exit(1);
-			
-			
-			browser.sleep(3000);
-			console.log('defining the variables for Action');
-				var myTabAction	  = browser.actions().sendKeys(protractor.Key.TAB);
-				//var mySpaceAction = browser.actions().sendKeys(protractor.Key.SPACE);
-			console.log('First Action Tab');
-				myTabAction.perform();
-				browser.actions().sendKeys(protractor.Key.TAB).perform();
-				browser.actions().sendKeys(protractor.Key.TAB).perform();
-				browser.actions().sendKeys(protractor.Key.TAB).perform();
-//			console.log('First Tab complete.');
+			/* The following line fails. Leaving here to show the odd example */	
+			/*billingCityStZipField.getAttribute('value').then( function (localityText){ */
+			billingCityStZipField.getText().then( function (localityText){
+				if(localityText === sameBillingLocalString ){
+					console.log('it Pmnt 5: Street Address validation correct: I got ',localityText);
+				}else{
+					console.log('it Pmnt 5: Street Address FAILED validation ', localityText);
+				} 
+			}); // end function 
+		
+		});// end of it Pmnt 5
+		
+		
+//		it('it Pmnt 6: Should find the Auth Check box and put in a Check Mark', function(){
 //			
-//			console.log('Second Action Tab');
+//			////////////////   expiriment  to send TAB  //////////////////////
+//				//process.exit(1);
+//			
+//			
+//			browser.sleep(3000);
+//			console.log('defining the variables for Action');
+//				var myTabAction	  = browser.actions().sendKeys(protractor.Key.TAB);
+//				//var mySpaceAction = browser.actions().sendKeys(protractor.Key.SPACE);
+//			console.log('First Action Tab');
 //				myTabAction.perform();
-//			console.log('Second Tab complete.');
-//
-//			console.log('Third Action Tab');
-//				myTabAction.perform();
-//			console.log('Third Tab complete.');
-//
-//			console.log('Now the Space Action Tab');
-//				mySpaceAction.perform();
-			console.log('Space Action complete.');
-			browser.sleep(3000);
-				process.exit(1);
-			});// end of it Pmnt 6
+//				browser.actions().sendKeys(protractor.Key.TAB).perform();
+//				browser.actions().sendKeys(protractor.Key.TAB).perform();
+//				browser.actions().sendKeys(protractor.Key.TAB).perform();
+////			console.log('First Tab complete.');
+////			
+////			console.log('Second Action Tab');
+////				myTabAction.perform();
+////			console.log('Second Tab complete.');
+////
+////			console.log('Third Action Tab');
+////				myTabAction.perform();
+////			console.log('Third Tab complete.');
+////
+////			console.log('Now the Space Action Tab');
+////				mySpaceAction.perform();
+//			console.log('Space Action complete.');
+//			browser.sleep(3000);
+//				process.exit(1);
+//			});// end of it Pmnt 6
 		
 //		it('it Pmnt 7: Should find the Auth Check Box and click it', function(){
 ////			var authChkBox	= element(by.id('auth'));
@@ -617,6 +609,26 @@
 //		});	// end of it Pmnt 7:
 		
 	});// end of some Describe  ( like the last one  )
+	describe('Xperimental tabbing or spacing ',function(){
+	it('should respond to a TAB request',function() {	
+		var saveAddrFuturePmts = element(by.id('saveAddress'));
+		
+		saveAddrFuturePmts.click();
+		saveAddrFuturePmts.click();
+		saveAddrFuturePmts.click();
+		saveAddrFuturePmts.click();
+
+		var myTabAction	  = browser.actions().sendKeys(protractor.Key.TAB);
+//		var mySpaceAction = browser.actions().sendKeys(protractor.Key.SPACE);
+//			console.log('First Action Tab');
+				myTabAction.perform();
+				browser.actions().sendKeys(protractor.Key.TAB).perform();
+//				browser.actions().sendKeys(protractor.Key.TAB).perform();
+//				browser.actions().sendKeys(protractor.Key.TAB).perform();
+////			console.log('First Tab complete.');	o
+				process.exit(1);
+	});
+});
 
 //	console.log('end of encompasing describe.  Done !')  // Curiously found that this runs and outputs FIRST !!
 
