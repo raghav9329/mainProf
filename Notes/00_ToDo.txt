@@ -1,9 +1,9 @@
 2/8/17
-Done: Get back to Arnab
- * Start discussion about the off shore guy and the need for a platform to support DIT3 and test against
+Done: Get back to Arnab: Start discussion about the off shore guy and the need for a platform to support DIT3 and test against
 Done: Get back on the jenkins slave and start testing what ever Chad has made available.
 Done: Get orig message to Manny redirected to Poornima
-Going through my notes implement all of them in the next work flow
+
+Going through my notes implement all of them in the next work flow: After changing names
 Start the next work flow
 Rename files, get rid of the DDCX
 Make sure I get auto response setup for vacation time.
@@ -13,6 +13,8 @@ Need to create a new task for the next work flow
 Need a task to cover the documentation of the new task
 
 Need to enter details into the Doc task cxinit-278
+
+Create a task to cover the next part of Test automation reporting
 
 
 
