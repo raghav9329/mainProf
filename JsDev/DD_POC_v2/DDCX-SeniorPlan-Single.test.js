@@ -7,7 +7,7 @@
  * Field validation for every page where there are fields that can be evaluated for correctness
  * 
  */
-//describe('Delta Dental Senior plan work flow', function() {
+
 	// JavaScriptTheGoodParts.pdf pg25 refs global obj var MYAPP = {};
 	// Limit the exposure global vars have 
 	var protocol        = "https://"
@@ -249,7 +249,8 @@
 			fieldBdDD.sendKeys('22');
 			fieldBdYyyy.sendKeys('1982');
 			
-			fieldSsn.sendKeys('587459329')
+		  //fieldSsn.sendKeys('587459329')
+			fieldSsn.sendKeys('587629329')
 			fieldHomeAddr.sendKeys('100 First Street Floor 4');
 	// Loose focus and I need to do some check  
 	// Maybe her's where It pers 2 ends and it pers 3 starts ??? 
@@ -311,6 +312,10 @@
 			
 			if ( hiddenfieldBrokerNum.isDisplayed() ) {
 				hiddenfieldBrokerNum.sendKeys('2012836');
+			//TEST step : select Email with ().click(); after brokernumber entry	
+				
+			fieldEmailAddr.click();
+				
 //				expect(hiddenfieldBrokerNum.isDisplayed());
 //				hiddenfieldBrokerNum.sendKeys('2012836');
 				console.log('it pers6B: hiddenfieldBrokerNum was displayed BNUM entered');
@@ -323,15 +328,12 @@
 			var text1 = "TestFirstName";
 			var protVarBrokerName = 'CHARLES DARROW';
 			var testErrorString ='antidisestabilshment';// use of this needs to be completed.
-			
-			chkBoxPaperless.click();
-			chkBoxPaperless.click();
-
-			
+			var ExpctCond = protractor.ExpectedConditions;	
 			var elementBrokerName = element(by.id('brokerName'));
-//			el.getAttribute('value').then(function(text){
-//				console.log(text);
-//			});
+			
+			/* Both methods work.  Left as example */
+		  //browser.wait(ExpctCond.textToBePresentInElementValue($('#brokerName'),protVarBrokerName),5000)
+			browser.wait(ExpctCond.textToBePresentInElementValue(elementBrokerName ,protVarBrokerName),5000)
 			
 			elementBrokerName.getAttribute('value').then( function(text){
 				if(text === protVarBrokerName){
@@ -341,18 +343,14 @@
 				}
 			});
 			expect(elementBrokerName.getAttribute('value')).toEqual(protVarBrokerName);
-
-	//		expect(elementBrokerName.getAttribute('value')).toEqual('');
-			/* 
-			 * When the broker service is broken and doesn't return a value
-			 * Then the line above searching for null('')String passes
-			 *  */
 		});
 	
+		
 		it('it pers 7:',function (){
 			// persPabeButtonNext Defined at the beginning of the describe
 			if(persPageButtonNext.isDisplayed()){
 				persPageButtonNext.click();
+//   Expect > ---?
 				console.log('it pers 7: Personal Info Page Next button found and clicked....');
 				}
 
@@ -369,12 +367,12 @@
 		var ExpctCond = protractor.ExpectedConditions;
 		
 		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
-			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),5000);
+			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),8000);
 			console.log('it facs 1: Exactly like the visibilityOf Example');
 		});// end of it facs 1
 	
 		it('it facs 2: use expected condition to let the page stabilize Test 2', function() {
-			browser.wait(ExpctCond.elementToBeClickable($('#search-facilities')),5000);
+			browser.wait(ExpctCond.elementToBeClickable($('#search-facilities')),8000);
 			console.log('it facs 2: Exactly like the element to be clickable example');
 			
 			browser.sleep(500);
@@ -390,8 +388,8 @@
 			
 			browser.wait(ExpctCond.visibilityOf(facilitiesToSelectBtn),5000)
 			if (facilitiesToSelectBtn.isDisplayed()){
-					facilitiesToSelectBtn.click();
-					console.log('it facs 3: The Facilities button was found and click()');
+				facilitiesToSelectBtn.click();
+				console.log('it facs 3: The Facilities button was found and click()');
 			}else{
 				console.log('it facs 3: The radio button to pick was not Diaplayed');
 			}
@@ -402,14 +400,13 @@
 	 * There is un finished work below
 	 * Navigating to the More Link is not yet done
 	 **********************************************/	
-		it('it facs 4: select the link More( down arrow to display hidden info )', function() {
-			console.log('it facs 4: In order to get the more info part of my selection \
-					http://stackoverflow.com/questions/21237976/how-to-get-the-parent-of-an-element \
-					http://stackoverflow.com/questions/23720398/protractor-how-to-locate-a-sibling-of-a-given-element \
-					http://stackoverflow.com/questions/25390171/protractor-select-next-sibling-of-the-current-element ');
-			
-			browser.sleep(500);
+		it('it facs 4: select the link More( down arrow to display hidden info', function() {
+			console.log('it facs 4: In order to get the more info part of my selection' );
+				/*	http://stackoverflow.com/questions/21237976/how-to-get-the-parent-of-an-element */
+				/*	http://stackoverflow.com/questions/23720398/protractor-how-to-locate-a-sibling-of-a-given-element */
+				/*	http://stackoverflow.com/questions/25390171/protractor-select-next-sibling-of-the-current-element ') */
 		});// end of it facs 4	
+	
 		
 		it('it facs 5: find the next button and click()', function() {
 			var facsNextButton = element(by.id('nextButton'));
@@ -420,6 +417,7 @@
 			}else{
 				console.log('it facs 5: facsNextButton.isDisplayed in order to click() failed');
 			}
+// expect > --- ?			
 			browser.sleep(500);
 		});// end of it facs 5
 	}); // end of describe Facilities Page
@@ -431,11 +429,15 @@
 		it('it Pmnt1A: Use Expected Condtion to leat page stabilize3', function() {
 			browser.wait(ExpctCond.visibilityOf($('#cardName')),8500); // ie: element(by.id('cardName')
 			console.log('it Pmnt1A: #cardName Exactly like the visibilityOf Example');
+	//		process.exit(1);
 		});// end of it Pmnt1A
+	
+		
 		
 		it('it Pmnt1B: Use Expected Condtion to leat page stabilize3', function() {
 			browser.wait(ExpctCond.visibilityOf($('#nextButton')),8500);// ie: element(by.id('nextButton')
 			console.log('it Pmnt1B: #nextButton Exactly like the visibilityOf Example');
+	//		process.exit(1);
 		});// end of it Pmnt 1B
 
 	
@@ -452,18 +454,18 @@
 			var testErrorString	= 'bla bla bla'
 			var cCardField		= element(by.id('cardName'));
 
-			//element(by.id('cardName')).sendKeys(stringCardName);
 			cCardField.sendKeys(stringCardText);
-			//el.getAttribute('value').then(function (text){
+		  //cCardField.sendKeys(testErrorString); // === 'bla bla bla'  Test injection line
+
 			cCardField.getAttribute('value').then(function (text){
-				if(text === stringCardText) {
-					console.log('it Pmnt 2: Card Name was found to equal', stringCardText);
+			if(text === stringCardText) {
+					console.log('it Pmnt 2: Card Name found to equal', text);// if it was === text is ok 2 display
 				}else{
-					console.log('it Pmnt 2: Error, did not find ', stringCardText);
+					console.log('it Pmnt 2: Error: found ',text, 'vs', stringCardText);
 				}
-			
 				expect(cCardField.getAttribute('value')).toEqual(stringCardText);
 			});
+	
 		});
 
 		it('it Pmnt 3A: Should find and fill out the card number', function(){
@@ -474,6 +476,7 @@
 			element(by.id('ccCapture')).sendKeys(testCard);
 			console.log('it Pmnt3A:',testCard, 'for payment $$$.00  entered.')
 		});
+
 		
 		it('it Pmnt 3B: Should find and fill out the card expiration', function(){
 			var mmCardExpString = '12';
@@ -486,19 +489,29 @@
 		
 		
 		it('it Pmnt 3C: Should find and fill out the card security code', function(){
-			var securityCodeString = '314' ;  // 3 chars ( any dig ) for non Amex sec code
-			element(by.id('cvcCapture')).sendKeys(securityCodeString);
+			var securityCodeString	= '3134' ;  // 3 chars ( any dig ) for non Amex sec code
+			var cvcField			= element(by.id('cvcCapture'));
+			
+			//element(by.id('cvcCapture')).sendKeys(securityCodeString);
+			cvcField.sendKeys(securityCodeString);
 			console.log('it Pmnt3C: security code entered');
+			
+			var cCardField			= element(by.id('cardName'));
+			cCardField.click();  // put focus on some other element
 		});
 		
 		
 		it('it Pmnt 3D: Should find and select the Same Billing Addr ChkBox', function(){
 			var sameBillingCheckBox	= element(by.id('sameBilling'));
-			
+	
+			sameBillingCheckBox.click();// setup to execute following code
+			browser.sleep(250);  // maybe just for a tiny visual
+				
 			element(by.id('sameBilling')).getAttribute('checked').then(function(checked){
 				if (!checked){
 					/*  browser.sleep(3000);  */
 					sameBillingCheckBox.click();
+					browser.sleep(250);  // maybe just for a tiny visual
 					console.log('it Pmnt3D: detected BillAddressSame Box NOT Checked. clicking')
 					}else{
 					console.log('it Pmnt3D: detected default Box(-checked-) ');
@@ -508,7 +521,9 @@
 				expect(sameBillingCheckBox.isSelected()).toBe(true);
 		});
 	
-	
+
+		
+		
 		
 		// Should make these variables global that are captured after enter and loose focus
 		it('it Pmnt 4: Should Validate the Street Address fields for Billing Address', function(){
@@ -545,91 +560,51 @@
 					console.log('it Pmnt 5: Street Address FAILED validation ', localityText);
 				} 
 			}); // end function 
-		
 		});// end of it Pmnt 5
 		
 		
-//		it('it Pmnt 6: Should find the Auth Check box and put in a Check Mark', function(){
-//			
-//			////////////////   expiriment  to send TAB  //////////////////////
-//				//process.exit(1);
-//			
-//			
-//			browser.sleep(3000);
-//			console.log('defining the variables for Action');
-//				var myTabAction	  = browser.actions().sendKeys(protractor.Key.TAB);
-//				//var mySpaceAction = browser.actions().sendKeys(protractor.Key.SPACE);
-//			console.log('First Action Tab');
-//				myTabAction.perform();
-//				browser.actions().sendKeys(protractor.Key.TAB).perform();
-//				browser.actions().sendKeys(protractor.Key.TAB).perform();
-//				browser.actions().sendKeys(protractor.Key.TAB).perform();
-////			console.log('First Tab complete.');
-////			
-////			console.log('Second Action Tab');
-////				myTabAction.perform();
-////			console.log('Second Tab complete.');
-////
-////			console.log('Third Action Tab');
-////				myTabAction.perform();
-////			console.log('Third Tab complete.');
-////
-////			console.log('Now the Space Action Tab');
-////				mySpaceAction.perform();
-//			console.log('Space Action complete.');
-//			browser.sleep(3000);
-//				process.exit(1);
-//			});// end of it Pmnt 6
-		
-//		it('it Pmnt 7: Should find the Auth Check Box and click it', function(){
-////			var authChkBox	= element(by.id('auth'));
-//			var authChkBox	= element(by.css('input[id="auth"]'));
-//			
-//
-//
-////			authChkBox.getAttribute('checked').then( function (checked){
-//			element(by.css('input[id="auth"]')).getAttribute('checked').then( function (checked){
-//				if (!checked){
-//					authChkBox.click();
-//					authChkBox.click();
-//					authChkBox.click();
-//					expect(authChkBox.isSelected()).toBe(true);
-//					console.log('it Pmnt 7: Auth Chk NOT Checked . Clicked.  Then Expect it is checked');
-//				}else {
-//					console.log('it Pmnt 7: Auth Chk WAS ALREADY Selected !!!! ?????')
-//					
-//				}
-//			});
-//			
-//		expect(element(by.id('auth')).isSelected()).toBeTruthy();
-//			console.log('console logging: it Pmnt 7');
-//		browser.sleep(250);
-//		process.exit(1);
-//			
-//		});	// end of it Pmnt 7:
-		
-	});// end of some Describe  ( like the last one  )
-	describe('Xperimental tabbing or spacing ',function(){
-	it('should respond to a TAB request',function() {	
-		var saveAddrFuturePmts = element(by.id('saveAddress'));
-		
-		saveAddrFuturePmts.click();
-		saveAddrFuturePmts.click();
-		saveAddrFuturePmts.click();
-		saveAddrFuturePmts.click();
 
-		var myTabAction	  = browser.actions().sendKeys(protractor.Key.TAB);
-//		var mySpaceAction = browser.actions().sendKeys(protractor.Key.SPACE);
-//			console.log('First Action Tab');
-				myTabAction.perform();
-				browser.actions().sendKeys(protractor.Key.TAB).perform();
-//				browser.actions().sendKeys(protractor.Key.TAB).perform();
-//				browser.actions().sendKeys(protractor.Key.TAB).perform();
-////			console.log('First Tab complete.');	o
-				process.exit(1);
-	});
-});
+		
+		it('it Pmnt 6: Should find the Auth Check Box and click it', function(){
+//			var authChkBox	= element(by.id('auth'));
+			var authChkBox	= element(by.css('input[id="auth"]'));
+			//var ExpctCond = protractor.ExpectedConditions;  // declared in Describe above
+			
+			expect(authChkBox.isDisplayed()).toBe(true);	
 
-//	console.log('end of encompasing describe.  Done !')  // Curiously found that this runs and outputs FIRST !!
+			browser.wait(ExpctCond.elementToBeClickable(authChkBox),5000);
 
-//}); // end of describe('Delta Dental Senior plan work flow
+			//$('body').sendKeys(protractor.Key.ENTER);
+			//$('body').sendKeys(browser.Key.ENTER);
+			
+			
+			
+			authChkBox.click();
+
+			//expect(element(by.id('auth')).isSelected()).toBeTruthy();
+
+			
+			expect(element(by.id('auth')).isSelected()).toBeTruthy();
+			console.log('it Pmnt 6: console logging: it Pmnt 7');
+			
+		});	// end of it Pmnt 6:
+		
+		
+		it('it Pmnt 7: find the next button and click()', function() {
+			var pmntNextButton = element(by.id('nextButton'));
+			
+			if (pmntNextButton.isDisplayed()){
+				pmntNextButton.click();
+				console.log('it Pmnt 7: Payment page finished. Next button clicked')
+			}else{
+				console.log('it Pmnt 7: pmntNextButton.isDisplayed in order to click() failed');
+			}
+		//	expect(pmntNextButton)  // need to finish this some how.
+			browser.sleep(500);
+		});// end of it facs 5	
+		
+		it('end sleep ',function(){
+			browser.sleep(48000);
+		});
+	});// Describe end
+
