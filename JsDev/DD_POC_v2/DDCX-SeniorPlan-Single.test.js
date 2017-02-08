@@ -33,7 +33,7 @@
 	});
 
 	afterEach(function() {
-		//browser.sleep(sleepDuration);
+		//no-opp
 	});
 	
 	it('it Parent Describe: Senior plan workflow',function(){
@@ -312,19 +312,17 @@
 			
 			if ( hiddenfieldBrokerNum.isDisplayed() ) {
 				hiddenfieldBrokerNum.sendKeys('2012836');
-			//TEST step : select Email with ().click(); after brokernumber entry	
-				
-			fieldEmailAddr.click();
-				
-//				expect(hiddenfieldBrokerNum.isDisplayed());
-//				hiddenfieldBrokerNum.sendKeys('2012836');
 				console.log('it pers6B: hiddenfieldBrokerNum was displayed BNUM entered');
 			}else{
 				console.log('it pers6B: hiddenfieldBrokerNum Was Not Displayed. NoBroker num Entered');
 			}
+
+			RadBtnBrokerYes.click();// used to loose focus from input field
+			
 		});// end of it Pers6B
 		
 		it('it pers6C: Evaluate all field correctness, find the Next button, click it',function(){
+		
 			var text1 = "TestFirstName";
 			var protVarBrokerName = 'CHARLES DARROW';
 			var testErrorString ='antidisestabilshment';// use of this needs to be completed.
@@ -332,8 +330,8 @@
 			var elementBrokerName = element(by.id('brokerName'));
 			
 			/* Both methods work.  Left as example */
-		  //browser.wait(ExpctCond.textToBePresentInElementValue($('#brokerName'),protVarBrokerName),5000)
-			browser.wait(ExpctCond.textToBePresentInElementValue(elementBrokerName ,protVarBrokerName),5000)
+		  //browser.wait(ExpctCond.textToBePresentInElementValue($('#brokerName'),protVarBrokerName),5000);
+			browser.wait(ExpctCond.textToBePresentInElementValue(elementBrokerName ,protVarBrokerName),8000);
 			
 			elementBrokerName.getAttribute('value').then( function(text){
 				if(text === protVarBrokerName){
@@ -342,7 +340,9 @@
 					console.log('it pers6C: Error, expected: ' ,protVarBrokerName,' found: ', text, ' anthing there ???');
 				}
 			});
+
 			expect(elementBrokerName.getAttribute('value')).toEqual(protVarBrokerName);
+
 		});
 	
 		
@@ -429,7 +429,6 @@
 		it('it Pmnt1A: Use Expected Condtion to leat page stabilize3', function() {
 			browser.wait(ExpctCond.visibilityOf($('#cardName')),8500); // ie: element(by.id('cardName')
 			console.log('it Pmnt1A: #cardName Exactly like the visibilityOf Example');
-	//		process.exit(1);
 		});// end of it Pmnt1A
 	
 		
@@ -437,7 +436,6 @@
 		it('it Pmnt1B: Use Expected Condtion to leat page stabilize3', function() {
 			browser.wait(ExpctCond.visibilityOf($('#nextButton')),8500);// ie: element(by.id('nextButton')
 			console.log('it Pmnt1B: #nextButton Exactly like the visibilityOf Example');
-	//		process.exit(1);
 		});// end of it Pmnt 1B
 
 	
@@ -509,9 +507,9 @@
 				
 			element(by.id('sameBilling')).getAttribute('checked').then(function(checked){
 				if (!checked){
-					/*  browser.sleep(3000);  */
+					
 					sameBillingCheckBox.click();
-					browser.sleep(250);  // maybe just for a tiny visual
+					browser.sleep(250);  // maybe just for a tiny visual- I saw it. It's a good visual
 					console.log('it Pmnt3D: detected BillAddressSame Box NOT Checked. clicking')
 					}else{
 					console.log('it Pmnt3D: detected default Box(-checked-) ');
@@ -563,8 +561,6 @@
 		});// end of it Pmnt 5
 		
 		
-
-		
 		it('it Pmnt 6: Should find the Auth Check Box and click it', function(){
 //			var authChkBox	= element(by.id('auth'));
 			var authChkBox	= element(by.css('input[id="auth"]'));
@@ -573,17 +569,10 @@
 			expect(authChkBox.isDisplayed()).toBe(true);	
 
 			browser.wait(ExpctCond.elementToBeClickable(authChkBox),5000);
-
-			//$('body').sendKeys(protractor.Key.ENTER);
-			//$('body').sendKeys(browser.Key.ENTER);
-			
-			
 			
 			authChkBox.click();
 
 			//expect(element(by.id('auth')).isSelected()).toBeTruthy();
-
-			
 			expect(element(by.id('auth')).isSelected()).toBeTruthy();
 			console.log('it Pmnt 6: console logging: it Pmnt 7');
 			
@@ -595,16 +584,23 @@
 			
 			if (pmntNextButton.isDisplayed()){
 				pmntNextButton.click();
-				console.log('it Pmnt 7: Payment page finished. Next button clicked')
+				console.log('it Pmnt 7: Payment page finished. Next button clicked');
 			}else{
 				console.log('it Pmnt 7: pmntNextButton.isDisplayed in order to click() failed');
 			}
-		//	expect(pmntNextButton)  // need to finish this some how.
+
+			// Loading need to finish this some how.
+//			expect(element(by.id('nextButton')).getAttribute('value')).toBe('Loading');
+			
+			browser.wait(ExpctCond.textToBePresentInElementValue(pmntNextButton, 'Loading'), 5000);
+			expect(pmntNextButton.getAttribute('value')).toBe('Loading...'); 
+			
 			browser.sleep(500);
+		
 		});// end of it facs 5	
 		
 		it('end sleep ',function(){
-			browser.sleep(48000);
+			browser.sleep(800);
 		});
 	});// Describe end
 
