@@ -3,7 +3,7 @@ exports.config = {
   framework: 'jasmine',
   //directConnect: true,
   //seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['DDCX-HP-5Pg2Dp.test.js'],
+  specs: ['DDCX_fivePagePOC.js'],
   //specs: ['./*.test.js'],
   //specs: ['DDCX-SeniorPlan-Single.test.js'],
   seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',

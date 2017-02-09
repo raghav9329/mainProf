@@ -8,7 +8,7 @@
     "****************************Build******************************": "",
     "*************************Unit Tests****************************": "",
     "********************Ingegration Tests**************************": "",
-  	"protractor-5PgHp" : "protractor protractor-5pgHp-chrome.conf.js",
+    "protractor-fivePagePOC" : "protractor DDCX_fivePagePOC_chrome.conf.js",
     "protractor-chrome": "protractor protractor-chrome.conf.js",
     "protractor-firefox": "protractor protractor-firefox.conf.js",
     "****************************Tools******************************": ""
