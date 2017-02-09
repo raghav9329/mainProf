@@ -402,7 +402,7 @@ it('should find the card expiration year field', function(){
 
 it('should find the card security code field', function(){
 	var cardSecurity_Code = element(by.id('cvcCapture'));
-	cardSecurity_Code.sendKeys('3141');
+	cardSecurity_Code.sendKeys('3141');// 4 chars ( any dig) for amex
 	console.log('Payment Page-> Card Security Code entered');
 	browser.sleep(200);	
 });
