@@ -1,6 +1,6 @@
 {
-  "name": "delta-dental_proof-of-concept",
-  "version": "0.0.2",
+  "name": "delta-dental_CX_Test_Automation",
+  "version": "0.0.3",
 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -8,18 +8,19 @@
     "****************************Build******************************": "",
     "*************************Unit Tests****************************": "",
     "********************Ingegration Tests**************************": "",
-    "protractor-fivePagePOC" : "protractor DDCX_fivePagePOC_chrome.conf.js",
+  	"DDCX_POC" : "protractor DDCX_POC_chrome.conf.js",
     "protractor-chrome": "protractor protractor-chrome.conf.js",
     "protractor-firefox": "protractor protractor-firefox.conf.js",
     "****************************Tools******************************": ""
   },
   "author": "",
   "license": "none",
-  "description": "Delta Dental Customer Experience Proof of concept",
+  "description": "Delta Dental Customer Experience Test Automation",
   "devDependencies": {
     "gulp": "3.9.0",
     "gulp-shell": "0.5.2",
     "gulp-util": "3.0.7",
+    "jasmine-core": "2.5.2",
     "jasmine-reporters": "^2.2.0",
     "jasmine-xml2html-converter": "0.0.2",
     "jasmine-spec-reporter": "2.4.0",
