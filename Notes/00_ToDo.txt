@@ -1,3 +1,9 @@
+2/10/17 
+is Object-Model.js
+
+2/9/17
+Get the Jasmine reporting backup to speed
+
 2/8/17
 Done: Get back to Arnab: Start discussion about the off shore guy and the need for a platform to support DIT3 and test against
 Done: Get back on the jenkins slave and start testing what ever Chad has made available.

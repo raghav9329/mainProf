@@ -1,3 +1,7 @@
+2/9/17
+Getting Protractor started with Cucumber
+https://semaphoreci.com/community/tutorials/getting-started-with-protractor-and-cucumber
+
 1/31/17
 Protractor js example for loop :  Also good page object modeling...
 http://stackoverflow.com/questions/19998109/can-i-divide-my-tests-into-separate-specs-and-then-call-them-from-another-or-is

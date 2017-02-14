@@ -1,0 +1,19 @@
+Notes to cover my learning / understanding of this protramming pattern
+As stated in 
+https://github.com/SeleniumHQ/selenium/wiki/PageObjects
+
+I want my page object to present the services offerend by the objects I define.
+I say, " by the objects I define.", because of functional blocking out of the app.
+For Instance:  Starting the Browse-Buy or Shopping-Buy nature of our app.
+There are two key things that need to be done before selecting a Plan.
+1. provide the zipcode in Ca to base a plan about
+2. the number dependents that will be on the plan
+3. currently not implemented Birthday
+
+So, I need an opening statement takes zipcode and dependents
+model will expose: InitiatePlan(zipcode, dependents)
+where zipcode should be a ZC in CA
+Dependents should be between 0-15 ( or 14 )
+0- will be your self
+1 or more are what ever dependents you need
+
