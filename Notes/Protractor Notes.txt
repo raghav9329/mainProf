@@ -1,3 +1,8 @@
+2/14/17
+Serious Julimar magic
+https://github.com/angular/protractor/issues/858
+a bit complicated but it would totally be worth learning !!!
+
 2/9/17
 Getting Protractor started with Cucumber
 https://semaphoreci.com/community/tutorials/getting-started-with-protractor-and-cucumber

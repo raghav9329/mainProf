@@ -1,3 +1,7 @@
+2/13/17
+Do I need to implement ZOOM on the browser window to get a bigger perspective on 
+on the screen.  I was searching on this.  But did close the window cus I'd moved on.
+
 2/10/17 
 is Object-Model.js
 
