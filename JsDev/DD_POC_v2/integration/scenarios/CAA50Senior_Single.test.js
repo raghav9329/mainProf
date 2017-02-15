@@ -21,7 +21,6 @@
 //	var sleepDuration = 1380;// miliseconds 80 < 1/10 of a secondj
 
 	browser.ignoreSynchronization = true;	
-	browser.executeScript("document.body.style.zoom='60%';");
 	
 	beforeAll(function () {
 		//var url = protocol.concat(host_mot, '.', testDomain_Name);
