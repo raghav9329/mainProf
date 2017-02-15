@@ -1,0 +1,12 @@
+#################
+## Protractor + Node JS
+#################
+
+
+*.tmp
+*.log
+*.bak
+*.swp
+*.png
+*.swp
+node_modules/

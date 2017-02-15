@@ -1,0 +1,54 @@
+{
+	"cx" : {
+		"SelectPlan" : {
+			"plan" : "Delta Dental USA (Test-Automation)", 
+			"type" : "DHMO",
+			"code" : "DHMO-code",
+			"startdate" : "11/09/2016", 
+			"state" : "CA", 
+			"zip" : "94538", 
+			"country" : "USA", 
+			"fee" : "10.00", 
+			"cost" : "80.00", 
+			"coverage" : "Basic", 
+			"issuercode" : "DELTA",
+			"appId" : "5967817",
+			"applicants" : "2",
+			"planidentifier" : "70422",
+			"planidentifers" : {
+				"regular" : "70422",
+				"senior" : "72230"
+			},
+			"DeltaDentalPlanPage" : "Dental Plan(s)"
+		},
+		"UseCases" : [{
+			"Profile" : { 
+				"Name" : { "First" : "Saturney", "Middle": "D", "Last" : "DanteInferno" },
+				"Gender" : "Male",
+				"SSN" : "887120057",
+				"AlternateIdentifier" : "",
+				"DOB" : { "Month" : "08", "Day" : "17", "Year" : "1970" }
+			},
+			"Contact" : {"Street" : "1001 Beethoven Common Unit 102", "City" : "Fremont", "State" : "CA", "Zip" : "94538", "PhoneType" : "Cell", "Phone" : "1503988226", "Email" : "lobb@ies.org" },
+			"GoPaperless" : "Yes",
+			"ZipCodeChange" : {
+				"GoBack" : {
+					"Contact" : {"Street" : "", "City" : "", "State" : "CA", "Zip" : "94536", "PhoneType" : "Cell", "Phone" : "1503988226", "Email" : "lobb@ies.org" }
+				},
+				"NewQuote" : {
+					"Contact" : {"Street" : "38785 Hastings Street Apt 23", "City" : "Fremont", "State" : "CA", "Zip" : "94536", "PhoneType" : "Cell", "Phone" : "1503988226", "Email" : "lobb@ies.org" }
+				}
+			},
+			"AjaxValidation" : {
+				"Contact" : {"Street" : "38785 Hastings Street Apt 23", "City" : "Fremont", "State" : "CA", "Zip" : "94536", "PhoneType" : "Cell", "Phone" : "1503988226", "Email" : "lobb@ies.org" },
+				"MailingAddress" : {"Street" : "", "City" : "", "State" : "", "Zip" : "" }
+			},
+			"MailingAddress" : {"Street" : "", "City" : "", "State" : "", "Zip" : "" },
+			"GoPaperless" : "Yes",
+			"Broker" : { 
+				"Have" : "Yes", "Number" : "2012836", "Name" : "Charles Darrow",
+				"NegativeTest" : {"Number" : "Test1234", "Name" : ""}
+			}
+		}]
+	}
+}

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!-- Author : Uday Thombre
+			   uthombre@delta.org
+			   (323) 316 5516
+ -->
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>CX UI Automation Test Result</title>
+ </head>
+ <style>
+	dd_cx_table{
+		width: 100%;
+		background-color: white;
+		color: black;
+		font-size: 11px;
+	}
+	dd_cx_table .cx_reporter{
+		width: 25%;
+	}
+	dd_cx_table .cx_reporter h1,h2,h3,h4,h5,h6{
+		padding-right: 30px;
+	}
+	dd_cx_table .cx_reporter p{
+		width: 20%;
+		padding-right: 30px;
+		word-wrap: break-word;
+	}
+	#dd_cx_graph
+	{
+		position:relative;
+		width:660px;
+		height:216px;
+		margin:8px;
+		padding:0;	
+	}
+	#dd_cx_graph ul
+	{
+		position:absolute;
+		top:0;
+		left:32px;
+		width:600px;
+		height:200px;
+		border-left:1px solid black;
+		border-bottom:1px solid black;	
+	}
+	#dd_cx_graph li
+	{
+	   position:absolute;	
+	   list-style:none;
+	   background:lightblue;
+	   width:40px;
+	   text-align:center;
+	   border:1px solid black;
+	   visibility: hidden;
+	}
+	table {
+		width:100%;
+	}
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	th, td {
+		padding: 5px;
+		text-align: left;
+	}
+</style>
+
+<script>
+	var report_files = ["output.json", 
+						"usecasesoutput.json", 
+						"functionaltestoutput.json", 
+						"endtoendoutput.json"];
+	var statistics_total = 0;
+	var statistics_passed = 0;
+	var statistics_failed = 0;
+		
+	function dd_cx_report_builder() {
+		var xhr;
+
+		if (window.XMLHttpRequest) xhr = new XMLHttpRequest(); 		// all browsers except IE
+		else xhr = new ActiveXObject("Microsoft.XMLHTTP"); 		// for IE
+		
+		document.getElementById('dd_cx_results').innerHTML = "<dd_cx_table><br/><h3>Test Case</h3><h3>Run Duration</h3><h3>Result</h3><h3>Description</h3>";
+		
+		//---var passfail_chart = {};
+		
+		for (var index = 0; index < report_files.length; index++) {
+			xhr.open('GET', report_files[index], false);
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState===4 && xhr.status===200) {			
+					var items = JSON.parse(xhr.responseText);
+					var result = "";
+					var report_row = "";
+					var report_row = "";
+					for (var key in items) {
+						result = items[key];
+						report_row = "<div class=\"cx_reporter\">";
+						report_row = report_row + "<p>" + result.description + "</p>";
+						report_row = report_row + "<p>" + result.duration + "</p>";
+						report_row = report_row + "<p>" + ((result.assertions[0].passed) ? "Passed" : "Failed") + "</p>";
+						report_row = report_row + "<p>" + ((!result.assertions[0].passed) ? result.assertions[0].errorMsg : "") + "</p>";
+						report_row = report_row + "</div>";
+						document.getElementById("dd_cx_results").innerHTML = document.getElementById("dd_cx_results").innerHTML + report_row;
+						report_row = "";
+						//--- passfail_chart[key] = [result.description, result.duration, ((result.assertions[0].passed) ? "Passed" : "Failed"];
+						statistics_total += 1;
+						statistics_passed += (result.assertions[0].passed) ? 1 : 0
+						statistics_failed += (!result.assertions[0].passed) ? 1 : 0
+					}	//--- END for (var key in items)
+				}	//--- END if (xhr.readyState===4 && xhr.status===200)
+			}	//--- END xhr.onreadystatechange = function ()
+			xhr.send();
+		}	//--- END for (var index = 0; index < report_files.length; index++)
+		document.getElementById("dd_cx_results").innerHTML = document.getElementById("dd_cx_results").innerHTML + "</dd_cx_table>";
+		/*var pf_chart = "<table><th><td>Test Case</td><td>Duration</td><td>Result</td></th>";
+		for (var index = 0; index < passfail_chart.length; index++) {
+			pf_chart =  pf_chart + "<tr><td>" + passfail_chart[index][0] + "</td><td>" + passfail_chart[index][1] + "</td></td>" + passfail_chart[index][2] + "</td></tr>";
+		}
+		document.getElementById("dd_cx_results").innerHTML = pf_chart; */
+	}
+	function makeGraph(container, labels)
+	{
+		container = document.getElementById(container);
+		labels = document.getElementById(labels)
+		var dnl = container.getElementsByTagName("li");
+		for(var i = 0; i < dnl.length; i++)
+		{
+			var item = dnl.item(i);
+			var value = item.innerHTML;
+			var color = item.style.background=color;
+			var content = value.split(":");
+			value = content[0];
+			item.style.height=value + "px";
+			item.style.top=(199 - value) + "px";
+			item.style.left = (i * 50 + 20) + "px";
+			item.style.height = value + "px";
+			item.innerHTML = value;
+			item.style.visibility="visible";	
+			color = content[2];
+			if(color != false) item.style.background=color;
+			labels.innerHTML = labels.innerHTML +
+				 "<span style='margin:8px;background:"+ color+"'>" + 
+				 content[1] + "</span>";
+		}	
+	}
+	window.onload=function(){
+		dd_cx_report_builder();  
+		makeGraph("dd_cx_graph", "dd_cx_labels");
+		var graph_data = "1000<br /> <br /> <br />200<br /> <br /> <br /> 150 <br /> <br /> <br /> 100 <br /> <br /> <br /> 50";
+		graph_data = graph_data + "<ul>";
+		graph_data = graph_data + "<li>" + statistics_total + ":Total Tests Run:lightblue</li>";
+		graph_data = graph_data + "<li>" + statistics_passed + ":Passed:lightgreen</li>";
+		graph_data = graph_data + "<li>" + statistics_failed + ":Failed:lightred</li>";
+		graph_data = graph_data + "</ul>";
+		document.getElementById("dd_cx_graph").innerHTML = graph_data;
+		document.getElementById("dd_cx_test_run_total").innerHTML = "Total Test Run:" + statistics_total;
+		document.getElementById("dd_cx_test_passed").innerHTML = "Total Test Passed:" + statistics_passed;
+		document.getElementById("dd_cx_test_failed").innerHTML = "Total Test Failed:" + statistics_failed;
+		document.getElementById("dd_cx_percent_failure").innerHTML = "Failure(%):" + (statistics_failed * 100)/statistics_total;
+    };
+
+</script>
+<body>
+	<div id="dd_cx_graph"></div>
+	<div id="dd_cx_labels">Test Results : </div>
+	<div id="dd_cx_summary">
+		<div id="dd_cx_test_run_total"></div>
+		<div id="dd_cx_test_passed"></div>
+		<div id="dd_cx_test_failed"></div>
+		<div id="dd_cx_percent_failure"></div>
+	</div>
+	<!--<div class="cx" id="dd_cx_passfail_chart"></div>-->
+	<div class="cx" id="dd_cx_results"></div>
+</body>
+</html>
+
+

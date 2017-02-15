@@ -1,0 +1,20 @@
+{
+	"cx" : {
+		"Plan" : { 
+			"Summary" : {
+				"Name" : "DeltaCare® USA CAA55 Individual/Family Dental Program", 
+				"Type" : "DHMO",
+				"Premium" : "$148.53", 
+				"Fee" : "$10.00", 
+				"Title" : "DeltaCare® USA CAA55 Individual/Family Dental Program", 
+				"Description" : ""
+			}
+		},
+		"Facilities" : {
+			"Identifiers" : ["DC004498", "DC046655", "DC044899"]
+		},
+		"ErrorValidation" : {
+			
+		}
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"cx" : {
+		"URLs" : {
+			"current" : "0",
+			"items" : [ {"submitButton" : "input[type='submit']", "link" : "http://localhost:3000/enroll/"}]
+		},
+		"Plan" : { 
+			"Summary" : {
+				"Name" : "DeltaCare® USA CAA55 Individual/Family Dental Program", 
+				"Type" : "DHMO",
+				"Premium" : "$148.53", 
+				"Fee" : "$10.00", 
+				"Title" : "DeltaCare® USA CAA55 Individual/Family Dental Program", 
+				"Description" : ""
+			}
+		},
+		"Dependents" : [{ 
+			"Relationship" : "Child",
+			"Name" : { "First" : "Richard", "Middle": "K", "Last" : "O'Malley" },
+			"Gender" : "Male",
+			"DOB" : { "Month" : "07", "Day" : "07", "Year" : "2000" },
+			"Index" : "1"
+		},{ 
+			"Relationship" : "Child",
+			"Name" : { "First" : "Benjamin", "Middle": "K", "Last" : "O'Malley" },
+			"Gender" : "Male",
+			"DOB" : { "Month" : "06", "Day" : "06", "Year" : "2000" },
+			"Index" : "2"
+		},{ 
+			"Relationship" : "Child",
+			"Name" : { "First" : "Roger", "Middle": "K", "Last" : "O'Malley" },
+			"Gender" : "Male",
+			"DOB" : { "Month" : "06", "Day" : "06", "Year" : "2000" },
+			"Index" : "3"
+		}],
+		"ErrorValidation" : {
+			"Dependents" : [{ 
+				"Relationship" : "Child",
+				"Name" : { "First" : "", "Middle": "", "Last" : "" },
+				"Gender" : "Male",
+				"DOB" : { "Month" : "", "Day" : "", "Year" : "" },
+				"Index" : "1"
+			},{ 
+				"Relationship" : "Child",
+				"Name" : { "First" : "", "Middle": "", "Last" : "" },
+				"Gender" : "Male",
+				"DOB" : { "Month" : "", "Day" : "", "Year" : "" },
+				"Index" : "2"
+			},{ 
+				"Relationship" : "Child",
+				"Name" : { "First" : "", "Middle": "", "Last" : "" },
+				"Gender" : "Male",
+				"DOB" : { "Month" : "", "Day" : "", "Year" : "" },
+				"Index" : "3"
+			}]
+		}
+	}
+}

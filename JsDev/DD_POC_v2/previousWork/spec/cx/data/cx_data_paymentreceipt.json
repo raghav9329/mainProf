@@ -1,0 +1,49 @@
+{
+	"cx" : {
+		"Plan" : { 
+			"Summary" : {
+				"Name" : "DeltaCare® USA CAA55 Individual/Family Dental Program", 
+				"Type" : "DHMO",
+				"Premium" : "$148.53", 
+				"Fee" : "$10.00", 
+				"Title" : "DeltaCare® USA CAA55 Individual/Family Dental Program", 
+				"Description" : ""
+			}
+		},
+		"Payment" : {
+			"Card" : {
+				"Name" : "Peter OMalley",
+				"Index" : "0",
+				"LocaleIndex" : "0",
+				"CCVNumber" : "012",
+				"MailingAddress" : {
+					"Exists" : "No",
+					"Street" : "",
+					"City" : "",
+					"State" : "",
+					"Zip" : ""
+				},
+				"SaveForFuture" : "No"
+			},
+			"AgreeToAuthorizationStatment" : "Yes",
+			"DisclosureFormContract" : {
+				"IsDownloadedToPDF" : "Yes",
+				"IsSendByPostage" : "No"
+			}
+		},
+		"ErrorValidation" : [{
+			"Card" : {
+				"Name" : "", 
+				"Index" : "0",
+				"LocaleIndex" : "0",
+				"CCV" : "000",
+				"MailingAddress" : {
+					"Street" : "",
+					"City" : "",
+					"State" : "",
+					"Zip" : ""
+				}
+			}
+		}]
+	}
+}
