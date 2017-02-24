@@ -1,3 +1,12 @@
+2/22/17
+G: protractor js non angular page testing detection of AJAX request
+https://www.google.com/search?q=useing+protractor+can+I+detect+calls+to+my+server+during+the+workflow&rlz=1C1NHXL_enUS726US726&oq=useing+protractor+can+I+detect+calls+to+my+server+during+the+workflow+&aqs=chrome..69i57.21926j0j7&sourceid=chrome&ie=UTF-8&safe=active#safe=active&q=protractor+js+non+angular+page+testing+detection+of+AJAX+request
+
+1: http://stackoverflow.com/questions/10783463/javascript-detect-ajax-requests
+2: http://stackoverflow.com/questions/3596583/javascript-detect-an-ajax-event
+
+
+
 2/14/17
 Serious Julimar magic
 https://github.com/angular/protractor/issues/858

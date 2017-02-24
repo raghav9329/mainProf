@@ -1,3 +1,24 @@
+2/22/17
+Is the Page fully loaded ??
+http://stackoverflow.com/questions/33301476/how-to-wait-the-page-to-test-is-loaded-in-non-angular-site
+tests for jQuery.active==0   which is an indication of fully loaded 
+
+Additionally:.....
+https://github.com/sakshisingla/Protractor-Non-Angular-Tests/wiki/Creating-test-scripts-using-Protractor-for-non-angular-application
+
+Nice little find text in page
+http://stackoverflow.com/questions/33690955/protractor-see-text-on-page
+
+ browser.driver.get('https://angularjs.org/')
+    el = element(by.css('.first'))
+    el.getText().then(function(text){expect(text).toContain("AngularJS is a toolset for")});
+
+Need to try this : above !!
+But as I look at this,,,, it is based upon class first.  what if you dont know that !!!
+More on that page is interesting...
+
+
+
 2/14/17
 G: protractor select from a dropdwn by text
 I used the solution at 

@@ -2,6 +2,9 @@
 // A copy of CAA50Senior_Single.test.js was made here
 // this most simple of chages will be applied so that it will run
 // in the CA55 Plan .  Click submit on the dependents page.
+// 2/22/17 current execution method
+// Execution: called from protractor-ch_ff-CAA55SimpleWasSr.conf.js
+// command line: 
 "use strict"
 
 	var protocol        = "https://"
