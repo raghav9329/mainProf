@@ -7,6 +7,12 @@
  * CAA55PlanSelect.test.js  represents the second work flow Manny assigned.
  * Testing: configured through protractor-chrome|firefox.conf.js File(s) 
  * command line alias ppcc or ppff
+ * 
+ * Naming convention to the specs  nees to be NofX with the describe name
+ * But I also want the naming to indicate where I am in the execution
+ * I don't really want to go Back and lable so, maybe it will be 
+ * A, B, C, D etc.
+ *
  */
 
 	// JavaScriptTheGoodParts.pdf pg25 refs global obj var MYAPP = {};
@@ -58,178 +64,266 @@
 //		});// end it nav 1
 //	});// end describe(Nav2StartPage)
 	
-describe('Start the Plan Selection Process via Get A Quote Button', function() {
+describe('A: Start the Quote Process via Get A Quote Button', function() {
 		//var getAQuote_Button = element(by.css('.button')); // 2/23/17 line moved to the -it- directly below
 		//var getAQuote_Button = element(by.id('apply'));// 2/13/17 testing different selector
 		
 	
-		it('strt 1: it should find the Get A Quote button element and activate the button', function(){
+		it('A1:should find the Get A Quote button element and activate the button', function(){
 			var getAQuote_Button = element(by.css('.button'));
 
 			console.log('');
 			expect(getAQuote_Button.isPresent()).toBe(true);
 			getAQuote_Button.click();
-			expect(browser.getCurrentUrl()).toEqual('https://dit3.deltadentalins.com/indEnroll?issuerCode=DELTA');
-			console.log('it strt 1: Found the GetAQuote button and clicked it');
-		});// end of it(strt 1)
+			
+			console.log(' A1o2  : Found the GetAQuote button and clicked it');
+		});
 		
 		
-		it('it strt 2: should find the proper dialog to start the quote process',function(){
+		it('A2:should find the proper dialog & URL',function(){
 		 	var dlg_SearchForDenPlans = element(by.css('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all'));
-
+		 	var urlIs = 'https://dit3.deltadentalins.com/indEnroll?issuerCode=DELTA';
+///////////////////////////////////////////
+//  Glaring hole here:  hard coded URL !!!
+//////////////////////////////////////////
+		 	expect(browser.getCurrentUrl()).toEqual(urlIs);
 			expect( dlg_SearchForDenPlans.isDisplayed()).toBe(true);
-			console.log('it strt 2: Found the Search for Dental Plans dialog');
-		}); //end of it(2)
+			console.log('A2o2  : Found the Search for Dental Plans dialog');
+		});
 	
+}); // end of Start the Quote Process
 
-		
-//		// seems like this should be broken up
-//		it('strt2A: it should allow me to enter zip and qty to cover ', function(){
-//		//	expect( element(by.css('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all'))   );
-//		// 2/13 Dont know why I was looking at that element expecting it.  I'm
-//		// not acting on it at all
-//			
-//			/* Waits for the element with id 'coverage_type' to be clickable. 
-//			 * 2/13/17  I don't even think this is true       may have been */
-//			var ExpctCond = protractor.ExpectedConditions;
-//
-//			var zipValue = '95148';
-//			var zipField = element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
-//			browser.wait(ExpctCond.elementToBeClickable(zipField),5000);
-//			zipField.sendKeys(zipValue);
-////		 /**************************************************	
-////		  * 2/14/17 
-////		  * Doing any kind of checking right here of the zip value Seems to 
-////		  * be unbelievably counter productive
-////		  */
-//			console.log('it strt2A: entered date in zipField: ', zipValue);
-//
-//		});// end of it(2A) 
-	
-		
-//		 /**************************************************	
-//		  * 2/14/17 
-//		  * OK, full evaluation of the -it- below works
-//		  * ?? Combine it w/ the -it- above is for some time later
-//		  */
-		
-//		it('it strt2B: special debug step.  should check the text in the field via Attribute',function (){
-//			this.debugTestVar = element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
-//			this.debugTestVar.getAttribute('value').then(function (text) {
-//				if (text === '95148'){
-//					console.log('it strt2B: Success check, text in zip field.  value is = ', text);
-//				}
-//				else{ console.log('it strt2B: ERROR: check text in zip field FAILED.  value is = ', text);
-//				}
-//			});// end of this.debugTestVar.getAttrib....
-//		}); // end of it(2B)
+
+describe('B: Quote Dialog Data Entry and submission', function(){
+
+		it('B1:should allow me to enter zip and qty to cover ', function(){
+			var ExpctCond = protractor.ExpectedConditions;
+			var zipValue = '95148';
+			var zipField = element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
+
+			browser.wait(ExpctCond.elementToBeClickable(zipField),5000);
+			zipField.sendKeys(zipValue);
+			console.log('B1o4  : entered data in zipField: ', zipValue);
+		});// end of it(2A) 
 	
 		
 		
-//		it('it strt 3: should evaluate the single coverage selection', function(){
-//			var howManyWillBeCovered = element(by.cssContainingText('option', '4'));
-//			var coverageSelection = "Self";   
-//			var ExpctCond = protractor.ExpectedConditions; // same name new scope
-//
-//			browser.wait(ExpctCond.elementToBeClickable(howManyWillBeCovered),5000);
-//			howManyWillBeCovered.click();
-//			
-//			/* Could not resolve the folllowing checks  */
-//			//expect(howManyWillBeCovered.getAttribute('value')).toEqual('1');
-//			//expect(howManyWillBeCovered(by.selectedOption('value'))).toEqual('1');
-//			//expect(element(by.model('coverage_type')).$('option:checked').getText()).toEqual('1');
-//			console.log('it strt 3: Single coverage selected with: 4 ');
-//		});// end of it(3)	
-			
-		
-		
-//		it('it strt 4: should find the dialog button and click it', function(){
-//			var searchForPlans_GoButton = element(by.id('btn_saveBig'));	
-//			expect( searchForPlans_GoButton.isPresent()).toBe(true);	
-//			searchForPlans_GoButton.click();
-//			console.log('it strt 4: Search for Dental Plans button found and Button Clicked');
-//		});	// end of it(4)
-			
-			
-		
-		
-//		it('it strt 5: should locate the page titlem properly', function () {
-//			var stringPageTitle = "::Individual & Families::";
-//			expect(browser.getTitle()).toEqual(stringPageTitle);
-//			console.log('it strt 5: Page Title found to be: ',stringPageTitle);
-//		});// end of it(5)	
-			
-		
-		
-//		it('it strt 5: should find the proper zip code identified for the three plans', function(){	
-//			// See that zipValue is defined above some 30 lines 
-//			// but do I reall need to do this?  Is it any more readable ?
-//			var zipCodeUnderTest = '95148';
-//			var mySearchCondition = element(by.id('psc_zip'));
-//			
-//			expect(mySearchCondition.getText()).toEqual(zipCodeUnderTest);
-//			console.log('it strt 6: Found zipCode we are testing', zipCodeUnderTest);
-//		});// end of it(6)
+		it('B2:it should confirm the zip field value',function (){
+			var debugTestVar	= element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
+			var zipTestValue	= '95148';
+			var zipErrorCondVal	= '951x*';
+
+			expect(debugTestVar.getAttribute('value')).not.toEqual(zipErrorCondVal); // should pass ( double negative )
+			expect(debugTestVar.getAttribute('value')).toEqual(zipTestValue); // should pass ( single positive )
+			debugTestVar.getAttribute('value').then(function (text) {
+				if (text === zipTestValue){
+					console.log('B2o4  : Success check, text in zip field.  value is = ', text);
+				}
+				else{ console.log('B2o4  : ERROR: check text in zip field FAILED.  value is = ', text);
+				}
+			});// end debugTestVar.getAttrib....
+		}); 
 	
 		
 		
+		it('B3:should select the test value WhoWillBeCovered', function(){
+			var howManyWillBeCoveredEnter = element(by.cssContainingText('option', '4'));
+			// var coverageSelection = "Self";   2/24/17 I believe to be removed.  much earlier design
+			var ExpctCond = protractor.ExpectedConditions; // same name new scope
+
+			browser.wait(ExpctCond.elementToBeClickable(howManyWillBeCoveredEnter),5000);
+			howManyWillBeCoveredEnter.click();
+			console.log('B3o4  : Single coverage selected with: 4 ');
+		});// end of it(3)	
 		
-//		it('it strt 7: should find the text of the link for Individual/Family Dental Program' , function(){
-//
-//			var seniorPlanLink = element(by.id('planRowsBody_70422')).element(By.tagName('a'));  // CAA55 Individual/Family Dental Program
+/////////////////////////////////
+//  Need to come back to this 
+//  Figure how to get the 
+//  drop down selected value
+/////////////////////////////////
+//		it('B3a: shoujld confirm the dropMenu value selected',function(){
+//			//var howManyWillBeCoveredTest = element(by.cssContainingText('option', '4'));
+//			//expect( howManyWillBeCoveredTest.getAttribute('text Hummmm')).toEqual('4');
+//			var someelement = element(by.id('coverage_type'));
 //			
-//			/* as much as I would like to zero in exactly on the link.....  *s
-//			 * the following srPlnLink definition is not finding the link to click
-//			 */
-//		
-//			//var seniorPlanLink = element(by.cssContainingText('.planDetails','DeltaCare�  USA CAA50 Senior Dental Program')).element(By.tagName('a'));
-//			// Senior Plan CAA50 was deleted by Product Management
+//			expect(someelement.getAttribute('text')).toBe('4');
+//			colsole.log('B3AoX : Some console output ');
 //			
-//			//browser.wait(ExpctCond.textToBePresentInElementValue)
-//			
-//			seniorPlanLink.click();
-//			console.log('it strt 7: USA CAA55 Individual/Family Dental Program ');
-//		
 //		});
 		
+
+		it('B4:should find the dialog button and click it', function(){
+			var searchForPlans_GoButton = element(by.id('btn_saveBig'));	
+			expect( searchForPlans_GoButton.isPresent()).toBe(true);	
+			searchForPlans_GoButton.click();
+			console.log('B4o4  : Search for Dental Plans button found and Button Clicked');
+		});	
+			
+});// end describe('Quote Dialog Data Entry and submission', function(){	
+
+
+describe('C:Dental Plan Selection', function(){
+
+		
+		it('C1:should confirm page title and URL', function () {
+			var stringPageTitle	= "::Individual & Families::";
+			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/search/quotes?zip=95148'
+
+		 	expect(browser.getCurrentUrl()).toContain(urlContains);
+			expect(browser.getTitle()).toEqual(stringPageTitle);
+			console.log('C1o5  : Page Title & URL confirmed');
+		});// end of it(5)	
+			
+		
+		
+		it('C2:should confirm proper zip & quantity', function(){	
+			var zipCodeUnderTest	= '95148';
+			var presentedZip		= element(by.id('psc_zip'));
+			var presentedQty		= element(by.css('.qpeople.greenBTxt'));
+			var qtyText				= '4 person(s)';
+			
+			expect(presentedZip.getText()).toEqual(zipCodeUnderTest);
+			expect(presentedQty.getText()).toEqual(qtyText);
+			console.log('C2o5  : Display zip & Quantity confirmed');
+		});// end of it(6)
+	
 		
 		
 		
+		it('C3:should select a dental plan link' , function(){
+			var seniorPlanLink = element(by.id('planRowsBody_70422')).element(By.tagName('a'));  
+			// CAA55 Individual/Family Dental Program
+			
+			seniorPlanLink.click();
+			console.log('C3o5  : Dental Plan individual Page Link selected');
+		});
+		
+		it('C4:should confirm URL & enroll button' , function(){
+			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/plans/70422?zip=95148';
+			var enrollButton	= element(by.css('.enrollBtn'));
+		
+			expect(browser.getCurrentUrl()).toContain(urlContains);
+			expect(enrollButton.isPresent()).toBe(true);
+			console.log('C4o5  : Dental Plan Page URL & Enroll button confirmed');
+		});
+		
+		it('C5:should confirm URL & enroll button' , function(){
+			var enrollButton	= element(by.css('.enrollBtn'));
+			
+			enrollButton.click();
+			console.log('C5o5  : Dental Plan Page Enroll button clicked'); 
+		});
+		
+//////////////////////////////////////////////////////////////
+//	2/24/17 just not ready to delete
+//	I don't absolutely need this any longer but it's got
+//  got some interesting locators ..........
+//////////////////////////////////////////////////////////////
 //		it('it strt 8: should evaluate page correctness before clicking the button', function(){
 //			var numPersonsText = element(by.id('covrage_type_e'));
 //			var locPersonsText = element(by.id('qstate'));
 //			expect(numPersonsText.getText()).toEqual('4 person(s)');
-////			expect(locPersonsText.getText()).toEqual('CA 95148');
+////		expect(locPersonsText.getText()).toEqual('CA 95148');
 //			expect(locPersonsText.getText()).toEqual('CA');
-//			
-//			
 //			
 //			var enrollButton = element.all(by.cssContainingText('.enrollBtn', 'Enroll')).first();
 //		//  var enrollButton = element.all(by.id('apply')); // 2/14/17 this worked and then it didn't
 //			enrollButton.click();
 //			console.log('it strt 8: Enroll Button found and clicked.');
 //
+//			browser.sleep(10000)
 //		}); // end of it 8
+
+});// end describe('C: Dental Plan Selection', function(){
+		
+describe('D: Personal Info Page - First pass zip code work flow correction', function(){
 	
+		it('D1:should evaluate PersInfo URL and Title', function(){
+			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
+			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
+			expect(browser.getTitle()).toEqual(pageTitleString);
+			expect(browser.getCurrentUrl()).toEqual(urlIs);
+			console.log('D1oX  : Confirmed PersInfo page URL and Title');
+		}); 
+		
+		
+		it('D2:Set the correct Zip code and loose focus',function(){
+			var ExpCond = protractor.ExpectedConditions;
+			var fieldZipCode		= element(by.id('zipCode'));
+			var fieldPhoneNumber	= element(by.id('contactNumber'));
+			
+			browser.wait(ExpCond.elementToBeClickable(fieldZipCode),5000);
+			fieldZipCode.sendKeys('94105');
+			
+			browser.wait(ExpCond.elementToBeClickable(fieldPhoneNumber),5000);// yes I know its already clickable
+			fieldPhoneNumber.click();
+			console.log('D2oX  : Changed ZipCode to generate ZC Chg Popup');
+		});
+	 	
+		
+		it('D3:Confirm Popup visable ',function(){
+			var zipPopDlg		= element(by.css('.overlay.zipPop'));
+			
+			expect(zipPopDlg.isDisplayed()).toBe(true);
+			console.log('D3oX  : detected overlay popup !!');
+		});
+		
+		it('D4:Conform go_Back Link  click it. ',function(){
+			var zipGoBackId		= 'zipPopBack';
+			var gobackLink		= element(by.id(zipGoBackId));
+			
+			gobackLink.click();
+			console.log('D4oX  : Go Back link clicked');
+		});
+		
+		it('D5:should re evaluate PersInfo URL and Title', function(){
+			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
+			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
+			expect(browser.getTitle()).toEqual(pageTitleString);
+			expect(browser.getCurrentUrl()).toEqual(urlIs);
+			console.log('D5oX  : Confirmed PersInfo page URL and Title');
+		}); 	
+		
+		it('D6.....',function(){
+			var ExpCond = protractor.ExpectedConditions;
+			var fieldStreetAddr		= element(by.id('streetAddress'));
+			var streetAddrStr		= '100 First Street'
+			
+			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
+			fieldStreetAddr.sendKeys(streetAddrStr);
+		}); 	
+		
+		it('D7 .... ',function(){
+			var fieldStreetAddr		= element(by.id('streetAddress'));
+			browser.sleep(850);
+//			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
+			fieldStreetAddr.sendKeys('\uE015');
+			console.log('D60X-1: JUST SENT UNICODE for Down Arrow');
+		});
+		
+		it('D8.....',function(){
+			var fieldStreetAddr		= element(by.id('streetAddress'));
+			browser.sleep(850);
+//			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
+			fieldStreetAddr.sendKeys(protractor.Key.ENTER);
+			console.log('D60X-2: JUST SENT ENTER KEY')
+			browser.sleep(2500)
+		});
 		
 		
 		
-		
-//		it('it strt 9: should evaluate the landing page', function(){
-//			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
-//			expect(browser.getTitle()).toEqual(pageTitleString);
-//			console.log('it strt 9: landed on page: ',pageTitleString );	
-//			//browser.pause();
-//		});  // end of it 9
-	
-	});// end describe('Start the Plan Selection Process via Get A Quote Button', function() {
+}); // end describe('Personal Info Page: First pass zip code work flow correction', function(){
+
 
 	
 	
-//	describe('Personal Info Page, preValidate(), fillOut(), postValidate()', function(){
-//		
+
 
 	
+//			browser.sleep(10000)
+
+
+
 //		it('it Pers 0: Personal Info Page validation',function(){
 //			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
 //			expect(browser.getTitle()).toEqual(pageTitleString);
