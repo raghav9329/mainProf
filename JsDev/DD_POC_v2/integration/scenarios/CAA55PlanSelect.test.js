@@ -42,7 +42,16 @@
 	});
 	
 	beforeEach(function(){
-		browser.sleep(sleepDuration);
+	//  Previous implemtation of beforeEach was the single line below to sleep some duration
+	//	browser.sleep(sleepDuration);
+	//  2/27/17 replaced with the newer browser wait function defined below.
+	//  This is a VAST improvement 
+		browser.wait(function () {
+	        return browser.executeScript('return document.readyState==="complete" &&' +
+            ' jQuery !== undefined && jQuery.active==0;').then(function (text) {
+                return text === true;
+            });
+	    }, 30000);
 	});
 
 	afterEach(function() {
@@ -97,11 +106,11 @@ describe('A: Start the Quote Process via Get A Quote Button', function() {
 describe('B: Quote Dialog Data Entry and submission', function(){
 
 		it('B1:should allow me to enter zip and qty to cover ', function(){
-			var ExpctCond = protractor.ExpectedConditions;
+			var ExpCond = protractor.ExpectedConditions;
 			var zipValue = '95148';
 			var zipField = element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
 
-			browser.wait(ExpctCond.elementToBeClickable(zipField),5000);
+			browser.wait(ExpCond.elementToBeClickable(zipField),5000);
 			zipField.sendKeys(zipValue);
 			console.log('B1o4  : entered data in zipField: ', zipValue);
 		});// end of it(2A) 
@@ -129,9 +138,9 @@ describe('B: Quote Dialog Data Entry and submission', function(){
 		it('B3:should select the test value WhoWillBeCovered', function(){
 			var howManyWillBeCoveredEnter = element(by.cssContainingText('option', '4'));
 			// var coverageSelection = "Self";   2/24/17 I believe to be removed.  much earlier design
-			var ExpctCond = protractor.ExpectedConditions; // same name new scope
+			var ExpCond = protractor.ExpectedConditions; // same name new scope
 
-			browser.wait(ExpctCond.elementToBeClickable(howManyWillBeCoveredEnter),5000);
+			browser.wait(ExpCond.elementToBeClickable(howManyWillBeCoveredEnter),5000);
 			howManyWillBeCoveredEnter.click();
 			console.log('B3o4  : Single coverage selected with: 4 ');
 		});// end of it(3)	
@@ -139,7 +148,7 @@ describe('B: Quote Dialog Data Entry and submission', function(){
 /////////////////////////////////
 //  Need to come back to this 
 //  Figure how to get the 
-//  drop down selected value
+//  drop down selected value [ late ]: I need to put in my notes, because currently...... to explain what and why this needs to be done 
 /////////////////////////////////
 //		it('B3a: shoujld confirm the dropMenu value selected',function(){
 //			//var howManyWillBeCoveredTest = element(by.cssContainingText('option', '4'));
@@ -168,8 +177,23 @@ describe('C:Dental Plan Selection', function(){
 		it('C1:should confirm page title and URL', function () {
 			var stringPageTitle	= "::Individual & Families::";
 			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/search/quotes?zip=95148'
+			var ExpCond = protractor.ExpectedConditions;
 
-		 	expect(browser.getCurrentUrl()).toContain(urlContains);
+/////////////////////////////////////////////////////////////////
+//  Some FM from  http://stackoverflow.com/questions/33301476/how-to-wait-the-page-to-test-is-loaded-in-non-angular-site
+//  2/27/17 curreintly a really nice little solution
+//  this waits until the page completely loads
+//  Means it waits for slow to load pages.  currently 30 sec Max
+/////////////////////////////////////////////////////////////////
+//			browser.wait(function () {
+//		        return browser.executeScript('return document.readyState==="complete" &&' +
+//	            ' jQuery !== undefined && jQuery.active==0;').then(function (text) {
+//	                return text === true;
+//	            });
+//		    }, 30000);
+/////  End of FM
+		
+			expect(browser.getCurrentUrl()).toContain(urlContains);
 			expect(browser.getTitle()).toEqual(stringPageTitle);
 			console.log('C1o5  : Page Title & URL confirmed');
 		});// end of it(5)	
@@ -185,7 +209,7 @@ describe('C:Dental Plan Selection', function(){
 			expect(presentedZip.getText()).toEqual(zipCodeUnderTest);
 			expect(presentedQty.getText()).toEqual(qtyText);
 			console.log('C2o5  : Display zip & Quantity confirmed');
-		});// end of it(6)
+		});
 	
 		
 		
@@ -243,7 +267,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
 			expect(browser.getTitle()).toEqual(pageTitleString);
 			expect(browser.getCurrentUrl()).toEqual(urlIs);
-			console.log('D1oX  : Confirmed PersInfo page URL and Title');
+			console.log('D1oA : Confirmed PersInfo page URL and Title');
 		}); 
 		
 		
@@ -257,7 +281,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 			
 			browser.wait(ExpCond.elementToBeClickable(fieldPhoneNumber),5000);// yes I know its already clickable
 			fieldPhoneNumber.click();
-			console.log('D2oX  : Changed ZipCode to generate ZC Chg Popup');
+			console.log('D2oA : Changed ZipCode to generate ZC Chg Popup');
 		});
 	 	
 		
@@ -265,7 +289,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 			var zipPopDlg		= element(by.css('.overlay.zipPop'));
 			
 			expect(zipPopDlg.isDisplayed()).toBe(true);
-			console.log('D3oX  : detected overlay popup !!');
+			console.log('D3oA : detected overlay popup !!');
 		});
 		
 		it('D4:Conform go_Back Link  click it. ',function(){
@@ -273,7 +297,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 			var gobackLink		= element(by.id(zipGoBackId));
 			
 			gobackLink.click();
-			console.log('D4oX  : Go Back link clicked');
+			console.log('D4oA : Go Back link clicked');
 		});
 		
 		it('D5:should re evaluate PersInfo URL and Title', function(){
@@ -281,159 +305,269 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
 			expect(browser.getTitle()).toEqual(pageTitleString);
 			expect(browser.getCurrentUrl()).toEqual(urlIs);
-			console.log('D5oX  : Confirmed PersInfo page URL and Title');
+			console.log('D5oA : Confirmed PersInfo page URL and Title');
 		}); 	
 		
-		it('D6.....',function(){
+		it('D6:should allow street addr data entry',function(){
 			var ExpCond = protractor.ExpectedConditions;
 			var fieldStreetAddr		= element(by.id('streetAddress'));
 			var streetAddrStr		= '100 First Street'
 			
 			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
 			fieldStreetAddr.sendKeys(streetAddrStr);
+			console.log('D6oA : Data entry in Street Addr field');
+	///////  future level of improvement
+	/////// Right HERE I COULD / SHOULD put in a check for error === NULL  
+	///////  Null would indicate no error nespa ?  N est ce pas
 		}); 	
 		
-		it('D7 .... ',function(){
+		it('D7:should accept the down arrow code getting first addrclens entry',function(){
 			var fieldStreetAddr		= element(by.id('streetAddress'));
 			browser.sleep(850);
 //			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
 			fieldStreetAddr.sendKeys('\uE015');
-			console.log('D60X-1: JUST SENT UNICODE for Down Arrow');
+			console.log('D7oA : JUST SENT UNICODE for Down Arrow');
 		});
 		
-		it('D8.....',function(){
+		it('D8:shojuld accept the ENTER KEY commiting Street Addr',function(){
 			var fieldStreetAddr		= element(by.id('streetAddress'));
 			browser.sleep(850);
 //			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
 			fieldStreetAddr.sendKeys(protractor.Key.ENTER);
-			console.log('D60X-2: JUST SENT ENTER KEY')
+			console.log('D8oA : JUST SENT ENTER KEY')
 			browser.sleep(2500)
 		});
 		
+		it('D9:shold detect the zipCode popup dlg',function(){
+			var zipPopDlg		= element(by.css('.overlay.zipPop'));
+			
+			expect(zipPopDlg.isDisplayed()).toBe(true);
+			console.log('D9oA : detected overlay popup !!');
+		});
 		
 		
-}); // end describe('Personal Info Page: First pass zip code work flow correction', function(){
+		it('D10:Conform go_Back Link  click it. ',function(){
+			var zipNewQuoteId	= 'zipNewQuote';
+			var newQuoteLink	= element(by.id(zipNewQuoteId));
+			
+			newQuoteLink.click();
+			console.log('DAoA : NewQuote Link in ZipPopup Clicked');
+			
+			//browser.sleep(60000)
+		});	
+		
+}); // end describe('D: Personal Info Page - First pass zip code work flow correction', function(){
 
 
+describe('E: Plan Selection (return) - Second pass: A new flow', function(){	
+
+		it('E1:should validate Dental Plans Select page title & URL',function(){
+			var stringPageTitle	= "::Individual & Families::";
+			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/search/quotes?zip=94105'
+			var ExpCond = protractor.ExpectedConditions;
+			
+			expect(browser.getCurrentUrl()).toContain(urlContains);
+			expect(browser.getTitle()).toEqual(stringPageTitle);
+			console.log('E1o5  : Page Title & URL confirmed');
+			
+		});
 	
-	
+		it('E2:should confirm proper zip & quantity', function(){	
+			var zipCodeUnderTest	= '94105';
+			var presentedZip		= element(by.id('psc_zip'));
+			var presentedQty		= element(by.css('.qpeople.greenBTxt'));
+			var qtyText				= '4 person(s)';
+			
+			expect(presentedZip.getText()).toEqual(zipCodeUnderTest);
+			expect(presentedQty.getText()).toEqual(qtyText);
+			console.log('E2o5  : Display zip & Quantity confirmed');
+		
+		});	
+		
+		it('E3:should select a dental plan link' , function(){
+			var seniorPlanLink = element(by.id('planRowsBody_70422')).element(By.tagName('a'));  
+			// CAA55 Individual/Family Dental Program
+			
+			seniorPlanLink.click();
+			console.log('E3o5  : Dental Plan individual Page Link selected');
 
-
+		});	
+		
+		it('E4:should confirm URL & enroll button' , function(){
+			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/plans/70422?zip=94105';
+			var enrollButton	= element(by.css('.enrollBtn'));
+		
+			expect(browser.getCurrentUrl()).toContain(urlContains);
+			expect(enrollButton.isPresent()).toBe(true);
+			console.log('E4o5  : Dental Plan Page URL & Enroll button confirmed');
+		});
+		
+		it('E5:should confirm URL & enroll button' , function(){
+			var enrollButton	= element(by.css('.enrollBtn'));
+			
+			enrollButton.click();
+			console.log('E5o5  : Dental Plan Page Enroll button clicked'); 
 	
-//			browser.sleep(10000)
+		});
+		
+}); // end describe('E: Plan Selection (return) - Second pass: A new flow', function(){	
+		
 
+describe('F: Personal Info Page - Second pass: A new flow', function(){
+	
+		it('F1:should evaluate PersInfo URL and Title', function(){
+			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
+			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
+			expect(browser.getTitle()).toEqual(pageTitleString);
+			expect(browser.getCurrentUrl()).toEqual(urlIs);
+			console.log('F1oX : Confirmed PersInfo page URL and Title');
+		}); 
 
-
-//		it('it Pers 0: Personal Info Page validation',function(){
-//			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
-//			expect(browser.getTitle()).toEqual(pageTitleString);
-//			console.log('it strt 9: landed on page: ',pageTitleString );	
-//		});
-	
-	
-	
-//	
-//			var fieldFirstName		= element(by.id('firstName'));
-//			var fieldMidInitial		= element(by.id('lastName'));
-//			var fieldLastName		= element(by.id('lastName'));
-//			var fieldGenderSelect	= element(by.id('gender'));
-//			var fieldBdMM			= element(by.id('month'));
-//			var fieldBdDD			= element(by.id('day'));
-//			var fieldBdYyyy			= element(by.id('year'));
-//			var fieldSsn			= element(by.id('ssn'));
-//			var fieldHomeAddr		= element(by.id('streetAddress'));
-//			var fieldCity			= element(by.id('city'));
-//			var fieldState			= element(by.id('state'));
-//			var fieldZipCode		= element(by.id('zipCode'));
-//			var chkBoxDiffMailAddr	= element(by.id('diffmail'));
-//			var fieldPhoneSelect	= element(by.id('contactType'));
-//			var fieldPhoneNumber	= element(by.id('contactNumber'));
-//			var fieldEmailAddr		= element(by.id('email'));
-//			var chkBoxPaperless		= element(by.id('paperless'));
-//			var RadBtnBrokerYes		= element(by.id('brokerYes'));
-//			var RadBtnBrokerNo		= element(by.id('brokerNo'));
-//			var linkBackToQuote		= element(by.id('backToQuote'));
-//			var persPageButtonNext	= element(by.id('nextButton'));
-//	/************************************************************************/	
-//	/**   Right after State and zipCode are the following hidden fields  ****/	
-//	/************************************************************************/	
-//			var hiddenfieldMailAddr	= element(by.id('mailingAddress'));
-//			var hiddenfieldCity		= element(by.id('mailingCity'));
-//			var hiddenfieldState	= element(by.id('mailingState'));
-//			var hiddenfieldZipCode	= element(by.id('mailingZipCode'));
-//		
-//	/************************************************************************/	
-//	/**   Right after email and paperless, there is the broker buttons   ****/	
-//	/************************************************************************/	
-//			var hiddenfieldBrokerNum=element(by.id('brokerNumber'));
-//		//	planPriceString = element(by.css('.plan-price'))
+			var fieldFirstName		= element(by.id('firstName'));
+			var fieldMidInitial		= element(by.id('lastName'));
+			var fieldLastName		= element(by.id('lastName'));
+			var fieldGenderSelect	= element(by.id('gender'));
+			var fieldBdMM			= element(by.id('month'));
+			var fieldBdDD			= element(by.id('day'));
+			var fieldBdYyyy			= element(by.id('year'));
+			var fieldSsn			= element(by.id('ssn'));
+			var fieldHomeAddr		= element(by.id('streetAddress'));
+			var fieldCity			= element(by.id('city'));
+			var fieldState			= element(by.id('state'));
+			var fieldZipCode		= element(by.id('zipCode'));
+			var chkBoxDiffMailAddr	= element(by.id('diffmail'));
+			var fieldPhoneSelect	= element(by.id('contactType'));
+			var fieldPhoneNumber	= element(by.id('contactNumber'));
+			var fieldEmailAddr		= element(by.id('email'));
+			var chkBoxPaperless		= element(by.id('paperless'));
+			var RadBtnBrokerYes		= element(by.id('brokerYes'));
+			var RadBtnBrokerNo		= element(by.id('brokerNo'));
+			var linkBackToQuote		= element(by.id('backToQuote'));
+			var persPageButtonNext	= element(by.id('nextButton'));
+	/************************************************************************/	
+	/**   Right after State and zipCode are the following hidden fields  ****/	
+	/************************************************************************/	
+			var hiddenfieldMailAddr	= element(by.id('mailingAddress'));
+			var hiddenfieldCity		= element(by.id('mailingCity'));
+			var hiddenfieldState	= element(by.id('mailingState'));
+			var hiddenfieldZipCode	= element(by.id('mailingZipCode'));
+		
+	/************************************************************************/	
+	/**   Right after email and paperless, there is the broker buttons   ****/	
+	/************************************************************************/	
+			var hiddenfieldBrokerNum=element(by.id('brokerNumber'));
+		//	planPriceString = element(by.css('.plan-price'))
 			
 			
 			
-//		it('it pers 1: should evaluate details on the pers Info Page ', function(){
-//			/* this test is and the definitions in the describe are the 
-//			 * kind of things that should be going in the page object model testing  
-//			 * *************************************************************************/
-//				expect(fieldFirstName.isDisplayed())	.toBe(true);
-//				expect(fieldMidInitial.isDisplayed())	.toBe(true);
-//				expect(fieldLastName.isDisplayed())		.toBe(true);
-//				expect(fieldGenderSelect.isDisplayed())	.toBe(true);
-//				expect(fieldBdMM.isDisplayed())			.toBe(true);
-//				expect(fieldBdDD.isDisplayed())			.toBe(true);
-//				expect(fieldBdYyyy.isDisplayed())		.toBe(true);
-//				expect(fieldSsn.isDisplayed())			.toBe(true);
-//				
-//				expect(fieldHomeAddr.isDisplayed())		.toBe(true);
-//				expect(fieldCity.isDisplayed())			.toBe(true);
-//				expect(fieldState.isDisplayed())		.toBe(true);
-//				expect(fieldZipCode.isDisplayed())		.toBe(true);
-//				
-//				expect(chkBoxDiffMailAddr.isDisplayed()).toBe(true);
-//			
-//				expect(fieldPhoneSelect.isDisplayed())	.toBe(true);
-//				expect(fieldPhoneNumber.isDisplayed())	.toBe(true);
-//				expect(fieldEmailAddr.isDisplayed())	.toBe(true);
-//				expect(chkBoxPaperless.isDisplayed())	.toBe(true);
-//				expect(RadBtnBrokerYes.isDisplayed())	.toBe(true);
-//				expect(RadBtnBrokerNo.isDisplayed())	.toBe(true);
-//				expect(linkBackToQuote.isDisplayed())	.toBe(true);
-//				expect(persPageButtonNext.isDisplayed()).toBe(true);
-//				console.log('it pers 1: Just did an expect on evey currently visable element on the page');
-//		});// end of it pers 1
+		it('F2: it pers 1: should evaluate details on the pers Info Page ', function(){
+			/* this test is and the definitions in the describe are the 
+			 * kind of things that should be going in the page object model testing  
+			 * *************************************************************************/
+				expect(fieldFirstName.isDisplayed())	.toBe(true);
+				expect(fieldMidInitial.isDisplayed())	.toBe(true);
+				expect(fieldLastName.isDisplayed())		.toBe(true);
+				expect(fieldGenderSelect.isDisplayed())	.toBe(true);
+				expect(fieldBdMM.isDisplayed())			.toBe(true);
+				expect(fieldBdDD.isDisplayed())			.toBe(true);
+				expect(fieldBdYyyy.isDisplayed())		.toBe(true);
+				expect(fieldSsn.isDisplayed())			.toBe(true);
+				
+				expect(fieldHomeAddr.isDisplayed())		.toBe(true);
+				expect(fieldCity.isDisplayed())			.toBe(true);
+				expect(fieldState.isDisplayed())		.toBe(true);
+				expect(fieldZipCode.isDisplayed())		.toBe(true);
+				
+				expect(chkBoxDiffMailAddr.isDisplayed()).toBe(true);
+			
+				expect(fieldPhoneSelect.isDisplayed())	.toBe(true);
+				expect(fieldPhoneNumber.isDisplayed())	.toBe(true);
+				expect(fieldEmailAddr.isDisplayed())	.toBe(true);
+				expect(chkBoxPaperless.isDisplayed())	.toBe(true);
+				expect(RadBtnBrokerYes.isDisplayed())	.toBe(true);
+				expect(RadBtnBrokerNo.isDisplayed())	.toBe(true);
+				expect(linkBackToQuote.isDisplayed())	.toBe(true);
+			
+	
+				expect(persPageButtonNext.isDisplayed()).toBe(true);
+				console.log('F2oX  : Just did an expect on evey currently visable element on the page');
+		});// end of it pers 1
 		
 		
 		
 		
-//		it('it pers 2, should Allow Data entry for the fields under test ', function(){
-//			var genderStringValue = "Non Binary";
-//			var phoneTypeSelect = "Home";
-//			fieldFirstName.sendKeys('TestFirstName');
-//			fieldLastName.sendKeys('LastNameTest');
-//
-//			/*Gender Drop down next*/
-//			element(by.cssContainingText('option', genderStringValue)).click();
-//			
-//			fieldBdMM.sendKeys('06');
-//			fieldBdDD.sendKeys('22');
-//			fieldBdYyyy.sendKeys('1982');
-//			
-//		  //fieldSsn.sendKeys('587459329')
-//			fieldSsn.sendKeys('587629329')
-//			fieldHomeAddr.sendKeys('100 First Street Floor 4');
-//	// Loose focus and I need to do some check  
-//	// Maybe her's where It pers 2 ends and it pers 3 starts ??? 
-//			
-//			fieldCity.sendKeys('San Francisco');
-//	// check value fieldState.sendKeys('');
-//	// check value fieldZipCode
-//			
-//			fieldPhoneSelect.$('[value="HOME"]').click();
-//			fieldPhoneNumber.sendKeys('4155551212');
-//			
-//			fieldEmailAddr.sendKeys('idString@someDomain.net')
-//		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
-//			console.log('it pers 2: finished2,No3: currently NO EVALUATION of 2 .... FIX THAT !!!')
-//		});// end of it pers 2 
+		it('F3:should supply incomplete data, detect error condition ', function(){
+			var genderStringValue= "Prefer not to say";
+
+			var dobMMVal			='06';
+			var dobDDVal			='22';
+			var dobYrVal			='1982';
+			var ssnVal				='847563934';
+			var homeAddrStr			='100 First Street';
+			var cityString			='San Francisco';
+			
+			fieldFirstName.sendKeys('TestFirstName');
+			fieldLastName.sendKeys('LastNameTest');
+
+			/*Gender Drop down next*/
+			element(by.cssContainingText('option', genderStringValue)).click();
+			
+			fieldBdMM.sendKeys(dobMMVal);
+			fieldBdDD.sendKeys(dobDDVal);
+			fieldBdYyyy.sendKeys(dobYrVal);
+			
+			fieldSsn.sendKeys(ssnVal);
+			fieldHomeAddr.sendKeys(homeAddrStr);
+			fieldCity.sendKeys(cityString);	
+			
+			
+			fieldPhoneNumber.click();
+	// Loose focus and I need to do some check  
+	// Maybe her's where It pers 2 ends and it pers 3 starts ???   [ Old notes, how presient ]
+			
+			var pageError	=  element(by.css('.error.cleanse-ajax-error'));
+			browser.wait(protractor.ExpectedConditions.visibilityOf(pageError),5000);
+			expect(pageError.isDisplayed()).toBe(true);
+			console.log('F3oX  : Captured error condition PROGRAMATICALLY !')
+			
+		}); 
+		
+		
+		it('F4:should correct and complete pers info',function(){
+			var homeAddrStr			='100 First Street floor 4';
+			var cityString			='San Francisco';
+			// var phoneTypeSelect		= "Cell";  // don't think I use
+			var phoneNum			='4155551212';
+
+	// check value fieldState.sendKeys('');
+	// check value fieldZipCode
+			fieldHomeAddr.clear();
+			
+			fieldHomeAddr.sendKeys(homeAddrStr);
+			
+			fieldCity.clear();
+			fieldCity.sendKeys(cityString);	
+			
+			fieldPhoneSelect.$('[value="CELL"]').click();
+			fieldPhoneNumber.sendKeys(phoneNum);
+			
+			fieldEmailAddr.sendKeys('idString@someDomain.net')
+		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
+			console.log('F4:  No comprehensive comment yet');
+	
+		/*
+		 * what else do I need on this form
+		 * 
+		 * 
+		 * 
+		 * k
+		 */	
+			
+			
+			
+			
+					browser.sleep(28000)
+		});// end of it pers 2 
 	
 	
 	
@@ -508,12 +642,12 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 //			var text1 = "TestFirstName";
 //			var protVarBrokerName = 'CHARLES DARROW';
 //			var testErrorString ='antidisestabilshment';// use of this needs to be completed.
-//			var ExpctCond = protractor.ExpectedConditions;	
+//			var ExpCond = protractor.ExpectedConditions;	
 //			var elementBrokerName = element(by.id('brokerName'));
 //			
 //			/* Both methods work.  Left as example */
-//		  //browser.wait(ExpctCond.textToBePresentInElementValue($('#brokerName'),protVarBrokerName),5000);
-//			browser.wait(ExpctCond.textToBePresentInElementValue(elementBrokerName ,protVarBrokerName),5000);
+//		  //browser.wait(ExpCond.textToBePresentInElementValue($('#brokerName'),protVarBrokerName),5000);
+//			browser.wait(ExpCond.textToBePresentInElementValue(elementBrokerName ,protVarBrokerName),5000);
 //			
 //			elementBrokerName.getAttribute('value').then( function(text){
 //				if(text === protVarBrokerName){
@@ -539,7 +673,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 ////			});// end of it pers 7
 		
 		
-//	});// end describe personal info page.
+	});// end describe('E: Personal Info Page - Second pass: A new flow', function(){	
 
 		
 		
@@ -550,19 +684,19 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 //	describe('Facilities Page, expect-wait, Select(), Submit()', function(){	
 //		// TO DO:  field validation for where ever it there
 //		// Intent is to mimic the approach used on the personal info page
-//		var ExpctCond = protractor.ExpectedConditions;
+//		var ExpCond = protractor.ExpectedConditions;
 		
 		
 		
 //		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
-//			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),5000);
+//			browser.wait(ExpCond.visibilityOf($('#search-facilities')),5000);
 //			console.log('it facs 1: Exactly like the visibilityOf Example');
 //		});// end of it facs 1
 	
 		
 		
 //		it('it facs 2: use expected condition to let the page stabilize Test 2', function() {
-//			browser.wait(ExpctCond.elementToBeClickable($('#search-facilities')),5000);
+//			browser.wait(ExpCond.elementToBeClickable($('#search-facilities')),5000);
 //			console.log('it facs 2: Exactly like the element to be clickable example');
 //			
 //			browser.sleep(500);
@@ -581,7 +715,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 //			var GengleDentalSanFrancisc = 'DC144101';// last one on default generated list
 //			var facilitiesToSelectBtn = element(by.id(GengleDentalSanFrancisc));  // DC055237 is not visible default
 //			
-//			browser.wait(ExpctCond.visibilityOf(facilitiesToSelectBtn),5000)
+//			browser.wait(ExpCond.visibilityOf(facilitiesToSelectBtn),5000)
 //			if (facilitiesToSelectBtn.isDisplayed()){
 //				facilitiesToSelectBtn.click();
 //				console.log('it facs 3: The Facilities button was found and click()');
@@ -631,19 +765,19 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 	
 //	describe('Payment Information page', function(){
 //		// TO DO: Field validation like the personal info page
-//		var ExpctCond = protractor.ExpectedConditions;
+//		var ExpCond = protractor.ExpectedConditions;
 			
 		
 		
 //		it('it Pmnt1A: Use Expected Condtion to leat page stabilize3', function() {
-//			browser.wait(ExpctCond.visibilityOf($('#cardName')),5000); // ie: element(by.id('cardName')
+//			browser.wait(ExpCond.visibilityOf($('#cardName')),5000); // ie: element(by.id('cardName')
 //			console.log('it Pmnt1A: #cardName Exactly like the visibilityOf Example');
 //		});// end of it Pmnt1A
 	
 		
 		
 //		it('it Pmnt1B: Use Expected Condtion to leat page stabilize3', function() {
-//			browser.wait(ExpctCond.visibilityOf($('#nextButton')),5000);// ie: element(by.id('nextButton')
+//			browser.wait(ExpCond.visibilityOf($('#nextButton')),5000);// ie: element(by.id('nextButton')
 //			console.log('it Pmnt1B: #nextButton Exactly like the visibilityOf Example');
 //		});// end of it Pmnt 1B
 
@@ -803,11 +937,11 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 //		it('it Pmnt 6: Should find the Auth Check Box and click it', function(){
 ////			var authChkBox	= element(by.id('auth'));
 //			var authChkBox	= element(by.css('input[id="auth"]'));
-//			//var ExpctCond = protractor.ExpectedConditions;  // declared in Describe above
+//			//var ExpCond = protractor.ExpectedConditions;  // declared in Describe above
 //			
 //			expect(authChkBox.isDisplayed()).toBe(true);	
 //
-//			browser.wait(ExpctCond.elementToBeClickable(authChkBox),5000);
+//			browser.wait(ExpCond.elementToBeClickable(authChkBox),5000);
 //			
 //			authChkBox.click();
 //
@@ -832,10 +966,10 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 //			// Loading need to finish this some how.
 ////			expect(element(by.id('nextButton')).getAttribute('value')).toBe('Loading');
 //			
-//		//	browser.wait(ExpctCond.textToBePresentInElementValue(pmntNextButton, 'Loading...'), 5000);
+//		//	browser.wait(ExpCond.textToBePresentInElementValue(pmntNextButton, 'Loading...'), 5000);
 //		//	expect(pmntNextButton.getAttribute('value')).toBe('Loading...'); 
 //			
-//			browser.wait(ExpctCond.textToBePresentInElementValue(pmntNextButton, nextButtonTextPostClick),5000);
+//			browser.wait(ExpCond.textToBePresentInElementValue(pmntNextButton, nextButtonTextPostClick),5000);
 //			expect(pmntNextButton.getAttribute('value')).toBe(nextButtonTextPostClick); 
 //
 //			browser.sleep(500);

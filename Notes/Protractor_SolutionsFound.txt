@@ -1,3 +1,12 @@
+2/27/17   Example of personal helper function/files
+G: protractor example write a small helper function then call it
+http://stackoverflow.com/questions/19998109/can-i-divide-my-tests-into-separate-specs-and-then-call-them-from-another-or-is
+
+Finding the class of a parent element  !!  Very Clean clear code !!
+http://stackoverflow.com/questions/34396838/with-protractor-how-can-i-determine-the-class-of-a-parent-element-to-see-if-it
+
+
+
 2/22/17
 Is the Page fully loaded ??
 http://stackoverflow.com/questions/33301476/how-to-wait-the-page-to-test-is-loaded-in-non-angular-site
