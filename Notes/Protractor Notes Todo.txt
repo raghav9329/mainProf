@@ -1,0 +1,14 @@
+3/1/17 all solution / answere kind of entries were moved  to 
+protractor_SolutionsFound.  Was also renamed *Todo
+
+
+
+1/20/17
+Need to get the following under my belt
+Js Call back concept
+Js Prot Jasmine Site, read
+Js github docs directory
+Js Promises
+Js .then
+
+

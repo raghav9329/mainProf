@@ -1,3 +1,12 @@
+3/1/17  Little tidbit
+http://stackoverflow.com/questions/33114091/protractor-count-elements-and-store-the-integer
+questionList.count().then(function (count) {
+    console.log(count);
+});
+Or, even simpler:
+questionList.count().then(console.log);
+It's the simpler that caught my attention
+
 2/27/17   Example of personal helper function/files
 G: protractor example write a small helper function then call it
 http://stackoverflow.com/questions/19998109/can-i-divide-my-tests-into-separate-specs-and-then-call-them-from-another-or-is
@@ -17,7 +26,6 @@ https://github.com/sakshisingla/Protractor-Non-Angular-Tests/wiki/Creating-test-
 
 Nice little find text in page
 http://stackoverflow.com/questions/33690955/protractor-see-text-on-page
-
  browser.driver.get('https://angularjs.org/')
     el = element(by.css('.first'))
     el.getText().then(function(text){expect(text).toContain("AngularJS is a toolset for")});
@@ -26,6 +34,12 @@ Need to try this : above !!
 But as I look at this,,,, it is based upon class first.  what if you dont know that !!!
 More on that page is interesting...
 
+
+G: protractor js non angular page testing detection of AJAX request
+https://www.google.com/search?q=useing+protractor+can+I+detect+calls+to+my+server+during+the+workflow&rlz=1C1NHXL_enUS726US726&oq=useing+protractor+can+I+detect+calls+to+my+server+during+the+workflow+&aqs=chrome..69i57.21926j0j7&sourceid=chrome&ie=UTF-8&safe=active#safe=active&q=protractor+js+non+angular+page+testing+detection+of+AJAX+request
+
+1: http://stackoverflow.com/questions/10783463/javascript-detect-ajax-requests
+2: http://stackoverflow.com/questions/3596583/javascript-detect-an-ajax-event
 
 
 2/14/17
@@ -36,3 +50,198 @@ Specifically element(by.cssContainingText('option', 'BeaverBox Testing')).click(
 first var specification and then var.click()
 This toatlly worked to get the dependents drop down quantity in the first dialog requesting a quote for plans ( zip specifies the location )
 
+
+2/14/17
+Serious Julimar magic
+https://github.com/angular/protractor/issues/858
+a bit complicated but it would totally be worth learning !!!
+
+2/9/17
+Getting Protractor started with Cucumber
+https://semaphoreci.com/community/tutorials/getting-started-with-protractor-and-cucumber
+
+1/31/17
+Protractor js example for loop :  Also good page object modeling...
+http://stackoverflow.com/questions/19998109/can-i-divide-my-tests-into-separate-specs-and-then-call-them-from-another-or-is
+
+Http Status Codes
+http://stackoverflow.com/questions/25137881/how-to-use-protractor-to-get-the-response-status-code-and-response-text
+https://rogerkeays.com/how-to-get-the-http-status-code-in-selenium-webdriver
+RogerKeays solution is java specific lookinf for JS solution
+
+Testability : Wait for : 
+https://www.npmjs.com/package/testability-browser-bindings
+https://github.com/alfonso-presa/testability.js
+https://github.com/alfonso-presa/protractor-testability-plugin
+
+page-Object Intro
+https://github.com/angular/protractor/blob/master/docs/page-objects.md
+
+
+1/30/17
+Note on waiting for non angular pages to load completely
+http://stackoverflow.com/questions/33301476/how-to-wait-the-page-to-test-is-loaded-in-non-angular-site
+
+One possible solution to the Test For AJAX call
+G: protractor js non angular page testing detecting AJAX request
+http://stackoverflow.com/questions/3596583/javascript-detect-an-ajax-event
+
+Must develop notes and philosophy about what is vaild testing 
+What is simply trivial navigation, and what is testing something ?
+
+1/26/17
+checkbox evaluation
+expect(element(by.model('value1')).isSelected()).toBeTruthy();
+shuould work ???
+http://stackoverflow.com/questions/12485217/how-to-validate-when-a-checkbox-is-checked-in-angularjs-e2e-tests
+
+I don't know if I will be able to get this to work.  sure would like to
+Protractor: Trying to read text after writing to text box for e2e testing
+http://stackoverflow.com/questions/28158199/protractor-trying-to-read-text-after-writing-to-text-box-for-e2e-testing
+element(by.model('first_name')).getAttribute('value').then(function (value) {
+    expect(value).to.equal('Frank');
+});
+
+
+How to make restapi call from jasmine-protractor for non-angular app
+http://stackoverflow.com/questions/41146876/how-to-make-restapi-call-from-jasmine-protractor-for-non-angular-app
+
+1/25/17
+produce XML Report 
+https://github.com/angular/protractor/blob/master/docs/faq.md#the-result-of-gettext-from-an-input-element-is-always-empty
+How do I produce an XML report of my test results?
+
+
+example used to get the hidden postal address field to show up in the Senior test
+http://stackoverflow.com/questions/28062394/protractor-if-checkbox-isselected-bug
+
+best example of dropdown selection was at 
+http://stackoverflow.com/questions/19599450/how-to-select-option-in-drop-down-protractorjs-e2e-tests
+element(by.cssContainingText('option', 'BeaverBox Testing')).click();
+
+1/23/17
+http://stackoverflow.com/questions/19058637/how-to-click-a-link-whose-href-has-a-certain-substring-in-selenium
+I need to click the link who's href has substring "long" in it. How can I do this?
+driver.findElement(By.cssSelector("a[href*='long']")).click();
+
+
+1/20/17
+Need to get the following under my belt
+Js Call back concept
+Js Prot Jasmine Site, read
+Js github docs directory
+Js Promises
+Js .then
+
+1/18/17
+npm bugs conf.js    will run some debugging 
+
+Open Windows that need cleaning up.
+G: protractor get the URL of the page im on
+http://stackoverflow.com/questions/29397800/how-can-i-get-the-current-url-using-protractor
+http://stackoverflow.com/questions/33042005/get-the-url-of-a-new-page-when-it-is-opened-after-click
+https://github.com/angular/protractor/issues/1231
+https://github.com/angular/protractor/issues/57
+G: expect(browser.getCurrentUrl()).toEqual
+http://stackoverflow.com/questions/29129186/how-to-use-browser-getcurrenturl-in-a-protractor-test
+http://stackoverflow.com/questions/34207565/protractor-check-for-location-path
+https://github.com/angular/protractor/issues/87
+https://github.com/angular/protractor/issues/2324
+*!! Interesting http://engineering.wingify.com/posts/angularapp-e2e-testing-with-protractor/
+*** Shows a Excel Lib for reading from ( writing to ??? )
+*** Really need to read through to end
+
+G: protractor identify and element by tag
+http://stackoverflow.com/questions/21536179/protractor-find-an-element-by-tag-inside-a-div
+http://luxiyalu.com/protractor-locators-selectors/
+https://gist.github.com/e-oz/5a567a4a059aa4eb7768
+https://github.com/angular/protractor/issues/456
+
+G: non angular protractor can I select an item by multiple classes
+http://stackoverflow.com/questions/31679756/how-to-click-on-multiple-elements-having-same-class-name-in-protractor-angular
+http://stackoverflow.com/questions/28044035/how-to-select-an-element-in-protractor-having-multiple-classes
+
+G: protractor how to put a check in a CheckBox
+-- Ultimately, I called click on my element 2 or more times, that did it.
+http://stackoverflow.com/questions/31907147/clicking-a-checkbox-with-protractor
+http://stackoverflow.com/questions/30932237/protractor-how-to-tick-a-checkbox
+http://stackoverflow.com/questions/29388089/how-to-check-a-checkbox-while-doing-protractor-e2e-using-angularjs
+
+G: protractor select from a drop down list
+http://stackoverflow.com/questions/19599450/how-to-select-option-in-drop-down-protractorjs-e2e-tests
+https://technpol.wordpress.com/2013/12/01/protractor-and-dropdowns-validation/
+http://stackoverflow.com/questions/22895281/angularjs-protractor-how-to-select-dropdown-option-based-on-its-text-not-value
+*!! http://qainsight.blogspot.fr/2014/04/select-dropdown-value-in-protractor-js.html
+** I think there's more to explore here....
+https://github.com/angular/protractor/issues/600
+https://github.com/angular/protractor/issues/75
+http://garajeando.blogspot.com/2014/06/protractor-how-to-click-select-option.html
+
+G: protractor how to get the screen to scroll with java script
+http://stackoverflow.com/questions/23571852/protractor-scroll-down
+http://stackoverflow.com/questions/27023768/scroll-down-to-an-element-with-protractor
+http://stackoverflow.com/questions/21985488/is-protractor-findelement-meant-to-scroll-to-that-element
+http://www.podpea.co.uk/blog/how-to-scroll-the-window-in-protractor-and-a-general-introduction-to-executescript/
+*!! http://www.blaiseliu.com/protractor-error-element-is-not-clickable-at-point-xx-xx/
+*** Now a 403
+
+G: protractor define a variable and get the browser title example
+*!! http://product.moveline.com/testing-angular-apps-end-to-end-with-protractor.html
+*!! http://ng-learn.org/2014/02/Protractor_Testing_With_Angular_And_Non_Angular_Sites/
+*** Both were come back to for full digestion
+
+G: protractor non angular wait for page to render examples
+http://stackoverflow.com/questions/33301476/how-to-wait-the-page-to-test-is-loaded-in-non-angular-site
+http://stackoverflow.com/questions/25249196/how-to-wait-for-a-page-to-load-or-element-to-be-present-when-using-protractor-fo
+https://github.com/angular/protractor/issues/1086
+https://github.com/angular/protractor/issues/2358
+http://docsplendid.com/tags/wait-for-element
+https://www.linkedin.com/pulse/waiting-page-elements-load-protractor-devinder-singh
+
+G: protrator purpose of 'use strict';
+http://www.w3schools.com/js/js_strict.asp
+http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+http://engineering.wingify.com/posts/angularapp-e2e-testing-with-protractor/
+
+G: protracror non anglar check box selection in a field
+http://stackoverflow.com/questions/12485217/how-to-validate-when-a-checkbox-is-checked-in-angularjs-e2e-tests
+http://stackoverflow.com/questions/5621324/jquery-val-and-checkboxes
+http://stackoverflow.com/questions/12485217/how-to-validate-when-a-checkbox-is-checked-in-angularjs-e2e-tests?noredirect=1&lq=1
+http://stackoverflow.com/questions/35533139/protractor-correct-use-of-waitready-js-file-in-my-tests/35536164
+*!! http://codecept.io/helpers/Protractor/
+*** Completely Digest
+
+
+G: 
+G: 
+
+
+1/12/17
+Google: expect(browser.getCurrentUrl()).toEqual
+which was just some code I was using regurlarly.  ( I"ve been tring to pin down nonAngular Wait For examples )
+http://engineering.wingify.com/posts/angularapp-e2e-testing-with-protractor/
+has some interesting points.  specifically
+Angular is :  element(by.css('#elementid').click(); 
+Non Angular would be : browser.driver.findElement(by.css('#elementid')).click();
+which honestly is famaliar and maybe makes sense.
+
+So, the question is.  Whey is this working ???
+  var howManyWillBeCovered = element(by.id('coverage_type'));
+  var commitSearch4Plans_go = element(by.id('btn_saveBig'));
+  var firstEnrollButton = element(by.id('applyQuotesPage'));
+
+
+1/10/17
+
+Progractor in Eclipse
+google:  using eclipse for protractor work
+Returned: http://stackoverflow.com/questions/32200154/how-can-we-use-protractor-in-eclipse 
+with instructions for installing tern.java  and accepting permissions.
+
+https://github.com/angular/protractor
+
+http://www.protractortest.org/#/  which is really  http://angular.github.io/protractor
+
+
+Installing Protractor stuff for Eclipse
