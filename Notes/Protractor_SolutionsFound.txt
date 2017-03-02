@@ -7,6 +7,14 @@ Or, even simpler:
 questionList.count().then(console.log);
 It's the simpler that caught my attention
 
+G: protractor count the number of elements
+https://github.com/angular/protractor/issues/554  
+that points to 
+http://stackoverflow.com/questions/31581986/protractor-how-to-count-elements-containing-specified-text
+
+
+
+
 2/27/17   Example of personal helper function/files
 G: protractor example write a small helper function then call it
 http://stackoverflow.com/questions/19998109/can-i-divide-my-tests-into-separate-specs-and-then-call-them-from-another-or-is
