@@ -1,0 +1,226 @@
+This temp capture is for reading web material that might be difficult to get back to.
+
+3/9/17
+Advanced Protractor features
+http://eitanp461.blogspot.com.ar/2014/01/advanced-protractor-features.html?view=flipcard
+
+Based upon G: protractor can I access http status codes 
+This link had the one above buerried in it.
+http://stackoverflow.com/questions/30319610/how-to-make-http-getpost-request-in-protractor
+    
+JAN
+7
+Advanced Protractor features
+Protractor is an end to end test framework for AngularJS applications built on top of WebDriverJS. Protractor runs tests against your application running in a real browser, interacting with it as a user would.
+
+This post discusses 2 advanced features when working with Protractor:
+
+Reusing your existing UI services for data creation utilities
+Capturing browser logs and flushing to file for each test run
+Data Creation
+
+When you are writing a new functional test you want to focus on specific business logic.
+Suppose you are writing an Employee management application.
+You have an employee grid and you want to check that its filters are working properly.
+In order to test that you need to setup some initial data.
+The process of creating data using the UI is a time-consuming task:
+Clicking the "Add" button, waiting a form to appear, filling form fields, clicking the save.
+
+Instead, you can use your existing AngularJS entity creation service to send the REST call to create a new entity without any UI interaction.
+That's right, you already wrote a service that knows how to form a REST call to the server to create new employees. Simply use that same service from the test code to setup test data.
+Sweet, right?
+
+This is based on Protractor's addMockModule function, which is implemented by adding and augmenting Angular components by using deferred bootstrap.
+
+In your onPrepare function:
+
+        
+// New module definition
+var dataUtilMockModule = function () {
+     // Create a new module which depends on your data creation utilities
+    var utilModule = angular.module('dataUtil', ['platform']);
+    // Create a new service in the module that creates a new entity
+    utilModule.service('EntityCreation', ['EntityDataService', '$q', function (EntityDataService, $q) {
+
+        /**
+         * Returns a promise which is resolved/rejected according to entity creation success
+         * @returns {*}
+         */
+        this.createEntity = function (details,type) {
+            // This is your business logic for creating entities
+            var entity = EntityDataService.Entity(details).ofType(type);
+            var promise = entity.save();
+            return promise;
+        };
+    }]);
+};
+
+browser.addMockModule('dataUtil', dataUtilMockModule);
+
+// Bootstrap Angular with mock modules
+browser.get(browser.params.app);
+
+
+And that's it!
+
+Then in your test use this EntityCreation service like this:
+
+var populateData = function () {
+    var el = document.querySelector(arguments[0]);
+    var callback = arguments[1];
+    try {
+        angular.element(el).injector().get('EntityCreation').createEntity({FirstName: 'Mickey',LastName:'Mouse'},'Cartoon').then(function(data) {
+            callback(data);
+        }, function(err) {
+            callback(err);
+        });
+    } catch (e) {
+        callback(e);
+    }
+};
+
+browser.driver.executeAsyncScript(
+        populateData, browser.rootEl).then(function() {
+            console.log('Executed populateData script successfully');
+    }, function (browserErr) {
+        if (browserErr) {
+            throw 'Error while populating data ' + JSON.stringify(browserErr);
+        }
+    });
+
+
+
+And you created a new entity without any UI interaction. 
+
+Capturing browser log to file
+
+When you're analyzing the failure of a functional test, the browser console has priceless information for root cause analysis.
+
+This is how you dump it to a file for every test:
+
+In your configuration file, set Selenium's logging preference to ALL:
+
+    
+capabilities: {
+    'browserName': 'chrome',
+    'chromeOptions': {
+        'args': ['incognito', 'disable-extensions', 'start-maximized', 'enable-crash-reporter-for-testing']
+    },
+    'loggingPrefs': {
+        'browser': 'ALL'
+    }
+},
+
+
+Now create an afterEach function to flush the browser console to a file.
+The sample code below also captures a screenshot for every failed test:
+var fs = require('fs'),
+    path = require('path');
+
+// Add global spec helpers in this file
+var getDateStr = function () {
+    var d = (new Date() + '').replace(new RegExp(':', 'g'), '-').split(' ');
+    // "2013-Sep-03-21:58:03"
+    return [d[3], d[1], d[2], d[4]].join('-');
+};
+
+var errorCallback = function (err) {
+    console.log(err);
+};
+
+// create a new javascript Date object based on the timestamp
+var timestampToDate = function (unix_timestamp) {
+    var date = new Date(unix_timestamp);
+    // hours part from the timestamp
+    var hours = date.getHours();
+    // minutes part from the timestamp
+    var minutes = date.getMinutes();
+    // seconds part from the timestamp
+    var seconds = date.getSeconds();
+
+    var timeValues = [hours, minutes, seconds];
+    timeValues.forEach(function (val) {
+        if (val.length < 2) {
+            // padding
+            val = '0' + val;
+        }
+    });
+    // will display time in 10:30:23 format
+    return hours + ':' + minutes + ':' + seconds;
+};
+
+// Take a screenshot automatically after each failing test.
+afterEach(function () {
+    var passed = jasmine.getEnv().currentSpec.results().passed();
+    // Replace all space characters in spec name with dashes
+    var specName = jasmine.getEnv().currentSpec.description.replace(new RegExp(' ', 'g'), '-'),
+        baseFileName = specName + '-' + getDateStr(),
+        reportDir = path.resolve(__dirname + '/../report/'),
+        consoleLogsDir = path.resolve(reportDir + '/logs/'),
+        screenshotsDir = path.resolve(reportDir + '/screenshots/');
+
+    if (!fs.existsSync(reportDir)) {
+        fs.mkdirSync(reportDir);
+    }
+
+    if (!passed) {
+        // Create screenshots dir if doesn't exist
+        console.log('screenshotsDir = [' + screenshotsDir + ']');
+        if (!fs.existsSync(screenshotsDir)) {
+            fs.mkdirSync(screenshotsDir);
+        }
+
+        var pngFileName = path.resolve(screenshotsDir + '/' + baseFileName + '.png');
+        browser.takeScreenshot().then(function (png) {
+            // Do something with the png...
+            console.log('Writing file ' + pngFileName);
+            fs.writeFileSync(pngFileName, png, {encoding: 'base64'}, function (err) {
+                console.log(err);
+            });
+        }, errorCallback);
+    }
+
+    // Flush browser console to file
+    var logs = browser.driver.manage().logs(),
+        logType = 'browser'; // browser
+    logs.getAvailableLogTypes().then(function (logTypes) {
+        if (logTypes.indexOf(logType) > -1) {
+            var logFileName = path.resolve(consoleLogsDir + '/' + baseFileName + '.txt');
+            browser.driver.manage().logs().get(logType).then(function (logsEntries) {
+                if (!fs.existsSync(consoleLogsDir)) {
+                    fs.mkdirSync(consoleLogsDir);
+                }
+                // Write the browser logs to file
+                console.log('Writing file ' + logFileName);
+                var len = logsEntries.length;
+                for (var i = 0; i < len; ++i) {
+
+                    var logEntry = logsEntries[i];
+
+                    var msg = timestampToDate(logEntry.timestamp) + ' ' + logEntry.type + ' ' + logEntry.message;
+                    fs.appendFileSync(logFileName, msg + '\r\n', {encoding: 'utf8'}, errorCallback);
+                }
+            }, errorCallback);
+        }
+    });
+
+});
+
+
+Now you're debugging like a pro!
+פורסם לפני 7th January 2014 על ידי Eitan Peer
+תוויות: angular angularjs functional-testing protractor selenium
+    
+2  הצג תגובות
+
+Hsu Kim6 ביולי 2015 בשעה 22:41
+this sampe cannot work., If I set framework: 'jasmine2'
+
+השב
+
+leegee1 באפריל 2016 בשעה 7:26
+Why access the arguments object by index, rather than using named parameters?
+
+השב
+
+Eitanp461
