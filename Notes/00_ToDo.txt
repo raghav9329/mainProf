@@ -1,3 +1,32 @@
+Items for reading, researching, studying on the web.
+Additionally,  I need to establish some kind of schedule for compleating these items.
+
+
+Mozilla Developer Network 
+
+Details of the Object Model
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#
+
+JavaScript basics
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+
+JavaScript first steps
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps
+
+JavaScript building blocks
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks
+
+Cross browser testing
+https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing
+
+Developer Tools
+https://developer.mozilla.org/en-US/docs/Tools
+
+
+Chrome DevTools
+https://developers.google.com/web/tools/chrome-devtools/
+
+
 These are hanging and need to be taken up:
 
 * Need to create a new task for the next work flow

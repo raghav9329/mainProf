@@ -1,3 +1,10 @@
+3/9/17 
+Send Keys page and detail put in Protractor Notes
+http://www.mythoughts.co.in/2012/12/sending-special-characters-and-key.html#.WL4KqFXyu73
+
+3/9/17  from some days back:  how to count qty of items
+http://stackoverflow.com/questions/21685161/how-to-expect-dynamic-count-of-elements-in-e2e-tests-using-protractor
+
 3/1/17  Little tidbit
 http://stackoverflow.com/questions/33114091/protractor-count-elements-and-store-the-integer
 questionList.count().then(function (count) {
@@ -43,6 +50,11 @@ But as I look at this,,,, it is based upon class first.  what if you dont know t
 More on that page is interesting...
 
 
+3/9/17
+Protractor and Page Objects:  This is what I got started with
+http://moduscreate.com/protractor-and-page-objects/
+
+Date ?  Don't know when this was put down here.....
 G: protractor js non angular page testing detection of AJAX request
 https://www.google.com/search?q=useing+protractor+can+I+detect+calls+to+my+server+during+the+workflow&rlz=1C1NHXL_enUS726US726&oq=useing+protractor+can+I+detect+calls+to+my+server+during+the+workflow+&aqs=chrome..69i57.21926j0j7&sourceid=chrome&ie=UTF-8&safe=active#safe=active&q=protractor+js+non+angular+page+testing+detection+of+AJAX+request
 
