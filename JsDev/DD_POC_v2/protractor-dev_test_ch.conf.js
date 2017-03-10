@@ -6,7 +6,7 @@ exports.config = {
  //specs: ['./*.test.js'],
  //specs: ['integration/scenarios/**/*.test.js'],
 //  specs: ['integration/scenarios/CAA50Senior_Single.test.js'],
-  specs: ['integration/scenarios/CAA55PlanSelect.test.js'],
+  specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
   
   suites: {
 	  suite1: 'integration/scenarios/CAA*.test.js',
