@@ -1,14 +1,13 @@
 {
   "name": "delta-dental_CX_Test_Automation",
   "version": "0.0.3",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "protractor": "protractor",
     "****************************Build******************************": "",
     "*************************Unit Tests****************************": "",
     "********************Ingegration Tests**************************": "",
-  	"DDCX_POC" : "protractor DDCX_POC_chrome.conf.js",
+    "DDCX_POC": "protractor DDCX_POC_chrome.conf.js",
     "protractor-chrome": "protractor protractor-chrome.conf.js",
     "protractor-firefox": "protractor protractor-firefox.conf.js",
     "****************************Tools******************************": ""
@@ -16,14 +15,17 @@
   "author": "",
   "license": "none",
   "description": "Delta Dental Customer Experience Test Automation",
+  "dependencies": {
+    "lodash": "4.3.0"
+  },
   "devDependencies": {
-    "gulp": "3.9.0",
+    "bluebird": "3.2.2",
     "gulp-shell": "0.5.2",
-    "gulp-util": "3.0.7",
+    "gulp-util": "^3.0.7",
     "jasmine-core": "2.5.2",
     "jasmine-reporters": "^2.2.0",
-    "jasmine-xml2html-converter": "0.0.2",
     "jasmine-spec-reporter": "2.4.0",
+    "jasmine-xml2html-converter": "0.0.2",
     "protractor": "4.0.10",
     "protractor-jasmine2-html-reporter": "0.0.6",
     "vinyl-source-stream": "1.1.0",
