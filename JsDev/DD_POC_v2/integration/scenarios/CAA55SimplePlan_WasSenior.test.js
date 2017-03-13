@@ -100,7 +100,7 @@
 			var ExpctCond = protractor.ExpectedConditions; // same name new scope
 
 			browser.wait(ExpctCond.elementToBeClickable(howManyWillBeCovered),5000);
-			howManyWillBeCovered.$('[value="Self"]').click();
+			howManyWillBeCovered.$('[value="Self"]').click(); // this means '1'
 			
 			/* Could not resolve the folllowing checks  */
 			//expect(howManyWillBeCovered.getAttribute('value')).toEqual('1');
@@ -290,7 +290,9 @@
 	
 		/* *** As focus is lost, there is an AJAX event right here      */
 			hiddenfieldCity.sendKeys('San Francisco');  // this just likely a check
-			hiddenfieldState.sendKeys('California');// this just likely a check
+//  3/10/17 changing "California" to "Ca"
+//			hiddenfieldState.sendKeys('California');// this just likely a check
+			hiddenfieldState.sendKeys('Ca');// this just likely a check
 			hiddenfieldZipCode.sendKeys('94105');// this just likely a check
 			
 			console.log('it pers 4: completed the hidden fields after clicking diffMail');
@@ -298,11 +300,15 @@
 		
 		it('it pers 5: should access & validate the broker selection and entry ',function (){
 			if (chkBoxPaperless.isSelected()){
-				chkBoxPaperless.isSelected().click();
+				chkBoxPaperless.click();  // Click it to UN SELECT IT !!!
+				expect(chkBoxPaperless.isSelected()).toBe(false);
 				console.log('it pers 5: paperless was selected. Clicked it to unselect');
 			}else{
 				console.log('it pers 5: there was some prblem unselecting the paperless checkbox');
 			}
+			
+			
+			// browser.sleep(23000)
 		}); // end of it pers 5
 	
 		
@@ -310,11 +316,15 @@
 			//expect(element(by.id('brokerNo')).isSelected()).toBe(true);
 			if ( RadBtnBrokerNo.isSelected() ) {
 				RadBtnBrokerYes.click();
+				expect(RadBtnBrokerYes.isSelected()).toBe(true);
 				console.log('it pers6A: found brokerNo, switched to brokerYes!');
 			}else{
+				// what kind of Expect is supposed to be here ??
 				console.log('it pers6A: did not find BrokerNo. So, it was not switched to Yes');
 			}
 		});// end it pers 6A
+		
+		
 			
 		it('it pers6B: should newly visable fields, enter BNUM and click next', function(){
 			
@@ -328,6 +338,9 @@
 			RadBtnBrokerYes.click();// used to loose focus from input field
 			
 		});// end of it Pers6B
+		
+		
+		
 		
 		it('it pers6C: Evaluate all field correctness, find the Next button, click it',function(){
 		
@@ -343,13 +356,15 @@
 			
 			elementBrokerName.getAttribute('value').then( function(text){
 				if(text === protVarBrokerName){
+					expect(elementBrokerName.getAttribute('value')).toEqual(protVarBrokerName);
 					console.log('it pers6C: Broker Name field contains',protVarBrokerName);
 				}else{
 					console.log('it pers6C: Error, expected: ' ,protVarBrokerName,' found: ', text, ' anthing there ???');
 				}
 			});
 
-			expect(elementBrokerName.getAttribute('value')).toEqual(protVarBrokerName);
+// 3/10/17  This was the exe pathway, moved it up just before success console.log msg
+//			expect(elementBrokerName.getAttribute('value')).toEqual(protVarBrokerName);
 
 		});
 	
@@ -363,6 +378,9 @@
 				}
 
 			});// end of it pers 7
+		
+		
+		
 	});// end describe personal info page.
 
 	
@@ -379,6 +397,7 @@
 			browser.wait(EC.textToBePresentInElementValue(dependentSubmitBtn,btnChangeState),9000);
 			//browser.sleep(5000);
 			expect(dependentSubmitBtn.getAttribute('value')).toBe(btnChangeState);
+			console.log('it pers7x: Dependents page next button clicked')
 		});
 	}); // end describe dep submit
 	
@@ -392,7 +411,8 @@
 		
 		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
 			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),5000);
-			console.log('it facs 1: Exactly like the visibilityOf Example');
+			browser.wait(ExpctCond.elementToBeClickable($('#serch-facilities')),5000);
+			console.log('it facs 1: Exactly like the visibilityOf, and ToBeClickable Example');
 		});// end of it facs 1
 	
 		it('it facs 2: use expected condition to let the page stabilize Test 2', function() {

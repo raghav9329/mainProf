@@ -31,5 +31,7 @@ exports.config = {
 capabilities: {
 	browserName: 'chrome'
 	// browserName: 'firefox'
-  }
+  },
+  
+  resultJsonOutputFile: 'reports/integration/result.json'
 }

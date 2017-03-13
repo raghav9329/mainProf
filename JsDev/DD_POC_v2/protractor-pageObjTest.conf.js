@@ -23,5 +23,7 @@ specs: ['integration/scenarios/POM_Test.test.js'],
 capabilities: {
 	browserName: 'chrome'
 	// browserName: 'firefox'
-  }
+  },
+  
+  resultJsonOutputFile: 'reports/integration/result.json'
 }
