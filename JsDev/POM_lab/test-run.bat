@@ -12,11 +12,11 @@ set GIT_URL=https://rc-github.deltads.ent/DEVPROJECTS/dd-cx-test/archive/master.
 for /f "tokens=2-8 delims=/:. " %%A in ("%date%:%time%: =0%%") do set "TIMESTAMP=%%C%%A%%B-%%D%%E"
 set LOGFILE=run_%TIMESTAMP%.log
 
-REM Head in to our working directory
+REM Head in to our working directory    
 D:
 cd \cx-test-sources
 
-REM Get the latest test code from GIT
+REM Get the latest test code from GIT   
 :GetLatestCode
 echo Getting latest test code from GIT
 wget --user=svc_qtp_testrunner_1 --password=popcorn --auth-no-challenge -O cx-test-sources.zip --no-check-certificate %GIT_URL%

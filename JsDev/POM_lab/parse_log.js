@@ -1,3 +1,4 @@
+//var results = require('c:/cx/result.json');
 var results = require('c:/cx/result.json');
 
 console.log("<html><head><style type='text/css'>tr.fail {background-color: red;}</style><body><p>");
