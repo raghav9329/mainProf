@@ -31,7 +31,12 @@ exports.config = {
 capabilities: {
 	browserName: 'chrome'
 	// browserName: 'firefox'
-  },
-  
-  resultJsonOutputFile: 'reports/integration/result.json'
+  } //,
+//  resultJsonOutputFile: 'reports/integration/result.json'
+//  resultJsonOutputFile: 'result.json'
+ 
+// What's up with all the comment out stuff.
+// this is what's in test production at and the current config.
+// kicks this same command off at the command line 
+// So I dont need it done twice
 }

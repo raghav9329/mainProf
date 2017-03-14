@@ -409,18 +409,25 @@
 		// Intent is to mimic the approach used on the personal info page
 		var ExpctCond = protractor.ExpectedConditions;
 		
-		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
-			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),5000);
-			browser.wait(ExpctCond.elementToBeClickable($('#serch-facilities')),5000);
-			console.log('it facs 1: Exactly like the visibilityOf, and ToBeClickable Example');
-		});// end of it facs 1
+//		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
+//			var theSearchButton	= element(by.id('search-facilities'));
+//			
+//		//	browser.wait(ExpctCond.visibilityOf($('#search-facilities')),5000);
+//			browser.wait(ExpctCond.visibilityOf(theSearchButton),5000);
+//		//	browser.wait(ExpctCond.elementToBeClickable($('#serch-facilities')),5000);
+//			browser.wait(ExpctCond.elementToBeClickable(theSearchButton),5000);
+//			console.log('it facs 1: Exactly like the visibilityOf, and ToBeClickable Example');
+//		});// end of it facs 1
 	
-		it('it facs 2: use expected condition to let the page stabilize Test 2', function() {
-			browser.wait(ExpctCond.elementToBeClickable($('#search-facilities')),5000);
-			console.log('it facs 2: Exactly like the element to be clickable example');
-			
-			browser.sleep(500);
-		});// end of it facs 2
+		
+		
+		
+//		it('it facs 2: use expected condition to let the page stabilize Test 2', function() {
+//			browser.wait(ExpctCond.elementToBeClickable($('#search-facilities')),5000);
+//			console.log('it facs 2: Exactly like the element to be clickable example');
+//			
+//			browser.sleep(500);
+//		});// end of it facs 2
 		
 		//it should evaluate to the facilities page "title" , function() { });
 		//"Facilities | Enrollment | Delta Dental Insurance Company"
@@ -434,6 +441,7 @@
 			browser.wait(ExpctCond.visibilityOf(facilitiesToSelectBtn),5000)
 			if (facilitiesToSelectBtn.isDisplayed()){
 				facilitiesToSelectBtn.click();
+ // --> expect ()
 				console.log('it facs 3: The Facilities button was found and click()');
 			}else{
 				console.log('it facs 3: The radio button to pick was not Diaplayed');
@@ -454,7 +462,8 @@
 	
 		
 		it('it facs 5: find the next button and click()', function() {
-			var facsNextButton = element(by.id('nextButton'));
+		//	var facsNextButton = element(by.id('nextButton'));
+			var facsNextButton = element(by.css('.btn.multi-btn.primary.inline-block'));
 			
 			if (facsNextButton.isDisplayed()){
 				facsNextButton.click();

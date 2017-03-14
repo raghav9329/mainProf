@@ -21,5 +21,6 @@ capabilities: {
 	browserName: 'firefox'
   },
   
-  resultJsonOutputFile: 'reports/integration/result.json'
+//  resultJsonOutputFile: 'reports/integration/result.json'
+  resultJsonOutputFile: 'result.json'
 }
