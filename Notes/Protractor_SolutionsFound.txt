@@ -1,3 +1,26 @@
+3/14/17
+https://www.garysieling.com/blog/fixing-error-output-is-not-a-tty-in-node
+
+$ node extract.js > ideas.csv
+output is not a tty
+In my case, I was trying to write out a CSV file:
+///////////////////////////////////////
+for (var k = 0; k < all.length; k++) {
+  console.log(all[k]); 
+}
+
+The solution to this is to open the file directly and write to it:
+/////////////////////////////////////////////////////////////////////
+var fs = require('fs');
+var results = '';
+ 
+for (var k = 0; k < all.length; k++) {
+  results += all[k] + "\n";
+}
+ 
+fs.writeFile("ideas.csv", results);
+================================================
+
 3/9/17 
 Send Keys page and detail put in Protractor Notes
 http://www.mythoughts.co.in/2012/12/sending-special-characters-and-key.html#.WL4KqFXyu73
