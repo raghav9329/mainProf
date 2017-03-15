@@ -7,7 +7,8 @@ module.exports = {
 	},
 		
 	go: function() {
-		browser.get('http://dit3.deltadentalins.com/'); // overides baseURL in the spec config
+		//browser.get('http://dit3.deltadentalins.com/'); // overides baseURL in the spec config
+		browser.get('http://www.deltadentalins.com/'); // overides baseURL in the spec config
 	},
 
 	setZip_Qty: function (zCode){
