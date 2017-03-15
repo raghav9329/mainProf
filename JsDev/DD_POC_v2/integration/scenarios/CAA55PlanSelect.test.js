@@ -73,12 +73,12 @@
 //		});// end it nav 1
 //	});// end describe(Nav2StartPage)
 	
-describe('A: Start the Quote Process via Get A Quote Button', function() {
+describe('A: Quote Start -', function() {
 		//var getAQuote_Button = element(by.css('.button')); // 2/23/17 line moved to the -it- directly below
 		//var getAQuote_Button = element(by.id('apply'));// 2/13/17 testing different selector
 		
 	
-		it('A1:should find the Get A Quote button element and activate the button', function(){
+		it('A1: find -Get A Quote-button and click', function(){
 			var getAQuote_Button = element(by.css('.button'));
 
 			console.log('');
@@ -89,7 +89,7 @@ describe('A: Start the Quote Process via Get A Quote Button', function() {
 		});
 		
 		
-		it('A2:should find the proper dialog & URL',function(){
+		it('A2: find dialog & URL',function(){
 		 	var dlg_SearchForDenPlans = element(by.css('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all'));
 		 	var urlIs = 'https://dit3.deltadentalins.com/indEnroll?issuerCode=DELTA';
 ///////////////////////////////////////////
@@ -103,9 +103,9 @@ describe('A: Start the Quote Process via Get A Quote Button', function() {
 }); // end of Start the Quote Process
 
 
-describe('B: Quote Dialog Data Entry and submission', function(){
+describe('B: Quote Dlg Entry -', function(){
 
-		it('B1:should allow me to enter zip and qty to cover ', function(){
+		it('B1: enter zip and qty ', function(){
 			var ExpCond = protractor.ExpectedConditions;
 			var zipValue = '95148';
 			var zipField = element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
@@ -117,7 +117,7 @@ describe('B: Quote Dialog Data Entry and submission', function(){
 	
 		
 		
-		it('B2:it should confirm the zip field value',function (){
+		it('B2: confirm zip field value',function (){
 			var debugTestVar	= element(by.css('.txtFieldC.input-field75.zip.mreq.valid.text.focusme'));	
 			var zipTestValue	= '95148';
 			var zipErrorCondVal	= '951x*';
@@ -135,7 +135,7 @@ describe('B: Quote Dialog Data Entry and submission', function(){
 	
 		
 		
-		it('B3:should select the test value WhoWillBeCovered', function(){
+		it('B3: select test value WhoWillBeCovered', function(){
 			var howManyWillBeCoveredEnter = element(by.cssContainingText('option', '4'));
 			// var coverageSelection = "Self";   2/24/17 I believe to be removed.  much earlier design
 			var ExpCond = protractor.ExpectedConditions; // same name new scope
@@ -161,7 +161,7 @@ describe('B: Quote Dialog Data Entry and submission', function(){
 //		});
 		
 
-		it('B4:should find the dialog button and click it', function(){
+		it('B4: commit dlg with click', function(){
 			var searchForPlans_GoButton = element(by.id('btn_saveBig'));	
 			expect( searchForPlans_GoButton.isPresent()).toBe(true);	
 			searchForPlans_GoButton.click();
@@ -171,10 +171,10 @@ describe('B: Quote Dialog Data Entry and submission', function(){
 });// end describe('Quote Dialog Data Entry and submission', function(){	
 
 
-describe('C:Dental Plan Selection', function(){
+describe('C: Dental Plan Selection -', function(){
 
 		
-		it('C1:should confirm page title and URL', function () {
+		it('C1: confirm title & URL', function () {
 			var stringPageTitle	= "::Individual & Families::";
 			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/search/quotes?zip=95148'
 			var ExpCond = protractor.ExpectedConditions;
@@ -200,7 +200,7 @@ describe('C:Dental Plan Selection', function(){
 			
 		
 		
-		it('C2:should confirm proper zip & quantity', function(){	
+		it('C2: confirm zip & qty', function(){	
 			var zipCodeUnderTest	= '95148';
 			var presentedZip		= element(by.id('psc_zip'));
 			var presentedQty		= element(by.css('.qpeople.greenBTxt'));
@@ -214,7 +214,7 @@ describe('C:Dental Plan Selection', function(){
 		
 		
 		
-		it('C3:should select a dental plan link' , function(){
+		it('C3: select dental plan' , function(){
 			var seniorPlanLink = element(by.id('planRowsBody_70422')).element(By.tagName('a'));  
 			// CAA55 Individual/Family Dental Program
 			
@@ -222,7 +222,7 @@ describe('C:Dental Plan Selection', function(){
 			console.log('C3o5 : Dental Plan individual Page Link selected');
 		});
 		
-		it('C4:should confirm URL & enroll button' , function(){
+		it('C4: confirm URL & enroll button 1' , function(){
 			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/plans/70422?zip=95148';
 			var enrollButton	= element(by.css('.enrollBtn'));
 		
@@ -231,7 +231,7 @@ describe('C:Dental Plan Selection', function(){
 			console.log('C4o5 : Dental Plan Page URL & Enroll button confirmed');
 		});
 		
-		it('C5:should confirm URL & enroll button' , function(){
+		it('C5: confirm URL & enroll button 2' , function(){
 			var enrollButton	= element(by.css('.enrollBtn'));
 			
 			enrollButton.click();
@@ -260,9 +260,9 @@ describe('C:Dental Plan Selection', function(){
 
 });// end describe('C: Dental Plan Selection', function(){
 		
-describe('D: Personal Info Page - First pass zip code work flow correction', function(){
+describe('D: Pers Info zip wrkFlow -', function(){
 	
-		it('D1:should evaluate PersInfo URL and Title', function(){
+		it('D1: PersInfo URL and Title', function(){
 			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
 			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
 			expect(browser.getTitle()).toEqual(pageTitleString);
@@ -271,7 +271,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 		}); 
 		
 		
-		it('D2:Set the correct Zip code and loose focus',function(){
+		it('D2: Set zip value & loose focus',function(){
 			var ExpCond = protractor.ExpectedConditions;
 			var fieldZipCode		= element(by.id('zipCode'));
 			var fieldPhoneNumber	= element(by.id('contactNumber'));
@@ -285,14 +285,14 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 		});
 	 	
 		
-		it('D3:Confirm Popup visable ',function(){
+		it('D3: Confirm Popup visable ',function(){
 			var zipPopDlg		= element(by.css('.overlay.zipPop'));
 			
 			expect(zipPopDlg.isDisplayed()).toBe(true);
 			console.log('D3oA : detected overlay popup !!');
 		});
 		
-		it('D4:Conform go_Back Link  click it. ',function(){
+		it('D4: Conform go_Back Link click. ',function(){
 			var zipGoBackId		= 'zipPopBack';
 			var gobackLink		= element(by.id(zipGoBackId));
 			
@@ -300,7 +300,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 			console.log('D4oA : Go Back link clicked');
 		});
 		
-		it('D5:should re evaluate PersInfo URL and Title', function(){
+		it('D5: Re eval PersInfo URL and Title', function(){
 			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
 			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
 			expect(browser.getTitle()).toEqual(pageTitleString);
@@ -308,7 +308,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 			console.log('D5oA : Confirmed PersInfo page URL and Title');
 		}); 	
 		
-		it('D6:should allow street addr data entry',function(){
+		it('D6: street addr data entry',function(){
 			var ExpCond = protractor.ExpectedConditions;
 			var fieldStreetAddr		= element(by.id('streetAddress'));
 			var streetAddrStr		= '100 First Street, San Francisco'
@@ -321,7 +321,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 	///////  Null would indicate no error nespa ?  N est ce pas
 		}); 	
 		
-		it('D7:should accept the down arrow code getting first addrclens entry',function(){
+		it('D7: down key code get 1st addrclens entry',function(){
 			var fieldStreetAddr		= element(by.id('streetAddress'));
 			browser.sleep(850);
 //			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
@@ -329,7 +329,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 			console.log('D7oA : JUST SENT UNICODE for Down Arrow');
 		});
 		
-		it('D8:shojuld accept the ENTER KEY commiting Street Addr',function(){
+		it('D8: ENTER key code commit St. Addr',function(){
 			var fieldStreetAddr		= element(by.id('streetAddress'));
 			browser.sleep(850);
 //			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
@@ -338,7 +338,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 			browser.sleep(2500)
 		});
 		
-		it('D9:shold detect the zipCode popup dlg',function(){
+		it('D9: detect zipCode popup dlg',function(){
 			var zipPopDlg		= element(by.css('.overlay.zipPop'));
 			
 			expect(zipPopDlg.isDisplayed()).toBe(true);
@@ -346,7 +346,7 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 		});
 		
 		
-		it('D10:Conform go_Back Link  click it. ',function(){
+		it('D10: click go_Back Link . ',function(){
 			var zipNewQuoteId	= 'zipNewQuote';
 			var newQuoteLink	= element(by.id(zipNewQuoteId));
 			
@@ -359,9 +359,9 @@ describe('D: Personal Info Page - First pass zip code work flow correction', fun
 }); // end describe('D: Personal Info Page - First pass zip code work flow correction', function(){
 
 
-describe('E: Plan Selection (return) - Second pass: A new flow', function(){	
+describe('E: Plan Select 2nd wrkFlow -', function(){	
 
-		it('E1:should validate Dental Plans Select page title & URL',function(){
+		it('E1: validate Plans Select title & URL',function(){
 			var stringPageTitle	= "::Individual & Families::";
 			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/search/quotes?zip=94105'
 			var ExpCond = protractor.ExpectedConditions;
@@ -372,7 +372,7 @@ describe('E: Plan Selection (return) - Second pass: A new flow', function(){
 			
 		});
 	
-		it('E2:should confirm proper zip & quantity', function(){	
+		it('E2: confirm zip & qty', function(){	
 			var zipCodeUnderTest	= '94105';
 			var presentedZip		= element(by.id('psc_zip'));
 			var presentedQty		= element(by.css('.qpeople.greenBTxt'));
@@ -384,7 +384,7 @@ describe('E: Plan Selection (return) - Second pass: A new flow', function(){
 		
 		});	
 		
-		it('E3:should select a dental plan link' , function(){
+		it('E3: select dental plan link' , function(){
 			var seniorPlanLink = element(by.id('planRowsBody_70422')).element(By.tagName('a'));  
 			// CAA55 Individual/Family Dental Program
 			
@@ -393,7 +393,7 @@ describe('E: Plan Selection (return) - Second pass: A new flow', function(){
 
 		});	
 		
-		it('E4:should confirm URL & enroll button' , function(){
+		it('E4: confirm URL & enroll btn 1' , function(){
 			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/plans/70422?zip=94105';
 			var enrollButton	= element(by.css('.enrollBtn'));
 		
@@ -402,7 +402,7 @@ describe('E: Plan Selection (return) - Second pass: A new flow', function(){
 			console.log('E4o5 : Dental Plan Page URL & Enroll button confirmed');
 		});
 		
-		it('E5:should confirm URL & enroll button' , function(){
+		it('E5: confirm URL & enroll btn 2' , function(){
 			var enrollButton	= element(by.css('.enrollBtn'));
 			
 			enrollButton.click();
@@ -413,9 +413,9 @@ describe('E: Plan Selection (return) - Second pass: A new flow', function(){
 }); // end describe('E: Plan Selection (return) - Second pass: A new flow', function(){	
 		
 
-describe('F: Personal Info Page - Second pass: A new flow', function(){
+describe('F: Pers Info-Again -', function(){
 	
-		it('F1:should evaluate PersInfo URL and Title', function(){
+		it('F1: eval PersInfo URL and Title', function(){
 			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
 			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
 			expect(browser.getTitle()).toEqual(pageTitleString);
@@ -460,7 +460,7 @@ describe('F: Personal Info Page - Second pass: A new flow', function(){
 			
 			
 			
-		it('F2: it pers 1: should evaluate details on the pers Info Page ', function(){
+		it('F2: eval details on Pers Info Page ', function(){
 			/* this test is and the definitions in the describe are the 
 			 * kind of things that should be going in the page object model testing  
 			 * *************************************************************************/
@@ -496,7 +496,7 @@ describe('F: Personal Info Page - Second pass: A new flow', function(){
 		
 		
 		
-		it('F3:should supply incomplete data, detect error condition ', function(){
+		it('F3: supply incomplete data, detect err ', function(){
 			var genderStringValue= "Prefer not to say";
 
 			var dobMMVal			='06';
@@ -536,7 +536,7 @@ describe('F: Personal Info Page - Second pass: A new flow', function(){
 		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
 		// but we don't do this kind of data entry eval.
 		// The rule is we assume ( in general ) that our data is what we entered
-		it('F4:should correct and complete pers info',function(){
+		it('F4: finish pers info',function(){
 			var homeAddrStr			='100 First Street floor 4';
 			var cityString			='San Francisco';
 			var phoneNum			='4155551212';
@@ -573,7 +573,7 @@ describe('F: Personal Info Page - Second pass: A new flow', function(){
 });// end describe('E: Personal Info Page - Second pass: A new flow', function(){	
 	
 		
-describe('G: Dependents reconcilliation, remove un necessary, format remaining', function(){
+describe('G: Dep reconcilliation -', function(){
 	
 		var items				= element.all(by.css('.float-right.deleteDep')); // multiples
 		var item				= element(by.css('.float-right.deleteDep')); // Singular
@@ -589,7 +589,7 @@ describe('G: Dependents reconcilliation, remove un necessary, format remaining',
 		});
 		
 	
-		it('G1:should delete a dependent & check count',function(){
+		it('G1: should delete a dependent & check count',function(){
 				// Note not defining which dependent class to call, 
 				// just calling the one at the top each time.  Hack 
 			

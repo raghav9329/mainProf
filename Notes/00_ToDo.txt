@@ -1,3 +1,31 @@
+3/14/17
+Get the reporting code into the POM_lab
+
+POM_Lab
+pass in arguments
+* host D, M, for DIT3 and MOT
+* Iterations ?
+* 
+
+take the reporting piece and continue in POM_lab
+Total executed
+Totlal nonPass
+
+Description changes
+A: Quote Start
+B: Quote Dlg Entry
+C: ok
+D: Pers Info zip wrkFlow
+E: Plan Select 2nd wrkFlow
+F: Pers Info-Again
+G: Dep reconcilliation
+
+Can I may the above a key var set that I use in the Descriptions ?? 
+Vs putting in Quotes and strings ever time. ???
+
+
+
+
 Items for reading, researching, studying on the web.
 Additionally,  I need to establish some kind of schedule for compleating these items.
 
@@ -21,7 +49,6 @@ https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_t
 
 Developer Tools
 https://developer.mozilla.org/en-US/docs/Tools
-
 
 Chrome DevTools
 https://developers.google.com/web/tools/chrome-devtools/
