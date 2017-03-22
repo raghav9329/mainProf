@@ -3,6 +3,7 @@
 *.class
 .metadata
 npm-debug.log
+.settings
 
 JavaDev/.metadata
 JavaDev/*/.metadata
