@@ -5,7 +5,9 @@ exports.config = {
   framework: 'jasmine',
  //directConnect: true,
  //seleniumAddress: 'http://localhost:4444/wd/hub',
-specs: ['./startGetQuote.js'],
+//specs: ['./startGetQuote.js'],
+//specs: ['./appRootPg.js'],
+specs: ['./go.js'],
   
   seleniumServerJar: 'C:\\Users\\Owner\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
   chromeDriver: 'C:\\Users\\Owner\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.26',
