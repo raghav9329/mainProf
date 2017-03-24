@@ -2,12 +2,15 @@
 
 
 //var ddStartTest = require('./appRootPg.js');
-var ddStartTest = require('./appRootCheck&go.js');
+var appRootCheck_Go = require('./appRootCheck_Go.js');
 
 describe('start the test sequence',function(){
+	
 	it('begin',function(){
-//	ddStartTest.start();
-	ddStartTest;
+	
+		console.log('baseUrl: ', browser.params.baseUrl);
+		
+		appRootCheck_Go;
 		
 	});
 });

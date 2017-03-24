@@ -1,6 +1,6 @@
 'use strict';
 
-var ddRootPage = require('./appRootPOM.js');
+var appRootPageObj = require('./appRootPageObj.js');
 var x;
 
 //describe('Open the browser to the right page & click the getQuote button', function start(){
@@ -8,8 +8,8 @@ describe('Open the browser to the right page & click the getQuote button', funct
 	
 //	it('should go to proper page and click button',function start(){
 	it('should go to proper page and click button',function (){
-		ddRootPage.navigate();
-		ddRootPage.clickQuoteBtn();
+		appRootPageObj.navigate();
+		appRootPageObj.clickQuoteBtn();
 	});
 	
 	it('shojuld sleep some',function(){
