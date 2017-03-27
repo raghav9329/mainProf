@@ -6,5 +6,5 @@ node_modules
 *node_modules
 node_modules*
 /reports/
-reports.json
+results.json
 *.html

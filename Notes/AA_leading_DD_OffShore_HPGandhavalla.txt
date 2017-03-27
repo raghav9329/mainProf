@@ -1,0 +1,55 @@
+Organization of data is pushdown, most recent on top
+
+3/16/17
+[later]
+All three engineers are moving to E2E Protractor Integration work.
+
+[Later end.]
+Follow up from email and chat...
+"Just confused about what team I'm working for"
+
+Ok, so here's how it flows.
+I work on the Customer Experience(CX): Acqusition
+Acqusition involves the actions Shopping and Buying ( hence Acqusition)
+
+Currently Acqusition is the only team that is up and running
+There is an expectation for two more teams to develop products in the 
+CX product line.
+
+The work that Deepak and Indranil are doing is relating to upcoming
+Functional areas of the Acqusition product, and for upcoming infrastructure
+in support of the two additional webApps.
+
+I have been asked to manage and guide three offshore resources.
+You are resource number one.  Murali and Manish are two and three.
+The two areas of focus are Application E2E Integration testing done with JavaScript in the protractor frame work
+And Backend Microservice integration testing
+
+You are the only one who has had opportunity to look at product code and begin to develop work
+
+We are now at a point where I need to start focusing on where work is needed, and what should be done.
+After those two concepts are met, I leave it to you to determine how to meet that need.
+
+Your intended areas of focus is to develop integration testing on micro services that support the CX Acqusition webApp.
+Address Cleanse: located in DEVPROJECTS / dd_cx_app
+Broker : located in DEVPROJECTS / dd_cx_app
+Assignment: located in DEVPROJECTS / dd_cx_app
+
+
+
+
+ 
+The address cleanse servcice seems to be in the following directory.
+DEVPROJECTS / dd_cx_app
+See the README.md file in the root of this repo to get some kind of understanding
+See the section at the bottom 'Test the Services'  understand this.  This -may- become a starting point for more.
+
+ 
+
+
+I know you've been working on the dd-cx-microservices  
+But the services identified in dd_cx_app are the ones in production that we need to make sure are properly hardened.
+And because they are all working, there wont be any down time because engineers are developing the services.
+
+Its ok that you put your focus elsewhere.  While you were getting started I was clearing my plate to be able 
+give you some focus.
