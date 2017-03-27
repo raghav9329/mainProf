@@ -23,7 +23,8 @@ describe('Delta Dental Senior plan work flow', function() {
 	browser.ignoreSynchronization = true;	
 	
 	beforeAll(function () {
-		var url = protocol.concat(testServer, '.', testDomain_Name);
+//		var url = protocol.concat(testServer, '.', testDomain_Name);
+		var url = browser.params.baseUrl;
 		server = host_dit3;
 		browser.get(url );
 	});
@@ -37,13 +38,21 @@ describe('Delta Dental Senior plan work flow', function() {
 	});
 	
 	it('it Parent Describe: Senior plan workflow',function(){
-		console.log('it Parent Describe Start:  Senior Plan workflow')
+		console.log('it Parent Describe Start:  CAA54IndividualAndFamily.test.js');
 	});
 
 	describe('Navigate to the Start page',function(){	
-		it('it Nav  1: should land on the dit3 home page', function(){	
-			 expect(browser.getCurrentUrl()).toEqual(dit3Url);
-			 console.log('it Nav  1: Current URL where we landed is: ',dit3Url)
+		it('it Nav  1: should land on root page ', function(){	
+		//	 expect(browser.getCurrentUrl()).toEqual(dit3Url);
+		// expect(browser.getCurrentUrl()).toEqual(browser.params.baseUrl);
+			
+			browser.getCurrentUrl().then(function(theCurrentUrl){
+			//	expect(theCurrentUrl).to.equal('https://mot.deltadentalins.com');
+			//	expect(theCurrentUrl).to.Contain('mot.delta dental ins.com');
+				expect(theCurrentUrl).toContain('mot');
+			});
+			 
+			 console.log('it Nav  1: Current URL where we landed is: ',browser.params.baseUrl);
 		});// end it nav 1
 	});// end describe(Nav2StartPage)
 	
@@ -263,10 +272,6 @@ describe('Delta Dental Senior plan work flow', function() {
 			fieldPhoneNumber.sendKeys('4155551212');
 
 			
-		browser.sleep(8000)	;
-			
-			
-			
 			fieldEmailAddr.sendKeys('idString@someDomain.net')
 		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
 			console.log('it pers 2: finished2,No3: currently NO EVALUATION of 2 .... FIX THAT !!!')
@@ -285,17 +290,20 @@ describe('Delta Dental Senior plan work flow', function() {
 			});
 
 			hiddenfieldMailAddr.sendKeys('100 First Street Floor 4');
-	
-		/* *** As focus is lost, there is an AJAX event right here      */
+////////////	
+////////////* *** As focus is lost, there is an AJAX event right here      
+////////////
 			hiddenfieldCity.sendKeys('San Francisco');  // this just likely a check
+
 //			hiddenfieldState.sendKeys('California');// this just likely a check
 			hiddenfieldState.sendKeys('CA');// this just likely a check
+
 			hiddenfieldZipCode.sendKeys('94105');// this just likely a check
 			
 			console.log('it pers 4: completed the hidden fields after clicking diffMail');
 		}); // end of it pers 4
 		
-		it('it pers 5: should access & validate the broker selection and entry ',function (){
+		it('it pers 5: set Paperless to unSelect ',function (){
 			if (chkBoxPaperless.isSelected()){
 				chkBoxPaperless.isSelected().click();
 				console.log('it pers 5: paperless was selected. Clicked it to unselect');
@@ -303,74 +311,85 @@ describe('Delta Dental Senior plan work flow', function() {
 				console.log('it pers 5: there was some prblem unselecting the paperless checkbox');
 			}
 		}); // end of it pers 5
-	
+
 		
-		xit('it pers6A: should validate BNO is selected and clicks BYES to enable BNUM', function(){
-			//expect(element(by.id('brokerNo')).isSelected()).toBe(true);
-			if ( RadBtnBrokerNo.isSelected() ) {
-				RadBtnBrokerYes.click();
-				console.log('it pers6A: found brokerNo, switched to brokerYes!');
-			}else{
-				console.log('it pers6A: did not find BrokerNo. So, it was not switched to Yes');
-			}
-		});// end it pers 6A
-			
-		xit('it pers6B: should newly visable fields, enter BNUM and click next', function(){
-			
-			if ( hiddenfieldBrokerNum.isDisplayed() ) {
-				hiddenfieldBrokerNum.sendKeys('2012836');
-//				expect(hiddenfieldBrokerNum.isDisplayed());
+//		
+//		it('it pers6A: should validate BNO is selected and clicks BYES to enable BNUM', function(){
+//			//expect(element(by.id('brokerNo')).isSelected()).toBe(true);
+//			if ( RadBtnBrokerNo.isSelected() ) {
+//				RadBtnBrokerYes.click();
+//				console.log('it pers6A: found brokerNo, switched to brokerYes!');
+//			}else{
+//				console.log('it pers6A: did not find BrokerNo. So, it was not switched to Yes');
+//			}
+//		});// end it pers 6A
+//			
+//		it('it pers6B: should newly visable fields, enter BNUM and click next', function(){
+//			
+//			if ( hiddenfieldBrokerNum.isDisplayed() ) {
 //				hiddenfieldBrokerNum.sendKeys('2012836');
-				console.log('it pers6B: hiddenfieldBrokerNum was displayed BNUM entered');
-			}else{
-				console.log('it pers6B: hiddenfieldBrokerNum Was Not Displayed. NoBroker num Entered');
-			}
-		});// end of it Pers6B
-		
-		xit('it pers6C: Evaluate all field correctness, find the Next button, click it',function(){
-			var text1 = "TestFirstName";
-			var protVarBrokerName = 'CHARLES DARROW';
-			var testErrorString ='antidisestabilshment';// use of this needs to be completed.
-			
-			chkBoxPaperless.click();
-			chkBoxPaperless.click();
-
-			
-			var elementBrokerName = element(by.id('brokerName'));
-//			el.getAttribute('value').then(function(text){
-//				console.log(text);
+////				expect(hiddenfieldBrokerNum.isDisplayed());
+////				hiddenfieldBrokerNum.sendKeys('2012836');
+//				console.log('it pers6B: hiddenfieldBrokerNum was displayed BNUM entered');
+//			}else{
+//				console.log('it pers6B: hiddenfieldBrokerNum Was Not Displayed. NoBroker num Entered');
+//			}
+//		});// end of it Pers6B
+//		
+//		it('it pers6C: Evaluate all field correctness, find the Next button, click it',function(){
+//			var text1 = "TestFirstName";
+//			var protVarBrokerName = 'CHARLES DARROW';
+//			var testErrorString ='antidisestabilshment';// use of this needs to be completed.
+//			
+//			chkBoxPaperless.click();
+//			chkBoxPaperless.click();
+//
+//			
+//			var elementBrokerName = element(by.id('brokerName'));
+////			el.getAttribute('value').then(function(text){
+////				console.log(text);
+////			});
+//			
+//			elementBrokerName.getAttribute('value').then( function(text){
+//				if(text === protVarBrokerName){
+//					console.log('it pers6C: Broker Name field contains',protVarBrokerName);
+//				}else{
+//					console.log('it pers6C: Error, expected: ' ,protVarBrokerName,' found: ', text, ' anthing there ???');
+//				}
 //			});
-			
-			elementBrokerName.getAttribute('value').then( function(text){
-				if(text === protVarBrokerName){
-					console.log('it pers6C: Broker Name field contains',protVarBrokerName);
-				}else{
-					console.log('it pers6C: Error, expected: ' ,protVarBrokerName,' found: ', text, ' anthing there ???');
-				}
-			});
-			expect(elementBrokerName.getAttribute('value')).toEqual(protVarBrokerName);
-
-	//		expect(elementBrokerName.getAttribute('value')).toEqual('');
-			/* 
-			 * When the broker service is broken and doesn't return a value
-			 * Then the line above searching for null('')String passes
-			 *  */
-		});
+//			expect(elementBrokerName.getAttribute('value')).toEqual(protVarBrokerName);
+//
+//	//		expect(elementBrokerName.getAttribute('value')).toEqual('');
+//			/* 
+//			 * When the broker service is broken and doesn't return a value
+//			 * Then the line above searching for null('')String passes
+//			 *  */
+//		});
+//
 	
 	it('it pers 7:',function (){
 		if(persPageButtonNext.isDisplayed()){
 			persPageButtonNext.click();
 			console.log('it pers 7: Last thing: Page button found and clicked....');
 		}
-		browser.sleep(15000);	
+		//browser.sleep(15000);	
+	});// end of it pers 7
+});// end describe personal info page.
+
+	
+	describe('Small block to facilitate clicking next on the dependents page ',function(){
+		it('should find the Dependents.Next btn.click()',function(){
+			var depNextBtn	= element(by.id('nextButton'));
+			var ExpCond		= protractor.ExpectedConditions;
+			browser.wait(ExpCond.elementToBeClickable(depNextBtn),5000);
+			depNextBtn.click();
 		
-
-		});// end of it pers 7
-	});// end describe personal info page.
-
+			console.log('Small Block Dep.Next.Click()-Done.')
+		});
+	});
+	
 // I need to put in a dependent page click Next .  No dependent
 	// this becasue they killed the senior plan
-	
 	
 	describe('Facilities Page, expect-wait, Select(), Submit()', function(){	
 		// TO DO:  field validation for where ever it there
@@ -378,9 +397,14 @@ describe('Delta Dental Senior plan work flow', function() {
 		var ExpctCond = protractor.ExpectedConditions;
 		
 		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
-			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),5000);
-			console.log('it facs 1: Exactly like the visibilityOf Example');
+			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),8000);
+			console.log('it facs 1: Expecting the Facilities.Search Button Visable-true');
 		});// end of it facs 1
+		
+		it('facs 1B',function(){
+			expect(element(by.id('search-facilities')).isDisplayed()).toBe(true);
+			console.log('it facs1B Just tested the same again in different way : )  ');
+		});
 	
 		it('it facs 2: use expected condition to let the page stabilize Test 2', function() {
 			browser.wait(ExpctCond.elementToBeClickable($('#search-facilities')),5000);
@@ -412,10 +436,11 @@ describe('Delta Dental Senior plan work flow', function() {
 	 * Navigating to the More Link is not yet done
 	 **********************************************/	
 		it('it facs 4: select the link More( down arrow to display hidden info )', function() {
-			console.log('it facs 4: In order to get the more info part of my selection \
-					http://stackoverflow.com/questions/21237976/how-to-get-the-parent-of-an-element \
-					http://stackoverflow.com/questions/23720398/protractor-how-to-locate-a-sibling-of-a-given-element \
-					http://stackoverflow.com/questions/25390171/protractor-select-next-sibling-of-the-current-element ');
+			console.log('it facs 4: see the code for all the documentation at this locaiton');
+//	In order to get the more info part of my selection \
+//	http://stackoverflow.com/questions/21237976/how-to-get-the-parent-of-an-element
+//	http://stackoverflow.com/questions/23720398/protractor-how-to-locate-a-sibling-of-a-given-element
+//	http://stackoverflow.com/questions/25390171/protractor-select-next-sibling-of-the-current-element
 			
 			browser.sleep(500);
 		});// end of it facs 4	
@@ -474,135 +499,146 @@ describe('Delta Dental Senior plan work flow', function() {
 				expect(cCardField.getAttribute('value')).toEqual(stringCardText);
 			});
 		});
-
-		it('it Pmnt 3A: Should find and fill out the card number', function(){
-			var visaCardNumberFor00CentsString	= '4121630071281885';
-			var amexCardnumberFor80CentsString	= '370000999999990';
-			var testCard = amexCardnumberFor80CentsString;	
-			//var testCard = visaCardNumberFor00CentsString;	
-			element(by.id('ccCapture')).sendKeys(testCard);
-			console.log('it Pmnt3A:',testCard, 'for payment $$$.00  entered.')
-		});
-		
-		it('it Pmnt 3B: Should find and fill out the card expiration', function(){
-			var mmCardExpString = '12';
-			var yyyyCardExpString = '2017';
-			
-			element(by.id('expMo')).sendKeys(mmCardExpString);
-			element(by.id('expYr')).sendKeys(yyyyCardExpString);
-			console.log('it Pmnt3B: Month and Year Card Expiration entered')
-			
-		});
-		it('it Pmnt 3C: Should find and fill out the card security code', function(){
-			var securityCodeString = '314' ;  // 3 chars ( any dig ) for non Amex sec code
-			element(by.id('cvcCapture')).sendKeys(securityCodeString);
-			console.log('it Pmnt3C: security code entered')
-		});
-		
-		
-		it('it Pmnt 4: Should find sameBillingCheckbox checked and validate address ', function(){
-			var sameBillingCheckBox		= element(by.id('sameBilling'));
-			
-		////////////////   expiriment  to send TAB  //////////////////////
-			
-			var myAction = browser.actions().sendkeys(protractor.Key.TAB);
-			myAction.perform();
-			myAction.perform();
-			myAction.perform();
-			
-
-		/* The following section is a test action to setup detecting if the button is clicked
-		 * In this work flow we want the check box checked. currently it is checked by default,
-		 * The check below will handle if the default changes. 
-		 * */	
-//			browser.sleep(4000);
-//			console.log('Hey !!!!!!!!!!!!!!!!!! ');
-//			browser.sleep(1000);
-//			sameBillingCheckBox.click();
-//			browser.sleep(1000);
-//			element(by.id('ccCapture')).click();
-//			browser.sleep(4000);
-		
-			element(by.id('sameBilling')).getAttribute('checked').then(function(checked){
-			if (!checked){
-				/*  browser.sleep(3000);  */
-				sameBillingCheckBox.click();
-				console.log('it Pmnt 4: detected NOT Checked. clicking')
-			}else{
-				console.log('it Pmnt 4: detected default selected(-checked-) condition on Billing is Same Address ');
-			}
-			
-			//expect(element(by.id('sameBilling'))).toBe('checked');
-			expect(sameBillingCheckBox.isSelected()).toBe(true);
-			
-			}); // end of if(!selected)
-		
-			 
-		});// end of it Pmnt 4
-	
-		
-		it('it Pmnt 5: Should Validate the Streen Address fields for Billing Address', function(){
-			// Should make these globals that are captured after enter and loose focus
-			var sameBillingStAddrString		= '100 1st St Fl 4';
-			var billingStreetAddrField		= element(by.id('sb_street'));
-		
-//			billingStreetAddrField.getAttribute('value').then( function (stAddrText){
-			billingStreetAddrField.getText().then( function (stAddrText){
-				if(stAddrText === sameBillingStAddrString ){
-					console.log('it Pmnt 5: Street Address validation correct');
-				}else{
-					console.log('it Pmnt 5: Street Address FAILED validation ',stAddrText );
-				} // end if
-			}); // end function (stAddrText)
-		});// end of it Pmnt 5
-		
-		it('it Pmnt 6: Should Validate the City State Zip Address fields for Billing Address', function(){
-			// Should make these globals that are captured after enter and loose focus
-			var sameBillingLocalString		= 'San Francisco, CA 94105';
-			var billingCityStZipField		= element(by.id('sb_locality'));
-
-		
-//			billingCityStZipField.getAttribute('value').then( function (localityText){
-			billingCityStZipField.getText().then( function (localityText){
-				if(localityText === sameBillingLocalString ){
-					console.log('it Pmnt 6: Street Address validation correct');
-				}else{
-					console.log('it Pmnt 6: Street Address FAILED validation ', localityText);
-				} // end if
-			}); // end function (stAddrText)
-		
-		});// end of it Pmnt 6
-		
-		it('it Pmnt 7: Should find the Auth Check Box and click it', function(){
-//			var authChkBox	= element(by.id('auth'));
-			var authChkBox	= element(by.css('input[id="auth"]'));
-			
-			authChkBox.click();
-			authChkBox.click();
-			authChkBox.click();
-
-//			authChkBox.getAttribute('checked').then( function (checked){
-			element(by.css('input[id="auth"]')).getAttribute('checked').then( function (checked){
-				if (!checked){
-					authChkBox.click();
-					authChkBox.click();
-					authChkBox.click();
-					expect(authChkBox.isSelected()).toBe(true);
-					console.log('it Pmnt 7: Auth Chk NOT Checked . Clicked.  Then Expect it is checked');
-				}else {
-					console.log('it Pmnt 7: Auth Chk WAS ALREADY Selected !!!! ?????')
-					
-				}
-			});
-			
-		expect(element(by.id('auth')).isSelected()).toBeTruthy();
-			console.log('console logging: it Pmnt 7');
-		browser.sleep(250);
-		process.exit(1);
-			
-		});	// end of it Pmnt 7:
-		
-	});
+//
+//		it('it Pmnt 3A: Should find and fill out the card number', function(){
+//			var visaCardNumberFor00CentsString	= '4121630071281885';
+//			var amexCardnumberFor80CentsString	= '340000000000009';
+//		//	var testCard = visaCardNumberFor00CentsString;	
+//			var testCard = amexCardnumberFor80CentsString;	
+//		
+//			var block1		= '3400';	// Visa Cardnumber String Block 
+//			var block2		= '0000';	// Visa Cardnumber String Block 
+//			var block3		= '0000';	// Visa Cardnumber String Block 
+//			var block4		= '009';	// Visa Cardnumber String Block 
+//			
+//			element(by.id('ccCapture')).sendKeys(block1);
+//			element(by.id('ccCapture')).sendKeys(block2);
+//			element(by.id('ccCapture')).sendKeys(block3);
+//			element(by.id('ccCapture')).sendKeys(block4);
+//
+//			console.log('it Pmnt3A:',testCard, 'for payment $$$.00  entered.')
+//		});
+//		
+//		it('it Pmnt 3B: Should find and fill out the card expiration', function(){
+//			var mmCardExpString = '12';
+//			var yyyyCardExpString = '2017';
+//			
+//			element(by.id('expMo')).sendKeys(mmCardExpString);
+//			element(by.id('expYr')).sendKeys(yyyyCardExpString);
+//			console.log('it Pmnt3B: Month and Year Card Expiration entered')
+//			
+//		});
+//		it('it Pmnt 3C: Should find and fill out the card security code', function(){
+//			var securityCodeString = '3146' ;  	// 3 chars ( any dig ) for non Amex sec code
+//												// means 4 chars for Amex!
+//			element(by.id('cvcCapture')).sendKeys(securityCodeString);
+//			console.log('it Pmnt3C: security code entered')
+//		});
+//		
+//		
+//		it('it Pmnt 4: Should find sameBillingCheckbox checked and validate address ', function(){
+//			var sameBillingCheckBox		= element(by.id('sameBilling'));
+//			
+//		////////////////   expiriment  to send TAB  //////////////////////
+//			
+//			var myAction = browser.actions().sendkeys(protractor.Key.TAB);
+//			myAction.perform();
+//			myAction.perform();
+//			myAction.perform();
+//			
+//
+//		/* The following section is a test action to setup detecting if the button is clicked
+//		 * In this work flow we want the check box checked. currently it is checked by default,
+//		 * The check below will handle if the default changes. 
+//		 * */	
+////			browser.sleep(4000);
+////			console.log('Hey !!!!!!!!!!!!!!!!!! ');
+////			browser.sleep(1000);
+////			sameBillingCheckBox.click();
+////			browser.sleep(1000);
+////			element(by.id('ccCapture')).click();
+////			browser.sleep(4000);
+//		
+//			element(by.id('sameBilling')).getAttribute('checked').then(function(checked){
+//			if (!checked){
+//				/*  browser.sleep(3000);  */
+//				sameBillingCheckBox.click();
+//				console.log('it Pmnt 4: detected NOT Checked. clicking')
+//			}else{
+//				console.log('it Pmnt 4: detected default selected(-checked-) condition on Billing is Same Address ');
+//			}
+//			
+//			//expect(element(by.id('sameBilling'))).toBe('checked');
+//			expect(sameBillingCheckBox.isSelected()).toBe(true);
+//			
+//			}); // end of if(!selected)
+//		
+//			 
+//		});// end of it Pmnt 4
+//	
+//		
+//		it('it Pmnt 5: Should Validate the Streen Address fields for Billing Address', function(){
+//			// Should make these globals that are captured after enter and loose focus
+//			var sameBillingStAddrString		= '100 1st St Fl 4';
+//			var billingStreetAddrField		= element(by.id('sb_street'));
+//		
+////			billingStreetAddrField.getAttribute('value').then( function (stAddrText){
+//			billingStreetAddrField.getText().then( function (stAddrText){
+//				if(stAddrText === sameBillingStAddrString ){
+//					console.log('it Pmnt 5: Street Address validation correct');
+//				}else{
+//					console.log('it Pmnt 5: Street Address FAILED validation ',stAddrText );
+//				} // end if
+//			}); // end function (stAddrText)
+//		});// end of it Pmnt 5
+//		
+//		it('it Pmnt 6: Should Validate the City State Zip Address fields for Billing Address', function(){
+//			// Should make these globals that are captured after enter and loose focus
+//			var sameBillingLocalString		= 'San Francisco, CA 94105';
+//			var billingCityStZipField		= element(by.id('sb_locality'));
+//
+//		
+////			billingCityStZipField.getAttribute('value').then( function (localityText){
+//			billingCityStZipField.getText().then( function (localityText){
+//				if(localityText === sameBillingLocalString ){
+//					console.log('it Pmnt 6: Street Address validation correct');
+//				}else{
+//					console.log('it Pmnt 6: Street Address FAILED validation ', localityText);
+//				} // end if
+//			}); // end function (stAddrText)
+//		
+//		});// end of it Pmnt 6
+//		
+//		it('it Pmnt 7: Should find the Auth Check Box and click it', function(){
+////			var authChkBox	= element(by.id('auth'));
+//			var authChkBox	= element(by.css('input[id="auth"]'));
+//			
+//			authChkBox.click();
+//			authChkBox.click();
+//			authChkBox.click();
+//
+////			authChkBox.getAttribute('checked').then( function (checked){
+//			element(by.css('input[id="auth"]')).getAttribute('checked').then( function (checked){
+//				if (!checked){
+//					authChkBox.click();
+//					authChkBox.click();
+//					authChkBox.click();
+//					expect(authChkBox.isSelected()).toBe(true);
+//					console.log('it Pmnt 7: Auth Chk NOT Checked . Clicked.  Then Expect it is checked');
+//				}else {
+//					console.log('it Pmnt 7: Auth Chk WAS ALREADY Selected !!!! ?????')
+//					
+//				}
+//			});
+//			
+//		expect(element(by.id('auth')).isSelected()).toBeTruthy();
+//			console.log('console logging: it Pmnt 7');
+//		browser.sleep(250);
+//		process.exit(1);
+//			
+//		});	// end of it Pmnt 7:
+//		
+}); // end of describe
 
 //	console.log('end of encompasing describe.  Done !')  // Curiously found that this runs and outputs FIRST !!
 

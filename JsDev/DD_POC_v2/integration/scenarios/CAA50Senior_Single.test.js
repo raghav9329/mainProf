@@ -27,6 +27,7 @@
 		var url = protocol.concat(host_dit3, '.', testDomain_Name);
 		server = host_dit3;
 		browser.get(url );
+		console.log('Starting: CAA50SeniorPlan_Single.test.js')
 	});
 	
 	beforeEach(function(){
@@ -295,7 +296,8 @@
 	
 		/* *** As focus is lost, there is an AJAX event right here      */
 			hiddenfieldCity.sendKeys('San Francisco');  // this just likely a check
-			hiddenfieldState.sendKeys('California');// this just likely a check
+		//	hiddenfieldState.sendKeys('California');// this just likely a check
+			hiddenfieldState.sendKeys('CA');// this just likely a check
 			hiddenfieldZipCode.sendKeys('94105');// this just likely a check
 			
 			console.log('it pers 4: completed the hidden fields after clicking diffMail');

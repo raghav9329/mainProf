@@ -112,7 +112,10 @@ describe('B: Quote Dlg Entry -', function(){
 
 			browser.wait(ExpCond.elementToBeClickable(zipField),5000);
 			zipField.sendKeys(zipValue);
-			console.log('B1o4 : entered data in zipField: ', zipValue);
+//
+//// expect > --- ?		
+//
+			console.log('B1o4 : entered data 95148: ', zipValue);
 		});// end of it(2A) 
 	
 		
@@ -221,6 +224,7 @@ describe('C: Dental Plan Selection -', function(){
 			seniorPlanLink.click();
 			console.log('C3o5 : Dental Plan individual Page Link selected');
 		});
+	
 		
 		it('C4: confirm URL & enroll button 1' , function(){
 			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/plans/70422?zip=95148';
@@ -230,6 +234,7 @@ describe('C: Dental Plan Selection -', function(){
 			expect(enrollButton.isPresent()).toBe(true);
 			console.log('C4o5 : Dental Plan Page URL & Enroll button confirmed');
 		});
+	
 		
 		it('C5: confirm URL & enroll button 2' , function(){
 			var enrollButton	= element(by.css('.enrollBtn'));
@@ -276,20 +281,28 @@ describe('D: Pers Info zip wrkFlow -', function(){
 			var fieldZipCode		= element(by.id('zipCode'));
 			var fieldPhoneNumber	= element(by.id('contactNumber'));
 			
-			browser.wait(ExpCond.elementToBeClickable(fieldZipCode),5000);
-			fieldZipCode.sendKeys('94105');
+			browser.wait(ExpCond.elementToBeClickable(fieldZipCode),15000);
+		//	browser.sleep(2000)
+			fieldZipCode.clear();
+			fieldZipCode.sendKeys('98278');
+		//	browser.sleep(8000)
 			
-			browser.wait(ExpCond.elementToBeClickable(fieldPhoneNumber),5000);// yes I know its already clickable
+			browser.wait(ExpCond.elementToBeClickable(fieldPhoneNumber),800);// yes I know its already clickable
 			fieldPhoneNumber.click();
-			console.log('D2oA : Changed ZipCode to generate ZC Chg Popup');
+			console.log('D2oA : Chg zipCode: loose focus: click Ph#Field '); 
+			console.log('Debug: did you see the Washington Dialog ??? ');
+			browser.sleep(1400);
 		});
 	 	
 		
 		it('D3: Confirm Popup visable ',function(){
-			var zipPopDlg		= element(by.css('.overlay.zipPop'));
+		//	var zipPopDlg		= element(by.css('.overlay.zipPop')); 3/17/17 id added to page: using
+			var zipPopDlg		= element(by.id('zipPop'));
 			
 			expect(zipPopDlg.isDisplayed()).toBe(true);
 			console.log('D3oA : detected overlay popup !!');
+			//console.log('Debug: did this pass or fail ??');
+			//browser.sleep(3400)
 		});
 		
 		it('D4: Conform go_Back Link click. ',function(){
@@ -311,7 +324,8 @@ describe('D: Pers Info zip wrkFlow -', function(){
 		it('D6: street addr data entry',function(){
 			var ExpCond = protractor.ExpectedConditions;
 			var fieldStreetAddr		= element(by.id('streetAddress'));
-			var streetAddrStr		= '100 First Street, San Francisco'
+		//	var streetAddrStr		= '100 First Street, San Francisco'
+			var streetAddrStr		= '100 First Street ';
 			
 			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
 			fieldStreetAddr.sendKeys(streetAddrStr);
@@ -325,7 +339,8 @@ describe('D: Pers Info zip wrkFlow -', function(){
 			var fieldStreetAddr		= element(by.id('streetAddress'));
 			browser.sleep(850);
 //			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
-			fieldStreetAddr.sendKeys('\uE015');
+		 //fieldStreetAddr.sendKeys('\uE015');
+			fieldStreetAddr.sendKeys(protractor.Key.DOWN);
 			console.log('D7oA : JUST SENT UNICODE for Down Arrow');
 		});
 		
@@ -335,53 +350,82 @@ describe('D: Pers Info zip wrkFlow -', function(){
 //			browser.wait(ExpCond.elementToBeClickable(fieldStreetAddr),5000);
 			fieldStreetAddr.sendKeys(protractor.Key.ENTER);
 			console.log('D8oA : JUST SENT ENTER KEY')
-			browser.sleep(2500)
 		});
 		
 		it('D9: detect zipCode popup dlg',function(){
-			var zipPopDlg		= element(by.css('.overlay.zipPop'));
+		//	var zipPopDlg		= element(by.css('.overlay.zipPop'));
+			var zipPopDlg		= element(by.id('zipPop'));
+			var enrollButton	= element(by.css('.enrollBtn'));
 			
-			expect(zipPopDlg.isDisplayed()).toBe(true);
-			console.log('D9oA : detected overlay popup !!');
+			//expect(zipPopDlg.isDisplayed()).toBe(true);
+			console.log('D9oA : Change to work flow. Nav <-- ');
+			
 		});
 		
 		
-		it('D10: click go_Back Link . ',function(){
-			var zipNewQuoteId	= 'zipNewQuote';
-			var newQuoteLink	= element(by.id(zipNewQuoteId));
-			
-			newQuoteLink.click();
-			console.log('DAoA : NewQuote Link in ZipPopup Clicked');
-			
-			//browser.sleep(60000)
-		});	
+		//it('D10: click go_Back Link . ',function(){ 3/17/17 coded action is not go_back it is NewQuote
+//		it('D10: click NewQuote btn',function(){
+//			var zipNewQuoteId	= 'zipNewQuote';
+//			var newQuoteLink	= element(by.id(zipNewQuoteId));
+//			
+//			newQuoteLink.click();
+//			console.log('DAoA : NewQuote Link in ZipPopup Clicked');
+//			
+//			browser.sleep(14000)
+//		});	
 		
 }); // end describe('D: Personal Info Page - First pass zip code work flow correction', function(){
 
 
 describe('E: Plan Select 2nd wrkFlow -', function(){	
 
-		it('E1: validate Plans Select title & URL',function(){
-			var stringPageTitle	= "::Individual & Families::";
-			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/search/quotes?zip=94105'
-			var ExpCond = protractor.ExpectedConditions;
-			
-			expect(browser.getCurrentUrl()).toContain(urlContains);
-			expect(browser.getTitle()).toEqual(stringPageTitle);
-			console.log('E1o5 : Page Title & URL confirmed');
+		it('Nav Helper',function(){
+			browser.navigate().back();
+			console.log('nav back : no zipPopUp any more')
 			
 		});
 	
+		it('E1: validate Plans Select title & URL',function(){
+			var stringPageTitle	= "::Individual & Families::";
+		//	var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/search/quotes?zip=94105'; // zipPopUp changes negated 
+			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/plans/70422?zip=95148'; // known workflows 
+			var ExpCond = protractor.ExpectedConditions;
+			//var enrollButton	= element(by.css('.enrollBtn'));
+			
+			expect(browser.getCurrentUrl()).toContain(urlContains);
+			expect(browser.getTitle()).toEqual(stringPageTitle);
+			// enrollButton.click();
+			console.log('E1o5 : Page Title & URL confirmed');
+			//browser.sleep(5000)	
+		});
+	
 		it('E2: confirm zip & qty', function(){	
-			var zipCodeUnderTest	= '94105';
-			var presentedZip		= element(by.id('psc_zip'));
-			var presentedQty		= element(by.css('.qpeople.greenBTxt'));
+		//	var zipCodeUnderTest	= '94105';// zipPopUp changes negated 
+			var zipCodeUnderTest	= '95148';// known workflows 
+		//	var presentedZip		= element(by.id('psc_zip')); // Since ZC Pop chg, this isn't there
+			var presentedZip		= element(by.id('qstate'));
+			var presentedQty		= element(by.id('covrage_type_e`'));
+		//	var presentedQty		= element(by.css('.qpeople.greenBTxt'));// Since ZC Pop chg, this isn't there
 			var qtyText				= '4 person(s)';
 			
-			expect(presentedZip.getText()).toEqual(zipCodeUnderTest);
-			expect(presentedQty.getText()).toEqual(qtyText);
-			console.log('E2o5 : Display zip & Quantity confirmed');
+			var zipSearchElement = element(by.xpath("//*[. = '" + zipCodeUnderTest + "']"));
+			var qtySearchElement = element(by.xpath("//*[. = '" + qtyText + "']"));
+
+			expect(zipSearchElement.isPresent()).toBe(true);
+			expect(qtySearchElement.isPresent()).toBe(true);
 		
+//			
+//			presentedZip.getAttribute('value').then(function (textVal){
+//				console.log('the value of the qstate Element: ',textVal);
+//			});
+//			
+			
+			
+		//	expect(presentedZip.getText()).toEqual(zipCodeUnderTest);
+		//	expect(presentedZip.getText()).toContain(zipCodeUnderTest);
+		//	expect(presentedQty.getText()).toEqual(qtyText);
+			console.log('E2o5 : Display zip & Quantity confirmed');
+			//browser.sleep(8000)	
 		});	
 		
 		it('E3: select dental plan link' , function(){
@@ -394,7 +438,8 @@ describe('E: Plan Select 2nd wrkFlow -', function(){
 		});	
 		
 		it('E4: confirm URL & enroll btn 1' , function(){
-			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/plans/70422?zip=94105';
+		//	var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/plans/70422?zip=94105';
+			var urlContains		= 'https://dit3.deltadentalins.com/indEnroll/plans/70422?zip=95148';
 			var enrollButton	= element(by.css('.enrollBtn'));
 		
 			expect(browser.getCurrentUrl()).toContain(urlContains);
@@ -411,257 +456,268 @@ describe('E: Plan Select 2nd wrkFlow -', function(){
 		});
 		
 }); // end describe('E: Plan Selection (return) - Second pass: A new flow', function(){	
-		
-
-describe('F: Pers Info-Again -', function(){
-	
-		it('F1: eval PersInfo URL and Title', function(){
-			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
-			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
-			expect(browser.getTitle()).toEqual(pageTitleString);
-			expect(browser.getCurrentUrl()).toEqual(urlIs);
-			console.log('F1o4 : Confirmed PersInfo page URL and Title');
-		}); 
-
-			var fieldFirstName		= element(by.id('firstName'));
-			var fieldMidInitial		= element(by.id('lastName'));
-			var fieldLastName		= element(by.id('lastName'));
-			var fieldGenderSelect	= element(by.id('gender'));
-			var fieldBdMM			= element(by.id('month'));
-			var fieldBdDD			= element(by.id('day'));
-			var fieldBdYyyy			= element(by.id('year'));
-			var fieldSsn			= element(by.id('ssn'));
-			var fieldHomeAddr		= element(by.id('streetAddress'));
-			var fieldCity			= element(by.id('city'));
-			var fieldState			= element(by.id('state'));
-			var fieldZipCode		= element(by.id('zipCode'));
-			var chkBoxDiffMailAddr	= element(by.id('diffmail'));
-			var fieldPhoneSelect	= element(by.id('contactType'));
-			var fieldPhoneNumber	= element(by.id('contactNumber'));
-			var fieldEmailAddr		= element(by.id('email'));
-			var chkBoxPaperless		= element(by.id('paperless'));
-			var RadBtnBrokerYes		= element(by.id('brokerYes'));
-			var RadBtnBrokerNo		= element(by.id('brokerNo'));
-			var linkBackToQuote		= element(by.id('backToQuote'));
-			var persPageButtonNext	= element(by.id('nextButton'));
-	/************************************************************************/	
-	/**   Right after State and zipCode are the following hidden fields  ****/	
-	/************************************************************************/	
-			var hiddenfieldMailAddr	= element(by.id('mailingAddress'));
-			var hiddenfieldCity		= element(by.id('mailingCity'));
-			var hiddenfieldState	= element(by.id('mailingState'));
-			var hiddenfieldZipCode	= element(by.id('mailingZipCode'));
-		
-	/************************************************************************/	
-	/**   Right after email and paperless, there is the broker buttons   ****/	
-	/************************************************************************/	
-			var hiddenfieldBrokerNum=element(by.id('brokerNumber'));
-		//	planPriceString = element(by.css('.plan-price'))
-			
-			
-			
-		it('F2: eval details on Pers Info Page ', function(){
-			/* this test is and the definitions in the describe are the 
-			 * kind of things that should be going in the page object model testing  
-			 * *************************************************************************/
-				expect(fieldFirstName.isDisplayed())	.toBe(true);
-				expect(fieldMidInitial.isDisplayed())	.toBe(true);
-				expect(fieldLastName.isDisplayed())		.toBe(true);
-				expect(fieldGenderSelect.isDisplayed())	.toBe(true);
-				expect(fieldBdMM.isDisplayed())			.toBe(true);
-				expect(fieldBdDD.isDisplayed())			.toBe(true);
-				expect(fieldBdYyyy.isDisplayed())		.toBe(true);
-				expect(fieldSsn.isDisplayed())			.toBe(true);
-				
-				expect(fieldHomeAddr.isDisplayed())		.toBe(true);
-				expect(fieldCity.isDisplayed())			.toBe(true);
-				expect(fieldState.isDisplayed())		.toBe(true);
-				expect(fieldZipCode.isDisplayed())		.toBe(true);
-				
-				expect(chkBoxDiffMailAddr.isDisplayed()).toBe(true);
-			
-				expect(fieldPhoneSelect.isDisplayed())	.toBe(true);
-				expect(fieldPhoneNumber.isDisplayed())	.toBe(true);
-				expect(fieldEmailAddr.isDisplayed())	.toBe(true);
-				expect(chkBoxPaperless.isDisplayed())	.toBe(true);
-				expect(RadBtnBrokerYes.isDisplayed())	.toBe(true);
-				expect(RadBtnBrokerNo.isDisplayed())	.toBe(true);
-				expect(linkBackToQuote.isDisplayed())	.toBe(true);
-			
-	
-				expect(persPageButtonNext.isDisplayed()).toBe(true);
-				console.log('F2o4 : Just did an expect on evey currently visable element on the page');
-		});// end of it pers 1
-		
-		
-		
-		
-		it('F3: supply incomplete data, detect err ', function(){
-			var genderStringValue= "Prefer not to say";
-
-			var dobMMVal			='06';
-			var dobDDVal			='22';
-			var dobYrVal			='1982';
-			var ssnVal				='847563934';
-			var homeAddrStr			='100 First Street';
-			var cityString			='San Francisco';
-			
-			fieldFirstName.sendKeys('TestFirstName');
-			fieldLastName.sendKeys('LastNameTest');
-
-			/*Gender Drop down next*/
-			element(by.cssContainingText('option', genderStringValue)).click();
-			
-			fieldBdMM.sendKeys(dobMMVal);
-			fieldBdDD.sendKeys(dobDDVal);
-			fieldBdYyyy.sendKeys(dobYrVal);
-			
-			fieldSsn.sendKeys(ssnVal);
-			fieldHomeAddr.sendKeys(homeAddrStr);
-			fieldCity.sendKeys(cityString);	
-			
-			
-			fieldPhoneNumber.click();
-	// Loose focus and I need to do some check  
-	// Maybe her's where It pers 2 ends and it pers 3 starts ???   [ Old notes, how presient ]
-			
-			var pageError	=  element(by.css('.error.cleanse-ajax-error'));
-			browser.wait(protractor.ExpectedConditions.visibilityOf(pageError),5000);
-			expect(pageError.isDisplayed()).toBe(true);
-			console.log('F3o4 : Captured error condition PROGRAMATICALLY !')
-			
-		}); 
-		
-		
-		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
-		// but we don't do this kind of data entry eval.
-		// The rule is we assume ( in general ) that our data is what we entered
-		it('F4: finish pers info',function(){
-			var homeAddrStr			='100 First Street floor 4';
-			var cityString			='San Francisco';
-			var phoneNum			='4155551212';
-			var emailStr			='test@gmail.com';
-			var nextButtonTextPostClick = 'Loading...';
-			var ExpCond = protractor.ExpectedConditions;
-			
-			fieldHomeAddr.clear();
-			fieldHomeAddr.sendKeys(homeAddrStr);
-			
-			fieldCity.clear();
-			fieldCity.sendKeys(cityString);	
-			
-			fieldPhoneSelect.$('[value="CELL"]').click();
-			fieldPhoneNumber.sendKeys(phoneNum);
-			
-			fieldEmailAddr.sendKeys(emailStr);
-		
-			
-			
-			// the following is actually a retest, 
-			// but we'll do it any way
-			expect(persPageButtonNext.isDisplayed()).toBe(true);
-			persPageButtonNext.click();
-			
-			browser.wait(ExpCond.textToBePresentInElementValue(persPageButtonNext, nextButtonTextPostClick), 5000);
-			expect(persPageButtonNext.getAttribute('value')).toBe(nextButtonTextPostClick); 
-	
-			console.log('F4o4 :  Street addr corrected, PersInfo completed');
-
-			
-		});// end of it pers 2 
-	
-});// end describe('E: Personal Info Page - Second pass: A new flow', function(){	
-	
-		
-describe('G: Dep reconcilliation -', function(){
-	
-		var items				= element.all(by.css('.float-right.deleteDep')); // multiples
-		var item				= element(by.css('.float-right.deleteDep')); // Singular
-		var startCount, startCount2;
-		var ExpCond = protractor.ExpectedConditions;	
-		var clickToHackBug		= element(by.cssContainingText('.looks-like-h2','Dependents' ));
-		
-		it('G_help: should identify item count', function(){
-			items.count().then(function(originalCount) {
-				startCount = originalCount;  // less by one because of the hidden template
-			});
-		//	console.log('Gh1 : The count starts at: ',startCount);
-		});
-		
-	
-		it('G1: should delete a dependent & check count',function(){
-				// Note not defining which dependent class to call, 
-				// just calling the one at the top each time.  Hack 
-			
-			browser.wait(ExpCond.presenceOf(item),8000);
-			browser.wait(ExpCond.visibilityOf(item),8000);
-			browser.wait(ExpCond.elementToBeClickable(item), 8000);
-			expect(item.isDisplayed()).toBe(true);
-			console.log('G1AoX: Expected Item was Displayed')
-			clickToHackBug.click(); // make the form focus and generate the error cond
-			item.click(); 
-			expect(items.count()).toEqual(3);// remember this test we start with 4
-			console.log('G1BoX: After deletion expected Count to be 1 less than 4 started with: ',startCount);
-		});
-		
-		
-		it('G_help, should identify item count', function(){
-			items.count().then(function(originalCount) {
-				startCount = originalCount;  // less by one because of the hidden template
-		//		console.log('Gh2  2nd  get count.  Count now is: ',startCount);
-			});
-		});
-	
-/////////////////////////////////////////////
-//  Fix up the counting and reporting
-/////////////////////////////////////////////
-		
-		it('G2: shold identify one less dependent ',function(){
-			
-			browser.wait(ExpCond.presenceOf(item),8000);
-			browser.wait(ExpCond.visibilityOf(item),8000);
-			browser.wait(ExpCond.elementToBeClickable(item), 8000);
-			expect(item.isDisplayed()).toBe(true);
-			console.log('G2AoX: Expected Item was Displayed')
-			clickToHackBug.click(); // make the form focus and generate the error cond
-			item.click(); 
-			expect(items.count()).toEqual(2);//  remember this test we start with 4
-			console.log('G2BoX: After deletion expected Count to be 2 less than 4 started with: ',startCount);
-		});
-		
-		it('I:  ',function(){
-			browser.sleep(40)	
-		});
-
-		
-}); // end describe('G: Dependents reconcilliation, remove un necessary, format remaining', function(){
 
 
-describe('Dependent data entry, single dependent',function(){
-	
-	it('somethin', function() {
-		var selection			= 'Child';
-		var fNameClass			='.form-input.firstname.success';
-	//	var selectionClass		= '.form-input.select-gender.relationship.error';
-	//	var relationshipField	=  element(by.cssContainingText(selectionClass, selection))
-		var fNameFieldVal		= 'ChildFrstName';
-		var lNameFieldVal		= 'ChileLastName';
-		
-		browser.sleep(8000)
-//		relationshipField.click();
-		element(by.cssContainingText('option',selection)).click();
-//		element(by.css('.form-input.firstname.success')).sendKeys(fNameFieldVal);
-		element(by.id('firstName_2')).sendKeys(fNameFieldVal);
-		element(by.id('lastName')).sendKeys(lNameFieldVal);
-		
-		browser.sleep(8000)
-	});
-	
-	
-	
-	
-		
-}); // end describe('Dependent data entry, single dependent',function(){
+//		
+//
+//describe('F: Pers Info-Again -', function(){
+//	
+//		it('F1: eval PersInfo URL and Title', function(){
+//			var pageTitleString = 'Personal Info | Enrollment | Delta Dental Insurance Company';
+//			var urlIs			= 'https://dit3.deltadentalins.com/enroll/personal-info';
+//			expect(browser.getTitle()).toEqual(pageTitleString);
+//			expect(browser.getCurrentUrl()).toEqual(urlIs);
+//			console.log('F1o4 : Confirmed PersInfo page URL and Title');
+//		}); 
+//
+//			var fieldFirstName		= element(by.id('firstName'));
+//			var fieldMidInitial		= element(by.id('lastName'));
+//			var fieldLastName		= element(by.id('lastName'));
+//			var fieldGenderSelect	= element(by.id('gender'));
+//			var fieldBdMM			= element(by.id('month'));
+//			var fieldBdDD			= element(by.id('day'));
+//			var fieldBdYyyy			= element(by.id('year'));
+//			var fieldSsn			= element(by.id('ssn'));
+//			var fieldHomeAddr		= element(by.id('streetAddress'));
+//			var fieldCity			= element(by.id('city'));
+//			var fieldState			= element(by.id('state'));
+//			var fieldZipCode		= element(by.id('zipCode'));
+//			var chkBoxDiffMailAddr	= element(by.id('diffmail'));
+//			var fieldPhoneSelect	= element(by.id('contactType'));
+//			var fieldPhoneNumber	= element(by.id('contactNumber'));
+//			var fieldEmailAddr		= element(by.id('email'));
+//			var chkBoxPaperless		= element(by.id('paperless'));
+//			var RadBtnBrokerYes		= element(by.id('brokerYes'));
+//			var RadBtnBrokerNo		= element(by.id('brokerNo'));
+//			var linkBackToQuote		= element(by.id('backToQuote'));
+//			var persPageButtonNext	= element(by.id('nextButton'));
+//	/************************************************************************/	
+//	/**   Right after State and zipCode are the following hidden fields  ****/	
+//	/************************************************************************/	
+//			var hiddenfieldMailAddr	= element(by.id('mailingAddress'));
+//			var hiddenfieldCity		= element(by.id('mailingCity'));
+//			var hiddenfieldState	= element(by.id('mailingState'));
+//			var hiddenfieldZipCode	= element(by.id('mailingZipCode'));
+//		
+//	/************************************************************************/	
+//	/**   Right after email and paperless, there is the broker buttons   ****/	
+//	/************************************************************************/	
+//			var hiddenfieldBrokerNum=element(by.id('brokerNumber'));
+//		//	planPriceString = element(by.css('.plan-price'))
+//			
+//			
+//			
+//		it('F2: eval details on Pers Info Page ', function(){
+//			/* this test is and the definitions in the describe are the 
+//			 * kind of things that should be going in the page object model testing  
+//			 * *************************************************************************/
+//				expect(fieldFirstName.isDisplayed())	.toBe(true);
+//				expect(fieldMidInitial.isDisplayed())	.toBe(true);
+//				expect(fieldLastName.isDisplayed())		.toBe(true);
+//				expect(fieldGenderSelect.isDisplayed())	.toBe(true);
+//				expect(fieldBdMM.isDisplayed())			.toBe(true);
+//				expect(fieldBdDD.isDisplayed())			.toBe(true);
+//				expect(fieldBdYyyy.isDisplayed())		.toBe(true);
+//				expect(fieldSsn.isDisplayed())			.toBe(true);
+//				
+//				expect(fieldHomeAddr.isDisplayed())		.toBe(true);
+//				expect(fieldCity.isDisplayed())			.toBe(true);
+//				expect(fieldState.isDisplayed())		.toBe(true);
+//				expect(fieldZipCode.isDisplayed())		.toBe(true);
+//				
+//				expect(chkBoxDiffMailAddr.isDisplayed()).toBe(true);
+//			
+//				expect(fieldPhoneSelect.isDisplayed())	.toBe(true);
+//				expect(fieldPhoneNumber.isDisplayed())	.toBe(true);
+//				expect(fieldEmailAddr.isDisplayed())	.toBe(true);
+//				expect(chkBoxPaperless.isDisplayed())	.toBe(true);
+//				expect(RadBtnBrokerYes.isDisplayed())	.toBe(true);
+//				expect(RadBtnBrokerNo.isDisplayed())	.toBe(true);
+//				expect(linkBackToQuote.isDisplayed())	.toBe(true);
+//			
+//	
+//				expect(persPageButtonNext.isDisplayed()).toBe(true);
+//				console.log('F2o4 : Just did an expect on evey currently visable element on the page');
+//		});// end of it pers 1
+//		
+//		
+//		
+//		
+//		it('F3: supply incomplete data, detect err ', function(){
+//			var genderStringValue= "Prefer not to say";
+//
+//			var dobMMVal			='06';
+//			var dobDDVal			='22';
+//			var dobYrVal			='1982';
+//			var ssnVal				='847563934';
+//			var homeAddrStr			='100 First Street';
+//			var cityString			='San Francisco';
+//			
+//			fieldFirstName.sendKeys('TestFirstName');
+//			fieldLastName.sendKeys('LastNameTest');
+//
+//			/*Gender Drop down next*/
+//			element(by.cssContainingText('option', genderStringValue)).click();
+//			
+//			fieldBdMM.sendKeys(dobMMVal);
+//			fieldBdDD.sendKeys(dobDDVal);
+//			fieldBdYyyy.sendKeys(dobYrVal);
+//			
+//			fieldSsn.sendKeys(ssnVal);
+//			fieldHomeAddr.sendKeys(homeAddrStr);
+//			fieldCity.sendKeys(cityString);	
+//			
+//			
+//			fieldPhoneNumber.click();
+//	// Loose focus and I need to do some check  
+//	// Maybe her's where It pers 2 ends and it pers 3 starts ???   [ Old notes, how presient ]
+//			
+//			var pageError	=  element(by.css('.error.cleanse-ajax-error'));
+//			browser.wait(protractor.ExpectedConditions.visibilityOf(pageError),5000);
+//			expect(pageError.isDisplayed()).toBe(true);
+//			console.log('F3o4 : Captured error condition PROGRAMATICALLY !')
+//			
+//		}); 
+//		
+//		
+//		// could do a whole bunch of expect(element.toHaveSomeValues).toBe(true);
+//		// but we don't do this kind of data entry eval.
+//		// The rule is we assume ( in general ) that our data is what we entered
+//		it('F4: finish pers info',function(){
+//			var homeAddrStr			='100 First Street floor 4';
+//			var cityString			='San Francisco';
+//			var phoneNum			='4155551212';
+//			var emailStr			='test@gmail.com';
+//			var nextButtonTextPostClick = 'Loading...';
+//			var ExpCond = protractor.ExpectedConditions;
+//			
+//			fieldHomeAddr.clear();
+//			fieldHomeAddr.sendKeys(homeAddrStr);
+//			
+//			fieldCity.clear();
+//			fieldCity.sendKeys(cityString);	
+//			
+//			fieldPhoneSelect.$('[value="CELL"]').click();
+//			fieldPhoneNumber.sendKeys(phoneNum);
+//			
+//			fieldEmailAddr.sendKeys(emailStr);
+//		
+//			
+//			
+//			// the following is actually a retest, 
+//			// but we'll do it any way
+//			expect(persPageButtonNext.isDisplayed()).toBe(true);
+//			persPageButtonNext.click();
+//			
+//			browser.wait(ExpCond.textToBePresentInElementValue(persPageButtonNext, nextButtonTextPostClick), 5000);
+//			expect(persPageButtonNext.getAttribute('value')).toBe(nextButtonTextPostClick); 
+//	
+//			console.log('F4o4 :  Street addr corrected, PersInfo completed');
+//
+//			
+//		});// end of it pers 2 
+//	
+//});// end describe('E: Personal Info Page - Second pass: A new flow', function(){	
+//	
+//		
+//describe('G: Dep reconcilliation -', function(){
+//	
+//		var items				= element.all(by.css('.float-right.deleteDep')); // multiples
+//		var item				= element(by.css('.float-right.deleteDep')); // Singular
+//		var startCount, startCount2;
+//		var ExpCond = protractor.ExpectedConditions;	
+//		var clickToHackBug		= element(by.cssContainingText('.looks-like-h2','Dependents' ));
+//		
+//		it('G_help: should identify item count', function(){
+//			items.count().then(function(originalCount) {
+//				startCount = originalCount;  // less by one because of the hidden template
+//			});
+//		//	console.log('Gh1 : The count starts at: ',startCount);
+//		});
+//		
+//	
+//		it('G1: should delete a dependent & check count',function(){
+//				// Note not defining which dependent class to call, 
+//				// just calling the one at the top each time.  Hack 
+//			
+//			browser.wait(ExpCond.presenceOf(item),8000);
+//			browser.wait(ExpCond.visibilityOf(item),8000);
+//			browser.wait(ExpCond.elementToBeClickable(item), 8000);
+//			expect(item.isDisplayed()).toBe(true);
+//			console.log('G1AoX: Expected Item was Displayed')
+//			clickToHackBug.click(); // make the form focus and generate the error cond
+//			item.click(); 
+//			expect(items.count()).toEqual(3);// remember this test we start with 4
+//			console.log('G1BoX: After deletion expected Count to be 1 less than 4 started with: ',startCount);
+//		});
+//		
+//		
+//		it('G_help, should identify item count', function(){
+//			items.count().then(function(originalCount) {
+//				startCount = originalCount;  // less by one because of the hidden template
+//		//		console.log('Gh2  2nd  get count.  Count now is: ',startCount);
+//			});
+//		});
+//	
+///////////////////////////////////////////////
+////  Fix up the counting and reporting
+///////////////////////////////////////////////
+//		
+//		it('G2: shold identify one less dependent ',function(){
+//			
+//			browser.wait(ExpCond.presenceOf(item),8000);
+//			browser.wait(ExpCond.visibilityOf(item),8000);
+//			browser.wait(ExpCond.elementToBeClickable(item), 8000);
+//			expect(item.isDisplayed()).toBe(true);
+//			console.log('G2AoX: Expected Item was Displayed')
+//			clickToHackBug.click(); // make the form focus and generate the error cond
+//			item.click(); 
+//			expect(items.count()).toEqual(2);//  remember this test we start with 4
+//			console.log('G2BoX: After deletion expected Count to be 2 less than 4 started with: ',startCount);
+//		});
+//		
+//		it('I:  ',function(){
+//			browser.sleep(40)	
+//		});
+//
+//		
+//}); // end describe('G: Dependents reconcilliation, remove un necessary, format remaining', function(){
+//
+//
+//describe('Dependent data entry, single dependent',function(){
+//	
+//	it('somethin', function() {
+//		var selection			= 'Child';
+//		var fNameClass			='.form-input.firstname.success';
+//	//	var selectionClass		= '.form-input.select-gender.relationship.error';
+//	//	var relationshipField	=  element(by.cssContainingText(selectionClass, selection))
+//		var fNameFieldVal		= 'ChildFrstName';
+//		var lNameFieldVal		= 'ChileLastName';
+//		
+//		browser.sleep(8000)
+////		relationshipField.click();
+//		element(by.cssContainingText('option',selection)).click();
+////		element(by.css('.form-input.firstname.success')).sendKeys(fNameFieldVal);
+//		element(by.id('firstName_2')).sendKeys(fNameFieldVal);
+//		element(by.id('lastName')).sendKeys(lNameFieldVal);
+//		
+//		browser.sleep(8000)
+//	});
+//	
+//}); // end describe('Dependent data entry, single dependent',function(){
+//
+//
+
+
+
+
+
+
+
+
+
+
+
 
 // I need to put in a "dependent" page click Next .  No dependent
 	// this because they killed the senior plan

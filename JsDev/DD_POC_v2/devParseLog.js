@@ -17,7 +17,7 @@ for ( var i = 0; i < results.length; i++ ) {
 
 console.log("<html><head><style type='text/css'>tr.fail {background-color: red;}</style><body><p>");
 console.log("Generated " + Date() + "</p><table border='1' cellspacing='0' cellpadding='3'>");
-console.log("<thead><tr><th> Total Tests " + total +", Pass " + testPass + ", Fail " + testFails + "<br\> Description " );
+console.log("<thead><tr><th> Total Tests " + total +",<br\>Total Pass " + testPass + ",<br\>Total Fail " + testFails + ",<br\> Description " );
 console.log("</th><th>Result</th><th>Duration</th><th>Error Message</th></tr></thead>");
 
 

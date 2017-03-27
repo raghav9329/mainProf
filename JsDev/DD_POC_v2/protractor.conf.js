@@ -42,18 +42,20 @@ exports.config = {
    *  https://github.com/angular/protractor/blob/master/docs/timeouts.md
    */ 
 	  browser.ignoreSynchronization = true;
-
   },
   
-  capabilities: {
-  	browserName: 'chrome'
-  // count: 5,
-  // browserName: 'firefox'
-  },
+
   params: {
   	baseUrl: 'http://DIT3.deltadentalins.com'
   },
   
+  multiCapabilities: [{
+	    'browserName': 'chrome',
+	    	count: 1
+	  }, {
+	    'browserName': 'firefox',
+	    	count: 1
+	  }],
  maxSessions: 1, 
  
 resultJsonOutputFile: 'results.json'
@@ -77,11 +79,7 @@ resultJsonOutputFile: 'results.json'
 //} ,
 
 
-
-//multiCapabilities: [{
-//'browserName': 'chrome',
-//	count: 3
-//}, {
-//'browserName': 'firefox',
-//	count: 2
-//}],
+//capabilities: {
+//browserName: 'chrome'
+//// browserName: 'firefox'
+//},
