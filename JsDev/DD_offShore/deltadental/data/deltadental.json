@@ -1,0 +1,28 @@
+{
+"URL": "https://www.deltadentalins.com",
+"NoOfPeopleCovered" : "2",
+
+"Personalinfo" :{
+"FName": "Hanuma",
+"MI": "Prasad",
+"LName": "Gandhavalla",
+"Gender": "Male",
+"DOB": "07/02/1988",
+"SSN": "123456789",
+"AlternateID": "hanuma4it@gmail.com",
+"HomeAdress": "CA",
+"City": "SA",
+"State": "CA",
+"ZIPcode": "94105",
+"MailAuthentication": "True",
+"Cell": "9505977677",
+"EmailAdress" : "hanuma4it@gmail.com",
+"Authentication": "True",
+"InsuranceAgent": "NO"
+},
+
+"Dependents":{
+
+}
+
+}
