@@ -23,8 +23,9 @@
 	browser.ignoreSynchronization = true;	
 	
 	beforeAll(function () {
-		//var url = protocol.concat(host_mot, '.', testDomain_Name);
-		var url = protocol.concat(host_dit3, '.', testDomain_Name);
+	//	var url = protocol.concat(host_mot, '.', testDomain_Name);
+	//	var url = protocol.concat(host_dit3, '.', testDomain_Name);
+		var url = browser.params.baseUrl;
 		server = host_dit3;
 		browser.get(url );
 		console.log('Starting: CAA50SeniorPlan_Single.test.js')
@@ -42,12 +43,30 @@
 		console.log('it Parent Describe Start:  Senior Plan workflow')
 	});
 
+//	describe('Navigate to the Start page',function(){	
+//		it('it Nav  1: should land on the dit3 home page', function(){	
+//			expect(browser.getCurrentUrl()).toEqual(dit3Url);
+//		//	console.log('it Nav  1: Current URL where we landed is: ',dit3Url)
+//			console.log('it Nav  1: Current URL where we landed is: ',browser.params.baseUrl);
+//		});// end it nav 1
+//	});// end describe(Nav2StartPage)
+	
 	describe('Navigate to the Start page',function(){	
-		it('it Nav  1: should land on the dit3 home page', function(){	
-			 expect(browser.getCurrentUrl()).toEqual(dit3Url);
-			 console.log('it Nav  1: Current URL where we landed is: ',dit3Url)
+		it('it Nav  1: should land on root page ', function(){	
+		//	 expect(browser.getCurrentUrl()).toEqual(dit3Url);
+		// expect(browser.getCurrentUrl()).toEqual(browser.params.baseUrl);
+			
+			browser.getCurrentUrl().then(function(theCurrentUrl){
+			//	expect(theCurrentUrl).to.equal('https://mot.deltadentalins.com');
+			//	expect(theCurrentUrl).to.Contain('mot.delta dental ins.com');
+				expect(theCurrentUrl).toContain('deltadentalins.com');
+			});
+			 
+			 console.log('it Nav  1: Current URL where we landed is: ',browser.params.baseUrl);
 		});// end it nav 1
 	});// end describe(Nav2StartPage)
+	
+	
 	
 	describe('Start the Plan Selection Process via Get A Quote Button', function() {
 		var getAQuote_Button = element(by.css('.button'));
@@ -71,7 +90,13 @@
 //			expect( dlg_SearchForDenPlans.isDisplayed()).toBe(true);
 //			console.log('it strt 2: Found the Search for Dental Plans dialog');
 //		}); //end of it(2)
-	
+		
+		
+		it('it strt 2: should find the proper dialog to start the quote process',function(){
+			var dlg_SearchForDenPlans = element(by.id('ui-dialog-title-searchQuoteDialog'));
+			expect( dlg_SearchForDenPlans.isPresent()).toBe(true);
+			console.log('it strt 2: Found the Search for Dental Plans dialog');
+		}); //end of it(2)	
 
 		
 		// seems like this should be broken up
@@ -122,26 +147,36 @@
 			
 			
 		it('it strt 5: should locate the page titlem properly', function () {
-			var stringPageTitle = "::Individual & Families::";
-			expect(browser.getTitle()).toEqual(stringPageTitle);
-			console.log('it strt 5: Page Title found to be: ',stringPageTitle);
+		//	var stringPageTitle = "::Individual & Families::";
+			var stringPageTitle = "Individual & Families";
+
+			expect(browser.getTitle()).toContain(stringPageTitle);
+			console.log('it strt 5: Page Title contains: ',stringPageTitle);
 		});// end of it(5)	
 			
-		it('it strt 5: should find the proper zip code identified for the three plans', function(){	
+		it('it strt 6: should find the proper zip code identified for the three plans', function(){	
 			// See that zipValue is defined above some 30 lines 
 			// but do I reall need to do this?  Is it any more readable ?
 			var zipCodeUnderTest = '94105';
 			var mySearchCondition = element(by.id('psc_zip'));
-			
+			var zipData = mySearchCondition.getText().then((text)=> {
+				return text;
+			});
 			expect(mySearchCondition.getText()).toEqual(zipCodeUnderTest);
-			console.log('it strt 6: Found zipCode we are testing', zipCodeUnderTest);
+			
+			
+			zipData.then((text) => {
+				
+		//	console.log('it strt 6: Found zipCode we are testing', zipCodeUnderTest);
+			console.log('it strt 6: Found zipCode we are testing', text);
+			});
 		});// end of it(6)
 	
 		it('it strt 7: should find the text of the link for Senior plan' , function(){
 //		it('it strt 7: should find the text of the link for Individual/Family Dental Protram' , function(){
 
-			var seniorPlanLink = element(by.id('planRowsBody_72230')).element(By.tagName('a'));  // CAA50 Senior Plan Link
-			//var seniorPlanLink = element(by.id('planRowsBody_70424')).element(By.tagName('a'));// CAA54 Individual Family Dental Plan
+		//	var seniorPlanLink = element(by.id('planRowsBody_72230')).element(By.tagName('a'));  // CAA50 Senior Plan Link
+			var seniorPlanLink = element(by.id('planRowsBody_70424')).element(By.tagName('a'));// CAA54 Individual Family Dental Plan
 			
 			/* as much as I would like to zero in exactly on the link.....  *s
 			 * the following srPlnLink definition is not finding the link to click
@@ -290,6 +325,9 @@
 			    if (selected) {
 			        element(by.name('diffMail')).click();// to Un Select
 			    }
+///////////
+		/////  => Expect() ??	    
+//////////			    
 			});
 
 			hiddenfieldMailAddr.sendKeys('100 First Street Floor 4');
@@ -307,6 +345,9 @@
 			if (chkBoxPaperless.isSelected()){
 				chkBoxPaperless.isSelected().click();
 				console.log('it pers 5: paperless was selected. Clicked it to unselect');
+		///////////
+				/////  => Expect() ??	    
+		//////////	
 			}else{
 				console.log('it pers 5: there was some prblem unselecting the paperless checkbox');
 			}
@@ -331,7 +372,7 @@
 			}else{
 				console.log('it pers6B: hiddenfieldBrokerNum Was Not Displayed. NoBroker num Entered');
 			}
-
+			browser.sleep(500);  	// just for good measure
 			RadBtnBrokerYes.click();// used to loose focus from input field
 			
 		});// end of it Pers6B
@@ -372,17 +413,33 @@
 			});// end of it pers 7
 	});// end describe personal info page.
 
+////////////////////////
 // I need to put in a "dependent" page click Next .  No dependent
-	// this because they killed the senior plan
+// this because they killed the senior plan
+//
+	describe('Small block to facilitate clicking next on the dependents page ',function(){
+		it('should find the Dependents.Next btn.click()',function(){
+			var depNextBtn	= element(by.id('nextButton'));
+			var ExpCond		= protractor.ExpectedConditions;
+			browser.wait(ExpCond.elementToBeClickable(depNextBtn),5000);
+			depNextBtn.click();
+			depNextBtn.click();
+		
+			console.log('Small Block Dep.NextBtn.Click()-Done.')
+		});
+	});
 	
 	
 	describe('Facilities Page, expect-wait, Select(), Submit()', function(){	
 		// TO DO:  field validation for where ever it there
 		// Intent is to mimic the approach used on the personal info page
 		var ExpctCond = protractor.ExpectedConditions;
+		var facilitiesSearchButton	= element(by.id('search-facilities'));
 		
 		it('it facs 1: use expected condition to let the page stabilize Test 1', function() {
-			browser.wait(ExpctCond.visibilityOf($('#search-facilities')),15000);
+			
+			
+			browser.wait(ExpctCond.visibilityOf(facilitiesSearchButton),15000);
 			console.log('it facs 1: Exactly like the visibilityOf Example');
 		});// end of it facs 1
 	
@@ -392,6 +449,11 @@
 			
 			browser.sleep(500);
 		});// end of it facs 2
+		
+		it('it facs2b: how about we click the button, yes?',function(){
+			facilitiesSearchButton.click();
+			console.log('it facs2b: Search btn clicked');
+		});
 		
 		//it should evaluate to the facilities page "title" , function() { });
 		//"Facilities | Enrollment | Delta Dental Insurance Company"

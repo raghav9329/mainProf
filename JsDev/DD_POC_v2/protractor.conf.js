@@ -17,11 +17,11 @@ exports.config = {
  // specs: ['./*.test.js'],
   
 // specs: ['integration/scenarios/CAA50Senior_Single.test.js'],
- specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
+// specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
 // specs: ['integration/scenarios/CAA55PlanSelect.test.js'],
 // specs: ['integration/scenarios/CAA55SimplePlan_WasSenior.test.js'],
   
-//  specs: ['integration/scenarios/**/*.test.js'],
+  specs: ['integration/scenarios/**/*.test.js'],
 
   
   suites: {
@@ -32,6 +32,7 @@ exports.config = {
   seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
   chromeDriver:      'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.26',
   geckodriver:       'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
+//  geckodriver:       'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
   onPrepare: function(){
    
 	  browser.driver.manage().window().setSize(1050,950);
@@ -51,12 +52,19 @@ exports.config = {
   
   multiCapabilities: [{
 	    'browserName': 'chrome',
-	    	count: 1
+	    	//count: 1
 	  }, {
 	    'browserName': 'firefox',
-	    	count: 1
-	  }],
- maxSessions: 1, 
+	    	//count: 1
+	  }], 
+	  
+	//  {
+	//	    'browserName': 'internet explorer',
+	//    	'platform': 'ANY',
+	//    	'version' : '11'
+	//  }],
+
+	  maxSessions: 1, 
  
 resultJsonOutputFile: 'results.json'
 

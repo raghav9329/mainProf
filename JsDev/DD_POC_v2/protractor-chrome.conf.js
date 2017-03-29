@@ -17,11 +17,11 @@ exports.config = {
  // specs: ['./*.test.js'],
   
 // specs: ['integration/scenarios/CAA50Senior_Single.test.js'],
- specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
-// specs: ['integration/scenarios/CAA55PlanSelect.test.js'],
-// specs: ['integration/scenarios/CAA55SimplePlan_WasSenior.test.js'],
+// specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
+// specs: ['integration/scenarios/CAA55PlanSelect.dev.js'],
+// specs: ['integration/scenarios/CAA55SimplePlan_WasSenior.dev.js'],
   
-//  specs: ['integration/scenarios/**/*.test.js'],
+  specs: ['integration/scenarios/**/*.test.js'],
 
   
   suites: {
