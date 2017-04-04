@@ -1,15 +1,8 @@
-3/14/17
-Get the reporting code into the POM_lab
+4/3/17 
+Facilitate running JS in Eclipse
+Get all Site uid/pids documented.
 
-POM_Lab
-pass in arguments
-* host D, M, for DIT3 and MOT
-* Iterations ?
-* 
 
-take the reporting piece and continue in POM_lab
-Total executed
-Totlal nonPass
 
 Description changes
 A: Quote Start
@@ -86,12 +79,16 @@ Done: Need to enter details into the Doc task cxinit-278
 
 
 
-
-
-
-
-
-
+3/14/17 -Done(I don't know when )
+Get the reporting code into the POM_lab
+POM_Lab - Done
+pass in arguments
+* host D, M, for DIT3 and MOT
+* Iterations ?
+* 
+take the reporting piece and continue in POM_lab
+Total executed
+Totlal nonPass
 
 
 

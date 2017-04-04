@@ -1,3 +1,18 @@
+3/27/17  nice little get value text construct
+http://stackoverflow.com/questions/38827494/how-to-return-text-from-an-element-into-variable-in-protractor
+ var data = mainPage.counter().getText().then((text) => {
+    return text;
+   });
+ // at this point data is still a managed promise!
+ data.then((text) => {
+   console.log(text); // your text would be printed!
+  });
+
+
+
+
+
+
 3/14/17
 https://www.garysieling.com/blog/fixing-error-output-is-not-a-tty-in-node
 

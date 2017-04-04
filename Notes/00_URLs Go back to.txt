@@ -6,9 +6,9 @@ One of many F1 videos Peter Windsor and Craig Scarborough on tech things
 
 https://www.npmjs.com/package/jasmine-terminal-reporter
 This might have been related to looking at sonar/jenkins and how it reports
-Dave turned me on to Jasmine pieces.  this might have been one of them
+Dave turned me on to Jasmine pieces.  this might have been one of them
 
-google: yosemite 2 million years ago
+google: yosemite 2 million years ago
 Look at Images
 
 

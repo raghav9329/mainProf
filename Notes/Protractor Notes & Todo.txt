@@ -2,6 +2,35 @@
 protractor_SolutionsFound.  Was also renamed *Todo
 
 
+3/28/17
+Notes on what IE Options Im changing.
+using http://stackoverflow.com/questions/37456099/protractor-test-in-ie
+as my guide.  this will be current state -> to configured state
+
+4)In Security tab > Disable protected mode for all zones
+Internet ON->off  Restriced Sites ON->Off
+
+5)Navigate to Privacy tab TurnOff PopUp Blocker
+ON -> Off
+
+Advanced Tab )
+First set ided by box ON -> Off
+Empty Temp Internet files folder Off -> ON
+
+Warn section under TLS....
+Warn about cert addr mismatch ON -> off
+WArn if changeing between No Change
+Warn if Post submittal   ON -> off
+
+General Tab)
+Delete Browser Hist OFF - > On
+
+Security Tab )
+Internet Mid -> Bottom
+Local Intranet oneUP -> Bottom
+Trusted Sites  Middle -> Botton
+Restricted Site Top -> ( CANNOT Make this change )
+
 3/9/17
 this is a page about sendKeys(value);
 http://www.mythoughts.co.in/2012/12/sending-special-characters-and-key.html#.WL4KqFXyu73
