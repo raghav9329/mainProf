@@ -1,4 +1,7 @@
-Git_Tips
+4/6/17
+git whatchanged  gives and interesting and useful look 
+at everything that has chaged in the repo.
+I use to see what's been done since I last committed 
 
 12/22/16
 List a Repo’s Branches ( All of them )
@@ -16,25 +19,25 @@ http://stackoverflow.com/questions/5730460/how-to-do-a-git-diff-on-moved-renamed
 
 10/14/16
 Getting rid of continual .metadata and .recommenders and any other such filesÉ..
-you need to add and commit every thing that you are interested inÉ.. 
+you need to add and commit every thing that you are interested inÉ.. 
 source files text , what evvah!
-This leaves behind all the Workspace .metadata/*  and workspace/project/.meta.. or recommendersÉ.  
+This leaves behind all the Workspace .metadata/*  and workspace/project/.meta.. or recommendersÉ.  
 With this stuff as the only that is reported in git status changes not staged for commit:
 In this case they were all WorkSpace/.metadata/.* sooooÉ
-I did #git rm -rf JavaDev/.metadata   but the command instructed at 
-http://stackoverflow.com/questions/11451535/gitignore-not-working   had been git rm -r Ñcached
+I did #git rm -rf JavaDev/.metadata   but the command instructed at 
+http://stackoverflow.com/questions/11451535/gitignore-not-working   had been git rm -r Ñcached
 It was the instruction to a similar problem.
-Removing the entire subdirectory from the REPO was EXACTLY what I really wanted to do.  I donÕt care about the metadata only the source
+Removing the entire subdirectory from the REPO was EXACTLY what I really wanted to do.  I donÕt care about the metadata only the source
 
 
-git checkout - - <pathtofile>   the two dashes are supposed to be closer together    
+git checkout - - <pathtofile>   the two dashes are supposed to be closer together    
 this will change the edits on the file back to unedited.
 
 Question to be answered: Does it take it out of modified or out of staged ?
 
 
-git log -2 <file>  puts out commit ID
+git log -2 <file>  puts out commit ID
 
-git diff commitID <file>  will show the difference between <file> and the stat at commitID
+git diff commitID <file>  will show the difference between <file> and the stat at commitID
 
 

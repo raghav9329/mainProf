@@ -1,6 +1,14 @@
 General Tips
 Started 6/15/16
 
+4/6/17 
+Git Bash At DD cannot see drive P in the devConnect destop
+Git Bash at DD on my local machine CAN see drive P.
+So, in the DevConnect Desktop session I had to do the following
+Map Drive P:  to folder \\Client\P$    
+Chris Pike at the help desk helped me do this
+Now I have drive P in my GitBash Shell window.
+
 3/28/17 
 Windows Open and HTML file from command line
 start file_name
