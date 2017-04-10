@@ -1,0 +1,93 @@
+{
+	"URL": "https://mot.deltadentalins.com",
+	"NoOfPeopleCovered": "2",
+	"ZIPcode": "94105",
+    "DOB": "07/02/1988",
+
+	"Personalinfo": {
+
+		"FName": {      
+			"FName_Blank": {
+				"FName": " ",
+				"ErrorMsg": "Please enter your First name",
+				"ExecutionFlag": true
+			},
+			"FName_Numeric": {
+				"FName": "123456",
+				"ErrorMsg": "Letters or punctuation only please",
+				"ExecutionFlag": true
+			},
+
+			"FName_SpecialChar": {
+				"FName": "/-*+",
+				"ErrorMsg": "Letters or punctuation only please",
+				"ExecutionFlag": true
+			},
+			"FName": {
+				"FName": "Prasad",
+				"ErrorMsg": "",
+				"ExecutionFlag": true
+			}
+		},
+
+		"LName": {
+			"LName_Blank": {
+				"LName": " ",
+				"ErrorMsg": "Please enter your last name",
+				"ExecutionFlag": true
+			},
+			"LName_Numeric": {
+				"LName": "123456",
+				"ErrorMsg": "Letters or punctuation only please",
+				"ExecutionFlag": true
+			},
+
+			"LName_SpecialChar": {
+				"LName": "/-*+",
+				"ErrorMsg": "Letters or punctuation only please",
+				"ExecutionFlag": true
+			},
+			"LName": {
+				"LName": "Prasad",
+				"ErrorMsg": "",
+				"ExecutionFlag": true
+			}
+		},
+
+		"DOB": "07/02/1988",
+
+		"SSN": {
+			"SSN_Blank": {
+				"SSN": " ",
+				"ErrorMsg": "Please enter your SSN",
+				"ExecutionFlag": true
+			},
+			"SSN_WrongSSN": {
+				"SSN": "1234",
+				"ErrorMsg": "Please enter your SSN completely (XXX-XX-XXXX)",
+				"ExecutionFlag": true
+			},
+
+			"SSN_SpecialChar": {
+				"SSN": "/-*+",
+				"ErrorMsg": "Please enter your SSN",
+				"ExecutionFlag": true
+			},
+			"SSN_String": {
+				"SSN": "Prasad",
+				"ErrorMsg": "Please enter your SSN",
+				"ExecutionFlag": true
+			},
+			"SSN_ValidSSN": {
+				"SSN": "123456789",
+				"ErrorMsg": "",
+				"ExecutionFlag": true
+			}
+		}
+	},
+
+	"Dependents": {
+
+	}
+
+}
