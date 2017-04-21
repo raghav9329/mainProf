@@ -7,16 +7,23 @@ exports.config = {
     browserName: 'chrome'
   },
 
+//Follow is for running locally on drive C:
   seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
   chromeDriver:      'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.26',
-  geckodriver:       'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0', 
+  geckodriver:       'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
+
+//  Follow is for running from DeltaDev Account on Drive P:
+//  seleniumServerJar: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.3.1.jar',
+//  chromeDriver:      'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
+//  geckodriver:       'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.15.0',
+
   
 onPrepare: function() {
 	minWait = 1000;
 	maxWait = 2000;
 	longWait = 40000;
 //	browser.manage().window().maximize();
-	browser.driver.manage().window().setSize(1050,950);
+//	browser.driver.manage().window().setSize(1050,950);
 	browserActions = new (require("./integration/utils/browserActions.js"));
 
 	dataProvider = require('jasmine-data-provider');

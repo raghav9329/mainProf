@@ -1,0 +1,284 @@
+//  IN this file I need to resduce the number of configuration files that are not 
+// directly in use.  I'm going to from the file and move the contents here.
+// I'll zip all the config files so they'll all still be there
+//
+
+////////////////////////////////////////////////////////////////////
+// protractor-pageObjTest.conf.js
+//
+// conf.js
+exports.config = {
+  framework: 'jasmine',
+ //directConnect: true,
+ //seleniumAddress: 'http://localhost:4444/wd/hub',
+  
+specs: ['integration/scenarios/POM_Test.test.js'],
+  seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
+  chromeDriver: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.26',
+  geckodriver:  'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
+  onPrepare: function(){
+   
+	  browser.driver.manage().window().setSize(1050,950);
+   
+  /********************************************************************************************   
+   *  Waiting for Angular Synchronization. The following is key when testing non Angular Apps
+   *  Turning browser synchronization off. For further detail see the following
+   *  https://github.com/angular/protractor/blob/master/docs/timeouts.md
+   */ 
+	  browser.ignoreSynchronization = true;
+
+  },
+capabilities: {
+	browserName: 'chrome'
+	// browserName: 'firefox'
+  },
+  
+//  resultJsonOutputFile: 'reports/integration/result.json'
+  resultJsonOutputFile: 'result.json'
+}
+
+//////////////////////////////////////////////////////////////////////////
+// protractor-id.conf.js
+//
+//
+exports.config = {
+  'autoStartStopServer': true,
+  onPrepare: function(){
+	   
+	  browser.driver.manage().window().setSize(1000,900);
+   
+  /********************************************************************************************   
+   *  Waiting for Angular Synchronization. The following is key when testing non Angular Apps
+   *  Turning browser synchronization off. For further detail see the following
+   *  https://github.com/angular/protractor/blob/master/docs/timeouts.md
+   */ 
+	  browser.ignoreSynchronization = true;
+  },
+  capabilities: {
+    'browserName': 'internet explorer',
+    	'platform': 'ANY',
+    	'version' : '11'
+  },
+  framework: 'jasmine',
+  specs: ['integration/scenarios/**/*.test.js'],
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 30000
+  }
+};
+
+//////////////////////////////////////////////////////////////////////////////
+// protractor-dev_test_ch_conf.js
+//
+//
+// conf.js execute via bash alias ppcc
+exports.config = {
+  framework: 'jasmine',
+ //directConnect: true,
+ //seleniumAddress: 'http://localhost:4444/wd/hub',
+ //specs: ['./*.test.js'],
+ //specs: ['integration/scenarios/**/*.test.js'],
+//  specs: ['integration/scenarios/CAA50Senior_Single.test.js'],
+  specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
+  
+  suites: {
+	  suite1: 'integration/scenarios/CAA*.test.js',
+	  pomSuite: 'ingegration/scenarios/POM_Test.test.js'
+  },
+  
+  seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
+  chromeDriver: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.26',
+  geckodriver:  'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
+  onPrepare: function(){
+   
+	  browser.driver.manage().window().setSize(1050,950);
+   
+  /********************************************************************************************   
+   *  Waiting for Angular Synchronization. The following is key when testing non Angular Apps
+   *  Turning browser synchronization off. For further detail see the following
+   *  https://github.com/angular/protractor/blob/master/docs/timeouts.md
+   */ 
+	  browser.ignoreSynchronization = true;
+
+  },
+capabilities: {
+	browserName: 'chrome'
+	// browserName: 'firefox'
+  },
+  
+//  resultJsonOutputFile: 'reports/integration/result.json'
+  resultJsonOutputFile: 'result.json'
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+// protractor-ch_ff-CAA55SimpleWasSr.conf.js
+//
+//
+//
+// conf.js  execute via bash alias ca55sim
+exports.config = {
+  framework: 'jasmine',
+ //directConnect: true,
+ //seleniumAddress: 'http://localhost:4444/wd/hub',
+//  specs: ['integration/scenarios/CAA55PlanSelect.test.js'],
+  specs: ['integration/scenarios/CAA55SimplePlan_WasSenior.test.js'],
+  seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
+  chromeDriver: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.26',
+  geckodriver:  'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
+  onPrepare: function(){
+   
+	  browser.driver.manage().window().setSize(1050,950);
+   
+  /********************************************************************************************   
+   *  Waiting for Angular Synchronization. The following is key when testing non Angular Apps
+   *  Turning browser synchronization off. For further detail see the following
+   *  https://github.com/angular/protractor/blob/master/docs/timeouts.md
+   */ 
+	  browser.ignoreSynchronization = true;
+
+  },
+capabilities: {
+	browserName: 'chrome'
+	// browserName: 'firefox'
+  },
+  
+//  resultJsonOutputFile: 'reports/integration/result.json'
+  resultJsonOutputFile: 'result.json'
+}
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+// protractor-chrome.Jasmine.Gulp.conf.js
+//
+//
+//
+// conf.js
+const SpecReporter = require('jasmine-spec-reporter')
+    jasmineReporters = require('jasmine-reporters'),
+    Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter')
+
+exports.config = {
+  //framework: 'jasmine',  3/7/2017 changed this to jasmine2 below
+  framework: 'jasmine2',
+  
+  //directConnect: true,
+  //seleniumAddress: 'http://localhost:4444/wd/hub',
+  //specs: ['DDCX-HP-5Pg2Dp.test.js'],
+  //specs: ['./*.test.js'],
+  specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
+  seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
+  chromeDriver: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.26',
+  geckodriver:  'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
+   
+  jasmineNodeOpts: {
+        //The default timeout for a spec.  This may need to increase when the amount of tests in a spec increases.
+        defaultTimeoutInterval: 60000,
+    },
+
+
+  onPrepare: function(){
+   
+      /**
+       * Configure terminal reporter for protractor status
+       */
+      var options = {
+          displayStacktrace: 'none',    // display stacktrace for each failed assertion, values: (all|specs|summary|none)
+          displayFailuresSummary: true, // display summary of all failures after execution
+          displayPendingSummary: true,  // display summary of all pending specs after execution
+          displaySuccessfulSpec: true,  // display each successful spec
+          displayFailedSpec: true,      // display each failed spec
+          displayPendingSpec: true,    // display each pending spec
+          displaySpecDuration: true,   // display each spec duration
+          displaySuiteNumber: true,    // display each suite number (hierarchical)
+          colors: {
+              success: 'green',
+              failure: 'red',
+              pending: 'yellow'
+          },
+          //// So look at my svb configs, these chars just changed upon SAVE
+          prefixes: {
+              success: '? ',
+              failure: '? ',
+              pending: '* '
+          }
+      }
+      
+      // ** Also See http://stackoverflow.com/questions/37173251/how-can-parametrize-protractor-config-file-for-different-browsers-and-test-suite
+      // ** for a similar reporter configuration
+      jasmine.getEnv().addReporter(new SpecReporter(options));
+
+      /**
+       * Configure XML reporter for protractor
+       */
+
+      jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+          consolidateAll: true,
+          savePath: 'reports/integration',
+          filePrefix: 'int-test-results'
+      }));
+      
+      /**
+       * Configure XML reporter to not override previous report from yesterday
+       */
+
+      // returning the promise makes protractor wait for the reporter config before executing tests
+      var promises = [];
+      var promise = browser.getProcessedConfig().then(function (config) {
+          // you could use other properties here if you want, such as platform and version
+          var browserName = config.capabilities.browserName;
+
+          var junitReporter = new jasmineReporters.JUnitXmlReporter({
+              consolidateAll: true,
+              savePath: 'reports/integration',
+              filePrefix: browserName + '.int-test-results'
+          });
+
+          jasmine.getEnv().addReporter(junitReporter);
+      });
+      promises.push(promise);
+
+      promise = browser.getProcessedConfig().then(function (config) {
+          var browserName = config.capabilities.browserName;
+
+          var reporter = new Jasmine2HtmlReporter({
+              savePath: 'reports/integration',
+              reportTitle: 'Integration Test Report',
+              showSummary: true,
+              showQuickLinks: true,
+              takeScreenshots: false,
+              filePrefix: browserName + '-DeltaCustExp-test',
+              consolidate: true,
+              consolidateAll: true
+          });
+          jasmine.getEnv().addReporter(reporter);
+      });
+      promises.push(promise);
+
+      
+      browser.driver.manage().window().setSize(950,950);
+   
+  /**************************************************************   
+   *  Waiting for Angular Synchronization
+   *  The following is key when testing non Angular Apps
+   *  Turning browser synchronization off
+   *  For further detail see the following
+   *  https://github.com/angular/protractor/blob/master/docs/timeouts.md
+   */ 
+	  browser.ignoreSynchronization = true;
+
+  },
+capabilities: {
+	browserName: 'chrome'
+	// browserName: 'firefox'
+  },
+  
+//  resultJsonOutputFile: 'reports/integration/result.json'
+  resultJsonOutputFile: 'result.json'
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////
+//  4/14/17 Currently the end of the file

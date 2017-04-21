@@ -20,8 +20,8 @@ exports.config = {
 // specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
 // specs: ['integration/scenarios/CAA55PlanSelect.dev.js'],
 // specs: ['integration/scenarios/CAA55SimplePlan_WasSenior.dev.js'],
-  
-  specs: ['integration/scenarios/**/*.test.js'],
+//  specs: ['integration/scenarios/**/*.test.js'],
+ specs: ['integration/scenarios/personalInfo_Approach3.spec.js'],
 
   
   suites: {
@@ -29,10 +29,17 @@ exports.config = {
 	  pomSuite: 'ingegration/scenarios/POM_Test.test.js'
   },
   
+//  Follow is for running locally on drive C:
   seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
   chromeDriver:      'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.26',
   geckodriver:       'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
-  onPrepare: function(){
+
+//  Follow is for running from DeltaDev Account on Drive P:
+//  seleniumServerJar: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.3.1.jar',
+//  chromeDriver:      'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
+//  geckodriver:       'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.15.0',
+  
+	onPrepare: function(){
    
 	  browser.driver.manage().window().setSize(1050,950);
    
