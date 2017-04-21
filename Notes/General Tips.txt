@@ -1,6 +1,20 @@
 General Tips
 Started 6/15/16
 
+[‎4/‎13/‎2017 4:19 PM] Steven Hansen: 
+
+
+#UNIX App Admins <UNIXAppAdmins@delta.org>       The Unix App Team - responsible for applications on Linux and  Rundeck
+#Devops AppAuto <#DevopsAppAuto@delta.org>       My Team - Chef Github Artifactory - builds and deployments
+#Unix SysAdmins <Unix.SysAdmins@delta.org>       Unix SysAdmin responsible for Linux OS - on-premise and AWS
+#Infrastructure Automation <InfrastructureAutomation@delta.org>  THis team responsible for VMWare, IaaS & PaaS. So building VM's on premise and AW 
+
+
+
+Git Token
+e04d3d782737085fc2b2a820ed0fc5f91d20d886
+
+
 4/6/17 
 Git Bash At DD cannot see drive P in the devConnect destop
 Git Bash at DD on my local machine CAN see drive P.

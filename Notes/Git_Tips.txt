@@ -1,3 +1,7 @@
+4/20/17
+git ls-remote 
+will show the branches in the repo
+
 4/6/17
 git whatchanged  gives and interesting and useful look 
 at everything that has chaged in the repo.
