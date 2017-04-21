@@ -21,7 +21,7 @@ exports.config = {
 // specs: ['integration/scenarios/CAA55PlanSelect.dev.js'],
 // specs: ['integration/scenarios/CAA55SimplePlan_WasSenior.dev.js'],
 //  specs: ['integration/scenarios/**/*.test.js'],
- specs: ['integration/scenarios/personalInfo_Approach3.spec.js'],
+ specs: ['integration/scenarios/cxinit/cxinit.507.test.js'],
 
   
   suites: {

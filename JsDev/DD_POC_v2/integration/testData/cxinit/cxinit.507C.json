@@ -1,0 +1,381 @@
+{
+    "URL": "https://mot.deltadentalins.com",
+    "NoOfPeopleCovered": "2",
+    "ZIPcode": "94105",
+    "DOB_HOME": "07/02/1988",
+    "ErrorMsg_Month": "Please enter a valid month between (01-12)",
+    "ErrorMsg_Date": "Please enter a valid day between (01-31)",
+    "ErrorMsg_Year": "Please enter a valid year",
+    "ariainvalid_error": "error",
+    "ariainvalid_success": "success",
+
+    "Personalinfo": {
+
+        "FName_TestData": {
+            "FName_Name1": {
+                "FName": "Test",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+            "FName_Name2": {
+                "FName": "O'Farrell",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+
+            "FName_Name3": {
+                "FName": "Javier Camacho-Serrano",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+            "FName_Name4": {
+                "FName": "Ratana Praneechai-Bass",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+            "FName_Name5": {
+                "FName": "Maëlle",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "FName_Name6": {
+                "FName": "Esmé",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+
+            "FName_Name7": {
+                "FName": "Shyè",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "FName_Name8": {
+                "FName": "Garbiñe",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "FName_Name9": {
+                "FName": "Çakırbey",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "FName_Name10": {
+                "FName": "Siân",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "FName_Name11": {
+                "FName": "Paul123",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "FName_Name12": {
+                "FName": "';',':', '*', '^', '%', '@', '?','/', '<', '>','\\', '~', '`'",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "FName_Name13": {
+                "FName": " ",
+                "ErrorMsg": "Please enter your First Name",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "FName_Name14": {
+                "FName": "223432535",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            }
+        },
+
+        "MI": {
+            "MI_SplChar": {
+                "MI": "$",
+                "ErrorMsg": "",
+                "Expected": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+            "MI_Num": {
+                "MI": "1",
+                "ErrorMsg": "",
+                "Expected": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+            "MI_Char": {
+                "MI": "A",
+                "ErrorMsg": "",
+                "Expected": "A",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            }
+
+        },
+
+        "LName_TestData": {
+            "LName_Name1": {
+                "LName": "Test",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+            "LName_Name2": {
+                "LName": "O'Farrell",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+
+            "LName_Name3": {
+                "LName": "Javier Camacho-Serrano",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+            "LName_Name4": {
+                "LName": "Ratana Praneechai-Bass",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ExecutionFlag": true
+            },
+            "LName_Name5": {
+                "LName": "Maëlle",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "LName_Name6": {
+                "LName": "Esmé",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+
+            "LName_Name7": {
+                "LName": "Shyè",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "LName_Name8": {
+                "LName": "Garbiñe",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "LName_Name9": {
+                "LName": "Çakırbey",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "LName_Name10": {
+                "LName": "Siân",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "LName_Name11": {
+                "LName": "Paul123",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "LName_Name12": {
+                "LName": "';',':', '*', '^', '%', '@', '?','/', '<', '>','\\', '~', '`'",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "LName_Name13": {
+                "LName": " ",
+                "ErrorMsg": "Please enter your Last Name",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "LName_Name14": {
+                "LName": "223432535",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            }
+        },
+
+        "Gender": {
+            "Gender_Blank": {
+                "Gender": " ",
+                "ErrorMsg": "Please select a gender",
+                "ExecutionFlag": true
+            },
+            "Gender_Female": {
+                "Gender": "Female",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+            "Gender_Male": {
+                "Gender": "Male",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+            "Gender_NonBinary": {
+                "Gender": "Non Binary",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+            "Gender_Nottosay": {
+                "Gender": "Prefer not to say",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            }
+        },
+
+        "DOB": {
+            "DOB_Notfullfill": {
+                "DOB": "01/01/2001",
+                "ErrorMsg_BirtDate": "Applicant must be 18 years of age or over",
+                "ExecutionFlag": true
+            },
+            "DOB_pastDate": {
+                "DOB": "01/01/1800",
+                "ErrorMsg_BirtDate": "Applicant must be 18 years of age or over",
+                "ExecutionFlag": true
+            },
+            "DOB_featureDate": {
+                "DOB": "01/01/2018",
+                "ErrorMsg_BirtDate": "Applicant must be 18 years of age or over",
+                "ExecutionFlag": true
+            },
+            "DOB_Invalid": {
+                "DOB": "29/29/1999",
+                "ErrorMsg_BirtDate": "Invalid Birthdate. Please check your entry for the correct dates.",
+                "ExecutionFlag": true
+            }
+        },
+
+
+        "SSN": {
+            "SSN_Blank": {
+                "SSN": " ",
+                 "ariainvalid": "error",
+                "ErrorMsg": "Please enter your SSN",
+                "ExecutionFlag": true
+            },
+            "SSN0": {
+                "SSN": "090",
+                 "ariainvalid": "error",
+                "ErrorMsg": "Please enter your SSN completely (XXX-XX-XXXX)",
+                "ExecutionFlag": true
+            },
+
+            "SSN1": {
+                "SSN": "090 15 7899",
+                 "ariainvalid": "success",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "SSN2": {
+                "SSN": "100- 56-3733",
+                  "ariainvalid": "success",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+            "SSN3": {
+                "SSN": "900-77-7887",
+                  "ariainvalid": "success",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+            "SSN_String": {
+                "SSN": "abc-de-fgh;",
+                   "ariainvalid": "error",
+                "ErrorMsg": "Please enter your SSN",
+                "ExecutionFlag": true
+            }
+        },
+        "AlternateId": {
+            "AlternateId_Blank": {
+                "AlternateId": "",
+                "ExecutionFlag": true
+            },
+
+            "AlternateId1": {
+                "AlternateId": "Any",
+                "ExecutionFlag": true
+            },
+            "AlternateId2": {
+                "AlternateId": "gpsvicki@aol.com",
+                "ExecutionFlag": true
+            },
+            "AlternateId3": {
+                "AlternateId": "Passport: G48875945",
+                "ExecutionFlag": true
+            },
+            "AlternateId4": {
+                "AlternateId": "Passport#: G48875945",
+                "ExecutionFlag": true
+            },
+            "AlternateId5": {
+                "AlternateId": "F6789056",
+                "ExecutionFlag": true
+            },
+            "AlternateId6": {
+                "AlternateId": "135-345-456",
+                "ExecutionFlag": true
+            },
+            "AlternateId7": {
+                "AlternateId": "890-45-9876",
+                "ExecutionFlag": true
+            },
+            "AlternateId8": {
+                "AlternateId": "Drivers License-F6789056",
+                "ExecutionFlag": true
+            },
+            "AlternateId9": {
+                "AlternateId": "dsds-sfsdfs",
+                "ExecutionFlag": true
+            }
+        },
+
+        "HAddress_Blank": {
+            "HAddress": " ",
+            "ErrorMsg": "Please enter a street address",
+            "ExecutionFlag": true
+        },
+
+        "HAddress_Invalid": {
+            "HAddress_Invalid": "jkgjhggjhgjhgjhgjhg",
+            "ErrorMsg": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
+            "ExecutionFlag": true
+        },
+
+
+        "HAddress_Blank": {
+            "HAddress": "",
+            "ErrorMsg": "Please enter a street address",
+            "ExecutionFlag": true
+        },
+
+        "HAddress_ZIP": {
+            "HAddress": "5208  U.S. 19,sandy springs,GA,United States",
+            "ErrorMsg": "Please enter a street address",
+            "ExecutionFlag": true
+        }
+
+    }
+
+
+}
