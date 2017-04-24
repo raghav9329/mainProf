@@ -30,6 +30,7 @@ class PersonalInfoPageLocators {
     this.fieldHomeAddr = by.id('streetAddress');
     this.fieldAlternateId = by.id('alt_id');
     this.errMsgHomeAddr = by.id('streetAddress-error');
+    this.errinvalidAddr=by.css('label.error.cleanse-ajax-error')
     this.fieldCity = by.id('city');
     this.errMsgCity = by.id('city-error');
     this.fieldState = by.id('state');
@@ -46,6 +47,7 @@ class PersonalInfoPageLocators {
     this.RadBtnBrokerYes = by.id('brokerYes');
     this.RadBtnBrokerNo = by.id('brokerNo');
     this.linkBackToQuote = by.id('backToQuote');
+    this.zipPopBack =by.id('zipPopBack');
     this.persPageButtonNext = by.id('nextButton');
     this.allerrMsg = element.all(by.css('div.error-container.global-margin label'));
     this.hiddenfieldMailAddr = by.id('mailingAddress');

@@ -33,20 +33,23 @@ class PersonalInfoPage extends ControlBase {
         this.errMsgBdDD = new Label(this.pageObjects.errMsgBdDD);
         this.fieldBdYyyy = new TextBox(this.pageObjects.fieldBdYyyy);
         this.errMsgBdYyyy = new Label(this.pageObjects.errMsgBdYyyy);
-         this.errBirthDate = new Label(this.pageObjects.errBirthDate);
-        
+        this.errBirthDate = new Label(this.pageObjects.errBirthDate);
+
         this.fieldSsn = new TextBox(this.pageObjects.fieldSsn);
         this.errMsgSsn = new Label(this.pageObjects.errMsgSsn);
+
         this.fieldHomeAddr = new TextBox(this.pageObjects.fieldHomeAddr);
         this.errMsgHomeAddr = new Label(this.pageObjects.errMsgHomeAddr);
+        this.errinvalidAddr = new Label(this.pageObjects.errinvalidAddr);
+
         this.fieldCity = new TextBox(this.pageObjects.fieldCity);
         this.errMsgCity = new Label(this.pageObjects.errMsgCity);
         this.fieldState = new TextBox(this.pageObjects.fieldState);
         this.errMsgState = new Label(this.pageObjects.errMsgState);
         this.fieldZipCode = new TextBox(this.pageObjects.fieldZipCode);
-         this.fieldAlternateId = new TextBox(this.pageObjects.fieldAlternateId);
+        this.fieldAlternateId = new TextBox(this.pageObjects.fieldAlternateId);
 
-        
+
         this.errMsgZipCode = new Label(this.pageObjects.errMsgZipCode);
 
 
@@ -63,7 +66,7 @@ class PersonalInfoPage extends ControlBase {
 
         // change to check box and radio
         this.chkBoxPaperless = new Button(this.pageObjects.chkBoxPaperless);
-          // change to Radio box controle
+        // change to Radio box controle
         this.RadBtnBrokerYes = new Button(this.pageObjects.RadBtnBrokerYes);
 
 
@@ -73,6 +76,8 @@ class PersonalInfoPage extends ControlBase {
 
         //change to link conrols 
         this.linkBackToQuote = new Button(this.pageObjects.linkBackToQuote);
+         this.zipPopBack = new Button(this.pageObjects.zipPopBack);
+        
 
         this.Next = new Button(this.pageObjects.persPageButtonNext);
         this.allerrMsg = new Label(this.pageObjects.allerrMsg);

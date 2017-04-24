@@ -1,14 +1,13 @@
 {
   "name": "delta-dental_CX_Test_Automation",
   "version": "0.0.3",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "protractor": "protractor",
     "****************************Build******************************": "",
     "*************************Unit Tests****************************": "",
     "********************Ingegration Tests**************************": "",
-  	"DDCX_POC" : "protractor DDCX_POC_chrome.conf.js",
+    "DDCX_POC": "protractor DDCX_POC_chrome.conf.js",
     "protractor-chrome": "protractor protractor-chrome.conf.js",
     "protractor-firefox": "protractor protractor-firefox.conf.js",
     "****************************Tools******************************": ""
@@ -29,5 +28,8 @@
     "protractor-jasmine2-html-reporter": "0.0.6",
     "vinyl-source-stream": "1.1.0",
     "webdriver-manager": "10.2.6"
+  },
+  "dependencies": {
+    "log4js": "^1.1.1"
   }
 }
