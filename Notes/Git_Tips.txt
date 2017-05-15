@@ -1,3 +1,14 @@
+4/27/17  
+Also
+git branch -a retuens things  that 
+git ls-remote doesn't
+
+
+4/25/17
+Good instruciton on Configuraiton, before* & after*
+http://timothymartin.azurewebsites.net/protractor-before-and-afters/
+http://timothymartin.azurewebsites.net/promises-and-callbacks/
+
 4/20/17
 git ls-remote 
 will show the branches in the repo

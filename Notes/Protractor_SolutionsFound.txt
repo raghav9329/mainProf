@@ -1,3 +1,13 @@
+5/10/17 
+Possible little solution to dependents details where Jason U. was telling me 
+about finding a parent and then going back down to the child needed.
+https://github.com/angular/protractor/issues/1086
+Discusses on July 18, 2014 the improper user of isElementPresent
+and how it's supposted to be used.
+isElementPresent expects an argument for a sub-locator - it's trying to find a child of the element it's called on.  This from Juilmr
+
+
+
 3/27/17  nice little get value text construct
 http://stackoverflow.com/questions/38827494/how-to-return-text-from-an-element-into-variable-in-protractor
  var data = mainPage.counter().getText().then((text) => {
@@ -7,9 +17,6 @@ http://stackoverflow.com/questions/38827494/how-to-return-text-from-an-element-i
  data.then((text) => {
    console.log(text); // your text would be printed!
   });
-
-
-
 
 
 

@@ -1,0 +1,13 @@
+4/27/17
+From several days ago.
+Using this
+http://stackoverflow.com/questions/33301476/how-to-wait-the-page-to-test-is-loaded-in-non-angular-site
+
+ browser.wait(function () {
+        return browser.executeScript('return document.readyState==="complete" &&' +
+            ' jQuery !== undefined && jQuery.active==0;').then(function (text) {
+                return text === true;
+            });
+    }, 30000);
+
+in the BeforeEAch . It needs to be in All specs this slows downa and waits for all elements and page to resolve.
