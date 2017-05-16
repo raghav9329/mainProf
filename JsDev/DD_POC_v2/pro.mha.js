@@ -8,13 +8,18 @@ exports.config = {
     //specs: ['integration/scenarios/cxinit/cxinit.504.test.js'],
     //specs: ['integration/scenarios/cxinit/cxinit.507.test.js'],
     //specs: ['integration/scenarios/cxinit/cxinit.507.test.js','integration/scenarios/cxinit/cxinit.489.test.js'],
-    specs: ['integration/scenarios/cxinit/cxinit.489.test.js'],
+    //specs: ['integration/scenarios/cxinit/cxinit.489.test.js'],
+    specs: ['integration/scenarios/cxinit/cxinit.*.test.js'],
 
     suites: {
 
-        suite1: 'integration/scenarios/temp/SampleTest.js',
-        //CXINIT507: 'integration/scenarios/cxinit/cxinit.507.test.js',
-        //CXINIT489: 'integration/scenarios/cxinit/cxinit.489.test.js'
+        //suite1: 'integration/scenarios/temp/SampleTest.js',
+        CX507: 'integration/scenarios/cxinit/cxinit.507.test.js',
+        CX489: 'integration/scenarios/cxinit/cxinit.489.test.js',
+        CX504: 'integration/scenarios/cxinit/cxinit.504.test.js',
+        CX483: 'integration/scenarios/cxinit/cxinit.483.test.js',
+        CX471: 'integration/scenarios/cxinit/cxinit.471.test.js',
+        CX720: 'integration/scenarios/cxinit/cxinit.720.test.js',
     },
 
 //     seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
@@ -49,8 +54,7 @@ exports.config = {
 
     params: {
         //baseUrl: ''
-        baseUrl:'https://aw-lx0076.deltadev.ent:3000/enroll/',
-        exeLogging:''
+        baseUrl:'https://aw-lx0076.deltadev.ent:3000/enroll/'
     },
 
 // Please stop deleting the window.setSize(1050,950) line
@@ -79,7 +83,6 @@ exports.config = {
             ]
         });
         logger = log4js.getLogger('Delta');
-        logger.setLevel(browser.params.exeLogging);
         // var monthMap = {
         //     "1": "Jan",
         //     "2": "Feb",

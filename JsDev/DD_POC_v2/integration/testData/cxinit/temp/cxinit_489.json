@@ -1,0 +1,152 @@
+{
+    "URL": "https://mot.deltadentalins.com",
+    "NoOfPeopleCovered": "2",
+    "ZIPcode": "94105",
+    "DOB": "07/02/1988",
+    "ErrorMsg_Month": "Please enter a valid month between (01-12)",
+    "ErrorMsg_Date": "Please enter a valid day between (01-31)",
+    "ErrorMsg_Year": "Please enter a valid year",
+    "Personalinfo": {
+
+        "FName": {
+            "FName_Blank": {
+                "FName": " ",
+                "ErrorMsg": "Please enter your First name",
+                "ExecutionFlag": true
+            },
+            "FName_Numeric": {
+                "FName": "123456",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ExecutionFlag": true
+            },
+
+            "FName_SpecialChar": {
+                "FName": "/-*+",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ExecutionFlag": true
+            },
+            "FName": {
+                "FName": "Prasad",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            }
+        },
+
+        "MI": {
+            "MI": {
+                "MI": "G",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            }
+        },
+
+
+        "LName": {
+            "LName_Blank": {
+                "LName": " ",
+                "ErrorMsg": "Please enter your last name",
+                "ExecutionFlag": true
+            },
+            "LName_Numeric": {
+                "LName": "123456",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ExecutionFlag": true
+            },
+
+            "LName_SpecialChar": {
+                "LName": "/-*+",
+                "ErrorMsg": "Letters or punctuation only please",
+                "ExecutionFlag": true
+            },
+            "LName": {
+                "LName": "Prasad",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            }
+        },
+
+        "Gender": {
+            "Gender_Blank": {
+                "Gender": " ",
+                "ErrorMsg": "Please select a gender",
+                "ExecutionFlag": true
+            },
+
+            "Gender": {
+                "Gender": "Male",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            }
+        },
+
+
+
+        "SSN": {
+            "SSN_Blank": {
+                "SSN": " ",
+                "ErrorMsg": "Please enter your SSN",
+                "ExecutionFlag": true
+            },
+            "SSN_WrongSSN": {
+                "SSN": "1234",
+                "ErrorMsg": "Please enter your SSN completely (XXX-XX-XXXX)",
+                "ExecutionFlag": true
+            },
+
+            "SSN_SpecialChar": {
+                "SSN": "/-*+",
+                "ErrorMsg": "Please enter your SSN",
+                "ExecutionFlag": true
+            },
+            "SSN_String": {
+                "SSN": "Prasad",
+                "ErrorMsg": "Please enter your SSN",
+                "ExecutionFlag": true
+            },
+            "SSN_ValidSSN": {
+                "SSN": "123456789",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            }
+        },
+        "AlternateId": {
+            "AlternateId_Blank": {
+                "AlternateId": "",
+                "ExecutionFlag": true
+            },
+
+            "AlternateId_Valid": {
+                "AlternateId": "test@gmail.com",
+                "ExecutionFlag": true
+            }
+        },
+
+              "HAddress_Blank": {
+                "HAddress": " ",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+
+            "HAddress_Invalid": {
+                "HAddress_Invalid": "jkgjhggjhgjhgjhgjhg",
+                "ErrorMsg": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
+                "ExecutionFlag": true
+            },
+
+            
+            "HAddress_Blank": {
+                "HAddress": "",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+
+            "HAddress_ZIP": {
+                "HAddress": "5208  U.S. 19,sandy springs,GA,United States",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            }
+        
+    }
+
+
+}

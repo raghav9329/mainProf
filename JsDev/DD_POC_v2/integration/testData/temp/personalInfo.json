@@ -1,0 +1,27 @@
+{
+	"URL": "https://mot.deltadentalins.com",
+	"NoOfPeopleCovered": "2",
+	"ZIPcode": "94105",
+    "DOB": "07/02/1988",
+
+	"Personalinfo": {
+
+		"FName": {      
+			"FName_Numeric": {
+				"FName": "123456",
+				"ErrorMsg": "Letters or punctuation only please",
+				"ExecutionFlag": true
+			},
+			"FName": {
+				"FName": "Prasad",
+				"ErrorMsg": "",
+				"ExecutionFlag": true
+			},
+			"FName_SpecialChar": {
+				"FName": "/-*+",
+				"ErrorMsg": "Letters or punctuation only please",
+				"ExecutionFlag": true
+			}
+		}
+	}
+}

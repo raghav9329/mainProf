@@ -1,0 +1,52 @@
+{
+    "NoOfPeopleCovered": "2",
+    "ZIPcode": "94536",
+    "DOB_HOME": "07/02/1988",
+    "ErrorMsg_Homeaddress": "Please enter a street address",
+    "ErrorMsg_city": "Please enter a city",
+    "ErrorMsg_State": "Please enter a state",
+    "ErrorMsg_ZipCode": "Please enter a ZIP code",
+    "ErrorMsg_PhoneNumber": "Please enter your phone number",
+    "ErrorMsg_Month": "Please enter a valid month between (01-12)",
+    "ErrorMsg_Date": "Please enter a valid day between (01-31)",
+    "ErrorMsg_Year": "Please enter a valid year",
+    "ariainvalid_error": "error",
+    "ariainvalid_success": "success",
+    "City1": "Union City",
+    "City2": "Cardiff-by-the-sea",
+    "City3": "La Cañada Flintridge",
+    "City4": "áü&#",
+    "State1": "CA",
+    "State2": "California",
+    "State3": "**--//",
+
+    "PartialAddress_Suggestion": {
+        "PartialAddress": "949",
+        "FullAddress": "949Broadway, New York, NY, United States",
+        "City": "New York",
+        "State": "NY",
+        "ZipCode": "",
+        "ErrorMsg": "",
+        "ExecutionFlag": true
+    },
+
+    "FullAddress_Suggestion": {
+        "HomeAddress": "5208",
+        "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
+        "City": "Bellaire",
+        "State": "TX",
+        "ZipCode": "77401",
+        "ErrorMsg": "Please enter a street address",
+        "ExecutionFlag": true
+    },
+    "MockAddress_Suggestion": {
+        "HomeAddress": "949",
+        "FullAddress": "949Broadway, New York, NY, United States",
+        "FullAddress2": "195 Nova Albion Way APT 2",
+        "City": "San Rafael",
+        "State": "CA",
+        "ZipCode": "10010",
+        "ErrorMsg": "Please enter a street address",
+        "ExecutionFlag": true
+    }
+}

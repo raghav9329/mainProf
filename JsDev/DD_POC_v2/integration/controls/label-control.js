@@ -51,6 +51,11 @@ class LabelControl extends ControlBase {
     getCount() {
         return element.all(this.locator).count();
     }
+
+    getElements(){
+        return element.all(this.locator)
+
+    }
 }
 
 /**

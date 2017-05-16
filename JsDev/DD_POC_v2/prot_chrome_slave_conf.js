@@ -1,4 +1,5 @@
 // conf.js execute via bash alias ppcc
+//  This file is ONLY for the SF Jenkins SLAVE !!
 exports.config = {
   framework: 'jasmine',
   jasmineNodeOpts: {
@@ -30,9 +31,9 @@ specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
   },
   
 //  Follow is for running locally on drive C:
-  seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
-  chromeDriver:      'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
-  geckodriver:       'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
+  seleniumServerJar: 'C:\\Users\\SELENIUM_RUNNER\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.0.1.jar',
+  chromeDriver:      'C:\\Users\\SELENIUM_RUNNER\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.27',
+  geckodriver:       'C:\\Users\\SELENIUM_RUNNER\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.14.0',
 
 //  Follow is for running from DeltaDev Account on Drive P:
 //  seleniumServerJar: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.3.1.jar',

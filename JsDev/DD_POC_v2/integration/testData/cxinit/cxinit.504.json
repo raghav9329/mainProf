@@ -1,0 +1,50 @@
+{
+    "Personalinfo": {
+
+        "Broker_TestData": {
+            "Broker_Name1": {
+                "Broker": "",
+                "BrokerName":"",
+                "ErrorMsg": "Please enter a Broker ID",
+                "ExecutionFlag": true
+            },
+             "Broker_Name2": {
+                "Broker": "201285",
+                "BrokerName": "TAMANIKA PIPER",
+                "ExecutionFlag": true
+            },
+            "Broker_Name3": {
+                "Broker": "201280",
+                "BrokerName": "MARGARET GACHELIN",
+                "ExecutionFlag": true
+            },
+            "Broker_Name4": {
+                "Broker": "201281",
+                "BrokerName": "HYACINTH ROWE",
+                "ExecutionFlag": true
+            },
+            "Broker_Name5": {
+                "Broker": "201283",
+                "BrokerName": "CHERICE HARRELL",
+                "ExecutionFlag": true
+            },
+            "Broker_Name6": {
+                "Broker": "201284",
+                "BrokerName": "JEFFREY OVERHOLSER",
+                "ExecutionFlag": true
+            },
+            "Broker_Name7": {
+                "Broker": "2012835",
+                "BrokerName": "LIONEL SCHIFF",
+                "ExecutionFlag": true
+            },
+            "Broker_Name8": {
+                "Broker": "2012836",
+                "BrokerName": "CHARLES DARROW",
+                "ExecutionFlag": true
+            }
+        }
+
+    }
+
+}
