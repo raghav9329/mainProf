@@ -31,7 +31,7 @@
     "Address_Valid": {
         "Home": "100 First street, #4",
         "City": "San Francisco",
-        "State": "California",
+        "State": "CA",
         "ZIPcode": "94105-2635",
         "ErrorMsg": "Please enter a valid number."
     },
@@ -55,7 +55,7 @@
             "Home": "35995 Fremont Blvd Apt 98",
             "City": "Fremont",
             "State": "CA",
-            "ZIPcode": "94903",
+            "ZIPcode": "94536",
             "ErrorMsg": ""
         },
 
@@ -73,8 +73,8 @@
         },
 
         "HAddress_ZIP": {
-            "HomeAddress":"5208 U.S. 19,sandy springs,GA,United States",
-            "FullAddress": "5208U.S. 19,sandy springs,GA,United States",
+            "HomeAddress":"949",
+            "FullAddress": "949Broadway, New York, NY, United States",
             "ErrorMsg": "Please enter a street address",
             "ExecutionFlag": true
         }

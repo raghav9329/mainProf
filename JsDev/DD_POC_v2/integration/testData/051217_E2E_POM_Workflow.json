@@ -1,0 +1,19 @@
+{
+    "firstname": "Krishna",
+    "mi": "K",
+    "lastname": "K",
+    "gender": "Male",
+    "dob": "05-05-1988",
+    "ssn": "1234560215",
+    "alternateid": "test@test.com",
+    "fieldHomeAddr": "35995 Fremont Blvd Apt 98",
+    "city": "Fremont",
+    "State": "CA",
+    "contactType": "Cell",
+    "phoneNumber": "9876543210",
+    "email": "test@qa.com",
+    "ZipCode": "94536",
+    "coverageStartDate": "05/01/2018",
+    "ariainvalid": "success",
+    "DependentTitle": "Dependents | Enrollment | Delta Dental Insurance Company"
+}

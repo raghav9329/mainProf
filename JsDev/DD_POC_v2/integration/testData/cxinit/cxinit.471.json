@@ -38,15 +38,12 @@
         "ZipCode": "77401",
         "ErrorMsg": "Please enter a street address",
         "ExecutionFlag": true
-    },
-    "MockAddress_Suggestion": {
-        "HomeAddress": "949",
-        "FullAddress": "949Broadway, New York, NY, United States",
-        "FullAddress2": "195 Nova Albion Way APT 2",
-        "City": "San Rafael",
+    },    
+
+    "Address_Valid": {
+        "HomeAddress": "35995 Fremont Blvd Apt 98",
+        "City": "Fremont",
         "State": "CA",
-        "ZipCode": "10010",
-        "ErrorMsg": "Please enter a street address",
-        "ExecutionFlag": true
+        "ZipCode": "94536"
     }
 }

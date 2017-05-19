@@ -34,12 +34,12 @@
         "HomeAddress": "5208",
         "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
         "City": "Bellaire",
-        "State": "La Libertad Department",
+        "State": "TX",
         "ZipCode": "77401",
         "ErrorMsg": "Please enter a street address",
         "ExecutionFlag": true
     },
-    "MockAddress_Suggestion": {
+    "MockAddress_Suggestion1": {
         "HomeAddress": "949",
         "FullAddress": "949Broadway, New York, NY, United States",
         "FullAddress2": "195 Nova Albion Way APT 2",
@@ -48,5 +48,12 @@
         "ZipCode": "10010",
         "ErrorMsg": "Please enter a street address",
         "ExecutionFlag": true
+    },
+    "MockAddress_Suggestion": {
+        "HomeAddress": "35995 Fremont Blvd Apt 98",
+        "City": "Fremont",
+        "State": "CA",
+        "ZipCode": "94536",
+        "ErrorMsg": ""
     }
 }

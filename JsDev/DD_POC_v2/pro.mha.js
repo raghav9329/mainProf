@@ -14,13 +14,15 @@ exports.config = {
     suites: {
 
         //suite1: 'integration/scenarios/temp/SampleTest.js',
-        cx1201: 'integration/scenarios/cxinit/cxinit.1201.test.js',
+        cx507: 'integration/scenarios/cxinit/cxinit.507.test.js',
         cx489: 'integration/scenarios/cxinit/cxinit.489.test.js',
         cx504: 'integration/scenarios/cxinit/cxinit.504.test.js',
         cx483: 'integration/scenarios/cxinit/cxinit.483.test.js',
         cx471: 'integration/scenarios/cxinit/cxinit.471.test.js',
         cx720: 'integration/scenarios/cxinit/cxinit.720.test.js',
-        cxE2E: 'integration/scenarios/',
+        cx519: 'integration/scenarios/cxinit/cxinit.519.test.js',
+        cx804: 'integration/scenarios/cxinit/cxinit.804.test.js',
+        //cxE2E: 'integration/scenarios/',
 
     },
 
@@ -40,23 +42,11 @@ exports.config = {
         }
     	// 5/8/17 the above config get's rid of that browser alert about the 
     	// browser window being controlled externally....etc.
-    	//	
-        // 5/8/17 review and act.
-        // I don't remember if it was Hyderabad team of myself
-        // who added these options then commented out.
-        // but as you can see I now need some args implemented
-        // -- I don't need them: if Hyd team doesn't need then delete --
-        // chromeOptions: {
-        //     args: [
-        //         "--headless",
-        //         "--disable-gpu"
-        //     ],
-        // },
     },
 
     params: {
         //baseUrl: ''
-        baseUrl:'https://aw-lx0076.deltadev.ent:3000/enroll/',
+        baseUrl:'https://aw-lx0176.deltadev.ent:3000/enroll/',
         exeLogging:'INFO'
     },
 

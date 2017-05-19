@@ -34,9 +34,26 @@ var Utility = function() {
                 });
             }
         }, function(err) {
-            logger.error('ERROR', "Failed to switching window due to " + err.message);
+            logger.error("Failed to switching window due to " + err.message);
             return false;
         });
+    };
+
+    /**
+     * Switch to Alert
+     * @param {timeout}
+     */
+    this.switchToAlert = function(timeout) {
+
+        var alertBox = protractor.ExpectedConditions;
+        browser.wait(alertBox.alertIsPresent(), timeout);
+        return browser.switchTo().alert().then(function() {
+            logger.info('Switched to JavaScript Alert box');
+            return true;
+        }, function(err) {
+            logger.info("Failed to Switch JavaScript Alert box due to " + err.message);
+            return false;
+        })
     };
 
 
@@ -144,24 +161,6 @@ var Utility = function() {
         });
     };
 
-    /**
-     * Switch to Alert
-     * @param {timeout}
-     */
-    this.switchAlert = function(timeout) {
-        try {
-            message = message || 'Switching to JavaScript Alert box';
-            var alertBox = protractor.ExpectedConditions;
-            browser.wait(alertBox.alertIsPresent(), timeout);
-            return browser.switchTo().alert().then(function() {
-                Logger.Status('PASS', 'Switched to JavaScript Alert box');
-                return true;
-            })
-        } catch (err) {
-            Logger.Status('ERROR', "Failed to Switch JavaScript Alert box due to  " + err.message);
-            return false;
-        }
-    };
 
     this.waitUntilClickable = function(element) {
         return browser.wait(function() {

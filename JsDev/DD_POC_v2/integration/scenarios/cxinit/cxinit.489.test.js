@@ -57,18 +57,18 @@ describe('CXINIT-489::492 - Validate Home Address field with valid and invalid d
         data = TestData.Personalinfo.HAddress_Blank;
         perInfo.fieldHomeAddr.setText(data.Home);
         perInfo.fieldCity.setText(data.City);
-        perInfo.fieldState.setText(data.State);
-        perInfo.fieldZipCode.setText(data.ZIPcode + '\t');
+        //perInfo.fieldState.setText(data.State);     
 
         expect(perInfo.errMsgHomeAddr.getText()).toEqual(data.ErrorMsg);
         expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
-        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
+        //expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
     });
 
     it('Validate Home Address with valid data', function() {
         data = TestData.Personalinfo.HAddress_Valid;
         perInfo.fieldHomeAddr.setText(data.Home + '\t');
+        browser.sleep(2000);
         expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
@@ -78,11 +78,11 @@ describe('CXINIT-489::492 - Validate Home Address field with valid and invalid d
     it('Validate Home Address with invalid data', function() {
         data = TestData.Personalinfo.HAddress_Invalid;
         perInfo.fieldHomeAddr.setText(data.Home + '\t');
-        perInfo.fieldAlternateId.setText('');
+        browser.sleep(5000)
         expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);
         expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
-        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
-        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
+        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error);
+        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error);
     });
     it('Validate Home Address with special char', function() {
         data = TestData.Personalinfo.HAddress_SplChar;
@@ -105,7 +105,7 @@ describe('CXINIT-489::492 - Validate Home Address field with valid and invalid d
     it('Validate Home Address changing zip code', function() {
         // browser.sleep(20000);
         perInfo.fieldZipCode.setText('94105' + '\t');
-        // browser.sleep(4000);
+         browser.sleep(4000);
         expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
         perInfo.zipPopBack.click();
         // browser.sleep(4000);
@@ -183,6 +183,8 @@ describe('CXINIT-489::492 - Validate Zip code field with valid and invalid data'
         perInfo.fieldCity.setText(data.City);
         perInfo.fieldState.setText(data.State);
         perInfo.fieldZipCode.setText(data.ZIPcode + '\t');
+        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
+
         expect(perInfo.errMsgZipCode.getText()).toEqual(data.ErrorMsg);
         perInfo.errMsgZipCode.click();
         browser.executeScript('window.scrollTo(0,30);');

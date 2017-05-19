@@ -141,25 +141,36 @@ class PersonalInfoPage extends ControlBase {
     fillPersonalInfo(perinfo) {
         var self = this;
         return browser.controlFlow().execute(function() {
-            self.fieldFirstName.setText(perinfo.firstname);
-            self.fieldMidInitial.setText(perinfo.mi);
-            self.fieldLastName.setText(perinfo.lastname);
+            self.fieldFirstName.setText(perinfo.firstname+ '\t');
+            expect(self.fieldFirstName.getAttribute("class")).toContain(perinfo.ariainvalid);
+            self.fieldMidInitial.setText(perinfo.mi+ '\t');
+            expect(self.fieldMidInitial.getAttribute("class")).toContain(perinfo.ariainvalid);
+            self.fieldLastName.setText(perinfo.lastname+ '\t');
+            expect(self.fieldLastName.getAttribute("class")).toContain(perinfo.ariainvalid);
             self.fieldGenderSelect.selectByText(perinfo.gender);
+            //expect(self.fieldGenderSelect.getAttribute("class")).toContain(perinfo.ariainvalid);
             var d = perinfo.dob;
             var datesplit = (d.split('-'))
-            self.fieldBdMM.setText(datesplit[0]);
-            self.fieldBdDD.setText(datesplit[1]);
-            self.fieldBdYyyy.setText(datesplit[2]);
-            self.fieldSsn.setText(perinfo.ssn);
+            self.fieldBdMM.setText(datesplit[0]+ '\t');
+            expect(self.fieldBdMM.getAttribute("class")).toContain(perinfo.ariainvalid);
+            self.fieldBdDD.setText(datesplit[1]+ '\t');
+            expect(self.fieldBdDD.getAttribute("class")).toContain(perinfo.ariainvalid);
+            self.fieldBdYyyy.setText(datesplit[2]+ '\t');
+            expect(self.fieldBdYyyy.getAttribute("class")).toContain(perinfo.ariainvalid);
+            self.fieldSsn.setText(perinfo.ssn+ '\t');
+            expect(self.fieldSsn.getAttribute("class")).toContain(perinfo.ariainvalid);
             if (!perinfo.alternateid) self.fieldAlternateId.setText(perinfo.alternateid);
+            //expect(self.fieldAlternateId.getAttribute("class")).toContain(perinfo.ariainvalid);
         });
     }
 
     fillAddress(perinfo) {
         var self = this;
         return browser.controlFlow().execute(function() {
-            self.fieldHomeAddr.setText(perinfo.fieldHomeAddr);
-            self.fieldCity.setText(perinfo.city);
+            self.fieldHomeAddr.setText(perinfo.fieldHomeAddr+ '\t');
+            expect(self.fieldHomeAddr.getAttribute("class")).toContain(perinfo.ariainvalid);
+            self.fieldCity.setText(perinfo.city+ '\t');
+            expect(self.fieldCity.getAttribute("class")).toContain(perinfo.ariainvalid);
             //expect()
         });
 
@@ -169,13 +180,21 @@ class PersonalInfoPage extends ControlBase {
         var self = this;
         return browser.controlFlow().execute(function() {
             self.fieldPhoneSelect.selectByText(phno.contactType);
-            self.fieldPhoneNumber.setText(phno.phoneNumber);
-            if (!phno.fieldEmailAddr) self.fieldEmailAddr.setText(phno.email);
+            //expect(self.fieldPhoneSelect.getAttribute("class")).toContain(phno.ariainvalid);
+            self.fieldPhoneNumber.setText(phno.phoneNumber+ '\t');
+            expect(self.fieldPhoneNumber.getAttribute("class")).toContain(phno.ariainvalid);
+            if (!phno.fieldEmailAddr) self.fieldEmailAddr.setText(phno.email+ '\t');
+            expect(self.fieldEmailAddr.getAttribute("class")).toContain(phno.ariainvalid);
             self.Next.click();
+            browser.sleep(2000);
             
             //expect()
         });
 
+    }
+
+    dependentDetails(depdetails){
+        var self = this;
     }
 
     

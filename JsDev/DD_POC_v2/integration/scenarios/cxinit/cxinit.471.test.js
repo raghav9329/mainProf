@@ -13,26 +13,6 @@ describe('CXINIT-471::474 - Validate Address Suggestions for Home Address field'
             return true;
         });
     });
-    // it('Validate Address Suggestions list for Home Address', function() {
-    //     var data = TestData.Address_Suggestion;
-    //     perInfo.fieldHomeAddr.setText(data.PartialAddress);
-    //     perInfo.selectHomeAddress(data.FullAddress);
-    //     browser.sleep(3000);
-    //     expect(perInfo.fieldCity.getAttribute("value")).toContain(data.City);
-    //     expect(perInfo.fieldState.getAttribute("value")).toContain(data.State);
-    //     expect(perInfo.fieldZipCode.getAttribute("value")).toContain(data.ZipCode);
-    // });
-    // it('Validate Address Suggestion by selecting adress in Home Address', function() {
-    //     var data = TestData.Address_Suggestion;
-    //     perInfo.fieldHomeAddr.setText(data.PartialAddress);
-    //     browser.sleep(3000);
-    //     perInfo.getandVerifyallAddressSuggestions(data.PartialAddress).then(function(data) {
-    //         console.log("All Address  =====" + data);
-    //         //   expect(data).toContain(TestData.Address_Suggestion.PartialAddress);
-    //     });
-    // });
-
-    //=========================================
 
     it('Verify partial address is present in address suggestions list for Mailing Address', function() {
         var data = TestData.PartialAddress_Suggestion;
@@ -55,13 +35,12 @@ describe('CXINIT-471::474 - Validate Address Suggestions for Home Address field'
         expect(perInfo.fieldZipCode.getAttribute("value")).toContain(data.ZipCode);
     });
      it('Selecting address from Address Suggestion in Mailing Address and validate mock values', function() {
-        var data = TestData.MockAddress_Suggestion;   
+        var data = TestData.Address_Valid;   
         perInfo.fieldHomeAddr.setText(data.HomeAddress);
-        browser.sleep(2000);
-        perInfo.selectHomeAddress(data.FullAddress);
-        perInfo.fieldPhoneNumber.setText('');
-        browser.sleep(5000);
-        expect(perInfo.fieldHomeAddr.getAttribute("value")).toContain(data.FullAddress2);
+        perInfo.fieldCity.setText(data.City);
+        perInfo.fieldState.setText(data.State);
+         perInfo.fieldZipCode.setText(data.ZipCode);    
+        expect(perInfo.fieldHomeAddr.getAttribute("value")).toContain(data.HomeAddress);
         expect(perInfo.fieldCity.getAttribute("value")).toContain(data.City);
         expect(perInfo.fieldState.getAttribute("value")).toContain(data.State);
         expect(perInfo.fieldZipCode.getAttribute("value")).toContain(data.ZipCode);
