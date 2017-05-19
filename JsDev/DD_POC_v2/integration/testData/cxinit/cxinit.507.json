@@ -448,81 +448,9 @@
                     "ServerMsg": "",
                     "ExecutionFlag": true
                 }
-                },
+                }
 
-        "Phone_Home": {
-                "Phone_Blank": {
-                    "PhoneType": "Home",
-                    "PhoneNumber": "",
-                   "ErrorMsg": "Please enter your phone number",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_InValid": {
-                    "PhoneType": "Home",
-                    "PhoneNumber": "99",
-                    "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_Valid": {
-                    "PhoneType": "Home",
-                    "PhoneNumber": "012-345-6789",
-                    "ErrorMsg": "",
-                    "ariainvalid": "success",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                }
-                
- 
-            },
-            "Phone_Work": {
-                "Phone_Blank": {
-                    "PhoneType": "Work",
-                    "PhoneNumber": "",
-                    "ErrorMsg": "Please enter your phone number",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_InValid": {
-                    "PhoneType": "Work",
-                     "PhoneNumber": "22",
-                    "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_Valid": {
-                    "PhoneType": "Work",
-                   "PhoneNumber": "789-456-1230",
-                    "ErrorMsg": "",
-                    "ariainvalid": "success",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                     
-                }
-            },
-
-         "Email_Address": {
-                "Email_InValid": {
-                    "Email": "test",
-                    "ErrorMsg": "Please enter a valid E-mail address (example@domain.com)",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Email_Valid": {
-                    "Email": "test@123.com",
-                    "ErrorMsg": "",
-                    "ariainvalid": "success",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                                     
-                }
-            }
+        
     }
 
 }

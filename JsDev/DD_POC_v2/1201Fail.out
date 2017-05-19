@@ -1,0 +1,331 @@
+[16:12:18] I/launcher - Running 1 instances of WebDriver
+[16:12:18] I/local - Starting selenium standalone server...
+[16:12:19] I/local - Selenium standalone server started at http://172.30.4.182:62570/wd/hub
+Started
+URLhttps://aw-lx0076.deltadev.ent:3000/enroll/
+flagnull
+[32m[2017-05-15 16:12:27.303] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="streetAddress"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_street street
+[32m[2017-05-15 16:12:30.575] [INFO] Delta - [39mwaitReady: 'By(xpath, //div[@class="pac-item"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:pac-item
+[32m[2017-05-15 16:12:36.055] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipNewQuote"])' returns:false, After 70 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5027ms
+[32m[2017-05-15 16:12:41.109] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipPopBack"])' returns:false, After 78 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5007ms
+[32m[2017-05-15 16:12:46.237] [INFO] Delta - [39mwaitReady: 'By(css selector, div.popup.alert)' returns:false, After 79 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5050ms
+[32m[2017-05-15 16:12:51.273] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipPopBack"])' returns:false, After 88 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5020ms
+[31mF[0mURLhttps://aw-lx0076.deltadev.ent:3000/enroll/
+flagnull
+[32m[2017-05-15 16:12:53.293] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="streetAddress"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_street street
+[32m[2017-05-15 16:12:56.334] [INFO] Delta - [39mwaitReady: 'By(xpath, //div[@class="pac-item"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:pac-item
+[32m[2017-05-15 16:13:01.702] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipNewQuote"])' returns:false, After 91 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5056ms
+[32m[2017-05-15 16:13:06.792] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipPopBack"])' returns:false, After 85 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5058ms
+[32m[2017-05-15 16:13:11.892] [INFO] Delta - [39mwaitReady: 'By(css selector, div.popup.alert)' returns:false, After 91 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5037ms
+[32m[2017-05-15 16:13:16.945] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipNewQuote"])' returns:false, After 90 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5053ms
+[31mF[0mURLhttps://aw-lx0076.deltadev.ent:3000/enroll/
+flagnull
+[32m[2017-05-15 16:13:18.303] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="streetAddress"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_street street
+[32m[2017-05-15 16:13:18.860] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="state"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_state administrative_area_level_1 state
+[32m[2017-05-15 16:13:19.220] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="city"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_city locality city
+[32m[2017-05-15 16:13:19.505] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipCode"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_zip postal_code zip
+[32m[2017-05-15 16:13:24.767] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipNewQuote"])' returns:false, After 91 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5021ms
+[32m[2017-05-15 16:13:29.860] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipPopBack"])' returns:false, After 82 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5040ms
+[32m[2017-05-15 16:13:34.973] [INFO] Delta - [39mwaitReady: 'By(css selector, div.popup.alert)' returns:false, After 77 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5032ms
+[32m[2017-05-15 16:13:39.978] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipPopBack"])' returns:false, After 87 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5003ms
+[31mF[0mURLhttps://aw-lx0076.deltadev.ent:3000/enroll/
+flagnull
+[32m[2017-05-15 16:13:41.987] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="streetAddress"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_street street
+[32m[2017-05-15 16:13:42.609] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="state"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_state administrative_area_level_1 state
+[32m[2017-05-15 16:13:42.971] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="city"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_city locality city
+[32m[2017-05-15 16:13:43.254] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipCode"])' returns:true, After 1 driverWaitIterations. Additional Info: present:true, visible:true, isEnabled:true, class:form-input address_item_zip postal_code zip
+[32m[2017-05-15 16:13:48.512] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipNewQuote"])' returns:false, After 83 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5041ms
+[32m[2017-05-15 16:13:53.627] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipPopBack"])' returns:false, After 93 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5051ms
+[32m[2017-05-15 16:13:58.708] [INFO] Delta - [39mwaitReady: 'By(css selector, *[id="zipNewQuote"])' returns:false, After 94 driverWaitIterations. Additional Info: TimeoutError: Wait timed out after 5007ms
+[31mF[0m
+
+Failures:
+1) Zip Code Popup validation Verify the functionality of Go Back link in Zip code pop Up while Updating Home address
+  Message:
+[31m    Expected false to be truthy.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:20:64)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected false to be truthy.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:21:60)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected false to contain 'Change ZIP Code'.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:22:44)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected '949 Broadway, New York, NY, United States' to equal ''.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:24:61)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected 'NY' to equal ''.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:25:58)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected 'New York' to equal ''.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:26:57)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected '10010' to equal '94560'.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:27:60)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+
+2) Zip Code Popup validation Verify the functionality of New Quote button in Zip code pop Up while Updating Home address
+  Message:
+[31m    Expected false to be truthy.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:32:64)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected false to be truthy.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:33:60)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected false to contain 'Change ZIP Code'.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:34:44)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected 'Personal Info | Enrollment | Delta Dental Insurance Company' to contain 'Individual & Families'.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:36:36)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+
+3) Zip Code Popup validation Verify the functionality of Go Back link in Zip code pop Up while changing zip code
+  Message:
+[31m    Expected false to be truthy.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:45:64)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected false to be truthy.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:46:60)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected false to contain 'Change ZIP Code'.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:47:44)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected '195 Nova Albion Way APT 2' to equal ''.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:49:61)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected 'CA' to equal ''.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:50:58)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected 'San Rafael' to equal ''.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:51:57)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected '94103' to equal '94560'.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:52:60)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+
+4) Zip Code Popup validation Verify the functionality of New Quote button in Zip code pop Up while changing zip code
+  Message:
+[31m    Expected false to be truthy.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:61:64)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected false to be truthy.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:62:60)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+  Message:
+[31m    Expected 'Personal Info | Enrollment | Delta Dental Insurance Company' to contain 'Individual & Families'.[0m
+  Stack:
+    Error: Failed expectation
+        at Object.<anonymous> (C:\DD_Repos\dd-cx-test\integration\scenarios\cxinit\cxinit.1201.test.js:64:36)
+        at C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:110:25
+        at new ManagedPromise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:1067:7)
+        at ControlFlow.promise (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2396:12)
+        at schedulerExecute (C:\DD_Repos\dd-cx-test\node_modules\jasminewd2\index.js:95:18)
+        at TaskQueue.execute_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2970:14)
+        at TaskQueue.executeNext_ (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2953:27)
+        at asyncRun (C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:2860:25)
+        at C:\DD_Repos\dd-cx-test\node_modules\selenium-webdriver\lib\promise.js:676:7
+
+4 specs, 4 failures
+Finished in 95.711 seconds
+
+[16:13:59] I/local - Shutting down selenium standalone server.
+[16:13:59] I/launcher - 0 instance(s) of WebDriver still running
+[16:13:59] I/launcher - chrome #01 failed 4 test(s)
+[16:13:59] I/launcher - overall: 4 failed spec(s)
+[16:13:59] E/launcher - Process exited with error code 1

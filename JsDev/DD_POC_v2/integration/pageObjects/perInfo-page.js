@@ -7,6 +7,7 @@ var Label = require('../controls/label-control');
 var Select = require('../controls/select-control');
 var CheckBox = require('../controls/checkbox-control');
 var RadioButton = require('../controls/radiobutton-control');
+var LinkText = require('../controls/link-control');
 
 
 
@@ -36,10 +37,10 @@ class PersonalInfoPage extends ControlBase {
         this.errBirthDate = new Label(this.pageObjects.errBirthDate);
         this.fieldSsn = new TextBox(this.pageObjects.fieldSsn);
         this.errMsgSsn = new Label(this.pageObjects.errMsgSsn);
-         this.fieldHomeAddr = new TextBox(this.pageObjects.fieldHomeAddr);
+        this.fieldHomeAddr = new TextBox(this.pageObjects.fieldHomeAddr);
         this.errMsgHomeAddr = new Label(this.pageObjects.errMsgHomeAddr);
         this.errinvalidAddr = new Label(this.pageObjects.errinvalidAddr);
-       this.fieldCity = new TextBox(this.pageObjects.fieldCity);
+        this.fieldCity = new TextBox(this.pageObjects.fieldCity);
         this.errMsgCity = new Label(this.pageObjects.errMsgCity);
         this.fieldState = new TextBox(this.pageObjects.fieldState);
         this.errMsgState = new Label(this.pageObjects.errMsgState);
@@ -54,12 +55,13 @@ class PersonalInfoPage extends ControlBase {
         this.fieldEmailAddr = new TextBox(this.pageObjects.fieldEmailAddr);
         this.errMsgEmailAddr = new Label(this.pageObjects.errMsgEmailAddr);
         this.chkBoxPaperless = new CheckBox(this.pageObjects.chkBoxPaperless);
+        this.paperLessTerms = new LinkText(this.pageObjects.paperLessTerms);
         this.RadBtnBrokerYes = new RadioButton(this.pageObjects.RadBtnBrokerYes);
         this.RadBtnBrokerNo = new RadioButton(this.pageObjects.RadBtnBrokerNo);
         //change to link conrols 
         this.zipPopNewQuote = new Button(this.pageObjects.zipPopNewQuote);
         this.zipPopBack = new Button(this.pageObjects.zipPopBack);
-        this.zipPopUp =new Label(this.pageObjects.zipPopUp);
+        this.zipPopUp = new Label(this.pageObjects.zipPopUp);
         this.Next = new Button(this.pageObjects.persPageButtonNext);
         this.allerrMsg = new Label(this.pageObjects.allerrMsg);
         this.hiddenfieldMailAddr = new TextBox(this.pageObjects.hiddenfieldMailAddr);
@@ -153,13 +155,30 @@ class PersonalInfoPage extends ControlBase {
         });
     }
 
-    fillAddress(address) {
+    fillAddress(perinfo) {
+        var self = this;
+        return browser.controlFlow().execute(function() {
+            self.fieldHomeAddr.setText(perinfo.fieldHomeAddr);
+            self.fieldCity.setText(perinfo.city);
+            //expect()
+        });
 
     }
 
-    fillMailingAddress(mailadd) {
+    phoneNumberemail(phno) {
+        var self = this;
+        return browser.controlFlow().execute(function() {
+            self.fieldPhoneSelect.selectByText(phno.contactType);
+            self.fieldPhoneNumber.setText(phno.phoneNumber);
+            if (!phno.fieldEmailAddr) self.fieldEmailAddr.setText(phno.email);
+            self.Next.click();
+            
+            //expect()
+        });
 
     }
+
+    
 
 };
 

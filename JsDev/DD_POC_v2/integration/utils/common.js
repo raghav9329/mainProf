@@ -1,4 +1,149 @@
 var Utility = function() {
+
+    this.switchToFrame = function(name) {
+        var self = this;
+        name = name || '';
+        this.logInfoPromise('switching to frame:' + name);
+        if (name) {
+            return browser.driver.switchTo().frame(name).then(function() {
+                self.logInfoPromise('switching to frame: ' + name + ' successful');
+                return true;
+            });
+        } else {
+            return browser.driver.switchTo().defaultContent().then(function() {
+                self.logInfoPromise('switching to frame: ' + 'DEFAULT' + ' successful');
+                return true;
+            });
+        }
+    };
+
+    /**
+     * Switch to window with index
+     * @param index
+     * @param message
+     * @return {boolean}
+     */
+
+    this.switchToWindow = function(index) {
+        return browser.getAllWindowHandles().then(function(handles) {
+            if (handles.length > 1) {
+                return browser.switchTo().window(handles[index]).then(function() {
+                    browser.sleep(500);
+                    logger.info('Switched to window');
+                    return true;
+                });
+            }
+        }, function(err) {
+            logger.error('ERROR', "Failed to switching window due to " + err.message);
+            return false;
+        });
+    };
+
+
+    this.handleError = function(error) {
+        logger.error(error);
+        return false;
+    };
+
+    this.logInfoPromise = function(message) {
+        browser.controlFlow().execute(function() {
+            logger.info(message);
+        });
+    };
+
+    this.logErrorPromise = function(message) {
+        browser.controlFlow().execute(function() {
+            logger.error(message);
+        });
+    };
+
+    this.isEmpty = function(value) {
+        return (typeof value === 'undefined' || value === null || value.length === 0);
+    };
+
+    this.pageUp = function() {
+        this.logInfoPromise('Utility PageUp Called');
+        browser.actions().sendKeys(protractor.Key.HOME).perform();
+    };
+
+    this.addToControlFlow = function(obj) {
+        return protractor.promise.controlFlow().execute(function() {
+            return obj;
+        });
+    };
+
+    /**
+     * Scrolls the window based on the percentage of width and height provided.
+     * Percentage is relative to scrollHeight and scrollWidth of the body tag
+     * @param widthPercent
+     * @param heightPercent
+     * @returns {Promise<R>}
+     */
+    this.scroll = function(widthPercent, heightPercent) {
+        widthPercent = widthPercent || 0;
+        heightPercent = heightPercent || 0;
+        return browser.driver.manage().window().getSize().then(function(size) {
+            var width = size.width;
+            var height = size.height;
+            return element(by.tagName('body')).getAttribute('scrollHeight').then(function(scrollHeight) {
+                return element(by.tagName('body')).getAttribute('scrollWidth').then(function(scrollWidth) {
+                    var scrollCommand = "window.scrollBy(" + (widthPercent * scrollWidth / 100) + "," + (heightPercent * scrollHeight / 100) + ");";
+                    logger.info('utility.scroll: widthPercent=' + widthPercent + ' heightPercent=' + heightPercent + ' scrollHeight=' + scrollHeight + ' scrollWidth=' + scrollWidth);
+                    logger.info('utility.scroll: scrollCommand=' + scrollCommand);
+                    return browser.driver.executeScript(scrollCommand);
+                });
+            });
+        });
+    };
+
+    /**
+     * Scrolls to the bottom of the page. x=0, y=scrollHeight
+     * @returns {Promise<R>}
+     */
+    this.scrollToBottom = function() {
+        return element(by.tagName('body')).getAttribute('scrollHeight').then(function(scrollHeight) {
+            var scrollCommand = "window.scrollTo(" + 0 + "," + scrollHeight + ");";
+            logger.info('utility.scroll: scrollCommand=' + scrollCommand);
+            return browser.driver.executeScript(scrollCommand);
+        });
+    };
+
+    /**
+     * Scrolls to the top of the page. x=0, y= -scrollHeight
+     * @returns {Promise<R>}
+     */
+    this.scrollToTop = function() {
+        return element(by.tagName('body')).getAttribute('scrollHeight').then(function(scrollHeight) {
+            var scrollCommand = "window.scrollTo(" + 0 + "," + -scrollHeight + ");";
+            logger.info('utility.scroll: scrollCommand=' + scrollCommand);
+            return browser.driver.executeScript(scrollCommand);
+        });
+    };
+
+    /**
+     * Scrolls to the Left of the page. x= -scrollWidth, y=0
+     * @returns {Promise<R>}
+     */
+    this.scrollToLeftMost = function() {
+        return element(by.tagName('body')).getAttribute('scrollWidth').then(function(scrollWidth) {
+            var scrollCommand = "window.scrollTo(" + -scrollWidth + "," + 0 + ");";
+            logger.info('utility.scroll: scrollCommand=' + scrollCommand);
+            return browser.driver.executeScript(scrollCommand);
+        });
+    };
+
+    /**
+     * Scrolls to the Left of the page. x= scrollWidth, y=0
+     * @returns {Promise<R>}
+     */
+    this.scrollToRightMost = function() {
+        return element(by.tagName('body')).getAttribute('scrollWidth').then(function(scrollWidth) {
+            var scrollCommand = "window.scrollTo(" + scrollWidth + "," + 0 + ");";
+            logger.info('utility.scroll: scrollCommand=' + scrollCommand);
+            return browser.driver.executeScript(scrollCommand);
+        });
+    };
+
     /**
      * Switch to Alert
      * @param {timeout}
@@ -23,9 +168,7 @@ var Utility = function() {
             return element.click().then(function(result) {
                 return true;
             });
-        }, PAGELOADTIME).thenCatch(function(err) {
-            return false;
-        });
+        }, PAGELOADTIME);
     }
     this.waitUntilPageLoaded = function() {
         browser.wait(function() {
@@ -34,7 +177,8 @@ var Utility = function() {
             });
         }, PAGELOADTIME);
     };
-    this.waitUntilElementPresent = function() {
+    this.waitUntilElementPresent = function(timeout) {
+        timeout = typeof timeout !== 'undefined' ? timeout : PAGELOADTIME;
         browser.wait(function() {
             return oElement.isPresent().then(function(present) {
                 if (present.length == 0) {
@@ -42,9 +186,7 @@ var Utility = function() {
                 }
                 return present;
             });
-        }, timeout).thenCatch(function(err) {
-
-        });
+        }, timeout);
     };
     this.waitUntilElementNotPresent = function(oElement, timeout) {
         return browser.controlFlow().execute(function() {
@@ -56,12 +198,9 @@ var Utility = function() {
                     }
                     return !isVisible;
                 });
-            }, timeout).thenCatch(function(err) {
-
-            })
-
+            }, timeout);
         });
-    }
+    };
 
     /**
      * wait for Element present,displayed and enabled
@@ -79,7 +218,7 @@ var Utility = function() {
                     }
                     return displayed;
                 });
-            }, timeout).thenCatch(function(err) {}).then(function() {
+            }, timeout).then(function() {
                 return browser.wait(function() {
                     return oElement.isEnabled().then(function(enabled) {
                         if (enabled.length == 0) {
@@ -87,9 +226,7 @@ var Utility = function() {
                         }
                         return enabled;
                     });
-                }, timeout).thenCatch(function(err) {
-
-                });
+                }, timeout);
             })
 
         });
@@ -213,7 +350,7 @@ var Utility = function() {
 
         }
     }
-    
+
 
 }
 

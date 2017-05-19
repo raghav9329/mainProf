@@ -33,18 +33,6 @@ exports.config = {
         }
     	// 5/8/17 the above config get's rid of that browser alert about the 
     	// browser window being controlled externally....etc.
-    	//	
-        // 5/8/17 review and act.
-        // I don't remember if it was Hyderabad team of myself
-        // who added these options then commented out.
-        // but as you can see I now need some args implemented
-        // -- I don't need them: if Hyd team doesn't need then delete --
-        // chromeOptions: {
-        //     args: [
-        //         "--headless",
-        //         "--disable-gpu"
-        //     ],
-        // },
     },
 
     params: {
@@ -80,37 +68,8 @@ exports.config = {
         });
         logger = log4js.getLogger('Delta');
         logger.setLevel(browser.params.exeLogging);
-        // var monthMap = {
-        //     "1": "Jan",
-        //     "2": "Feb",
-        //     "3": "Mar",
-        //     "4": "Apr",
-        //     "5": "May",
-        //     "6": "Jun",
-        //     "7": "Jul",
-        //     "8": "Aug",
-        //     "9": "Sep",
-        //     "10": "Oct",
-        //     "11": "Nov",
-        //     "12": "Dec"
-        // };
-        // var currentDate = new Date(),
-        //     currentHoursIn24Hour = currentDate.getHours(),
-        //     currentTimeInHours = currentHoursIn24Hour > 12 ? currentHoursIn24Hour - 12 : currentHoursIn24Hour,
-        //     totalDateString = currentDate.getDate() + '-' + monthMap[currentDate.getMonth()] + '-' + (currentDate.getYear() + 1900) +
-        //     '-' + currentTimeInHours + 'h-' + currentDate.getMinutes() + 'm';
-
-        // var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
-        // jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
-        //     savePath: 'results/' + totalDateString + '/html-reports/',
-        //     screenshotsFolder: 'images',
-        //     showColors: true,
-        //     includeStackTrace: true,
-        //     takeScreenshotsOnlyOnFailures: true,
-        //     fileNameDateSuffix: true,
-        //     defaultTimeoutInterval: 10 * 60000
-
-        // }));
+        // var monthMap = {  // Configs went here  moved below
+  
 
     },
     resultJsonOutputFile: 'results.json',
@@ -120,3 +79,55 @@ exports.config = {
 
     }
 }
+
+
+////////////////////////////////////////////////////////////////
+// Config Archive: stuff thats been commented out for some time
+////////////////////////////////////////////////////////////////
+
+
+//	
+// 5/8/17 review and act.
+// I don't remember if it was Hyderabad team of myself
+// who added these options then commented out.
+// but as you can see I now need some args implemented
+// -- I don't need them: if Hyd team doesn't need then delete --
+// chromeOptions: {
+//     args: [
+//         "--headless",
+//         "--disable-gpu"
+//     ],
+// },
+
+// var monthMap = {
+//     "1": "Jan",
+//     "2": "Feb",
+//     "3": "Mar",
+//     "4": "Apr",
+//     "5": "May",
+//     "6": "Jun",
+//     "7": "Jul",
+//     "8": "Aug",
+//     "9": "Sep",
+//     "10": "Oct",
+//     "11": "Nov",
+//     "12": "Dec"
+// };
+// var currentDate = new Date(),
+//     currentHoursIn24Hour = currentDate.getHours(),
+//     currentTimeInHours = currentHoursIn24Hour > 12 ? currentHoursIn24Hour - 12 : currentHoursIn24Hour,
+//     totalDateString = currentDate.getDate() + '-' + monthMap[currentDate.getMonth()] + '-' + (currentDate.getYear() + 1900) +
+//     '-' + currentTimeInHours + 'h-' + currentDate.getMinutes() + 'm';
+
+// var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
+// jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
+//     savePath: 'results/' + totalDateString + '/html-reports/',
+//     screenshotsFolder: 'images',
+//     showColors: true,
+//     includeStackTrace: true,
+//     takeScreenshotsOnlyOnFailures: true,
+//     fileNameDateSuffix: true,
+//     defaultTimeoutInterval: 10 * 60000
+
+// }));
+

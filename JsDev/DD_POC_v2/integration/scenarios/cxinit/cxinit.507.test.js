@@ -385,64 +385,6 @@ describe('507_PersInfoPg: ', function() {
             });
         };
 });
-        dataProvider(TestData.Personalinfo.Phone_Cell, function(data, description) {
-        if (data.ExecutionFlag) {
-            it('Validate Phone Cell field with value "' + data.PhoneType + ":" + data.PhoneNumber + '"', function() {
-                 if (data.PhoneType.length > 1) {
-
-                    perInfo.fieldPhoneSelect.selectByText(data.PhoneType);
-                }
-                perInfo.fieldPhoneNumber.setText(data.PhoneNumber + '\t');
-                expect(perInfo.fieldPhoneNumber.getValue()).toEqual(data.PhoneNumber);
-                expect(perInfo.fieldPhoneNumber.getAttribute("class")).toContain(data.ariainvalid);
-            });
-        };
-    });
-
- dataProvider(TestData.Personalinfo.Phone_Home, function(data, description) {
-        if (data.ExecutionFlag) {
-            it('Validate Phone Cell field with value "' + data.PhoneType + ":" + data.PhoneNumber + '"', function() {
-                 if (data.PhoneType.length > 1) {
-
-                    perInfo.fieldPhoneSelect.selectByText(data.PhoneType);
-                }
-                perInfo.fieldPhoneNumber.setText(data.PhoneNumber + '\t');
-                expect(perInfo.fieldPhoneNumber.getValue()).toEqual(data.PhoneNumber);
-                expect(perInfo.fieldPhoneNumber.getAttribute("class")).toContain(data.ariainvalid);
-            });
-        };
-    });
-
- dataProvider(TestData.Personalinfo.Phone_Work, function(data, description) {
-        if (data.ExecutionFlag) {
-            it('Validate Phone Cell field with value "' + data.PhoneType + ":" + data.PhoneNumber + '"', function() {
-                 if (data.PhoneType.length > 1) {
-
-                    perInfo.fieldPhoneSelect.selectByText(data.PhoneType);
-                }
-                perInfo.fieldPhoneNumber.setText(data.PhoneNumber + '\t');
-                expect(perInfo.fieldPhoneNumber.getValue()).toEqual(data.PhoneNumber);
-                expect(perInfo.fieldPhoneNumber.getAttribute("class")).toContain(data.ariainvalid);
-            });
-        };
-    });
-
- dataProvider(TestData.Personalinfo.Email_Address, function(data, description) {
-        if (data.ExecutionFlag) {
-            it('Validate Email Address with value "' + data.Email + '"', function() {
-                perInfo.fieldEmailAddr.setText(data.Email + '\t');
-                expect(perInfo.fieldEmailAddr.getValue()).toEqual(data.Email);
-                expect(perInfo.fieldEmailAddr.getAttribute("class")).toContain(data.ariainvalid);
-            });
-        };
-    });
-
-
-
-
-
-
-
-
+        
 
 });

@@ -1,0 +1,19 @@
+{
+    "ZipCode": "94560",
+    "ZipCode2": "94103",
+    "Ariainvalid_error": "error",
+    "Ariainvalid_success": "success",
+    "Title": "Individual & Families",
+    "HAddress_ZIP": {
+        "PartialAddress": "949",
+        "FullAddress": "949Broadway, New York, NY, United States",
+        "ErrorMsg": "Please enter a street address",
+        "ExecutionFlag": true
+    },
+    "Address_Valid": {
+        "HomeAddress": "35995 Fremont Blvd Apt 98",
+        "City": "Fremont",
+        "State": "CA",
+        "ZIPCode": "94536"
+    }
+}

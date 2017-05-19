@@ -36,6 +36,7 @@ class PersonalInfoPageLocators {
         this.fieldEmailAddr = by.id('email');
         this.errMsgEmailAddr = by.id('email-error');
         this.chkBoxPaperless = by.id('paperless');
+        this.paperLessTerms = by.partialLinkText('Terms and Conditions');
         this.RadBtnBrokerYes = by.id('brokerYes');
         this.RadBtnBrokerNo = by.id('brokerNo');
         this.zipPopUp=by.css('div.popup.alert');
