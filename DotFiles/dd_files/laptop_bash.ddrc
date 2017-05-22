@@ -1,0 +1,53 @@
+echo "jo mama"
+echo ""
+
+set -o vi
+alias ll='ls -alF'
+alias lll='ls -alFtr'
+alias x='exit'
+alias gd='git diff'
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
+alias gcm='git commit -m'
+
+currentSourceFile='/c/DD_Repos/dd-cx-test/integration/scenarios/CAA55PlanSelect.test.js'
+alias gacurr='git add $currentSourceFile'
+
+#alias vidd='vi /c/program\ files/git/etc/bash.bashrc'
+#alias vidd='vi /c/program\ files/git/etc/bash.ddrc'
+alias vidd='vi /c/program\ files/git/etc/laptop_bash.ddrc'
+
+#alias s.c='set mypwd=`pwd`;pushd $mypwd ;source /c/program\ files/git/etc/bash.bashrc; popd'
+alias s.c='source /c/program\ files/git/etc/bash.bashrc'
+alias ss.cc='source /c/program\ files/git/etc/laptop_bash.bashrc'
+alias s.cc='s.c ; gotestrepo'
+alias cls='clear'
+alias gomark='cd /c/Mark'
+alias gotestscen='cd /c/DD_Repos/dd-cx-test/integration/scenarios'
+alias goscen='cd /c/DD_Repos/dd-cx-test/integration/scenarios'
+alias goddcxtst='cd /c/DD_Repos/dd-cx-test'
+alias gotestrepo='goddcxtst'
+alias goprepo='cd /p/DD_Repos/dd-cx-test'
+
+alias gojsdev='cd /c/mark/JsDev/DD_POC_v2'
+alias gopomlab='cd /c/mark/JsDev/POM_lab'
+
+alias ppcc='gotestrepo; echo "running Chrome"; protractor protractor-chrome.conf.js'
+alias ppff='echo "running fireFox"; protractor protractor-firefox.conf.js'
+
+alias ca55sim='echo "running chrome ca55Simple was Senior"; protractor protractor-ch_ff-CAA55SimpleWasSr.conf.js'
+alias p5pc='protractor protractor-5pgHp-chrome.conf.js'
+
+alias grepal='alias | grep -i $1'
+alias hl='history | less '
+alias cpSrPlan='cp /c/DD_Repos/dd-cx-test/integration/scenarios/DDCX-SeniorPlan-Single.test.js /c/Mark/JsDev/DD_POC_v2'
+
+#alias cpWorkRepo=' cp -r /c/DD_Repos/dd-cx-test/* /c/Temp/testDestForRepoCpR'
+alias cpWorkRepo=' cp -r /c/DD_Repos/dd-cx-test/* /c/mark/JsDev/DD_POC_v2'
+
+alias moveNode4Backup='mv /c/DD_Repos/dd-cx-test/node_modules /c/DD_Repos/'
+
+alias putNodeBack='mv /c/DD_Repos/node_modules /c/DD_Repos/dd-cx-test'
+alias getTestRepo='cd /c/DD_Repos;  moveNode4Backup ; cpWorkRepo ; putNodeBack'
+
