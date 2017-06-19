@@ -7,7 +7,7 @@ class DirectorySearchLocators {
         this.login = by.xpath('//header[@class="section-heading"]/p/a');
         this.location = by.id('location');
         this.viewDentists = by.buttonText('View Dentists');
-        this.refineSearch = by.buttonText('Refine Search');        
+        this.refineSearch = by.buttonText('Refine Search');
         this.homeAddressfromGoogleApi = by.xpath('//div[@class="pac-item"]');
         this.distanceSelect = by.id('distance');
         this.generalDentist = by.id('specialty_General-Dentist');
@@ -26,13 +26,18 @@ class DirectorySearchLocators {
         this.providersListing = by.className('provider-listing');
         //Element for Provider based on provider Name
         this.provider = function(providerName) {
-            return by.xpath('//h5[text()="' + providerName + '"]/parent::header/parent::section/parent::article');
+            return by.xpath('//div[text()="' + providerName + '"]/parent::header/parent::section/parent::article');
         };
-        this.view = by.xpath('//a[normalize-space(text()) = "View"]');
+
+        this.view = function(providerName) {
+            return by.xpath('//div[text()="' + providerName + '"]/parent::header/parent::section/parent::article//a[normalize-space(text()) = "View"]');
+        };
         this.specialty = by.className('provider__specialty');
-        this.providerAddressName = by.className('provider__address-name');
+        this.providerPlaceName = by.className('provider__place-name');
         this.providerAddress = by.className('provider__address');
         this.providerNetwork = by.className('provider__network');
+        this.apply=by.buttonText('Apply');
+
     }
 }
 

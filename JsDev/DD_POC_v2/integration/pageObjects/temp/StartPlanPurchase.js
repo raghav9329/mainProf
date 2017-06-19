@@ -4,7 +4,10 @@
 var specHelper = require("../utils/intSpecHelper");
 var envConfig  = specHelper.getConfig();
 
-function StartPlanPurchase = {
+// // function StartPlanPurchase = { this initiall generated an error in Eclipse
+//  and htis got rid of the error StartPlanPurchase = function StartPlanPurchase () {
+//
+StartPlanPurchase = function StartPlanPurchase () {
 
 
 	navigate: function navigate () {
@@ -15,13 +18,16 @@ function StartPlanPurchase = {
 		//to get bounced out of https to http.
 		
 		browser.get(envConfig.baseUrl + "#/");
-	},
+	} 
+	
 	getTitleText: function getTitleText () {
 		return $(".page-title").getText();
-	},
-	isActivePage: function () {
+	}
+	
+	isActivePage: function isActivePage () {
 		return this.getTitleText().then(function (pageTitle) {
 			return pageTitle === "Delta Dental Insurance";
 		});
 	}
+	
 };

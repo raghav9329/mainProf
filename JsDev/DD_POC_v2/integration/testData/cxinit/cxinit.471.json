@@ -1,4 +1,12 @@
 {
+    "firstname": "Krishna",
+    "mi": "K",
+    "lastname": "K",
+    "gender": "Male",
+    "dob": "05-05-1988",
+    "ssn": "1234560215",
+    "alternateid": "test@test.com",
+    "ariainvalid": "success",
     "NoOfPeopleCovered": "2",
     "ZIPcode": "94536",
     "DOB_HOME": "07/02/1988",
@@ -20,6 +28,10 @@
     "State2": "California",
     "State3": "**--//",
 
+    "FirstNameFieldHelper": {
+        "FName": "ValidTxtToReduceError"
+    },
+
     "PartialAddress_Suggestion": {
         "PartialAddress": "949",
         "FullAddress": "949Broadway, New York, NY, United States",
@@ -38,7 +50,7 @@
         "ZipCode": "77401",
         "ErrorMsg": "Please enter a street address",
         "ExecutionFlag": true
-    },    
+    },
 
     "Address_Valid": {
         "HomeAddress": "35995 Fremont Blvd Apt 98",

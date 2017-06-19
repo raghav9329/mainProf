@@ -29,16 +29,17 @@ Consume the error messages in the property file and validate fields display the 
 "use strict"
 // var TestData = require("../../testData/personalInfo.json");
 var TestData = require("../../testData/cxinit/cxinit.507.json");
-var perInfo = new(require('../../pageObjects/perInfo-page.js'));
-var homePage = new(require('../../pageObjects/home-page.js'));
+var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
+var homePage = new(require('../../businessComponents/homePage.js'));
 
 
 
 
 //To Navigate Personla Info Page
-describe('507_PersInfoPg: ', function() {
+describe('CXINIT-507: PersInfoPg: ', function() {
 
     beforeAll(function() {
+		console.log('cxinit 507');
         Utility.openApplication('');
     });
 
@@ -61,11 +62,7 @@ describe('507_PersInfoPg: ', function() {
     });
 
     it('should be able to open Login page and verify', function() {
-
-        browser.driver.findElement(by.name('noOfCovered')).sendKeys('').then(function() {
-            browser.actions().sendKeys(protractor.Key.ENTER).perform();
-            return true;
-        })
+        homePage.enterHomePageDetails(TestData.enrollData);     
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
     });
 
@@ -145,7 +142,8 @@ describe('507_PersInfoPg: ', function() {
                 perInfo.fieldFirstName.setText(data.FName + '\t');
                 expect(perInfo.errMsgFirstName.getText()).toEqual(data.ErrorMsg);
                 browser.executeScript('window.scrollTo(0,0);');
-                browser.sleep(3000);
+                //browser.sleep(3000);
+                browser.sleep(300);
                 expect(perInfo.fieldFirstName.getAttribute("class")).toContain(data.ariainvalid);
             });
         };
@@ -182,7 +180,8 @@ describe('507_PersInfoPg: ', function() {
                 perInfo.fieldLastName.setText(data.LName + '\t');
                 expect(perInfo.errMsgLastName.getText()).toEqual(data.ErrorMsg);
                 browser.executeScript('window.scrollTo(0,0);');
-                browser.sleep(3000);
+                //browser.sleep(3000);
+                browser.sleep(300);
                 expect(perInfo.fieldLastName.getAttribute("class")).toContain(data.ariainvalid);
             });
         };

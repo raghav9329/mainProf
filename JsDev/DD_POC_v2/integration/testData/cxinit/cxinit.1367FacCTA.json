@@ -1,0 +1,67 @@
+{
+    "firstname": "Krishna",
+    "mi": "K",
+    "lastname": "K",
+    "gender": "Male",
+    "dob": "05-05-1988",
+    "ssn": "1234560215",
+    "alternateid": "test@test.com",
+    "fieldHomeAddr": "35995 Fremont Blvd Apt 98",
+    "city": "Fremont",
+    "State": "CA",
+    "contactType": "Cell",
+    "phoneNumber": "9876543210",
+    "email": "test@gmail.com",
+    "ZipCode": "94105",
+    "brokernumber": "201285",
+    "coverageStartDate": "05/01/2018",
+    "ariainvalid": "success",
+    "dependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
+    "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
+    "facilityoption1": "Kayvan Kafayi DDS",
+    "facilityoption2": "Van Ness Dental Group",
+    "facilityoption3": "Ocean Dental Office",
+    "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
+    "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
+    "depError": "You can select only 1 Spouse or Domestic Partner.",
+    "updateRelationship": "Child",
+    "errorSSN":"Please enter your SSN",
+    "SSN":"789456321",
+    "errorFacility":"Please choose a facility.",
+    "enrollData": {
+        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+        "PlanType": "DHMO",
+        "PlanCode": "CAA55",
+        "CoverageStartDate": "12/5/2017",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "10.00",
+        "AnnualCost": "80.76",
+        "CoverageType": "Self",
+        "PlanID": "70422",
+        "IssuerCode": "DELTA",
+        "NoOfPeopleCovered": "1"
+    },
+
+    "domesticPartner": {
+        "relationship": "Domestic Partner",
+        "firstName": "firstName",
+        "middleName": "m",
+        "lastName": "lastName",
+        "gender": "Male",
+        "DOB": "10-10-2000"
+    },
+
+    "spouse": {
+        "relationship": "Spouse",
+        "firstName": "firstName",
+        "middleName": "m",
+        "lastName": "lastName",
+        "gender": "Female",
+        "DOB": "05-10-1995"
+    },
+
+    "dependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please select a gender", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"]
+   
+}

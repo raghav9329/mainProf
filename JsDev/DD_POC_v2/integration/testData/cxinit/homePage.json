@@ -1,0 +1,16 @@
+{
+	"PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+	"PlanType": "DHMO",
+	"PlanCode": "CAA55",
+	"CoverageStartDate": "12/5/2017",
+	"State": "CA",
+	"ZIPcode": "94105",
+	"Country": "USA",
+	"EnrollmentFee": "10.00",
+	"AnnualCost": "80.76",
+	"CoverageType": "Self",
+	"PlanID": "70422",
+	"IssuerCode": "DELTA",
+    "NoOfPeopleCovered": "2"
+}
+    
