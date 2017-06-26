@@ -24,9 +24,11 @@ class FacilitiesPage extends ControlBase {
         this.back = new LinkText(this.pageObjects.back);
         this.premiumAmount = new Label(this.pageObjects.premiumAmount);
         this.enrollmentFee = new Label(this.pageObjects.enrollmentFee);
+        this.productName = new Label(this.pageObjects.productName);
+
         this.validationMessage = new Label(this.pageObjects.validationMessage);
-        this.RecentSelectedFacility = new Label(this.pageObjects.RecentSelectedFacility);    
-         this.facilityBox = new Label(this.pageObjects.facilityBox);      
+        this.RecentSelectedFacility = new Label(this.pageObjects.RecentSelectedFacility);
+        this.facilityBox = new Label(this.pageObjects.facilityBox);
         this.enrolleFacNullErr = new Label(this.pageObjects.enrolleFacNullErr);
         this.depNameVerify = new Label(this.pageObjects.depNameVerify);
 
@@ -41,7 +43,12 @@ class FacilitiesPage extends ControlBase {
     selectFacilityLocator(facility) {
         return new RadioButton(this.pageObjects.selectFacility(facility));
     };
-
+    pbox_facilityName(facno) {
+        return new Label(this.pageObjects.pbox_facilityName(facno));
+    };
+    pbox_dependentName(depno) {
+        return new Label(this.pageObjects.pbox_dependentName(depno));
+    };
     selectFacility(facility, timeout) {
         var self = this;
         return browser.controlFlow().execute(function() {

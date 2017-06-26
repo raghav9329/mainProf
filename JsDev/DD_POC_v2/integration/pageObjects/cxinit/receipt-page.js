@@ -19,10 +19,17 @@ class ReceiptPage extends ControlBase {
         super(null, 'ReceiptPage');
         this.pageObjects = new ReceiptLocators();
         this.applicationNumber = new Label(this.pageObjects.applicationNumber);
+        this.planPurchased = new Label(this.pageObjects.planPurchased);
+        this.effectiveDate = new Label(this.pageObjects.effectiveDate);
+        this.totalPaid = new Label(this.pageObjects.totalPaid);
         this.submit = new Button(this.pageObjects.submit);
         this.printReceipt = new LinkText(this.pageObjects.printReceipt);
         this.planName = new Label(this.pageObjects.planName);
-        this.deltaRating = new RadioButton(this.pageObjects.deltaRating);
+        this.thanksMsg = new Label(this.pageObjects.thanksMsg);
+        this.queryAnswer = new TextBox(this.pageObjects.queryAnswer);
+        this.deltaRating = function(rating) {
+            return new RadioButton(this.pageObjects.deltaRating(rating));
+        };
         this.planSummary = new Label(this.pageObjects.planSummary);
         this.applicants = new Label(this.pageObjects.applicants);
         this.dependentName = function(dependent, dependentNo) {
@@ -60,10 +67,26 @@ class ReceiptPage extends ControlBase {
     submitRating(answer) {
         var self = this;
         Utility.switchToFrame(this.pageObjects.feedbackFrame());
-        this.deltaRating.select(answer);
+        this.deltaRating(answer).select();
         this.submit.click();
         Utility.switchToFrame();
     };
+    answerQuery(answer) {
+        var self = this;
+        Utility.switchToFrame(this.pageObjects.feedbackFrame());
+        this.queryAnswer.setText(answer);
+        this.submit.click();
+        Utility.switchToFrame();
+    };
+    getThanksMsg() {
+        var self = this;
+        Utility.switchToFrame(this.pageObjects.feedbackFrame());
+        return this.thanksMsg.getText().then(function(thanksmsg) {
+            Utility.switchToFrame();
+            return thanksmsg;
+        });
+    };
+
     // getSelectedFacilityDetails(PRIMARY,1)
     getSelectedFacilityDetails(dependent, dependentNo) {
         var self = this;

@@ -73,14 +73,25 @@ class PaymentPage extends ControlBase {
         return new Label(this.pageObjects.planSummaryValue(summaryKey));
     };
 
-    fillpayment(paymentData, isAuthChecked) {
+    fillpayment(paymentData, skipAuthChecked) {
         var self = this;
         self.nameOnCard.setText(paymentData.nameOnCard);
         self.cardNumber.setText(paymentData.cardNumber);
         self.expMonth.setText(paymentData.expMonth);
         self.expYear.setText(paymentData.expYear);
         self.securityCode.setText(paymentData.securityCode);
-        if (!isAuthChecked) self.authChkBox.check();
+       // if (!isAuthChecked) self.authChkBox.check();
+//////////////////////////////////////////////////////////////////////        
+// The following is necessary due to the nature of the check box control.
+// Fill payment must be considered a will always complete kind of task
+// Not a task that has options to consider, and maybe not complete
+// It sets Text by force ( within reason )
+// IT makesure sure the auth box has a checkmark.
+//////////////////////////////////////////////////////////////////////
+        
+       self.authChkBox.check();
+       self.authChkBox.check();
+       self.authChkBox.check();
     };
 
     getCCValidationMessages() {

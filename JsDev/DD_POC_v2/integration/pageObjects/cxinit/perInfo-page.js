@@ -98,8 +98,7 @@ class PersonalInfoPage extends ControlBase {
     }
 
     enrollStatus(breadcrumbheader) {
-        return new Label(this.pageObjects.personalInfoStatus(breadcrumbheader));
-
+        return new Label(this.pageObjects.enrollStatus(breadcrumbheader));
     };
 
     /**

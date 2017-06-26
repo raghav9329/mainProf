@@ -47,7 +47,7 @@ class ProviderDetailsPage extends ControlBase {
     };
     getProviderAccessByfacility(facility) {
         return element(this.pageObjects.providerAccessByfacility(facility)).getTextEx().then(function(accessinfo){
-        	return (((accessinfo.split(':'))[1]).trim());
+        	return (((accessinfo.split(':'))[1]));
         })
     };
     getProviderDataByField(fieldName) {

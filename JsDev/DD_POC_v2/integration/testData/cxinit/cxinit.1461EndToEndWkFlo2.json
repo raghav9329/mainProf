@@ -6,13 +6,16 @@
     "dob": "05-05-1971",
     "ssn": "1234560215",
     "alternateid": "test@test.com",
-    "fieldHomeAddr": "35995 Fremont Blvd Apt 98",
+    "fieldHomeAddr": "100 first street",
+    "homeAddress" : "100 First Street1st Street, San Francisco, CA, United States",
     "city": "Fremont",
     "State": "CA",
     "contactType": "Cell",
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
     "ZipCode": "94105",
+    "zipcode1" : "94106",
+    "facZipcode" : "94111",
     "brokernumber": "201285",
     "coverageStartDate": "07/01/2017",
     "ariainvalid": "success",
@@ -20,6 +23,7 @@
     "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
     "facilityoption1": "Kayvan Kafayi DDS",
     "facilityoption2": "Van Ness Dental Group",
+    "facilityoption3": "The Santos Dental Group Corp",
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
 
@@ -29,14 +33,14 @@
         "PlanCode": "CAA55",
         "CoverageStartDate": "12/5/2017",
         "State": "CA",
-        "ZIPcode": "94105",
+        "ZIPcode": "95148",
         "Country": "USA",
         "EnrollmentFee": "10.00",
         "AnnualCost": "80.76",
         "CoverageType": "Self",
         "PlanID": "70422",
         "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1"
+        "NoOfPeopleCovered": "4"
     },
 
     "Spouse": {
@@ -64,7 +68,7 @@
     "cardNumber": "5415240007992183",
     "expMonth": "05",
     "expYear": "2020",
-    "securityCode": "1254",
+    "securityCode": "125",
     "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program"
 
 }

@@ -37,13 +37,13 @@ describe('CXINIT-1406 Payment CTA Back Next: ', function() {
         expect(payment.getCCServerValidationMessages()).toEqual(TestData.paymentErrors);
         expect(payment.getBillingAddressServerValidationMessages()).toEqual(TestData.paymentAddressErrors);
     });
-    it('Step-2: ', function() {
+    it('Step-2:Should be navigate to receipt page', function() {
         payment.billingChkBox.check();
         payment.fillpayment(TestData);
         payment.purchaseNow.click();
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
     });
-    it('Step-3: ', function() {
+    it('Step-3:Should be navigate to receipt page', function() {
         payment.fillpayment(TestData, true);
         payment.purchaseNow.click();
         expect(payment.errAuth.getText()).toEqual(TestData.errorMsgAuth);
@@ -53,7 +53,7 @@ describe('CXINIT-1406 Payment CTA Back Next: ', function() {
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
 
     });
-    it('Step-4: ', function() {
+    it('Step-4:Should be navigate to receipt page  ', function() {
         payment.fillpayment(TestData);
         payment.cardNumber.setText(TestData.invalidCardNumber);
         payment.purchaseNow.click();
@@ -64,11 +64,11 @@ describe('CXINIT-1406 Payment CTA Back Next: ', function() {
         payment.purchaseNow.click();
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
     });
-    it('Step-5: ', function() {
+    it('Step-5:Should be navigate to facilities page', function() {
         payment.back.click();
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
     });
-    it('Step-6: ', function() {
+    it('Step-6:Should be navigate to receipt page', function() {
         payment.fillpayment(TestData);
         payment.purchaseNow.click();
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);

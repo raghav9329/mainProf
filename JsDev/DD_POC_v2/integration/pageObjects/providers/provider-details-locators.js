@@ -33,8 +33,8 @@ class ProviderDetailsLocators {
         this.providerLanguage = by.css('div.provider__languages dd');
         this.providerData = by.className('provider__data');
         this.providerDataByField = function(fieldName) {
-            return by.xpath('//th[contains(text(),"' + fieldName + '")]/parent::tr/td')
-        };
+            return by.xpath('//div[contains(text(),"' + fieldName + '")]/following-sibling::div')
+        }; 
     }
 }
 

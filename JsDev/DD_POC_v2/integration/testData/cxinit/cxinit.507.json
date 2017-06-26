@@ -13,7 +13,9 @@
     "Gender": " ",
     "ErrorMsgBlank_Gender": "Please select a gender",
     "ErrorMsgBlank_SSN": "Please enter your SSN",
+    "FName": "Ratana Praneechai-Bass",
     "MI": "s",
+    "LName": "O'Farrell",
 
     "enrollData": {
         "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",

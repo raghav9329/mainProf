@@ -12,6 +12,9 @@ var TestData =			require('../../testData/cxinit/cxinit.1408.EndToEndWkFlo1.json'
 
 describe('cxinit1408:', function() {
     beforeAll(function() {
+        console.log(' ');
+        console.log('--- CXINIT-1408 E2E WrkFlow1 ---')
+        console.log(' ');
         Utility.openApplication('');
 
     });
@@ -21,6 +24,7 @@ describe('cxinit1408:', function() {
     it('E2E_1 : Should complete the Enroll Page', function() {
         enrollPage.enterHomePageDetails(TestData.enrollData);
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+        console.log('1408_1 complete')
     });
 
     //Enter the valid Test Data in the Personal Information page and Click n the Next
@@ -31,6 +35,7 @@ describe('cxinit1408:', function() {
         perInfo.phoneNumberemail(TestData);
         perInfo.next.click();
         expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
+        console.log('1408_2 complete')
 
     });
 
@@ -38,7 +43,6 @@ describe('cxinit1408:', function() {
     //Validate the Dependet age is greater than 26 and with the disability check box
 
     it('E2E_3 :should add 1 Child Dep', function() {
-        browser.sleep(2000);
         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
         depInfo.fillDependent('Dependent1', TestData.child3, false);
         depInfo.next.click();
@@ -46,9 +50,10 @@ describe('cxinit1408:', function() {
             depInfo.isHandicapped('Dependent1').check();
         }
         depInfo.next.click();
-        // expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
-        // depInfo.continue.click();
+        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+        depInfo.continue.click();
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+        console.log('1408_3 complete')
 
     });
 
@@ -58,6 +63,7 @@ describe('cxinit1408:', function() {
     it('E2E_4 :should select fac for primary', function() {
         facilities.selectFacility(TestData.facilityoption1);
         facilities.next.click();
+        console.log('1408_4 complete')
     });
 
     //Verify and Select the Facility for the Dependent
@@ -65,9 +71,10 @@ describe('cxinit1408:', function() {
     it('E2E_5 :should select fac for deps', function() {
         facilities.selectFacility(TestData.facilityoption2);
         facilities.next.click();
-        facilities.selectFacility(TestData.facilityoption2);
-        facilities.next.click();
+        // facilities.selectFacility(TestData.facilityoption2);
+        // facilities.next.click();
         expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+        console.log('1408_5 complete')
     });
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
@@ -77,6 +84,7 @@ describe('cxinit1408:', function() {
         payment.fillpayment(TestData);
         payment.purchaseNow.click();
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+        console.log('1408_6 complete')
     });
 
     //Verify and Validate the Application Number and Plan Name in the Receipt Page

@@ -77,7 +77,7 @@ class PersonalInfoPageLocators {
         this.serverErrMsgMailingCity = by.css('a.error.mailingCity-error');
         this.serverErrMsgMailingState = by.css('a.error.mailingState-error');
         this.serverErrMsgMailingZip = by.css('a.error.mailingZipCode-error');
-        this.personalInfoStatus = function(breadcrumbheader) {
+        this.enrollStatus = function(breadcrumbheader) {
             return by.xpath('//*[text()="' + breadcrumbheader + '"]/parent::li');
         };
         this.premiumAmount= by.css('aside.product-selection-summary div.header-plan span');

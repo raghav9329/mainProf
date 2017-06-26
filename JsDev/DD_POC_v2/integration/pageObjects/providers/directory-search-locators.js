@@ -2,14 +2,22 @@
 
 class DirectorySearchLocators {
     constructor() {
-        this.headerText = by.xpath('//header[@class="section-heading"]/h1');
-        this.loginheader = by.className('inverted');
-        this.login = by.xpath('//header[@class="section-heading"]/p/a');
+        this.headerText = by.css('h1.page-heading');
+        this.headerTextError = by.xpath('//header[@class="section-heading"]/h1');
         this.location = by.id('location');
-        this.viewDentists = by.buttonText('View Dentists');
-        this.refineSearch = by.buttonText('Refine Search');
+        this.deltaDentalPPO = by.id('network_PPO');
+        this.deltaDentalPremier = by.id('network_Premier');
+        this.deltaCareUSA = by.id('network_DeltaCare');
+        this.keywordSearch = by.id('keyword');
+        this.findDentist = by.buttonText('Find Dentists');     
+        this.refineSearch = by.xpath('//span[contains(text(),"+ Refine Search")]');
         this.homeAddressfromGoogleApi = by.xpath('//div[@class="pac-item"]');
         this.distanceSelect = by.id('distance');
+        this.insurenceNetworks = by.xpath('//legend[text()="Insurance networks"]');
+        this.iNDeltaDentalPPO = by.id('network_PPO');
+        this.iNDeltaDentalPremier = by.id('network_Premier');
+        this.iNDeltaCareUSA = by.id('network_DeltaCare');
+        this.Specialty = by.xpath('//legend[text()="Specialty"]');
         this.generalDentist = by.id('specialty_General-Dentist');
         this.endodontist = by.id('specialty_Endodontist');
         this.oralSurgeon = by.id('specialty_Oral-Surgeon');
@@ -22,6 +30,8 @@ class DirectorySearchLocators {
         this.hygienist = by.id('specialty_Hygienist');
         this.XRLaboratory = by.id('specialty_XR-Laboratory');
         this.oralPathology = by.id('specialty_Oral-Pathology');
+        this.languages =by.xpath('//legend[text()="Languages"]');
+        this.languageFilter = by.id('language_filter');   
 
         this.providersListing = by.className('provider-listing');
         //Element for Provider based on provider Name
@@ -32,11 +42,14 @@ class DirectorySearchLocators {
         this.view = function(providerName) {
             return by.xpath('//div[text()="' + providerName + '"]/parent::header/parent::section/parent::article//a[normalize-space(text()) = "View"]');
         };
+        this.providerName = by.className('provider__name');        
         this.specialty = by.className('provider__specialty');
         this.providerPlaceName = by.className('provider__place-name');
         this.providerAddress = by.className('provider__address');
         this.providerNetwork = by.className('provider__network');
-        this.apply=by.buttonText('Apply');
+        this.providerDistance = by.className('provider__distance');
+        this.apply = by.buttonText('Apply');
+        
 
     }
 }

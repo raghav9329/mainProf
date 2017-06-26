@@ -8,57 +8,54 @@ describe('Provider Search Validation', function() {
         Utility.openApplication('');
     });
     it('ProvDir_1: Verify all fields and buttons are present and displayed', function() {
-        expect(dirSearch.loginheader.isPresentAndDisplayed()).toBeTruthy();
-        expect(dirSearch.login.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.headerText.getText()).toContain(TestData.Header_SearchResultsPage);
         expect(dirSearch.location.isPresentAndDisplayed()).toBeTruthy();
-        expect(dirSearch.viewDentists.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.deltaDentalPPO.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.deltaDentalPremier.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.deltaCareUSA.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.keywordSearch.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.findDentist.isPresentAndDisplayed()).toBeTruthy();
     });
+
     it('ProvDir_2: Verify the functionality of view Dentists when we enter invalid Address', function() {
-        dirSearch.location.setText(TestData.ZipCode + '\t');
-        dirSearch.viewDentists.click();
+        dirSearch.location.setText(TestData.ZipCode);
+        dirSearch.findDentist.click();
         expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.headerText.getText()).toContain(TestData.Header_InvalidAddress);
+        expect(dirSearch.headerTextError.getText()).toContain(TestData.Header_InvalidAddress);
     });
     it('ProvDir_3: Verify the functionality of view Dentists with blank Address', function() {
         dirSearch.location.setText('');
-        dirSearch.viewDentists.click();
+        dirSearch.findDentist.click();
         expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.headerText.getText()).toContain(TestData.Header_InvalidAddress);
+        expect(dirSearch.headerTextError.getText()).toContain(TestData.Header_InvalidAddress);
     });
     it('ProvDir_4: Verify the search results count and provider details ', function() {
         dirSearch.location.setText(TestData.HAddress_ZIP.PartialAddress);
         dirSearch.selectHomeAddress(TestData.HAddress_ZIP.FullAddress);
         browser.sleep(2000);
-        expect(dirSearch.location.getAttribute('value')).toBe('40.7409957, -73.9896776');
-        dirSearch.viewDentists.click();
+        dirSearch.findDentist.click();
         expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.headerText.getText()).toContain(TestData.Header_SearchResultsPage);
         expect(dirSearch.providersListing.getCount()).toEqual(10);
-        // For Unit testing only hardcoded verification data. Later will move to testdata file
-        expect(dirSearch.getProviderdetails('Jeffrey Gold', 'SPECIALTY')).toEqual('General Dentist');
-        expect(dirSearch.getProviderdetails('Jeffrey Gold', 'ADDRESSNAME')).toEqual('Aesthetic Dentistry PC');
-        expect(dirSearch.getProviderdetails('Jeffrey Gold', 'NETWORK')).toContain('2PREMIER,2PPO');
-        expect(dirSearch.getProviderdetails('Jeffrey Gold', 'ADDRESS')).toEqual('156 5th Ave Ste 304, , New York, NY 100108255');
+        var data = TestData.Provider_Name1;
+        expect(dirSearch.getProviderdetails(data.PName, 'SPECIALTY')).toEqual(data.PSpeciality);
+        expect(dirSearch.getProviderdetails(data.PName, 'PLACENAME')).toEqual(data.PPlace);
+        expect(dirSearch.getProviderdetails(data.PName, 'ADDRESS')).toContain(data.PAddress);
     });
 
     it('ProvDir_5: Verify all filter values are displayed or not for refine search functionality', function() {
         dirSearch.location.setText(TestData.HAddress_ZIP.PartialAddress);
         dirSearch.selectHomeAddress(TestData.HAddress_ZIP.FullAddress);
-        dirSearch.viewDentists.click();
-        expect(dirSearch.generalDentist.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.endodontist.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.oralSurgeon.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.orthodontist.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.pediatricDentist.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.periodontist.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.prosthodontist.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.publicHealthDentist.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.fullTimeFaculty.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.hygienist.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.XRLaboratory.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.oralPathology.isPresentAndDisplayed()).toBeFalsy();
+        dirSearch.findDentist.click();
         dirSearch.refineSearch.click();
+        expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.insurenceNetworks.isPresentAndDisplayed()).toBeTruthy();
+        dirSearch.insurenceNetworks.click();     
+        expect(dirSearch.iNDeltaDentalPPO.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.iNDeltaDentalPremier.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.iNDeltaCareUSA.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.Specialty.isPresentAndDisplayed()).toBeTruthy();
+        dirSearch.Specialty.click();
         expect(dirSearch.generalDentist.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.endodontist.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.oralSurgeon.isPresentAndDisplayed()).toBeTruthy();
@@ -71,66 +68,62 @@ describe('Provider Search Validation', function() {
         expect(dirSearch.hygienist.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.XRLaboratory.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.oralPathology.isPresentAndDisplayed()).toBeTruthy();
-
+        expect(dirSearch.languages.isPresentAndDisplayed()).toBeTruthy();
+        dirSearch.languages.click();
+        expect(dirSearch.languageFilter.isPresentAndDisplayed()).toBeTruthy();
     });
 
     it('ProvDir_6: Verify the Provider details by selecting specific provider from provider search results', function() {
+        var data = TestData.Provider_Name1; 
         dirSearch.location.setText(TestData.HAddress_ZIP.PartialAddress);
         dirSearch.selectHomeAddress(TestData.HAddress_ZIP.FullAddress);
-        dirSearch.viewDentists.click();
-        expect(dirSearch.providersListing.getCount()).toEqual(1);
-        dirSearch.openView('Yuliya Kanatova');
+        dirSearch.findDentist.click();
+        expect(dirSearch.providersListing.getCount()).toEqual(10);
+        dirSearch.openView(data.PName);
 
         // Provider distance
-        expect(providerDetails.providerDistance.getText()).toEqual('Provider distance');
+        expect(providerDetails.providerDistance.getText()).toEqual(data.PDistance);
 
         // Provider General information
-        expect(providerDetails.providerName.getText()).toEqual('provider name');
-        expect(providerDetails.providerSpecialty.getText()).toEqual('provider speciality');
-        expect(providerDetails.providerNetwork.getText()).toEqual('provider network');
-        expect(providerDetails.providerAvailability.getText()).toEqual('provider availability');
-
+        expect(providerDetails.providerName.getText()).toEqual(data.PName);
+        expect(providerDetails.providerSpecialty.getText()).toEqual(data.PSpeciality);
+        
         //Provider Address
-        expect(providerDetails.providerPlaceName.getText()).toEqual('provider place ');
-        expect(providerDetails.providerAddressStreet.getText()).toEqual('Provider street');
-        expect(providerDetails.providerAddressCity.getText()).toEqual('provider city');
-        expect(providerDetails.providerAddressState.getText()).toEqual('provider state');
-        expect(providerDetails.providerAddressZip.getText()).toEqual('provider zip');
-        expect(providerDetails.providerAddressPhone.getText()).toEqual('provider phone');
+        expect(providerDetails.providerPlaceName.getText()).toEqual(data.PPlace);
+        expect(providerDetails.providerAddressStreet.getText()).toEqual(data.PStreet);
+        expect(providerDetails.providerAddressCity.getText()).toEqual(data.PCity);
+        expect(providerDetails.providerAddressState.getText()).toEqual(data.PState);
+        expect(providerDetails.providerAddressZip.getText()).toEqual(data.PZIP);
+        expect(providerDetails.providerAddressPhone.getText()).toEqual(data.PPhone);
 
 
         //Provider Availability
-        expect(providerDetails.getOfficeHoursByDay('Monday')).toEqual('Monday');
-        expect(providerDetails.getOfficeHoursByDay('Tuesday')).toEqual('-Tuesday');
-        expect(providerDetails.getOfficeHoursByDay('Wednesday')).toEqual('-Wednesday');
-        expect(providerDetails.getOfficeHoursByDay('Thursday')).toEqual('-Thursday');
-        expect(providerDetails.getOfficeHoursByDay('Friday')).toEqual('-Friday');
-        expect(providerDetails.getOfficeHoursByDay('Saturday')).toEqual('-Saturday');
-        expect(providerDetails.getOfficeHoursByDay('Sunday')).toEqual('-Sunday');
+        expect(providerDetails.getOfficeHoursByDay('Mon')).toEqual(data.PAvailabilityClosed);
+        expect(providerDetails.getOfficeHoursByDay('Tues')).toEqual(data.PAvailabilityClosed);
+        expect(providerDetails.getOfficeHoursByDay('Wed')).toEqual(data.PAvailabilityClosed);
+        expect(providerDetails.getOfficeHoursByDay('Thurs')).toEqual(data.PAvailabilityClosed);
+        expect(providerDetails.getOfficeHoursByDay('Fri')).toEqual(data.PAvailabilityClosed);
+        expect(providerDetails.getOfficeHoursByDay('Sat')).toEqual(data.PAvailabilityClosed);
+        expect(providerDetails.getOfficeHoursByDay('Sun')).toEqual(data.PAvailabilityClosed);
 
         // Provider Facility
-        expect(providerDetails.getProviderAccessByfacility('Free Parking')).toEqual('-Free Parking');
-        expect(providerDetails.getProviderAccessByfacility('Wheel Chair Access')).toEqual('-Wheel Chair Access');
-        expect(providerDetails.getProviderAccessByfacility('Public Transit Access')).toEqual('-Public Transit Access');
-        expect(providerDetails.getProviderAccessByfacility('Internet Access')).toEqual('-Internet Access');
+        expect(providerDetails.getProviderAccessByfacility('Free Parking')).toEqual(data.PParking);
+        expect(providerDetails.getProviderAccessByfacility('Wheelchair Accessible')).toEqual(data.PWheelChair);
+        expect(providerDetails.getProviderAccessByfacility('Public Transit')).toEqual(data.PPublicTransport);
+        expect(providerDetails.getProviderAccessByfacility('Wifi')).toEqual(data.PInternetAccess);
 
         //Language
-        expect(providerDetails.providerLanguage.getText()).toEqual('-');
+        expect(providerDetails.providerLanguage.getText()).toEqual(data.PLanguage);
 
         //Get Provider Data
-        expect(providerDetails.getProviderDataByField('Provider NPI')).toEqual('Provider NPI');
-        expect(providerDetails.getProviderDataByField('License #')).toEqual('License #');
-        expect(providerDetails.getProviderDataByField('License State')).toEqual('License State');
-        expect(providerDetails.getProviderDataByField('Education')).toEqual('Education');
-        expect(providerDetails.getProviderDataByField('Gender')).toEqual('Gender');
+        expect(providerDetails.getProviderDataByField('Provider NPI')).toEqual(data.PNPI);
+        expect(providerDetails.getProviderDataByField('License #')).toEqual(data.PLicence);
+        expect(providerDetails.getProviderDataByField('License State')).toEqual(data.PLicenceState);
+        expect(providerDetails.getProviderDataByField('Education')).toEqual(data.PEducation);
+        expect(providerDetails.getProviderDataByField('Gender')).toEqual(data.PGender);
 
         providerDetails.backToSearchResults.click();
-
-
+        expect(dirSearch.providersListing.getCount()).toEqual(10);
 
     });
-
-
-
-
 });

@@ -13,11 +13,19 @@ class FacilitiesLocators {
         this.next = by.css('input.btn.multi-btn.primary.inline-block');
         this.back = by.linkText('Back');
         this.premiumAmount = by.css('aside.product-selection-summary div.header-plan span');
-        this.enrollmentFee = by.className('enrollment-fee');
+        this.enrollmentFee = by.xpath('//span[contains(text(),"Enrollment Fee")]/preceding-sibling::span[1]');
+        this.productName = by.css('h2.product-name');
+        this.pbox_facilityName = function(no) {
+            return by.xpath('(//li/span[@class="applicant-name"]/following-sibling::p)[' + no + ']');
+        };
+          this.pbox_dependentName = function(no) {
+            return by.xpath('(//li/span[@class="applicant-name"])[' + no + ']');
+        };
+
         this.validationMessage = by.css('label.error');
         this.facilityBox = by.xpath('//ul/li[@class="facility-box"]');
         this.enrolleFacNullErr = by.xpath('//label[@class="error"]');
-        this.depNameVerify = by.id('enrolleeName');      
+        this.depNameVerify = by.id('enrolleeName');
 
     }
 }

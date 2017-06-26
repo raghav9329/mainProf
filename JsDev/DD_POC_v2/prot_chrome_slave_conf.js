@@ -1,6 +1,6 @@
 exports.config = {
     framework: 'jasmine',
-    // seleniumAddress: 'http://localhost:4444/wd/hub',
+     seleniumAddress: 'http://localhost:4444/wd/hub',
 
    // I know you are testing with SUITES, but I am testing individually.
    // Please just comment out a line if you don't want it evaluated.
@@ -84,9 +84,9 @@ exports.config = {
         //baseUrl: ''
         //baseUrl:'http://aw-lx0076.deltadev.ent/directory-search.html',
         //baseUrl:'http://aw-lx0076.deltadev.ent:3000/enroll/',
-        //baseUrl:'https://aw-lx0176.deltadev.ent:3000/enroll/',
+        baseUrl:'https://aw-lx0176.deltadev.ent:3000/enroll/',
     	exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections
-          baseUrl:'https://mot.deltadentalins.com/enroll',
+        //  baseUrl:'https://mot.deltadentalins.com/enroll',
         //baseUrl:'https://mot.deltadentalins.com',
         //exeLogging:'INFO'
         exeLogging:'OFF'
