@@ -5,12 +5,12 @@ var Utility = function() {
         name = name || '';
         this.logInfoPromise('switching to frame:' + name);
         if (name) {
-            return browser.driver.switchTo().frame(name).then(function() {
+            return browser.switchTo().frame(name).then(function() {
                 self.logInfoPromise('switching to frame: ' + name + ' successful');
                 return true;
             });
         } else {
-            return browser.driver.switchTo().defaultContent().then(function() {
+            return browser.switchTo().defaultContent().then(function() {
                 self.logInfoPromise('switching to frame: ' + 'DEFAULT' + ' successful');
                 return true;
             });

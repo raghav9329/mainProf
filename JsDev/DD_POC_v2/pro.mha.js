@@ -1,19 +1,44 @@
 exports.config = {
     framework: 'jasmine',
-    // seleniumAddress: 'http://localhost:4444/wd/hub',
+  //   seleniumAddress: 'http://localhost:4444/wd/hub',
 
    // I know you are testing with SUITES, but I am testing individually.
    // Please just comment out a line if you don't want it evaluated.
     
+    //specs: ['integration/scenarios/cxinit/*.*Dep*.test.js'],
     //specs: ['integration/scenarios/cxinit/cxinit.504.test.js'],
-    //specs: ['integration/scenarios/cxinit/cxinit.507.test.js'],
-    //specs: ['integration/scenarios/cxinit/cxinit.507.test.js','integration/scenarios/cxinit/cxinit.489.test.js'],
-    //specs: ['integration/scenarios/cxinit/cxinit.489.test.js'],
     specs: ['integration/scenarios/051217_E2E_POM_Workflow.js'],
+    //specs: ['integration/scenarios/providers/cxinit.2.4.test.js'],
 
     suites: {
 
         //suite1: 'integration/scenarios/temp/SampleTest.js',
+    	persInfo:
+    			[   'integration/scenarios/cxinit/cxinit.507.test.js',
+    				'integration/scenarios/cxinit/cxinit.489.test.js',
+    				'integration/scenarios/cxinit/cxinit.504.test.js',
+    				'integration/scenarios/cxinit/cxinit.483.test.js',
+    				'integration/scenarios/cxinit/cxinit.471.test.js',
+    				'integration/scenarios/cxinit/cxinit.720.test.js',
+    				'integration/scenarios/cxinit/cxinit.519.test.js',
+    				'integration/scenarios/cxinit/cxinit.804.test.js',
+    				'integration/scenarios/cxinit/cxinit.1361.test.js'
+    			], // end of story based persInfo Components
+    	deps:
+    			[   'integration/scenarios/cxinit/cxinit.1355DepCTA.test.js  ',
+    				'integration/scenarios/cxinit/cxinit.1356DepPremChgPop  .test.js  ',
+    				'integration/scenarios/cxinit/cxinit.1357DepChildAge.test.js  ',
+    				'integration/scenarios/cxinit/cxinit.1358DepSpouse-DP.test.js  ',
+    				'integration/scenarios/cxinit/cxinit.1359Dep-15Deps.test.js  ',
+    			],
+    	facs: 	[	'integration/scenario/cxinit/cxinit.1365FacSearch.test.js',
+    				'integration/scenario/cxinit/cxinit.1366FacSelect.test.js',
+    				'integration/scenario/cxinit/cxinit.1367FacCTA.test.js',
+    				'integration/scenario/cxinit/cxinit.1368FacFeedback.test.js'
+    			],
+   //   I"m working on fillingout payment right now......
+   // 	payment: [   ],
+    	cxinit2_4: 'integration/scenarios/providers/cxinit2.4.test.js',
         cx507: 'integration/scenarios/cxinit/cxinit.507.test.js',
         cx489: 'integration/scenarios/cxinit/cxinit.489.test.js',
         cx504: 'integration/scenarios/cxinit/cxinit.504.test.js',
@@ -22,8 +47,16 @@ exports.config = {
         cx720: 'integration/scenarios/cxinit/cxinit.720.test.js',
         cx519: 'integration/scenarios/cxinit/cxinit.519.test.js',
         cx804: 'integration/scenarios/cxinit/cxinit.804.test.js',
-        //cxE2E: 'integration/scenarios/',
-
+        cx1355:'integration/scenarios/cxinit/cxinit.1355DepCTA.test.js',
+        cx1356:'integration/scenarios/cxinit/cxinit.1356DepPremChgPop.test.js',
+        cx1357:'integration/scenarios/cxinit/cxinit.1357DepChildAge.test.js',
+        cx1358:'integration/scenarios/cxinit/cxinit.1358DepSpouse-DP.test.js',
+        cxE2E: 'integration/scenarios/051217_E2E_POM_Workflow.js',
+        cxE2E50:'integration/scenarios/CAA50*.test.js',
+        cxE2E54:'integration/scenarios/CAA54*.test.js',
+        cxE2E55p:'integration/scenarios/CAA55Plan*.test.js',
+        cxE2E55s:'integration/scenarios/CAA55Simple*.test.js',
+        	
     },
 
 //     seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
@@ -31,12 +64,25 @@ exports.config = {
 //     geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.16.0',
 
 
-    seleniumServerJar: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
-    chromeDriver: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
-    geckodriver: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.16.1',
+//    seleniumServerJar: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
+//    chromeDriver: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
+//    geckodriver: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.16.1',
 
+//  ///////////////////
+// Interesting , here's what runing webdriver-manager update did.
+// It actually made me go backwards in versions.  I have tested it our ( minimally ) 
+// that my old chrome configuration runs on these drivers below in the same manner
+//  Still struggling with Firefox execution.
+
+
+    seleniumServerJar: 'C:\\DD_Repos\\dd-cx-test\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
+    chromeDriver:      'C:\\DD_Repos\\dd-cx-test\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.25',
+    geckodriver:       'C:\\ DD_Repos\\dd-cx-test\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.9.0',
+
+    
     capabilities: {
         browserName: 'chrome',
+//        browserName: 'firefox',
         chromeOptions: {
             'args': ['disable-infobars']
         }
@@ -44,28 +90,33 @@ exports.config = {
     	// browser window being controlled externally....etc.
     },
 
+    localSeleniumStandaloneOpts: {
+        jvmArgs: ["-Dwebdriver.gecko.driver=c:\\DD_Repos\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.9.0.exe"]
+      },
+    
     params: {
         //baseUrl: ''
+        //baseUrl:'http://aw-lx0076.deltadev.ent/directory-search.html',
+        //baseUrl:'http://aw-lx0076.deltadev.ent:3000/enroll/',
         baseUrl:'https://aw-lx0176.deltadev.ent:3000/enroll/',
-        exeLogging:'INFO'
+    	exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections
+        // baseUrl:'https://mot.deltadentalins.com/enroll',
+        //baseUrl:'https://mot.deltadentalins.com',
+        //exeLogging:'INFO'
+        exeLogging:'OFF'
     },
 
-// Please stop deleting the window.setSize(1050,950) line
-// Just comment it out and put yours back in.
     onPrepare: function() {
         minWait = 1000;
         maxWait = 2000;
         longWait = 40000;
         PAGELOADTIME = 60000;
         //browser.manage().window().maximize();
-        browser.manage().window().setSize(1050,950);
+     //   browser.manage().window().setSize(1050,1250);
         browser.ignoreSynchronization = true;
         folderName = (new Date()).toString().split('').splice(1, 4).join('');
         require("./integration/utils/element-finder-extensions.js");
       
-     // If possible , I would prefer this Utility line to be duplicated in what ever source code file
-     // that needs it.  I was very confused how it was defined in the source code.
-     // The same goes for the require line directly above 
         Utility = new(require("./integration/utils/common.js"));
         dataProvider = require('jasmine-data-provider');
         log4js = require('log4js');
@@ -83,6 +134,7 @@ exports.config = {
     },
     resultJsonOutputFile: 'results.json',
     jasmineNodeOpts: {
+    	//includeStackTrace : false,
         showColors: true, // Use colors in the command line report.
         defaultTimeoutInterval: 10 * 60000
 

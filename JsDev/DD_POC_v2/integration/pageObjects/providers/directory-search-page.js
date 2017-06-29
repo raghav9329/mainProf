@@ -9,8 +9,6 @@ var CheckBox = require('../../controls/checkbox-control');
 var RadioButton = require('../../controls/radiobutton-control');
 var LinkText = require('../../controls/link-control');
 
-
-
 /**
  * Provides access to the functionality of Directory Search page
  * @constructor
@@ -21,15 +19,21 @@ class DirectorySearchPage extends ControlBase {
         super(null, 'DirectorySearchPage');
         this.pageObjects = new DirectorySearchLocators();
         this.headerText = new Label(this.pageObjects.headerText);
-        this.loginheader = new Label(this.pageObjects.loginheader);
-        this.login = new Label(this.pageObjects.login);
+        this.headerTextError = new Label(this.pageObjects.headerTextError);
         this.location = new TextBox(this.pageObjects.location);
-        this.viewDentists = new Button(this.pageObjects.viewDentists);
-        this.refineSearch = new Button(this.pageObjects.refineSearch);
+        this.deltaDentalPPO = new CheckBox(this.pageObjects.deltaDentalPPO);
+        this.deltaDentalPremier = new CheckBox(this.pageObjects.deltaDentalPremier);
+        this.deltaCareUSA = new CheckBox(this.pageObjects.deltaCareUSA);
+        this.keywordSearch = new TextBox(this.pageObjects.keywordSearch);
+        this.findDentist = new Button(this.pageObjects.findDentist);
+        this.refineSearch = new Label(this.pageObjects.refineSearch);
         this.homeAddressfromGoogleApi = new Label(this.pageObjects.homeAddressfromGoogleApi);
-        this.providersListing = new Label(this.pageObjects.providersListing);
-        //this.view= new Label(this.pageObjects.view);
         this.distanceSelect = new Select(this.pageObjects.distanceSelect);
+        this.insurenceNetworks = new Label(this.pageObjects.insurenceNetworks);
+        this.iNDeltaDentalPPO = new CheckBox(this.pageObjects.iNDeltaDentalPPO);
+        this.iNDeltaDentalPremier = new CheckBox(this.pageObjects.iNDeltaDentalPremier);
+        this.iNDeltaCareUSA = new CheckBox(this.pageObjects.iNDeltaCareUSA);
+        this.Specialty = new Label(this.pageObjects.Specialty);
         this.generalDentist = new CheckBox(this.pageObjects.generalDentist);
         this.endodontist = new CheckBox(this.pageObjects.endodontist);
         this.oralSurgeon = new CheckBox(this.pageObjects.oralSurgeon);
@@ -42,9 +46,10 @@ class DirectorySearchPage extends ControlBase {
         this.hygienist = new CheckBox(this.pageObjects.hygienist);
         this.XRLaboratory = new CheckBox(this.pageObjects.XRLaboratory);
         this.oralPathology = new CheckBox(this.pageObjects.oralPathology);
-
-
-
+        this.languages = new Label(this.pageObjects.languages);
+        this.languageFilter = new Select(this.pageObjects.languageFilter);
+        this.apply = new Button(this.pageObjects.apply);
+        this.providersListing = new Label(this.pageObjects.providersListing);
     }
     selectHomeAddress(homeaddress) {
         var self = this;
@@ -52,8 +57,8 @@ class DirectorySearchPage extends ControlBase {
             browser.sleep(2000);
             return self.homeAddressfromGoogleApi.getElements().filter(function(elem, index) {
                 return elem.getText().then(function(text) {
-                    // console.log("text=========" + text);
-                    // console.log("homeaddress==" + homeaddress);
+                    console.log("text=========" + text);
+                    console.log("homeaddress==" + homeaddress);
                     return text === homeaddress;
                 });
             }).first().clickIt();
@@ -78,17 +83,21 @@ class DirectorySearchPage extends ControlBase {
     };
 
     openView(providerName) {
-        element(this.pageObjects.provider(providerName)).element(this.pageObjects.view).clickIt();
-
+        element(this.pageObjects.view(providerName)).clickIt();
     };
-    getProviderdetails(providerName,providerAttribute) {
 
+    
+    getProviderdetails(providerName, providerAttribute) {
         switch (providerAttribute.toUpperCase()) {
+            case 'PROVIDER':
+             return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerName).getText();;
+                break;
+            
             case 'SPECIALTY':
                 return element(this.pageObjects.provider(providerName)).element(this.pageObjects.specialty).getText();;
                 break;
-            case 'ADDRESSNAME':
-                return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerAddressName).getText();;
+            case 'PLACENAME':
+                return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerPlaceName).getText();;
                 break;
             case 'ADDRESS':
                 return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerAddress).getText();;
@@ -96,18 +105,11 @@ class DirectorySearchPage extends ControlBase {
             case 'NETWORK':
                 return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerNetwork).getText();;
                 break;
+            case 'MILAGE':
+                return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerDistance).getText();;
+                break;
         };
     };
-
-
-
-
-
-
-
-
-
-
 
 };
 

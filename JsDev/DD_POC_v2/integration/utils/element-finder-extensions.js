@@ -24,9 +24,14 @@ ElementFinder.prototype.waitReady = function(timeoutMs, disabledClassName, withR
     var driverWaitIterations = 0;
     var lastWebdriverError = '';
     timeoutMs = timeoutMs || 5000;
+    browser.wait(function() {
+        return browser.executeScript('return document.readyState==="complete"').then(function(text) {
+            return text === true;
+        });
+    }, PAGELOADTIME);
 
     function _log(result) {
-        logger.info("waitReady: '" + self.locator().toString() +
+        logger.trace("waitReady: '" + self.locator().toString() +
             "' returns:" + result +
             ", After " + driverWaitIterations + " driverWaitIterations. " +
             "Additional Info: " + lastWebdriverError);
@@ -80,13 +85,21 @@ ElementFinder.prototype.waitReady = function(timeoutMs, disabledClassName, withR
     });
 };
 
-ElementFinder.prototype.setText = function(text) {
+ElementFinder.prototype.setText = function(text, isAppend) {
     var self = this;
     self.moveMouse();
-    return self.clear().then(function() {
-        logger.trace("setText: cleared and now sending keys '" + text + "' to:" + self.locator().toString());
-        return self.sendKeys(text);
-    });
+    if (isAppend) {
+        return self.sendKeys(text).then(function() {
+            logger.trace("setText: Appending keys '" + text + "' to:" + self.locator().toString());
+        })
+    } else {
+        return self.clear().then(function() {
+            logger.trace("setText: cleared and now sending keys '" + text + "' to:" + self.locator().toString());
+            return self.sendKeys(text);
+        });
+
+    }
+
 };
 
 ElementFinder.prototype.selectOptionByIndex = function(selectIndex) {
@@ -204,7 +217,8 @@ ElementArrayFinder.prototype.getElementFromListAndPerformAction = function(index
 
 ElementFinder.prototype.moveMouse = function() {
     logger.debug('ElementFinder.prototype.moveMouse called');
-    return getBrowser().actions().mouseMove(this).perform();
+    // return getBrowser().actions().mouseMove(this).perform();
+    return true;
 };
 
 

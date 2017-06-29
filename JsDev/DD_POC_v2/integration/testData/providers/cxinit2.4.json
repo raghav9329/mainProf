@@ -13,5 +13,32 @@
         "City": "Fremont",
         "State": "CA",
         "ZIPCode": "94536"
+    },
+    "Provider_Name1": {
+        "PName": "Jeffrey Gold",
+        "PSpeciality": "General Dentist",
+        "PPlace": "Aesthetic Dentistry PC",
+        "PAddress": "156 5th Ave Ste 304",
+        "PDistance": "0.2 mi",
+        "PNetwork": "",
+        "PAvailabilityOpen": "open",
+        "PAvailabilityClosed": "closed",
+        "PStreet": "156 5th Ave Ste 304,",
+        "PCity": "New York",
+        "PState": "NY",
+        "PZIP": "100108255",
+        "PPhone": "(212) 929-9191",
+        "PParking": "",
+        "PWheelChair": "",
+        "PPublicTransport": "",
+        "PInternetAccess":"",
+        "PLanguage": "English",
+        "PNPI": "1336234798",
+        "PLicence": "32378",
+        "PLicenceState": "NY",
+        "PGender": "M",
+        "PEducation": ""
+
     }
+
 }

@@ -42,6 +42,7 @@ exports.config = {
     },
 
     params: {
+    	exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections See 471 for use
         baseUrl: '',
         exeLogging: ''
     },
@@ -53,6 +54,7 @@ exports.config = {
         maxWait = 2000;
         longWait = 40000;
         PAGELOADTIME = 60000;
+         browser.manage().timeouts().implicitlyWait(browser.params.exeInspDelay);
         //browser.manage().window().maximize();
         browser.manage().window().setSize(1050, 950);
         browser.ignoreSynchronization = true;
@@ -64,15 +66,21 @@ exports.config = {
         // The same goes for the require line directly above 
         Utility = new(require("./integration/utils/common.js"));
         dataProvider = require('jasmine-data-provider');
-        log4js = require('log4js');
+
+
+         log4js = require('log4js');
         log4js.configure({
             appenders: [
                 { type: 'console' },
-                { type: 'file', filename: 'results/logs/executionLog.log', category: 'Delta' }
+                { type: 'file', filename: 'results/logs/executionLog.log', category: 'DeltaDental' }
             ]
         });
-        logger = log4js.getLogger('Delta');
+        logger = log4js.getLogger('DeltaDental');
         logger.setLevel(browser.params.exeLogging);
+        var JasmineLogReporter = require('./integration/utils/jasmine-log-reporter');
+        jasmine.getEnv().addReporter(new JasmineLogReporter());
+
+        
         // var monthMap = {  // Configs went here  moved below
 
 

@@ -1,23 +1,28 @@
-var homePg = new(require('../pageObjects/homePgObj.js'));
-var perInfo = new(require('../pageObjects/persInfoPgObj.js'));
+"use strict"
+var HmPage = new(require('../pageObjects/cxinit/home-page.js'));
 var HomePage = function() {
 
 };
 
 // Fill Home page details and navigate ti perInfo page
 HomePage.prototype.enterHomePageDetails = function(homeObj) {
-
-    browserActions.click(homePg.GetQuote, 'Click on GetQuote Button in Home Page');
-    browser.sleep(minWait);
-    browserActions.enterText(homePg.ZIPCode, homeObj.ZIPcode, 'Enter ZIP Code' + homeObj.ZIPcode);
-    browser.sleep(minWait);
-    browserActions.enterText(homePg.DOB, homeObj.DOB, 'Enter DOB' + homeObj.DOB);
-    browserActions.selectDropdownbyText(homePg.Covered, homeObj.NoOfPeopleCovered, 'Select People from the drop down' + homeObj.NoOfPeopleCovered);
-    browserActions.click(homePg.Go, 'Click on Go');
-    browser.sleep(maxWait);
-    browserActions.click(homePg.Enroll, 'Click on Enroll');
-    browser.sleep(maxWait);
-
+    browser.getCapabilities().then((c) => {
+        if (c.get('browserName') == 'internet explorer') HmPage.overridelink.click();
+        HmPage.PlanName.setText(homeObj.PlanName);
+        HmPage.PlanType.setText(homeObj.PlanType);
+        HmPage.PlanCode.setText(homeObj.PlanCode);
+        HmPage.CoverageStartDate.setText(homeObj.CoverageStartDate);
+        HmPage.PlanState.setText(homeObj.State);
+        HmPage.PlanZip.setText(homeObj.ZIPcode);
+        HmPage.Country.setText(homeObj.Country);
+        HmPage.EnrollmentFee.setText(homeObj.EnrollmentFee);
+        HmPage.AnnualCost.setText(homeObj.AnnualCost);
+        HmPage.CoverageType.setText(homeObj.CoverageType);
+        HmPage.PlanID.setText(homeObj.PlanID);
+        HmPage.IssuerCode.setText(homeObj.IssuerCode);
+        HmPage.NoOFCovered.setText(homeObj.NoOfPeopleCovered);
+        HmPage.Submit.click();
+    })
 };
 
 module.exports = HomePage;

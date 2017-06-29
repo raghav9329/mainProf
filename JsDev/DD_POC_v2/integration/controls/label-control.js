@@ -43,6 +43,9 @@ class LabelControl extends ControlBase {
     getAttribute(attribute) {
         return element(this.locator).getAttribute(attribute);
     }
+    getCssValue(attribute) {
+        return element(this.locator).getCssValue(attribute);
+    } 
 
     /**
      * Gets the count of labels available

@@ -1,3 +1,23 @@
+6/14/17 Protractor Blocking Wait via docSplendid.com
+http://docsplendid.com/archives/209
+Discusses:
+ 
+browser.wait(function(){
+  return element(by.id('some-element')).isPresent();
+});
+
+
+
+6/12/17 a few weeks back I need to set the zoom level on the page
+https://www.google.com/search?q=browser.executeScript(%22document.body.style.zoom&rlz=1C1NHXL_enUS726US726&oq=browser.executeScript(%22document.body.style.zoom&aqs=chrome..69i57.1716j0j1&sourceid=chrome&ie=UTF-8&safe=active
+
+https://stackoverflow.com/questions/29092434/how-can-we-set-zoom-level-in-selenium-protractor-i-e-zoom-to-90
+
+https://stackoverflow.com/questions/29092434/how-can-we-set-zoom-level-in-selenium-protractor-i-e-zoom-to-90
+
+https://github.com/codeborne/selenide/issues/137
+
+
 5/10/17 
 Possible little solution to dependents details where Jason U. was telling me 
 about finding a parent and then going back down to the child needed.

@@ -36,7 +36,7 @@ class CheckboxControl extends ControlBase {
     unCheck() {
         var self = this;
         return this.isSelected().then(function(val) {
-            console.log("Is check box checked  ========="+val);
+            console.log("Is check box checked  ========= "+val);
             if (val) return element(self.locator).clickIt();
             return true;
         });

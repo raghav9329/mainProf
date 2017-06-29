@@ -2,6 +2,14 @@
     "NoOfPeopleCovered": "2",
     "ZIPcode": "94536",
     "DOB_HOME": "07/02/1988",
+    "firstname": "Krishna",
+    "mi": "K",
+    "lastname": "K",
+    "gender": "Male",
+    "dob": "05-05-1988",
+    "ssn": "1234560215",
+    "alternateid": "test@test.com",
+    "ariainvalid": "success",
     "ErrorMsg_Homeaddress": "Please enter a street address",
     "ErrorMsg_city": "Please enter a city",
     "ErrorMsg_State": "Please enter a state",
@@ -19,6 +27,10 @@
     "State1": "CA",
     "State2": "California",
     "State3": "**--//",
+
+    "FirstNameFieldHelper": {
+        "FName": "ValidTxtToReduceError"
+    },
 
     "Address_Suggestion": {
         "PartialAddress": "949",
@@ -64,17 +76,20 @@
             "City": "Fremont",
             "State": "CA",
             "ZIPcode": "94903",
-            "ErrorMsg": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
+            "ErrorMsg": "Please ensure you have entered an Apt/Floor/Suite number",
+            "ErrorMsg1": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
         },
 
         "HAddress_SplChar": {
             "Home": "^&&$#@*&^",
-            "ErrorMsg": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
+            "ErrorMsg": "Please ensure you have entered an Apt/Floor/Suite number",
+            "ErrorMsg0": "Please check the street number to match the city, state and zipcode",
+            "ErrorMsg1": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
         },
 
         "HAddress_ZIP": {
-            "HomeAddress":"5208 U.S. 19,sandy springs,GA,United States",
-            "FullAddress": "5208U.S. 19,sandy springs,GA,United States",
+            "HomeAddress": "949",
+            "FullAddress": "949Broadway, New York, NY, United States",
             "ErrorMsg": "Please enter a street address",
             "ExecutionFlag": true
         }

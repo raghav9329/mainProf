@@ -29,16 +29,18 @@ Consume the error messages in the property file and validate fields display the 
 "use strict"
 // var TestData = require("../../testData/personalInfo.json");
 var TestData = require("../../testData/cxinit/cxinit.507.json");
-var perInfo = new(require('../../pageObjects/perInfo-page.js'));
-var homePage = new(require('../../pageObjects/home-page.js'));
+var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
+var homePage = new(require('../../businessComponents/homePage.js'));
 
 
 
 
 //To Navigate Personla Info Page
-describe('507_PersInfoPg: ', function() {
+describe('CXINIT-507: PersInfoPg: ', function() {
 
     beforeAll(function() {
+        console.log(' ');
+        console.log('--- CXINIT-507 Personal Info Fields ---')
         Utility.openApplication('');
     });
 
@@ -60,18 +62,19 @@ describe('507_PersInfoPg: ', function() {
 
     });
 
-    it('should be able to open Login page and verify', function() {
-
-        browser.driver.findElement(by.name('noOfCovered')).sendKeys('').then(function() {
-            browser.actions().sendKeys(protractor.Key.ENTER).perform();
-            return true;
-        })
+    it('507PI 1:should be able to open Login page and verify', function() {
+        homePage.enterHomePageDetails(TestData.enrollData);     
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+        console.log('507PI 1: Complete')
     });
 
-
+    // ***********************************************************************************
+    // **  For future consideration.
+    // **  This needs to be wrapped in a function that return a true or fale / promise
+    // **
+    // ***********************************************************************************
     //Verfiying all the fileds are Present/Displayed/Enabled
-    it('Check fields are present&displayed', function() {
+    it('507PI 2:should show fields are displayed', function() {
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
         expect(perInfo.fieldMidInitial.isPresentAndDisplayed()).toBeTruthy();
         expect(perInfo.fieldLastName.isPresentAndDisplayed()).toBeTruthy();
@@ -85,55 +88,63 @@ describe('507_PersInfoPg: ', function() {
         expect(perInfo.fieldPhoneSelect.isPresentAndDisplayed()).toBeTruthy();
         expect(perInfo.fieldPhoneNumber.isPresentAndDisplayed()).toBeTruthy();
         expect(perInfo.fieldEmailAddr.isPresentAndDisplayed()).toBeTruthy();
-        expect(perInfo.Next.isPresentAndDisplayed()).toBeTruthy();
-        browser.refresh();
+        expect(perInfo.next.isPresentAndDisplayed()).toBeTruthy();
+        console.log('507PI 2: Complete')
     });
 
-    it('First Name Click in tab-out', function() {
-        perInfo.fieldFirstName.setText('' + '\t');
+    it('507PI 3:First Name Click in tab-out', function() {
+        perInfo.fieldFirstName.setText('');
+        perInfo.fieldMidInitial.setText('');
         expect(perInfo.errMsgFirstName.getText()).toEqual(TestData.ErrorMsgBlank_FirstName);
         expect(perInfo.fieldFirstName.getAttribute("class")).toContain(TestData.ariainvalid_error);
-        browser.refresh();
+        console.log('507PI 3: Complete')
     });
 
     //////////////////////////////////////////////////
     // Special Case: report success, not error
     // Middle Initial does not error on loose focus
-    it('Middle Initial Click in tab-out', function() {
-        perInfo.fieldMidInitial.setText(TestData.MI + '\t');
+    it('507PI 4:Middle Initial Click in tab-out', function() {
+        perInfo.fieldMidInitial.setText(TestData.MI);
+        perInfo.fieldLastName.setText('');
         expect(perInfo.fieldMidInitial.getValue()).toEqual(TestData.MI);
         expect(perInfo.fieldMidInitial.getAttribute("class")).toContain(TestData.ariainvalid_success);
-        browser.refresh();
+        console.log('507PI 4: Complete')
     });
 
-    it('Last Name Click in tab-out', function() {
-        perInfo.fieldLastName.setText('' + '\t');
+    it('507PI 5:Last Name Click in tab-out', function() {
+        perInfo.fieldLastName.setText('');
+        perInfo.fieldSsn.setText('');
         expect(perInfo.errMsgLastName.getText()).toEqual(TestData.ErrorMsgBlank_LastName);
         expect(perInfo.fieldLastName.getAttribute("class")).toContain(TestData.ariainvalid_error);
-        browser.refresh();
+        console.log('507PI 5: Complete')
     });
 
-    it('Gender Click in tab-out', function() {
-        perInfo.fieldLastName.setText('' + '\t' + '\t');
+    it('507PI 6:Gender Click in tab-out', function() {
+        perInfo.fieldFirstName.setText(TestData.FName);
+        perInfo.fieldMidInitial.setText(TestData.MI);
+        perInfo.fieldLastName.setText(TestData.LName);
+        perInfo.next.click();
+        browser.executeScript('window.scrollTo(0,0);');
         expect(perInfo.errMsgGenderSelect.getText()).toEqual(TestData.ErrorMsgBlank_Gender);
-        browser.refresh();
+        console.log('507PI 6: Complete')
     });
 
-    it('SSN Click in tab-out', function() {
-        perInfo.fieldSsn.setText('' + '\t');
+    it('507PI 7:SSN Click in tab-out', function() {
+        perInfo.fieldSsn.setText('');
+        perInfo.fieldAlternateId.setText('');
         expect(perInfo.errMsgSsn.getText()).toEqual(TestData.ErrorMsgBlank_SSN);
         expect(perInfo.fieldSsn.getAttribute("class")).toContain(TestData.ariainvalid_error);
-        browser.refresh();
+        console.log('507PI 7: Complete')
     });
 
     //////////////////////////////////////////////////
     // Special Case: report success, not error
-    it('AlternateID Click in tab-out', function() {
-        perInfo.fieldAlternateId.setText('' + '\t');
+    it('507PI 8:AlternateID Click in tab-out', function() {
+        perInfo.fieldAlternateId.setText('');
+        perInfo.fieldFirstName.setText('');
         expect(perInfo.fieldAlternateId.getAttribute("class")).toContain(TestData.ariainvalid_success);
-        browser.refresh();
+        console.log('507PI 8: Complete')
     });
-
 
 
     //Validating First Name field with multiple datasets
@@ -141,36 +152,41 @@ describe('507_PersInfoPg: ', function() {
     // dataProvider will iterate the following it block based on number of datasets and organised through execution Flag(True/False).
     dataProvider(TestData.Personalinfo.FName_TestData, function(data, description) {
         if (data.ExecutionFlag) {
-            it('Check First Name with value :- "' + data.FName + '"', function() {
-                perInfo.fieldFirstName.setText(data.FName + '\t');
+            it('Eval FName value :- "' + data.FName + '"', function() {
+                perInfo.fieldFirstName.setText(data.FName);
+                perInfo.fieldMidInitial.setText('');
                 expect(perInfo.errMsgFirstName.getText()).toEqual(data.ErrorMsg);
                 browser.executeScript('window.scrollTo(0,0);');
-                browser.sleep(3000);
+                browser.sleep(minWait);
                 expect(perInfo.fieldFirstName.getAttribute("class")).toContain(data.ariainvalid);
+                console.log('json driven "' + data.FName + '" complete')
             });
+    
         };
-    });
+    }); 
 
     //BY clicking on Error Message of First Name Filed, the control should be back on FirstName text box.
-
     it('Validate Error Msg Click Navigation, FirstName :- "' + TestData.Personalinfo.FName_TestData.FName_Name11[0].FName + '"', function() {
-        perInfo.fieldFirstName.setText(TestData.Personalinfo.FName_TestData.FName_Name11[0].FName + '\t');
+        perInfo.fieldFirstName.setText(TestData.Personalinfo.FName_TestData.FName_Name11[0].FName);
+        perInfo.fieldMidInitial.setText('');
         perInfo.errMsgFirstName.click();
         expect(perInfo.fieldFirstName.getAttribute("class")).toContain(TestData.Personalinfo.FName_TestData.FName_Name11[0].ariainvalid);
-        perInfo.fieldFirstName.setText(TestData.Personalinfo.FName_TestData.FName_Name13[0].FName + '\t');
+        perInfo.fieldFirstName.setText(TestData.Personalinfo.FName_TestData.FName_Name13[0].FName);
     });
 
     //Validating Middle Initial field with multiple datasets
     //Refer Middle Initial dataset in 'cxinit.507.json' file
     dataProvider(TestData.Personalinfo.MI, function(data, description) {
         if (data.ExecutionFlag) {
-            it('Check Middle Initial with value "' + data.MI + '"', function() {
-                perInfo.fieldMidInitial.setText(data.MI + '\t');
+            it('Eval Mid Initial value "' + data.MI + '"', function() {
+                perInfo.fieldMidInitial.setText(data.MI);
+                perInfo.fieldLastName.setText('');
                 expect(perInfo.fieldMidInitial.getValue()).toEqual(data.Expected);
                 expect(perInfo.fieldMidInitial.getAttribute("class")).toContain(data.ariainvalid)
             });
+        
         };
-    });
+    }); 
 
 
 
@@ -178,42 +194,46 @@ describe('507_PersInfoPg: ', function() {
     //Refer Middle Initial dataset in 'cxinit.507.json' file  
     dataProvider(TestData.Personalinfo.LName_TestData, function(data, description) {
         if (data.ExecutionFlag) {
-            it('Check Last Name with value "' + data.LName + '"', function() {
-                perInfo.fieldLastName.setText(data.LName + '\t');
+            it('Eval LName value "' + data.LName + '"', function() {
+                perInfo.fieldLastName.setText(data.LName);
+                perInfo.fieldBdMM.setText('');
                 expect(perInfo.errMsgLastName.getText()).toEqual(data.ErrorMsg);
                 browser.executeScript('window.scrollTo(0,0);');
-                browser.sleep(3000);
+                browser.sleep(minWait);
                 expect(perInfo.fieldLastName.getAttribute("class")).toContain(data.ariainvalid);
             });
+        
         };
-    });
+    });  
 
     //BY clicking on Error Message of Last Name Filed, the control should be back on LastName text box.
     //  it('Validate by clicking on LastName Error Message the control should be back to LastName text box :- "' + TestData.Personalinfo.LName_TestData.LName_Name14[0].LName + '"', function() {
     it('Validate Error Msg Click Navigation, LastName :- "' + TestData.Personalinfo.LName_TestData.LName_Name13[0].LName + '"', function() {
-        perInfo.fieldLastName.setText(TestData.Personalinfo.LName_TestData.LName_Name13[0].LName + '\t');
+        perInfo.fieldLastName.setText(TestData.Personalinfo.LName_TestData.LName_Name13[0].LName);
+        perInfo.fieldBdMM.setText('');
         perInfo.errMsgLastName.click();
         expect(perInfo.fieldLastName.getAttribute("class")).toContain(TestData.Personalinfo.LName_TestData.LName_Name13[0].ariainvalid);
-        perInfo.fieldLastName.setText(TestData.Personalinfo.LName_TestData.LName_Name14[0].LName + '\t');
+        perInfo.fieldLastName.setText(TestData.Personalinfo.LName_TestData.LName_Name14[0].LName);
     });
 
     //Validating Last Gender field with multiple datasets
     //Refer Gender dataset in 'cxinit.507.json' file
     dataProvider(TestData.Personalinfo.Gender, function(data, description) {
         if (data.ExecutionFlag) {
-            it('Check Gender select with value "' + data.Gender + '"', function() {
+            it('Eval Gender selected value "' + data.Gender + '"', function() {
                 if (data.Gender.length > 1) {
 
                     perInfo.fieldGenderSelect.selectByText(data.Gender);
                 }
-                perInfo.Next.click();
+                perInfo.next.click();
+                browser.sleep(minWait);
                 expect(perInfo.errMsgGenderSelect.getText()).toEqual(data.ErrorMsg);
                 browser.executeScript('window.scrollTo(0,0);');
 
             });
+        
         };
-    });
-
+    });  
 
 
     //To understand regading DOB is decreasing or increasing based on the System date, we have hardcoded testdata.
@@ -221,7 +241,8 @@ describe('507_PersInfoPg: ', function() {
     it('Validate Today is users Birthday ', function() {
         perInfo.fieldBdMM.setText(Utility.getDatePart(Utility.getfullDate('year', 'SUB', 18), 'MONTH'));
         perInfo.fieldBdDD.setText(Utility.getDatePart(Utility.getfullDate('date', 'SUB', 1, (Utility.getfullDate('year', 'SUB', 18))), 'date'))
-        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'SUB', 18), 'YEAR') + '\t');
+        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'SUB', 18), 'YEAR'));
+        perInfo.fieldSsn.setText('');
         expect(perInfo.fieldBdMM.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldBdDD.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldBdYyyy.getAttribute("class")).toContain(TestData.ariainvalid_success);
@@ -238,7 +259,8 @@ describe('507_PersInfoPg: ', function() {
     it('Validating Tomorrow is the users Birthday ', function() {
         perInfo.fieldBdMM.setText(Utility.getDatePart(Utility.getfullDate('year', 'SUB', 18), 'MONTH'));
         perInfo.fieldBdDD.setText(Utility.getDatePart(Utility.getfullDate('date', 'ADD', 1, (Utility.getfullDate('year', 'SUB', 18))), 'date'))
-        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'SUB', 18), 'YEAR') + '\t');
+        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'SUB', 18), 'YEAR'));
+        perInfo.fieldSsn.setText('');
         expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 18 years of age.');
     });
 
@@ -246,7 +268,8 @@ describe('507_PersInfoPg: ', function() {
     it('Validate Next month is Users Birthday ', function() {
         perInfo.fieldBdMM.setText(Utility.getDatePart(Utility.getfullDate('month', 'ADD', 1, (Utility.getfullDate('year', 'SUB', 18))), 'MONTH'))
         perInfo.fieldBdDD.setText(Utility.getDatePart('', 'DATE'));
-        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('month', 'ADD', 0, (Utility.getfullDate('year', 'SUB', 18))), 'YEAR') + '\t');
+        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('month', 'ADD', 0, (Utility.getfullDate('year', 'SUB', 18))), 'YEAR'));
+        perInfo.fieldSsn.setText('');
         expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 18 years of age.');
     });
 
@@ -254,7 +277,8 @@ describe('507_PersInfoPg: ', function() {
     it('Validate Last Month was Users Birthday ', function() {
         perInfo.fieldBdMM.setText(Utility.getDatePart(Utility.getfullDate('month', 'SUB', 1, (Utility.getfullDate('year', 'SUB', 18))), 'MONTH'))
         perInfo.fieldBdDD.setText(Utility.getDatePart('', 'DATE'));
-        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('month', 'ADD', 0, (Utility.getfullDate('year', 'SUB', 18))), 'YEAR') + '\t');
+        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('month', 'ADD', 0, (Utility.getfullDate('year', 'SUB', 18))), 'YEAR'));
+        perInfo.fieldSsn.setText('');
         expect(perInfo.fieldBdMM.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldBdDD.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldBdYyyy.getAttribute("class")).toContain(TestData.ariainvalid_success);
@@ -270,7 +294,8 @@ describe('507_PersInfoPg: ', function() {
     it('Validate Next Year the user will be 18 ', function() {
         perInfo.fieldBdMM.setText(Utility.getDatePart(Utility.getfullDate('month', 'ADD', 0, (Utility.getfullDate('year', 'SUB', 18))), 'MONTH'))
         perInfo.fieldBdDD.setText(Utility.getDatePart('', 'DATE'));
-        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'ADD', 1, (Utility.getfullDate('year', 'SUB', 18))), 'YEAR') + '\t');
+        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'ADD', 1, (Utility.getfullDate('year', 'SUB', 18))), 'YEAR'));
+        perInfo.fieldSsn.setText('');
         expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 18 years of age.');
 
     });
@@ -279,7 +304,8 @@ describe('507_PersInfoPg: ', function() {
     it('Validate Users 19th Birthday ', function() {
         perInfo.fieldBdMM.setText(Utility.getDatePart(Utility.getfullDate('month', 'SUB', 0, (Utility.getfullDate('year', 'SUB', 18))), 'MONTH'))
         perInfo.fieldBdDD.setText(Utility.getDatePart('', 'DATE'));
-        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'SUB', 1, (Utility.getfullDate('year', 'SUB', 18))), 'YEAR') + '\t');
+        perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'SUB', 1, (Utility.getfullDate('year', 'SUB', 18))), 'YEAR'));
+        perInfo.fieldSsn.setText('');
         expect(perInfo.fieldBdMM.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldBdDD.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldBdYyyy.getAttribute("class")).toContain(TestData.ariainvalid_success);
@@ -300,7 +326,8 @@ describe('507_PersInfoPg: ', function() {
                 var datesplit = (d.split('-'))
                 perInfo.fieldBdMM.setText(datesplit[0]);
                 perInfo.fieldBdDD.setText(datesplit[1]);
-                perInfo.fieldBdYyyy.setText(datesplit[2] + '\t');
+                perInfo.fieldBdYyyy.setText(datesplit[2]);
+                perInfo.fieldSsn.setText('');
                 expect(perInfo.birthdateerror.getText()).toContain(data.ErrorMsg);
 
             });
@@ -314,7 +341,8 @@ describe('507_PersInfoPg: ', function() {
                 var datesplit = (d.split('-'))
                 perInfo.fieldBdMM.setText(datesplit[0]);
                 perInfo.fieldBdDD.setText(datesplit[1]);
-                perInfo.fieldBdYyyy.setText(datesplit[2] + '\t');
+                perInfo.fieldBdYyyy.setText(datesplit[2]);
+                perInfo.fieldSsn.setText('');
                 expect(perInfo.errMsgBdYyyy.getText()).toContain(data.ErrorMsg);
                 expect(perInfo.birthdateerror.getText()).toContain(data.ErrorMsg2);
 
@@ -329,7 +357,8 @@ describe('507_PersInfoPg: ', function() {
                 var datesplit = (d.split('-'))
                 perInfo.fieldBdMM.setText(datesplit[0]);
                 perInfo.fieldBdDD.setText(datesplit[1]);
-                perInfo.fieldBdYyyy.setText(datesplit[2] + '\t');
+                perInfo.fieldBdYyyy.setText(datesplit[2]);
+                perInfo.fieldSsn.setText('');
                 expect(perInfo.errMsgBdYyyy.getText()).toContain(data.ErrorMsg);
 
             });
@@ -342,7 +371,8 @@ describe('507_PersInfoPg: ', function() {
                 var datesplit = (d.split('-'))
                 perInfo.fieldBdMM.setText(datesplit[0]);
                 perInfo.fieldBdDD.setText(datesplit[1]);
-                perInfo.fieldBdYyyy.setText(datesplit[2] + '\t');
+                perInfo.fieldBdYyyy.setText(datesplit[2]);
+                perInfo.fieldSsn.setText('');
                 expect(perInfo.fieldBdMM.getAttribute("class")).toContain(data.ariainvalid);
                 expect(perInfo.fieldBdDD.getAttribute("class")).toContain(data.ariainvalid);
                 expect(perInfo.fieldBdYyyy.getAttribute("class")).toContain(data.ariainvalid);
@@ -357,7 +387,8 @@ describe('507_PersInfoPg: ', function() {
     dataProvider(TestData.Personalinfo.SSN, function(data, description) {
         if (data.ExecutionFlag) {
             it('Check SSN with value "' + data.SSN + '"', function() {
-                perInfo.fieldSsn.setText(data.SSN + '\t');
+                perInfo.fieldSsn.setText(data.SSN);
+                perInfo.fieldAlternateId.setText('');
                 expect(perInfo.errMsgSsn.getText()).toEqual(data.ErrorMsg);
                 browser.executeScript('window.scrollTo(0,0);');
                 expect(perInfo.fieldSsn.getAttribute("class")).toContain(data.ariainvalid);
@@ -368,7 +399,8 @@ describe('507_PersInfoPg: ', function() {
     //BY clicking on Error Message of SSN Filed, the control should be back on SSN text box.
     //  it('Validate by clicking on SSN Error Message the control should be back to SSN text box :- "' + TestData.Personalinfo.SSN.SSN0[0].SSN + '"', function() {
     it('Validate Error Msg Click Navigation, SSN :- "' + TestData.Personalinfo.SSN.SSN4[0].SSN + '"', function() {
-        perInfo.fieldSsn.setText(TestData.Personalinfo.SSN.SSN4[0].SSN + '\t');
+        perInfo.fieldSsn.setText(TestData.Personalinfo.SSN.SSN4[0].SSN);
+        perInfo.fieldAlternateId.setText('');
         perInfo.errMsgSsn.click();
         expect(perInfo.fieldSsn.getAttribute("class")).toContain(TestData.Personalinfo.SSN.SSN4[0].ariainvalid);
         perInfo.fieldSsn.setText(TestData.Personalinfo.SSN.SSN1[0].SSN + '\t');
@@ -379,7 +411,8 @@ describe('507_PersInfoPg: ', function() {
     dataProvider(TestData.Personalinfo.AlternateId, function(data, description) {
         if (data.ExecutionFlag) {
             it('Validate AlternateId field with value "' + data.AlternateId + '"', function() {
-                perInfo.fieldAlternateId.setText(data.AlternateId + '\t');
+                perInfo.fieldAlternateId.setText(data.AlternateId);
+                perInfo.fieldSsn.setText('');
                 expect(perInfo.fieldAlternateId.getValue()).toEqual(data.AlternateId);
                 expect(perInfo.fieldAlternateId.getAttribute("class")).toContain(TestData.ariainvalid_success);
             });

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="68ea60a1-ae9b-4e07-a9e0-ed08f1a86e02" activeEnvironment="Default" name="CustomerEnrollmentService" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="069dd9a6-460d-465a-9a87-bf2c589f42b5" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://aw-lx0192:8243" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://aw-lx0192:8243</con:endpoint></con:endpoints><con:resource name="Enrollment" path="/customersEnrollment/v1/customers/enrollment" id="c2f994ad-368b-4794-871d-1701acdeba7d"><con:settings/><con:parameters/><con:method name="Enrollment" id="46f6767e-4dbc-44c2-b6e7-fcad6706c843" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/xml; charset=UTF-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:apim="http://wso2.org/apimanager">apim:fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="e5d16d15-840c-400b-9455-dd479c9cc0eb" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://aw-lx0192:8243</con:endpoint><con:request>{
+"messageData": {
+"applicationId": "abhi",
+"program": "DC",
+"enrollmentMethod": "WEB",
+"premiumAmount": "135.00",
+"currency": "USD",
+"plan": "CAA503",
+"effectiveDt": "2016-12-01",
+"subscriber": {
+"facility": {
+"facilityName": "Pacific Dental Group",
+"facilityId": "DC3C1301"
+},
+"firstName": "Madhavi",
+"lastName": "Madhavi",
+"middleName": "L",
+"dateOfBirth": "1990-10-14",
+"gender": "F",
+"email": "mvishwanatham@delta.org",
+"address": [{
+"addressType": "PRIM",
+"address1": "100 1st St Ste 100",
+"city": "San Francisco",
+"county": "San Francisco",
+"state": "CA",
+"zip": "94105"
+}],
+"phone": [{
+"phoneType": "CELL",
+"phoneNbr": "336-634-6643"
+}],
+"id": [{
+"idType": "SSN",
+"idValue": "643-63-4626"
+}]
+},
+"billingFrequency": "AN01",
+"paymentDetails": {
+"creditCard": {
+"cardType": "VI",
+"token": "4695290843191885",
+"expiryDt": "12/2016",
+"lastFourDigits": "1885",
+"authorizationCd": "CVI847",
+"nameOnCard": "Madhavi Vishwanatham",
+"receiptNbr": "0396694459.NBPAQ4"
+},
+"externalTypeFlag": "47",
+"paymentDt": "2016-11-02",
+"totalPaymentAmount": "150.00",
+"discountedPaymentAmount": "150.00"
+}
+}
+}</con:request><con:originalUri>https://aw-lx0192/customersEnrollment/v1/customers/enrollment</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="340ac8af-b827-49c6-8b3e-8944fd0d5945" name="https://aw-lx0192:8243 TestSuite"><con:description>TestSuite generated for REST Service [https://aw-lx0192:8243]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8d43ff76-bc6c-4ee2-a4d3-f94babaa34bd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="https://aw-lx0192:8243 TestSuite" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Enrollment" id="94dbd857-2a37-44fb-a299-641ac58bbbbe"><con:settings/><con:config service="https://aw-lx0192:8243" resourcePath="/customersEnrollment/v1/customers/enrollment" methodName="Enrollment" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Enrollment" id="e5d16d15-840c-400b-9455-dd479c9cc0eb" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://aw-lx0192:8243</con:endpoint><con:request>{
+"messageData": {
+"applicationId": "abhi",
+"program": "DC",
+"enrollmentMethod": "WEB",
+"premiumAmount": "135.00",
+"currency": "USD",
+"plan": "CAA503",
+"effectiveDt": "2016-12-01",
+"subscriber": {
+"facility": {
+"facilityName": "Pacific Dental Group",
+"facilityId": "DC3C1301"
+},
+"firstName": "Madhavi",
+"lastName": "Madhavi",
+"middleName": "L",
+"dateOfBirth": "1990-10-14",
+"gender": "F",
+"email": "mvishwanatham@delta.org",
+"address": [{
+"addressType": "PRIM",
+"address1": "100 1st St Ste 100",
+"city": "San Francisco",
+"county": "San Francisco",
+"state": "CA",
+"zip": "94105"
+}],
+"phone": [{
+"phoneType": "CELL",
+"phoneNbr": "336-634-6643"
+}],
+"id": [{
+"idType": "SSN",
+"idValue": "643-63-4626"
+}]
+},
+"billingFrequency": "AN01",
+"paymentDetails": {
+"creditCard": {
+"cardType": "VI",
+"token": "4695290843191885",
+"expiryDt": "12/2016",
+"lastFourDigits": "1885",
+"authorizationCd": "CVI847",
+"nameOnCard": "Madhavi Vishwanatham",
+"receiptNbr": "0396694459.NBPAQ4"
+},
+"externalTypeFlag": "47",
+"paymentDt": "2016-11-02",
+"totalPaymentAmount": "150.00",
+"discountedPaymentAmount": "150.00"
+}
+}
+}</con:request><con:originalUri>https://aw-lx0192/customersEnrollment/v1/customers/enrollment</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

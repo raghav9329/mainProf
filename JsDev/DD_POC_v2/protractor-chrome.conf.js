@@ -17,7 +17,8 @@ exports.config = {
  // specs: ['./*.test.js'],
   
 // specs: ['integration/scenarios/CAA50Senior_Single.test.js'],
-specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
+//specs: ['integration/scenarios/CAA55PlanSelect.test.js'],
+ specs: ['integration/scenarios/051217_E2E_POM_Workflow.js'],
 // specs: ['integration/scenarios/CAA55PlanSelect.dev.js'],
 // specs: ['integration/scenarios/CAA55SimplePlan_WasSenior.dev.js'],
 //  specs: ['integration/scenarios/**/*.test.js'],
@@ -30,9 +31,9 @@ specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
   },
   
 //  Follow is for running locally on drive C:
-  seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
-  chromeDriver:      'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
-  geckodriver:       'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.12.0',
+  seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
+  chromeDriver: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
+  geckodriver: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.16.1',
 
 //  Follow is for running from DeltaDev Account on Drive P:
 //  seleniumServerJar: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.3.1.jar',
@@ -53,12 +54,19 @@ specs: ['integration/scenarios/CAA54IndividualAndFamily.test.js'],
   },
   
   capabilities: {
-  	browserName: 'chrome'
+  	browserName: 'chrome',
+    chromeOptions: {
+        'args': ['disable-infobars']
+    }
+	// 5/8/17 the above config get's rid of that browser alert about the 
+	// browser window being controlled externally....etc.
+  
   // count: 5,
   // browserName: 'firefox'
   },
   params: {
-  	baseUrl: 'http://DIT3.deltadentalins.com'
+  	//baseUrl: 'http://DIT3.deltadentalins.com'
+  	baseUrl:'https://mot.deltadentalins.com'
   },
   
  maxSessions: 1, 

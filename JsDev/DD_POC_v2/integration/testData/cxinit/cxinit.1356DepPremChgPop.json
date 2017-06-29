@@ -1,0 +1,72 @@
+{
+    "firstname": "Krishna",
+    "mi": "K",
+    "lastname": "K",
+    "gender": "Male",
+    "dob": "05-05-1988",
+    "ssn": "1234560215",
+    "alternateid": "test@test.com",
+    "fieldHomeAddr": "35995 Fremont Blvd Apt 98",
+    "city": "Fremont",
+    "State": "CA",
+    "contactType": "Cell",
+    "phoneNumber": "9876543210",
+    "email": "test@gmail.com",
+    "ZipCode": "94105",
+    "brokernumber": "201285",
+    "coverageStartDate": "05/01/2018",
+    "ariainvalid": "success",
+    "dependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
+    "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
+    "facilityoption1": "Kayvan Kafayi DDS",
+    "facilityoption2": "Gentle Dental San Francisco",
+    "facilityoption3": "Ocean Dental Office",
+    "paymentTitle": "Payment | Enrollment | Delta Dental Insurance Company",
+    "receiptTitle": "Thank You | Delta Dental Insurance Company",
+    "depError": "You can select only 1 Spouse or Domestic Partner.",
+
+    "errorSSN":"Please enter your SSN",
+    "SSN":"789456321",
+    "enrollData": {
+        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+        "PlanType": "DHMO",
+        "PlanCode": "CAA55",
+        "CoverageStartDate": "12/5/2017",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "10.00",
+        "AnnualCost": "80.76",
+        "CoverageType": "Self",
+        "PlanID": "70422",
+        "IssuerCode": "DELTA",
+        "NoOfPeopleCovered": "2"
+    },
+
+    "domesticPartner": {
+        "relationship": "Domestic Partner",
+        "firstName": "firstName",
+        "middleName": "m",
+        "lastName": "lastName",
+        "gender": "Male",
+        "DOB": "10-10-2000"
+    },
+
+    "spouse": {
+        "relationship": "Spouse",
+        "firstName": "firstName",
+        "middleName": "m",
+        "lastName": "lastName",
+        "gender": "Female",
+        "DOB": "05-10-1995"
+    },
+
+    "child": {
+        "relationship": "Child",
+        "firstName": "firstName",
+        "middleName": "K",
+        "lastName": "lastName",
+        "gender": "Female",
+        "DOB": "05-10-2002"
+    }
+}

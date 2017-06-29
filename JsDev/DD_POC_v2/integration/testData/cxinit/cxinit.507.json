@@ -13,7 +13,25 @@
     "Gender": " ",
     "ErrorMsgBlank_Gender": "Please select a gender",
     "ErrorMsgBlank_SSN": "Please enter your SSN",
+    "FName": "Ratana Praneechai-Bass",
     "MI": "s",
+    "LName": "O'Farrell",
+
+    "enrollData": {
+        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+        "PlanType": "DHMO",
+        "PlanCode": "CAA55",
+        "CoverageStartDate": "12/5/2017",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "10.00",
+        "AnnualCost": "80.76",
+        "CoverageType": "Self",
+        "PlanID": "70422",
+        "IssuerCode": "DELTA",
+        "NoOfPeopleCovered": "2"
+    },
 
 
     "Personalinfo": {
@@ -425,32 +443,32 @@
             }
         },
         "Phone_Cell": {
-                "Phone_Blank": {
-                    "PhoneType": "Cell",
-                    "PhoneNumber": "",
-                    "ErrorMsg": "Please enter your phone number",
-                    "ariainvalid": "error",
-                    "ExecutionFlag": true
-                },
-                "Phone_InValid": {
-                    "PhoneType": "Cell",
-                    "PhoneNumber": "88",
-                    "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_Valid": {
-                    "PhoneType": "Cell",
-                    "PhoneNumber": "123-456-7890",
-                    "ErrorMsg": "",
-                    "ariainvalid": "success",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                }
-                }
+            "Phone_Blank": {
+                "PhoneType": "Cell",
+                "PhoneNumber": "",
+                "ErrorMsg": "Please enter your phone number",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "Phone_InValid": {
+                "PhoneType": "Cell",
+                "PhoneNumber": "88",
+                "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
+                "ariainvalid": "error",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+            },
+            "Phone_Valid": {
+                "PhoneType": "Cell",
+                "PhoneNumber": "123-456-7890",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+            }
+        }
 
-        
+
     }
 
 }

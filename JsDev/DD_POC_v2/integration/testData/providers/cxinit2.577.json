@@ -1,0 +1,34 @@
+{
+    "Header_SearchResultsPage": "Find a Dentist",
+    "Header_InvalidAddress": "Invalid Address",
+    "ZipCode": "94103",
+    "HAddress_ZIP": {
+        "PartialAddress": "949",
+        "FullAddress": "949Broadway, New York, NY, United States",
+        "ErrorMsg": "Please enter a street address",
+        "ExecutionFlag": true
+    },
+    "Address_Valid": {
+        "HomeAddress": "35995 Fremont Blvd Apt 98",
+        "City": "Fremont",
+        "State": "CA",
+        "ZIPCode": "94536"
+    },
+    "distance": {
+        "Provider_Name1": {
+            "PName": "Jeffrey Gold",
+            "PSpeciality": "General Dentist",
+            "PPlace": "Aesthetic Dentistry PC",
+            "PAddress": "156 5th Ave Ste 304",
+            "PDistance": "0.2 mi"
+        },
+        "Provider_Name2": {
+            "PName": "Michelle Ghusson",
+            "PSpeciality": "Endodontist",
+            "PPlace": "Union Square Dental Pc",
+            "PAddress": "29 W 19th St",
+            "PDistance": "0.3 mi"
+        }
+
+    }
+}

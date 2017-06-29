@@ -1,0 +1,130 @@
+{
+    "firstname": "Krishna",
+    "mi": "K",
+    "lastname": "K",
+    "gender": "Male",
+    "dob": "05-05-1971",
+    "ssn": "1234560215",
+    "alternateid": "test@test.com",
+    "fieldHomeAddr": "35995 Fremont Blvd Apt 98",
+    "city": "Fremont",
+    "State": "CA",
+    "contactType": "Cell",
+    "phoneNumber": "9876543210",
+    "email": "test@gmail.com",
+    "ZipCode": "94105",
+    "brokernumber": "201285",
+    "coverageStartDate": "07/01/2017",
+    "ariainvalid": "success",
+    "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
+    "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
+    "facilityoption1": "Kayvan Kafayi DDS",
+    "facilityoption2": "Van Ness Dental Group",
+    "facilityoption3": "The Santos Dental Group Corp",
+    "facilityoption4": "Kayvan Kafayi DDS",
+    "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
+    "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
+    "deltaRating": 1,
+    "queryAnswer": "Test",
+    "enrollData": {
+        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+        "PlanType": "DHMO",
+        "PlanCode": "CAA55",
+        "CoverageStartDate": "12/5/2017",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "10.00",
+        "AnnualCost": "80.76",
+        "CoverageType": "Self",
+        "PlanID": "70422",
+        "IssuerCode": "DELTA",
+        "NoOfPeopleCovered": "0"
+    },
+
+    "Spouse": {
+        "relationship": "Spouse",
+        "firstName": "firstName",
+        "middleName": "m",
+        "lastName": "lastName",
+        "gender": "Female",
+        "DOB": "05-10-1995"
+    },
+
+    "child1": {
+        "relationship": "Child",
+        "firstName": "firstChild",
+        "middleName": "K",
+        "lastName": "lastNamefirstChild",
+        "gender": "Female",
+        "DOB": "05-10-2001"
+    },
+
+    "child2": {
+        "relationship": "Child",
+        "firstName": "secondChild",
+        "middleName": "K",
+        "lastName": "lastNamesecondChild",
+        "gender": "Female",
+        "DOB": "05-10-1999"
+    },
+
+    "dependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please select a gender", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
+    "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
+    "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
+    "nameOnCard": "Peter Heins",
+    "cardNumber": "5415240007992183",
+    "expMonth": "05",
+    "expYear": "2020",
+    "securityCode": "154",
+    "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+    "thanksMsg": "Thank you for taking our survey. Your response is very important to us.",
+    "planSummary": {
+        "Deductible_per_calendar": "$0",
+        "Max_per_calendar": "$0",
+        "Officevisit": "$15",
+        "Exams": "$0",
+        "Xrays": "$0",
+        "Cleanings": "$25",
+        "Fillings": "$30 - $125",
+        "Rootcanals": "$240 - $400",
+        "Gumtreatment": "$70 - $650",
+        "Extractions": "$45 - $210",
+        "Denturerepair": "$55",
+        "Crowns": "$325 - $425",
+        "Orthodontics": "$2,700 - $2,900"
+    },
+    "primaryFacility": {
+        "facilityName": "Modern Dentistry&Ortho",
+        "street": "2085 Gellert Blvd Ste 9",
+        "city": "Daly City",
+        "region": "CA",
+        "postalCode": "940152841",
+        "telephone": "6508783171"
+    },
+    "dependent1": {
+        "facilityName": "SecondaryApplicantService-1",
+        "street": "2085 Gellert Blvd Ste 9",
+        "city": "Daly City",
+        "region": "CA",
+        "postalCode": "940152841",
+        "telephone": "6508783171"
+    },
+    "dependent2": {
+        "facilityName": "SecondaryApplicantService-2",
+        "street": "CA2085 Gellert Blvd Ste 9",
+        "city": "CA City",
+        "region": "CA",
+        "postalCode": "940152841",
+        "telephone": "6508783171"
+    },
+    "dependent3": {
+        "facilityName": "SecondaryApplicantService-LA",
+        "street": "1085 Gellert Blvd Ste 9",
+        "city": "Las Vegas",
+        "region": "LA",
+        "postalCode": "940152841",
+        "telephone": "6508783171"
+    }
+
+}

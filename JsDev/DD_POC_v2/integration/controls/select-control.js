@@ -86,7 +86,7 @@ class SelectControl extends ControlBase {
      */
   selectByText(text){
     return element(this.locator).all(Locators.optionByText(text)).then(function (els) {
-      console.log("length"+els.length);
+     // console.log("length"+els.length);
       return els[0].clickIt();
     });
   }

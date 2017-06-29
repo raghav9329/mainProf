@@ -1,0 +1,8 @@
+* run all recent code from 6/6/17 ( last nights work )
+
+* make a list of All stories done S
+** LIst the scripts that go with stories.
+
+* trying to get my head around the project mgt needed for finishing the release.
+
+* trying to figure out what shell script was I thinking I needed to write ??

@@ -1,8 +1,19 @@
-var TestData = require("../../testData/cxinit/cxinit.470.json");
-var perInfo = new(require('../../pageObjects/perInfo-page.js'));
-var homePage = new(require('../../pageObjects/home-page.js'));
+//CXINIT-720: [Personal Info Page] Address Suggestion for Mailing Address -close
 
-describe('CXINIT-720::723 - Validate Address Suggestions for Address Mailing', function() {
+/* As a user I want to see a list of address suggestions 
+as I start to input my address so that I can click on a suggestion and auto-fill all of the address fields.*/
+
+var TestData = require("../../testData/cxinit/cxinit.720.json");
+var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
+var homePage = new(require('../../pageObjects/cxinit/home-page.js'));
+
+describe('CXINIT-720: Address Suggestion Mailing-PersInfo', function() {
+
+
+	beforeAll(function() {
+		console.log('cxinit 720');
+    });
+	
     beforeEach(function() {
         Utility.openApplication('');
         browser.driver.findElement(by.name('planZip')).clear().then(function() {
