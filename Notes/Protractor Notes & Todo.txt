@@ -1,9 +1,17 @@
 3/1/17 all solution / answere kind of entries were moved  to 
 protractor_SolutionsFound.  Was also renamed *Todo
 
+
+7/7/17
+
+Ofcourse you need wget on the slave pc in the test runner batch file
+GIT_URL=https://rc-github.deltads.ent/DEVPROJECTS/dd-cx-test/archive/master.zip
+wget --user=svc_qtp_testrunner_1 --password=popcorn --auth-no-challenge -O cx-test-sources.zip --no-check-certificate %GIT_URL%
+
+
 6/22/17
 All older version of Firefox can be found at
-
+https://ftp.mozilla.org/pub/firefox/releases/
 
 
 3/28/17
