@@ -7,6 +7,7 @@ class PaymentLocators {
         this.expMonth = by.id('expMo');
         this.expYear = by.id('expYr');
         this.securityCode = by.id('cvcCapture');
+        this.billingAddress = by.id('billingPanel');
         this.billingChkBox = by.id('sameBilling');
         this.streetAddress = by.id('streetAddress');
         this.city = by.id('city');
@@ -16,8 +17,8 @@ class PaymentLocators {
         this.authChkBox = by.id('auth');
         this.eCopy = by.id('eCopy');
         this.mailedCopy = by.id('mailed_copy');
-        this.openPlanSummary = by.id('summaryOpen');
-        this.openApplicant = by.id('applicantOpen');
+        this.openPlanSummary = by.className('accordion-title');
+        this.openApplicant = by.id('applicantPanel');
         this.planSummaryValue = function(summaryKey) {
             return by.xpath('//td[text()="' + summaryKey + '"]/following-sibling::td');
         };
@@ -36,19 +37,36 @@ class PaymentLocators {
         this.errState = by.id('state-error');
         this.errZipCode = by.id('zipCode-error');
         this.errAuth = by.id('auth-error');
-        this.serErrCardName = by.css('a.error.cardName-error');
-        this.serErrCardNumber = by.css('a.error.ccCapture-error');
-        this.serErrExpMonth = by.css('a.error.expMo-error');
-        this.serErrExpYear = by.css('a.error.expYr-error');
-        this.serErrSecurityCode = by.css('a.error.cvcCapture-error');
-        this.serErrAuth = by.css('a.error.auth-error');
-        this.serErrStreetAddress = by.css('a.error.streetAddress-error');
-        this.serErrCity = by.css('a.error.city-error');
-        this.serErrState = by.css('a.error.state-error');
-        this.serErrZipCode = by.css('a.error.zipCode-error');
+        this.serErrCardName = by.css('div.error-container.global-margin a.error.cardName-error');
+        this.serErrCardNumber = by.css('div.error-container.global-margin a.error.ccCapture-error');
+        this.serErrExpMonth = by.css('div.error-container.global-margin a.error.expMo-error');
+        this.serErrExpYear = by.css('div.error-container.global-margin a.error.expYr-error');
+        this.serErrSecurityCode = by.css('div.error-container.global-margin a.error.cvcCapture-error');
+        this.serErrAuth = by.css('div.error-container.global-margin a.error.auth-error');
+        this.serErrStreetAddress = by.css('div.error-container.global-margin a.error.streetAddress-error');
+        this.serErrCity = by.css('div.error-container.global-margin a.error.city-error');
+        this.serErrState = by.css('div.error-container.global-margin a.error.state-error');
+        this.serErrZipCode = by.css('div.error-container.global-margin a.error.zipCode-error');
         this.homeAddressfromGoogleApi = by.xpath('//div[@class="pac-item"]');
-        this.serErrCvv = By.xpath('//div[@class="error-container global-margin"]');
+        this.serErrCvv = by.xpath('//div[@class="error-container global-margin"]');
+        this.EFTBankTransfer = by.id('paymentMethodEFT');
+        this.checking = by.id('accountTypeChecking');
+        this.saving = by.id('accountTypeSaving');
+        this.bankName = by.id('bankName');
+        this.accountHolderName = by.id('accountHolderName');
+        this.routingNumber = by.id('routingNumber');
+        this.accountNumber = by.id('accountNumber');
+        this.accountNumberRetype = by.id('accountNumberRetype');
+        this.frequencySemiAnnual = by.id('frequencySEMIANNUAL');
+        this.frequencyQuterly = by.id('frequencyQUARTERLY');
+        this.frequencyAnnualy = by.id('frequencyANNUAL');
+
+        this.bankNameError = by.id('bankName-error');
+        this.accountHolderNameError = by.id('accountHolderName-error');
+        this.routingNumberError = by.id('routingNumber-error');
+        this.accountNumberError = by.id('accountNumber-error');
     }
+
 }
 
 module.exports = PaymentLocators;

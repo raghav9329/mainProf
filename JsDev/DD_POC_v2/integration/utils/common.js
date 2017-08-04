@@ -192,10 +192,10 @@ var Utility = function() {
             timeout = typeof timeout !== 'undefined' ? timeout : PAGELOADTIME;
             return browser.wait(function() {
                 return oElement.isDisplayed().then(function(isVisible) {
-                    if (isVisible.length == 0) {
-                        isVisible = false
-                    }
+                    browser.sleep(1500);
                     return !isVisible;
+                }, function() {
+                    return true;
                 });
             }, timeout);
         });
@@ -240,21 +240,22 @@ var Utility = function() {
      */
     this.delay = function(timeInMs) {
         return browser.sleep(timeInMs).then(function() {
-            return true;
-        })
+                //        return browser.sleep(25).then(function() { // 6/27/17 trying to see how this 
+                return true; // might be slowing everything down
+            }) // evaluating execution with 507
     };
 
     /**
      * Open Application
      * @param - Application URL
      */
-    this.openApplication = function(uRl) {
+    this.openApplication_old = function(uRl, product) {
         return browser.controlFlow().execute(function() {
-
             if (uRl.length === 0) {
-                console.log("URL" + browser.params.baseUrl);
+                var appURL = browser.params.baseUrl;
+                console.log("URL" + appURL);
 
-                return browser.get(browser.params.baseUrl).then(function(flag) {
+                return browser.get(appURL).then(function(flag) {
                     console.log("flag" + flag);
                     return true;
                 });
@@ -267,6 +268,28 @@ var Utility = function() {
         });
     }
 
+    this.openApplication = function(uRl, product) {
+        return browser.controlFlow().execute(function() {
+            if (uRl.length === 0) {
+                if (!isExecutionFromUI) {
+                    return browser.get(browser.params.baseUrl).then(function() {
+                        return true;
+                    });
+                } else {
+                    var appURL = browser.params.baseUrl + '/indEnroll?issuerCode=' + product;
+                    console.log("URL" + appURL);
+                    return browser.get(appURL).then(function(flag) {
+                        console.log("flag" + flag);
+                        return true;
+                    });
+                }
+            } else {
+                return browser.get(uRl).then(function() {
+                    return true;
+                });
+            }
+        });
+    }
 
 
 
@@ -348,7 +371,39 @@ var Utility = function() {
                 }
 
         }
-    }
+    };
+
+     /**
+     * To generate a random number of given length
+     * @param  {String} type (Number or String)
+     * @param  {Number} length of the string required
+     * @return {Number or String} returns number/string of length provided with random alphabets
+     */
+    this.randomNo = function(type, length) {
+        try {
+            var oresult = undefined;
+            switch (type.toUpperCase()) {
+                case 'STRING':
+                    var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    for (var i = 0; i < length; i++) {
+                        oresult = oresult + str.charAt(Math.floor(Math.random() * str.length));
+                    }
+                    logger.info('random string of length ' + length + ' for is :' + oresult);
+                    break;
+                case 'NUMBER':
+                    var oresult = Math.floor(Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1));
+                    logger.info('random number of length ' + length + ' for is :' + oresult);
+                    break;
+                default:
+                    oresult = undefined;
+                    break;
+            }
+        } catch (err) {
+            logger.info('ERROR', "Failed to retrieving text from alert due to " + err.message);
+            return false;
+        }
+        return oresult;
+    };
 
 
 }

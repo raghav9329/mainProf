@@ -38,21 +38,128 @@ class ProviderDetailsPage extends ControlBase {
         this.providerAccess = new Label(this.pageObjects.providerAccess);
         this.providerLanguage = new Label(this.pageObjects.providerLanguage);
         this.providerData = new Label(this.pageObjects.providerData);
+        this.letUsKnow = new Label(this.pageObjects.letUsKnow);
     };
 
     getOfficeHoursByDay(day) {
-        return element(this.pageObjects.officeHoursByDay(day)).getTextEx().then(function(dayinfo){
-        	return (((dayinfo.split(':'))[1]).trim());
+        return element(this.pageObjects.officeHoursByDay(day)).getTextEx().then(function(dayinfo) {
+            return (((dayinfo.split(':'))[1]).trim());
         })
     };
     getProviderAccessByfacility(facility) {
-        return element(this.pageObjects.providerAccessByfacility(facility)).getTextEx().then(function(accessinfo){
-        	return (((accessinfo.split(':'))[1]));
-        })
+        return element(this.pageObjects.providerAccessByfacility(facility)).getTextEx();
     };
     getProviderDataByField(fieldName) {
         return element(this.pageObjects.providerDataByField(fieldName)).getTextEx();
     };
+
+    openView(providerName) {
+        element(this.pageObjects.view(providerName)).clickIt();
+    };
+
+    // Still in Unit Testing Phase . Will Move Locators to -locators.js file
+    // var pData = {
+    //     "SPECIALITY": "General Dentist",
+    //     "STATE": "NY",
+    //     "CITY": "New York",
+    //     "ZIPCODE": "10010"
+    // }
+    verifyProviderLanguage(language, iterations) {
+        var self = this;
+        browser.controlFlow().execute(function() {
+            var count = 0;
+            browser.wait(function() {
+                return element(by.linkText("Next")).isDisplayed().then(function(displayed) {
+                    var providersList = element.all(by.css('li.provider-listing'));
+                    providersList.reduce(function(prev, ele, index) {
+                        var viewno = Number(index) + 1;
+                        if (iterations > count) {
+                            element(by.xpath('(//a[normalize-space(text()) = "View"])[' + viewno + ']')).click().then(function() {
+                                count = count + 1;
+                                expect(self.providerLanguage.getText()).toContain(language);
+                                self.backToSearchResults.click();
+                                browser.sleep(3000);
+                            })
+                        }
+                    });
+                    if (displayed) {
+                        if (iterations > count) {
+                            return element(by.linkText("Next")).click().then(function() {
+                                if (iterations > count) {
+                                    return !displayed;
+                                } else {
+                                    return displayed;
+                                }
+                            })
+                        } else {
+                            return true;
+                        }
+
+                    } else {
+                        return !displayed;
+                    }
+
+                });
+            }, 9999999999);
+        });
+    };
+
+
+    verifyProviderDetails(pData, iterations) {
+        var self = this;
+        browser.controlFlow().execute(function() {
+            var count = 0;
+            browser.wait(function() {
+                return element(by.linkText("Next")).isDisplayed().then(function(displayed) {
+                    var providersList = element.all(by.css('li.provider-listing'));
+                    providersList.reduce(function(prev, ele, index) {
+                        if (iterations > count) {
+                            count = count + 1;
+                            console.log("count============" + count);
+                            if (pData.SPECIALITY) {
+                                ele.element(by.css('p.provider__specialty')).getText().then(function(specialty) {
+                                    console.log("specialty========="+specialty);
+                                    console.log("pData.SPECIALITY===="+pData.SPECIALITY);
+                                    var specialtyindex = pData.SPECIALITY.indexOf(specialty);
+                                    expect(specialtyindex).toBeGreaterThan(-1);
+                                })
+                            }
+                            if (pData.NETWORK) {
+                                ele.element(by.css('div.state-indicator.provider__network span.state-indicator__text')).getText().then(function(network) {
+                                    console.log("network========="+network);
+                                    console.log("pData.NETWORK"+pData.NETWORK)
+                                    var networkindex = pData.NETWORK.indexOf(network);
+                                    expect(networkindex).toBeGreaterThan(-1);
+                                })
+                            }
+                        }
+
+                    });
+
+
+                    if (displayed) {
+                        if (iterations > count) {
+                            return element(by.linkText("Next")).click().then(function() {
+                                if (iterations > count) {
+                                    return !displayed;
+                                } else {
+                                    return displayed;
+                                }
+                            })
+                        } else {
+                            return true;
+                        }
+
+                    } else {
+                        return !displayed;
+                    }
+
+
+                });
+            }, 9999999999);
+        });
+    };
+
 };
 
 /**

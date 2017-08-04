@@ -1,0 +1,220 @@
+By story number
+
+cxinit or direct hmo
+
+personal info
+
+471  Addr Suggestion Home
+Validating Home address fields with 'NULL', Suggested Google API selected from dropdown
+
+
+483  Address Mailing
+Validating Mailing address fields with 'NULL', Suggested Google API selected from dropdown.
+
+489  Home address data entry
+Validating Home Fields visable, clickable, take data. Empty fields provide proper errors on loosing focus.
+
+504  Broker info Additino
+Validating Brokers fields and error Messages
+
+507  Enter Personal info name gender BD ssn alternate ID
+Validating all fields like 
+First Name, Middle Initial, Last Name, 
+Gender, Birthdate, SSN, Alternate ID and 
+validating error messages according to combinatiion of Inputs.
+Under 18, leap year logic
+Error text. error txt location
+Error text link functionality
+Does 9SSN still gen the server side error
+
+519  Contact INfo
+Validating all fields like Phone, Cell, 
+Alternate ID and Email Id and validating i
+error messages according to combinatiion of Inputs.
+
+720  Address Mailing  Suggestion
+Validating Home address Filed with PartialInput and selecting the expected from dropdown 
+
+804  Default zip code Popup
+Validating the Home Address Zip Code Popup.
+
+513 CTA Back Next(persInfo ) Wasn't done as 513
+Hold on 'Back to Quoute' option because 'Get Quoute' is not at implemented.
+
+1548 pers Info Home Addr Verification
+Validating the address cleanse in Home address fields
+
+1549 pers Info Mailing Addr Verification
+Validating the address cleanse in Mail address fields
+
+1361 CTA Back Next
+ * Fwd: All client side errors must be resolved in order to move fwd
+ * Back: takes you to enrollment.
+ ** Fwd after back ??
+ ** Back after fwd( should get all data except SSN
+Hold on 'Back to Quoute' option because 'Get Quoute' is not at implemented.
+
+++++++++++++++++++++++++++++++++++++++++++++
+PersInfo: Special Cases
+++++++++++++++++++++++++++++++++++++++++++++
+477 was Address Validation  Where did we stuff that functionality?
+Hold on 'Back to Quoute' option because 'Get Quoute' is not at implemented.
+
+798 Broker Fields (Covered in 504)
+Validating Brokers fields and error Messages
+
+501 Broker information Validation (Covered in 504)
+Validating Brokers fields and error Messages
+
+672 Address mailing  Validation
+812 Addr validation errors
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Later as we stepped away from Features in a page
+and moved to entire pages
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+477 ends up covering the entire pers info page
+ * with functional standards identified.
+
+
+
+
+
+Dependents page
+1355 CTA Next Back
+Validates the functionality of Next and Back Buttons in dependent page
+Go Back and all data is there EXCEPT SSN
+Go FWD and get Facilities page
+
+1356 Premium Change Pop up
+validates the functionality of Premium change Popup
+0 -> 1 dep premium Change with popup
+1 -> 2 dep Premium Change with popup
+2 -> 3 Dep Premium change with popup  ??
+
+3 -> 4 -> ... -> 15  all show popup
+
+
+
+1357 Child Age Test 
+upto age 26 can be a dependent
+Age >= 26 and the check mark is needed to indicate disabled ??
+
+1358 Dep Spouse / Domestic Partner 
+Validates the error message functionality of dependents with Spouse and Domestic Partner 
+
+1359 15 Dependents 
+validates Error for the NUll values and dependents of same type (domestic paertner and spouse)
+
+
+Facilities page
+1365 Search Test
+Put in a zip code that was not the one you started with
+
+1366 Select Test
+   ?? Select a provider and associate with the dependent.
+Validate Facilities selection of the Dependents
+
+1367 CTA Test
+ Validates the functionality of Next and Back Buttons in Facilities page
+Back takes you to Dependents with all dependents listed 
+ * Fwd after Back takes you back to the facilities you selected
+Fwd takes you to payment
+* Back after Fwd should take you right back to Facilities with all selections made
+
+1368 Feedback Test
+Validating Feedback Button
+I would like to tighten this test up.
+Specifically checking if feedback reopens after navigation away and a return.
+Since you've already been there seems like Feedback shouln't be allowed.
+
+
+
+Payment Direct HMO
+pay method will Annual Credit Card ( so where did monthly go ?? )
+1403 CC expiration
+1404 Addr sugg
+
+1405 ConAuthChk
+Validate the Authentication Error in the Payment Page
+
+1406 CTA Test
+1407 CVV security Code test
+
+Direct HMO only has the Single Annual by Credit Card method.
+
+
+Payment Direct PPO
+Mon	Credit card  or...
+Mon	Electronic Func Transfer  or...
+Qt      Credit card  or...
+Qt	Electronic Func Transfer  or...
+Ann     Credit card  or...
+Ann	Electronic Func Transfer
+
+
+Currently there is only one payment method Annual with credit card.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+AARP  HMO
+
+
+PAYMENT  ( There are multiple ways to pay
+Monthly:  Credit card AND Electronic Fund Transfer 
+
+Annual Credit Card only
+
+
+
+
+AARP PPO
+
+
+PAYMENT  ( There are a whold bunch of ways to pay
+
+monthly Credit and EFT
+Quarterly Credit card only
+Semi Annual  Credit card only
+Annual  Credit card only
+
+
+
+End to end testing
+
+1408 Validate End to End Work Flow with the Dependent age Error
+
+1461 Validate End to End Work Flow with 
+the 2 Dependents and different facilities
+
+1746 Validate Any zipcode, 1 Spouse( not DM ), 
+on the facilities page, let the provider search 
+go from the initial zip provided. continue to payment
+
+1747 Any zipcode 1 child where Dependent is over 26. 
+on facilities page Pick from the initial zip provided. continue to payment
+Description editing: Start w/ any zip 1 dep. Identify dep as disabled Child over 26
+
+1748 start with zip 94105 like your familiar with. Three Dep, 2 child 1 DM , 
+On the facilities page use zipcode 94941, continue on with payment
+Description editing: Start w/ zip 94105 & 3 Dep. List 2 child 1 DP. On Fac Search zip 94941 Pick from this list
+
+1753 Validate zip code Zero Dependents. on the 
+dependents page Add three dependents. Facilities 
+take from the initial zip code. continue to payment.
+
+1754 Validate add to all of our tests confirmation that the 
+progress bar colors the progress properly.  there are supposed 
+two colors. light green and dark green for page you are on.  
+untouched for pages not yet accessed
+
+1755 Validate add to all of our tests confirmation that the progress bar 
+colors the progress properly.  there are supposed two colors. light 
+green and dark green for page you are on.  untouched for pages not yet accessed
+
+1235  E2E Happy Path
+addDep_Enroll.DeleteDep_depPage
+
+

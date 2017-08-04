@@ -29,7 +29,7 @@ class DirectorySearchPage extends ControlBase {
         this.refineSearch = new Label(this.pageObjects.refineSearch);
         this.homeAddressfromGoogleApi = new Label(this.pageObjects.homeAddressfromGoogleApi);
         this.distanceSelect = new Select(this.pageObjects.distanceSelect);
-        this.insurenceNetworks = new Label(this.pageObjects.insurenceNetworks);
+        // this.insurenceNetworks = new Label(this.pageObjects.insurenceNetworks);
         this.iNDeltaDentalPPO = new CheckBox(this.pageObjects.iNDeltaDentalPPO);
         this.iNDeltaDentalPremier = new CheckBox(this.pageObjects.iNDeltaDentalPremier);
         this.iNDeltaCareUSA = new CheckBox(this.pageObjects.iNDeltaCareUSA);
@@ -50,6 +50,8 @@ class DirectorySearchPage extends ControlBase {
         this.languageFilter = new Select(this.pageObjects.languageFilter);
         this.apply = new Button(this.pageObjects.apply);
         this.providersListing = new Label(this.pageObjects.providersListing);
+        this.countOfProviders = new Label(this.pageObjects.countOfProviders);
+        this.headerTextProviderListError = new Label(this.pageObjects.headerTextProviderListError);
     }
     selectHomeAddress(homeaddress) {
         var self = this;
@@ -57,13 +59,25 @@ class DirectorySearchPage extends ControlBase {
             browser.sleep(2000);
             return self.homeAddressfromGoogleApi.getElements().filter(function(elem, index) {
                 return elem.getText().then(function(text) {
-                    console.log("text=========" + text);
-                    console.log("homeaddress==" + homeaddress);
                     return text === homeaddress;
                 });
             }).first().clickIt();
         });
     };
+
+
+    getProvidersCount() {
+        var self = this;
+        return browser.controlFlow().execute(function() {
+            return self.countOfProviders.getText().then(function(count) {
+                var pCount = count.split(' ');
+                return pCount[2];
+            }, function() {
+                return 0;
+            });
+        });
+    };
+
 
     getandVerifyallAddressSuggestions(ptext) {
         var dataarray = [];
@@ -86,13 +100,16 @@ class DirectorySearchPage extends ControlBase {
         element(this.pageObjects.view(providerName)).clickIt();
     };
 
-    
+    filterMenuItem(filterMenuName) {
+        return new Label(this.pageObjects.filterMenuItem(filterMenuName));
+    };
+
+
     getProviderdetails(providerName, providerAttribute) {
         switch (providerAttribute.toUpperCase()) {
             case 'PROVIDER':
-             return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerName).getText();;
+                return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerName).getText();;
                 break;
-            
             case 'SPECIALTY':
                 return element(this.pageObjects.provider(providerName)).element(this.pageObjects.specialty).getText();;
                 break;

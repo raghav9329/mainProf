@@ -24,6 +24,8 @@ class PaymentPage extends ControlBase {
         this.expYear = new TextBox(this.pageObjects.expYear);
         this.securityCode = new TextBox(this.pageObjects.securityCode);
         this.billingChkBox = new CheckBox(this.pageObjects.billingChkBox);
+
+        this.billingAddress = new Label(this.pageObjects.billingAddress);
         this.streetAddress = new TextBox(this.pageObjects.streetAddress);
         this.city = new TextBox(this.pageObjects.city);
         this.state = new TextBox(this.pageObjects.state);
@@ -61,6 +63,23 @@ class PaymentPage extends ControlBase {
         this.serErrZipCode = new Label(this.pageObjects.serErrZipCode);
         this.homeAddressfromGoogleApi = new Label(this.pageObjects.homeAddressfromGoogleApi);
         this.serErrCvv = new Label(this.pageObjects.serErrCvv);
+        this.EFTBankTransfer = new RadioButton(this.pageObjects.EFTBankTransfer);
+        this.checking = new RadioButton(this.pageObjects.checking);
+        this.saving = new RadioButton(this.pageObjects.saving);
+        this.bankName = new TextBox(this.pageObjects.bankName);
+        this.accountHolderName = new TextBox(this.pageObjects.accountHolderName);
+        this.routingNumber = new TextBox(this.pageObjects.routingNumber);
+        this.accountNumber = new TextBox(this.pageObjects.accountNumber);
+        this.accountNumberRetype = new TextBox(this.pageObjects.accountNumberRetype);
+        this.frequencySemiAnnual = new RadioButton(this.pageObjects.frequencySemiAnnual);
+        this.frequencyQuterly = new RadioButton(this.pageObjects.frequencyQuterly);
+        this.frequencyAnnualy = new RadioButton(this.pageObjects.frequencyAnnualy);
+
+        this.bankNameError = new Label(this.pageObjects.bankNameError);
+        this.accountHolderNameError = new Label(this.pageObjects.accountHolderNameError);
+        this.routingNumberError = new Label(this.pageObjects.routingNumberError);
+        this.accountNumberError = new Label(this.pageObjects.accountNumberError);
+
     };
     /**
      * Returns true if name on card is displayed or not
@@ -80,20 +99,26 @@ class PaymentPage extends ControlBase {
         self.expMonth.setText(paymentData.expMonth);
         self.expYear.setText(paymentData.expYear);
         self.securityCode.setText(paymentData.securityCode);
-       // if (!isAuthChecked) self.authChkBox.check();
-//////////////////////////////////////////////////////////////////////        
-// The following is necessary due to the nature of the check box control.
-// Fill payment must be considered a will always complete kind of task
-// Not a task that has options to consider, and maybe not complete
-// It sets Text by force ( within reason )
-// IT makesure sure the auth box has a checkmark.
-//////////////////////////////////////////////////////////////////////
-        
-       self.authChkBox.check();
-       self.authChkBox.check();
-       self.authChkBox.check();
-    };
+        if (!skipAuthChecked) self.authChkBox.check();
+        //////////////////////////////////////////////////////////////////////        
+        // The following is necessary due to the nature of the check box control.
+        // Fill payment must be considered a will always complete kind of task
+        // Not a task that has options to consider, and maybe not complete
+        // It sets Text by force ( within reason )
+        // IT makesure sure the auth box has a checkmark.
+        //////////////////////////////////////////////////////////////////////
 
+        // self.authChkBox.check();
+        // self.authChkBox.check();
+        // self.authChkBox.check();
+    };
+    fillBankDetails(bankData) {
+        this.bankName.setText(bankData.bankName);
+        this.accountHolderName.setText(bankData.accountHolderName);
+        this.routingNumber.setText(bankData.routingNumber);
+        this.accountNumber.setText(bankData.accountNumber);
+        this.accountNumberRetype.setText(bankData.accountNumberRetype);
+    };
     getCCValidationMessages() {
         var promises = [];
         promises.push(this.errNameOnCard.getText());

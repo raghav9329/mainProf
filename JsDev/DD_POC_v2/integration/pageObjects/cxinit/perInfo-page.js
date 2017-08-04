@@ -34,6 +34,7 @@ class PersonalInfoPage extends ControlBase {
         this.errBirthDate = new Label(this.pageObjects.errBirthDate);
         this.fieldSsn = new TextBox(this.pageObjects.fieldSsn);
         this.errMsgSsn = new Label(this.pageObjects.errMsgSsn);
+        this.errMsgMemberId = new Label(this.pageObjects.errMsgMemberId);
         this.fieldHomeAddr = new TextBox(this.pageObjects.fieldHomeAddr);
         this.errMsgHomeAddr = new Label(this.pageObjects.errMsgHomeAddr);
         this.errinvalidAddr = new Label(this.pageObjects.errinvalidAddr);
@@ -71,7 +72,8 @@ class PersonalInfoPage extends ControlBase {
         this.hiddenfieldBrokerNum = new TextBox(this.pageObjects.hiddenfieldBrokerNum);
         this.errMsghiddenfieldBrokerNum = new Label(this.pageObjects.errMsghiddenfieldBrokerNum);
         this.whatIsThis = new Label(this.pageObjects.whatIsThis);
-        this.brokerHelpText = new Label(this.pageObjects.brokerHelpText);
+        this.brokerToolTip = new Label(this.pageObjects.brokerToolTip);
+        this.brokerToolTipText = new Label(this.pageObjects.brokerToolTipText);
         this.hiddenbrokerName = new TextBox(this.pageObjects.hiddenbrokerName);
         this.homeAddressfromGoogleApi = new Label(this.pageObjects.homeAddressfromGoogleApi);
         this.birthdateerror = new Label(this.pageObjects.birthdateerror);
@@ -79,6 +81,7 @@ class PersonalInfoPage extends ControlBase {
         this.serverErrMsgLastName = new Label(this.pageObjects.serverErrMsgLastName);
         this.serverErrMsgGenderSelect = new Label(this.pageObjects.serverErrMsgGenderSelect);
         this.serverErrMsgSsn = new Label(this.pageObjects.serverErrMsgSsn);
+        this.serverErrMsgMemberId = new Label(this.pageObjects.serverErrMsgMemberId);
         this.serverErrMsgStreetAddress = new Label(this.pageObjects.serverErrMsgStreetAddress);
         this.serverErrMsgCity = new Label(this.pageObjects.serverErrMsgCity);
         this.serverErrMsgState = new Label(this.pageObjects.serverErrMsgState);
@@ -95,6 +98,10 @@ class PersonalInfoPage extends ControlBase {
         this.enrollmentFee = new Label(this.pageObjects.enrollmentFee);
         this.apptFloorNumError = new LinkText(this.pageObjects.apptFloorNumError);
 
+        this.memberId = new TextBox(this.pageObjects.memberId);
+        this.referralSource = new Select(this.pageObjects.referralSource);
+        this.errorMsgRefferalSource = new Label(this.pageObjects.errorMsgRefferalSource);
+        this.backToQuote = new LinkText(this.pageObjects.backToQuote);
     }
 
     enrollStatus(breadcrumbheader) {
@@ -119,7 +126,7 @@ class PersonalInfoPage extends ControlBase {
                     console.log("homeaddress==" + homeaddress);
                     return text === homeaddress;
                 });
-            }).first().clickIt();
+            }).last().clickIt();
         });
     };
 
@@ -154,16 +161,18 @@ class PersonalInfoPage extends ControlBase {
             self.fieldBdMM.setText(datesplit[0]);
             self.fieldBdDD.setText(datesplit[1]);
             self.fieldBdYyyy.setText(datesplit[2]);
-            self.fieldSsn.setText(perinfo.ssn);
-            self.fieldAlternateId.setText('');
+            if (perinfo.MemberId) self.memberId.setText(perinfo.MemberId);
+            if (perinfo.ssn) self.fieldSsn.setText(perinfo.ssn);
+            if (!perinfo.alternateid) self.fieldAlternateId.setText('');
             if (!perinfo.alternateid) self.fieldAlternateId.setText(perinfo.alternateid);
+            self.fieldHomeAddr.setText('');
             expect(self.fieldFirstName.getAttribute("class")).toContain(perinfo.ariainvalid);
             expect(self.fieldMidInitial.getAttribute("class")).toContain(perinfo.ariainvalid);
             expect(self.fieldLastName.getAttribute("class")).toContain(perinfo.ariainvalid);
             expect(self.fieldBdMM.getAttribute("class")).toContain(perinfo.ariainvalid);
             expect(self.fieldBdDD.getAttribute("class")).toContain(perinfo.ariainvalid);
             expect(self.fieldBdYyyy.getAttribute("class")).toContain(perinfo.ariainvalid);
-            expect(self.fieldSsn.getAttribute("class")).toContain(perinfo.ariainvalid);
+            if (perinfo.ssn) expect(self.fieldSsn.getAttribute("class")).toContain(perinfo.ariainvalid);
         });
     };
 
@@ -173,11 +182,15 @@ class PersonalInfoPage extends ControlBase {
             self.fieldHomeAddr.setText(perinfo.fieldHomeAddr);
             self.fieldCity.setText(perinfo.city);
             self.fieldPhoneNumber.setText('');
+            browser.sleep(2000);
             expect(self.fieldHomeAddr.getAttribute("class")).toContain(perinfo.ariainvalid);
             expect(self.fieldCity.getAttribute("class")).toContain(perinfo.ariainvalid);
         });
     };
-
+    waitUntilLoderDisapper() {
+        var loder = element(by.xpath('//img[@class="loaderImg"]'));
+        Utility.waitUntilElementNotPresent(loder, longWait);
+    }
     phoneNumberemail(phno) {
         var self = this;
         return browser.controlFlow().execute(function() {
@@ -186,6 +199,7 @@ class PersonalInfoPage extends ControlBase {
             self.fieldPhoneNumber.setText(phno.phoneNumber);
             if (!phno.fieldEmailAddr) self.fieldEmailAddr.setText(phno.email);
             self.fieldAlternateId.setText('');
+            self.fieldPhoneNumber.setText('', true);
             expect(self.fieldPhoneNumber.getAttribute("class")).toContain(phno.ariainvalid);
             expect(self.fieldEmailAddr.getAttribute("class")).toContain(phno.ariainvalid);
         });
@@ -211,7 +225,7 @@ class PersonalInfoPage extends ControlBase {
         var promises = [];
         promises.push(this.errMsgFirstName.getText());
         promises.push(this.errMsgLastName.getText());
-        promises.push(this.errMsgGenderSelect.getText());
+        //promises.push(this.errMsgGenderSelect.getText());
         promises.push(this.errMsgBdMM.getText());
         promises.push(this.errMsgBdDD.getText());
         promises.push(this.errMsgBdYyyy.getText());
@@ -223,7 +237,7 @@ class PersonalInfoPage extends ControlBase {
         var promises = [];
         promises.push(this.serverErrMsgFirstName.getText());
         promises.push(this.serverErrMsgLastName.getText());
-        promises.push(this.serverErrMsgGenderSelect.getText());
+        // promises.push(this.serverErrMsgGenderSelect.getText());
         promises.push(this.serverErrMsgMonth.getText());
         promises.push(this.serverErrMsgDay.getText());
         promises.push(this.serverErrMsgYear.getText());

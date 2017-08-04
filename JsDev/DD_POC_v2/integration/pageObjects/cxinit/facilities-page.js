@@ -30,6 +30,7 @@ class FacilitiesPage extends ControlBase {
         this.RecentSelectedFacility = new Label(this.pageObjects.RecentSelectedFacility);
         this.facilityBox = new Label(this.pageObjects.facilityBox);
         this.enrolleFacNullErr = new Label(this.pageObjects.enrolleFacNullErr);
+        this.enrolleFacNullHelpText = new Label(this.pageObjects.enrolleFacNullHelpText);        
         this.depNameVerify = new Label(this.pageObjects.depNameVerify);
 
     };

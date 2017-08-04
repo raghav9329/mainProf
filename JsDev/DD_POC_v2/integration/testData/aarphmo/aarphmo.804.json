@@ -1,0 +1,37 @@
+{
+    "ZipCode": "94560",
+    "ZipCode2": "94103",
+    "Ariainvalid_error": "error",
+    "Ariainvalid_success": "success",
+    "Title": "Individual & Families",
+
+    "enrollData": {
+        "PlanName": "DeltaCare ® USA Plan 15B",
+        "PlanType": "DHMO",
+        "PlanCode": "PLN15B",
+        "CoverageStartDate": "12/1/2018",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "0.00",
+        "AnnualCost": "342.96",
+        "CoverageType": "Self",
+        "PlanID": "4546969",
+        "IssuerCode": "AARP",
+        "NoOfPeopleCovered": "1",
+          "dob":"05-05-1988"
+    },
+
+    "HAddress_ZIP": {
+        "PartialAddress": "949",
+        "FullAddress": "949Broadway, New York, NY, United States",
+        "ErrorMsg": "Please enter a street address",
+        "ExecutionFlag": true
+    },
+    "Address_Valid": {
+        "HomeAddress": "35995 Fremont Blvd Apt 98",
+        "City": "Fremont",
+        "State": "CA",
+        "ZIPCode": "94536"
+    }
+}

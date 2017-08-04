@@ -7,7 +7,7 @@ class DependentsLocators {
         this.getdependent = by.xpath('//h2[1]');
         this.dependentparent = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('//h2[text()="Dependent"]/span[text()="' + number + '"]/parent::h2/parent::div');
+            return by.xpath('//h2[normalize-space(text())="Dependent"]/span[text()="' + number + '"]/parent::h2/parent::div');
         };
 
 
@@ -24,89 +24,90 @@ class DependentsLocators {
 
         this.firstname = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//input[contains(@id,"firstname")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//input[contains(@id,"firstName")]');
         };
         this.middleName = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//input[contains(@id,"middleName")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//input[contains(@id,"middleName")]');
         };
         this.lastname = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//input[contains(@id,"lastname")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//input[contains(@id,"lastName")]');
         };
         this.month = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//input[contains(@id,"month")]');
+            // return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//input[contains(@id,"month")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//label[text()="Month"]/following-sibling::input[1]');
         };
         this.date = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//input[contains(@id,"day")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//input[contains(@id,"day")]');
         };
         this.year = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//input[contains(@id,"year")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//input[contains(@id,"year")]');
         };
         this.gender = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//select[contains(@id,"gender")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//select[contains(@id,"gender")]');
         };
         this.relationship = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//select[contains(@id,"relationship")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//select[contains(@id,"relationship")]');
         };
         this.deleteDependent = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//img[@class="float-right deleteDep"]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//a[@class="deleteDep"]');
         };
 
         this.isHandicapped = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//input[contains(@id,"handicapped")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//input[contains(@id,"handicapped")]');
         };
 
         this.handicappedHelpTxt = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//input[contains(@id,"handicapped")]/parent::label');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//input[contains(@id,"handicapped")]/parent::label');
         };
 
 
         // Client Side Error
         this.errorRelationship = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//a[contains(@id,"relationship")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//a[contains(@id,"relationship")]');
         };
         this.errorFirstName = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//a[contains(@id,"firstname")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//a[contains(@id,"firstName")]');
         };
         this.errorLastName = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//a[contains(@id,"lastname")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//a[contains(@id,"lastName")]');
         };
         this.errorGender = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//a[contains(@id,"gender")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//a[contains(@id,"gender")]');
         };
         this.errorMonth = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//a[contains(@id,"month")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//label[text()="Month"]/parent::p/following-sibling::div/a[1]');
         };
         this.errorDay = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//a[contains(@id,"day")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//a[contains(@id,"day")]');
         };
         this.errorYear = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']//a[contains(@id,"year")]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//a[contains(@id,"year")]');
         };
 
 
         //Server Error Locators
         this.serErrorRelationship = by.css('a[class*="relationship"]');
-        this.serErrorFirstName = by.css('a[class*="firstname"]');
-        this.serErrorLastName = by.css('a[class*="lastname"]');
+        this.serErrorFirstName = by.css('a[class*="firstName"]');
+        this.serErrorLastName = by.css('a[class*="lastName"]');
         this.serErrorGender = by.css('a[class*="gender"]');
-        this.serErrorMonth = by.css('a[class*="month"]');
+        this.serErrorMonth = by.css('div.error-container.global-margin > a:nth-child(4)');
         this.serErrorDay = by.css('a[class*="day"]');
         this.serErrorYear = by.css('a[class*="year"]');
 
@@ -121,7 +122,7 @@ class DependentsLocators {
 
         this.premiumAmount = by.css('aside.product-selection-summary div.header-plan span');
         this.enrollmentFee = by.className('enrollment-fee');
-        this.depError = by.css('div.error-container.global-margin label');
+        this.depError = by.css('div.error-container.global-margin a');
 
     }
 }

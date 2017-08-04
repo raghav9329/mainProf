@@ -20,15 +20,17 @@ describe('Provider Search Validation', function() {
     it('ProvDir_2: Verify the functionality of view Dentists when we enter invalid Address', function() {
         dirSearch.location.setText(TestData.ZipCode);
         dirSearch.findDentist.click();
-        expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.headerTextError.getText()).toContain(TestData.Header_InvalidAddress);
+        browser.sleep(2000);
+        expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeTruthy();
     });
+
     it('ProvDir_3: Verify the functionality of view Dentists with blank Address', function() {
         dirSearch.location.setText('');
         dirSearch.findDentist.click();
         expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeFalsy();
-        expect(dirSearch.headerTextError.getText()).toContain(TestData.Header_InvalidAddress);
+       
     });
+
     it('ProvDir_4: Verify the search results count and provider details ', function() {
         dirSearch.location.setText(TestData.HAddress_ZIP.PartialAddress);
         dirSearch.selectHomeAddress(TestData.HAddress_ZIP.FullAddress);
@@ -49,13 +51,13 @@ describe('Provider Search Validation', function() {
         dirSearch.findDentist.click();
         dirSearch.refineSearch.click();
         expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
-        expect(dirSearch.insurenceNetworks.isPresentAndDisplayed()).toBeTruthy();
-        dirSearch.insurenceNetworks.click();     
+        expect(dirSearch.filterMenuItem('Networks').isPresentAndDisplayed()).toBeTruthy();
+        dirSearch.filterMenuItem('Networks').click();     
         expect(dirSearch.iNDeltaDentalPPO.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.iNDeltaDentalPremier.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.iNDeltaCareUSA.isPresentAndDisplayed()).toBeTruthy();
-        expect(dirSearch.Specialty.isPresentAndDisplayed()).toBeTruthy();
-        dirSearch.Specialty.click();
+        expect(dirSearch.filterMenuItem('Specialties').isPresentAndDisplayed()).toBeTruthy();
+        dirSearch.filterMenuItem('Specialties').click();
         expect(dirSearch.generalDentist.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.endodontist.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.oralSurgeon.isPresentAndDisplayed()).toBeTruthy();
@@ -68,9 +70,10 @@ describe('Provider Search Validation', function() {
         expect(dirSearch.hygienist.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.XRLaboratory.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.oralPathology.isPresentAndDisplayed()).toBeTruthy();
-        expect(dirSearch.languages.isPresentAndDisplayed()).toBeTruthy();
-        dirSearch.languages.click();
+        expect(dirSearch.filterMenuItem('Languages').isPresentAndDisplayed()).toBeTruthy();
+        dirSearch.filterMenuItem('Languages').click();
         expect(dirSearch.languageFilter.isPresentAndDisplayed()).toBeTruthy();
+        expect(dirSearch.apply.isPresentAndDisplayed()).toBeTruthy();
     });
 
     it('ProvDir_6: Verify the Provider details by selecting specific provider from provider search results', function() {
@@ -98,19 +101,19 @@ describe('Provider Search Validation', function() {
 
 
         //Provider Availability
-        expect(providerDetails.getOfficeHoursByDay('Mon')).toEqual(data.PAvailabilityClosed);
-        expect(providerDetails.getOfficeHoursByDay('Tues')).toEqual(data.PAvailabilityClosed);
-        expect(providerDetails.getOfficeHoursByDay('Wed')).toEqual(data.PAvailabilityClosed);
-        expect(providerDetails.getOfficeHoursByDay('Thurs')).toEqual(data.PAvailabilityClosed);
-        expect(providerDetails.getOfficeHoursByDay('Fri')).toEqual(data.PAvailabilityClosed);
-        expect(providerDetails.getOfficeHoursByDay('Sat')).toEqual(data.PAvailabilityClosed);
-        expect(providerDetails.getOfficeHoursByDay('Sun')).toEqual(data.PAvailabilityClosed);
+        expect(providerDetails.getOfficeHoursByDay('Mon')).toEqual(data.PAvailability);
+        expect(providerDetails.getOfficeHoursByDay('Tues')).toEqual(data.PAvailability);
+        expect(providerDetails.getOfficeHoursByDay('Wed')).toEqual(data.PAvailability);
+        expect(providerDetails.getOfficeHoursByDay('Thurs')).toEqual(data.PAvailability);
+        expect(providerDetails.getOfficeHoursByDay('Fri')).toEqual(data.PAvailability);
+        expect(providerDetails.getOfficeHoursByDay('Sat')).toEqual(data.PAvailability);
+        expect(providerDetails.getOfficeHoursByDay('Sun')).toEqual(data.PAvailability);
 
         // Provider Facility
         expect(providerDetails.getProviderAccessByfacility('Free Parking')).toEqual(data.PParking);
         expect(providerDetails.getProviderAccessByfacility('Wheelchair Accessible')).toEqual(data.PWheelChair);
         expect(providerDetails.getProviderAccessByfacility('Public Transit')).toEqual(data.PPublicTransport);
-        expect(providerDetails.getProviderAccessByfacility('Wifi')).toEqual(data.PInternetAccess);
+        expect(providerDetails.getProviderAccessByfacility('Network Access')).toEqual(data.PInternetAccess);
 
         //Language
         expect(providerDetails.providerLanguage.getText()).toEqual(data.PLanguage);
