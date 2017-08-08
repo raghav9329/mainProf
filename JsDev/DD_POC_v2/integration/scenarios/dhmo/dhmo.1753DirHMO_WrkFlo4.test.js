@@ -53,6 +53,7 @@ describe('CXINIT-1753 Direct_HMO WorkFlows_4 :', function() {
         depInfo.fillDependent('Dependent2', TestData.child1, false);
         depInfo.fillDependent('Dependent3', TestData.child2, false);
         depInfo.next.click();
+           Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
         depInfo.continue.click();
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);

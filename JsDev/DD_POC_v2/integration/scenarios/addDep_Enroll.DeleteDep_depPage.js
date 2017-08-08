@@ -7,19 +7,17 @@ var receipt = new(require('../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../pageObjects/cxinit/enroll-page.js'));
 
 describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
+    var effectiveDate;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
 
     it('E2E_Flow_1: Enter the Zip code and Click on the Enter for the Enroll Page', function() {
-        enrollPage.enterHomePageDetails(TestData.enrollData);
-        // browser.driver.findElement(by.name('planZip')).clear().then(function() {
-        //     browser.driver.findElement(by.name('planZip')).sendKeys(TestData.ZipCode);
-        //     browser.driver.findElement(by.name('noOfCovered')).clear();
-        //     browser.driver.findElement(by.name('noOfCovered')).sendKeys('4');
-        //     browser.actions().sendKeys(protractor.Key.ENTER).perform();
-        //     return true;
-        // });
+        enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
+            effectiveDate = sdate;
+            console.log("sdate============" + sdate);
+        })
+
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
     });
 
@@ -35,21 +33,20 @@ describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
         depInfo.deleteDependent('Dependent1').click();
         depInfo.deleteDependent('Dependent1').click();
         depInfo.deleteDependent('Dependent1').click();
-        depInfo.month('Dependent1').setText('');
-        depInfo.date('Dependent1').setText('');
-        depInfo.year('Dependent1').setText('');
+        depInfo.fieldAddDependents.click();
         depInfo.next.click();
         expect(depInfo.getValidationMessages('Dependent1')).toEqual(TestData.dependentErrors);
-        expect(depInfo.getServerValidationMessages()).toEqual(TestData.dependentErrors);
+        expect(depInfo.getServerValidationMessages()).toEqual(TestData.dependentErrors);       
     });
 
     it('E2E_Flow_4: Verify 2 dependents were added and furnished with valid Test Data for Each of them', function() {
         depInfo.fillDependent('Dependent1', TestData.domesticpartner1, true);
         depInfo.fillDependent('Dependent2', TestData.child3, false);
         depInfo.next.click();
-        depInfo.next.click();
-        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
-        depInfo.continue.click();
+        Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
+        // depInfo.next.click();
+        // expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+        // depInfo.continue.click();
         expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
     });
 

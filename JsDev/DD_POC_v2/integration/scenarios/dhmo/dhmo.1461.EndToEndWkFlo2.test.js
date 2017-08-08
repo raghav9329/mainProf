@@ -49,6 +49,8 @@ describe('CXINIT-1461:E2E_WrkFlow1 - 2', function() {
     it('E2E_3 :Fill the Home address and Click on the New Quote in the Pop up displayed', function() {
         perInfo.fieldHomeAddr.setText(TestData.fieldHomeAddr);
         perInfo.selectHomeAddress(TestData.homeAddress);
+        perInfo.fieldCity.setText(TestData.city);
+        // perInfo.waitUntilLoderDisapper();
         perInfo.zipPopNewQuote.click();
         expect(browser.getTitle()).toContain(TestData.SelectPlanTitle);
         console.log('1461_3 complete')

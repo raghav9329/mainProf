@@ -60,6 +60,7 @@
     },
 
      "dependent_facilityoption1": {
+
         "facilityName": "Modern Dentistry&Ortho",
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",
@@ -69,7 +70,7 @@
     },
     
     "dependent_facilityoption2": {
-        "facilityName": "SecondaryApplicantService-1",
+             "facilityName": "Van Ness Dental Group",
         "street": "2243 Van Ness Ave Ste 201",
         "city": "San Francisco",
         "region": "CA",

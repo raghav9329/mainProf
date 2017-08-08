@@ -6,7 +6,7 @@
     "dob": "05-05-1971",
     "ssn": "1234560215",
     "alternateid": "test@test.com",
-      "fieldHomeAddr": "100 First Street floor 4",  
+    "fieldHomeAddr": "100 First Street floor 4",  
     "homeAddress" : "100 First Street1st Street, San Francisco, CA, United States",
     "fieldhomeAddress": "35995 Fremont Blvd Apt 98",
     "city": "Fremont",

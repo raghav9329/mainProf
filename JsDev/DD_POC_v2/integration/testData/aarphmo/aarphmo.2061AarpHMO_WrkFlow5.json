@@ -199,7 +199,7 @@
 
     "facilites": {
 
-        "facilityoption1": {
+   "facilityoption1": {
             "facility": "Kayvan Kafayi DDS",
             "zipcode": "94903"
         },
@@ -217,51 +217,51 @@
             "zipcode": "94111"
         },
         "facilityoption5": {
-            "facility": "Van Ness Dental Group",
+            "facility": "Natomas Dental Care",
             "zipcode": "94203"
         },
         "facilityoption6": {
-            "facility": "The Santos Dental Group Corp",
+            "facility": "Kims Family Dentistry",
             "zipcode": "90001"
             
         },
         "facilityoption7": {
             "facility": "Kayvan Kafayi DDS",
-            "zipcode": "60601"
+            "zipcode": "94903"
 
         },
         "facilityoption8": {
-            "facility": "Kayvan Kafayi DDS",
-            "zipcode": "52801"
+            "facility": "Van Ness Dental Group",
+            "zipcode": "94105"
 
         },
         "facilityoption9": {
-            "facility": "Van Ness Dental Group",
-            "zipcode": "89501"
+            "facility": "The Santos Dental Group Corp",
+            "zipcode": "94903"
         },
         "facilityoption10": {
-            "facility": "The Santos Dental Group Corp",
-            "zipcode": "15201"
+            "facility": "Bernardo Gonzalez DDS",
+            "zipcode": "94111"
         },
         "facilityoption11": {
-            "facility": "Kayvan Kafayi DDS",
-            "zipcode": "24517"
+            "facility": "Natomas Dental Care",
+            "zipcode": "94203"
         },
         "facilityoption12": {
-            "facility": "Van Ness Dental Group",
-            "zipcode": "37201"
+            "facility": "Kims Family Dentistry",
+            "zipcode": "90001"
         },
         "facilityoption13": {
-            "facility": "The Santos Dental Group Corp",
-            "zipcode": "07039"
+            "facility": "Kayvan Kafayi DDS",
+            "zipcode": "94903"
         },
         "facilityoption14": {
-            "facility": "Kayvan Kafayi DDS",
-            "zipcode": "63101"
+            "facility": "Van Ness Dental Group",
+            "zipcode": "94105"
         },
         "facilityoption15": {
-            "facility": "Van Ness Dental Group",
-            "zipcode": "67201"
+            "facility": "The Santos Dental Group Corp",
+            "zipcode": "94111"
         }
 
     },

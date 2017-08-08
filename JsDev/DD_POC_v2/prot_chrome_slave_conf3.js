@@ -101,14 +101,14 @@ exports.config = {
         ],
         ape2e: [
             'integration/scenarios/aarpppo/aarpppo.1973WrkFlo1.test.js',
-            'integration/scenarios/aarpppo/aarpppo.2092Payment_Anual_TwoDep_WrkFlow.test.js',
-            'integration/scenarios/aarpppo/aarpppo.2093Payment_Anual_ThreeDep_WrkFlow.test.js',
-            'integration/scenarios/aarpppo/aarpppo.XXXXPayment_Monthly_ThreeDep_WrkFlow.test.js',
-            'integration/scenarios/aarpppo/aarpppo.XXXXPayment_Monthly_TwoDep_WrkFlow.test.js',
-            'integration/scenarios/aarpppo/aarpppo.XXXXPayment_Quarterly_ThreeDep_WrkFlow.test.js',
-            'integration/scenarios/aarpppo/aarpppo.XXXXPayment_Quarterly_TwoDep_WrkFlow.test.js',
-            'integration/scenarios/aarpppo/aarpppo.XXXXPayment_SemiAnual_TwoDep_WrkFlow.test.js',
-            'integration/scenarios/aarpppo/aarpppo.XXXXPayment_SemiAnual_ThreeDep_WrkFlow.test.js'
+            'integration/scenarios/aarpppo/aarpppo.2092_E2EPayAnn_TwoDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2093_E2EPayAnn_ThreeDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2310_E2EPaySemiAnn_TwoDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2311_E2EPaySemiAnn_ThreeDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2312_E2EPayQua_TwoDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2313_E2EPayQua_ThreeDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2314_E2EPayMon_TwoDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2315_E2EPayMon_ThreeDep.test.js'
         ],
         dpe2e: [
             'integration/scenarios/dppo/dppo.XXXXPayment_EFT_Anual_TwoDep_WrkFlow.test.js',
@@ -127,45 +127,45 @@ exports.config = {
 
         ],
         hclfocus: [ // I will add direct PPO later in week of july 17 - 21
-           'integration/scenarios/dhmo/dhmo.1408.EndToEndWkFlo1.test.js',
-             //'integration/scenarios/dhmo/dhmo.1461.EndToEndWkFlo2.test.js',
-             'integration/scenarios/dhmo/dhmo.1746DirHMO_WrkFlo1.test.js',
-             'integration/scenarios/dhmo/dhmo.1753DirHMO_WrkFlo4.test.js',
-             'integration/scenarios/dhmo/dhmo.1754DirHMO_WrkFlow5.test.js',
-             'integration/scenarios/dhmo/dhmo.1755DirHMO_WrkFlow6.test.js',
-             'integration/scenarios/051217_E2E_POM_Workflow.js',
-             'integration/scenarios/addDep_Enroll.DeleteDep_depPage.js',
-             'integration/scenarios/aarphmo/aarphmo.2057E2E_WrkFlow1.test.js',
-             'integration/scenarios/aarphmo/aarphmo.2059AarpHMO_WrkFlow1.test.js',
-             'integration/scenarios/aarphmo/aarphmo.2058AarpHMO_WrkFlow2.test.js',
-             'integration/scenarios/aarphmo/aarphmo.2060AarpHMO_WrkFlow4.test.js',
-             'integration/scenarios/aarphmo/aarphmo.2061AarpHMO_WrkFlow5.test.js',
-             'integration/scenarios/aarphmo/aarphmo.2062AarpHMO_WrkFlow6.test.js',
-             'integration/scenarios/aarphmo/aarphmo.1768_E2E_WrkFlo_1.test.js',
-             
-             'integration/scenarios/aarpppo/aarpppo.1973WrkFlo1.test.js',
-             'integration/scenarios/aarpppo/aarpppo.2092Payment_Anual_TwoDep_WrkFlow.test.js',
-             'integration/scenarios/aarpppo/aarpppo.2093Payment_Anual_ThreeDep_WrkFlow.test.js',
-             'integration/scenarios/aarpppo/aarpppo.XXXXPayment_Monthly_ThreeDep_WrkFlow.test.js',
-             'integration/scenarios/aarpppo/aarpppo.XXXXPayment_Monthly_TwoDep_WrkFlow.test.js',
-             'integration/scenarios/aarpppo/aarpppo.XXXXPayment_Quarterly_ThreeDep_WrkFlow.test.js',
-             'integration/scenarios/aarpppo/aarpppo.XXXXPayment_Quarterly_TwoDep_WrkFlow.test.js',
-             'integration/scenarios/aarpppo/aarpppo.XXXXPayment_SemiAnual_TwoDep_WrkFlow.test.js',
-             'integration/scenarios/aarpppo/aarpppo.XXXXPayment_SemiAnual_ThreeDep_WrkFlow.test.js',
+            'integration/scenarios/dhmo/dhmo.1408.EndToEndWkFlo1.test.js',
+            //'integration/scenarios/dhmo/dhmo.1461.EndToEndWkFlo2.test.js',
+            'integration/scenarios/dhmo/dhmo.1746DirHMO_WrkFlo1.test.js',
+            'integration/scenarios/dhmo/dhmo.1753DirHMO_WrkFlo4.test.js',
+            'integration/scenarios/dhmo/dhmo.1754DirHMO_WrkFlow5.test.js',
+            'integration/scenarios/dhmo/dhmo.1755DirHMO_WrkFlow6.test.js',
+            'integration/scenarios/051217_E2E_POM_Workflow.js',
+            'integration/scenarios/addDep_Enroll.DeleteDep_depPage.js',
+            'integration/scenarios/aarphmo/aarphmo.2057E2E_WrkFlow1.test.js',
+            'integration/scenarios/aarphmo/aarphmo.2059AarpHMO_WrkFlow1.test.js',
+            'integration/scenarios/aarphmo/aarphmo.2058AarpHMO_WrkFlow2.test.js',
+            'integration/scenarios/aarphmo/aarphmo.2060AarpHMO_WrkFlow4.test.js',
+            'integration/scenarios/aarphmo/aarphmo.2061AarpHMO_WrkFlow5.test.js',
+            'integration/scenarios/aarphmo/aarphmo.2062AarpHMO_WrkFlow6.test.js',
+            'integration/scenarios/aarphmo/aarphmo.1768_E2E_WrkFlo_1.test.js',
 
-              'integration/scenarios/dppo/dppo.2317_E2EPayCCAnn_TwoDep.test.js',
-             'integration/scenarios/dppo/dppo.2318_E2EPayCCAnn_ThreeDep.test.js',
-             'integration/scenarios/dppo/dppo.2319_E2EPayCCMon_TwoDep.test.js',
-             'integration/scenarios/dppo/dppo.2320_E2EPayCCMon_ThreeDep.test.js',
-             'integration/scenarios/dppo/dppo.2321_E2EPayCCQtr_TwoDep.test.js',
-             'integration/scenarios/dppo/dppo.2322_E2EPayCCQtr_ThreeDep.test.js',
-             
-             'integration/scenarios/dppo/dppo.2323_E2EPayEFTAnn_TwoDep.test.js',
-             'integration/scenarios/dppo/dppo.2324_E2EPayEFTAnn_ThreeDep.test.js',
-             'integration/scenarios/dppo/dppo.2325_E2EPayEFTMon_TwoDep.test.js',
-             'integration/scenarios/dppo/dppo.2326_E2EPayEFTMon_ThreeDep.test.js',
-             'integration/scenarios/dppo/dppo.2327_E2EPayEFTQtr_TwoDep.test.js',
-             'integration/scenarios/dppo/dppo.2328_E2EPayEFTQtr_ThreeDep.test.js'
+             'integration/scenarios/aarpppo/aarpppo.1973WrkFlo1.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2092_E2EPayAnn_TwoDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2093_E2EPayAnn_ThreeDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2310_E2EPaySemiAnn_TwoDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2311_E2EPaySemiAnn_ThreeDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2312_E2EPayQua_TwoDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2313_E2EPayQua_ThreeDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2314_E2EPayMon_TwoDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2315_E2EPayMon_ThreeDep.test.js',
+
+            'integration/scenarios/dppo/dppo.2317_E2EPayCCAnn_TwoDep.test.js',
+            'integration/scenarios/dppo/dppo.2318_E2EPayCCAnn_ThreeDep.test.js',
+            'integration/scenarios/dppo/dppo.2319_E2EPayCCMon_TwoDep.test.js',
+            'integration/scenarios/dppo/dppo.2320_E2EPayCCMon_ThreeDep.test.js',
+            'integration/scenarios/dppo/dppo.2321_E2EPayCCQtr_TwoDep.test.js',
+            'integration/scenarios/dppo/dppo.2322_E2EPayCCQtr_ThreeDep.test.js',
+
+            'integration/scenarios/dppo/dppo.2323_E2EPayEFTAnn_TwoDep.test.js',
+            'integration/scenarios/dppo/dppo.2324_E2EPayEFTAnn_ThreeDep.test.js',
+            'integration/scenarios/dppo/dppo.2325_E2EPayEFTMon_TwoDep.test.js',
+            'integration/scenarios/dppo/dppo.2326_E2EPayEFTMon_ThreeDep.test.js',
+            'integration/scenarios/dppo/dppo.2327_E2EPayEFTQtr_TwoDep.test.js',
+            'integration/scenarios/dppo/dppo.2328_E2EPayEFTQtr_ThreeDep.test.js'
         ]
 
     },
@@ -178,18 +178,18 @@ exports.config = {
     params: {
         //  baseUrl: '' ,  // running this allows you to enter URL at command line
         //baseUrl: 'https://aw-lx0176.deltadev.ent:3000/enroll/',
-        baseUrl: 'http://aw-lx0101.deltadev.ent',
+        //baseUrl: 'http://aw-lx0101.deltadev.ent',
         exeInspDelay: '', // Command Line controllable sleep variable for running Debug Inspections
         // baseUrl: 'https://mot.deltadentalins.com/enroll/delta/test',
-        //  baseUrl:'https://mot.deltadentalins.com',
+          baseUrl:'https://mot.deltadentalins.com',
         //  exeLogging:'INFO', // Mark's desire to not display logging
         exeLogging: 'OFF'
     },
 
     onPrepare: function() {
-        minWait = 1000;
-        maxWait = 2000;
-        longWait = 40000;
+        minWait = 75;
+        maxWait = 120;
+        longWait = 1200;
         PAGELOADTIME = 60000;
         isExecutionFromUI = true;
         //browser.manage().window().maximize();

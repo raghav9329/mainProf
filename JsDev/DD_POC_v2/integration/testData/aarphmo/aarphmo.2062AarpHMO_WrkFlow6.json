@@ -68,7 +68,7 @@
     "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
     "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
     "nameOnCard": "Peter Heins",
-    "cardNumber": "5415240007992183",
+    "cardNumber": "6011013333333331",
     "expMonth": "05",
     "expYear": "2020",
     "securityCode": "125",

@@ -13,19 +13,14 @@ exports.config = {
        
 	    all: ['integration/scenarios/providers/*.test.js', ],
     	
-    	facs:[ 'integration/scenarios/cxinit/cxinit.1365FacSearch.test.js',
-    		'integration/scenarios/cxinit/cxinit.1366FacSelect.test.js',
-    		'integration/scenarios/cxinit/cxinit.1367FacCTA.test.js',
-    		'integration/scenarios/cxinit/cxinit.1368FacFeedback.test.js'
-    	],
-    
-	earlyWork:[ 'integration/scenarios/providers/cxinit2.4.test.js',
+	earlyWork:[ 
+		'integration/scenarios/providers/cxinit2.4.test.js',
 		'integration/scenarios/providers/cxinit2.73.test.js',
 		'integration/scenarios/providers/cxinit2.577.test.js',
 		'integration/scenarios/providers/cxinit2.642.test.js',
 		'integration/scenarios/providers/cxinit2.811.test.js',
 		'integration/scenarios/providers/E2E_WorkFlow.test.js'
-	],
+		],
 
 	pd1145:  'integration/scenarios/providers/cxinit2-1145.test.js', 
 	
@@ -79,8 +74,7 @@ exports.config = {
     
     params: {
        // baseUrl: '',
-        //baseUrl:'https://aw-lx0176/find-a-dentist/alpha/',
-	baseUrl:'http://aw-lx0176.deltadev.ent/find-a-dentist/alpha/directory-search.html',
+	baseUrl:'https://mot.deltadentalins.com/find-a-dentist/alpha/directory-search.html',
         //baseUrl:'https://mot.deltadentalins.com/enroll',
         //baseUrl:'https://mot.deltadentalins.com',
     	  exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections
@@ -115,7 +109,8 @@ exports.config = {
         // var monthMap = {  // Configs went here  moved below 
 
     },
-    resultJsonOutputFile: 'results.json',
+    //resultJsonOutputFile: 'results.json',
+    resultJsonOutputFile: 'pdMot_results.json',
     jasmineNodeOpts: {
     	//includeStackTrace : false,
         showColors: true, // Use colors in the command line report.

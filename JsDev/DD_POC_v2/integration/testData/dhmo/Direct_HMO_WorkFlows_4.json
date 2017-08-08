@@ -98,7 +98,7 @@
         "Orthodontics": "$2,700 - $2,900"
     },
     "primaryFacility": {
-        "facilityName": "Modern Dentistry&Ortho",
+        "facilityName": "Kayvan Kafayi DDS",
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",
         "region": "CA",
@@ -106,7 +106,7 @@
         "telephone": "4153982360"
     },
     "dependent1": {
-        "facilityName": "SecondaryApplicantService-1",
+        "facilityName": "Van Ness Dental Group",
         "street": "2243 Van Ness Ave Ste 201",
         "city": "San Francisco",
         "region": "CA",
@@ -114,7 +114,7 @@
         "telephone": "4154412098"
     },
     "dependent2": {
-        "facilityName": "SecondaryApplicantService-2",
+        "facilityName": "The Santos Dental Group Corp",
         "street": "450 Sutter St Rm 1114",
         "city": "San Francisco",
         "region": "CA",
@@ -122,7 +122,7 @@
         "telephone": "4153629893"
     },
     "dependent3": {
-        "facilityName": "SecondaryApplicantService-LA",
+        "facilityName": "Kayvan Kafayi DDS",
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",
         "region": "CA",

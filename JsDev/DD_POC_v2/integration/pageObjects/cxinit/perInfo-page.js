@@ -213,8 +213,8 @@ class PersonalInfoPage extends ControlBase {
                 browser.sleep(2000);
             } else {
                 console.log('else block');
-                self.RadBtnBrokerYes.select();
-                self.hiddenfieldBrokerNum.setText(broker.brokernumber);
+                // self.RadBtnBrokerYes.select();
+                // self.hiddenfieldBrokerNum.setText(broker.brokernumber);
                 self.next.click();
                 browser.sleep(2000);
             }
