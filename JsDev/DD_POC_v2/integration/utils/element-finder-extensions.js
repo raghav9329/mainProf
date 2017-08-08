@@ -50,6 +50,7 @@ ElementFinder.prototype.waitReady = function(timeoutMs, disabledClassName, withR
                 _refreshPage();
             }
         }
+
         return self.isPresent().then(function(present) {
             lastWebdriverError = 'present:' + present;
             if (present) {
@@ -182,7 +183,7 @@ ElementFinder.prototype.clickIt = function(handleError) {
 };
 
 ElementArrayFinder.prototype.selectDropdownValue = function(value) {
-
+    self.moveMouse();
     return this.filter(function(element, index) {
         return element.getText().then(function(text) {
             return (text.trim().toLowerCase() === value.trim().toLowerCase());
@@ -216,9 +217,25 @@ ElementArrayFinder.prototype.getElementFromListAndPerformAction = function(index
 };
 
 ElementFinder.prototype.moveMouse = function() {
+    self = this;
     logger.debug('ElementFinder.prototype.moveMouse called');
     // return getBrowser().actions().mouseMove(this).perform();
-    return true;
+    // return true;
+
+    //========================highlight the element==============================
+    /**
+     * Protractor test runs are too fast to see visibly what's happening in the UI
+     * hence, wrote this function to highlight the element that protractor interacts with UI during execution
+     * @param byObject
+     */
+
+    return browser.driver.executeScript("arguments[0].setAttribute('style', arguments[1]);", self.getWebElement(), "color: Red; border: 5px solid Yellow;").
+    then(function(resp) {
+        return true;
+    }, function(err) {
+        console.log("error is :" + err);
+    });
+    //============================================================================
 };
 
 
@@ -241,6 +258,7 @@ ElementFinder.prototype.clickSafe = function(waitTime) {
 
 ElementFinder.prototype.isPresentAndDisplayed = function() {
     var self = this;
+    self.moveMouse();
     return this.isPresent().then(function(present) {
         if (present) {
             return self.isDisplayed().then(function(visible) {

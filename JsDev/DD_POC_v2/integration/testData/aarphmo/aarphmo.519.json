@@ -1,0 +1,127 @@
+{
+
+    "NoOfPeopleCovered": "2",
+    "ZIPcode": "94105",
+    "DOB_HOME": "07/02/1988",
+    "ElectronicDocPaperLess": "https://www.deltadentalins.com/about/legal/electric-documents-terms-conditions.html",
+
+ "enrollData": {
+        "PlanName": "DeltaCare ® USA Plan 15B",
+        "PlanType": "DHMO",
+        "PlanCode": "PLN15B",
+        "CoverageStartDate": "12/1/2018",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "0.00",
+        "AnnualCost": "342.96",
+        "CoverageType": "Self",
+        "PlanID": "4546969",
+        "IssuerCode": "AARP",
+        "NoOfPeopleCovered": "1",
+          "dob":"05-05-1988"
+    },
+
+    "Personalinfo": {
+         "Phone_Cell": {
+                "Phone_Blank": {
+                    "PhoneType": "Cell",
+                    "PhoneNumber": "",
+                    "ErrorMsg": "Please enter your phone number",
+                    "ariainvalid": "error",
+                    "ExecutionFlag": true
+                },
+                "Phone_InValid": {
+                    "PhoneType": "Cell",
+                    "PhoneNumber": "88",
+                    "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
+                    "ariainvalid": "error",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                },
+                "Phone_Valid": {
+                    "PhoneType": "Cell",
+                    "PhoneNumber": "123-456-7890",
+                    "ErrorMsg": "",
+                    "ariainvalid": "success",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                }
+                },
+
+        "Phone_Home": {
+                "Phone_Blank": {
+                    "PhoneType": "Home",
+                    "PhoneNumber": "",
+                   "ErrorMsg": "Please enter your phone number",
+                    "ariainvalid": "error",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                },
+                "Phone_InValid": {
+                    "PhoneType": "Home",
+                    "PhoneNumber": "99",
+                    "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
+                    "ariainvalid": "error",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                },
+                "Phone_Valid": {
+                    "PhoneType": "Home",
+                    "PhoneNumber": "012-345-6789",
+                    "ErrorMsg": "",
+                    "ariainvalid": "success",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                }
+                
+ 
+            },
+            "Phone_Work": {
+                "Phone_Blank": {
+                    "PhoneType": "Work",
+                    "PhoneNumber": "",
+                    "ErrorMsg": "Please enter your phone number",
+                    "ariainvalid": "error",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                },
+                "Phone_InValid": {
+                    "PhoneType": "Work",
+                     "PhoneNumber": "22",
+                    "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
+                    "ariainvalid": "error",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                },
+                "Phone_Valid": {
+                    "PhoneType": "Work",
+                   "PhoneNumber": "789-456-1230",
+                    "ErrorMsg": "",
+                    "ariainvalid": "success",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                     
+                }
+            },
+
+         "Email_Address": {
+                "Email_InValid": {
+                    "Email": "test",
+                    "ErrorMsg": "Please enter a valid E-mail address (example@domain.com)",
+                    "ariainvalid": "error",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                },
+                "Email_Valid": {
+                    "Email": "test@123.com",
+                    "ErrorMsg": "",
+                    "ariainvalid": "success",
+                    "ServerMsg": "",
+                    "ExecutionFlag": true
+                                     
+                }
+            }
+    }
+
+}

@@ -19,9 +19,10 @@ class PersonalInfoPageLocators {
         this.errBirthDate = by.css('label.error.birthdate-error');
         this.fieldSsn = by.id('ssn');
         this.errMsgSsn = by.id('ssn-error');
+        this.errMsgMemberId = by.id('memberId-error');
         this.fieldHomeAddr = by.id('streetAddress');
         this.fieldAlternateId = by.id('alt_id');
-        this.errMsgHomeAddr = by.xpath('//div[@class="ajax-error-container"]/a');
+        this.errMsgHomeAddr = by.id('streetAddress-error');
         this.errinvalidAddr = by.xpath('//div[@class="ajax-error-container"]/a');
         this.fieldCity = by.id('city');
         this.errMsgCity = by.id('city-error');
@@ -29,7 +30,9 @@ class PersonalInfoPageLocators {
         this.errMsgState = by.id('state-error');
         this.fieldZipCode = by.id('zipCode');
         this.errMsgZipCode = by.id('zipCode-error');
-        this.chkBoxDiffMailAddr = by.id('diffmail');
+        this.chkBoxDiffMailAddr = by.css('label.diffmail input');
+        //xpath('//label[contains(text(), "My mailing address is the same as my home address.")]');
+        //label[@class="diffmail"]');
         this.fieldPhoneSelect = by.id('contactType');
         this.fieldPhoneNumber = by.id('contactNumber');
         this.errMsgPhoneNumber = by.id('contactNumber-error');
@@ -37,16 +40,17 @@ class PersonalInfoPageLocators {
         this.errMsgEmailAddr = by.id('email-error');
         this.chkBoxPaperless = by.id('paperless');
         this.paperLessTerms = by.partialLinkText('Terms and Conditions');
+        // this.RadBtnBrokerYes = by.css('id.brokerYes');
         this.RadBtnBrokerYes = by.id('brokerYes');
         this.RadBtnBrokerNo = by.id('brokerNo');
-        this.zipPopUp=by.css('div.popup.alert');
+        this.zipPopUp = by.css('div.popup.alert');
         this.zipPopNewQuote = by.id('zipNewQuote');
         this.zipPopBack = by.id('zipPopBack');
         this.persPageButtonNext = by.id('nextButton');
         this.allerrMsg = element.all(by.css('div.error-container.global-margin label'));
         this.hiddenfieldMailAddr = by.id('mailingAddress');
         this.errMsghiddenfieldMailAddr = by.id('mailingAddress-error');
-        this.servererrMailAddr= by.xpath('//div[@class="ajax-error-container"]/a');
+        this.servererrMailAddr = by.xpath('//div[@class="ajax-error-container"]/a');
         this.hiddenfieldCity = by.id('mailingCity');
         this.errMsghiddenfieldCity = by.id('mailingCity-error');
         this.hiddenfieldState = by.id('mailingState');
@@ -56,7 +60,8 @@ class PersonalInfoPageLocators {
         this.hiddenfieldBrokerNum = by.id('brokerNumber');
         this.errMsghiddenfieldBrokerNum = by.id('brokerNumber-error');
         this.whatIsThis = by.id('brokerTip');
-        this.brokerHelpText = by.className('more-info-box brokerTip');
+        this.brokerToolTip = by.id('brokerNumberQuestionMark'); 
+        this.brokerToolTipText = by.id('brokerNumber_popup');
         this.hiddenbrokerName = by.id('brokerName');
         this.homeAddressfromGoogleApi = by.xpath('//div[@class="pac-item"]');
         this.birthdateerror = by.className('error birthdate-error');
@@ -65,6 +70,7 @@ class PersonalInfoPageLocators {
         this.serverErrMsgLastName = by.css('a.error.lastName-error');
         this.serverErrMsgGenderSelect = by.css('a.error.gender-error');
         this.serverErrMsgSsn = by.css('a.error.ssn-error');
+        this.serverErrMsgMemberId = by.css('a.error.memberId-error');
         this.serverErrMsgStreetAddress = by.css('a.error.streetAddress-error');
         this.serverErrMsgCity = by.css('a.error.city-error');
         this.serverErrMsgState = by.css('a.error.state-error');
@@ -78,11 +84,18 @@ class PersonalInfoPageLocators {
         this.serverErrMsgMailingState = by.css('a.error.mailingState-error');
         this.serverErrMsgMailingZip = by.css('a.error.mailingZipCode-error');
         this.enrollStatus = function(breadcrumbheader) {
-            return by.xpath('//*[text()="' + breadcrumbheader + '"]/parent::li');
+            return by.xpath('//*[text()="' + breadcrumbheader + '"]/preceding-sibling::div');
         };
-        this.premiumAmount= by.css('aside.product-selection-summary div.header-plan span');
-        this.enrollmentFee= by.className('enrollment-fee');
-        this.apptFloorNumError= by.xpath('//div[@class="ajax-error-container"]/a');
+        this.premiumAmount = by.css('aside.product-selection-summary div.header-plan span');
+        this.enrollmentFee = by.className('enrollment-fee');
+        this.apptFloorNumError = by.xpath('//div[@class="ajax-error-container"]/a');
+        // AARP Locators
+        this.memberId = by.name('memberId');
+        this.referralSource = by.id('referralSource');
+        this.errorMsgRefferalSource = by.id('referralSource-error');
+        this.backToQuote = by.id('backToQuote');
+        
+
     }
 }
 

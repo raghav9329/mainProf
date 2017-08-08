@@ -35,7 +35,15 @@ class HomePage extends ControlBase {
         this.PlanID = new TextBox(this.pageObjects.PlanID);
         this.IssuerCode = new TextBox(this.pageObjects.IssuerCode);
         this.NoOFCovered = new TextBox(this.pageObjects.NoOFCovered);
+        this.Dob = new TextBox(this.pageObjects.Dob);        
         this.Submit = new Button(this.pageObjects.Submit);
+
+        this.Zipcode = new TextBox(this.pageObjects.Zipcode);
+        this.Dob = new TextBox(this.pageObjects.Dob);
+        this.Coverage_Type = new Select(this.pageObjects.Coverage_Type);
+        this.Effcdate = new Select(this.pageObjects.Effcdate);
+        this.Go = new Button(this.pageObjects.Go);
+        this.PpoEnrollBtn = new Button(this.pageObjects.PpoEnrollBtn);
 
     }
 

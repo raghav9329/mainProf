@@ -1,109 +1,152 @@
 exports.config = {
     framework: 'jasmine',
-  //   seleniumAddress: 'http://localhost:4444/wd/hub',
-
-   // I know you are testing with SUITES, but I am testing individually.
-   // Please just comment out a line if you don't want it evaluated.
+     seleniumAddress: 'http://localhost:4444/wd/hub',
     
-    //specs: ['integration/scenarios/cxinit/*.*Dep*.test.js'],
-    //specs: ['integration/scenarios/cxinit/cxinit.504.test.js'],
+    //specs: ['integration/scenarios/dhmo/dhmo.504.test.js'],
+    //specs: ['integration/scenarios/dhmo/dhmo.504.test.js'],
     specs: ['integration/scenarios/051217_E2E_POM_Workflow.js'],
-    //specs: ['integration/scenarios/providers/cxinit.2.4.test.js'],
 
     suites: {
+        allCxinit: 	'integration/scenarios/dhmo/*.test.js',
+    	
+        dhpers1:[   
+        	'integration/scenarios/dhmo/dhmo.507PersInfo.test.js',
+    		'integration/scenarios/dhmo/dhmo.519PersInfo.test.js',
+    		'integration/scenarios/dhmo/dhmo.489PersInfo.test.js',
+    		'integration/scenarios/dhmo/dhmo.504PersInfo.test.js',
+    		'integration/scenarios/dhmo/dhmo.483PersInfo.test.js',
+    		'integration/scenarios/dhmo/dhmo.471PersInfo.test.js'
+    	],
+    			  	
+    	dhpers2:[	
+    		'integration/scenarios/dhmo/dhmo.720PersInfo.test.js',    			//	'integration/scenarios/dhmo/dhmo.519.test.js',
+    		'integration/scenarios/dhmo/dhmo.804PersInfo.test.js',
+    		'integration/scenarios/dhmo/dhmo.1361PersInfo.test.js',
+    		'integration/scenarios/dhmo/dhmo.1548PersInfo.test.js',
+    		'integration/scenarios/dhmo/dhmo.1549PersInfo.test.js'
+    	], 
 
-        //suite1: 'integration/scenarios/temp/SampleTest.js',
-    	persInfo:
-    			[   'integration/scenarios/cxinit/cxinit.507.test.js',
-    				'integration/scenarios/cxinit/cxinit.489.test.js',
-    				'integration/scenarios/cxinit/cxinit.504.test.js',
-    				'integration/scenarios/cxinit/cxinit.483.test.js',
-    				'integration/scenarios/cxinit/cxinit.471.test.js',
-    				'integration/scenarios/cxinit/cxinit.720.test.js',
-    				'integration/scenarios/cxinit/cxinit.519.test.js',
-    				'integration/scenarios/cxinit/cxinit.804.test.js',
-    				'integration/scenarios/cxinit/cxinit.1361.test.js'
-    			], // end of story based persInfo Components
-    	deps:
-    			[   'integration/scenarios/cxinit/cxinit.1355DepCTA.test.js  ',
-    				'integration/scenarios/cxinit/cxinit.1356DepPremChgPop  .test.js  ',
-    				'integration/scenarios/cxinit/cxinit.1357DepChildAge.test.js  ',
-    				'integration/scenarios/cxinit/cxinit.1358DepSpouse-DP.test.js  ',
-    				'integration/scenarios/cxinit/cxinit.1359Dep-15Deps.test.js  ',
-    			],
-    	facs: 	[	'integration/scenario/cxinit/cxinit.1365FacSearch.test.js',
-    				'integration/scenario/cxinit/cxinit.1366FacSelect.test.js',
-    				'integration/scenario/cxinit/cxinit.1367FacCTA.test.js',
-    				'integration/scenario/cxinit/cxinit.1368FacFeedback.test.js'
-    			],
-   //   I"m working on fillingout payment right now......
-   // 	payment: [   ],
-    	cxinit2_4: 'integration/scenarios/providers/cxinit2.4.test.js',
-        cx507: 'integration/scenarios/cxinit/cxinit.507.test.js',
-        cx489: 'integration/scenarios/cxinit/cxinit.489.test.js',
-        cx504: 'integration/scenarios/cxinit/cxinit.504.test.js',
-        cx483: 'integration/scenarios/cxinit/cxinit.483.test.js',
-        cx471: 'integration/scenarios/cxinit/cxinit.471.test.js',
-        cx720: 'integration/scenarios/cxinit/cxinit.720.test.js',
-        cx519: 'integration/scenarios/cxinit/cxinit.519.test.js',
-        cx804: 'integration/scenarios/cxinit/cxinit.804.test.js',
-        cx1355:'integration/scenarios/cxinit/cxinit.1355DepCTA.test.js',
-        cx1356:'integration/scenarios/cxinit/cxinit.1356DepPremChgPop.test.js',
-        cx1357:'integration/scenarios/cxinit/cxinit.1357DepChildAge.test.js',
-        cx1358:'integration/scenarios/cxinit/cxinit.1358DepSpouse-DP.test.js',
-        cxE2E: 'integration/scenarios/051217_E2E_POM_Workflow.js',
-        cxE2E50:'integration/scenarios/CAA50*.test.js',
-        cxE2E54:'integration/scenarios/CAA54*.test.js',
-        cxE2E55p:'integration/scenarios/CAA55Plan*.test.js',
-        cxE2E55s:'integration/scenarios/CAA55Simple*.test.js',
-        	
+    	dhdeps:[   
+    		'integration/scenarios/dhmo/dhmo.1355DepCTA.test.js',
+    		'integration/scenarios/dhmo/dhmo.1356DepPremChgPop.test.js',
+    		'integration/scenarios/dhmo/dhmo.1357DepChildAge.test.js',
+    		'integration/scenarios/dhmo/dhmo.1358DepSpouse-DP.test.js',
+    		'integration/scenarios/dhmo/dhmo.1359Dep-15Deps.test.js',
+    	],
+
+    	dhfacs:[	
+    		'integration/scenarios/dhmo/dhmo.1365FacSearch.test.js',
+    		'integration/scenarios/dhmo/dhmo.1366FacSelect.test.js',
+    		'integration/scenarios/dhmo/dhmo.1367FacCTA.test.js',
+    		'integration/scenarios/dhmo/dhmo.1368FacFeedback.test.js'
+    	],
+
+    	dhpayment:[ 	
+    		'integration/scenarios/dhmo/dhmo.1403PayCCExp.test.js',
+    		'integration/scenarios/dhmo/dhmo.1404PayAddrSug.test.js',
+    		'integration/scenarios/dhmo/dhmo.1405PayConAuthChk.test.js',
+    		'integration/scenarios/dhmo/dhmo.1406PayCTA.test.js',
+    		'integration/scenarios/dhmo/dhmo.1407PayCvv.test.js'
+    	],
+
+    	dhe2e:[	
+    		'integration/scenarios/051217_E2E_POM_Workflow.js',
+    		'integration/scenarios/addDep_Enroll.DeleteDep_depPage.js',
+    		'integration/scenarios/dhmo/dhmo.1408.EndToEndWkFlo1.test.js',
+    		'integration/scenarios/dhmo/dhmo.1461.EndToEndWkFlo2.test.js',
+    		'integration/scenarios/dhmo/dhmo.1746DirHMO_WrkFlo1.test.js',
+    		'integration/scenarios/dhmo/dhmo.1753DirHMO_WrkFlo4.test.js',
+    		'integration/scenarios/dhmo/dhmo.1754DirHMO_WrkFlow5.test.js',
+    		'integration/scenarios/dhmo/dhmo.1755DirHMO_WrkFlow6.test.js'
+    	],
+    	
+    	dppers1:['integration/scenarios',
+    			'integration/scenarios',
+    			'integration/scenarios',
+    	],
+    	dppers2:[],
+    	dpdeps:[], 
+    	dppay:[],
+    	dpe2e:[],
+    	
+    	ahpers1:[],
+    	ahpers2:[],
+    	ahdeps:[], 
+    	ahfacs:[],
+    	ahpay:[],
+    	ahe2e:[],	
+    	
+    	
+    	appers1:[],
+    	appers2:[],
+    	apdeps:[], 
+    	appay:[],
+    	ape2e:['integration/scenarios/aarpppo/aarpppo.1973WrkFlo1.test',],	
+    	
+    	
+    	cxinit2_4: 	'integration/scenarios/providers/cxinit2.4.test.js',
+        cxE2E: 		'integration/scenarios/051217_E2E_POM_Workflow.js',
+        cxE2E50:	'integration/scenarios/CAA50*.test.js',
+        cxE2E54:	'integration/scenarios/CAA54*.test.js',
+        cxE2E55p:	'integration/scenarios/CAA55Plan*.test.js',
+        cxE2E55s:	'integration/scenarios/CAA55Simple*.test.js',
     },
-
-//     seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
-//     chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
-//     geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.16.0',
-
-
-//    seleniumServerJar: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
-//    chromeDriver: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
-//    geckodriver: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.16.1',
-
-//  ///////////////////
-// Interesting , here's what runing webdriver-manager update did.
-// It actually made me go backwards in versions.  I have tested it our ( minimally ) 
-// that my old chrome configuration runs on these drivers below in the same manner
-//  Still struggling with Firefox execution.
-
-
-    seleniumServerJar: 'C:\\DD_Repos\\dd-cx-test\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
-    chromeDriver:      'C:\\DD_Repos\\dd-cx-test\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.25',
-    geckodriver:       'C:\\ DD_Repos\\dd-cx-test\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.9.0',
 
     
-    capabilities: {
-        browserName: 'chrome',
-//        browserName: 'firefox',
-        chromeOptions: {
-            'args': ['disable-infobars']
-        }
-    	// 5/8/17 the above config get's rid of that browser alert about the 
-    	// browser window being controlled externally....etc.
-    },
+// C:\DD_Repos\dd-cx-test\node_modules\protractor\node_modules\webdriver-manager\selenium    
+//  I am beginnign to see the value of the local installation and having a uniform configuraiton 
+//  Across all the users installations.  The proper locaiton of Local drivers
+//    seleniumServerJar: 'C:\\DD_Repos\\dd-cx-test\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
+//    chromeDriver:      'C:\\DD_Repos\\dd-cx-test\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30.exe',
+//    geckodriver:       'C:\\DD_Repos\\dd-cx-test\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.17.0.exe',
+    
+    seleniumServerJar:  __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
+    chromeDriver:       __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30.exe',
+    geckodriver:        __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.18.0.exe',
+    
 
-    localSeleniumStandaloneOpts: {
-        jvmArgs: ["-Dwebdriver.gecko.driver=c:\\DD_Repos\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.9.0.exe"]
+    
+//   	// Chrome capabilities
+     capabilities: {
+      browserName: 'chrome',
+       chromeOptions: {
+           'args': ['disable-infobars']
+                       }
+    	},
+	
+	
+  	// Firefox capabilities
+//  	 capabilities: {      
+//        browserName: 'firefox',
+//  	   acceptInsecureCerts:true
+//        },
+	  
+    
+    
+//  	// InterNet Explorer
+// 	 capabilities: {      
+// 	    'browserName': 'internet explorer',
+// 	    'platform': 'ANY',
+// 	   'version': '11',
+// 	  'nativeEvents': false,
+// 	  'unexpectedAlertBehaviour': 'accept',
+// 	  'ignoreProtectedModeSettings': true,
+// 	  'enablePersistentHover': true,
+// 	  'disable-popup-blocking': true,
+// 	  'ignoreZoomSetting': true
+//       },
+
+    localSeleniumStandaloneOpts: {   //  is this at all useful ?????
+        jvmArgs: ["-Dwebdriver.gecko.driver=C:\\DD_Repos\\dd-cx-test\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.17.0.exe"]
       },
     
     params: {
         //baseUrl: ''
-        //baseUrl:'http://aw-lx0076.deltadev.ent/directory-search.html',
-        //baseUrl:'http://aw-lx0076.deltadev.ent:3000/enroll/',
-        baseUrl:'https://aw-lx0176.deltadev.ent:3000/enroll/',
-    	exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections
-        // baseUrl:'https://mot.deltadentalins.com/enroll',
+          baseUrl:'https://aw-lx0176.deltadev.ent:3000/enroll/',
+        //baseUrl:'https://mot.deltadentalins.com/enroll',
         //baseUrl:'https://mot.deltadentalins.com',
-        //exeLogging:'INFO'
-        exeLogging:'OFF'
+    	  exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections
+    	  exeLogging:'OFF'  // other: INFO, TRACE, DEBUG
     },
 
     onPrepare: function() {
@@ -112,7 +155,8 @@ exports.config = {
         longWait = 40000;
         PAGELOADTIME = 60000;
         //browser.manage().window().maximize();
-     //   browser.manage().window().setSize(1050,1250);
+        browser.manage().window().setSize(1050,1250);
+        browser.executeScript("document.body.style.zoom='50%';");
         browser.ignoreSynchronization = true;
         folderName = (new Date()).toString().split('').splice(1, 4).join('');
         require("./integration/utils/element-finder-extensions.js");
@@ -192,4 +236,24 @@ exports.config = {
 
 //}));
 
+
+// Other config details
+//
+//baseUrl:'http://aw-lx0076.deltadev.ent/directory-search.html',
+//baseUrl:'http://aw-lx0076.deltadev.ent:3000/enroll/',
+
+
+//  Wrong path.  Needed to a protractor path.  see above
+//seleniumServerJar: 'C:\\DD_Repos\\dd-cx-test\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-2.53.1.jar',
+//chromeDriver:      'C:\\DD_Repos\\dd-cx-test\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.25',
+//geckodriver:       'C:\\ DD_Repos\\dd-cx-test\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.9.0',
+
+//seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
+//chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30',
+//geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.17.0',
+
+//Global path addresses
+//seleniumServerJar: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
+//chromeDriver: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
+//geckodriver: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.16.1',
 

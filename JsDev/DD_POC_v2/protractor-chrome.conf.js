@@ -13,17 +13,18 @@ exports.config = {
   
  //directConnect: true,
  //
- // seleniumAddress: 'http://localhost:4444/wd/hub',
+ seleniumAddress: 'http://localhost:4444/wd/hub',
  // specs: ['./*.test.js'],
   
-// specs: ['integration/scenarios/CAA50Senior_Single.test.js'],
+//specs: ['integration/scenarios/CAA50Senior_Single.test.js'],
 //specs: ['integration/scenarios/CAA55PlanSelect.test.js'],
- specs: ['integration/scenarios/051217_E2E_POM_Workflow.js'],
+// specs: ['integration/scenarios/051217_E2E_POM_Workflow.js'],
 // specs: ['integration/scenarios/CAA55PlanSelect.dev.js'],
 // specs: ['integration/scenarios/CAA55SimplePlan_WasSenior.dev.js'],
 //  specs: ['integration/scenarios/**/*.test.js'],
 // specs: ['integration/scenarios/cxinit/cxinit.507.test.js'],
 
+  specs: ['integration/scenarios/providers/*.test.js'],
   
   suites: {
 	  suite1: 'integration/scenarios/CAA*.test.js',
@@ -31,25 +32,39 @@ exports.config = {
   },
   
 //  Follow is for running locally on drive C:
-  seleniumServerJar: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
-  chromeDriver: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
-  geckodriver: 'C:\\Users\\CA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.16.1',
+  seleniumServerJar:  __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
+  chromeDriver:       __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30.exe',
+  geckodriver:        __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.18.0.exe',
 
 //  Follow is for running from DeltaDev Account on Drive P:
 //  seleniumServerJar: 'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.3.1.jar',
 //  chromeDriver:      'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.29',
 //  geckodriver:       'C:\\Users\\DCA60212\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.15.0',
   
-	onPrepare: function(){
-   
-	  browser.driver.manage().window().setSize(1050,950);
-   
-  /********************************************************************************************   
-   *  Waiting for Angular Synchronization. The following is key when testing non Angular Apps
-   *  Turning browser synchronization off. For further detail see the following
-   *  https://github.com/angular/protractor/blob/master/docs/timeouts.md
-   */ 
-	  browser.ignoreSynchronization = true;
+  onPrepare: function() {
+      minWait = 1000;
+      maxWait = 2000;
+      longWait = 40000;
+      PAGELOADTIME = 60000;
+      //browser.manage().window().maximize();
+      browser.manage().window().setSize(1050,1250);
+      browser.ignoreSynchronization = true;
+      folderName = (new Date()).toString().split('').splice(1, 4).join('');
+      require("./integration/utils/element-finder-extensions.js");
+    
+      Utility = new(require("./integration/utils/common.js"));
+      dataProvider = require('jasmine-data-provider');
+      log4js = require('log4js');
+      log4js.configure({ appenders: 
+      	[ { type: 'console' }, 
+      	  { type: 'file', 
+      		filename: 'results/logs/executionLog.log', 
+      		category: 'Delta' } 
+      	] });
+      	  
+      logger = log4js.getLogger('Delta');
+      logger.setLevel(browser.params.exeLogging);
+      // var monthMap = {  // Configs went here  moved below 
 
   },
   
@@ -65,10 +80,13 @@ exports.config = {
   // browserName: 'firefox'
   },
   params: {
-  	//baseUrl: 'http://DIT3.deltadentalins.com'
-  	baseUrl:'https://mot.deltadentalins.com'
+      //baseUrl: 'http://aw-lx0176/directory-search.html'
+        baseUrl:'http://aw-lx0176/directory-search.html',
+      //baseUrl:'https://mot.deltadentalins.com/enroll',
+      //baseUrl:'https://mot.deltadentalins.com',
+  	  exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections
+  	  exeLogging:'OFF'  // other: INFO, TRACE, DEBUG
   },
-  
  maxSessions: 1, 
  
 resultJsonOutputFile: 'results.json'

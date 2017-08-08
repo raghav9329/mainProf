@@ -21,6 +21,8 @@ class ProviderDetailsLocators {
         // Hours
         this.providerHours = by.className('provider__hours');
 
+        this.letUsKnow = by.linkText('Let us know.');
+
         this.officeHoursByDay = function(day) {
             return by.xpath('//dd[contains(text(),"' + day + '")]');
         };
@@ -28,13 +30,16 @@ class ProviderDetailsLocators {
         this.providerAccess = by.className('provider__access');
 
         this.providerAccessByfacility = function(facility) {
-            return by.xpath('//dd[contains(text(),"' + facility + '")]')
+            return by.xpath('//div[contains(text(),"' + facility + '")]/following-sibling::div')
         };
-        this.providerLanguage = by.css('div.provider__languages dd');
+        this.providerLanguage = by.css('div.provider__languages dl');
         this.providerData = by.className('provider__data');
         this.providerDataByField = function(fieldName) {
             return by.xpath('//div[contains(text(),"' + fieldName + '")]/following-sibling::div')
         }; 
+          this.view = function(providerName) {
+            return by.xpath('//a[text()="' + providerName + '"]/ancestor::section/parent::article//a[normalize-space(text()) = "View"]');
+        };
     }
 }
 

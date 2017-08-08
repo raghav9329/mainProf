@@ -2,16 +2,28 @@
     "Header_SearchResultsPage": "Find a Dentist",
     "Header_InvalidAddress":"Invalid Address",
     "ZipCode": "94103",   
-    "HAddress_ZIP": {
-        "PartialAddress": "949",
-        "FullAddress": "949Broadway, New York, NY, United States",
-        "ErrorMsg": "Please enter a street address",
+    
+
+ "Language": {
+         "Language1": {
+          "Lang": "English",
         "ExecutionFlag": true
     },
-    "Address_Valid": {
-        "HomeAddress": "35995 Fremont Blvd Apt 98",
-        "City": "Fremont",
-        "State": "CA",
-        "ZIPCode": "94536"
+     "Language2": {
+          "Lang": "Spanish",
+        "ExecutionFlag": true
+    },
+
+     "Language3": {
+          "Lang": "Chinese",
+        "ExecutionFlag": true
+    },
+     "Language4": {
+          "Lang": "Telugu",
+        "ExecutionFlag": true
     }
+
+   
+ }
+
 }

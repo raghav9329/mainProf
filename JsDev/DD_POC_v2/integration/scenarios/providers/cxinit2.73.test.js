@@ -43,9 +43,7 @@ describe('Provider Search Validation', function() {
         expect(dirSearch.deltaCareUSA.isPresentAndDisplayed()).toBeTruthy();
         dirSearch.deltaCareUSA.check();
         dirSearch.findDentist.click();
-        expect(dirSearch.providersListing.getCount()).toEqual(10);
-
-        
+        expect(dirSearch.providersListing.getCount()).toEqual(10);        
 
     });
 });

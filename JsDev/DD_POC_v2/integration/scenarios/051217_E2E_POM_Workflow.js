@@ -2,25 +2,27 @@
 
 //This Spec is used to Verify and Validate Ene to End Work Flow with the Errors and the Happy path
 
-var perInfo =		new(require('../pageObjects/cxinit/perInfo-page.js'));
-var depInfo =		new(require('../pageObjects/cxinit/dependent-page.js'));
-var facilities =	new(require('../pageObjects/cxinit/facilities-page.js'));
-var payment =		new(require('../pageObjects/cxinit/payment-page.js'));
-var receipt =		new(require('../pageObjects/cxinit/receipt-page.js'));
-//var enrollPage =	new(require('../../businessComponents/homePage.js'));
-var enrollPage =	new(require('../businessComponents/homePage.js'));
-var TestData =			require('../testData/051217_E2E_POM_Workflow.json');
+var perInfo = new(require('../pageObjects/cxinit/perInfo-page.js'));
+var depInfo = new(require('../pageObjects/cxinit/dependent-page.js'));
+var facilities = new(require('../pageObjects/cxinit/facilities-page.js'));
+var payment = new(require('../pageObjects/cxinit/payment-page.js'));
+var receipt = new(require('../pageObjects/cxinit/receipt-page.js'));
+var enrollPage = new(require('../pageObjects/cxinit/enroll-page.js'));
+var TestData = require('../testData/051217_E2E_POM_Workflow.json');
 
-describe('CXINIT-1235: E2E_WorkFlow: ', function() {
+describe('CXINIT-1235: E2E_WorkFlow:(051217_E2E_POM_Workflow) ', function() {
+    var effectiveDate;
     beforeAll(function() {
-        Utility.openApplication('');
-
+        Utility.openApplication('', 'DELTA');
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
-    it('E2E_Flow_1: Should complete the Enroll Page', function() {
-        enrollPage.enterHomePageDetails(TestData.enrollData);
+    it('E2E_1 : Should complete the Enroll Page', function() {
+        enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
+            effectiveDate = sdate;
+            console.log("sdate============" + sdate);
+        })
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
     });
 
@@ -74,8 +76,10 @@ describe('CXINIT-1235: E2E_WorkFlow: ', function() {
         depInfo.fillDependent('Dependent5', TestData.child5, false);
         depInfo.fillDependent('Dependent6', TestData.child6, false);
         depInfo.next.click();
-        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
-        depInfo.continue.click();
+        // expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+        // depInfo.continue.click();
+        Utility.delay(maxWait);
+        // browser.sleep(2000);
         expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
     });
 
@@ -112,8 +116,10 @@ describe('CXINIT-1235: E2E_WorkFlow: ', function() {
     //Validate and Verify the both the client and Server side error validations in the Payment Page
 
     it('E2E_Flow_6: Validate and Verify the Errors of both the Client and Server in the Payment Page', function() {
+        payment.billingAddress.click();
         payment.billingChkBox.unCheck();
         payment.purchaseNow.click();
+        browser.sleep(2000)
         expect(payment.getCCValidationMessages()).toEqual(TestData.paymentErrors)
         expect(payment.getBillingAddressValidationMessages()).toEqual(TestData.paymentAddressErrors);
         expect(payment.getCCServerValidationMessages()).toEqual(TestData.paymentErrors);
@@ -133,10 +139,36 @@ describe('CXINIT-1235: E2E_WorkFlow: ', function() {
 
     //Verify and Validate the Application Number and Plan Name in the Receipt Page
 
-    it('E2E_Flow_8: Validating the receipt page', function() {
-        expect(receipt.applicationNumber.getText()).toEqual('6024571');
-        expect(receipt.planName.getText()).toEqual(TestData.planName);
-        expect(receipt.getPlanSummaryByKey('Cleanings').getText()).toEqual('$25');
+    it('E2E_Flow_8 :Should display plansummary', function() {
+        var plansummary = TestData.planSummary;
+        receipt.planSummary.click();
+        expect(receipt.getPlanSummaryByKey('Deductible per calendar year per person').getText()).toEqual(plansummary.Deductible_per_calendar);
+        expect(receipt.getPlanSummaryByKey('Maximum per calendar year per person').getText()).toEqual(plansummary.Max_per_calendar);
+        expect(receipt.getPlanSummaryByKey('Office visit').getText()).toEqual(plansummary.Officevisit);
+        expect(receipt.getPlanSummaryByKey('Exams').getText()).toEqual(plansummary.Exams);
+        expect(receipt.getPlanSummaryByKey('X-rays').getText()).toEqual(plansummary.Xrays);
+        expect(receipt.getPlanSummaryByKey('Cleanings').getText()).toEqual(plansummary.Cleanings);
+        expect(receipt.getPlanSummaryByKey('Fillings').getText()).toEqual(plansummary.Fillings);
+        expect(receipt.getPlanSummaryByKey('Root canals').getText()).toEqual(plansummary.Rootcanals);
+        expect(receipt.getPlanSummaryByKey('Gum treatment').getText()).toEqual(plansummary.Gumtreatment);
+        expect(receipt.getPlanSummaryByKey('Extractions').getText()).toEqual(plansummary.Extractions);
+        expect(receipt.getPlanSummaryByKey('Denture repair').getText()).toEqual(plansummary.Denturerepair);
+        expect(receipt.getPlanSummaryByKey('Crowns').getText()).toEqual(plansummary.Crowns);
+        expect(receipt.getPlanSummaryByKey('Orthodontics').getText()).toEqual(plansummary.Orthodontics);
+
+    });
+    it('E2E_Flow_9 :Should display primary applicant', function() {
+        var facility = TestData.primaryFacility;
+        receipt.applicants.click();
+        receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
+            expect(facilitydata.name).toContain(TestData.firstname);
+            expect(facilitydata.facilityName).toEqual(TestData.facilityoption1);
+            expect(facilitydata.street).toEqual(facility.street);
+            expect(facilitydata.city).toEqual(facility.city);
+            expect(facilitydata.region).toEqual(facility.region);
+            expect(facilitydata.postalCode).toEqual(facility.postalCode);
+            expect(facilitydata.telephone).toEqual(facility.telephone);
+        });
     });
 
 });

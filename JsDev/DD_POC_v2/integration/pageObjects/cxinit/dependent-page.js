@@ -159,8 +159,7 @@ class DependentPage extends ControlBase {
         var promises = [];
         promises.push(this.errorRelationship(dependentName).getText());
         promises.push(this.errorFirstName(dependentName).getText());
-        promises.push(this.errorLastName(dependentName).getText());
-        promises.push(this.errorGender(dependentName).getText());
+        promises.push(this.errorLastName(dependentName).getText());      
         promises.push(this.errorMonth(dependentName).getText());
         promises.push(this.errorDay(dependentName).getText());
         promises.push(this.errorYear(dependentName).getText());
@@ -170,8 +169,7 @@ class DependentPage extends ControlBase {
         var promises = [];
         promises.push(this.serErrorRelationship.getText());
         promises.push(this.serErrorFirstName.getText());
-        promises.push(this.serErrorLastName.getText());
-        promises.push(this.serErrorGender.getText());
+        promises.push(this.serErrorLastName.getText());       
         promises.push(this.serErrorMonth.getText());
         promises.push(this.serErrorDay.getText());
         promises.push(this.serErrorYear.getText());

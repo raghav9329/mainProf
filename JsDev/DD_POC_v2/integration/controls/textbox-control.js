@@ -31,10 +31,13 @@
          });
      }
 
-     /**
-      * Gets the provided value from the control
-      * @returns {webdriver.promise.Promise<string>|webdriver.promise.Promise<string[]>|!webdriver.promise.Promise.<string>}
-      */
+     click() {
+             return element(this.locator).clickIt();
+         }
+         /**
+          * Gets the provided value from the control
+          * @returns {webdriver.promise.Promise<string>|webdriver.promise.Promise<string[]>|!webdriver.promise.Promise.<string>}
+          */
      getText() {
          var self = this;
          return element(this.locator).waitReady().then(function(result) {

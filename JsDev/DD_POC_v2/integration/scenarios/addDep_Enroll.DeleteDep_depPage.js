@@ -1,28 +1,25 @@
-
-var TestData = require("../testData/051217_E2E_POM_Workflow.json");
+var TestData = require("../testData/addDep_Enroll.DeleteDep_depPage.json");
 var perInfo = new(require('../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../pageObjects/cxinit/receipt-page.js'));
+var enrollPage = new(require('../pageObjects/cxinit/enroll-page.js'));
 
-describe('E2E_WorkFlow: ', function() {
+describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
     beforeAll(function() {
-        Utility.openApplication('');
-
+        Utility.openApplication('', 'DELTA');
     });
+
     it('E2E_Flow_1: Enter the Zip code and Click on the Enter for the Enroll Page', function() {
-        browser.driver.findElement(by.name('planZip')).clear().then(function() {
-            browser.driver.findElement(by.name('planZip')).sendKeys(TestData.ZipCode);
-            browser.driver.findElement(by.name('noOfCovered')).clear();
-            browser.driver.findElement(by.name('noOfCovered')).sendKeys('4');
-            //Below code should be uncommented for the Mot Environment
-            /*browser.sleep(2000);
-            browser.driver.findElement(by.name('coverageStartDate')).clear();
-            browser.driver.findElement(by.name('coverageStartDate')).sendKeys(TestData.coverageStartDate);*/
-            browser.actions().sendKeys(protractor.Key.ENTER).perform();
-            return true;
-        });
+        enrollPage.enterHomePageDetails(TestData.enrollData);
+        // browser.driver.findElement(by.name('planZip')).clear().then(function() {
+        //     browser.driver.findElement(by.name('planZip')).sendKeys(TestData.ZipCode);
+        //     browser.driver.findElement(by.name('noOfCovered')).clear();
+        //     browser.driver.findElement(by.name('noOfCovered')).sendKeys('4');
+        //     browser.actions().sendKeys(protractor.Key.ENTER).perform();
+        //     return true;
+        // });
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
     });
 
@@ -35,26 +32,24 @@ describe('E2E_WorkFlow: ', function() {
     });
 
     it('E2E_Flow_3: Verifying the Errors of both client and server side by passing NULL values', function() {
-        depInfo.fieldAddDependents.click();
+        depInfo.deleteDependent('Dependent1').click();
+        depInfo.deleteDependent('Dependent1').click();
+        depInfo.deleteDependent('Dependent1').click();
+        depInfo.month('Dependent1').setText('');
+        depInfo.date('Dependent1').setText('');
+        depInfo.year('Dependent1').setText('');
         depInfo.next.click();
         expect(depInfo.getValidationMessages('Dependent1')).toEqual(TestData.dependentErrors);
         expect(depInfo.getServerValidationMessages()).toEqual(TestData.dependentErrors);
-        //browser.sleep(2000);
-        Utility.scrollToTop();
-        browser.sleep(2000);
-        depInfo.deleteDependent('Dependent1').click();
-        depInfo.deleteDependent('Dependent2').click();
-
     });
 
     it('E2E_Flow_4: Verify 2 dependents were added and furnished with valid Test Data for Each of them', function() {
-        depInfo.fillDependent('Dependent1', TestData.tData, true);
-        // browser.sleep(2000);
-        depInfo.fillDependent('Dependent2', TestData.tData2, false);
-       /* depInfo.fillDependent('Dependent3', TestData.tData3, true);*/
-        // browser.sleep(2000);
+        depInfo.fillDependent('Dependent1', TestData.domesticpartner1, true);
+        depInfo.fillDependent('Dependent2', TestData.child3, false);
         depInfo.next.click();
-        browser.sleep(2000);
+        depInfo.next.click();
+        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+        depInfo.continue.click();
         expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
     });
 
@@ -76,12 +71,13 @@ describe('E2E_WorkFlow: ', function() {
     });
 
     it('E2E_Flow_6: Validate and Verify the Errors of both the Client and Server in the Payment Page', function() {
+        payment.billingAddress.click();
         payment.billingChkBox.unCheck();
         payment.purchaseNow.click();
         expect(payment.getCCValidationMessages()).toEqual(TestData.paymentErrors)
         expect(payment.getBillingAddressValidationMessages()).toEqual(TestData.paymentAddressErrors);
         expect(payment.getCCServerValidationMessages()).toEqual(TestData.paymentErrors);
-        expect(payment.getBillingAddressServerValidationMessages()).toEqual(TestData.paymentAddressErrors);      
+        expect(payment.getBillingAddressServerValidationMessages()).toEqual(TestData.paymentAddressErrors);
     });
 
     it('E2E_Flow_7: Validate and Verify Payment Page Details with valid Test Data', function() {
@@ -89,15 +85,38 @@ describe('E2E_WorkFlow: ', function() {
         payment.fillpayment(TestData);
         payment.purchaseNow.click();
         expect(browser.getTitle()).toEqual(TestData.receiptTitle);
-
     });
 
-    it('E2E_Flow_8: Validating the receipt page', function() {
+    it('E2E_Flow_8 :Should display plansummary', function() {
+        var plansummary = TestData.planSummary;
+        receipt.planSummary.click();
+        expect(receipt.getPlanSummaryByKey('Deductible per calendar year per person').getText()).toEqual(plansummary.Deductible_per_calendar);
+        expect(receipt.getPlanSummaryByKey('Maximum per calendar year per person').getText()).toEqual(plansummary.Max_per_calendar);
+        expect(receipt.getPlanSummaryByKey('Office visit').getText()).toEqual(plansummary.Officevisit);
+        expect(receipt.getPlanSummaryByKey('Exams').getText()).toEqual(plansummary.Exams);
+        expect(receipt.getPlanSummaryByKey('X-rays').getText()).toEqual(plansummary.Xrays);
+        expect(receipt.getPlanSummaryByKey('Cleanings').getText()).toEqual(plansummary.Cleanings);
+        expect(receipt.getPlanSummaryByKey('Fillings').getText()).toEqual(plansummary.Fillings);
+        expect(receipt.getPlanSummaryByKey('Root canals').getText()).toEqual(plansummary.Rootcanals);
+        expect(receipt.getPlanSummaryByKey('Gum treatment').getText()).toEqual(plansummary.Gumtreatment);
+        expect(receipt.getPlanSummaryByKey('Extractions').getText()).toEqual(plansummary.Extractions);
+        expect(receipt.getPlanSummaryByKey('Denture repair').getText()).toEqual(plansummary.Denturerepair);
+        expect(receipt.getPlanSummaryByKey('Crowns').getText()).toEqual(plansummary.Crowns);
+        expect(receipt.getPlanSummaryByKey('Orthodontics').getText()).toEqual(plansummary.Orthodontics);
+    });
 
-        // Reciept Page looks not completly developed and we are getting same Application Number every time. 
-        expect(receipt.applicationNumber.getText()).toEqual('6024571');
-        expect(receipt.planName.getText()).toEqual(TestData.planName);
-        expect(receipt.getPlanSummaryByKey('Cleanings').getText()).toEqual('$25');
+    it('E2E_Flow_9 :Should display primary applicant', function() {
+        var facility = TestData.primaryFacility;
+        receipt.applicants.click();
+        receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
+            expect(facilitydata.name).toContain(TestData.firstname);
+            expect(facilitydata.facilityName).toEqual(TestData.facilityoption1);
+            expect(facilitydata.street).toEqual(facility.street);
+            expect(facilitydata.city).toEqual(facility.city);
+            expect(facilitydata.region).toEqual(facility.region);
+            expect(facilitydata.postalCode).toEqual(facility.postalCode);
+            expect(facilitydata.telephone).toEqual(facility.telephone);
+        });
     });
 
 });

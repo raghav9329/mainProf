@@ -42,7 +42,7 @@ rem %UPDATER% %PROTRACTOR_CONF% geckodriver-v0.12.0 geckodriver-v0.14.0
 rem echo .
 
 :StartRun
-REMecho Starting test run
+REM echo Starting test run
 REM call protractor --resultJsonOutputFile=results.json %PROTRACTOR_CONF%
 REM call protractor %PROTRACTOR_CONF%
 REM echo Exit Code from Protractor was %ERRORLEVEL%
@@ -51,3 +51,5 @@ rem d:
 rem cd \cx-test-sources
 rem node parse_log.js > results\cx_test_%TIMESTAMP%.html
 node devParseLog.js > testOutput_%TIMESTAMP%.html
+
+start testOutput_%TIMESTAMP%.html

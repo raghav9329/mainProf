@@ -25,7 +25,7 @@ class FeedbackPage extends ControlBase {
         this.thankyouMsg = new Label(this.pageObjects.thankyouMsg);
     };
     feedbackFrame() {
-        return browser.driver.findElement(protractor.By.xpath('//iframe[@title="Feedback Survey"]'))
+        return browser.driver.findElement(protractor.By.css('div.feedback.expanded iframe'))
     }
 };
 

@@ -18,7 +18,15 @@ class HomePageLocators {
         this.PlanID = by.name('planId');
         this.IssuerCode = by.name('issuerCode');
         this.NoOFCovered = by.name('noOfCovered');
-        this.Submit = by.xpath('//input[@name="noOfCovered"]/following-sibling::input');
+        this.Dob = by.name('a_dob');
+        this.Submit = by.xpath('(//input[@name="noOfCovered"]/following-sibling::input)[2]');
+
+        this.Zipcode = by.id('zip');
+        this.Dob = by.id('dob');
+        this.Coverage_Type = by.id('coverage_type');
+        this.Effcdate = by.id('effDD');
+        this.Go = by.id('btn_saveBig');
+        this.PpoEnrollBtn = by.xpath('//td[contains(text(),"PPO")]/following-sibling::td//button');
 
              
     }
