@@ -1,10 +1,13 @@
-Editor_Tips  
+Editor_Tips  
 Vim(&MacVim) : Sublime : IntelliJ : ATOM : Brackets : Eclipse :
+
+VIM key simulation for Notepad++
+https://web.archive.org/web/20150113032425/http://www.visimulator.com:80/public/p/visimulator.dll
 
 #############
 # MacVim
 #
-google: can macvim split windows vertical
+google: can macvim split windows vertical
 http://superuser.com/questions/486532/how-to-open-files-in-vertically-horizontal-split-windows-in-vim-from-the-command
 Ctrl+W, S (upper case) for horizontal splitting
 Ctrl+W, v (lower case) for vertical splitting
