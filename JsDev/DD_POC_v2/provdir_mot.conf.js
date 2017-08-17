@@ -22,13 +22,17 @@ exports.config = {
 		'integration/scenarios/providers/E2E_WorkFlow.test.js'
 		],
 
-	pd1145:  'integration/scenarios/providers/cxinit2-1145.test.js', 
+    pd2_4:	 'integration/scenarios/providers/cxinit2.4.test.js',
+    pd2_73: 'integration/scenarios/providers/cxinit2.73.test.js',
 	
 	pd1146:  'integration/scenarios/providers/cxinit2-1146.test.js',
+	pd1207:  'integration/scenarios/providers/cxinit2-1207.test.js',
 	
-    	 pd2_4:	 'integration/scenarios/providers/cxinit2.4.test.js',
-    	 pd2_73: 'integration/scenarios/providers/cxinit2.73.test.js',
-  
+	allEnd:[
+		'integration/scenarios/providers/cxinit2-1146.test.js',
+		'integration/scenarios/providers/cxinit2-1207.test.js',
+		],
+	
     },
 
     

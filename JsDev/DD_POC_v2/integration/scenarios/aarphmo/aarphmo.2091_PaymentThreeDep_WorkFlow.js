@@ -16,7 +16,7 @@ describe('AARP-2091 AARP_HMO WorkFlows_4 :', function() {
         console.log(' ');
         console.log('--- E2E WrkFlow1 ---')
         console.log(' ');
-        Utility.openApplication('');
+        Utility.openApplication('','AARP');
 
     });
 

@@ -70,7 +70,7 @@ describe('CXINIT-1461:E2E_WrkFlow1 - 2', function() {
     //Enter the valid Test Data in the Personal Information page and Click n the Next
 
     it('E2E_5 :should populate PersInfo page', function() {
-        TestData.fieldHomeAddr = TestData.fieldhomeAddress;
+      TestData.fieldHomeAddr = TestData.fieldhomeAddress;        
         perInfo.fillPersonalInfo(TestData);
         perInfo.fillAddress(TestData);
         perInfo.phoneNumberemail(TestData);
@@ -83,7 +83,7 @@ describe('CXINIT-1461:E2E_WrkFlow1 - 2', function() {
     // Fill the Valid Data in the 2 Dependents
 
     it('E2E_6 :should add 2 Deps, child & spouse', function() {
-        depInfo.deleteDependent('Dependent1').click();
+        depInfo.deleteDependent('Dependent2').click();
         depInfo.deleteDependent('Dependent1').click();
         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
         depInfo.fillDependent('Dependent1', TestData.Spouse, true);

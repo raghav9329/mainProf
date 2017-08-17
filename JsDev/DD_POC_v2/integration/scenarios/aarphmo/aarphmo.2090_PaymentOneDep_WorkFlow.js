@@ -14,7 +14,7 @@ var TestData = require('../../testData/aarphmo/aarphmo.2090_PaymentOneDep_WorkFl
 describe('AARP-2090 AARP HMO WorkFlows -1', function() {
     var premiumAmount;
     beforeAll(function() {
-        Utility.openApplication('');
+        Utility.openApplication('',,'AARP');
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed

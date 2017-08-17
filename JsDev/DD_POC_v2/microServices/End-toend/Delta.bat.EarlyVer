@@ -1,0 +1,5 @@
+set root=C:\Program Files\SmartBear\SoapUI-5.2.1\bin
+
+CD %root%
+testrunner.bat -a -fC:\SoapUI\Results\DHMO "C:\DD_Repos\dd-cx-test\microServices\End-toend\Delta-DHMO.xml"estrunner.bat -a -fC:\SoapUI\Results\DHMO "C:\DD_Repos\dd-cx-test\microServices\End-toend\Delta-DHMO.xml"
+rem testrunner.bat -a -fC:\SoapUI\Results\DHMO "C:\DD_Repos\dd-cx-test\microServices\End-toend\Delta-DHMO.xml"estrunner.bat -a -fC:\SoapUI\Results\DHMO "C:\DD_Repos\dd-cx-test\microServices\End-toend\AARP-DHMO.xml"

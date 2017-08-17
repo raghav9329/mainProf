@@ -59,8 +59,8 @@ class DirectorySearchPage extends ControlBase {
             browser.sleep(2000);
             return self.homeAddressfromGoogleApi.getElements().filter(function(elem, index) {
                 return elem.getText().then(function(text) {
-                    console.log("text=="+text);
-                    console.log("homeaddress=="+homeaddress);
+                    console.log("text==" + text);
+                    console.log("homeaddress==" + homeaddress);
                     return text === homeaddress;
                 });
             }).first().clickIt();
@@ -72,8 +72,12 @@ class DirectorySearchPage extends ControlBase {
         var self = this;
         return browser.controlFlow().execute(function() {
             return self.countOfProviders.getText().then(function(count) {
-                var pCount = count.split(' ');
-                return pCount[2];
+                if (!count.length == 0) {
+                    var pCount = count.split(' ');
+                    return pCount[2];
+                } else {
+                    return 0;
+                }
             }, function() {
                 return 0;
             });

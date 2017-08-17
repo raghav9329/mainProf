@@ -4,6 +4,7 @@
 .metadata
 npm-debug.log
 .settings
+Thumbs.db
 
 JavaDev/.metadata
 JavaDev/*/.metadata

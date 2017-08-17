@@ -45,7 +45,7 @@ describe('CXINIT-1746 Direct HMO WorkFlows -1', function() {
 
     it('E2E_3 :should add 1 Child Dep', function() {
         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
-        depInfo.fillDependent('Dependent1', TestData.Spouse, false);
+        depInfo.fillDependent('Dependent1', TestData.child, false);
         depInfo.next.click();
         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
         depInfo.continue.click();

@@ -1,3 +1,9 @@
+8/17/17
+Git Diff [[what I need to clarify for my self is 
+edited and not added. edited and added, edited and committeed. ]]
+In more recent versions of git, you can also use the --staged flag 
+(--staged is a synonym for --cached):
+
 4/27/17  
 Also
 git branch -a retuens things  that 
