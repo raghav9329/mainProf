@@ -11,7 +11,7 @@ distance
 5. Go back to home page to confirm initial search criteria is lost.
 */
 "use strict"
-var TestData = require("../../testData/providers/cxinit2.811.json");
+var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2.811.json');
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 

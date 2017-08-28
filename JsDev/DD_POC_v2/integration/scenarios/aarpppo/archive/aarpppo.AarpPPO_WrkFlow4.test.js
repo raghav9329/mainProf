@@ -9,7 +9,7 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../businessComponents/homePage.js'));
-var TestData = require('../../testData/aarpppo/aarpppo.AarpPPO_WrkFlow4.json');
+var TestData = require('../../testData/'+testDataEnv+'/aarpppo/aarpppo.AarpPPO_WrkFlow4.json');
 
 describe('AARP-1753 AARP_HMO WorkFlows_4 :', function() {
     beforeAll(function() {

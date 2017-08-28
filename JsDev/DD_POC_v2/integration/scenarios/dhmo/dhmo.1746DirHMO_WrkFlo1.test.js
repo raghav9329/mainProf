@@ -9,7 +9,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dhmo/Direct_HMO_WorkFlows_1.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/Direct_HMO_WorkFlows_1.json');
 
 describe('CXINIT-1746 Direct HMO WorkFlows -1', function() {
     var effectiveDate, premiumAmount;
@@ -40,12 +40,12 @@ describe('CXINIT-1746 Direct HMO WorkFlows -1', function() {
 
     });
 
-    // Add Dependent as a Child and Proceed
+    // Add Dependent as a Spouse and Proceed
     //Validate the Dependet age is greater than 26 and with the disability check box
 
     it('E2E_3 :should add 1 Child Dep', function() {
         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
-        depInfo.fillDependent('Dependent1', TestData.child, false);
+        depInfo.fillDependent('Dependent1', TestData.Spouse, false);
         depInfo.next.click();
         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
         depInfo.continue.click();

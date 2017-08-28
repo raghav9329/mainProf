@@ -22,7 +22,7 @@
 // spec cxinit.507.test.js
 // 
 "use strict"
-var testdata = require("../../testData/cxinit/cxinit.507C.json");
+var testdata = require('../../testData/'+testDataEnv+'/dhmo/temp/cxinit.507C.json');
 var homePg = new(require('../../pageObjects/home-page.js'));
 var perInfo = new(require('../../pageObjects/persInfoPgObj.js'));
 var homePage = new(require('../../businessComponents/homePage.js'))

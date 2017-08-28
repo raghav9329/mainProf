@@ -3,7 +3,7 @@
  * This Script Validates the error message functionality of dependents with Spouse and Domestic Partner 
  * System will allow only one spouse or one domestic partner
  */
-var TestData = require("../../testData/aarphmo/aarphmo.1358DepSpouse-DP.json");
+var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarphmo.1358DepSpouse-DP.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));

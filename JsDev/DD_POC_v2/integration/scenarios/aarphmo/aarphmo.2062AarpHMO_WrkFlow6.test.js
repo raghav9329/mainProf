@@ -6,7 +6,7 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../TestData/aarphmo/aarphmo.2062AarpHMO_WrkFlow6.json');
+var TestData = require('../../TestData/'+testDataEnv+'/aarphmo/aarphmo.2062AarpHMO_WrkFlow6.json');
 
 describe('AARP-2062 AARP HMO WorkFlows - 6', function() {
     var premiumAmount, effectedDate, depPrice;
@@ -93,7 +93,7 @@ describe('AARP-2062 AARP HMO WorkFlows - 6', function() {
             expect(premium.substring(1)).toEqual(depPrice);
             expect(facilities.productName.getText()).toEqual(TestData.planName);
             expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
-            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.facilityoption1);
+            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.primaryFacility.facilityName);
             expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
             expect(perInfo.enrollStatus('Personal Info').getCssValue('background-color')).toEqual(TestData.gray);
             expect(perInfo.enrollStatus('Dependents').getCssValue('background-color')).toEqual(TestData.gray);
@@ -114,7 +114,7 @@ describe('AARP-2062 AARP HMO WorkFlows - 6', function() {
             expect(premium.substring(1)).toEqual(depPrice);
             expect(facilities.productName.getText()).toEqual(TestData.planName);
             expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
-            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.facilityoption1);
+            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.dependent_Facility_1.facilityName);
             expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
             expect(facilities.pbox_facilityName(2).getText()).toEqual(TestData.facilityoption2);
             expect(perInfo.enrollStatus('Personal Info').getCssValue('background-color')).toEqual(TestData.gray);

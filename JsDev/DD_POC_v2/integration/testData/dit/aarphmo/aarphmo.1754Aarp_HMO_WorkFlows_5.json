@@ -1,0 +1,279 @@
+{
+    "firstname": "Test",
+    "mi": "K",
+    "lastname": "App",
+    "gender": "Male",
+    "dob": "05-05-1965",
+    "MemberId": "3041586290",
+    "alternateid": "test@test.com",
+    "fieldHomeAddr": "100 First Street floor 4",
+    "city": "San Francisco",
+    "State": "CA",
+    "contactType": "Cell",
+    "phoneNumber": "9876543210",
+    "email": "test@gmail.com",
+    "ZipCode": "94105",
+    "brokernumber": "201285",
+    "referralSource": "Email Advertisement",
+    "coverageStartDate": "07/01/2017",
+    "ariainvalid": "success",
+    "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
+    "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
+
+    "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
+    "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
+    "bankName": "BOA",
+    "accountHolderName": "testName",
+    "routingNumber": "111100035",
+    "accountNumber": "234324",
+    "accountNumberRetype": "234324",
+
+    "enrollData": {
+        "PlanName": "DeltaCare ® USA Plan 15B",
+        "PlanType": "DHMO",
+        "PlanCode": "PLN15B",
+        "CoverageStartDate": "12/1/2018",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "0.00",
+        "AnnualCost": "342.96",
+        "CoverageType": "Self",
+        "PlanID": "4546969",
+        "IssuerCode": "AARP",
+        "NoOfPeopleCovered": "1",
+         "dob":"05-05-1971"
+    },
+
+    "Dependents": {
+
+        "child1": {
+            "relationship": "Child",
+            "firstName": "depOne",
+            "middleName": "m",
+            "lastName": "lastName",
+            "gender": "Female",
+            "DOB": "05-10-1970",
+            "dependent": "Dependent1"
+        },
+
+        "child2": {
+            "relationship": "Child",
+            "firstName": "depTwo",
+            "middleName": "K",
+            "lastName": "lastName",
+            "gender": "Female",
+            "DOB": "05-10-1971",
+            "dependent": "Dependent2"
+        },
+
+        "child3": {
+            "relationship": "Child",
+            "firstName": "depThree",
+            "middleName": "K",
+            "lastName": "lastName",
+            "gender": "Female",
+            "DOB": "05-10-1972",
+            "dependent": "Dependent3"
+        },
+
+        "child4": {
+            "relationship": "Child",
+            "firstName": "depFour",
+            "middleName": "m",
+            "lastName": "lastName",
+            "gender": "Non Binary",
+            "DOB": "07-19-1973",
+            "dependent": "Dependent4"
+        },
+
+        "child5": {
+            "relationship": "Child",
+            "firstName": "depFive",
+            "middleName": "Q",
+            "lastName": "lastName",
+            "gender": "Non Binary",
+            "DOB": "12-28-1974",
+            "dependent": "Dependent5"
+        },
+
+        "child6": {
+            "relationship": "Child",
+            "firstName": "depSix",
+            "middleName": "m",
+            "lastName": "lastName",
+            "gender": "Female",
+            "DOB": "05-10-1975",
+            "dependent": "Dependent6"
+        },
+
+        "child7": {
+            "relationship": "Child",
+            "firstName": "depSeven",
+            "middleName": "K",
+            "lastName": "lastName",
+            "gender": "Female",
+            "DOB": "05-10-1976",
+            "dependent": "Dependent7"
+        },
+
+        "child8": {
+            "relationship": "Child",
+            "firstName": "depEight",
+            "middleName": "m",
+            "lastName": "lastName",
+            "gender": "Non Binary",
+            "DOB": "07-19-1977",
+            "dependent": "Dependent8"
+        },
+
+        "child9": {
+            "relationship": "Child",
+            "firstName": "depNine",
+            "middleName": "Q",
+            "lastName": "lastName",
+            "gender": "Non Binary",
+            "DOB": "12-28-1978",
+            "dependent": "Dependent9"
+        },
+
+        "child10": {
+            "relationship": "Child",
+            "firstName": "depTen",
+            "middleName": "m",
+            "lastName": "lastName",
+            "gender": "Female",
+            "DOB": "05-10-1979",
+            "dependent": "Dependent10"
+        },
+
+        "child11": {
+            "relationship": "Child",
+            "firstName": "depEleven",
+            "middleName": "m",
+            "lastName": "lastName",
+            "gender": "Female",
+            "DOB": "05-10-1980",
+            "dependent": "Dependent11"
+        },
+        "child12": {
+            "relationship": "Child",
+            "firstName": "depTwelve",
+            "middleName": "K",
+            "lastName": "lastName",
+            "gender": "Female",
+            "DOB": "05-10-1981",
+            "dependent": "Dependent12"
+        },
+
+        "child13": {
+            "relationship": "Child",
+            "firstName": "depThirteen",
+            "middleName": "m",
+            "lastName": "lastName",
+            "gender": "Non Binary",
+            "DOB": "07-19-1982",
+            "dependent": "Dependent13"
+        },
+
+        "child14": {
+            "relationship": "Child",
+            "firstName": "depFourteen",
+            "middleName": "Q",
+            "lastName": "lastName",
+            "gender": "Non Binary",
+            "DOB": "12-28-1983",
+            "dependent": "Dependent14"
+        },
+
+        "child15": {
+            "relationship": "Child",
+            "firstName": "depFifteen",
+            "middleName": "m",
+            "lastName": "lastName",
+            "gender": "Female",
+            "DOB": "05-10-1984",
+            "dependent": "Dependent15"
+        }
+    },
+
+    "facilites": {
+
+        "facilityoption1": {
+            "facility": "Kayvan Kafayi DDS",
+            "zipcode": "94903"
+        },
+
+        "facilityoption2": {
+            "facility": "Van Ness Dental Group",
+            "zipcode": "94105"
+        },
+        "facilityoption3": {
+            "facility": "The Santos Dental Group Corp",
+            "zipcode": "94903"
+        },
+        "facilityoption4": {
+            "facility": "Kayvan Kafayi DDS",
+            "zipcode": "94111"
+        },
+        "facilityoption5": {
+            "facility": "Van Ness Dental Group",
+            "zipcode": "94203"
+        },
+        "facilityoption6": {
+            "facility": "The Santos Dental Group Corp",
+            "zipcode": "90001"
+            
+        },
+        "facilityoption7": {
+            "facility": "Kayvan Kafayi DDS",
+            "zipcode": "60601"
+
+        },
+        "facilityoption8": {
+            "facility": "Kayvan Kafayi DDS",
+            "zipcode": "52801"
+
+        },
+        "facilityoption9": {
+            "facility": "Van Ness Dental Group",
+            "zipcode": "89501"
+        },
+        "facilityoption10": {
+            "facility": "The Santos Dental Group Corp",
+            "zipcode": "15201"
+        },
+        "facilityoption11": {
+            "facility": "Kayvan Kafayi DDS",
+            "zipcode": "24517"
+        },
+        "facilityoption12": {
+            "facility": "Van Ness Dental Group",
+            "zipcode": "37201"
+        },
+        "facilityoption13": {
+            "facility": "The Santos Dental Group Corp",
+            "zipcode": "07039"
+        },
+        "facilityoption14": {
+            "facility": "Kayvan Kafayi DDS",
+            "zipcode": "63101"
+        },
+        "facilityoption15": {
+            "facility": "Van Ness Dental Group",
+            "zipcode": "67201"
+        }
+
+    },
+
+    "dependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please select a gender", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
+    "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
+    "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
+    "nameOnCard": "Peter Heins",
+    "cardNumber": "5415240007992183",
+    "expMonth": "05",
+    "expYear": "2020",
+    "securityCode": "1254",
+    "planName": "DeltaCare® USA Plan 15B"
+
+}

@@ -4,7 +4,7 @@
 // Adds 15 dependents in the dependents page
 // Verifies and validates Error for the NUll values and dependents of same type (domestic paertner and spouse)
 
-var TestData = require("../../testData/dhmo/dhmo.1359Dep-15Deps.test.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1359Dep-15Deps.test.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 

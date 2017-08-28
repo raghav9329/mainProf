@@ -7,7 +7,7 @@ Button text: Inaccurate directory information? Let us know.
 */
 
 "use strict"
-var TestData = require("../../testData/providers/cxinit2.651.json");
+var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2.651.json');
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 

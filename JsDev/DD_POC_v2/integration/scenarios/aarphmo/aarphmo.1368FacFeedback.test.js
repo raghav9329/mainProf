@@ -1,5 +1,5 @@
 //(AARPHMO)
-var TestData = require("../../testData/aarphmo/aarphmo.1368FacFeedback.json");
+var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarphmo.1368FacFeedback.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));

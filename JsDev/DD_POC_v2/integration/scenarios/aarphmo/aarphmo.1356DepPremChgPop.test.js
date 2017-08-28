@@ -1,7 +1,7 @@
 /* (AARP)CXINIT-1356:Premium Change Pop up
  *  This Script will validates the functionality of Premium change Popup
  */
-var TestData = require("../../testData/aarphmo/aarphmo.1356DepPremChgPop.json");
+var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarphmo.1356DepPremChgPop.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));

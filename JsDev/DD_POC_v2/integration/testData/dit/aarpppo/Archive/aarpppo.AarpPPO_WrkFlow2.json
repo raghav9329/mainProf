@@ -1,0 +1,78 @@
+{
+    "firstname": "Test",
+    "mi": "K",
+    "lastname": "App",
+    "gender": "Male",
+    "dob": "05-05-1971",
+    "MemberId": "3041586292",
+    "alternateid": "test@test.com",
+    "fieldHomeAddr": "100 first street",
+    "homeAddress" : "100 First Street1st Street, San Francisco, CA, United States",
+    "city": "Fremont",
+    "State": "CA",
+    "contactType": "Cell",
+    "phoneNumber": "9876543210",
+    "referralSource": "Email Advertisement",
+    "email": "test@gmail.com",
+    "ZipCode": "94105",
+    "zipcode1" : "94106",
+    "facZipcode" : "94111",
+    "brokernumber": "201285",
+    "coverageStartDate": "07/01/2017",
+    "ariainvalid": "success",
+    "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
+    "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
+    "facilityoption1": "Kayvan Kafayi DDS",
+    "facilityoption2": "Van Ness Dental Group",
+    "facilityoption3": "The Santos Dental Group Corp",
+    "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
+    "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
+    "SelectPlanTitle":"",
+
+    "enrollData": {
+        "PlanName": "DeltaCare® USA Plan 15B",
+        "PlanType": "DHMO",
+        "PlanCode": "PLN15B",
+        "CoverageStartDate": "12/1/2018",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "0.00",
+        "AnnualCost": "342.96",
+        "CoverageType": "1",
+        "PlanID": "4546969",
+        "IssuerCode": "AARP",
+        "NoOfPeopleCovered": "4"
+    },
+
+    "Spouse": {
+        "relationship": "Spouse",
+        "firstName": "firstName",
+        "middleName": "m",
+        "lastName": "lastName",
+        "gender": "Female",
+        "DOB": "05-10-1981"
+    },
+
+    "child": {
+        "relationship": "Child",
+        "firstName": "firstName",
+        "middleName": "K",
+        "lastName": "lastName",
+        "gender": "Female",
+        "DOB": "05-10-1995"
+    },
+
+    
+    "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
+    
+    "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
+    "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
+    "nameOnCard": "Peter Heins",
+    "cardNumber": "5415240007992183",
+    "expMonth": "05",
+    "expYear": "2020",
+    "securityCode": "125",
+    "planName": "PPO Plan B"
+
+}

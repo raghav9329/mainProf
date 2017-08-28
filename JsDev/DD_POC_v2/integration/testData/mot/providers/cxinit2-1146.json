@@ -1,0 +1,68 @@
+{
+    "Header_SearchResultsPage": "Find a Dentist",
+    "Header_InvalidAddress":"Invalid Address",
+    "ZipCode": "94103",   
+    "Distance": "Within 5 Miles",
+    "Language1": "English",
+    "Language2": "Spanish",
+    "Language3": "Chinese",
+    "Language4": "Bosnian",
+
+    "Location": {
+         "Location1": {
+          "Loc": "94949",
+        "ExecutionFlag": true
+    },
+     "Location2": {
+          "Loc": "94952",
+        "ExecutionFlag": true
+    },
+     "Location3": {
+          "Loc": "96002",
+        "ExecutionFlag": true
+    },
+     "Location4": {
+          "Loc": "92244",
+        "ExecutionFlag": true
+    },
+     "Location5": {
+          "Loc": "94105",
+        "ExecutionFlag": true
+    },
+     "Location6": {
+          "Loc": "94111",
+        "ExecutionFlag": true
+    },
+     "Location7": {
+          "Loc": "90001",
+        "ExecutionFlag": true
+    },
+    
+      "Location8": {
+          "Loc": "Sonoma County",
+        "ExecutionFlag": true
+    },
+     "Location9": {
+          "Loc": "Marin County",
+        "ExecutionFlag": true
+    },
+     "Location10": {
+          "Loc": "San Rafael",
+        "ExecutionFlag": true
+    },
+     "Location11": {
+          "Loc": "Santa Rosa",
+        "ExecutionFlag": true
+    },
+     "Location12": {
+          "Loc": "Placer County",
+        "ExecutionFlag": true
+    },
+     "Location13": {
+          "Loc": "Sacramento",
+        "ExecutionFlag": true             
+   }
+
+    }  
+
+}

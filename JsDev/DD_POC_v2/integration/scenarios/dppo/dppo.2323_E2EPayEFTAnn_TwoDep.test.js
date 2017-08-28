@@ -5,7 +5,7 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dppo/dppo.2323_E2EPayEFTAnn_TwoDep.json');
+var TestData = require('../../testData/'+testDataEnv+'/dppo/dppo.2323_E2EPayEFTAnn_TwoDep.json');
 
 describe('DPPO:dppo.2323_E2EPayEFTAnn_TwoDep', function() {
     var effectiveDate;

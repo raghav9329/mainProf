@@ -3,7 +3,7 @@
  * Description : As a user, i want to be able to search the directory by languages spoken at the provider's office.
  */
  "use strict"
-var TestData = require("../../testData/providers/cxinit2.642.json");
+var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2.642.json');
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 

@@ -5,7 +5,7 @@ open the refine search control
 open the network selection control within
 Confirm the same network is selected*/
 "use strict"
-var TestData = require("../../testData/providers/cxinit2-1207.json");
+var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2-1207.json');
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 

@@ -8,30 +8,33 @@ var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
-var enrollPage = new(require('../../businessComponents/homePage.js'));
-var TestData = require('../../testData/aarphmo/aarphmo.2091_PaymentThreeDep_WorkFlow.json');
+var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
+var TestData = require('../../testData/' + testDataEnv + '/aarphmo/aarphmo.2091_PaymentThreeDep_WorkFlow.json');
 
 describe('AARP-2091 AARP_HMO WorkFlows_4 :', function() {
+    var effectedDate;
     beforeAll(function() {
         console.log(' ');
         console.log('--- E2E WrkFlow1 ---')
         console.log(' ');
-        Utility.openApplication('','AARP');
+        Utility.openApplication('', 'AARP');
 
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
     it('E2E_1 : Should complete the Enroll Page', function() {
-        enrollPage.enterHomePageDetails(TestData.enrollData);
-        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
-        console.log('2091_1 complete');
+        enrollPage.enterHomePageDetails(TestData.enrollData).then(function(effectDate) {
+            effectedDate = effectDate;
+            expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+            console.log('2091_1 complete');
+        });
     });
 
     //Enter the valid Test Data in the Personal Information page and Click n the Next
 
     it('E2E_2 :should populate PersInfo page', function() {
-         TestData.MemberId= Utility.randomNo('Number',10);
+        TestData.MemberId = Utility.randomNo('Number', 10);
         perInfo.fillPersonalInfo(TestData);
         perInfo.fillAddress(TestData);
         perInfo.phoneNumberemail(TestData);
@@ -83,7 +86,7 @@ describe('AARP-2091 AARP_HMO WorkFlows_4 :', function() {
     it('E2E_6 :should fill out pay details', function() {
         payment.billingChkBox.check();
         payment.fillpayment(TestData);
-         payment.frequencyAnnualy.select();
+        payment.frequencyAnnualy.select();
         payment.summaryTotalPrice.getText().then(function(premium) {
             premiumAmount = premium;
         });
@@ -101,8 +104,8 @@ describe('AARP-2091 AARP_HMO WorkFlows_4 :', function() {
         receipt.applicationNumber.getText().then(function(appicationNumber) {
             console.log("Application Number == " + appicationNumber)
         })
-        expect(receipt.planPurchased.getText()).toEqual(TestData.planName);
-        expect(receipt.effectiveDate.getText()).toEqual(TestData.enrollData.CoverageStartDate);
+        expect(receipt.planPurchased.getText()).toContain(TestData.planName);
+        expect(receipt.effectiveDate.getText()).toEqual(effectedDate);
         expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
         console.log('2091_7 complete');
     });
@@ -129,7 +132,7 @@ describe('AARP-2091 AARP_HMO WorkFlows_4 :', function() {
         var facility = TestData.primaryFacility;
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
-            expect(facilitydata.name).toEqual(TestData.firstname);
+            expect(facilitydata.name).toContain(TestData.firstname);
             expect(facilitydata.facilityName).toEqual(facility.facilityName);
             expect(facilitydata.street).toEqual(facility.street);
             expect(facilitydata.city).toEqual(facility.city);
@@ -143,7 +146,7 @@ describe('AARP-2091 AARP_HMO WorkFlows_4 :', function() {
     it('E2E_10:Should display dependent-1 applicant', function() {
         var facility = TestData.dependent1;
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
-            expect(facilitydata.name).toEqual(TestData.Spouse.firstName);
+            expect(facilitydata.name).toContain(TestData.Spouse.firstName);
             expect(facilitydata.facilityName).toEqual(facility.facilityName);
             expect(facilitydata.street).toEqual(facility.street);
             expect(facilitydata.city).toEqual(facility.city);
@@ -157,7 +160,7 @@ describe('AARP-2091 AARP_HMO WorkFlows_4 :', function() {
     it('E2E_11:Should display dependent-2 applicant', function() {
         var facility = TestData.dependent2;
         receipt.getSelectedFacilityDetails('DEPENDENT', 2).then(function(facilitydata) {
-            expect(facilitydata.name).toEqual(TestData.child1.firstName);
+            expect(facilitydata.name).toContain(TestData.child1.firstName);
             expect(facilitydata.facilityName).toEqual(facility.facilityName);
             expect(facilitydata.street).toEqual(facility.street);
             expect(facilitydata.city).toEqual(facility.city);
@@ -171,7 +174,7 @@ describe('AARP-2091 AARP_HMO WorkFlows_4 :', function() {
     it('E2E_12:Should display dependent-3 applicant', function() {
         var facility = TestData.dependent3;
         receipt.getSelectedFacilityDetails('DEPENDENT', 3).then(function(facilitydata) {
-            expect(facilitydata.name).toEqual(TestData.child2.firstName);
+            expect(facilitydata.name).toContain(TestData.child2.firstName);
             expect(facilitydata.facilityName).toEqual(facility.facilityName);
             expect(facilitydata.street).toEqual(facility.street);
             expect(facilitydata.city).toEqual(facility.city);

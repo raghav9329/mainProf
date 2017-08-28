@@ -1,4 +1,4 @@
-var TestData = require("../../testData/cxinit/cxinit.507.json");
+var TestData = require('../../testData/'+testDataEnv+'/cxinit/cxinit.507.json');
 var perInfo = new(require('../../pageObjects/perInfo-page.js'));
 var homePage = new(require('../../pageObjects/home-page.js'));
 

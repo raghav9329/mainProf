@@ -8,7 +8,7 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../businessComponents/homePage.js'));
-var TestData = require('../../testData/aarphmo/aarp.1768_E2E_WrkFlo_1.json');
+var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarp.1768_E2E_WrkFlo_1.json');
 
 describe('AARP-1235 (AARP-1768): E2E_WorkFlow: ', function() {
     beforeAll(function() {

@@ -19,7 +19,7 @@ Validation of the above is applicable for all the fields of the Home address lik
 
 */
 
-var TestData = require("../../testData/dhmo/dhmo.489PersInfo.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.489PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 

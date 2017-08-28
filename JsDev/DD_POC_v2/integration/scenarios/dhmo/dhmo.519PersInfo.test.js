@@ -20,8 +20,8 @@ Validate Email Address field with invalid data failures
 */
 
 "use strict"
-// var TestData = require("../../testData/personalInfo.json");
-var TestData = require("../../testData/dhmo/dhmo.519PersInfo.json");
+// var TestData = require('../../testData/'+testDataEnv+'/personalInfo.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.519PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 

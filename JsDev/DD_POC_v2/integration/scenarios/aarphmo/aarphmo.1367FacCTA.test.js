@@ -2,7 +2,7 @@
  * (AARPHMO)CXINIT-1367 Facilities CTA Back Next
  * This Script Validates the functionality of Next and Back Buttons in Facilities page 
  */
-var TestData = require("../../testData/aarphmo/aarphmo.1367FacCTA.json");
+var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarphmo.1367FacCTA.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));

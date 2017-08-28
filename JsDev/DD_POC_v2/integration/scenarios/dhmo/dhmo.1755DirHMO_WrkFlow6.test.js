@@ -7,7 +7,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dhmo/Direct_HMO_WorkFlows_6.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/Direct_HMO_WorkFlows_6.json');
 
 describe('DHMO-1755_DirHMO WrkFlo_6', function() {
     var premiumAmount, depPrice, effectiveDate;
@@ -103,7 +103,7 @@ describe('DHMO-1755_DirHMO WrkFlo_6', function() {
 
             expect(facilities.productName.getText()).toEqual(TestData.planName);
             expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
-            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.facilityoption1);
+            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.primaryFacility.facilityName);
 
             expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
 
@@ -129,10 +129,10 @@ describe('DHMO-1755_DirHMO WrkFlo_6', function() {
 
             expect(facilities.productName.getText()).toEqual(TestData.planName);
             expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
-            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.facilityoption1);
+            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.primaryFacility.facilityName);
 
             expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
-            expect(facilities.pbox_facilityName(2).getText()).toEqual(TestData.facilityoption2);
+            expect(facilities.pbox_facilityName(2).getText()).toEqual(TestData.dependent_Facility_1.facilityName);
 
             expect(perInfo.enrollStatus('Personal Info').getCssValue('background-color')).toEqual(TestData.liteGreen);
             expect(perInfo.enrollStatus('Dependents').getCssValue('background-color')).toEqual(TestData.liteGreen);

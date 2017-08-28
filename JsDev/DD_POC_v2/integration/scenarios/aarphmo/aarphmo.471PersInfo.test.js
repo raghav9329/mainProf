@@ -2,7 +2,7 @@
 
 //This spec Validates the Address entered partially and selects from the built-in suggestion list
 
-var TestData = require("../../testData/aarphmo/aarphmo.471.json");
+var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarphmo.471.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 

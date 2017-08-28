@@ -1,7 +1,7 @@
 /* CXINIT-1357: Dependents childs Age
  * This Script Validates the Dependent child age
  */
-var TestData = require("../../testData/dhmo/dhmo.1357DepChildAge.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1357DepChildAge.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));

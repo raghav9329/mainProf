@@ -8,7 +8,7 @@ var facilities = new(require('../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../testData/051217_E2E_POM_Workflow.json');
+var TestData = require('../testData/'+testDataEnv+'/051217_E2E_POM_Workflow.json');
 
 describe('CXINIT-1235: E2E_WorkFlow:(051217_E2E_POM_Workflow) ', function() {
     var effectiveDate;
@@ -162,7 +162,7 @@ describe('CXINIT-1235: E2E_WorkFlow:(051217_E2E_POM_Workflow) ', function() {
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
-            expect(facilitydata.facilityName).toEqual(TestData.facilityoption1);
+            expect(facilitydata.facilityName).toEqual(TestData.primaryFacility.facilityName);
             expect(facilitydata.street).toEqual(facility.street);
             expect(facilitydata.city).toEqual(facility.city);
             expect(facilitydata.region).toEqual(facility.region);

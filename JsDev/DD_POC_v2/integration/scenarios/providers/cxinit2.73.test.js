@@ -10,7 +10,7 @@
  * DHMO refers to dental and not vision at this time.
  */
  "use strict"
-var TestData = require("../../testData/providers/cxinit2.73.json");
+var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2.73.json');
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 

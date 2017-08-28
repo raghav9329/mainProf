@@ -8,7 +8,7 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dhmo/dhmo.0000E2E.15Dep.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.0000E2E.15Dep.json');
 
 describe('E2E:', function() {
     beforeAll(function() {

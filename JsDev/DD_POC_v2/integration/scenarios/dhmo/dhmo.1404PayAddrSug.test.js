@@ -1,7 +1,7 @@
 //CXINIT-1404 : Billing Address Suggestion
 // This Spec is used to verify and Validate the Address in the Payment Page
 
-var TestData = require("../../testData/dhmo/dhmo.1404PayAddrSug.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1404PayAddrSug.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));

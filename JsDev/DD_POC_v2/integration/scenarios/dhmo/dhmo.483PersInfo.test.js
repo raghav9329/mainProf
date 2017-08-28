@@ -1,6 +1,6 @@
 /* [Personal Info Page] Address - Mailing 483 */
 "use strict";
-var TestData = require("../../testData/dhmo/dhmo.483PersInfo.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.483PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 

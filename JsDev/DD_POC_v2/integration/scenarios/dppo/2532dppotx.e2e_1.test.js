@@ -5,9 +5,9 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dppo/2532dppotx.e2e.json');
+var TestData = require('../../testData/'+testDataEnv+'/dppo/2532dppotx.e2e.json');
 
-describe('dppo.XXXX_E2EPayCCAnn_TwoDep', function() {
+describe('dppo.2532_E2EPayCCAnn_TwoDep', function() {
     var effectiveDate;
     beforeAll(function() {
         console.log(' ');
@@ -78,7 +78,7 @@ describe('dppo.XXXX_E2EPayCCAnn_TwoDep', function() {
         })
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
         expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
-        expect(receipt.totalPaid.getText()).toEqual('$202.14');
+        expect(receipt.totalPaid.getText()).toEqual(TestData.Amount);
         console.log('E2E_5: Complete');
     });
     it('E2E_6 :Should display plansummary', function() {

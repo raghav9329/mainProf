@@ -2,7 +2,7 @@
 
 //This Spec is used to Verify and Validate Ene to End Work Flow with the Errors and the Happy path
 
-var TestData = require("../../testData/dhmo/dhmo.1365FacSearch.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1365FacSearch.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));

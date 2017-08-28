@@ -12,7 +12,7 @@ Searchable attributes
 */
 
 "use strict"
-var TestData = require("../../testData/providers/cxinit2.17.json");
+var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2.17.json');
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 

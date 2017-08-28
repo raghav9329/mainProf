@@ -55,17 +55,8 @@ exports.config = {
             'integration/scenarios/dhmo/dhmo.1407PayCvv.test.js'
         ],
 
-        dhe2e: [
-            'integration/scenarios/dhmo/dhmo.1408.EndToEndWkFlo1.test.js',
-            'integration/scenarios/dhmo/dhmo.1461.EndToEndWkFlo2.test.js',
-            'integration/scenarios/dhmo/dhmo.1746DirHMO_WrkFlo1.test.js',
-            'integration/scenarios/dhmo/dhmo.1753DirHMO_WrkFlo4.test.js',
-            'integration/scenarios/dhmo/dhmo.1754DirHMO_WrkFlow5.test.js',
-            'integration/scenarios/dhmo/dhmo.1755DirHMO_WrkFlow6.test.js',
-            'integration/scenarios/051217_E2E_POM_Workflow.js',
-            'integration/scenarios/addDep_Enroll.DeleteDep_depPage.js'
-        ],
-        ahpers: ['integration/scenarios/aarphmo/aarphmo.471PersInfo.test.js',
+        ahpers: [
+            'integration/scenarios/aarphmo/aarphmo.471PersInfo.test.js',
             'integration/scenarios/aarphmo/aarphmo.489PersInfo.test.js',
             'integration/scenarios/aarphmo/aarphmo.504PersInfo.test.js',
             'integration/scenarios/aarphmo/aarphmo.507PersInfo.test.js',
@@ -108,7 +99,7 @@ exports.config = {
             'integration/scenarios/aarpppo/aarpppo.2312_E2EPayQua_TwoDep.test.js',
             'integration/scenarios/aarpppo/aarpppo.2313_E2EPayQua_ThreeDep.test.js',
             'integration/scenarios/aarpppo/aarpppo.2314_E2EPayMon_TwoDep.test.js',
-            'integration/scenarios/aarpppo/aarpppo.2315_E2EPayMon_ThreeDep.test.js',
+            'integration/scenarios/aarpppo/aarpppo.2315_E2EPayMon_ThreeDep.test.js'
         ],
         dpe2e: [
             'integration/scenarios/dppo/dppo.2317_E2EPayCCAnn_TwoDep.test.js',
@@ -122,8 +113,26 @@ exports.config = {
             'integration/scenarios/dppo/dppo.2325_E2EPayEFTMon_TwoDep.test.js',
             'integration/scenarios/dppo/dppo.2326_E2EPayEFTMon_ThreeDep.test.js',
             'integration/scenarios/dppo/dppo.2327_E2EPayEFTQtr_TwoDep.test.js',
-            'integration/scenarios/dppo/dppo.2328_E2EPayEFTQtr_ThreeDep.test.js'
+            'integration/scenarios/dppo/dppo.2328_E2EPayEFTQtr_ThreeDep.test.js',
+            'integration/scenarios/dppo/2532dppotx.e2e_1.test.js',
+            'integration/scenarios/dppo/2557dppofl.e2e.test.js',
+            'integration/scenarios/dppo/2565dppotx.e2e.test.js',
+            'integration/scenarios/dppo/2574dppopa.e2e.test.js'
+        ],
 
+        dhe2e: [
+
+            'integration/scenarios/dhmo/dhmo.1408.EndToEndWkFlo1.test.js',
+            'integration/scenarios/dhmo/dhmo.1461.EndToEndWkFlo2.test.js',
+            'integration/scenarios/dhmo/dhmo.1746DirHMO_WrkFlo1.test.js',
+            'integration/scenarios/dhmo/dhmo.1753DirHMO_WrkFlo4.test.js',
+            'integration/scenarios/dhmo/dhmo.1754DirHMO_WrkFlow5.test.js',
+            'integration/scenarios/dhmo/dhmo.1755DirHMO_WrkFlow6.test.js',
+            'integration/scenarios/051217_E2E_POM_Workflow.js',
+            'integration/scenarios/addDep_Enroll.DeleteDep_depPage.js',
+            'integration/scenarios/dhmo/2532dhmotx.e2e_1.test.js',
+            'integration/scenarios/dhmo/2539dhmopa.e2e_1.test.js',
+            'integration/scenarios/dhmo/2546FL.e2e.test.js'
         ],
         hclfocus: [ // I will add direct PPO later in week of july 17 - 21
             'integration/scenarios/dhmo/dhmo.1408.EndToEndWkFlo1.test.js',
@@ -134,6 +143,9 @@ exports.config = {
             'integration/scenarios/dhmo/dhmo.1755DirHMO_WrkFlow6.test.js',
             'integration/scenarios/051217_E2E_POM_Workflow.js',
             'integration/scenarios/addDep_Enroll.DeleteDep_depPage.js',
+            'integration/scenarios/dhmo/2532dhmotx.e2e_1.test.js',
+            'integration/scenarios/dhmo/2539dhmopa.e2e_1.test.js',
+            'integration/scenarios/dhmo/2546FL.e2e.test.js',
 
             'integration/scenarios/aarphmo/aarphmo.2057E2E_WrkFlow1.test.js',
             'integration/scenarios/aarphmo/aarphmo.2059AarpHMO_WrkFlow1.test.js',
@@ -167,7 +179,11 @@ exports.config = {
             'integration/scenarios/dppo/dppo.2325_E2EPayEFTMon_TwoDep.test.js',
             'integration/scenarios/dppo/dppo.2326_E2EPayEFTMon_ThreeDep.test.js',
             'integration/scenarios/dppo/dppo.2327_E2EPayEFTQtr_TwoDep.test.js',
-            'integration/scenarios/dppo/dppo.2328_E2EPayEFTQtr_ThreeDep.test.js'
+            'integration/scenarios/dppo/dppo.2328_E2EPayEFTQtr_ThreeDep.test.js',
+            'integration/scenarios/dppo/2532dppotx.e2e_1.test.js',
+            'integration/scenarios/dppo/2557dppofl.e2e.test.js',
+            'integration/scenarios/dppo/2565dppotx.e2e.test.js',
+            'integration/scenarios/dppo/2574dppopa.e2e.test.js'
         ]
 
     },
@@ -194,6 +210,7 @@ exports.config = {
         longWait = 1200;
         PAGELOADTIME = 60000;
         isExecutionFromUI = true;
+        testDataEnv = 'dit';
         //browser.manage().window().maximize();
         browser.manage().window().setSize(1050, 1250);
         browser.ignoreSynchronization = true;

@@ -2,7 +2,7 @@
 
 //This spec Validates the Address entered partially and selects from the built-in suggestion list
 
-var TestData = require("../../testData/dhmo/dhmo.471PersInfo.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.471PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 describe('CXINIT-471: Address Suggestion Home Addr-PersInfo', function() {

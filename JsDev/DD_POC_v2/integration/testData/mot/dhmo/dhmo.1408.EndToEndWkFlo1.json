@@ -1,0 +1,91 @@
+{
+    "firstname": "Krishna",
+    "mi": "K",
+    "lastname": "K",
+    "gender": "Male",
+    "dob": "05-05-1971",
+    "ssn": "1234560215",
+    "alternateid": "test@test.com",
+    "fieldHomeAddr": "100 First Street floor 4",
+    "city": "San Francisco",
+    "State": "CA",
+    "contactType": "Cell",
+    "phoneNumber": "9876543210",
+    "email": "test@gmail.com",
+    "ZipCode": "94105",
+    "brokernumber": "201285",
+    "coverageStartDate": "07/01/2017",
+    "ariainvalid": "success",
+    "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
+    "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
+    "facilityoption1": "Kayvan Kafayi DDS",
+    "facilityoption2": "Van Ness Dental Group",
+    "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
+    "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
+
+    "enrollData": {
+        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+        "PlanType": "DHMO",
+        "PlanCode": "CAA55",
+        "CoverageStartDate": "12/5/2017",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "10.00",
+        "AnnualCost": "80.76",
+        "CoverageType": "Self",
+        "PlanID": "70422",
+        "IssuerCode": "DELTA",
+        "NoOfPeopleCovered": "1",
+        "dob": "05-10-1981"
+        
+    },
+
+    "Spouse1": {
+        "relationship": "Spouse",
+        "firstName": "firstName",
+        "middleName": "m",
+        "lastName": "lastName",
+        "gender": "Female",
+        "DOB": "05-10-1995"
+    },
+
+    "child3": {
+        "relationship": "Child",
+        "firstName": "firstName",
+        "middleName": "K",
+        "lastName": "lastName",
+        "gender": "Female",
+        "DOB": "05-10-1981"
+    },
+
+     "dependent_facilityoption1": {
+       "facilityName": "Kayvan Kafayi DDS",
+        "street": "450 Sutter St Rm 1433",
+        "city": "San Francisco",
+        "region": "CA",
+        "postalCode": "941084010",
+        "telephone": "4153982360"
+    },
+    
+    "dependent_facilityoption2": {
+             "facilityName": "Van Ness Dental Group",
+        "street": "2243 Van Ness Ave Ste 201",
+        "city": "San Francisco",
+        "region": "CA",
+        "postalCode": "941092504",
+        "telephone": "4154412098"
+    },
+    
+    "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
+    
+    "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
+    "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
+    "nameOnCard": "Peter Heins",
+    "cardNumber": "5415240007992183",
+    "expMonth": "05",
+    "expYear": "2020",
+    "securityCode": "154",
+    "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program"
+
+}

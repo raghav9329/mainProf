@@ -9,7 +9,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dhmo/2546FL.e2e.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/2546FL.e2e.json');
 
 describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
     var effectiveDate, premiumAmount;
@@ -40,20 +40,22 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
 
     });
 
-    
+
 
     it('E2E_3 :should add 2 Deps, child & spouse', function() {
         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
-        depInfo.fillDependent('Dependent1', TestData.Spouse, true);
+        depInfo.fillDependent('Dependent1', TestData.Spouse, false);
         depInfo.fillDependent('Dependent2', TestData.child, false);
         depInfo.next.click();
+        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+        depInfo.continue.click();
         Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
         console.log('2546_3 complete')
 
     });
 
-    
+
 
     //Verify and Select the Facility for the Primary and Dependents
 
@@ -68,14 +70,14 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
     });
 
 
-    //Verify and Select the Facility for the Dependent
+    /*//Verify and Select the Facility for the Dependent
 
     it('E2E_5 :should select fac for deps', function() {
         facilities.selectFacility(TestData.facilityoption2);
         facilities.next.click();
         expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
         console.log('2546_5 complete')
-    });
+    });*/
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
 

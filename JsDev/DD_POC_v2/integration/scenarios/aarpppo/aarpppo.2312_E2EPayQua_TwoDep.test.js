@@ -5,7 +5,7 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/aarpppo/aarpppo.2312_E2EPayQua_TwoDep.json');
+var TestData = require('../../testData/'+testDataEnv+'/aarpppo/aarpppo.2312_E2EPayQua_TwoDep.json');
 
 describe('PPO:aarpppo.2312_E2EPayQua_TwoDep', function() {
     var effectedDate;

@@ -1,7 +1,7 @@
 /* CXINIT-1356:Premium Change Pop up
  *  This Script will validates the functionality of Premium change Popup
  */
-var TestData = require("../../testData/dhmo/dhmo.1356DepPremChgPop.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1356DepPremChgPop.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
@@ -9,6 +9,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
+
 
 describe('CXINIT-1356:Premium Change Pop up: ', function() {
     //global variable to capture the values dynamically

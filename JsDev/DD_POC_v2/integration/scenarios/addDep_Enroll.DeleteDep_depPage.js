@@ -1,4 +1,4 @@
-var TestData = require("../testData/addDep_Enroll.DeleteDep_depPage.json");
+var TestData = require('../testData/'+testDataEnv+'/addDep_Enroll.DeleteDep_depPage.json');
 var perInfo = new(require('../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../pageObjects/cxinit/facilities-page.js'));
@@ -35,18 +35,17 @@ describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
         depInfo.deleteDependent('Dependent1').click();
         depInfo.fieldAddDependents.click();
         depInfo.next.click();
-        expect(depInfo.getValidationMessages('Dependent1')).toEqual(TestData.dependentErrors);
-        expect(depInfo.getServerValidationMessages()).toEqual(TestData.dependentErrors);       
+        // expect(depInfo.getValidationMessages('Dependent1')).toEqual(TestData.dependentErrors);
+        // expect(depInfo.getServerValidationMessages()).toEqual(TestData.dependentErrors);       
     });
 
     it('E2E_Flow_4: Verify 2 dependents were added and furnished with valid Test Data for Each of them', function() {
         depInfo.fillDependent('Dependent1', TestData.domesticpartner1, true);
         depInfo.fillDependent('Dependent2', TestData.child3, false);
         depInfo.next.click();
-        Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
-        // depInfo.next.click();
-        // expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
-        // depInfo.continue.click();
+        // Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
+        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+        depInfo.continue.click();
         expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
     });
 
@@ -107,7 +106,7 @@ describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
-            expect(facilitydata.facilityName).toEqual(TestData.facilityoption1);
+            expect(facilitydata.facilityName).toEqual(TestData.primaryFacility.facilityName);
             expect(facilitydata.street).toEqual(facility.street);
             expect(facilitydata.city).toEqual(facility.city);
             expect(facilitydata.region).toEqual(facility.region);

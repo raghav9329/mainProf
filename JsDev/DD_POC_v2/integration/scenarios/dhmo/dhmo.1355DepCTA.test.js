@@ -2,7 +2,7 @@
  * CXINIT-1355 Dependents CTA Back Next
  * This Script Validates the functionality of Next and Back Buttons in dependent page 
  */
-var TestData = require("../../testData/dhmo/dhmo.1355DepCTA.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1355DepCTA.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));

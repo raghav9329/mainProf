@@ -3,7 +3,7 @@
  * Description : User shown on the list results page should also be shown on the details page.
  */
 "use strict"
-var TestData = require("../../testData/providers/cxinit2.577.json");
+var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2.577.json');
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 

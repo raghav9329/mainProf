@@ -2,7 +2,7 @@
 
 //This spec is used to :As a product owner I want to allow the user to move back and forth into the application pages.
 
-var TestData = require("../../testData/dhmo/dhmo.1361PersInfo.json");
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1361PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));

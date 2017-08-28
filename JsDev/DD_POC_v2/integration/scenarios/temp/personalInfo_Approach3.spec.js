@@ -1,4 +1,4 @@
-var testdata = require("../testData/personalInfo.json");
+var testdata = require("../testData/personalInfo.json');
 var homePg  = new(require('../pageObjects/homePgObj.js'));
 var perInfo = new(require('../pageObjects/persInfoPgObj.js'));
 

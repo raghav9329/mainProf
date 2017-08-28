@@ -9,7 +9,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dhmo/dhmo.1366FacSelect.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1366FacSelect.json');
 
 describe('CXINIT-1366: Facility Selection of Facilities workflows: ', function() {
     beforeEach(function() {

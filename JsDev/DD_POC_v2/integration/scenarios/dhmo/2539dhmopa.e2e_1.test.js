@@ -9,7 +9,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dhmo/2539dhmopa.e2e_1.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/2539dhmopa.e2e_1.json');
 
 describe('CXINIT-2539 Direct HMO WorkFlows -1', function() {
     var effectiveDate, premiumAmount;
@@ -40,31 +40,17 @@ describe('CXINIT-2539 Direct HMO WorkFlows -1', function() {
 
     });
 
-    // Add Dependent as a Spouse and Proceed
+    // Add Dependent as a Spouse and a child Proceed
 
     it('E2E_3 :should add Spouse as Dep', function() {
         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
         depInfo.fillDependent('Dependent1', TestData.Spouse, false);
-        depInfo.next.click();
-        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
-        depInfo.continue.click();
-        // expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
-        console.log('2539_3 complete')
-
-    });
-
-
-    // Add Dependent as a Child and Proceed
-    //Validate the Dependet age is greater than 26 and with the disability check box
-
-    it('E2E_4 :should add 1 Child Dep', function() {
-        // expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
         depInfo.fillDependent('Dependent2', TestData.Child, false);
         depInfo.next.click();
         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
         depInfo.continue.click();
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
-        console.log('2539_4 complete')
+        console.log('2539_3 complete')
 
     });
 

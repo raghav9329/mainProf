@@ -11,7 +11,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dhmo/Direct_HMO_WorkFlows_5.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/Direct_HMO_WorkFlows_5.json');
 
 describe('DHMO-1754 DirHMO_WrkFlo_5:', function() {
     var effectiveDate;

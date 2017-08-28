@@ -9,7 +9,7 @@ Can we get a URI to go back to the old version?
 */
 
 "use strict"
-var TestData = require("../../testData/providers/cxinit2.520.json");
+var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2.520.json');
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 

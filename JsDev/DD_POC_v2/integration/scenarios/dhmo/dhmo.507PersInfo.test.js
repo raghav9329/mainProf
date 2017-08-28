@@ -27,8 +27,8 @@ Consume the error messages in the property file and validate fields display the 
  Validate malformed yet correct data type entered, errors, alerts and warnings.*/
 
 "use strict"
-// var TestData = require("../../testData/personalInfo.json");
-var TestData = require("../../testData/dhmo/dhmo.507PersInfo.json");
+// var TestData = require('../../testData/'+testDataEnv+'/personalInfo.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.507PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 

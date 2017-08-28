@@ -8,7 +8,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/dhmo/dhmo.1408.EndToEndWkFlo1.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1408.EndToEndWkFlo1.json');
 
 describe('cxinit1408:E2E_WrkFlow', function() {
     var effectiveDate;
@@ -88,7 +88,7 @@ describe('cxinit1408:E2E_WrkFlow', function() {
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('1408_6 complete')
     });
-    it('E2E_7 :Should display primary allicant', function() {
+    it('E2E_7 :Should display primary apllicant', function() {
         var facility = TestData.dependent_facilityoption1;
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {

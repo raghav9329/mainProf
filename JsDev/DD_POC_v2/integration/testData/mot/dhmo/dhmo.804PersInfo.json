@@ -1,0 +1,35 @@
+{
+     "enrollData": {
+        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+        "PlanType": "DHMO",
+        "PlanCode": "CAA55",
+        "CoverageStartDate": "12/05/2017",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "EnrollmentFee": "10.00",
+        "AnnualCost": "80.76",
+        "CoverageType": "Self",
+        "PlanID": "70422",
+        "IssuerCode": "DELTA",
+        "NoOfPeopleCovered": "1",
+        "dob": "05-10-1981"
+    },
+    "ZipCode": "94105",
+    "ZipCode2": "94103",
+    "Ariainvalid_error": "error",
+    "Ariainvalid_success": "success",
+    "Title": "Individual & Families",
+    "HAddress_ZIP": {
+        "PartialAddress": "949",
+        "FullAddress": "949Broadway, New York, NY, United States",
+        "ErrorMsg": "Please enter a street address",
+        "ExecutionFlag": true
+    },
+    "Address_Valid": {
+        "HomeAddress": "35995 Fremont Blvd Apt 98",
+        "City": "Fremont",
+        "State": "CA",
+        "ZIPCode": "94536"
+    }
+}
