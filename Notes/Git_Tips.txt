@@ -4,6 +4,10 @@ edited and not added. edited and added, edited and committeed. ]]
 In more recent versions of git, you can also use the --staged flag 
 (--staged is a synonym for --cached):
 
+For a list of files to be pushed, run:  
+git diff --stat --cached [remote/branch]
+via : https://stackoverflow.com/questions/3636914/how-can-i-see-what-i-am-about-to-push-with-git
+
 4/27/17  
 Also
 git branch -a retuens things  that 

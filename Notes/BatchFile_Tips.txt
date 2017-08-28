@@ -1,0 +1,15 @@
+8/23/17  New file
+Tips and tricks in Batch files
+
+https://stackoverflow.com/questions/9229836/sleep-wait-command-in-batch
+
+
+ping localhost -n (your time) >nul
+
+timeout 5   to delay
+timeout 5 >nul    to delay without asking you to press any key to cancel
+
+
+
+
+sadasiva
