@@ -1,0 +1,49 @@
+8/30/17 placed here so I can move on with daily immediate kindof stufff
+
+
+
+8/7/17
+
+===========================================================
+ToDo: =====================================================
+===========================================================
+MicroService Test Automation
+
+Need you three or four to put hyour heads to geter about how you want the rest of ;llkjlkxxx;lxxlkj
+to go.  how do you want ot orgainizeit 
+Name the new pd script the name of the story
+	use the tasks to add to the one single script
+	This story is about session data persistence.
+get the PD script to run
+Get the json file named 
+Make sure every spec in in some suite
+	dhmo, dhmoe2e, dppo, dppoe2e, aarphmo, (ahmo), 
+	aarphmoe2e (ahmoe2e), aarpppo, (appo), aarpppoe2e (appoe2e) 
+	what else is here
+Write a ticket for getting the bugs out of each block/ suite.
+
+
+
+
+pd story
+	enhance 1146 with new jira task 
+	use 1146 code as a copy to start with
+Check slave with Cygwin SSH
+aarpppo ticket numbers on scripts
+Cxint-1782 
+	* all 4 product lines 10 - 13 - 15 deps
+	
+============================================================
+Doing: =====================================================
+============================================================
+
+Postponed: Auto launch of PD 1146 : Done but networking problems Cannot test
+
+DevOps work with HOMER N.
+
+
+
+
+=============================================================
+Done: =======================================================
+=============================================================
