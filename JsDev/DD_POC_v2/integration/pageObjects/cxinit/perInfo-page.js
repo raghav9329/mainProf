@@ -31,6 +31,7 @@ class PersonalInfoPage extends ControlBase {
         this.errMsgBdDD = new Label(this.pageObjects.errMsgBdDD);
         this.fieldBdYyyy = new TextBox(this.pageObjects.fieldBdYyyy);
         this.errMsgBdYyyy = new Label(this.pageObjects.errMsgBdYyyy);
+        this.errMsgYear = new Label(this.pageObjects.errMsgYear);
         this.errBirthDate = new Label(this.pageObjects.errBirthDate);
         this.fieldSsn = new TextBox(this.pageObjects.fieldSsn);
         this.errMsgSsn = new Label(this.pageObjects.errMsgSsn);
@@ -161,6 +162,7 @@ class PersonalInfoPage extends ControlBase {
             self.fieldBdMM.setText(datesplit[0]);
             self.fieldBdDD.setText(datesplit[1]);
             self.fieldBdYyyy.setText(datesplit[2]);
+            self.fieldBdMM.setText(datesplit[0]);
             if (perinfo.MemberId) self.memberId.setText(perinfo.MemberId);
             if (perinfo.ssn) self.fieldSsn.setText(perinfo.ssn);
             if (!perinfo.alternateid) self.fieldAlternateId.setText('');
@@ -183,6 +185,7 @@ class PersonalInfoPage extends ControlBase {
             self.fieldCity.setText(perinfo.city);
             self.fieldPhoneNumber.setText('');
             browser.sleep(2000);
+             Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg'))); 
             expect(self.fieldHomeAddr.getAttribute("class")).toContain(perinfo.ariainvalid);
             expect(self.fieldCity.getAttribute("class")).toContain(perinfo.ariainvalid);
         });

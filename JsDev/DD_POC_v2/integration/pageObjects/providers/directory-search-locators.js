@@ -40,8 +40,7 @@ class DirectorySearchLocators {
         this.providersListing = by.className('provider-listing');
         //Element for Provider based on provider Name
         this.provider = function(providerName) {
-            return by.xpath('//a[text()="' + providerName + '"]/ancestor::section/parent::article')
-                //return by.xpath('//div[text()="' + providerName + '"]/parent::header/parent::section/parent::article');
+            return by.xpath('//a[text()="' + providerName + '"]/ancestor::section/parent::article')                
         };
 
         this.view = function(providerName) {

@@ -74,7 +74,7 @@
         "firstName": "firstName",
         "middleName": "m",
         "lastName": "lastName",
-        "gender": "Prefer Not To Say",
+        "gender": "Prefer not to say",
         "DOB": "07-19-1999"
     },
 
@@ -83,7 +83,7 @@
         "firstName": "firstName",
         "middleName": "Q",
         "lastName": "lastName",
-        "gender": "Prefer Not To Say",
+        "gender": "Prefer not to say",
         "DOB": "12-28-1995"
     },
 

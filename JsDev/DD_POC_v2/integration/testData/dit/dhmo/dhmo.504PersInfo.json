@@ -19,7 +19,7 @@
     "Broker_TestData": {
         "Broker_Name1": {
             "Broker": "",
-            "BrokerName": " ",
+            "BrokerName": "",
             "ErrorMsg": "Please enter a Broker ID",
             "ExecutionFlag": true
         },

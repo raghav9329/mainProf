@@ -66,26 +66,32 @@ class ProviderDetailsPage extends ControlBase {
     // }
     verifyProviderLanguage(language, iterations) {
         var self = this;
+        var count = 0,count1;
         browser.controlFlow().execute(function() {
-            var count = 0;
             browser.wait(function() {
-                return element(by.linkText("Next")).isDisplayed().then(function(displayed) {
+                return element(by.css('a[arialabel="Next"]')).isDisplayed().then(function(displayed) {
                     var providersList = element.all(by.css('li.provider-listing'));
                     providersList.reduce(function(prev, ele, index) {
-                        var viewno = Number(index) + 1;
-                        if (iterations > count) {
-                            element(by.xpath('(//a[normalize-space(text()) = "View"])[' + viewno + ']')).click().then(function() {
-                                count = count + 1;
-                                expect(self.providerLanguage.getText()).toContain(language);
-                                self.backToSearchResults.click();
-                                browser.sleep(3000);
-                            })
-                        }
-                    });
+                            var viewno = Number(index) + 1;
+                            if (iterations > count) {
+                                element(by.xpath('(//a[normalize-space(text()) = "View"])[' + viewno + ']')).click().then(function() {
+                                    count = count + 1;
+                                    count1=count;
+                                    self.providerLanguage.getText().then(function(lang) {
+                                        // console.log('Language Verified -> ' + lang);
+                                    })
+                                    expect(self.providerLanguage.getText()).toContain(language);
+									//  Debug console out in the next line.  Un comment to see the missing language problem cxinint2-1689
+									// console.log('Language Verified -> ' + language);
+                                    self.backToSearchResults.click();
+                                    browser.sleep(3000);
+                                })
+                            }
+                        })
                     if (displayed) {
-                        if (iterations > count) {
+                        if (iterations > count1) {
                             return element(by.linkText("Next")).click().then(function() {
-                                if (iterations > count) {
+                                if (iterations > count1) {
                                     return !displayed;
                                 } else {
                                     return displayed;
@@ -97,8 +103,10 @@ class ProviderDetailsPage extends ControlBase {
 
                     } else {
                         return !displayed;
-                    }
+                    } 
 
+                }, function(err) {
+                    return true;
                 });
             }, 9999999999);
         });
@@ -115,19 +123,14 @@ class ProviderDetailsPage extends ControlBase {
                     providersList.reduce(function(prev, ele, index) {
                         if (iterations > count) {
                             count = count + 1;
-                            console.log("count============" + count);
                             if (pData.SPECIALITY) {
                                 ele.element(by.css('p.provider__specialty')).getText().then(function(specialty) {
-                                    console.log("specialty========="+specialty);
-                                    console.log("pData.SPECIALITY===="+pData.SPECIALITY);
                                     var specialtyindex = pData.SPECIALITY.indexOf(specialty);
                                     expect(specialtyindex).toBeGreaterThan(-1);
                                 })
                             }
                             if (pData.NETWORK) {
                                 ele.element(by.css('div.state-indicator.provider__network span.state-indicator__text')).getText().then(function(network) {
-                                    console.log("network========="+network);
-                                    console.log("pData.NETWORK"+pData.NETWORK)
                                     var networkindex = pData.NETWORK.indexOf(network);
                                     expect(networkindex).toBeGreaterThan(-1);
                                 })

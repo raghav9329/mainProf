@@ -27,6 +27,7 @@
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
     "queryAnswer": "Test",
+    "Amount": "$104.08",
 
     "enrollData": {
         "PlanName": "Delta Dental Individual & Family Delta Dental PPO Basic Plan",
@@ -93,17 +94,18 @@
     "accountHolderNameError": "Account Holder Name is required.",
     "routingNumberError": "Routing Number is required.",
     "accountNumberError": "Account Number is required.",
+
     "planSummary": {
         "Deductible_per_calendar": "$50.00",
-        "Max_per_calendar": "$1,000.00",
+        "Max_per_calendar": "Unlimited",
         "Officevisit": "0%",
         "Exams": "0%",
         "Xrays": "0%",
         "Cleanings": "0%",
         "Fillings": "50%",
-        "Rootcanals": "100%",
-        "Gumtreatment": "100%",
-        "Extractions": "100%",
+        "Rootcanals": "50%",
+        "Gumtreatment": "50%",
+        "Extractions": "50%",
         "Denturerepair": "100%",
         "Crowns": "100%",
         "Orthodontics": "NA"

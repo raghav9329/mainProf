@@ -11,7 +11,7 @@ var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/'+testDataEnv+'/dhmo/2539dhmopa.e2e_1.json');
 
-describe('CXINIT-2539 Direct HMO WorkFlows -1', function() {
+describe('DHMO_PA:2539 Direct HMO WorkFlows -1', function() {
     var effectiveDate, premiumAmount;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
@@ -20,6 +20,8 @@ describe('CXINIT-2539 Direct HMO WorkFlows -1', function() {
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
     it('E2E_1 : Should complete the Enroll Page', function() {
+        TestData.firstname = Utility.randomNo('String', 5);
+        TestData.lastname = Utility.randomNo('String', 5);
         enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
             effectiveDate = sdate;
             console.log("sdate============" + sdate);
@@ -83,6 +85,7 @@ describe('CXINIT-2539 Direct HMO WorkFlows -1', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('2539_7 complete')
     });

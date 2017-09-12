@@ -96,7 +96,7 @@
     "accountNumberError": "Account Number is required.",
     "planSummary": {
         "Deductible_per_calendar": "$50.00",
-        "Max_per_calendar": "Unlimited",
+        "Max_per_calendar": "$1,000.00",
         "Officevisit": "0%",
         "Exams": "0%",
         "Xrays": "0%",

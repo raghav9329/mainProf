@@ -32,7 +32,7 @@ class ProviderDetailsLocators {
         this.providerAccessByfacility = function(facility) {
             return by.xpath('//div[contains(text(),"' + facility + '")]/following-sibling::div')
         };
-        this.providerLanguage = by.css('div.provider__languages dl');
+        this.providerLanguage = by.css('div.practice__languages dl');
         this.providerData = by.className('provider__data');
         this.providerDataByField = function(fieldName) {
             return by.xpath('//div[contains(text(),"' + fieldName + '")]/following-sibling::div')

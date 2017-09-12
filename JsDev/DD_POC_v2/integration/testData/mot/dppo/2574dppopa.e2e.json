@@ -1,10 +1,10 @@
 {
-    "firstname": "Test",
+    "firstname": "first name",
     "mi": "K",
-    "lastname": "App",
+    "lastname": "lastname",
     "gender": "Male",
     "dob": "01-28-1973",
-   "ssn": "1234560215",
+   "ssn": "5263589415",
     "alternateid": "test@test.com",
    "fieldHomeAddr": "3212 Brodhead Road",
     "city": "Aliquippa",
@@ -27,6 +27,7 @@
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
     "queryAnswer": "Test",
+    "Amount":"$104.08",
 
     "enrollData": {
         "PlanName": "Delta Dental Individual & Family Delta Dental PPO Basic Plan",
@@ -95,7 +96,7 @@
     "accountNumberError": "Account Number is required.",
     "planSummary": {
         "Deductible_per_calendar": "$50.00",
-        "Max_per_calendar": "$1,000.00",
+        "Max_per_calendar": "Unlimited",
         "Officevisit": "0%",
         "Exams": "0%",
         "Xrays": "0%",

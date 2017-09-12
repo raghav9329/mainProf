@@ -62,6 +62,6 @@
     },
 
 
-    "dependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 - 12)", "Please enter a valid day between (01 - 31)", "Please enter a valid year"]
+    "dependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year"]
 
 }

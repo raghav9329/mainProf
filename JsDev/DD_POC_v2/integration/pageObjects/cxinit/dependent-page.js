@@ -9,6 +9,7 @@ var CheckBox = require('../../controls/checkbox-control');
 var RadioButton = require('../../controls/radiobutton-control');
 var LinkText = require('../../controls/link-control');
 
+
 /**
  * Provides access to the functionality of Dependent page
  * @constructor
@@ -143,6 +144,7 @@ class DependentPage extends ControlBase {
     // };
 
     fillDependent(dependentName, dataObj, skipAddDependent) {
+
         if (!skipAddDependent) this.fieldAddDependents.click();
         browser.sleep(1000);
         this.relationship(dependentName).selectByText(dataObj.relationship);
@@ -152,14 +154,14 @@ class DependentPage extends ControlBase {
         this.gender(dependentName).selectByText(dataObj.gender);
         this.month(dependentName).setText(Utility.getDatePart(dataObj.DOB, 'MONTH'));
         this.date(dependentName).setText(Utility.getDatePart(dataObj.DOB, 'DATE'));
-        this.year(dependentName).setText(Utility.getDatePart(dataObj.DOB, 'YEAR'));
+        this.year(dependentName).setText(Utility.getDatePart(dataObj.DOB, 'YEAR') + '\t');
     };
 
     getValidationMessages(dependentName) {
         var promises = [];
         promises.push(this.errorRelationship(dependentName).getText());
         promises.push(this.errorFirstName(dependentName).getText());
-        promises.push(this.errorLastName(dependentName).getText());      
+        promises.push(this.errorLastName(dependentName).getText());
         promises.push(this.errorMonth(dependentName).getText());
         promises.push(this.errorDay(dependentName).getText());
         promises.push(this.errorYear(dependentName).getText());
@@ -169,7 +171,7 @@ class DependentPage extends ControlBase {
         var promises = [];
         promises.push(this.serErrorRelationship.getText());
         promises.push(this.serErrorFirstName.getText());
-        promises.push(this.serErrorLastName.getText());       
+        promises.push(this.serErrorLastName.getText());
         promises.push(this.serErrorMonth.getText());
         promises.push(this.serErrorDay.getText());
         promises.push(this.serErrorYear.getText());

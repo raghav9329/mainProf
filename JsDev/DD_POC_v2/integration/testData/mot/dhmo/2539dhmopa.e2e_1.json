@@ -18,8 +18,8 @@
     "ariainvalid": "success",
     "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
     "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
-    "facilityoption1": "Kayvan Kafayi DDS",
-    "facilityoption2": "Van Ness Dental Group",
+    "facilityoption1": "Beaver Falls Dental Center",
+    "facilityoption2": "Katsur Dental & Orthodontics",
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
@@ -59,9 +59,9 @@
         "DOB": "05-10-1997"
     },
 
-    
+
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
-    
+
     "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
     "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
     "nameOnCard": "Peter Heins",
@@ -69,38 +69,38 @@
     "expMonth": "05",
     "expYear": "2020",
     "securityCode": "125",
-    "planName": "DeltaCare® USA  PAA60 Individual/Family Dental Program",
+    "planName": "DeltaCare® USA PAA60 Individual/Family Dental Program",
     "thanksMsg": "Thank you for taking our survey. Your response is very important to us.",
     "planSummary": {
         "Deductible_per_calendar": "$0",
         "Max_per_calendar": "$0",
-        "Officevisit": "$15",
+        "Officevisit": "$10",
         "Exams": "$0",
         "Xrays": "$0",
-        "Cleanings": "$25",
-        "Fillings": "$30 - $125",
-        "Rootcanals": "$240 - $400",
-        "Gumtreatment": "$70 - $650",
-        "Extractions": "$45 - $210",
-        "Denturerepair": "$55",
-        "Crowns": "$325 - $425",
-        "Orthodontics": "$2,700 - $2,900"
+        "Cleanings": "$20",
+        "Fillings": "$25-$120",
+        "Rootcanals": "$240-$400",
+        "Gumtreatment": "$64-$650",
+        "Extractions": "$30-$230",
+        "Denturerepair": "$40-$75",
+        "Crowns": "$125-$495",
+        "Orthodontics": "$1400-$2800"
     },
     "primaryFacility": {
-          "facilityName": "Kayvan Kafayi DDS",
-        "street": "450 Sutter St Rm 1433",
-        "city": "San Francisco",
-        "region": "CA",
-        "postalCode": "941084010",
-        "telephone": "4153982360"
+        "facilityName": "Beaver Falls Dental Center",
+        "street": "1302 7th Ave",
+        "city": "Beaver Falls",
+        "region": "PA",
+        "postalCode": "15010-4217",
+        "telephone": "724.843.1386"
     },
     "dependent_Facility_1": {
-      "facilityName": "Van Ness Dental Group",
-        "street": "2243 Van Ness Ave Ste 201",
-        "city": "San Francisco",
-        "region": "CA",
-        "postalCode": "941092504",
-        "telephone": "4154412098"
+        "facilityName": "Katsur Dental & Orthodontics",
+        "street": "7 A Walmart Plaza Rte 18",
+        "city": "Monaca",
+        "region": "PA",
+        "postalCode": "15061",
+        "telephone": "724.728.3300"
     }
 
 }

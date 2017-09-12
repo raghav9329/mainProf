@@ -101,7 +101,8 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.getProvidersCount().then(function(refineCount) {
                     	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
-                        providerDetails.verifyProviderLanguage(TestData.Language1, 1)
+                        providerDetails.verifyProviderLanguage(TestData.Language1, 1);
+
                     });
                 });
             });

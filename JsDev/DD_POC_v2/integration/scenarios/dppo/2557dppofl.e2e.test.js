@@ -9,9 +9,9 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dppo/2557dppofl.e2e.json');
+var TestData = require('../../testData/' + testDataEnv + '/dppo/2557dppofl.e2e.json');
 
-describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
+describe('DPPO_FL:2557 Direct PPO FL WorkFlow', function() {
     var effectiveDate, premiumAmount;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
@@ -20,12 +20,15 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
     it('E2E_1 : Should complete the Enroll Page', function() {
+        TestData.firstname = Utility.randomNo('String', 5);
+        TestData.lastname = Utility.randomNo('String', 5);
+        TestData.ssn = Utility.randomNo('Number', 10);
         enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
             effectiveDate = sdate;
             console.log("sdate============" + sdate);
         })
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
-        console.log('2546_1 complete')
+        console.log('2557_1 complete')
     });
 
     //Enter the valid Test Data in the Personal Information page and Click n the Next
@@ -36,11 +39,11 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
         perInfo.phoneNumberemail(TestData);
         perInfo.next.click();
         expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
-        console.log('2546_2 complete')
+        console.log('2557_2 complete')
 
     });
 
-    
+
 
     it('E2E_3 :should add 2 Deps, child & spouse', function() {
         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
@@ -51,7 +54,7 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
         depInfo.continue.click();
         expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
-        console.log('2546_3 complete')
+        console.log('2557_3 complete')
 
     });
 
@@ -64,8 +67,9 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
+        Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-        console.log('2546_5 complete')
+        console.log('2557_5 complete')
     });
 
     //Verify and Validate the Application Number and Plan Name in the Receipt Page
@@ -81,7 +85,7 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
         //Effective date is fixed under drop down and the Coverage start date are unequal
         expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
         expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
-        console.log('2546_6 complete')
+        console.log('2557_6 complete')
     });
     it('E2E_7 :Should display plansummary', function() {
         var plansummary = TestData.planSummary;
@@ -99,7 +103,7 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
         expect(receipt.getPlanSummaryByKey('Denture repair').getText()).toEqual(plansummary.Denturerepair);
         expect(receipt.getPlanSummaryByKey('Crowns').getText()).toEqual(plansummary.Crowns);
         expect(receipt.getPlanSummaryByKey('Orthodontics').getText()).toEqual(plansummary.Orthodontics);
-        console.log('2546_7 complete')
+        console.log('2557_7 complete')
 
     });
     it('E2E_8 :Should display primary applicant', function() {
@@ -108,13 +112,7 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
-            expect(facilitydata.facilityName).toEqual(facility.facilityName);
-            expect(facilitydata.street).toEqual(facility.street);
-            expect(facilitydata.city).toEqual(facility.city);
-            expect(facilitydata.region).toEqual(facility.region);
-            expect(facilitydata.postalCode).toEqual(facility.postalCode);
-            expect(facilitydata.telephone).toEqual(facility.telephone);
-            console.log('2546_8 complete')
+            console.log('2557_8 complete')
         });
     });
 
@@ -122,13 +120,7 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
         var facility = TestData.dependent_Facility_1;
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.Spouse.firstName);
-            expect(facilitydata.facilityName).toEqual(facility.facilityName);
-            expect(facilitydata.street).toEqual(facility.street);
-            expect(facilitydata.city).toEqual(facility.city);
-            expect(facilitydata.region).toEqual(facility.region);
-            expect(facilitydata.postalCode).toEqual(facility.postalCode);
-            expect(facilitydata.telephone).toEqual(facility.telephone);
-            console.log('2546_9 complete')
+            console.log('2557_9 complete')
         });
     });
 

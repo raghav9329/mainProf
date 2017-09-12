@@ -59,8 +59,6 @@ class DirectorySearchPage extends ControlBase {
             browser.sleep(2000);
             return self.homeAddressfromGoogleApi.getElements().filter(function(elem, index) {
                 return elem.getText().then(function(text) {
-                    console.log("text==" + text);
-                    console.log("homeaddress==" + homeaddress);
                     return text === homeaddress;
                 });
             }).first().clickIt();

@@ -15,9 +15,9 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dppo/2574dppopa.e2e.json');
+var TestData = require('../../testData/' + testDataEnv + '/dppo/2574dppopa.e2e.json');
 
-describe('dppo.XXXX_E2EPayCCAnn_TwoDep', function() {
+describe('DPPO_PA:2574_E2EPayCCAnn_TwoDep', function() {
     var effectiveDate;
     beforeAll(function() {
         console.log(' ');
@@ -29,6 +29,9 @@ describe('dppo.XXXX_E2EPayCCAnn_TwoDep', function() {
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
     it('E2E_1 : Should complete the Enroll Page', function() {
+        TestData.firstname = Utility.randomNo('String', 5);
+        TestData.lastname = Utility.randomNo('String', 5);
+        TestData.ssn = Utility.randomNo('Number', 10);
         enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
             effectiveDate = sdate;
             expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
@@ -72,6 +75,7 @@ describe('dppo.XXXX_E2EPayCCAnn_TwoDep', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
+        Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('E2E_4: Complete');
     });
@@ -88,7 +92,7 @@ describe('dppo.XXXX_E2EPayCCAnn_TwoDep', function() {
         })
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
         expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
-        expect(receipt.totalPaid.getText()).toEqual('$202.14');
+        expect(receipt.totalPaid.getText()).toEqual(TestData.Amount);
         console.log('E2E_5: Complete');
     });
     it('E2E_6 :Should display plansummary', function() {

@@ -98,7 +98,7 @@
 
         "HAddress_SplChar": {
             "Home": "^&&$#@*&^",
-            "ErrorMsg": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
+            "ErrorMsg": "The street address entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
             "ErrorMsg0": "Please check the street number to match the city, state and zipcode",
             "ErrorMsg1": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
         },

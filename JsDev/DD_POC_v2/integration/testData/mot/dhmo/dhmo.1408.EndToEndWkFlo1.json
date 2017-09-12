@@ -64,8 +64,8 @@
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",
         "region": "CA",
-        "postalCode": "941084010",
-        "telephone": "4153982360"
+        "postalCode": "94108-4010",
+        "telephone": "415.398.2360"
     },
     
     "dependent_facilityoption2": {
@@ -73,8 +73,8 @@
         "street": "2243 Van Ness Ave Ste 201",
         "city": "San Francisco",
         "region": "CA",
-        "postalCode": "941092504",
-        "telephone": "4154412098"
+        "postalCode": "94109-2504",
+        "telephone": "415.441.2098"
     },
     
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],

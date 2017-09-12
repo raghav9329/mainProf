@@ -286,7 +286,7 @@
                 "ExecutionFlag": true
             },
             "Gender_Nottosay": {
-                "Gender": "Prefer Not To Say",
+                "Gender": "Prefer not to say",
                 "ErrorMsg": "",
                 "ServerMsg": "",
                 "ExecutionFlag": true

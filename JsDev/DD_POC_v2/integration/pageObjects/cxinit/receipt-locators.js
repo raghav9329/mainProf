@@ -15,11 +15,13 @@ class ReceiptLocators {
         this.queryAnswer = by.css('textarea.sg-input.sg-input-essay');
         this.thanksMsg=by.css('div.sg-instructions');
         this.feedbackFrame = function() {
-            return browser.driver.findElement(protractor.By.xpath('//iframe'));              
+            return browser.driver.findElement(protractor.By.xpath('//iframe[contains(@src,"Enrollment-Experience")]'));              
         };
         this.applicants = by.id('applicantPanel');
         this.planSummary = by.xpath('//*[@id="summaryPanel"]/div[1]');
         this.deltaRating = function(rating) {
+
+           // return by.xpath('(//td[contains(@class,"sg-cell-data")])[' + rating + ']')
             return by.xpath('(//input[@class="sg-input sg-input-radio"])[' + rating + ']');
         };
         this.dependentName = function(dependent, dependentNo) {

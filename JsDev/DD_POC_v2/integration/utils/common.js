@@ -386,7 +386,7 @@ var Utility = function() {
                 case 'STRING':
                     var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                     for (var i = 0; i < length; i++) {
-                        oresult = oresult + str.charAt(Math.floor(Math.random() * str.length));
+                        oresult = str.charAt(Math.floor(Math.random() * str.length));
                     }
                     logger.info('random string of length ' + length + ' for is :' + oresult);
                     break;

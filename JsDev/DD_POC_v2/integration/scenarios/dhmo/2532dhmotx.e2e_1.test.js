@@ -8,7 +8,7 @@ var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/'+testDataEnv+'/dhmo/2532dhmotx.e2e.json');
 
-describe('Direct HMO E2E WorkFlows for Texas', function() {
+describe('DHMO_TX:2532 E2E WorkFlows for Texas', function() {
     var effectiveDate, premiumAmount;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
@@ -17,6 +17,8 @@ describe('Direct HMO E2E WorkFlows for Texas', function() {
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
     it('E2E_1 : Should complete the Enroll Page', function() {
+        TestData.firstname = Utility.randomNo('String', 5);
+        TestData.lastname = Utility.randomNo('String', 5);
         enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
             effectiveDate = sdate;
             console.log("sdate============" + sdate);
@@ -81,6 +83,7 @@ describe('Direct HMO E2E WorkFlows for Texas', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('XXXX_6 complete')
     });

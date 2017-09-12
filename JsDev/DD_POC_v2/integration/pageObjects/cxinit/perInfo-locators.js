@@ -15,7 +15,8 @@ class PersonalInfoPageLocators {
         this.fieldBdDD = by.id('day');
         this.errMsgBdDD = by.id('day-error');
         this.fieldBdYyyy = by.id('year');
-        this.errMsgBdYyyy = by.id('year-error');
+        this.errMsgBdYyyy = by.id('birthdate-fieldset-error');
+        this.errMsgYear=by.id('year-error') //year-error
         this.errBirthDate = by.css('label.error.birthdate-error');
         this.fieldSsn = by.id('ssn');
         this.errMsgSsn = by.id('ssn-error');

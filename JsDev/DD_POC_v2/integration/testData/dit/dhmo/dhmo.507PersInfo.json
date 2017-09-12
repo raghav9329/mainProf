@@ -280,13 +280,13 @@
                 "ExecutionFlag": true
             },
             "Gender_NonBinary": {
-                "Gender": "Non Binary",
+                "Gender": "Nonbinary",
                 "ErrorMsg": "",
                 "ServerMsg": "",
                 "ExecutionFlag": true
             },
             "Gender_Nottosay": {
-                "Gender": "Prefer Not To Say",
+                "Gender": "Prefer not to say",
                 "ErrorMsg": "",
                 "ServerMsg": "",
                 "ExecutionFlag": true

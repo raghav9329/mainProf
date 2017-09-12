@@ -71,22 +71,22 @@
 
     "dependent_facilityoption1":
     {
-        "facilityName": "Kayvan Kafayi DDS",
-        "street": "450 Sutter St Rm 1433",
-        "city": "San Francisco",
+        "facilityName": "Modern Dentistry&Ortho",
+        "street": "2085 Gellert Blvd Ste 9",
+        "city": "Daly City",
         "region": "CA",
-        "postalCode": "941084010",
-        "telephone": "4153982360"
+        "postalCode": "94015-2841",
+        "telephone": "650.878.3171"
     },
 
     "dependent_facilityoption2":
     {
-        "facilityName": "Van Ness Dental Group",
-        "street": "2243 Van Ness Ave Ste 201",
-        "city": "San Francisco",
+        "facilityName": "SecondaryApplicantService-1",
+        "street": "2085 Gellert Blvd Ste 9",
+        "city": "Daly City",
         "region": "CA",
-        "postalCode": "941092504",
-        "telephone": "4154412098"
+        "postalCode": "94015-2841",
+        "telephone": "650.878.3171"
     },
 
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],

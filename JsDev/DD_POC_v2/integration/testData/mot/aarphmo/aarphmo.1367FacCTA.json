@@ -60,6 +60,14 @@
         "gender": "Female",
         "DOB": "05-10-1995"
     },
+    "primaryFacility": {
+        "facilityName": "Kayvan Kafayi DDS",
+        "street": "2085 Gellert Blvd Ste 9",
+        "city": "Daly City",
+        "region": "CA",
+        "postalCode": "94015-2841",
+        "telephone": "650.878.3171"
+    },
 
 
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"]

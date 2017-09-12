@@ -18,9 +18,9 @@
     "ariainvalid": "success",
     "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
     "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
-    "facilityoption1": "Kayvan Kafayi DDS",
-    "facilityoption2": "Van Ness Dental Group",
-    "facilityoption3": "Van Ness Dental Group",
+    "facilityoption1": "Brident Dental and Orthodontics",
+    "facilityoption2": "Culebra Smiles & Ortho",
+    "facilityoption3": "Brident Dental and Orthodontics",
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
@@ -73,33 +73,33 @@
     "planSummary": {
         "Deductible_per_calendar": "$0",
         "Max_per_calendar": "$0",
-        "Officevisit": "$15",
+        "Officevisit": "$10",
         "Exams": "$0",
         "Xrays": "$0",
-        "Cleanings": "$25",
-        "Fillings": "$30 - $125",
-        "Rootcanals": "$240 - $400",
-        "Gumtreatment": "$70 - $650",
-        "Extractions": "$45 - $210",
-        "Denturerepair": "$55",
-        "Crowns": "$325 - $425",
-        "Orthodontics": "$2,700 - $2,900"
+        "Cleanings": "$20",
+        "Fillings": "$25-$120",
+        "Rootcanals": "$240-$400",
+        "Gumtreatment": "$64-$650",
+        "Extractions": "$30-$230",
+        "Denturerepair": "$40-$75",
+        "Crowns": "$125-$495",
+        "Orthodontics": "75%"
     },
     "primaryFacility": {
-        "facilityName": "Kayvan Kafayi DDS",
-        "street": "450 Sutter St Rm 1433",
-        "city": "San Francisco",
-        "region": "CA",
-        "postalCode": "941084010",
-        "telephone": "4153982360"
+        "facilityName": "Brident Dental and Orthodontics",
+        "street": "8803 State Highway 151 Ste 106",
+        "city": "San Antonio",
+        "region": "TX",
+        "postalCode": "78251-4613",
+        "telephone": "210.305.5895"
     },
     "dependent_Facility_1": {
-        "facilityName": "Van Ness Dental Group",
-        "street": "2243 Van Ness Ave Ste 201",
-        "city": "San Francisco",
-        "region": "CA",
-        "postalCode": "941092504",
-        "telephone": "4154412098"
+        "facilityName": "Culebra Smiles & Ortho",
+        "street": "11010 West FM 471",
+        "city": "San Antonio",
+        "region": "TX",
+        "postalCode": "78253",
+        "telephone": "210.688.9386"
     }
 
 }

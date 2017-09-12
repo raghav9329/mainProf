@@ -5,9 +5,9 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dppo/2532dppotx.e2e.json');
+var TestData = require('../../testData/' + testDataEnv + '/dppo/2532dppotx.e2e.json');
 
-describe('dppo.2532_E2EPayCCAnn_TwoDep', function() {
+describe('DPPO_TX:2532_E2EPayCCAnn_TwoDep', function() {
     var effectiveDate;
     beforeAll(function() {
         console.log(' ');
@@ -19,6 +19,9 @@ describe('dppo.2532_E2EPayCCAnn_TwoDep', function() {
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
     it('E2E_1 : Should complete the Enroll Page', function() {
+        TestData.firstname = Utility.randomNo('String', 5);
+        TestData.lastname = Utility.randomNo('String', 5);
+        TestData.ssn = Utility.randomNo('Number', 10);
         enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
             effectiveDate = sdate;
             expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
@@ -62,6 +65,7 @@ describe('dppo.2532_E2EPayCCAnn_TwoDep', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('E2E_4: Complete');
     });

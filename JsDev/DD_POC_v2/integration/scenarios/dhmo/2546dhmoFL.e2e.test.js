@@ -9,9 +9,9 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dhmo/2546dhmoFL.e2e.json');
+var TestData = require('../../testData/'+testDataEnv+'/dhmo/2546dhmofl.e2e.json');
 
-describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
+describe('DHMO_FL:2546 Direct HMO WorkFlows -1', function() {
     var effectiveDate, premiumAmount;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
@@ -20,8 +20,11 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
     it('E2E_1 : Should complete the Enroll Page', function() {
+        TestData.firstname = Utility.randomNo('String', 5);
+        TestData.lastname = Utility.randomNo('String', 5);
         enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
             effectiveDate = sdate;
+ 
             console.log("sdate============" + sdate);
         })
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
@@ -40,22 +43,22 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
 
     });
 
-    
+
 
     it('E2E_3 :should add 2 Deps, child & spouse', function() {
         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
-        depInfo.fillDependent('Dependent1', TestData.Spouse);
-        depInfo.fillDependent('Dependent2', TestData.child);
+        depInfo.fillDependent('Dependent1', TestData.Spouse, false);
+        depInfo.fillDependent('Dependent2', TestData.child, false);
         depInfo.next.click();
-        Utility.delay(maxWait);
         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
         depInfo.continue.click();
+        Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
         console.log('2546_3 complete')
 
     });
 
-    
+
 
     //Verify and Select the Facility for the Primary and Dependents
 
@@ -70,31 +73,23 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
     });
 
 
-    //Verify and Select the Facility for the Dependent
-
-    it('E2E_5 :should select fac for deps', function() {
-        facilities.selectFacility(TestData.facilityoption2);
-        facilities.next.click();
-        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
-        console.log('2546_5 complete')
-    });
-
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
 
-    it('E2E_6 :should fill out pay details', function() {
+    it('E2E_5 :should fill out pay details', function() {
         payment.billingChkBox.check();
         payment.fillpayment(TestData);
         payment.summaryTotalPrice.getText().then(function(premium) {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-        console.log('2546_6 complete')
+        console.log('2546_5 complete')
     });
 
     //Verify and Validate the Application Number and Plan Name in the Receipt Page
 
-    it('E2E_7 :Should submit delta rating', function() {
+    it('E2E_6 :Should submit delta rating', function() {
         receipt.submitRating(TestData.deltaRating);
         receipt.answerQuery(TestData.queryAnswer);
         expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
@@ -105,9 +100,9 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
         //Effective date is fixed under drop down and the Coverage start date are unequal
         expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
         expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
-        console.log('2546_7 complete')
+        console.log('2546_6 complete')
     });
-    it('E2E_8 :Should display plansummary', function() {
+    it('E2E_7 :Should display plansummary', function() {
         var plansummary = TestData.planSummary;
         receipt.planSummary.click();
         expect(receipt.getPlanSummaryByKey('Deductible per calendar year per person').getText()).toEqual(plansummary.Deductible_per_calendar);
@@ -123,10 +118,10 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
         expect(receipt.getPlanSummaryByKey('Denture repair').getText()).toEqual(plansummary.Denturerepair);
         expect(receipt.getPlanSummaryByKey('Crowns').getText()).toEqual(plansummary.Crowns);
         expect(receipt.getPlanSummaryByKey('Orthodontics').getText()).toEqual(plansummary.Orthodontics);
-        console.log('2546_8 complete')
+        console.log('2546_7 complete')
 
     });
-    it('E2E_9 :Should display primary applicant', function() {
+    it('E2E_8 :Should display primary applicant', function() {
         Utility.scrollToBottom();
         var facility = TestData.primaryFacility;
         receipt.applicants.click();
@@ -138,11 +133,11 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
             expect(facilitydata.region).toEqual(facility.region);
             expect(facilitydata.postalCode).toEqual(facility.postalCode);
             expect(facilitydata.telephone).toEqual(facility.telephone);
-            console.log('2546_9 complete')
+            console.log('2546_8 complete')
         });
     });
 
-    it('E2E_10:Should display dependent applicant', function() {
+    it('E2E_9:Should display dependent applicant', function() {
         var facility = TestData.dependent_Facility_1;
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.Spouse.firstName);
@@ -152,7 +147,7 @@ describe('CXINIT-2546 Direct HMO WorkFlows -1', function() {
             expect(facilitydata.region).toEqual(facility.region);
             expect(facilitydata.postalCode).toEqual(facility.postalCode);
             expect(facilitydata.telephone).toEqual(facility.telephone);
-            console.log('2546_10 complete')
+            console.log('2546_9 complete')
         });
     });
 
