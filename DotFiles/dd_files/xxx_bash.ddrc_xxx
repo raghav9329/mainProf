@@ -1,4 +1,4 @@
-echo "/c/protram files/git/etc/lattop_bash.bashrc sourced "
+echo "jo mama"
 echo ""
 
 set -o vi
@@ -10,35 +10,26 @@ alias gs='git status'
 alias ga='git add'
 alias gp='git push'
 alias gcm='git commit -m'
-alias gitpul='git pull'
 
 currentSourceFile='/c/DD_Repos/dd-cx-test/integration/scenarios/CAA55PlanSelect.test.js'
 alias gacurr='git add $currentSourceFile'
 
 #alias vidd='vi /c/program\ files/git/etc/bash.bashrc'
-#alias vidd='vi /c/program\ files/git/etc/bash.ddrc'
-alias vidd='vi /c/program\ files/git/etc/laptop_bash.ddrc'
+alias vidd='vi  /c/program\ files/git/etc/bash.ddrc'
+alias viddd='vi /c/program\ files/git/etc/laptop_bash.ddrc'
 
 #alias s.c='set mypwd=`pwd`;pushd $mypwd ;source /c/program\ files/git/etc/bash.bashrc; popd'
 alias s.c='source /c/program\ files/git/etc/bash.bashrc'
-alias ss.cc='source /c/program\ files/git/etc/laptop_bash.bashrc'
-alias s.cc='s.c ; gotestrepo; gorepo'
-
+alias s.cc='s.c ; gotestrepo'
 alias cls='clear'
-
 alias gomark='cd /c/Mark'
-
 alias gotestscen='cd /c/DD_Repos/dd-cx-test/integration/scenarios'
-
 alias goscen='cd /c/DD_Repos/dd-cx-test/integration/scenarios'
-
+alias goddcxtst='cd /c/DD_Repos/dd-cx-test'
 alias gotestrepo='goddcxtst'
-alias gorepo='cd /c/DD_repos/dd-cx-test'
-
 alias goprepo='cd /p/DD_Repos/dd-cx-test'
 
 alias gojsdev='cd /c/mark/JsDev/DD_POC_v2'
-
 alias gopomlab='cd /c/mark/JsDev/POM_lab'
 
 alias ppcc='gotestrepo; echo "running Chrome"; protractor protractor-chrome.conf.js'
