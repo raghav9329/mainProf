@@ -91,6 +91,7 @@ describe('AARPHMO:2060 AARP_HMO WorkFlows_4 :', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('2060_6 complete');
     });

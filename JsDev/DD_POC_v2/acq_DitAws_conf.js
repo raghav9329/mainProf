@@ -14,6 +14,21 @@ exports.config = {
         independent: 'integration/scenarios/dhmo/1754DirHMO_WrkFlow5.test.js',
 
         allCxinit: 'integration/scenarios/dhmo/*.test.js',
+		
+		acceptance: [
+		    'integration/scenarios/dhmo/507PersInfo.test.js',
+            'integration/scenarios/dhmo/1357DepChildAge.test.js',		 
+            'integration/scenarios/aarphmo/507PersInfo.test.js',	
+            'integration/scenarios/aarphmo/1357DepChildAge.test.js',
+            'integration/scenarios/dhmo/1461.EndToEndWkFlo2.test.js',
+            'integration/scenarios/dhmo/1746DirHMO_WrkFlo1.test.js',
+            'integration/scenarios/dhmo/1753DirHMO_WrkFlo4.test.js',
+            'integration/scenarios/aarphmo/2061AarpHMO_WrkFlow5.test.js',
+            'integration/scenarios/aarphmo/2062AarpHMO_WrkFlow6.test.js'
+            'integration/scenarios/dppo/2320_E2EPayCCMon_ThreeDep.test.js',
+            'integration/scenarios/aarpppo/2092_E2EPayAnn_TwoDep.test.js',			
+            'integration/scenarios/aarpppo/2313_E2EPayQua_ThreeDep.test.js'			
+		], 
 
         pers1: [
             'integration/scenarios/dhmo/471PersInfo.test.js',

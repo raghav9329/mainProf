@@ -91,8 +91,8 @@ exports.config = {
         maxWait = 120;
         longWait = 1200;
         PAGELOADTIME = 60000;
-
-		isExecutionFromUI = false;
+	isExecutionFromUI = false;	
+	testDataEnv='mot'
         //browser.manage().window().maximize();
         browser.manage().window().setSize(1050,1250);
         browser.executeScript("document.body.style.zoom='50%';");

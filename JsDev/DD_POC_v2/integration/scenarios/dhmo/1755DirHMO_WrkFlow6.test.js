@@ -7,7 +7,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dhmo/Direct_HMO_WorkFlows_6.json');
+var TestData = require('../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_6.json');
 
 describe('DHMO:1755_DirHMO WrkFlo_6', function() {
     var premiumAmount, depPrice, effectiveDate;
@@ -141,13 +141,15 @@ describe('DHMO:1755_DirHMO WrkFlo_6', function() {
             expect(perInfo.enrollStatus('Receipt').getCssValue('background-color')).toEqual(TestData.gray);
 
             payment.billingChkBox.check();
-            payment.fillpayment(TestData);
             payment.summaryTotalPrice.getText().then(function(premium) {
                 premiumAmount = premium;
             });
-            payment.purchaseNow.click();
-              Utility.delay(maxWait);
-            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+            if (testExecutionEnv != 'production') {
+                payment.fillpayment(TestData);
+                payment.purchaseNow.click();
+                Utility.delay(maxWait);
+                expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+            }
         });
         console.log('1755_6 of 10 Complete')
     });

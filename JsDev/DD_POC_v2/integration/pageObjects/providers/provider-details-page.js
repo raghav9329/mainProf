@@ -72,6 +72,19 @@ class ProviderDetailsPage extends ControlBase {
                 return element(by.css('a[arialabel="Next"]')).isDisplayed().then(function(displayed) {
                     var providersList = element.all(by.css('li.provider-listing'));
                     providersList.reduce(function(prev, ele, index) {
+//<<<<<<< HEAD
+//                        var viewno = Number(index) + 1;
+//                        if (iterations > count) {
+//                            element(by.xpath('(//a[normalize-space(text()) = "View"])[' + viewno + ']')).click().then(function() {
+//                                count = count + 1;
+//                                expect(self.providerLanguage.getText()).toContain(language);
+//                                self.backToSearchResults.click();
+//                                browser.sleep(3000);
+//                                //browser.sleep(300);
+//                            })
+//                        }
+//                    });
+//=======
                             var viewno = Number(index) + 1;
                             if (iterations > count) {
                                 element(by.xpath('(//a[normalize-space(text()) = "View"])[' + viewno + ']')).click().then(function() {
@@ -87,7 +100,8 @@ class ProviderDetailsPage extends ControlBase {
                                     browser.sleep(3000);
                                 })
                             }
-                        })
+                        });
+//>>>>>>> 1fb010da7d6773c922ae64551558e7d6201f2f94
                     if (displayed) {
                         if (iterations > count1) {
                             return element(by.linkText("Next")).click().then(function() {

@@ -59,6 +59,7 @@ describe('AARPHMO:2090 AARP HMO WorkFlows -1', function() {
     it('E2E_4 :should select fac for primary', function() {
         facilities.selectFacility(TestData.facilityoption1);
         facilities.next.click();
+        Utility.delay(minWait);
         console.log('2090_4 complete');
     });
 
@@ -81,6 +82,7 @@ describe('AARPHMO:2090 AARP HMO WorkFlows -1', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('2090_6 complete');
     });

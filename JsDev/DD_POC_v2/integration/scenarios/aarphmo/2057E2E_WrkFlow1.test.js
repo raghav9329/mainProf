@@ -84,6 +84,7 @@ describe('AARPHMO:2057: E2E workflow 1', function() {
         payment.fillpayment(TestData);
          payment.frequencyAnnualy.select();
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('2057_6 complete')
     });

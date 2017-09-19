@@ -74,6 +74,7 @@ describe('AARPHMO:2061 AARP_HMO_WorkFlows_5:', function() {
             expect(facilities.zipCode.isPresentAndDisplayed()).toBeTruthy();
             facilities.zipCode.setText(data.zipcode);
             facilities.search.click();
+            Utility.delay(minWait);
             facilities.selectFacility(data.facility);
             facilities.next.click();
             console.log('2061_3 complete');
@@ -92,6 +93,7 @@ describe('AARPHMO:2061 AARP_HMO_WorkFlows_5:', function() {
         payment.fillpayment(TestData);
          payment.frequencyAnnualy.select();
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('2061_6 complete');
     });

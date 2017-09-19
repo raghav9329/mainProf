@@ -24,6 +24,7 @@ class ReceiptPage extends ControlBase {
         this.totalPaid = new Label(this.pageObjects.totalPaid);
         this.submit = new Button(this.pageObjects.submit);
         this.printReceipt = new LinkText(this.pageObjects.printReceipt);
+        this.saveCompletedApplication = new LinkText(this.pageObjects.saveCompletedApplication);        
         this.planName = new Label(this.pageObjects.planName);
         this.thanksMsg = new Label(this.pageObjects.thanksMsg);
         this.queryAnswer = new TextBox(this.pageObjects.queryAnswer);

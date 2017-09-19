@@ -102,10 +102,10 @@ exports.config = {
             'integration/scenarios/aarpppo/2315_E2EPayMon_ThreeDep.test.js'
         ],
         dpe2e: [
-            'integration/scenarios/dppo/2532dppotx.e2e_1.test.js',
-            'integration/scenarios/dppo/2557dppofl.e2e.test.js',
             'integration/scenarios/dppo/2565dppotx.e2e.test.js',
+            'integration/scenarios/dppo/2564dppotx.e2e.test.js',
             'integration/scenarios/dppo/2574dppopa.e2e.test.js',
+            'integration/scenarios/dppo/2557dppofl.e2e.test.js',
             'integration/scenarios/dppo/2317_E2EPayCCAnn_TwoDep.test.js',
             'integration/scenarios/dppo/2318_E2EPayCCAnn_ThreeDep.test.js',
             'integration/scenarios/dppo/2319_E2EPayCCMon_TwoDep.test.js',
@@ -130,19 +130,19 @@ exports.config = {
             'integration/scenarios/dhmo/1755DirHMO_WrkFlow6.test.js',
             'integration/scenarios/dhmo/1235E2E_POM_Workflow.js',
             'integration/scenarios/dhmo/addDep_Enroll.DeleteDep_depPage.js',
-            'integration/scenarios/dhmo/2532dhmotx.e2e_1.test.js',
-            'integration/scenarios/dhmo/2539dhmopa.e2e_1.test.js',
-            'integration/scenarios/dhmo/2546FL.e2e.test.js'
+            'integration/scenarios/dhmo/2532dhmotx.e2e.test.js',
+            'integration/scenarios/dhmo/2539dhmopa.e2e.test.js',
+            'integration/scenarios/dhmo/2546dhmoFL.e2e.test.js'
         ],
-        
+
         states: [
-            'integration/scenarios/dppo/2532dppotx.e2e_1.test.js',
-            'integration/scenarios/dppo/2557dppofl.e2e.test.js',
+            'integration/scenarios/dhmo/2532dhmotx.e2e.test.js',
+            'integration/scenarios/dhmo/2539dhmopa.e2e.test.js',
+            'integration/scenarios/dhmo/2546dhmoFL.e2e.test.js',
             'integration/scenarios/dppo/2565dppotx.e2e.test.js',
+            'integration/scenarios/dppo/2564dppotx.e2e.test.js',
             'integration/scenarios/dppo/2574dppopa.e2e.test.js',
-            'integration/scenarios/dhmo/2532dhmotx.e2e_1.test.js',
-            'integration/scenarios/dhmo/2539dhmopa.e2e_1.test.js',
-            'integration/scenarios/dhmo/2546FL.e2e.test.js'
+            'integration/scenarios/dppo/2557dppofl.e2e.test.js'
         ],
 
         hclfocus: [ // I will add direct PPO later in week of july 17 - 21
@@ -154,9 +154,9 @@ exports.config = {
             'integration/scenarios/dhmo/1755DirHMO_WrkFlow6.test.js',
             'integration/scenarios/051217_E2E_POM_Workflow.js',
             'integration/scenarios/addDep_Enroll.DeleteDep_depPage.js',
-            'integration/scenarios/dhmo/2532dhmotx.e2e_1.test.js',
-            'integration/scenarios/dhmo/2539dhmopa.e2e_1.test.js',
-            'integration/scenarios/dhmo/2546FL.e2e.test.js',
+            'integration/scenarios/dhmo/2532dhmotx.e2e.test.js',
+            'integration/scenarios/dhmo/2539dhmopa.e2e.test.js',
+            'integration/scenarios/dhmo/2546dhmoFL.e2e.test.js',
 
 
             'integration/scenarios/aarphmo/2057E2E_WrkFlow1.test.js',
@@ -179,10 +179,10 @@ exports.config = {
             'integration/scenarios/aarpppo/2314_E2EPayMon_TwoDep.test.js',
             'integration/scenarios/aarpppo/2315_E2EPayMon_ThreeDep.test.js',
 
-            'integration/scenarios/dppo/2532dppotx.e2e_1.test.js',
-            'integration/scenarios/dppo/2557dppofl.e2e.test.js',
             'integration/scenarios/dppo/2565dppotx.e2e.test.js',
+            'integration/scenarios/dppo/2564dppotx.e2e.test.js',
             'integration/scenarios/dppo/2574dppopa.e2e.test.js',
+            'integration/scenarios/dppo/2557dppofl.e2e.test.js',
             'integration/scenarios/dppo/2317_E2EPayCCAnn_TwoDep.test.js',
             'integration/scenarios/dppo/2318_E2EPayCCAnn_ThreeDep.test.js',
             'integration/scenarios/dppo/2319_E2EPayCCMon_TwoDep.test.js',
@@ -207,7 +207,8 @@ exports.config = {
     params: {
         //  baseUrl: '' ,  // running this allows you to enter URL at command line
         //baseUrl: 'https://aw-lx0176.deltadev.ent:3000/enroll/',
-        baseUrl: 'http://aw-lx0101.deltadev.ent',
+        // baseUrl: 'http://aw-lx0101.deltadev.ent',
+        baseUrl: 'https://deltadentalins.com'
         exeInspDelay: '', // Command Line controllable sleep variable for running Debug Inspections
         // baseUrl: 'https://mot.deltadentalins.com/enroll/delta/test',
         //baseUrl: 'https://mot.deltadentalins.com',
@@ -222,7 +223,8 @@ exports.config = {
         PAGELOADTIME = 60000;
         isExecutionFromUI = true;
         testDataEnv = 'dit';
-        //browser.manage().window().maximize();
+        testExecutionEnv = 'staging'
+            //browser.manage().window().maximize();
         browser.manage().window().setSize(1050, 1250);
         browser.ignoreSynchronization = true;
         folderName = (new Date()).toString().split('').splice(1, 4).join('');
@@ -252,7 +254,15 @@ exports.config = {
         maxInstances: 4,
         //maxInstances: 1,
         chromeOptions: {
-            'args': ['disable-infobars']
+            'args': ["disable-infobars"],
+            prefs: {
+                download: {
+                    'prompt_for_download': false,
+                    'directory_upgrade': true,
+                    'default_directory': process.cwd() + './PDFDownloads/'
+                }
+            }
+            //'args': ["disable-infobars", "--headless", "--disable-gpu"]
         }
         // ======================================= 
         //  browserName: 'firefox',

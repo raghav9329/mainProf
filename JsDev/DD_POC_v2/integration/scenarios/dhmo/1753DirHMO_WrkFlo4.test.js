@@ -11,7 +11,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dhmo/Direct_HMO_WorkFlows_4.json');
+var TestData = require('../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_4.json');
 
 describe('DHMO:1753 Direct_HMO WorkFlows_4 :', function() {
     var effectiveDate;
@@ -53,7 +53,7 @@ describe('DHMO:1753 Direct_HMO WorkFlows_4 :', function() {
         depInfo.fillDependent('Dependent2', TestData.child1, false);
         depInfo.fillDependent('Dependent3', TestData.child2, false);
         depInfo.next.click();
-           Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
+        Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
         depInfo.continue.click();
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
@@ -67,7 +67,7 @@ describe('DHMO:1753 Direct_HMO WorkFlows_4 :', function() {
     it('E2E_4 :should select fac for primary', function() {
         facilities.selectFacility(TestData.facilityoption1);
         facilities.next.click();
-         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+        expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
         console.log('1753_4 complete')
     });
 
@@ -85,33 +85,34 @@ describe('DHMO:1753 Direct_HMO WorkFlows_4 :', function() {
     });
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
-
-    it('E2E_6 :should fill out pay details', function() {
-        payment.billingChkBox.check();
-        payment.fillpayment(TestData);
-        payment.summaryTotalPrice.getText().then(function(premium) {
-            premiumAmount = premium;
+    if (testExecutionEnv != 'production') {
+        it('E2E_6 :should fill out pay details', function() {
+            payment.billingChkBox.check();
+            payment.fillpayment(TestData);
+            payment.summaryTotalPrice.getText().then(function(premium) {
+                premiumAmount = premium;
+            });
+            payment.purchaseNow.click();
+            Utility.delay(maxWait);
+            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+            console.log('1753_6 complete')
         });
-        payment.purchaseNow.click();
-          Utility.delay(maxWait);
-        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-        console.log('1753_6 complete')
-    });
 
-    //Verify and Validate the Application Number and Plan Name in the Receipt Page
+        //Verify and Validate the Application Number and Plan Name in the Receipt Page
 
-    it('E2E_7 :Should submit delta rating', function() {
-        receipt.submitRating(TestData.deltaRating);
-        receipt.answerQuery(TestData.queryAnswer);
-        expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
-        receipt.applicationNumber.getText().then(function(appicationNumber) {
-            console.log("Application Number == " + appicationNumber)
-        })
-        expect(receipt.planPurchased.getText()).toContain(TestData.planName);
-        expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
-        expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
-        console.log('1753_7 complete')
-    });
+        it('E2E_7 :Should submit delta rating', function() {
+            receipt.submitRating(TestData.deltaRating);
+            receipt.answerQuery(TestData.queryAnswer);
+            expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
+            receipt.applicationNumber.getText().then(function(appicationNumber) {
+                console.log("Application Number == " + appicationNumber)
+            })
+            expect(receipt.planPurchased.getText()).toContain(TestData.planName);
+            expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
+            expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
+            console.log('1753_7 complete')
+        });
+    }
     it('E2E_8 :Should display plansummary', function() {
         var plansummary = TestData.planSummary;
         receipt.planSummary.click();

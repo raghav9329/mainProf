@@ -9,7 +9,7 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dhmo/2546dhmofl.e2e.json');
+var TestData = require('../../testData/' + testDataEnv + '/dhmo/2546dhmofl.e2e.json');
 
 describe('DHMO_FL:2546 Direct HMO WorkFlows -1', function() {
     var effectiveDate, premiumAmount;
@@ -24,7 +24,7 @@ describe('DHMO_FL:2546 Direct HMO WorkFlows -1', function() {
         TestData.lastname = Utility.randomNo('String', 5);
         enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
             effectiveDate = sdate;
- 
+
             console.log("sdate============" + sdate);
         })
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
@@ -74,34 +74,35 @@ describe('DHMO_FL:2546 Direct HMO WorkFlows -1', function() {
 
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
-
-    it('E2E_5 :should fill out pay details', function() {
-        payment.billingChkBox.check();
-        payment.fillpayment(TestData);
-        payment.summaryTotalPrice.getText().then(function(premium) {
-            premiumAmount = premium;
+    if (testExecutionEnv != 'production') {
+        it('E2E_5 :should fill out pay details', function() {
+            payment.billingChkBox.check();
+            payment.fillpayment(TestData);
+            payment.summaryTotalPrice.getText().then(function(premium) {
+                premiumAmount = premium;
+            });
+            payment.purchaseNow.click();
+            Utility.delay(maxWait);
+            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+            console.log('2546_5 complete')
         });
-        payment.purchaseNow.click();
-          Utility.delay(maxWait);
-        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-        console.log('2546_5 complete')
-    });
 
-    //Verify and Validate the Application Number and Plan Name in the Receipt Page
+        //Verify and Validate the Application Number and Plan Name in the Receipt Page
 
-    it('E2E_6 :Should submit delta rating', function() {
-        receipt.submitRating(TestData.deltaRating);
-        receipt.answerQuery(TestData.queryAnswer);
-        expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
-        receipt.applicationNumber.getText().then(function(appicationNumber) {
-            console.log("Application Number == " + appicationNumber)
-        })
-        expect(receipt.planPurchased.getText()).toContain(TestData.planName);
-        //Effective date is fixed under drop down and the Coverage start date are unequal
-        expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
-        expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
-        console.log('2546_6 complete')
-    });
+        it('E2E_6 :Should submit delta rating', function() {
+            receipt.submitRating(TestData.deltaRating);
+            receipt.answerQuery(TestData.queryAnswer);
+            expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
+            receipt.applicationNumber.getText().then(function(appicationNumber) {
+                console.log("Application Number == " + appicationNumber)
+            })
+            expect(receipt.planPurchased.getText()).toContain(TestData.planName);
+            //Effective date is fixed under drop down and the Coverage start date are unequal
+            expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
+            expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
+            console.log('2546_6 complete')
+        });
+    }
     it('E2E_7 :Should display plansummary', function() {
         var plansummary = TestData.planSummary;
         receipt.planSummary.click();

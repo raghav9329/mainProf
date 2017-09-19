@@ -129,6 +129,7 @@ describe('AARPHMO:2062 AARP HMO WorkFlows - 6', function() {
             });
             payment.fillBankDetails(TestData);
             payment.purchaseNow.click();
+              Utility.delay(maxWait);
             expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
             console.log('2062_6 complete');
         });

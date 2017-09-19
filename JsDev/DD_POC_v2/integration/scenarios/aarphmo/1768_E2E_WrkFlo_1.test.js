@@ -126,6 +126,7 @@ describe('AARPHMO:1768: E2E_WorkFlow: ', function() {
         payment.fillpayment(TestData);
         payment.fillBankDetails(TestData);        
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptTitle);
     });
 

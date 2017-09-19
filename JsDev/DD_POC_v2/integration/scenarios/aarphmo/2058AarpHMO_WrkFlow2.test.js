@@ -8,14 +8,14 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarphmo.2058AarpHMO_WrkFlow2.json');
+var TestData = require('../../testData/' + testDataEnv + '/aarphmo/aarphmo.2058AarpHMO_WrkFlow2.json');
 
 describe('AARPHMO:2058 work flow 2', function() {
     beforeAll(function() {
         console.log(' ');
         console.log('--- AARP-2058 E2E WrkFlow2 ---')
         console.log(' ');
-        Utility.openApplication('','AARP');
+        Utility.openApplication('', 'AARP');
 
     });
 
@@ -31,7 +31,7 @@ describe('AARPHMO:2058 work flow 2', function() {
     //Switchback clickng on the Pop up Back
 
     it('E2E_2 :should populate PersInfo page and change the Zip code', function() {
-         TestData.MemberId= Utility.randomNo('Number',10);
+        TestData.MemberId = Utility.randomNo('Number', 10);
         perInfo.fillPersonalInfo(TestData);
         perInfo.fieldZipCode.setText(TestData.zipcode1);
         perInfo.fieldPhoneNumber.setText('');
@@ -55,8 +55,9 @@ describe('AARPHMO:2058 work flow 2', function() {
 
     it('E2E_4 :Should complete the Enroll Page ', function() {
         TestData.enrollData.ZIPcode = '94105';
-        Utility.openApplication('','AARP');
+        Utility.openApplication('', 'AARP');
         enrollPage.enterHomePageDetails(TestData.enrollData);
+         Utility.delay(minWait);
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
         console.log('2058_4 complete');
 
@@ -78,14 +79,14 @@ describe('AARPHMO:2058 work flow 2', function() {
     //Delete 2 dependents among 4 intially added from the home page
     // Fill the Valid Data in the 2 Dependents
 
-    it('E2E_6 :should add 2 Deps, child & spouse', function() {    
+    it('E2E_6 :should add 2 Deps, child & spouse', function() {
         depInfo.deleteDependent('Dependent1').click();
-        depInfo.deleteDependent('Dependent2').click();  
-          expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();     
+        depInfo.deleteDependent('Dependent2').click();
+        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
         depInfo.fillDependent('Dependent1', TestData.Spouse, true);
-        depInfo.fillDependent('Dependent2', TestData.child, false);       
+        depInfo.fillDependent('Dependent2', TestData.child, false);
         depInfo.next.click();
-        Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));  
+        Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
         console.log('2058_6 complete');
 
@@ -99,6 +100,7 @@ describe('AARPHMO:2058 work flow 2', function() {
     it('E2E_7 :Change the Zip code in the Facility Page and should select fac for Prime', function() {
         facilities.zipCode.setText(TestData.facZipcode);
         facilities.search.click();
+        Utility.delay(minWait);
         facilities.selectFacility(TestData.facilityoption1);
         facilities.next.click();
         console.log('2058_7 complete');
@@ -109,10 +111,12 @@ describe('AARPHMO:2058 work flow 2', function() {
     it('E2E_8 :should select fac for all deps enrolled', function() {
         facilities.zipCode.setText(TestData.facZipcode);
         facilities.search.click();
+        Utility.delay(minWait);
         facilities.selectFacility(TestData.facilityoption2);
         facilities.next.click();
         facilities.zipCode.setText(TestData.facZipcode);
         facilities.search.click();
+        Utility.delay(minWait);
         facilities.selectFacility(TestData.facilityoption3);
         facilities.next.click();
         expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
@@ -124,8 +128,9 @@ describe('AARPHMO:2058 work flow 2', function() {
     it('E2E_9 :should fill out pay details', function() {
         payment.billingChkBox.check();
         payment.fillpayment(TestData);
-         payment.frequencyAnnualy.select();
+        payment.frequencyAnnualy.select();
         payment.purchaseNow.click();
+        Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('2058_9 complete');
     });

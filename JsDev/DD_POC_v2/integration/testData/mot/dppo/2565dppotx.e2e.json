@@ -1,10 +1,10 @@
 {
-    "firstname": "first name",
+    "firstname": "Test",
     "mi": "K",
-    "lastname": "lastname",
+    "lastname": "App",
     "gender": "Male",
     "dob": "01-28-1973",
-   "ssn": "5263589415",
+   "ssn": "1234560215",
     "alternateid": "test@test.com",
    "fieldHomeAddr": "10800 State highway 151, #236",
     "city": "San antonio",
@@ -27,9 +27,7 @@
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
     "queryAnswer": "Test",
-    "Amount":"$153.90",
-
-
+    "Amount": "$153.90",
     "enrollData": {
         "PlanName": "Delta Dental DPO Individual - Basic Plan",
         "PlanType": "DHMO",

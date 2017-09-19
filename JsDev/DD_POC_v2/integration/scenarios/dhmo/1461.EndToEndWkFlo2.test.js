@@ -8,7 +8,7 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1461EndToEndWkFlo2.json');
+var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.1461EndToEndWkFlo2.json');
 
 describe('DHMO:1461:E2E_WrkFlow1 - 2', function() {
     var effectiveDate;
@@ -70,7 +70,7 @@ describe('DHMO:1461:E2E_WrkFlow1 - 2', function() {
     //Enter the valid Test Data in the Personal Information page and Click n the Next
 
     it('E2E_5 :should populate PersInfo page', function() {
-      TestData.fieldHomeAddr = TestData.fieldhomeAddress;        
+        TestData.fieldHomeAddr = TestData.fieldhomeAddress;
         perInfo.fillPersonalInfo(TestData);
         perInfo.fillAddress(TestData);
         perInfo.phoneNumberemail(TestData);
@@ -84,11 +84,13 @@ describe('DHMO:1461:E2E_WrkFlow1 - 2', function() {
 
     it('E2E_6 :should add 2 Deps, child & spouse', function() {
         depInfo.deleteDependent('Dependent2').click();
+        Utility.delay(minWait);
         depInfo.deleteDependent('Dependent1').click();
         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
         depInfo.fillDependent('Dependent1', TestData.Spouse, true);
         depInfo.fillDependent('Dependent2', TestData.child, false);
         depInfo.next.click();
+        Utility.waitUntilLoderDisapper;
         Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
         console.log('1461_6 complete')
@@ -103,6 +105,7 @@ describe('DHMO:1461:E2E_WrkFlow1 - 2', function() {
     it('E2E_7 :Change the Zip code in the Facility Page and should select fac for Prime', function() {
         facilities.zipCode.setText(TestData.facZipcode);
         facilities.search.click();
+        Utility.delay(minWait);
         facilities.selectFacility(TestData.facilityoption1);
         facilities.next.click();
         console.log('1461_7 complete')
@@ -113,10 +116,12 @@ describe('DHMO:1461:E2E_WrkFlow1 - 2', function() {
     it('E2E_8 :should select fac for all deps enrolled', function() {
         facilities.zipCode.setText(TestData.facZipcode);
         facilities.search.click();
+        Utility.delay(minWait);
         facilities.selectFacility(TestData.facilityoption2);
         facilities.next.click();
         facilities.zipCode.setText(TestData.facZipcode);
         facilities.search.click();
+        Utility.delay(minWait);
         facilities.selectFacility(TestData.facilityoption3);
         facilities.next.click();
         expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
@@ -124,16 +129,16 @@ describe('DHMO:1461:E2E_WrkFlow1 - 2', function() {
     });
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
-
-    it('E2E_9 :should fill out pay details', function() {
-        payment.billingChkBox.check();
-        payment.fillpayment(TestData);
-        payment.purchaseNow.click();
-          Utility.delay(maxWait);
-        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-        console.log('1461_9 complete')
-    });
-
+    if (testExecutionEnv != 'production') {
+        it('E2E_9 :should fill out pay details', function() {
+            payment.billingChkBox.check();
+            payment.fillpayment(TestData);
+            payment.purchaseNow.click();
+            Utility.delay(maxWait);
+            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+            console.log('1461_9 complete')
+        });
+    }
     //Verify and Validate the Application Number and Plan Name in the Receipt Page
 
     it('E2E_10 :should generate a vaild receipt page', function() {

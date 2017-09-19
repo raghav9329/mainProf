@@ -6,8 +6,8 @@
     "dob": "05-05-1971",
     "MemberId": "3041586292",
     "alternateid": "test@test.com",
-    "fieldHomeAddr": "35995 Fremont Blvd Apt 98",
-    "city": "Fremont",
+    "fieldHomeAddr": "100 First Street floor 4",
+    "city": "San Francisco",
     "State": "CA",
     "contactType": "Cell",
     "phoneNumber": "9876543210",
@@ -31,8 +31,8 @@
     "accountNumber": "234324",
     "accountNumberRetype": "234324",
     
-    "enrollData": {
-        "PlanName": "DeltaCare® USA Plan 15B",
+    "enrollData": {        
+        "PlanName": "DeltaCare ® USA Plan 15B",
         "PlanType": "DHMO",
         "PlanCode": "PLN15B",
         "CoverageStartDate": "12/01/2018",
@@ -85,20 +85,20 @@
         "Orthodontics": "$1,900 each child $2,100 each adult"
     },
     "primaryFacility": {
-        "facilityName": "Modern Dentistry&Ortho",
-        "street": "2085 Gellert Blvd Ste 9",
-        "city": "Daly City",
+    "facilityName": "Kayvan Kafayi DDS",
+        "street": "450 Sutter St Rm 1433",
+        "city": "San Francisco",
         "region": "CA",
-        "postalCode": "940152841",
-        "telephone": "6508783171"
+        "postalCode": "94108-4010",
+        "telephone": "415.398.2360"     
     },
     "dependent_Facility_1": {
-        "facilityName": "SecondaryApplicantService-1",
-        "street": "2085 Gellert Blvd Ste 9",
-        "city": "Daly City",
+       "facilityName": "Van Ness Dental Group",
+        "street": "2243 Van Ness Ave Ste 201",
+        "city": "San Francisco",
         "region": "CA",
-        "postalCode": "940152841",
-        "telephone": "6508783171"
+        "postalCode": "94109-2504",
+        "telephone": "415.441.2098"
     }
 
 }

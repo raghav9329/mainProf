@@ -24,13 +24,14 @@
     "jasmine-xml2html-converter": "0.0.2",
     "jasmine-spec-reporter": "2.4.0",
     "jasmine-data-provider": "2.2.0",
-    "protractor": "5.1.1",
+    "protractor": "5.1.2",
     "protractor-jasmine2-html-reporter": "0.0.6",
     "vinyl-source-stream": "1.1.0",
     "webdriver-manager": "10.2.6"
   },
   "dependencies": {
     "log4js": "^1.1.1",
+    "pdf2text": "^1.1.0",
     "protractor": "^5.1.1"
   }
 }

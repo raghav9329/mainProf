@@ -115,8 +115,8 @@
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",
         "region": "CA",
-        "postalCode": "941084010",
-        "telephone": "4153982360"
+        "postalCode": "94108-4010",
+        "telephone": "415.398.2360"
     },
     "dependent1":
     {
@@ -124,8 +124,8 @@
         "street": "2243 Van Ness Ave Ste 201",
         "city": "San Francisco",
         "region": "CA",
-        "postalCode": "941092504",
-        "telephone": "4154412098"
+        "postalCode": "94109-2504",
+        "telephone": "415.441.2098"
     },
     "dependent2":
     {
@@ -133,8 +133,8 @@
         "street": "450 Sutter St Rm 1114",
         "city": "San Francisco",
         "region": "CA",
-        "postalCode": "941083913",
-        "telephone": "4153629893"
+        "postalCode": "94108-3913",
+        "telephone": "415.362.9893"
     },
     "dependent3":
     {
@@ -142,8 +142,8 @@
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",
         "region": "CA",
-        "postalCode": "941084010",
-        "telephone": "4153982360"
+        "postalCode": "94108-4010",
+        "telephone": "415.398.2360"
     }
 
 }

@@ -1,4 +1,4 @@
-var TestData = require('../../testData/'+testDataEnv+'/addDep_Enroll.DeleteDep_depPage.json');
+var TestData = require('../../testData/' + testDataEnv + '/dhmo/addDep_Enroll.DeleteDep_depPage.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
@@ -35,15 +35,15 @@ describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
         depInfo.deleteDependent('Dependent1').click();
         depInfo.fieldAddDependents.click();
         depInfo.next.click();
-         expect(depInfo.getValidationMessages('Dependent1')).toEqual(TestData.dependentErrors);
-         expect(depInfo.getServerValidationMessages()).toEqual(TestData.dependentErrors);       
+        expect(depInfo.getValidationMessages('Dependent1')).toEqual(TestData.dependentErrors);
+        expect(depInfo.getServerValidationMessages()).toEqual(TestData.dependentErrors);
     })
     it('E2E_Flow_4: Verify 2 dependents were added and furnished with valid Test Data for Each of them', function() {
         depInfo.fillDependent('Dependent1', TestData.domesticpartner1, true);
         // depInfo.fieldAddDependents.click();
         depInfo.fillDependent('Dependent2', TestData.child3, false);
         depInfo.next.click();
-         Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));       
+        Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
         depInfo.continue.click();
         expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
     });
@@ -74,14 +74,15 @@ describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
         expect(payment.getCCServerValidationMessages()).toEqual(TestData.paymentErrors);
         expect(payment.getBillingAddressServerValidationMessages()).toEqual(TestData.paymentAddressErrors);
     });
-
-    it('E2E_Flow_7: Validate and Verify Payment Page Details with valid Test Data', function() {
-        payment.billingChkBox.check();
-        payment.fillpayment(TestData);
-        payment.purchaseNow.click();
-          Utility.delay(maxWait);
-        expect(browser.getTitle()).toEqual(TestData.receiptTitle);
-    });
+    if (testExecutionEnv != 'production') {
+        it('E2E_Flow_7: Validate and Verify Payment Page Details with valid Test Data', function() {
+            payment.billingChkBox.check();
+            payment.fillpayment(TestData);
+            payment.purchaseNow.click();
+            Utility.delay(maxWait);
+            expect(browser.getTitle()).toEqual(TestData.receiptTitle);
+        });
+    }
 
     it('E2E_Flow_8 :Should display plansummary', function() {
         var plansummary = TestData.planSummary;

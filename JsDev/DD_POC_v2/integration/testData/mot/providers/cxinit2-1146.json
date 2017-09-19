@@ -61,8 +61,44 @@
      "Location13": {
           "Loc": "Sacramento",
         "ExecutionFlag": true             
-   }
-
-    }  
+   },
+    "Location14": {
+            "Loc": "92115",
+        "ExecutionFlag": true
+   },
+    "Location15": {
+            "Loc": "92137",
+        "ExecutionFlag": true
+   },
+    "Location16": {
+            "Loc": "92169",
+        "ExecutionFlag": true
+   },
+    "Location17": {
+            "Loc": "92198",
+        "ExecutionFlag": true
+   },
+    "Location18": {
+            "Loc": "San Luis Obispo",
+        "ExecutionFlag": true
+   },
+    "Location19": {
+            "Loc": "Santa Monica",
+        "ExecutionFlag": true
+   },
+    "Location20": {
+            "Loc": "Julian",
+        "ExecutionFlag": true
+   },
+    "Location21": {
+            "Loc": "Santa Ana",
+        "ExecutionFlag": true
+   },
+   "Location22": {
+    "Loc": "Mammoth Lakes",
+"ExecutionFlag": true
+}
+    
+}  
 
 }

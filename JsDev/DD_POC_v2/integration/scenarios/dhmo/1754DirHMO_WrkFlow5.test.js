@@ -11,12 +11,12 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dhmo/Direct_HMO_WorkFlows_5.json');
+var TestData = require('../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_5.json');
 
 describe('DHMO:1754 DirHMO_WrkFlo_5:', function() {
     var effectiveDate;
     beforeAll(function() {
-        Utility.openApplication('','DELTA');
+        Utility.openApplication('', 'DELTA');
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
@@ -55,7 +55,7 @@ describe('DHMO:1754 DirHMO_WrkFlo_5:', function() {
                 depInfo.isHandicapped(data.dependent).check();
             }
 
-           console.log('1754_3 json driven "' + data.dependent + '" complete')
+            console.log('1754_3 json driven "' + data.dependent + '" complete')
         });
         console.log('1754_3 of 7 complete')
     });
@@ -73,11 +73,11 @@ describe('DHMO:1754 DirHMO_WrkFlo_5:', function() {
 
     dataProvider(TestData.facilites, function(data, description) {
 
-        it('E2E_5 :should Select Facilities for 15 Dep '+description, function() {
+        it('E2E_5 :should Select Facilities for 15 Dep ' + description, function() {
             expect(facilities.zipCode.isPresentAndDisplayed()).toBeTruthy();
             facilities.zipCode.setText(data.zipcode);
             facilities.search.click();
-            browser.sleep(maxWait);
+            Utility.delay(minWait);
             facilities.selectFacility(data.facility);
             facilities.next.click();
             console.log('1754_5 json driven "' + data.dependent + '" complete')
@@ -88,17 +88,18 @@ describe('DHMO:1754 DirHMO_WrkFlo_5:', function() {
 
     //Validate and Payment Page is launched
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
-
-    it('E2E_6 :should fill out pay details', function() {
-        facilities.next.click();
-        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
-       // payment.billingChkBox.check();
-        payment.fillpayment(TestData);
-        payment.purchaseNow.click();
-          Utility.delay(maxWait);
-        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-        console.log('1754_6 of 7 complete');
-    });
+    if (testExecutionEnv != 'production') {
+        it('E2E_6 :should fill out pay details', function() {
+            facilities.next.click();
+            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+            // payment.billingChkBox.check();
+            payment.fillpayment(TestData);
+            payment.purchaseNow.click();
+            Utility.delay(maxWait);
+            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+            console.log('1754_6 of 7 complete');
+        });
+    }
 
     //Verify and Validate the Application Number and Plan Name in the Receipt Page
 

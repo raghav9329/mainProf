@@ -11,6 +11,7 @@ class ReceiptLocators {
         this.totalPaid = by.xpath('//p[normalize-space(text())="Total Paid"]/span');
         this.submit = by.id('sg_NextButton');
         this.printReceipt = by.linkText('Print Receipt');
+        this.saveCompletedApplication = by.linkText('Save completed application');
         this.planName = by.css('div[id="plan-summary"] h4');
         this.queryAnswer = by.css('textarea.sg-input.sg-input-essay');
         this.thanksMsg=by.css('div.sg-instructions');

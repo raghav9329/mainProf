@@ -5,10 +5,12 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dppo/dppo.2317_E2EPayCCAnn_TwoDep.json');
+var TestData = require('../../testData/' + testDataEnv + '/dppo/dppo.2317_E2EPayCCAnn_TwoDep.json');
+
+var pdf2Text = require('pdf2text')
 
 describe('DPPO:2317_E2EPayCCAnn_TwoDep', function() {
-    var effectiveDate;
+    var effectiveDate, apNumber, pathToPdf;
     beforeAll(function() {
         console.log(' ');
         console.log('--- E2E WrkFlow ---')
@@ -62,7 +64,7 @@ describe('DPPO:2317_E2EPayCCAnn_TwoDep', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
-          Utility.delay(maxWait);
+        Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('E2E_4: Complete');
     });
@@ -75,7 +77,8 @@ describe('DPPO:2317_E2EPayCCAnn_TwoDep', function() {
         receipt.answerQuery(TestData.queryAnswer);
         expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
         receipt.applicationNumber.getText().then(function(appicationNumber) {
-            console.log("Application Number == " + appicationNumber)
+            console.log("Application Number == " + appicationNumber);
+            apNumber = appicationNumber;
         })
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
         expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
@@ -100,7 +103,14 @@ describe('DPPO:2317_E2EPayCCAnn_TwoDep', function() {
         console.log('E2E_6: Complete');
 
     });
-    it('E2E_7 :Should display primary applicant', function() {
+    it('E2E_7:Save receipt ', function() {
+        receipt.saveCompletedApplication.click().then(function() {
+            browser.sleep(15000);
+            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
+
+        })
+    })
+    it('E2E_8 :Should display primary applicant', function() {
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
@@ -108,16 +118,19 @@ describe('DPPO:2317_E2EPayCCAnn_TwoDep', function() {
         });
     });
 
-    it('E2E_8:Should display dependent-1 applicant', function() {
+    it('E2E_9:Should display dependent-1 applicant', function() {
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.Spouse.firstName);
             console.log('E2E_8: Complete');
         });
     });
-    it('E2E_9:Should display dependent-2 applicant', function() {
+    it('E2E_10:Should display dependent-2 applicant', function() {
         receipt.getSelectedFacilityDetails('DEPENDENT', 2).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.child1.firstName);
-            console.log('E2E_9: Complete');
+            Utility.readPDFFile(pathToPdf).then(function(test) {
+                expect(test.toString()).toContain(TestData.firstname);
+                console.log('E2E_9: Complete');
+            });
         });
     });
 

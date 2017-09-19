@@ -4,7 +4,7 @@
     "lastname": "K",
     "gender": "Male",
     "dob": "05-05-1971",
-    "ssn": "5263589415",
+    "ssn": "1234560215",
     "alternateid": "test@test.com",
     "fieldHomeAddr": "639 Hibernia Oaks DR",
     "city": "Fleming Island",
@@ -25,8 +25,7 @@
     "deltaRating": 1,
     "queryAnswer": "Test",
 
-    "enrollData":
-    {
+    "enrollData": {
         "PlanName": "Delta Dental PPO Individual - Basic Plan",
         "PlanType": "DHMO",
         "PlanCode": "CAA55",
@@ -43,8 +42,7 @@
         "dob": "05-10-1981"
     },
 
-    "Spouse":
-    {
+    "Spouse": {
         "relationship": "Spouse",
         "firstName": "Seetha",
         "middleName": "m",
@@ -53,8 +51,7 @@
         "DOB": "05-10-1995"
     },
 
-    "child":
-    {
+    "child": {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "K",
@@ -62,9 +59,9 @@
         "gender": "Female",
         "DOB": "05-10-1995"
     },
-
+    
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
-
+    
     "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
     "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
     "nameOnCard": "Peter Heins",
@@ -74,8 +71,7 @@
     "securityCode": "125",
     "planName": "Delta Dental PPO Individual - Basic Plan",
     "thanksMsg": "Thank you for taking our survey. Your response is very important to us.",
-    "planSummary":
-    {
+    "planSummary": {
         "Deductible_per_calendar": "$50.00",
         "Max_per_calendar": "$1,000.00",
         "Officevisit": "0%",
@@ -90,18 +86,16 @@
         "Crowns": "100%",
         "Orthodontics": "NA"
     },
-    "primaryFacility":
-    {
-        "facilityName": "Kayvan Kafayi DDS",
+    "primaryFacility": {
+          "facilityName": "Kayvan Kafayi DDS",
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",
         "region": "CA",
         "postalCode": "941084010",
         "telephone": "4153982360"
     },
-    "dependent_Facility_1":
-    {
-        "facilityName": "Van Ness Dental Group",
+    "dependent_Facility_1": {
+      "facilityName": "Van Ness Dental Group",
         "street": "2243 Van Ness Ave Ste 201",
         "city": "San Francisco",
         "region": "CA",

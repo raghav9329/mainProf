@@ -12,7 +12,7 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/aarphmo/aarphmo.2091_PaymentThreeDep_WorkFlow.json');
 
 describe('AARPHMO:2091 AARP_HMO WorkFlows_4 :', function() {
-    var effectedDate;
+    var effectedDate ='';
     beforeAll(function() {
         console.log(' ');
         console.log('--- E2E WrkFlow1 ---')
@@ -65,6 +65,7 @@ describe('AARPHMO:2091 AARP_HMO WorkFlows_4 :', function() {
     it('E2E_4 :should select fac for primary', function() {
         facilities.selectFacility(TestData.facilityoption1);
         facilities.next.click();
+        Utility.delay(minWait);
         console.log('2091_4 complete');
     });
 
@@ -91,6 +92,7 @@ describe('AARPHMO:2091 AARP_HMO WorkFlows_4 :', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
+          Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('2091_6 complete');
     });

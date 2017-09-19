@@ -8,15 +8,15 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1408.EndToEndWkFlo1.json');
+var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.1408.EndToEndWkFlo1.json');
 
 describe('DHMO:1408:E2E_WrkFlow', function() {
     var effectiveDate;
     beforeAll(function() {
         console.log(' ');
         console.log('--- CXINIT-1408 E2E WrkFlow1 ---')
-        console.log(' ');        
-        Utility.openApplication('','DELTA');
+        console.log(' ');
+        Utility.openApplication('', 'DELTA');
 
     });
 
@@ -80,15 +80,16 @@ describe('DHMO:1408:E2E_WrkFlow', function() {
     });
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
-
-    it('E2E_6 :should fill out pay details', function() {
-        payment.billingChkBox.check();
-        payment.fillpayment(TestData);
-        payment.purchaseNow.click();
-          Utility.delay(maxWait);
-        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-        console.log('1408_6 complete')
-    });
+    if (testExecutionEnv != 'production') {
+        it('E2E_6 :should fill out pay details', function() {
+            payment.billingChkBox.check();
+            payment.fillpayment(TestData);
+            payment.purchaseNow.click();
+            Utility.delay(maxWait);
+            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+            console.log('1408_6 complete')
+        });
+    }
     it('E2E_7 :Should display primary apllicant', function() {
         var facility = TestData.dependent_facilityoption1;
         receipt.applicants.click();
