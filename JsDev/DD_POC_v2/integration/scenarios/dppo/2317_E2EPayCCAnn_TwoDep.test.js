@@ -57,6 +57,11 @@ describe('DPPO:2317_E2EPayCCAnn_TwoDep', function() {
     // Select the Monthly Payment option and fill the valid bank details in the fields
 
     it('E2E_4 :should fill out pay details', function() {
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
         payment.billingChkBox.check();
         payment.fillpayment(TestData);
         payment.frequencyAnnualy.select();
@@ -103,14 +108,11 @@ describe('DPPO:2317_E2EPayCCAnn_TwoDep', function() {
         console.log('E2E_6: Complete');
 
     });
-    it('E2E_7:Save receipt ', function() {
-        receipt.saveCompletedApplication.click().then(function() {
-            browser.sleep(15000);
-            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
 
+    it('E2E_7 :Should display primary applicant', function() {
+        receipt.saveCompletedApplication.click().then(function() {
+            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
         })
-    })
-    it('E2E_8 :Should display primary applicant', function() {
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
@@ -118,17 +120,17 @@ describe('DPPO:2317_E2EPayCCAnn_TwoDep', function() {
         });
     });
 
-    it('E2E_9:Should display dependent-1 applicant', function() {
+    it('E2E_8:Should display dependent-1 applicant', function() {
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.Spouse.firstName);
             console.log('E2E_8: Complete');
         });
     });
-    it('E2E_10:Should display dependent-2 applicant', function() {
+    it('E2E_9:Should display dependent-2 applicant', function() {
         receipt.getSelectedFacilityDetails('DEPENDENT', 2).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.child1.firstName);
             Utility.readPDFFile(pathToPdf).then(function(test) {
-                expect(test.toString()).toContain(TestData.firstname);
+                expect(test).toContain(TestData.firstname);
                 console.log('E2E_9: Complete');
             });
         });

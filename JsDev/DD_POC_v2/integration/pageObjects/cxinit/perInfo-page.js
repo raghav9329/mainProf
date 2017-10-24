@@ -114,7 +114,7 @@ class PersonalInfoPage extends ControlBase {
      * @returns {Promise<Boolean>}
      */
     isAt() {
-        return this.firstName.isPresentAndDisplayed();
+        return this.fieldFirstName.isPresentAndDisplayed();
     };
 
     selectHomeAddress(homeaddress) {

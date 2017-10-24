@@ -9,10 +9,10 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dppo/dppo.2322_E2EPayCCQtr_ThreeDep.json');
+var TestData = require('../../testData/' + testDataEnv + '/dppo/dppo.2322_E2EPayCCQtr_ThreeDep.json');
 
 describe('DPPO:2322_E2EPayCCQtr_ThreeDep', function() {
-    var effectiveDate;
+    var effectiveDate, apNumber, pathToPdf;
     beforeAll(function() {
         console.log(' ');
         console.log('--- Payment_Anual_ThreeDep_WrkFlow ---')
@@ -60,7 +60,11 @@ describe('DPPO:2322_E2EPayCCQtr_ThreeDep', function() {
     // Select the Monthly Payment option and fill the valid bank details in the fields
 
     it('E2E_4 :should fill out pay details', function() {
-       
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
         payment.billingChkBox.check();
         payment.fillpayment(TestData);
         payment.frequencyQuterly.select();
@@ -68,7 +72,7 @@ describe('DPPO:2322_E2EPayCCQtr_ThreeDep', function() {
             premiumAmount = premium;
         });
         payment.purchaseNow.click();
-          Utility.delay(maxWait);
+        Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
         console.log('E2E_4: Complete');
     });
@@ -81,7 +85,8 @@ describe('DPPO:2322_E2EPayCCQtr_ThreeDep', function() {
         receipt.answerQuery(TestData.queryAnswer);
         expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
         receipt.applicationNumber.getText().then(function(appicationNumber) {
-            console.log("Application Number == " + appicationNumber)
+            console.log("Application Number == " + appicationNumber);
+            apNumber = appicationNumber;
         })
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
         expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
@@ -107,6 +112,9 @@ describe('DPPO:2322_E2EPayCCQtr_ThreeDep', function() {
 
     });
     it('E2E_7 :Should display primary applicant', function() {
+        receipt.saveCompletedApplication.click().then(function() {
+            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
+        })
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
@@ -126,7 +134,10 @@ describe('DPPO:2322_E2EPayCCQtr_ThreeDep', function() {
         var facility = TestData.dependent2;
         receipt.getSelectedFacilityDetails('DEPENDENT', 2).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.child1.firstName);
-            console.log('E2E_9: Complete');
+            Utility.readPDFFile(pathToPdf).then(function(pdfdata) {
+                expect(pdfdata).toContain(TestData.firstname);
+                console.log('E2E_9: Complete');
+            });
         });
     });
 

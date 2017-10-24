@@ -24,7 +24,7 @@ exports.config = {
             'integration/scenarios/dhmo/1746DirHMO_WrkFlo1.test.js',
             'integration/scenarios/dhmo/1753DirHMO_WrkFlo4.test.js',
             'integration/scenarios/aarphmo/2061AarpHMO_WrkFlow5.test.js',
-            'integration/scenarios/aarphmo/2062AarpHMO_WrkFlow6.test.js'
+            'integration/scenarios/aarphmo/2062AarpHMO_WrkFlow6.test.js',
             'integration/scenarios/dppo/2320_E2EPayCCMon_ThreeDep.test.js',
             'integration/scenarios/aarpppo/2092_E2EPayAnn_TwoDep.test.js',			
             'integration/scenarios/aarpppo/2313_E2EPayQua_ThreeDep.test.js'			
@@ -214,9 +214,9 @@ exports.config = {
 
     },
 
-    seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
-    chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30.exe',
-    geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.18.0.exe',
+    seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.6.0.jar',
+    chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.33.exe',
+    geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.19.0.exe',
 
 
     params: {
@@ -264,9 +264,9 @@ exports.config = {
 
     capabilities: {
         browserName: 'chrome',
-        shardTestFiles: true,
-        maxInstances: 4,
-        //maxInstances: 1,
+        //shardTestFiles: true,
+        //maxInstances: 4,
+        maxInstances: 1,
         chromeOptions: {
             'args': ['disable-infobars']
         }

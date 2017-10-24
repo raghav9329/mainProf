@@ -25,6 +25,8 @@ class ProviderDetailsPage extends ControlBase {
         this.providerMap = new Label(this.pageObjects.providerMap);
         this.providerPlace = new Label(this.pageObjects.providerPlace);
         this.providerPlaceName = new Label(this.pageObjects.providerPlaceName);
+        this.providerPName = new LinkText(this.pageObjects.providerPName);
+        this.providerFName = new LinkText(this.pageObjects.providerFName);
         this.providerFacility = new Label(this.pageObjects.providerFacility);
         this.providerAddress = new Label(this.pageObjects.providerAddress);
         this.providerAddressStreet = new Label(this.pageObjects.providerAddressStreet);
@@ -39,6 +41,16 @@ class ProviderDetailsPage extends ControlBase {
         this.providerLanguage = new Label(this.pageObjects.providerLanguage);
         this.providerData = new Label(this.pageObjects.providerData);
         this.letUsKnow = new Label(this.pageObjects.letUsKnow);
+        this.providersList = new Label(this.pageObjects.providersList);
+        this.view = function(providerName) {
+            return new Label(this.pageObjects.view(providerName));
+        };
+        this.placeNameByProvider = function(providerName) {
+            return new Label(this.pageObjects.placeNameByProvider(providerName));
+        };
+        this.facilityByProvider = function(providerName) {
+            return new Label(this.pageObjects.facilityByProvider(providerName));
+        };
     };
 
     getOfficeHoursByDay(day) {
@@ -53,9 +65,74 @@ class ProviderDetailsPage extends ControlBase {
         return element(this.pageObjects.providerDataByField(fieldName)).getTextEx();
     };
 
-    openView(providerName) {
-        element(this.pageObjects.view(providerName)).clickIt();
+
+
+    openView(providerName, option) {
+        var self = this;
+        browser.controlFlow().execute(function() {
+            browser.wait(function() {
+                return element(self.pageObjects.view(providerName)).isDisplayed().then(function(displayed) {
+                    if (!displayed) element(by.linkText("Next")).clickIt();
+                    return displayed;
+                }, function() {
+                    element(by.linkText("Next")).clickIt();
+                    return false;
+                });
+            }, 9999999999);
+
+            if (option) {
+                if (option.toUpperCase() == 'VIEW') self.view(providerName).click();
+                if (option.toUpperCase() == 'PLACE') self.placeNameByProvider(providerName).click();
+                if (option.toUpperCase() == 'FACILITY') self.facilityByProvider(providerName).click();
+            } else {
+                self.view(providerName).click();
+
+            }
+        });
     };
+
+
+
+    getProviderInfo() {
+        var self = this;
+        var providerDetails = {};
+        return browser.controlFlow().execute(function() {
+            self.providerName.getText().then((pname) => {
+                providerDetails.providerName = pname;
+            });
+            self.providerSpecialty.getText().then((pspecial) => {
+                providerDetails.providerSpecialty = pspecial;
+            });
+            self.providerNetwork.getText().then((pnetwork) => {
+                providerDetails.providerNetwork = pnetwork;
+            });
+            self.providerAvailability.getText().then((pavail) => {
+                providerDetails.providerAvailability = pavail;
+            });
+            self.providerPlaceName.getText().then((pplace) => {
+                providerDetails.providerPlaceName = pplace;
+            });
+            // self.providerFacility.getText().then((pfacil) => {
+            //     providerDetails.providerFacility = pfacil;
+            // });
+            self.providerAddressStreet.getText().then((paddst) => {
+                providerDetails.providerAddressStreet = paddst;
+            });
+            self.providerAddressCity.getText().then((paddct) => {
+                providerDetails.providerAddressCity = paddct;
+            });
+            self.providerAddressState.getText().then((paddstate) => {
+                providerDetails.providerAddressState = paddstate;
+            });
+            self.providerAddressZip.getText().then((paddzip) => {
+                providerDetails.providerAddressZip = paddzip;
+            });
+            self.providerAddressPhone.getText().then((pphone) => {
+                providerDetails.providerAddressPhone = pphone;
+            })
+            return providerDetails;
+        });
+    }
 
     // Still in Unit Testing Phase . Will Move Locators to -locators.js file
     // var pData = {
@@ -66,42 +143,32 @@ class ProviderDetailsPage extends ControlBase {
     // }
     verifyProviderLanguage(language, iterations) {
         var self = this;
-        var count = 0,count1;
+        var count = 0,
+            count1;
         browser.controlFlow().execute(function() {
             browser.wait(function() {
                 return element(by.css('a[arialabel="Next"]')).isDisplayed().then(function(displayed) {
                     var providersList = element.all(by.css('li.provider-listing'));
                     providersList.reduce(function(prev, ele, index) {
-//<<<<<<< HEAD
-//                        var viewno = Number(index) + 1;
-//                        if (iterations > count) {
-//                            element(by.xpath('(//a[normalize-space(text()) = "View"])[' + viewno + ']')).click().then(function() {
-//                                count = count + 1;
-//                                expect(self.providerLanguage.getText()).toContain(language);
-//                                self.backToSearchResults.click();
-//                                browser.sleep(3000);
-//                                //browser.sleep(300);
-//                            })
-//                        }
-//                    });
-//=======
-                            var viewno = Number(index) + 1;
-                            if (iterations > count) {
-                                element(by.xpath('(//a[normalize-space(text()) = "View"])[' + viewno + ']')).click().then(function() {
-                                    count = count + 1;
-                                    count1=count;
-                                    self.providerLanguage.getText().then(function(lang) {
-                                        // console.log('Language Verified -> ' + lang);
-                                    })
-                                    expect(self.providerLanguage.getText()).toContain(language);
-									//  Debug console out in the next line.  Un comment to see the missing language problem cxinint2-1689
-									// console.log('Language Verified -> ' + language);
-                                    self.backToSearchResults.click();
-                                    browser.sleep(3000);
+
+
+                        var viewno = Number(index) + 1;
+                        if (iterations > count) {
+                            element(by.xpath('(//a[normalize-space(text()) = "View"])[' + viewno + ']')).click().then(function() {
+                                count = count + 1;
+                                count1 = count;
+                                self.providerLanguage.getText().then(function(lang) {
+                                    // console.log('Language Verified -> ' + lang);
                                 })
-                            }
-                        });
-//>>>>>>> 1fb010da7d6773c922ae64551558e7d6201f2f94
+                                expect(self.providerLanguage.getText()).toContain(language);
+                                //  Debug console out in the next line.  Un comment to see the missing language problem cxinint2-1689
+                                // console.log('Language Verified -> ' + language);
+                                self.backToSearchResults.click();
+                                browser.sleep(3000);
+                            })
+                        }
+                    });
+
                     if (displayed) {
                         if (iterations > count1) {
                             return element(by.linkText("Next")).click().then(function() {
@@ -117,7 +184,7 @@ class ProviderDetailsPage extends ControlBase {
 
                     } else {
                         return !displayed;
-                    } 
+                    }
 
                 }, function(err) {
                     return true;

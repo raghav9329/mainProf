@@ -19,7 +19,7 @@ exports.config = {
     	],
     			  	
     	dhpers2:[	
-    		'integration/scenarios/dhmo/dhmo.720PersInfo.test.js',    			//	'integration/scenarios/dhmo/dhmo.519.test.js',
+    		'integration/scenarios/dhmo/dhmo.720PersInfo.test.js',  //	'integration/scenarios/dhmo/dhmo.519.test.js',
     		'integration/scenarios/dhmo/dhmo.804PersInfo.test.js',
     		'integration/scenarios/dhmo/dhmo.1361PersInfo.test.js',
     		'integration/scenarios/dhmo/dhmo.1548PersInfo.test.js',

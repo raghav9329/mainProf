@@ -11,7 +11,7 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.1461EndToEndWkFlo2.json');
 
 describe('DHMO:1461:E2E_WrkFlow1 - 2', function() {
-    var effectiveDate;
+    var effectiveDate, apNumber, pathToPdf;
     beforeAll(function() {
         console.log(' ');
         console.log('--- CXINIT-1461 E2E WrkFlow2 ---')
@@ -129,25 +129,41 @@ describe('DHMO:1461:E2E_WrkFlow1 - 2', function() {
     });
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
-    if (testExecutionEnv != 'production') {
-        it('E2E_9 :should fill out pay details', function() {
-            payment.billingChkBox.check();
-            payment.fillpayment(TestData);
-            payment.purchaseNow.click();
-            Utility.delay(maxWait);
-            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-            console.log('1461_9 complete')
-        });
-    }
+    // if (testExecutionEnv != 'production') {
+    it('E2E_9 :should fill out pay details', function() {
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
+        payment.billingChkBox.check();
+        payment.fillpayment(TestData);
+        payment.purchaseNow.click();
+        Utility.delay(maxWait);
+        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+        console.log('1461_9 complete')
+    });
+    // }
     //Verify and Validate the Application Number and Plan Name in the Receipt Page
 
     it('E2E_10 :should generate a vaild receipt page', function() {
         receipt.planSummary.click();
         receipt.applicants.click();
-        // expect(receipt.applicationNumber.getText()).toEqual('6024571');
-        // expect(receipt.planName.getText()).toEqual(TestData.planName);
-        // expect(receipt.getPlanSummaryByKey('Cleanings').getText()).toEqual('$25');
+        receipt.applicationNumber.getText().then(function(appicationNumber) {
+            console.log("Application Number == " + appicationNumber);
+            receipt.saveCompletedApplication.click().then(function() {
+                pathToPdf = './PDFDownloads/application' + appicationNumber + '.pdf';
+            })
+        })
         console.log('1461_10 complete')
+    });
+
+
+    it('E2E_11 :should verify PDF Receipt', function() {
+        Utility.readPDFFile(pathToPdf).then(function(test) {
+            expect(test).toContain(TestData.firstname);
+        });
+        console.log('1461_11 complete')
     });
 
 });

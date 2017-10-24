@@ -12,7 +12,7 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dppo/2557dppofl.e2e.json');
 
 describe('DPPO_FL:2557 Direct PPO FL WorkFlow', function() {
-    var effectiveDate, premiumAmount;
+    var effectiveDate, premiumAmount, apNumber, pathToPdf;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
@@ -61,6 +61,11 @@ describe('DPPO_FL:2557 Direct PPO FL WorkFlow', function() {
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
 
     it('E2E_5 :should fill out pay details', function() {
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
         payment.billingChkBox.check();
         payment.fillpayment(TestData);
         payment.summaryTotalPrice.getText().then(function(premium) {
@@ -79,7 +84,8 @@ describe('DPPO_FL:2557 Direct PPO FL WorkFlow', function() {
         receipt.answerQuery(TestData.queryAnswer);
         expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
         receipt.applicationNumber.getText().then(function(appicationNumber) {
-            console.log("Application Number == " + appicationNumber)
+            console.log("Application Number == " + appicationNumber);
+            apNumber = appicationNumber;
         })
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
         //Effective date is fixed under drop down and the Coverage start date are unequal
@@ -109,6 +115,9 @@ describe('DPPO_FL:2557 Direct PPO FL WorkFlow', function() {
     it('E2E_8 :Should display primary applicant', function() {
         Utility.scrollToBottom();
         var facility = TestData.primaryFacility;
+        receipt.saveCompletedApplication.click().then(function() {
+            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
+        })
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
@@ -120,7 +129,10 @@ describe('DPPO_FL:2557 Direct PPO FL WorkFlow', function() {
         var facility = TestData.dependent_Facility_1;
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.Spouse.firstName);
-            console.log('2557_9 complete')
+            Utility.readPDFFile(pathToPdf).then(function(test) {
+                expect(test).toContain(TestData.firstname);
+                console.log('E2E_9: Complete');
+            });
         });
     });
 

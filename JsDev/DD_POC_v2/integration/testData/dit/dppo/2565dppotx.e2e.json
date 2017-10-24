@@ -28,6 +28,7 @@
     "deltaRating": 1,
     "queryAnswer": "Test",
     "Amount": "$153.90",
+    "discloser": "Delta_TX_DPO",
     "enrollData": {
         "PlanName": "Delta Dental DPO Individual - Basic Plan",
         "PlanType": "DHMO",

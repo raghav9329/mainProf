@@ -8,10 +8,12 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/dhmo/051217_E2E_POM_Workflow.json');
+var TestData = require('../../testData/' + testDataEnv + '/dhmo/051217_E2E_POM_Workflow.json');
+
+var pdf2Text = require('pdf2text')
 
 describe('DHMO:1235: E2E_WorkFlow:(051217_E2E_POM_Workflow) ', function() {
-    var effectiveDate;
+    var effectiveDate, apNumber, pathToPdf;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
@@ -116,6 +118,11 @@ describe('DHMO:1235: E2E_WorkFlow:(051217_E2E_POM_Workflow) ', function() {
     //Validate and Verify the both the client and Server side error validations in the Payment Page
 
     it('E2E_Flow_6: Validate and Verify the Errors of both the Client and Server in the Payment Page', function() {
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
         payment.billingAddress.click();
         payment.billingChkBox.unCheck();
         payment.purchaseNow.click();
@@ -142,6 +149,10 @@ describe('DHMO:1235: E2E_WorkFlow:(051217_E2E_POM_Workflow) ', function() {
     it('E2E_Flow_8 :Should display plansummary', function() {
         var plansummary = TestData.planSummary;
         receipt.planSummary.click();
+        receipt.applicationNumber.getText().then(function(appicationNumber) {
+            console.log("Application Number == " + appicationNumber);
+            apNumber = appicationNumber;
+        })
         expect(receipt.getPlanSummaryByKey('Deductible per calendar year per person').getText()).toEqual(plansummary.Deductible_per_calendar);
         expect(receipt.getPlanSummaryByKey('Maximum per calendar year per person').getText()).toEqual(plansummary.Max_per_calendar);
         expect(receipt.getPlanSummaryByKey('Office visit').getText()).toEqual(plansummary.Officevisit);
@@ -159,6 +170,9 @@ describe('DHMO:1235: E2E_WorkFlow:(051217_E2E_POM_Workflow) ', function() {
     });
     it('E2E_Flow_9 :Should display primary applicant', function() {
         var facility = TestData.primaryFacility;
+        receipt.saveCompletedApplication.click().then(function() {
+            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
+        })
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
@@ -168,6 +182,9 @@ describe('DHMO:1235: E2E_WorkFlow:(051217_E2E_POM_Workflow) ', function() {
             expect(facilitydata.region).toEqual(facility.region);
             expect(facilitydata.postalCode).toEqual(facility.postalCode);
             expect(facilitydata.telephone).toEqual(facility.telephone);
+            Utility.readPDFFile(pathToPdf).then(function(test) {
+                expect(test).toContain(TestData.firstname);
+            });
         });
     });
 

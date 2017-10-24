@@ -24,6 +24,7 @@
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
     "queryAnswer": "Test",
+    "discloser": "Delta_CA_DHMO_CAA55",
     "enrollData": {
         "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
         "PlanType": "DHMO",
@@ -50,9 +51,9 @@
         "DOB": "05-10-1995"
     },
 
-    
+
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
-    
+
     "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
     "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
     "nameOnCard": "Peter Heins",
@@ -78,7 +79,7 @@
         "Orthodontics": "$2,700 - $2,900"
     },
     "primaryFacility": {
-          "facilityName": "Kayvan Kafayi DDS",
+        "facilityName": "Kayvan Kafayi DDS",
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",
         "region": "CA",
@@ -86,7 +87,7 @@
         "telephone": "415.398.2360"
     },
     "dependent_Facility_1": {
-      "facilityName": "Van Ness Dental Group",
+        "facilityName": "Van Ness Dental Group",
         "street": "2243 Van Ness Ave Ste 201",
         "city": "San Francisco",
         "region": "CA",

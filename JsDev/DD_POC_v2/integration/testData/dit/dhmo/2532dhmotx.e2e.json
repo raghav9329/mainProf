@@ -25,6 +25,7 @@
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
     "queryAnswer": "Test",
+    "discloser": "Delta_TX_DHMO_TXA70",
     "enrollData": {
         "PlanName": "DeltaCare® USA TXA70 Individual/Family Dental Program",
         "PlanType": "DHMO",

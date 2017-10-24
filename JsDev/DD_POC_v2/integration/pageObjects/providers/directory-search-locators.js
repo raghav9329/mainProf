@@ -57,7 +57,7 @@ class DirectorySearchLocators {
         this.providerNetwork = by.className('provider__network');
         this.providerDistance = by.className('provider__distance');
 
-        this.apply = by.buttonText('Apply');
+        this.apply = by.className('btn--secondary');
 
 
 

@@ -11,7 +11,7 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.1408.EndToEndWkFlo1.json');
 
 describe('DHMO:1408:E2E_WrkFlow', function() {
-    var effectiveDate;
+    var effectiveDate, apNumber, pathToPdf;
     beforeAll(function() {
         console.log(' ');
         console.log('--- CXINIT-1408 E2E WrkFlow1 ---')
@@ -80,19 +80,30 @@ describe('DHMO:1408:E2E_WrkFlow', function() {
     });
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
-    if (testExecutionEnv != 'production') {
-        it('E2E_6 :should fill out pay details', function() {
-            payment.billingChkBox.check();
-            payment.fillpayment(TestData);
-            payment.purchaseNow.click();
-            Utility.delay(maxWait);
-            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-            console.log('1408_6 complete')
-        });
-    }
+    // if (testExecutionEnv != 'production') {
+    it('E2E_6 :should fill out pay details', function() {
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
+        payment.billingChkBox.check();
+        payment.fillpayment(TestData);
+        payment.purchaseNow.click();
+        Utility.delay(maxWait);
+        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+        console.log('1408_6 complete')
+    });
+    // }
     it('E2E_7 :Should display primary apllicant', function() {
         var facility = TestData.dependent_facilityoption1;
         receipt.applicants.click();
+        receipt.applicationNumber.getText().then(function(appicationNumber) {
+            console.log("Application Number == " + appicationNumber);
+            receipt.saveCompletedApplication.click().then(function() {
+                pathToPdf = './PDFDownloads/application' + appicationNumber + '.pdf';
+            })
+        })
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
             expect(facilitydata.facilityName).toEqual(facility.facilityName);
@@ -115,6 +126,10 @@ describe('DHMO:1408:E2E_WrkFlow', function() {
             expect(facilitydata.region).toEqual(facility.region);
             expect(facilitydata.postalCode).toEqual(facility.postalCode);
             expect(facilitydata.telephone).toEqual(facility.telephone);
+            Utility.readPDFFile(pathToPdf).then(function(test) {
+                expect(test).toContain(TestData.firstname);
+                console.log('E2E_8: Complete');
+            });
         });
     });
 

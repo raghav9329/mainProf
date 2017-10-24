@@ -79,6 +79,7 @@ class PaymentPage extends ControlBase {
         this.accountHolderNameError = new Label(this.pageObjects.accountHolderNameError);
         this.routingNumberError = new Label(this.pageObjects.routingNumberError);
         this.accountNumberError = new Label(this.pageObjects.accountNumberError);
+        this.discloser = new Label(this.pageObjects.discloser);
 
     };
     /**

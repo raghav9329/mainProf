@@ -73,7 +73,8 @@ describe('AARPHMO:1768: E2E_WorkFlow: ', function() {
         depInfo.fillDependent('Dependent5', TestData.child5, false);
         depInfo.fillDependent('Dependent6', TestData.child6, false);
         depInfo.next.click();    
-         Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));   
+         Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));  
+         Utility.delay(maxWait); 
         expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
     });
 

@@ -6,8 +6,10 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 
+var pdf2Text = require('pdf2text')
+
 describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
-    var effectiveDate;
+    var effectiveDate, apNumber, pathToPdf;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
@@ -66,6 +68,11 @@ describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
     });
 
     it('E2E_Flow_6: Validate and Verify the Errors of both the Client and Server in the Payment Page', function() {
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
         payment.billingAddress.click();
         payment.billingChkBox.unCheck();
         payment.purchaseNow.click();
@@ -74,19 +81,23 @@ describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
         expect(payment.getCCServerValidationMessages()).toEqual(TestData.paymentErrors);
         expect(payment.getBillingAddressServerValidationMessages()).toEqual(TestData.paymentAddressErrors);
     });
-    if (testExecutionEnv != 'production') {
-        it('E2E_Flow_7: Validate and Verify Payment Page Details with valid Test Data', function() {
-            payment.billingChkBox.check();
-            payment.fillpayment(TestData);
-            payment.purchaseNow.click();
-            Utility.delay(maxWait);
-            expect(browser.getTitle()).toEqual(TestData.receiptTitle);
-        });
-    }
+    // if (testExecutionEnv != 'production') {
+    it('E2E_Flow_7: Validate and Verify Payment Page Details with valid Test Data', function() {
+        payment.billingChkBox.check();
+        payment.fillpayment(TestData);
+        payment.purchaseNow.click();
+        Utility.delay(maxWait);
+        expect(browser.getTitle()).toEqual(TestData.receiptTitle);
+    });
+    // }
 
     it('E2E_Flow_8 :Should display plansummary', function() {
         var plansummary = TestData.planSummary;
         receipt.planSummary.click();
+        receipt.applicationNumber.getText().then(function(appicationNumber) {
+            console.log("Application Number == " + appicationNumber);
+            apNumber = appicationNumber;
+        })
         expect(receipt.getPlanSummaryByKey('Deductible per calendar year per person').getText()).toEqual(plansummary.Deductible_per_calendar);
         expect(receipt.getPlanSummaryByKey('Maximum per calendar year per person').getText()).toEqual(plansummary.Max_per_calendar);
         expect(receipt.getPlanSummaryByKey('Office visit').getText()).toEqual(plansummary.Officevisit);
@@ -104,6 +115,9 @@ describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
 
     it('E2E_Flow_9 :Should display primary applicant', function() {
         var facility = TestData.primaryFacility;
+        receipt.saveCompletedApplication.click().then(function() {
+            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
+        })
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
@@ -113,6 +127,9 @@ describe('E2E_WorkFlow:addDep_Enroll.DeleteDep_depPage', function() {
             expect(facilitydata.region).toEqual(facility.region);
             expect(facilitydata.postalCode).toEqual(facility.postalCode);
             expect(facilitydata.telephone).toEqual(facility.telephone);
+            Utility.readPDFFile(pathToPdf).then(function(test) {
+                expect(test).toContain(TestData.firstname);
+            });
         });
     });
 

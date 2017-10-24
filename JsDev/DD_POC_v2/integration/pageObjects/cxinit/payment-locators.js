@@ -65,6 +65,7 @@ class PaymentLocators {
         this.accountHolderNameError = by.id('accountHolderName-error');
         this.routingNumberError = by.id('routingNumber-error');
         this.accountNumberError = by.id('accountNumber-error');
+        this.discloser= by.css('div.eCopyLayout a');
     }
 
 }

@@ -24,6 +24,7 @@
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
     "queryAnswer": "Test",
+    "discloser": "Delta_FL_PPO",
 
     "enrollData": {
         "PlanName": "Delta Dental PPO Individual - Basic Plan",

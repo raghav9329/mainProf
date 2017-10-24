@@ -11,8 +11,10 @@ var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/2539dhmopa.e2e.json');
 
+var pdf2Text = require('pdf2text')
+
 describe('DHMO_PA:2539 Direct HMO WorkFlows -1', function() {
-    var effectiveDate, premiumAmount;
+    var effectiveDate, premiumAmount, apNumber, pathToPdf;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
@@ -77,35 +79,41 @@ describe('DHMO_PA:2539 Direct HMO WorkFlows -1', function() {
     });
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
-    if (testExecutionEnv != 'production') {
-        it('E2E_7 :should fill out pay details', function() {
-            payment.billingChkBox.check();
-            payment.fillpayment(TestData);
-            payment.summaryTotalPrice.getText().then(function(premium) {
-                premiumAmount = premium;
-            });
-            payment.purchaseNow.click();
-            Utility.delay(maxWait);
-            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-            console.log('2539_7 complete')
+    // if (testExecutionEnv != 'production') {
+    it('E2E_7 :should fill out pay details', function() {
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
+        payment.billingChkBox.check();
+        payment.fillpayment(TestData);
+        payment.summaryTotalPrice.getText().then(function(premium) {
+            premiumAmount = premium;
         });
+        payment.purchaseNow.click();
+        Utility.delay(maxWait);
+        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+        console.log('2539_7 complete')
+    });
 
-        //Verify and Validate the Application Number and Plan Name in the Receipt Page
+    //Verify and Validate the Application Number and Plan Name in the Receipt Page
 
-        it('E2E_8 :Should submit delta rating', function() {
-            receipt.submitRating(TestData.deltaRating);
-            receipt.answerQuery(TestData.queryAnswer);
-            expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
-            receipt.applicationNumber.getText().then(function(appicationNumber) {
-                console.log("Application Number == " + appicationNumber)
-            })
-            expect(receipt.planPurchased.getText()).toContain(TestData.planName);
-            //Effective date is fixed under drop down and the Coverage start date are unequal
-            expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
-            expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
-            console.log('2539_8 complete')
-        });
-    }
+    it('E2E_8 :Should submit delta rating', function() {
+        receipt.submitRating(TestData.deltaRating);
+        receipt.answerQuery(TestData.queryAnswer);
+        expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
+        receipt.applicationNumber.getText().then(function(appicationNumber) {
+            console.log("Application Number == " + appicationNumber)
+            apNumber = appicationNumber;
+        })
+        expect(receipt.planPurchased.getText()).toContain(TestData.planName);
+        //Effective date is fixed under drop down and the Coverage start date are unequal
+        expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
+        expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
+        console.log('2539_8 complete')
+    });
+
     it('E2E_9 :Should display plansummary', function() {
         var plansummary = TestData.planSummary;
         receipt.planSummary.click();
@@ -128,6 +136,9 @@ describe('DHMO_PA:2539 Direct HMO WorkFlows -1', function() {
     it('E2E_10 :Should display primary applicant', function() {
         Utility.scrollToBottom();
         var facility = TestData.primaryFacility;
+        receipt.saveCompletedApplication.click().then(function() {
+            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
+        })
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
@@ -151,7 +162,10 @@ describe('DHMO_PA:2539 Direct HMO WorkFlows -1', function() {
             expect(facilitydata.region).toEqual(facility.region);
             expect(facilitydata.postalCode).toEqual(facility.postalCode);
             expect(facilitydata.telephone).toEqual(facility.telephone);
-            console.log('2539_11 complete')
+            Utility.readPDFFile(pathToPdf).then(function(test) {
+                expect(test).toContain(TestData.firstname);
+                console.log('2539_11 complete')
+            });
         });
     });
 

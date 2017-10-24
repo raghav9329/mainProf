@@ -31,7 +31,9 @@
   },
   "dependencies": {
     "log4js": "^1.1.1",
+    "moment": "^2.18.1",
     "pdf2text": "^1.1.0",
-    "protractor": "^5.1.1"
+    "protractor": "^5.1.1",
+    "update-json": "^1.0.0"
   }
 }

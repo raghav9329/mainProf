@@ -10,7 +10,7 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_6.json');
 
 describe('DHMO:1755_DirHMO WrkFlo_6', function() {
-    var premiumAmount, depPrice, effectiveDate;
+    var premiumAmount, depPrice, effectiveDate, apNumber, pathToPdf;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
@@ -139,17 +139,21 @@ describe('DHMO:1755_DirHMO WrkFlo_6', function() {
             expect(perInfo.enrollStatus('Facilities').getCssValue('background-color')).toEqual(TestData.liteGreen);
             expect(perInfo.enrollStatus('Payment & Review').getCssValue('background-color')).toEqual(TestData.darkGreen);
             expect(perInfo.enrollStatus('Receipt').getCssValue('background-color')).toEqual(TestData.gray);
-
+            expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+            payment.discloser.click();
+            Utility.switchToWindow(1);
+            expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+            Utility.switchToWindow(0);
             payment.billingChkBox.check();
             payment.summaryTotalPrice.getText().then(function(premium) {
                 premiumAmount = premium;
             });
-            if (testExecutionEnv != 'production') {
-                payment.fillpayment(TestData);
-                payment.purchaseNow.click();
-                Utility.delay(maxWait);
-                expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-            }
+            // if (testExecutionEnv != 'production') {
+            payment.fillpayment(TestData);
+            payment.purchaseNow.click();
+            Utility.delay(maxWait);
+            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+            // }
         });
         console.log('1755_6 of 10 Complete')
     });
@@ -166,7 +170,8 @@ describe('DHMO:1755_DirHMO WrkFlo_6', function() {
         receipt.answerQuery(TestData.queryAnswer);
         expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
         receipt.applicationNumber.getText().then(function(appicationNumber) {
-            console.log("Application Number == " + appicationNumber)
+            console.log("Application Number == " + appicationNumber);
+            apNumber = appicationNumber;
         })
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
         expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
@@ -195,6 +200,9 @@ describe('DHMO:1755_DirHMO WrkFlo_6', function() {
     });
     it('E2E_9 :Should display primary applicant', function() {
         var facility = TestData.primaryFacility;
+        receipt.saveCompletedApplication.click().then(function() {
+            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
+        })
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
@@ -218,6 +226,10 @@ describe('DHMO:1755_DirHMO WrkFlo_6', function() {
             expect(facilitydata.region).toEqual(facility.region);
             expect(facilitydata.postalCode).toEqual(facility.postalCode);
             expect(facilitydata.telephone).toEqual(facility.telephone);
+            Utility.readPDFFile(pathToPdf).then(function(test) {
+                expect(test).toContain(TestData.firstname);
+                console.log('E2E_9: Complete');
+            });
         });
         console.log('1755_10 of 10 Complete')
     });

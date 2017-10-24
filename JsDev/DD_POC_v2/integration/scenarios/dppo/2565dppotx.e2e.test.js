@@ -11,7 +11,7 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dppo/2565dppotx.e2e.json');
 
 describe('DPPO_TX:2565_E2EPayCCAnn_TwoDep work flow', function() {
-    var effectiveDate;
+    var effectiveDate, apNumber, pathToPdf;
     beforeAll(function() {
         console.log(' ');
         console.log('--- E2E WrkFlow ---')
@@ -66,6 +66,11 @@ describe('DPPO_TX:2565_E2EPayCCAnn_TwoDep work flow', function() {
     // Select the Monthly Payment option and fill the valid bank details in the fields
 
     it('E2E_4 :should fill out pay details', function() {
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
         payment.billingChkBox.check();
         payment.fillpayment(TestData);
         payment.frequencyAnnualy.select();
@@ -86,7 +91,8 @@ describe('DPPO_TX:2565_E2EPayCCAnn_TwoDep work flow', function() {
         receipt.answerQuery(TestData.queryAnswer);
         expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
         receipt.applicationNumber.getText().then(function(appicationNumber) {
-            console.log("Application Number == " + appicationNumber)
+            console.log("Application Number == " + appicationNumber);
+            apNumber = appicationNumber;
         })
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
         expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
@@ -112,6 +118,9 @@ describe('DPPO_TX:2565_E2EPayCCAnn_TwoDep work flow', function() {
 
     });
     it('E2E_7 :Should display primary applicant', function() {
+        receipt.saveCompletedApplication.click().then(function() {
+            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
+        })
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.firstname);
@@ -128,7 +137,10 @@ describe('DPPO_TX:2565_E2EPayCCAnn_TwoDep work flow', function() {
     it('E2E_9:Should display dependent-2 applicant', function() {
         receipt.getSelectedFacilityDetails('DEPENDENT', 2).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.child1.firstName);
-            console.log('E2E_9: Complete');
+            Utility.readPDFFile(pathToPdf).then(function(test) {
+                expect(test).toContain(TestData.firstname);
+                console.log('E2E_9: Complete');
+            });
         });
     });
 

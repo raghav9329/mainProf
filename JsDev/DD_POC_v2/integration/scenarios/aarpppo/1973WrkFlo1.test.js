@@ -9,7 +9,7 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../testData/'+testDataEnv+'/aarpppo/aarpppo.1973WrkFlow1.json');
+var TestData = require('../../testData/' + testDataEnv + '/aarpppo/aarpppo.1973WrkFlow1.json');
 
 describe('AARPPO: 1973 Work Flow', function() {
     var effectedDate;
@@ -25,15 +25,15 @@ describe('AARPPO: 1973 Work Flow', function() {
     it('E2E_1 : Should complete the Enroll Page', function() {
         enrollPage.enterHomePageDetails(TestData.enrollData).then(function(effectDate) {
             effectedDate = effectDate;
-        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
-        console.log('E2E_1: Complete');
-    });
+            expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+            console.log('E2E_1: Complete');
+        });
     });
 
     //Enter the valid Test Data in the Personal Information page and Click n the Next
 
     it('E2E_2 :should populate PersInfo page', function() {
-        TestData.MemberId= Utility.randomNo('Number',10);
+        TestData.MemberId = Utility.randomNo('Number', 10);
         perInfo.fillPersonalInfo(TestData);
         perInfo.fillAddress(TestData);
         perInfo.phoneNumberemail(TestData);
@@ -87,6 +87,7 @@ describe('AARPPO: 1973 Work Flow', function() {
         receipt.answerQuery(TestData.queryAnswer);
         expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
         receipt.applicationNumber.getText().then(function(appicationNumber) {
+            apNumber = appicationNumber;
             console.log("Application Number == " + appicationNumber)
         })
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
@@ -111,6 +112,7 @@ describe('AARPPO: 1973 Work Flow', function() {
         expect(receipt.getPlanSummaryByKey('Orthodontics').getText()).toEqual(plansummary.Orthodontics);
         console.log('E2E_6: Complete');
     });
+
     it('E2E_7 :Should display primary applicant', function() {
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
@@ -138,8 +140,8 @@ describe('AARPPO: 1973 Work Flow', function() {
         var facility = TestData.dependent3;
         receipt.getSelectedFacilityDetails('DEPENDENT', 3).then(function(facilitydata) {
             // expect(facilitydata.name).toEqual(TestData.child2.firstName);
-            expect(facilitydata.name).toContain(TestData.child2.firstName);
+                expect(facilitydata.name).toContain(TestData.child2.firstName);
+                console.log('E2E_9: Complete');
         });
-        console.log('E2E_9: Complete');
     });
 });

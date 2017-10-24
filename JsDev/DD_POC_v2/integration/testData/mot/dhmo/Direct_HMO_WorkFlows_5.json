@@ -6,7 +6,7 @@
     "dob": "05-05-1965",
     "ssn": "1234560215",
     "alternateid": "test@test.com",
-     "fieldHomeAddr": "100 First Street floor 4",
+    "fieldHomeAddr": "100 First Street floor 4",
     "city": "San Francisco",
     "State": "CA",
     "contactType": "Cell",
@@ -21,7 +21,7 @@
 
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
-
+    "discloser": "Delta_CA_DHMO_CAA55",
     "enrollData": {
         "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
         "PlanType": "DHMO",
@@ -217,7 +217,7 @@
         "facilityoption6": {
             "facility": "Kims Family Dentistry",
             "zipcode": "90001"
-            
+
         },
         "facilityoption7": {
             "facility": "Kayvan Kafayi DDS",
@@ -260,9 +260,9 @@
 
     },
 
-    
+
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
-    
+
     "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
     "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
     "nameOnCard": "Peter Heins",
@@ -271,7 +271,7 @@
     "expYear": "2020",
     "securityCode": "1254",
     "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-     "primaryFacility": {
+    "primaryFacility": {
         "facilityName": "Kayvan Kafayi DDS",
         "street": "2085 Gellert Blvd Ste 9",
         "city": "Daly City",

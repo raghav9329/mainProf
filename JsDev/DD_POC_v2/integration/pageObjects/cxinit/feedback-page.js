@@ -27,6 +27,11 @@ class FeedbackPage extends ControlBase {
     feedbackFrame() {
         return browser.driver.findElement(protractor.By.css('div.feedback.expanded iframe'))
     }
+
+    verifyFeedback(){
+        this.feedback.click();
+        
+    }
 };
 
 /**

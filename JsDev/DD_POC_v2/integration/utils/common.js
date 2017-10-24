@@ -27,14 +27,13 @@
       */
 
      this.switchToWindow = function(index) {
-         return browser.getAllWindowHandles().then(function(handles) {
-             if (handles.length > 1) {
+         return browser.getAllWindowHandles().then(function(handles) {          
                  return browser.switchTo().window(handles[index]).then(function() {
                      browser.sleep(500);
                      logger.info('Switched to window');
                      return true;
                  });
-             }
+           
          }, function(err) {
              logger.error("Failed to switching window due to " + err.message);
              return false;
@@ -272,6 +271,7 @@
 
      this.openApplication = function(uRl, product) {
          return browser.controlFlow().execute(function() {
+             browser.driver.manage().deleteAllCookies();
              if (uRl.length === 0) {
                  if (!isExecutionFromUI) {
                      return browser.get(browser.params.baseUrl).then(function() {
@@ -411,7 +411,7 @@
      this.readPDFFile = function(file) {
          return browser.controlFlow().execute(function() {
              return pdf2Text(file).then(function(pages) {
-                 return pages;
+                 return pages.toString();
              })
          })
      }

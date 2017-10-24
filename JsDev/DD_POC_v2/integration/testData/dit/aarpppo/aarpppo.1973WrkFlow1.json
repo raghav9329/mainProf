@@ -6,7 +6,7 @@
     "dob": "05-05-1971",
     "MemberId": "3041586290",
     "alternateid": "test@test.com",
-  "fieldHomeAddr": "100 First Street floor 4",
+    "fieldHomeAddr": "100 First Street floor 4",
     "city": "San Francisco",
     "State": "CA",
     "contactType": "Cell",

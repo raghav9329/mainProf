@@ -28,6 +28,7 @@
     "deltaRating": 1,
     "queryAnswer": "Test",
     "Amount": "$104.08",
+    "discloser": "Delta_PA_PPO",
 
     "enrollData": {
         "PlanName": "Delta Dental Individual & Family Delta Dental PPO Basic Plan",

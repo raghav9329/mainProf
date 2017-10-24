@@ -100,9 +100,9 @@ class DirectorySearchPage extends ControlBase {
         });
     };
 
-    openView(providerName) {
-        element(this.pageObjects.view(providerName)).clickIt();
-    };
+    // openView(providerName) {
+    //     element(this.pageObjects.view(providerName)).clickIt();
+    // };
 
     filterMenuItem(filterMenuName) {
         return new Label(this.pageObjects.filterMenuItem(filterMenuName));

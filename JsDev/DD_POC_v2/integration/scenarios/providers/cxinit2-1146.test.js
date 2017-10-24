@@ -10,18 +10,60 @@ describe('CXINIT2-1146: Prov Dir', function() {
 
     dataProvider(TestData.Location, function(data, description) {
         if (data.ExecutionFlag) {
-            it('Dist_1o13:Should show fewer results on 5 Mile Dist Filter "' + data.Loc + '"', function() {
+            it('Dist_1o13:Should reduce result count on Dist Filters "' + data.Loc + '"', function() {
                 dirSearch.location.setText(data.Loc);
                 dirSearch.findDentist.click();
                 dirSearch.getProvidersCount().then(function(totalCount) {
+             
+             // 9/27/17 remove comment when this action is completed
+             // should implement a looping construct 
+             // to iterate through the multiple distances 
+             // Same code, just a different dist varialble each time
                     dirSearch.refineSearch.click();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
-                    dirSearch.distanceSelect.selectByText(TestData.Distance);
+                    dirSearch.distanceSelect.selectByText(TestData.Distance35);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance35 );
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
+
+                    dirSearch.refineSearch.click();
+                    expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
+                    dirSearch.distanceSelect.selectByText(TestData.Distance25);
+                    dirSearch.apply.click();
+                    dirSearch.getProvidersCount().then(function(refineCount) {
+                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance25 );
+                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                    });
+
+                    dirSearch.refineSearch.click();
+                    expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
+                    dirSearch.distanceSelect.selectByText(TestData.Distance15);
+                    dirSearch.apply.click();
+                    dirSearch.getProvidersCount().then(function(refineCount) {
+                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance15 );
+                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                    });
+
+                    dirSearch.refineSearch.click();
+                    expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
+                    dirSearch.distanceSelect.selectByText(TestData.Distance10);
+                    dirSearch.apply.click();
+                    dirSearch.getProvidersCount().then(function(refineCount) {
+                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance10 );
+                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                    });
+
+                    dirSearch.refineSearch.click();
+                    expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
+                    dirSearch.distanceSelect.selectByText(TestData.Distance5);
+                    dirSearch.apply.click();
+                    dirSearch.getProvidersCount().then(function(refineCount) {
+                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance5 );
+                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                    });
+
                 });
             });
         };

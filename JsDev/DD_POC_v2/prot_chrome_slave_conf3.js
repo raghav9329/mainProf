@@ -7,6 +7,8 @@ exports.config = {
     // specs: ['integration/scenarios/dhmo/dhmo.1755DirHMO_WrkFlow6.test.js'],
     //specs: ['integration/scenarios/cxinit/*.test.js'],
     // specs: ['integration/scenarios/*.js', 'integration/scenarios/cxinit/*.js', 'integration/scenarios/aarphmo/*.js'],
+    specs: ['integration/scenarios/dppo/2317_E2EPayCCAnn_TwoDep.test.js'],
+    // specs: ['integration/scenarios/dhmo/Prod_DHMO.test.js'],
     //specs: [
 
     suites: {
@@ -199,16 +201,16 @@ exports.config = {
 
     },
 
-    seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
-    chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30.exe',
-    geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.18.0.exe',
+    seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.6.0.jar',
+    chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.32.exe',
+    geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.19.0.exe',
 
 
     params: {
         //  baseUrl: '' ,  // running this allows you to enter URL at command line
         //baseUrl: 'https://aw-lx0176.deltadev.ent:3000/enroll/',
-        // baseUrl: 'http://aw-lx0101.deltadev.ent',
-        baseUrl: 'https://deltadentalins.com'
+        baseUrl: 'http://aw-lx0101.deltadev.ent',
+        //baseUrl: 'https://deltadentalins.com',
         exeInspDelay: '', // Command Line controllable sleep variable for running Debug Inspections
         // baseUrl: 'https://mot.deltadentalins.com/enroll/delta/test',
         //baseUrl: 'https://mot.deltadentalins.com',
@@ -251,8 +253,8 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         shardTestFiles: true,
-        maxInstances: 4,
-        //maxInstances: 1,
+        //maxInstances: 4,
+        maxInstances: 1,
         chromeOptions: {
             'args': ["disable-infobars"],
             prefs: {
@@ -267,19 +269,21 @@ exports.config = {
         // ======================================= 
         //  browserName: 'firefox',
         //  acceptInsecureCerts:true
-
-        // =======================================
-
-        //  browserName: 'internet explorer',
-        //  platform: 'ANY',
-        //  version: '11',
-        //  nativeEvents: false,
-        //  unexpectedAlertBehaviour: 'accept',
-        //  ignoreProtectedModeSettings: true,
-        //  enablePersistentHover: true,
-        //  disable-popup-blocking: true,
-        //  ignoreZoomSetting: true
     },
+    // =======================================
+    // enable  below capabilities for Internet explorer driver
+    //=============
+    // capabilities: {
+    //  browserName: 'internet explorer',
+    //  platform: 'ANY',
+    //  version: '11',
+    //  nativeEvents: false,
+    //  unexpectedAlertBehaviour: 'accept',
+    //  ignoreProtectedModeSettings: true,
+    //  enablePersistentHover: true,
+    //  disable-popup-blocking: true,
+    //  ignoreZoomSetting: true
+    // },
 
 
     resultJsonOutputFile: 'results.json',

@@ -9,6 +9,9 @@ var CheckBox = require('../../controls/checkbox-control');
 var RadioButton = require('../../controls/radiobutton-control');
 var LinkText = require('../../controls/link-control');
 
+var shopping = new(require('./shopping-page.js'));
+var planOptions = new(require('./plan-options-page.js'));
+var planDetails = new(require('./plan-details-page.js'));
 /**
  * Provides access to the functionality of Personal Info page
  * @constructor
@@ -65,7 +68,7 @@ class EnrollPage extends ControlBase {
     deltaEnroll(homeObj) {
         var self = this;
         self.Zipcode.setText(homeObj.ZIPcode);
-         self.Zipcode.setText(homeObj.ZIPcode);
+        self.Zipcode.setText(homeObj.ZIPcode);
         browser.sleep(1000);
         self.dob.setText(homeObj.dob);
         browser.controlFlow().execute(function() {
@@ -88,11 +91,31 @@ class EnrollPage extends ControlBase {
 
     aarpEnroll(homeObj) {
         this.Zipcode.setText(homeObj.ZIPcode);
-         this.Zipcode.setText(homeObj.ZIPcode);
+        this.Zipcode.setText(homeObj.ZIPcode);
         browser.sleep(2000);
         this.Coverage_Type.selectByText(homeObj.NoOfPeopleCovered);
     }
 
+    enterHomePageDetailsNew(homeObj) {
+        return browser.controlFlow().execute(function() {
+            switch (homeObj.IssuerCode.toUpperCase()) {
+                case 'DELTA':
+                    self.deltaEnroll(homeObj);
+                    break;
+                case 'AARP':
+                    shopping.State.setText(homeObj.State);
+                    shopping.Zipcode.setText(homeObj.ZIPcode);
+                    shopping.NoOFCovered.selectByText(homeObj.CoverageType);
+                    browser.sleep(3000)
+                    //shopping.Cvgstartdate.setText(homeObj.CoverageStartDate);
+                    shopping.Submit.click();
+                    break;
+            };
+            planOptions.getPlanDetails(homeObj.PlanName).click();
+            planDetails.buyPlan.click();
+        });
+
+    };
     // Fill Home page details and navigate ti perInfo page
     enterHomePageDetails(homeObj, ppoo) {
         var self = this;
@@ -111,12 +134,14 @@ class EnrollPage extends ControlBase {
                         //this.Effcdate.selectByText(homeObj.CoverageStartDate);
                         self.Go.click();
                         browser.sleep(2000);
+                        browser.refresh();
+                        browser.sleep(2000);
                         self.pageObjects.enroll(homeObj.PlanName).click();
                         return cstartDate;
                     })
                 } else {
                     console.log("else block===============");
-                    if (c.get('browserName') == 'internet explorer') HmPage.overridelink.click();
+                    if (c.get('browserName') == 'internet explorer') self.overridelink.click();
                     self.PlanName.setText(homeObj.PlanName);
                     self.PlanType.setText(homeObj.PlanType);
                     self.PlanCode.setText(homeObj.PlanCode);

@@ -12,7 +12,7 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_1.json');
 
 describe('DHMO:1746 Direct HMO WorkFlows -1', function() {
-    var effectiveDate, premiumAmount;
+    var effectiveDate, apNumber, pathToPdf, premiumAmount;
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
@@ -22,7 +22,7 @@ describe('DHMO:1746 Direct HMO WorkFlows -1', function() {
     it('E2E_1 : Should complete the Enroll Page', function() {
         enrollPage.enterHomePageDetails(TestData.enrollData).then(function(sdate) {
             effectiveDate = sdate;
-            console.log("sdate============" + sdate);
+            console.log("start date ===== " + sdate);
         })
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
         console.log('1746_1 complete')
@@ -73,19 +73,24 @@ describe('DHMO:1746 Direct HMO WorkFlows -1', function() {
     });
 
     //Furnish all the fields of the Payment page with the valid Test Data and proceed
-    if (testExecutionEnv != 'production') {
-        it('E2E_6 :should fill out pay details', function() {
-            payment.billingChkBox.check();
-            payment.fillpayment(TestData);
-            payment.summaryTotalPrice.getText().then(function(premium) {
-                premiumAmount = premium;
-            });
-            payment.purchaseNow.click();
-            Utility.delay(maxWait);
-            expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-            console.log('1746_6 complete')
+    // if (testExecutionEnv != 'production') {
+    it('E2E_6 :should fill out pay details', function() {
+        expect(payment.discloser.getAttribute('href')).toContain(TestData.discloser);
+        payment.discloser.click();
+        Utility.switchToWindow(1);
+        expect(browser.getCurrentUrl()).toContain(TestData.discloser);
+        Utility.switchToWindow(0);
+        payment.billingChkBox.check();
+        payment.fillpayment(TestData);
+        payment.summaryTotalPrice.getText().then(function(premium) {
+            premiumAmount = premium;
         });
-    }
+        payment.purchaseNow.click();
+        Utility.delay(maxWait);
+        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+        console.log('1746_6 complete')
+    });
+    // }
     //Verify and Validate the Application Number and Plan Name in the Receipt Page
 
     it('E2E_7 :Should submit delta rating', function() {
@@ -93,7 +98,10 @@ describe('DHMO:1746 Direct HMO WorkFlows -1', function() {
         receipt.answerQuery(TestData.queryAnswer);
         expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
         receipt.applicationNumber.getText().then(function(appicationNumber) {
-            console.log("Application Number == " + appicationNumber)
+            console.log("Application Number == " + appicationNumber);
+            receipt.saveCompletedApplication.click().then(function() {
+                pathToPdf = './PDFDownloads/application' + appicationNumber + '.pdf';
+            })
         })
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
         //Effective date is fixed under drop down and the Coverage start date are unequal
@@ -146,6 +154,9 @@ describe('DHMO:1746 Direct HMO WorkFlows -1', function() {
             expect(facilitydata.region).toEqual(facility.region);
             expect(facilitydata.postalCode).toEqual(facility.postalCode);
             expect(facilitydata.telephone).toEqual(facility.telephone);
+            Utility.readPDFFile(pathToPdf).then(function(test) {
+                expect(test).toContain(TestData.firstname);
+            });
             console.log('1746_10 complete')
         });
     });

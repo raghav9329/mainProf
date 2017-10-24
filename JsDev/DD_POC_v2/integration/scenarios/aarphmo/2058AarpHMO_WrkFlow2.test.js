@@ -87,6 +87,7 @@ describe('AARPHMO:2058 work flow 2', function() {
         depInfo.fillDependent('Dependent2', TestData.child, false);
         depInfo.next.click();
         Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
+        Utility.delay(maxWait);
         expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
         console.log('2058_6 complete');
 

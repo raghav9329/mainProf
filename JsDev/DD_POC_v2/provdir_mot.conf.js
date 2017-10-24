@@ -7,7 +7,7 @@ exports.config = {
     //specs: ['integration/scenarios/providers/cxinit2.577.test.js'],
     //specs: ['integration/scenarios/providers/cxinit2.642.test.js'],
     //specs: ['integration/scenarios/providers/cxinit2.811.test.js'],
-    specs: ['integration/scenarios/providers/cxinit2.4.test.js'],
+    specs: ['integration/scenarios/providers/cxinit2-1146.test.js'],
 
     suites: {
        
@@ -72,9 +72,6 @@ exports.config = {
 // 	  'ignoreZoomSetting': true
 //       },
 
-    localSeleniumStandaloneOpts: {   //  is this at all useful ?????
-        jvmArgs: ["-Dwebdriver.gecko.driver=C:\\DD_Repos\\dd-cx-test\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.17.0.exe"]
-      },
     
     params: {
        // baseUrl: '',
@@ -133,6 +130,10 @@ exports.config = {
 //Config Archive: stuff thats been commented out for some time
 ////////////////////////////////////////////////////////////////
 
+// 9/26/17   Don't think this ever had any value
+//    localSeleniumStandaloneOpts: {   //  is this at all useful ?????
+//        jvmArgs: ["-Dwebdriver.gecko.driver=C:\\DD_Repos\\dd-cx-test\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.17.0.exe"]
+//      },
 
 //	
 //5/8/17 review and act.

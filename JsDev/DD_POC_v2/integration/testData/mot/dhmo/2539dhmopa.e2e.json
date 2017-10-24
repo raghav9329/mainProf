@@ -24,6 +24,7 @@
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
     "queryAnswer": "Test",
+    "discloser": "Delta_PA_Prepaid_Plan_PAA60",
     "enrollData": {
         "PlanName": "DeltaCare® USA PAA60 Individual/Family Dental Program",
         "PlanType": "DHMO",
