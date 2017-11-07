@@ -1,104 +1,20 @@
 exports.config = {
     framework: 'jasmine',
-     seleniumAddress: 'http://localhost:4444/wd/hub',
+  //   seleniumAddress: 'http://localhost:4444/wd/hub',
     
     //specs: ['integration/scenarios/dhmo/dhmo.504.test.js'],
     //specs: ['integration/scenarios/dhmo/dhmo.504.test.js'],
     specs: ['integration/scenarios/051217_E2E_POM_Workflow.js'],
 
     suites: {
-        allCxinit: 	'integration/scenarios/dhmo/*.test.js',
-    	
-        dhpers1:[   
-        	'integration/scenarios/dhmo/dhmo.507PersInfo.test.js',
-    		'integration/scenarios/dhmo/dhmo.519PersInfo.test.js',
-    		'integration/scenarios/dhmo/dhmo.489PersInfo.test.js',
-    		'integration/scenarios/dhmo/dhmo.504PersInfo.test.js',
-    		'integration/scenarios/dhmo/dhmo.483PersInfo.test.js',
-    		'integration/scenarios/dhmo/dhmo.471PersInfo.test.js'
-    	],
-    			  	
-    	dhpers2:[	
-    		'integration/scenarios/dhmo/dhmo.720PersInfo.test.js',  //	'integration/scenarios/dhmo/dhmo.519.test.js',
-    		'integration/scenarios/dhmo/dhmo.804PersInfo.test.js',
-    		'integration/scenarios/dhmo/dhmo.1361PersInfo.test.js',
-    		'integration/scenarios/dhmo/dhmo.1548PersInfo.test.js',
-    		'integration/scenarios/dhmo/dhmo.1549PersInfo.test.js'
-    	], 
-
-    	dhdeps:[   
-    		'integration/scenarios/dhmo/dhmo.1355DepCTA.test.js',
-    		'integration/scenarios/dhmo/dhmo.1356DepPremChgPop.test.js',
-    		'integration/scenarios/dhmo/dhmo.1357DepChildAge.test.js',
-    		'integration/scenarios/dhmo/dhmo.1358DepSpouse-DP.test.js',
-    		'integration/scenarios/dhmo/dhmo.1359Dep-15Deps.test.js',
-    	],
-
-    	dhfacs:[	
-    		'integration/scenarios/dhmo/dhmo.1365FacSearch.test.js',
-    		'integration/scenarios/dhmo/dhmo.1366FacSelect.test.js',
-    		'integration/scenarios/dhmo/dhmo.1367FacCTA.test.js',
-    		'integration/scenarios/dhmo/dhmo.1368FacFeedback.test.js'
-    	],
-
-    	dhpayment:[ 	
-    		'integration/scenarios/dhmo/dhmo.1403PayCCExp.test.js',
-    		'integration/scenarios/dhmo/dhmo.1404PayAddrSug.test.js',
-    		'integration/scenarios/dhmo/dhmo.1405PayConAuthChk.test.js',
-    		'integration/scenarios/dhmo/dhmo.1406PayCTA.test.js',
-    		'integration/scenarios/dhmo/dhmo.1407PayCvv.test.js'
-    	],
-
-    	dhe2e:[	
-    		'integration/scenarios/051217_E2E_POM_Workflow.js',
-    		'integration/scenarios/addDep_Enroll.DeleteDep_depPage.js',
-    		'integration/scenarios/dhmo/dhmo.1408.EndToEndWkFlo1.test.js',
-    		'integration/scenarios/dhmo/dhmo.1461.EndToEndWkFlo2.test.js',
-    		'integration/scenarios/dhmo/dhmo.1746DirHMO_WrkFlo1.test.js',
-    		'integration/scenarios/dhmo/dhmo.1753DirHMO_WrkFlo4.test.js',
-    		'integration/scenarios/dhmo/dhmo.1754DirHMO_WrkFlow5.test.js',
-    		'integration/scenarios/dhmo/dhmo.1755DirHMO_WrkFlow6.test.js'
-    	],
-    	
-    	dppers1:['integration/scenarios',
-    			'integration/scenarios',
-    			'integration/scenarios',
-    	],
-    	dppers2:[],
-    	dpdeps:[], 
-    	dppay:[],
-    	dpe2e:[],
-    	
-    	ahpers1:[],
-    	ahpers2:[],
-    	ahdeps:[], 
-    	ahfacs:[],
-    	ahpay:[],
-    	ahe2e:[],	
-    	
-    	
-    	appers1:[],
-    	appers2:[],
-    	apdeps:[], 
-    	appay:[],
-    	ape2e:['integration/scenarios/aarpppo/aarpppo.1973WrkFlo1.test',],	
-    	
-    	
-    	cxinit2_4: 	'integration/scenarios/providers/cxinit2.4.test.js',
-        cxE2E: 		'integration/scenarios/051217_E2E_POM_Workflow.js',
-        cxE2E50:	'integration/scenarios/CAA50*.test.js',
-        cxE2E54:	'integration/scenarios/CAA54*.test.js',
-        cxE2E55p:	'integration/scenarios/CAA55Plan*.test.js',
-        cxE2E55s:	'integration/scenarios/CAA55Simple*.test.js',
+		allCxinit: 	'integration/scenarios/dhmo/*.test.js',
+		
+		testWork: 'integration/scenarios/testWork/promiseDeferral.js',
+		testDone: 'integration/scenarios/testWork/doneTest.js',
+		frisby: 'integration/scenarios/providerapi/api_frisby.spec.js',
     },
 
     
-// C:\DD_Repos\dd-cx-test\node_modules\protractor\node_modules\webdriver-manager\selenium    
-//  I am beginnign to see the value of the local installation and having a uniform configuraiton 
-//  Across all the users installations.  The proper locaiton of Local drivers
-//    seleniumServerJar: 'C:\\DD_Repos\\dd-cx-test\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
-//    chromeDriver:      'C:\\DD_Repos\\dd-cx-test\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30.exe',
-//    geckodriver:       'C:\\DD_Repos\\dd-cx-test\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.17.0.exe',
     
     seleniumServerJar:  __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
     chromeDriver:       __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30.exe',

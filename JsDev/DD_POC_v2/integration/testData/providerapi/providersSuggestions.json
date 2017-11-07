@@ -1,0 +1,41 @@
+{
+    "testdata": {
+
+        "test1": {
+            "params": {
+                
+                "text" : "Ortho"
+            },
+            "verify": "ORTHO"
+        },
+        "test2": {
+            "params": {
+
+               "text" : "Endo"
+            },
+
+             "verify": "Endo"
+        },
+        "test3": {
+            "params": {
+               "text" : "Pedi"
+            },
+
+             "verify": "Pedi"
+        },
+        "test4": {
+            "params": {
+               "text" : "Prosth"
+            },
+
+             "verify": "Prosth"
+        },
+        "test5": {
+            "params": {
+               "text" : "Dentist"
+            },
+
+            "verify": "Dentist"
+        }
+    }
+}

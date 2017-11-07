@@ -1,0 +1,85 @@
+{
+    "testdata": {
+
+        "test1": {
+            "practiceLocationNumber": "139344028001",
+            "params": {},
+            "verify": {
+                "practiceLocationNumber": "139344028001",
+                "name": "Sage Dental of Royal Palm Beach PLLC",
+                "address": {
+                    "addressLine": "137 S State Rd Ste 301",
+                    "city": "West Palm Beach",
+                    "state": "FL",
+                    "zipcode": "33414",
+                    "latitude": 26.6970921,
+                    "longitude": -80.2322311
+                }
+            }
+        },
+        "test2": {
+            "practiceLocationNumber": "240620968001",
+            "params": {},
+            "verify": {
+                "practiceLocationNumber": "240620968001",
+                "name": "Michael J Perona",
+                "address": {
+                    "addressLine": "188 Spear St Ste 105, ",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1503",
+                    "latitude": 37.7914467,
+                    "longitude": -122.3929672
+                }
+            }
+        },
+        "test3": {
+            "practiceLocationNumber": "240615694001",
+            "params": {},
+            "verify": {
+                "practiceLocationNumber": "240615694001",
+                "name": "Leong Dental Inc",
+                "address": {
+                    "addressLine": "199 Fremont St Ste 105",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-2287",
+                    "latitude": 37.7899399,
+                    "longitude": -122.3948441
+                }
+            }
+        },
+        "test4": {
+            "practiceLocationNumber": "240637385001",
+            "params": {},
+            "verify": {
+                "practiceLocationNumber": "240637385001",
+                "name": "Steve Byun",
+                "address": {
+                    "addressLine": "121 Spear St Ste B16",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1576",
+                    "latitude": 37.7919006,
+                    "longitude": -122.3928299
+                }
+            }
+        },
+        "test5": {
+            "practiceLocationNumber": "240645139001",
+            "params": {},
+            "verify": {
+                "practiceLocationNumber": "240645139001",
+                "name": "Yvette Danielle Marquis  DDS",
+                "address": {
+                    "addressLine": "131 Steuart St Ste 323",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1241",
+                    "latitude": 37.7931023,
+                    "longitude": -122.3924255
+                }
+            }
+        }
+    }
+}

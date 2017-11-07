@@ -52,6 +52,7 @@ class DirectorySearchPage extends ControlBase {
         this.providersListing = new Label(this.pageObjects.providersListing);
         this.countOfProviders = new Label(this.pageObjects.countOfProviders);
         this.headerTextProviderListError = new Label(this.pageObjects.headerTextProviderListError);
+        this.backtosearch = new Label(this.pageObjects.backtosearch);
     }
     selectHomeAddress(homeaddress) {
         var self = this;

@@ -1,0 +1,517 @@
+{
+    "testdata": {
+
+        "test1": {
+            "providerKey": "GRP240645139240645139001PRV24072991700",
+            "params": {
+                "latitude": 37.7931023,
+                "longitude": -122.3924255
+            },
+            "verify": {
+                "providerKey": "GRP240645139240645139001PRV24072991700",
+                "firstName": "Yvette",
+                "middleName": "D",
+                "lastName": "Marquis",
+                "specialty": "General Dentist",
+                "officeName": "Yvette Danielle Marquis  DDS",
+                "practiceLocationNumber": "240645139001",
+                "officePhone": "(415) 777-5115",
+                "facilityId": null,
+                "emailAddress": "info@sanfrandental.com",
+                "faxNumber": null,
+                "website": "http://www.sanfrandental.com",
+                "address": {
+                    "addressLine": "131 Steuart St Ste 323",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1241",
+                    "latitude": 37.7931023,
+                    "longitude": -122.3924255
+                },
+                "distance": 0,
+                "providerNetworks": [{
+                    "networkId": "2PREMIER",
+                    "networkName": "Delta Dental Premier",
+                    "acceptsNewPatients": "Y"
+                }, {
+                    "networkId": "2PPO",
+                    "networkName": "Delta Dental PPO",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "gender": "F",
+                "npi": "1083804132",
+                "license": {
+                    "licenseNumber": "44613",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "Cantonese",
+                    "Mandarin",
+                    "English",
+                    "Spanish"
+                ],
+                "practiceHours": {
+                    "mondayHours": "07:30-16:30",
+                    "tuesdayHours": "07:30-16:30",
+                    "wednesdayHours": "10:30-18:30",
+                    "thursdayHours": "10:30-18:30",
+                    "fridayHours": "07:30-16:30",
+                    "saturdayHours": "Closed",
+                    "sundayHours": "Closed"
+                },
+                "accessibility": {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "Yes",
+                    "internetAccess": "Yes"
+                },
+                "patientConsiderations": {
+                    "treatsChildren": "Yes",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "test2": {
+            "providerKey": "GRP240603555240603555001PRV24001043400",
+            "params": {
+                "networkId": "2PREMIER"
+            },
+            "verify": {
+                "providerKey": "GRP240603555240603555001PRV24001043400",
+                "firstName": "Hung",
+                "middleName": "Quang",
+                "lastName": "Vo",
+                "specialty": "General Dentist",
+                "officeName": "Esthethics Dental",
+                "practiceLocationNumber": "240603555001",
+                "officePhone": "(415) 348-1100",
+                "facilityId": null,
+                "emailAddress": "esthetics_dental@yahoo.com",
+                "faxNumber": "(415) 348-1103",
+                "website": null,
+                "address": {
+                    "addressLine": "500 Howard St Ste 101",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-3031",
+                    "latitude": 37.7884445,
+                    "longitude": -122.3967133
+                },
+                "distance": 0,
+                "providerNetworks": [{
+                    "networkId": "2PREMIER",
+                    "networkName": "Delta Dental Premier",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "gender": "M",
+                "npi": "1154456606",
+                "license": {
+                    "licenseNumber": "50009",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "Chinese",
+                    "English",
+                    "Vietnamese"
+                ],
+                "practiceHours": {
+                    "mondayHours": "09:00-17:30",
+                    "tuesdayHours": "09:00-17:30",
+                    "wednesdayHours": "09:00-17:30",
+                    "thursdayHours": "10:00-18:30",
+                    "fridayHours": "09:00-17:30",
+                    "saturdayHours": "Call For Details",
+                    "sundayHours": "Closed"
+                },
+                "accessibility": {
+                    "freeParking": "No",
+                    "wheelChairAccess": "No",
+                    "publicTransitAccess": "Yes",
+                    "internetAccess": "No"
+                },
+                "patientConsiderations": {
+                    "treatsChildren": "Yes",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "test3": {
+            "providerKey": "GRP841324779841324779001PRV24067084210",
+            "params": {
+                "latitude": 37.7892418
+            },
+            "verify": {
+                "providerKey": "GRP841324779841324779001PRV24067084210",
+                "firstName": "Nima",
+                "middleName": "Sayed",
+                "lastName": "Massoomi",
+                "specialty": "Oral Surgeon",
+                "officeName": "San Francisco Surgical Arts",
+                "practiceLocationNumber": "841324779001",
+                "officePhone": "(415) 813-6400",
+                "facilityId": null,
+                "emailAddress": "info@sfsurgicalarts.com",
+                "faxNumber": "(415) 813-6401",
+                "website": "http://www.sfsurgicalarts.com",
+                "address": {
+                    "addressLine": "301 Main St Unt 1A, ",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-5032",
+                    "latitude": 37.7892418,
+                    "longitude": -122.3914108
+                },
+                "distance": 0,
+                "providerNetworks": [{
+                    "networkId": "2PPO",
+                    "networkName": "Delta Dental PPO",
+                    "acceptsNewPatients": "Y"
+                }, {
+                    "networkId": "2PREMIER",
+                    "networkName": "Delta Dental Premier",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "gender": "M",
+                "npi": "1346397221",
+                "license": {
+                    "licenseNumber": "81",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "English"
+                ],
+                "practiceHours": {
+                    "mondayHours": "09:00-17:00",
+                    "tuesdayHours": "09:00-17:00",
+                    "wednesdayHours": "09:00-17:00",
+                    "thursdayHours": "09:00-17:00",
+                    "fridayHours": "09:00-17:00",
+                    "saturdayHours": "Closed",
+                    "sundayHours": "Closed"
+                },
+                "accessibility": {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "Yes",
+                    "internetAccess": "Yes"
+                },
+                "patientConsiderations": {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "test4": {
+            "providerKey": "GRP841324779841324779001PRV24065326910",
+            "params": {
+                "longitude": -122.3914108
+            },
+            "verify": {
+                "providerKey": "GRP841324779841324779001PRV24065326910",
+                "firstName": "Alireza",
+                "middleName": "M",
+                "lastName": "Sodeifi",
+                "specialty": "Oral Surgeon",
+                "officeName": "San Francisco Surgical Arts",
+                "practiceLocationNumber": "841324779001",
+                "officePhone": "(415) 813-6400",
+                "facilityId": null,
+                "emailAddress": "info@sfsurgicalarts.com",
+                "faxNumber": "(415) 813-6401",
+                "website": "http://www.sfsurgicalarts.com",
+                "address": {
+                    "addressLine": "301 Main St Unt 1A, ",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-5032",
+                    "latitude": 37.7892418,
+                    "longitude": -122.3914108
+                },
+                "distance": 0,
+                "providerNetworks": [{
+                    "networkId": "2PREMIER",
+                    "networkName": "Delta Dental Premier",
+                    "acceptsNewPatients": "Y"
+                }, {
+                    "networkId": "2PPO",
+                    "networkName": "Delta Dental PPO",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "gender": "M",
+                "npi": "1851407753",
+                "license": {
+                    "licenseNumber": "55700",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "English"
+                ],
+                "practiceHours": {
+                    "mondayHours": "09:00-17:00",
+                    "tuesdayHours": "09:00-17:00",
+                    "wednesdayHours": "09:00-17:00",
+                    "thursdayHours": "09:00-17:00",
+                    "fridayHours": "09:00-17:00",
+                    "saturdayHours": "Closed",
+                    "sundayHours": "Closed"
+                },
+                "accessibility": {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "Yes",
+                    "internetAccess": "Yes"
+                },
+                "patientConsiderations": {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "test5": {
+            "providerKey": "GRP240615694240615694001PRV49981212900",
+            "params": {
+                "latitude": 37.7899399,
+                "longitude": -122.3948441,
+                "networkId": "2PPO"
+
+            },
+            "verify": {
+                "providerKey": "GRP240615694240615694001PRV49981212900",
+                "firstName": "Thomas",
+                "middleName": "M",
+                "lastName": "Kaiser",
+                "specialty": "General Dentist",
+                "officeName": "Leong Dental Inc",
+                "practiceLocationNumber": "240615694001",
+                "officePhone": "(415) 278-5777",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": null,
+                "website": "http://www.leongdental.com",
+                "address": {
+                    "addressLine": "199 Fremont St Ste 105",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-2287",
+                    "latitude": 37.7899399,
+                    "longitude": -122.3948441
+                },
+                "distance": 0,
+                "providerNetworks": [{
+                    "networkId": "2PREMIER",
+                    "networkName": "Delta Dental Premier",
+                    "acceptsNewPatients": "Y"
+                }, {
+                    "networkId": "2PPO",
+                    "networkName": "Delta Dental PPO",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "gender": "M",
+                "npi": "1427495373",
+                "license": {
+                    "licenseNumber": "64818",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "Cantonese",
+                    "English",
+                    "Chinese"
+                ],
+                "practiceHours": {
+                    "mondayHours": "09:30-18:00",
+                    "tuesdayHours": "09:30-18:00",
+                    "wednesdayHours": "09:30-18:00",
+                    "thursdayHours": "09:30-18:00",
+                    "fridayHours": "Closed",
+                    "saturdayHours": "Closed",
+                    "sundayHours": "Closed"
+                },
+                "accessibility": {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "No",
+                    "internetAccess": "Yes"
+                },
+                "patientConsiderations": {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "test6": {
+            "providerKey": "GRP240615694240615694001PRV49981212900",
+            "params": {
+                "latitude": 37.7892418,
+                "longitude": -122.3914108
+            },
+            "verify": {
+                "providerKey": "GRP240615694240615694001PRV49981212900",
+                "firstName": "Thomas",
+                "middleName": "M",
+                "lastName": "Kaiser",
+                "specialty": "General Dentist",
+                "officeName": "Leong Dental Inc",
+                "practiceLocationNumber": "240615694001",
+                "officePhone": "(415) 278-5777",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": null,
+                "website": "http://www.leongdental.com",
+                "address": {
+                    "addressLine": "199 Fremont St Ste 105",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-2287",
+                    "latitude": 37.7899399,
+                    "longitude": -122.3948441
+                },
+                "distance": 0,
+                "providerNetworks": [{
+                    "networkId": "2PREMIER",
+                    "networkName": "Delta Dental Premier",
+                    "acceptsNewPatients": "Y"
+                }, {
+                    "networkId": "2PPO",
+                    "networkName": "Delta Dental PPO",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "gender": "M",
+                "npi": "1427495373",
+                "license": {
+                    "licenseNumber": "64818",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "Cantonese",
+                    "English",
+                    "Chinese"
+                ],
+                "practiceHours": {
+                    "mondayHours": "09:30-18:00",
+                    "tuesdayHours": "09:30-18:00",
+                    "wednesdayHours": "09:30-18:00",
+                    "thursdayHours": "09:30-18:00",
+                    "fridayHours": "Closed",
+                    "saturdayHours": "Closed",
+                    "sundayHours": "Closed"
+                },
+                "accessibility": {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "No",
+                    "internetAccess": "Yes"
+                },
+                "patientConsiderations": {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "test7": {
+            "providerKey": "GRP240615694240615694001PRV49981212900",
+            "params": {
+                "latitude": 37.7899399,
+                "longitude": -122.3948441,
+                "networkId": "2PREMIER"
+
+            },
+            "verify": {
+                "providerKey": "GRP240615694240615694001PRV49981212900",
+                "firstName": "Thomas",
+                "middleName": "M",
+                "lastName": "Kaiser",
+                "specialty": "General Dentist",
+                "officeName": "Leong Dental Inc",
+                "practiceLocationNumber": "240615694001",
+                "officePhone": "(415) 278-5777",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": null,
+                "website": "http://www.leongdental.com",
+                "address": {
+                    "addressLine": "199 Fremont St Ste 105",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-2287",
+                    "latitude": 37.7899399,
+                    "longitude": -122.3948441
+                },
+                "distance": 0,
+                "providerNetworks": [{
+                    "networkId": "2PREMIER",
+                    "networkName": "Delta Dental Premier",
+                    "acceptsNewPatients": "Y"
+                }, {
+                    "networkId": "2PPO",
+                    "networkName": "Delta Dental PPO",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "gender": "M",
+                "npi": "1427495373",
+                "license": {
+                    "licenseNumber": "64818",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "Cantonese",
+                    "English",
+                    "Chinese"
+                ],
+                "practiceHours": {
+                    "mondayHours": "09:30-18:00",
+                    "tuesdayHours": "09:30-18:00",
+                    "wednesdayHours": "09:30-18:00",
+                    "thursdayHours": "09:30-18:00",
+                    "fridayHours": "Closed",
+                    "saturdayHours": "Closed",
+                    "sundayHours": "Closed"
+                },
+                "accessibility": {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "No",
+                    "internetAccess": "Yes"
+                },
+                "patientConsiderations": {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        }
+    }
+}

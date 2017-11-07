@@ -10,7 +10,7 @@ class ProviderDetailsLocators {
         this.providerAvailability = by.className('provider__availability');
         this.providerMap = by.className('provider__map');
         this.providerPlace = by.className('provider__place');
-        this.providerPlaceName = by.className('provider__place-name');
+        this.providerPlaceName = by.css('div.provider__place-name a');
         this.placeNameByProvider = function(providerName) {
             return by.xpath('//a[text()="' + providerName + '"]/ancestor::section/parent::article//div[@class="provider__place-name"]/a');
         }
@@ -55,6 +55,15 @@ class ProviderDetailsLocators {
         this.view = function(providerName) {
             return by.xpath('//a[text()="' + providerName + '"]/ancestor::section/parent::article//a[normalize-space(text()) = "View"]');
         };
+
+        this.Office_providerSearch = function(officeName){
+            return by.xpath('//a[text()="' + officeName + '"]')
+
+        };
+
+        this.viewLink = by.xpath('//a[normalize-space(text()) = "View"]');
+       
+
     }
 }
 

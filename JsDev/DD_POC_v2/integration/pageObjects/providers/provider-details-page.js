@@ -16,6 +16,7 @@ class ProviderDetailsPage extends ControlBase {
     constructor() {
         super(null, 'ProviderDetailsPage');
         this.pageObjects = new ProviderDetailsLocators();
+        this.viewLink = new Label(this.pageObjects.viewLink);
         this.backToSearchResults = new Label(this.pageObjects.backToSearchResults);
         this.providerDistance = new Label(this.pageObjects.providerDistance);
         this.providerName = new Label(this.pageObjects.providerName);
@@ -51,6 +52,9 @@ class ProviderDetailsPage extends ControlBase {
         this.facilityByProvider = function(providerName) {
             return new Label(this.pageObjects.facilityByProvider(providerName));
         };
+        this.Office_providerSearch = function(officeName) {
+            return new Label(this.pageObjects.Office_providerSearch(officeName));
+        };
     };
 
     getOfficeHoursByDay(day) {
@@ -81,15 +85,76 @@ class ProviderDetailsPage extends ControlBase {
             }, 9999999999);
 
             if (option) {
+                console.log('View==================' + option);
                 if (option.toUpperCase() == 'VIEW') self.view(providerName).click();
                 if (option.toUpperCase() == 'PLACE') self.placeNameByProvider(providerName).click();
                 if (option.toUpperCase() == 'FACILITY') self.facilityByProvider(providerName).click();
+                if (option.toUpperCase() == 'OFFICE') self.Office_providerSearch(providerName).click();
             } else {
                 self.view(providerName).click();
 
             }
         });
     };
+
+    openViewControl(providerName, option, pageIterations) {
+        var self = this;
+        browser.controlFlow().execute(function() {
+            var pageNumber = 0;
+            var  breakflow;
+            browser.wait(function() {
+                return element(self.pageObjects.view(providerName)).isDisplayed().then(function(displayed) {
+                    return true;
+                }, function() {
+                    // console.log("===================Displayed else block =============")
+                        // element(by.linkText("Next")).clickIt();
+                    return element(by.linkText("Next")).clickIt().then(function() {
+                        pageNumber = pageNumber + 1;
+                        // console.log("=================pageNumber===========" + pageNumber);
+                        // console.log("=================pageIterations===========" + pageIterations);
+                        if (pageIterations >= pageNumber) {
+                            // console.log("========if block ========");
+                            breakflow = true;
+                            return false;
+                        } else {
+                            breakflow = false;
+                            // console.log("========else block ========")
+                            return true;
+                        }
+                    }, function() {
+                        // console.log("=======Next else=================")
+                        return true;
+                    })
+                    return breakflow;
+                });
+
+
+            }, 9999999999);
+
+            return element(self.pageObjects.view(providerName)).isDisplayed().then(function(displayed) {
+                console.log("===== open view if results===")
+                if (option) {
+                    // console.log('View==================' + option);
+                    if (option.toUpperCase() == 'VIEW') self.view(providerName).click();
+                    if (option.toUpperCase() == 'PLACE') self.placeNameByProvider(providerName).click();
+                    if (option.toUpperCase() == 'FACILITY') self.facilityByProvider(providerName).click();
+                    if (option.toUpperCase() == 'OFFICE') self.Office_providerSearch(providerName).click();
+                } else {
+                    self.view(providerName).click();
+
+                }
+            }, function() {
+                // console.log("=====open view else block  results===" )
+                if (option.toUpperCase() == 'VIEW') self.viewLink.click();
+                if (option.toUpperCase() == 'PLACE') self.providerPlaceName.click();
+                if (option.toUpperCase() == 'FACILITY') self.providerFacility.click();
+                if (option.toUpperCase() == 'OFFICE') self.providerPlaceName.click();
+                 if (option.toUpperCase() == 'OFFICE') self.providerPlaceName.click();
+
+            })
+        });
+    };
+
 
 
 

@@ -1,0 +1,124 @@
+{
+    "testdata": {
+        "test1": {
+            "facilityId": "035363",
+            "params": {},
+            "verify": {
+                "facilityId": "035363",
+                "name": "Alex Rabinovich, Md, Inc",
+                "address": {
+                    "addressLine": "129 Sacramento St, ",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94111-4001",
+                    "latitude": 37.7944756,
+                    "longitude": -122.3971176
+                },
+                "license": {
+                    "licenseNumber": "48850",
+                    "licenseState": "CA"
+                }
+            }
+        },
+        "test2": {
+            "facilityId": "059169",
+            "params": { "sourceNetwork": "2PPO", "targetNetwork": "2AMGEN" },
+            "verify": {
+                "facilityId": "059169",
+                "name": "Dental Arts Practice Dr Albina Batchaeva",
+                "address": {
+                    "addressLine": "450 Sutter St Rm 1925",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94108-4107",
+                    "latitude": 37.7896252,
+                    "longitude": -122.407821
+                },
+                "license": {
+                    "licenseNumber": "62849",
+                    "licenseState": "CA"
+                }
+            }
+        },
+        "test3": {
+            "facilityId": "022886",
+            "params": { "sourceNetwork": "2PPO", "targetNetwork": "2AMGEN" },
+            "verify": {
+                "facilityId": "022886",
+                "name": "Monet Dental Group",
+                "address": {
+                    "addressLine": "12455 Victoria Gardens Ln Ste 190, ",
+                    "city": "Rancho Cucamonga",
+                    "state": "CA",
+                    "zipcode": "91739-7534",
+                    "latitude": 34.1077271,
+                    "longitude": -117.5337753
+                },
+                "license": {
+                    "licenseNumber": "100002",
+                    "licenseState": "CA"
+                }
+            }
+        },
+        "test4": {
+            "facilityId": "008039",
+            "params": { "sourceNetwork": "2PREMIER", "targetNetwork": "2AMGEN" },
+            "verify": {
+                "facilityId": "008039",
+                "name": "Oakland Dental Llc",
+                "address": {
+                    "addressLine": "4416 W Oakland Park Blvd",
+                    "city": "Laud Lakes",
+                    "state": "FL",
+                    "zipcode": "33313-1819",
+                    "latitude": 26.1645164,
+                    "longitude": -80.208107
+                },
+                "license": {
+                    "licenseNumber": "11026",
+                    "licenseState": "FL"
+                }
+            }
+        },
+        "test5": {
+            "facilityId": "041026",
+            "params": { "sourceNetwork": "2PREMIER", "targetNetwork": "2AMGEN" },
+            "verify": {
+                "facilityId": "041026",
+                "name": "Lancaster Dental Arts Pc",
+                "address": {
+                    "addressLine": "60 W Walnut St Ste 101",
+                    "city": "Lancaster",
+                    "state": "PA",
+                    "zipcode": "17603-3015",
+                    "latitude": 40.0423214,
+                    "longitude": -76.3079104
+                },
+                "license": {
+                    "licenseNumber": "41170",
+                    "licenseState": "PA"
+                }
+            }
+        },
+        "test6": {
+            "facilityId": "040523",
+            "params": { "sourceNetwork": "2PPO", "targetNetwork": "2AMGEN" },
+            "verify": {
+                "facilityId": "040523",
+                "name": "Arcady Sniper DDS",
+                "address": {
+                    "addressLine": "807A Utica Ave, ",
+                    "city": "Brooklyn",
+                    "state": "NY",
+                    "zipcode": "11203-3410",
+                    "latitude": 40.6533623,
+                    "longitude": -73.9303818
+                },
+                "license": {
+                    "licenseNumber": "38306",
+                    "licenseState": "NY"
+                }
+            }
+        }
+    }
+}

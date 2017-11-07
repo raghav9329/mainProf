@@ -27,13 +27,13 @@
       */
 
      this.switchToWindow = function(index) {
-         return browser.getAllWindowHandles().then(function(handles) {          
-                 return browser.switchTo().window(handles[index]).then(function() {
-                     browser.sleep(500);
-                     logger.info('Switched to window');
-                     return true;
-                 });
-           
+         return browser.getAllWindowHandles().then(function(handles) {
+             return browser.switchTo().window(handles[index]).then(function() {
+                 browser.sleep(500);
+                 logger.info('Switched to window');
+                 return true;
+             });
+
          }, function(err) {
              logger.error("Failed to switching window due to " + err.message);
              return false;
@@ -287,6 +287,7 @@
                  }
              } else {
                  return browser.get(uRl).then(function() {
+
                      return true;
                  });
              }
@@ -294,6 +295,32 @@
      }
 
 
+     this.getapiurl = function(resource,resourceKey,params) {
+
+         switch (resource.toUpperCase()) {
+             case 'ABOUT':
+                 return (browser.params.apiurl + '/about');
+             case 'FACILITIES':
+                 return (browser.params.apiurl + '/facilities/' + resourceKey + buildurl(params).slice(0, -1));
+             case 'LOCATIONS':
+                 return (browser.params.apiurl + '/locations/' + resourceKey + buildurl(params).slice(0, -1));
+             case 'SUGGESTIONS':
+                 return (browser.params.apiurl + '/suggestions' + buildurl(params).slice(0, -1));
+             case 'PROVIDERKEY':
+                 return (browser.params.apiurl +'/'+ resourceKey + buildurl(params).slice(0, -1));
+             case 'PROVIDERS':
+                 return (browser.params.apiurl + buildurl(params).slice(0, -1));
+         }
+
+         function buildurl(o) {
+             return Object.keys(o).reduce(function(previous, key) {
+                 return previous + key + '=' + o[key] + '&';
+             }, '?');
+         }
+         // return (browser.params.apiurl + buildurl(dataObj).slice(0, -1));
+
+
+     }
 
      /**
       * get the part from given date

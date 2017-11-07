@@ -1,0 +1,160 @@
+{
+
+    "Location": {
+        "Location1": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "94105"
+            }
+
+        },
+        "Location2": {
+            "params": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "94949"
+            }
+
+        },
+        "Location3": {
+            "params": {
+                "zipcode": "94952",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "94952"
+            }
+
+        },
+        "Location4": {
+            "params": {
+                "zipcode": "96002",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "96002"
+            }
+
+        },
+        "Location5": {
+            "params": {
+                "zipcode": "92244",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "92244"
+            }
+
+        },
+        "Location6": {
+            "params": {
+                "zipcode": "94111",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "94111"
+            }
+
+        },
+        "Location7": {
+            "params": {
+                "zipcode": "90001",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "90001"
+            }
+
+        },
+        "Location8": {
+            "params": {
+                "zipcode": "92115",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "92115"
+            }
+
+        },
+        "Location9": {
+            "params": {
+                "zipcode": "92137",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "92137"
+            }
+
+        },
+        "Location10": {
+            "params": {
+                "zipcode": "92169",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "92169"
+            }
+
+        },
+        "Location11": {
+            "params": {
+                "zipcode": "92198",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "92198"
+            }
+
+        }
+
+    }
+}

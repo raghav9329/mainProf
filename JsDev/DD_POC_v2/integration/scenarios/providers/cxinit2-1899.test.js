@@ -6,6 +6,7 @@ var TestData = require('../../testData/' + testDataEnv + '/providers/cxinit2-189
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 var feedback = new(require('../../pageObjects/providers/feedback-page.js'));
+var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 
 
 describe('CXINIT2-1899: Prov Dir', function() {
@@ -18,16 +19,16 @@ describe('CXINIT2-1899: Prov Dir', function() {
     it('ProvDir_1: Should verify Provider Page, Facility Page and Office Page by View link', function() {
         dirSearch.location.setText(TestData.Provider_Name.ZipCode);
         dirSearch.findDentist.click();
-        
+
         providerDetails.openView(TestData.Provider_Name.PName, 'VIEW');
-       
-          //Provider Distance Verefication   
+
+        //Provider Distance Verefication   
         expect(providerDetails.providerDistance.getText()).toEqual(TestData.Provider_Name.PDistance);
 
         // Provider General information
         expect(providerDetails.providerName.getText()).toEqual(TestData.Provider_Name.PName);
         expect(providerDetails.providerSpecialty.getText()).toEqual(TestData.Provider_Name.PSpeciality);
-        
+
         //Provider Address
         expect(providerDetails.providerPlaceName.getText()).toEqual(TestData.Provider_Name.PPlace);
         expect(providerDetails.providerAddressStreet.getText()).toEqual(TestData.Provider_Name.PStreet);
@@ -69,7 +70,7 @@ describe('CXINIT2-1899: Prov Dir', function() {
         expect(browser.getTitle()).toEqual(TestData.Provider_Name.OfficeTitle);
         expect(providerDetails.providerPlaceName.getText()).toEqual(TestData.Provider_Name.PPlace);
         expect(providerDetails.providersList.getText()).toContain(TestData.Provider_Name.PName);
-        
+
         //Facility Details Verefication
         providerDetails.providerFName.click();
         expect(browser.getTitle()).toEqual(TestData.Provider_Name.FacilityTitle);
@@ -78,13 +79,13 @@ describe('CXINIT2-1899: Prov Dir', function() {
 
         //Back to Search Resukts
         providerDetails.backToSearchResults.click();
-      
+
     });
 
-it('ProvDir_2: Should verify Provider Page, Facility Page and Office Page from Providers link', function() {
+    it('ProvDir_2: Should verify Provider Page, Facility Page and Office Page from Providers link', function() {
         dirSearch.location.setText(TestData.Provider_Name.ZipCode);
         dirSearch.findDentist.click();
-        
+
         providerDetails.openView(TestData.Provider_Name.PName, 'PLACE');
 
         // Office Detail Verefication
@@ -92,7 +93,7 @@ it('ProvDir_2: Should verify Provider Page, Facility Page and Office Page from P
         expect(providerDetails.providerPlaceName.getText()).toEqual(TestData.Provider_Name.PPlace);
         expect(providerDetails.providersList.getText()).toContain(TestData.Provider_Name.PName);
 
-         //Provider Address
+        //Provider Address
         expect(providerDetails.providerPlaceName.getText()).toEqual(TestData.Provider_Name.PPlace);
         expect(providerDetails.providerAddressStreet.getText()).toEqual(TestData.Provider_Name.PStreet);
         expect(providerDetails.providerAddressCity.getText()).toEqual(TestData.Provider_Name.PCity);
@@ -121,24 +122,24 @@ it('ProvDir_2: Should verify Provider Page, Facility Page and Office Page from P
         //Languages
         expect(providerDetails.providerLanguage.getText()).toContain(TestData.Provider_Name.PLanguage);
 
-        
+
         providerDetails.backToSearchResults.click();
-      
+
     });
 
-it('ProvDir_3: Should verify Provider Page, Facility Page and Office Page by Facility link', function() {
+    it('ProvDir_3: Should verify Provider Page, Facility Page and Office Page by Facility link', function() {
         dirSearch.location.setText(TestData.Provider_Name.ZipCode);
         dirSearch.findDentist.click();
-       
+
         providerDetails.openView(TestData.Provider_Name.PName, 'Facility');
 
         //Facility Details Verefication
-        
+
         expect(browser.getTitle()).toEqual(TestData.Provider_Name.FacilityTitle);
         expect(providerDetails.providerPlaceName.getText()).toEqual(TestData.Provider_Name.PPlace);
         expect(providerDetails.providersList.getText()).toContain(TestData.Provider_Name.PName);
 
-         //Provider Address
+        //Provider Address
         expect(providerDetails.providerPlaceName.getText()).toEqual(TestData.Provider_Name.PPlace);
         expect(providerDetails.providerAddressStreet.getText()).toEqual(TestData.Provider_Name.PStreet);
         expect(providerDetails.providerAddressCity.getText()).toEqual(TestData.Provider_Name.PCity);
@@ -167,12 +168,12 @@ it('ProvDir_3: Should verify Provider Page, Facility Page and Office Page by Fac
         //Languages
         expect(providerDetails.providerLanguage.getText()).toContain(TestData.Provider_Name.PLanguage);
 
-        
+
         providerDetails.backToSearchResults.click();
-      
+
     });
 
-it('ProvDir_4: Verify feedback submition' , function() {
+    it('ProvDir_4: Verify feedback submition', function() {
         dirSearch.location.setText(TestData.Provider_Name.ZipCode);
         dirSearch.findDentist.click();
         feedback.feedback.click();
@@ -189,7 +190,7 @@ it('ProvDir_4: Verify feedback submition' , function() {
         feedback.answer5.setText('Good');
         feedback.submit.click();
         expect(feedback.endOfSurvey.getText()).toContain('We thank you for your time spent taking this survey.');
-       
-});
+    });
 
+   
 });

@@ -24,7 +24,9 @@ class PlanDetailsPage extends ControlBase {
         this.shoppingDetailsSummary = new Label(this.pageObjects.shoppingDetailsSummary);
         this.back = new Button(this.pageObjects.back);
         this.planPrice = new Label(this.pageObjects.planPrice);
-        this.accidentCoverage= new Label(this.pageObjects.accidentCoverage);
+        this.plan1 = new Label(this.pageObjects.plan1);
+        this.plan2 = new Label(this.pageObjects.plan2);
+        this.accidentCoverage = new Label(this.pageObjects.accidentCoverage);
         this.getPlanDetailsByKey = function(key) {
             return new Label(this.pageObjects.getPlanDetailsByKey(key));
         };

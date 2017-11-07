@@ -3,10 +3,6 @@ exports.config = {
     // seleniumAddress: 'http://localhost:4444/wd/hub',
     
     //specs: ['integration/scenarios/cxinit/cxinit.504.test.js'],
-    //specs: ['integration/scenarios/providers/cxinit2.73.test.js'],
-    //specs: ['integration/scenarios/providers/cxinit2.577.test.js'],
-    //specs: ['integration/scenarios/providers/cxinit2.642.test.js'],
-    //specs: ['integration/scenarios/providers/cxinit2.811.test.js'],
     // specs: ['integration/scenarios/providers/cxinit2.4.test.js'],
     specs: ['integration/scenarios/providers/cxauto50.test.js'],
 
@@ -134,56 +130,4 @@ exports.config = {
 }  ////  logical end of the spec conf
 
 
-
-
-
-////////////////////////////////////////////////////////////////
-//Config Archive: stuff thats been commented out for some time
-////////////////////////////////////////////////////////////////
-
-
-//	
-//5/8/17 review and act.
-//I don't remember if it was Hyderabad team of myself
-//who added these options then commented out.
-//but as you can see I now need some args implemented
-//-- I don't need them: if Hyd team doesn't need then delete --
-//chromeOptions: {
-//  args: [
-//      "--headless",
-//      "--disable-gpu"
-//  ],
-//},
-
-//var monthMap = {
-//  "1": "Jan",
-//  "2": "Feb",
-//  "3": "Mar",
-//  "4": "Apr",
-//  "5": "May",
-//  "6": "Jun",
-//  "7": "Jul",
-//  "8": "Aug",
-//  "9": "Sep",
-//  "10": "Oct",
-//  "11": "Nov",
-//  "12": "Dec
-//};
-//var currentDate = new Date(),
-//  currentHoursIn24Hour = currentDate.getHours(),
-//  currentTimeInHours = currentHoursIn24Hour > 12 ? currentHoursIn24Hour - 12 : currentHoursIn24Hour,
-//  totalDateString = currentDate.getDate() + '-' + monthMap[currentDate.getMonth()] + '-' + (currentDate.getYear() + 1900) +
-//  '-' + currentTimeInHours + 'h-' + currentDate.getMinutes() + 'm';
-
-//var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
-//jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
-//  savePath: 'results/' + totalDateString + '/html-reports/',
-//  screenshotsFolder: 'images',
-//  showColors: true,
-//  includeStackTrace: true,
-//  takeScreenshotsOnlyOnFailures: true,
-//  fileNameDateSuffix: true,
-//  defaultTimeoutInterval: 10 * 60000
-
-//}));
 

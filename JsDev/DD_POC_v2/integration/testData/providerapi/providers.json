@@ -1,0 +1,257 @@
+{
+    "test1": {
+        "params": {
+            "distance": "60",
+            "page": "0",
+            "per_page": "10",
+            "max": "1500",
+            "meta_data": false
+        },
+        "verify": {
+            "errors": [{
+                "errorCode": "E101",
+                "errorSubCode": "FIND-PROVIDERS",
+                "shortDescription": "Invalid Latitude:null and Longitude:null request. Check your input.",
+                "detailedDescription": "Invalid Latitude:null and Longitude:null request. Check your input.",
+                "originator": {
+                    "name": "Geocoder",
+                    "operation": null
+                }
+            }]
+
+        }
+    },
+     "test2": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            }
+        },
+         "test3": {
+            "params": {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "Richard",
+                "meta_data": false
+            }
+        },
+    "testdata1": {
+        "test1": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA"
+            }
+        },
+        "test2": {
+            "params": {
+                "zipcode": "96002",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "Redding",
+                "state": "CA"
+            }
+        },
+        "test3": {
+            "params": {
+                "zipcode": "92244",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "El Centro",
+                "state": "CA"
+            }
+        },
+        "test4": {
+            "params": {
+                "zipcode": "92244",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "El Centro",
+                "state": "CA"
+            }
+        }
+    },
+    "testdata2": {
+        "test1": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "General Dentist",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "General Dentist"
+            }
+        },
+        "test2": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "Oral Surgeon",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "Oral Surgeon"
+            }
+        },
+        "test3": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "Periodontist",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "Periodontist"
+            }
+        },
+        "test4": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "Endodontist",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "Endodontist"
+            }
+        },
+        "test5": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "Orthodontist",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "Orthodontist"
+            }
+        }
+    },
+    "testdata3": {
+        "test1": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "5",
+                "max": "1500",
+                "specialty": "General Dentist",
+                "network": "2PREMIER",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "General Dentist",
+                "networkID": "2PREMIER"
+            }
+        }
+    },
+    "testdata4": {
+        "test1": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "5",
+                "max": "1500",
+                "free_text": "Dentist",
+                "meta_data": false
+            },
+
+            "verify": {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "Dentist"
+            }
+        }
+    }
+
+}

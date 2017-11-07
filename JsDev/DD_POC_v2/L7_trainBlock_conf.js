@@ -3,7 +3,7 @@ exports.config = {
     // seleniumAddress: 'http://localhost:4444/wd/hub',
     
     //specs: ['integration/scenarios/providers/cxinit2.811.test.js'],
-    specs: ['integration/scenarios/providers/L7_trainBlock_Test.js'],
+    specs: ['integration/scenarios/providers/FirstTry__L7_trainBlock_Test.js'],
 
     suites: {
        
@@ -39,8 +39,8 @@ exports.config = {
     
     params: {
        // baseUrl: '',
-	// baseUrl:'https://www.deltadentalins.com/find-a-dentist/alpha/directory-search.html',
-    baseUrl: 'http://aw-lx0176.deltadev.ent/find-a-dentist/alpha/',
+	baseUrl:'https://www.deltadentalins.com/find-a-dentist/alpha/directory-search.html',
+    //baseUrl: 'http://aw-lx0176.deltadev.ent/find-a-dentist/alpha/',
     	  exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections
     	  exeLogging:'OFF'  // other: INFO, TRACE, DEBUG
     },

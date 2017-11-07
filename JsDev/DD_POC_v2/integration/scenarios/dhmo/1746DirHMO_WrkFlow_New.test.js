@@ -19,7 +19,8 @@ dataProvider(tData, function(TestData, description) {
     if (product.indexOf(description)!= -1) {
         describe('DHMO:1746 Direct HMO WorkFlows -1', function() {
             var effectiveDate, apNumber, pathToPdf, premiumAmount;
-            beforeAll(function() {                
+            beforeAll(function() {
+                browser.driver.manage().deleteAllCookies();
                 Utility.openApplication('', TestData.product);
 
             });

@@ -160,6 +160,12 @@ exports.config = {
             'integration/scenarios/dhmo/2546FL.e2e.test.js'
         ],
 
+
+	aarpshopping: [
+	
+	],
+
+
         hclfocus: [ // I will add direct PPO later in week of july 17 - 21
             'integration/scenarios/dhmo/1408.EndToEndWkFlo1.test.js',
             'integration/scenarios/dhmo/1461.EndToEndWkFlo2.test.js',

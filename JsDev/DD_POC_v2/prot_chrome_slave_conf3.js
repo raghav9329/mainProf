@@ -201,12 +201,15 @@ exports.config = {
 
     },
 
-    seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.6.0.jar',
-    chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.32.exe',
-    geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.19.0.exe',
+    // seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.6.0.jar',
+    // chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.32.exe',
+    // geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.19.0.exe',
 
 
     params: {
+        // apiurl: 'http://aw-lx0095:19001/providers', // dev endpoint url
+        apiurl: 'http://aw-lx0195:19002/providers', // dit endpoint url
+        // apiurl: 'https://mot-cxservices:8443/providers', // mock end point url
         //  baseUrl: '' ,  // running this allows you to enter URL at command line
         //baseUrl: 'https://aw-lx0176.deltadev.ent:3000/enroll/',
         baseUrl: 'http://aw-lx0101.deltadev.ent',
@@ -226,6 +229,8 @@ exports.config = {
         isExecutionFromUI = true;
         testDataEnv = 'dit';
         testExecutionEnv = 'staging'
+            // Enable below statement when running api scripts on MOT. It disable SSL 
+            // process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
             //browser.manage().window().maximize();
         browser.manage().window().setSize(1050, 1250);
         browser.ignoreSynchronization = true;
