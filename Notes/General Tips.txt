@@ -1,6 +1,14 @@
 General Tips
 Started 6/15/16
 
+
+11/29/17
+my suites file abstraction
+https://testautomation-aditya.com/2016/12/27/how-to-externalize-suite-namespick-from-an-external-file-in-protractor/comment-page-1/#comment-98
+allows me to have external file referenced in my spec.conf.js file
+so the spec.conf.js isn't so large
+
+
 [‎4/‎13/‎2017 4:19 PM] Steven Hansen: 
 
 
