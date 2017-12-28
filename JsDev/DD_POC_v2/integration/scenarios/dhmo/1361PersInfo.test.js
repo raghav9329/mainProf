@@ -2,7 +2,7 @@
 
 //This spec is used to :As a product owner I want to allow the user to move back and forth into the application pages.
 
-var TestData = require('../../testData/'+testDataEnv+'/dhmo/dhmo.1361PersInfo.json');
+var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.1361PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
@@ -10,56 +10,72 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 //var Button = require('../../controls/button-control');
 
-describe('DHMO:1361: PersonalInformation Page: ', function() {
-    beforeAll(function() {
-        Utility.openApplication('','DELTA');
+var product = ['DHMO'];
+// var product = ['DHMO','DPPO','AHMO','APPO']; 
+var states = ['NY'];
 
-    });
+//To Navigate Personla Info Page
+dataProvider(TestData.states, function(sData, sdescription) {
+    if (states.indexOf(sdescription) != -1) {
+        dataProvider(sData.products, function(tData, pdescription) {
+            if (product.indexOf(pdescription) != -1) {
 
-    //Fill the Valid Data in the home page of Enrollment and Proceed
+                describe('DHMO:1361: PersonalInformation Page: State:' + sdescription + 'Product:' + pdescription + '', function() {
+                    beforeAll(function() {
+                        Utility.openApplication('', 'DELTA');
+                    });
+                    beforeEach(function () {
+                        jasmine.addMatchers(custommatcher.customMatchers);
+                    });
 
-    it('Dependents Max_Step-1:should complete the Enroll Page', function() {
-        enrollPage.enterHomePageDetails(TestData.enrollData);
-        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
-    });
+                    //Fill the Valid Data in the home page of Enrollment and Proceed
 
-    //Verify and Validate the field Errors of the Personal Info page with Null values
+                    it('Dependents Max_Step-1:should complete the Enroll Page', function() {
+                        enrollPage.enterHomePageDetails(tData.enrollData);
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                    });
 
-    it('Verify and Validate the Errors of Personal Information Page is with InValid data and Proceed', function() {
+                    //Verify and Validate the field Errors of the Personal Info page with Null values
 
-        perInfo.fieldBdMM.setText('');
-        perInfo.fieldBdDD.setText('');
-        perInfo.fieldBdYyyy.setText('');        
-        expect(perInfo.enrollStatus('Personal Info').getAttribute('class')).toContain(TestData.applicationStatus);
-        Utility.scrollToBottom();
-        perInfo.next.click();
-        perInfo.next.click();
-        expect(perInfo.getProfileValidationMessages()).toEqual(TestData.personalInfoerror);
-        expect(perInfo.getServerProfileValidationMessages()).toEqual(TestData.personalInfoerror)
-    });
+                    it('Verify and Validate the Errors of Personal Information Page is with InValid data and Proceed', function() {
 
-    //Verify and Validate the all the fields of the Personal Info page are filled with valid Test Data and proceed
+                        perInfo.fieldBdMM.setText('');
+                        perInfo.fieldBdDD.setText('');
+                        perInfo.fieldBdYyyy.setText('');
+                        expect(perInfo.enrollStatus('Personal Info').getAttribute('class')).toContain(tData.applicationStatus);
+                        Utility.scrollToBottom();
+                        perInfo.next.click();
+                        perInfo.next.click();
+                        expect(perInfo.getProfileValidationMessages()).toEqual(tData.personalInfoerror);
+                        expect(perInfo.getServerProfileValidationMessages()).toEqual(tData.personalInfoerror)
+                    });
 
-    it('Verify Personal Information Page is filled with Valid data and Proceed', function() {
-        perInfo.fillPersonalInfo(TestData);
-        perInfo.fillAddress(TestData);
-        perInfo.phoneNumberemail(TestData);
-        perInfo.fillBroker(TestData);
-        expect(browser.getTitle()).toEqual(TestData.DependentTitle);
-        expect(perInfo.enrollStatus('Dependents').getAttribute('class')).toContain(TestData.applicationStatus);
-    });
+                    //Verify and Validate the all the fields of the Personal Info page are filled with valid Test Data and proceed
 
-    //Validate user could Navigate back to the Personal Info page using Back
-    //Verify the Data firnished in the filled is not cleared.
+                    it('Verify Personal Information Page is filled with Valid data and Proceed', function() {
+                        perInfo.fillPersonalInfo(tData);
+                        perInfo.fillAddress(tData);
+                        perInfo.phoneNumberemail(tData);
+                        perInfo.fillBroker(tData);
+                        expect(browser.getTitle()).toEqual(tData.DependentTitle);
+                        expect(perInfo.enrollStatus('Dependents').getAttribute('class')).toContain(tData.applicationStatus);
+                    });
 
-    it('Verifying Data in the Personal-Info Page by CTA BACK', function() {
-        depInfo.back.click();
-        expect(perInfo.fieldSsn.getValue()).toEqual('');
-        expect(perInfo.fieldFirstName.getValue()).toEqual(TestData.firstname);
-        expect(perInfo.fieldPhoneNumber.getValue()).toEqual(TestData.phoneNumber);
-        expect(perInfo.enrollStatus('Personal Info').getAttribute('class')).toContain(TestData.applicationStatus);
+                    //Validate user could Navigate back to the Personal Info page using Back
+                    //Verify the Data firnished in the filled is not cleared.
 
-    });
+                    it('Verifying Data in the Personal-Info Page by CTA BACK', function() {
+                        depInfo.back.click();
+                        expect(perInfo.fieldSsn.getValue()).toEqual('');
+                        expect(perInfo.fieldFirstName.getValue()).toEqual(tData.firstname);
+                        expect(perInfo.fieldPhoneNumber.getValue()).toEqual(tData.phoneNumber);
+                        expect(perInfo.enrollStatus('Personal Info').getAttribute('class')).toContain(tData.applicationStatus);
+
+                    });
 
 
+                });
+            }
+        });
+    }
 });

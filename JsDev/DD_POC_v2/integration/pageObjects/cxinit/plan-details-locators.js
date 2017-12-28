@@ -8,9 +8,10 @@ class PlanDetailsPageLocators {
         this.planStartsHelpText = by.css('div.shopping-details-hero__cta p');
         this.shoppingDetailsSummary = by.css('div.shopping-details-hero__summary-inner');
         this.back = by.css('i.icon.icon-back-arrow-shopping');
-        this.accidentCoverage=by.xpath('//h3[text()="Need Accident Coverage?"]');
-        this.plan1= by.css('div.option-list a:nth-child(1)');
-        this.plan2= by.css('div.option-list a:nth-child(2)')
+        this.accidentCoverage = by.xpath('//h3[text()="Need Accident Coverage?"]');
+        this.plan1 = by.css('div.option-list a:nth-child(1)');
+        this.plan2 = by.css('div.option-list a:nth-child(2)');
+        this.newPDCheckitOut = by.id('r1:0:pt1-template:commandButton2');
         this.getPlanDetailsByKey = (shoppingitemname) => {
             return by.xpath('//span[normalize-space(text())="' + shoppingitemname + '"]/following-sibling::span')
         };
@@ -28,17 +29,15 @@ class PlanDetailsPageLocators {
 
         }
         this.changePlan = (planname) => {
-            return by.xpath('//a[text()="' + planname + '"]')
+            return by.xpath('//p[text()="' + planname + '"]')
         }
 
-        this.closeToolTip = (shoppingitem)=>{
+        this.closeToolTip = (shoppingitem) => {
             return by.xpath('//span[normalize-space(text())="' + shoppingitem + '"]/a/following-sibling::div//i[@class="icon  icon-exit"]')
         }
-
-
-
-
-
+        this.pdfDocument = (docname) => {
+            return by.xpath('//p[text()="' + docname + '"]/ancestor::a')
+        }
 
     }
 

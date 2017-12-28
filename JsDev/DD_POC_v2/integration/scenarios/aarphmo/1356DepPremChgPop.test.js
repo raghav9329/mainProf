@@ -18,6 +18,9 @@ describe('AARPHMO:1356 Premium Change Pop up: ', function() {
         console.log('--- CXINIT-1356 Dependents Premium Change PopUp  ---')
         Utility.openApplication('', 'AARP');
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
     //   Fill the Enroll page with valid data and verify the navigation
 
     it('PremChgPU-1:should complete the Enroll Page', function() {

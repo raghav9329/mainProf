@@ -13,6 +13,9 @@ describe('AARPHMO:2062 AARP HMO WorkFlows - 6', function() {
     beforeAll(function() {
         Utility.openApplication('','AARP');
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
@@ -192,6 +195,7 @@ describe('AARPHMO:2062 AARP HMO WorkFlows - 6', function() {
 
     it('E2E_10:Should display dependent allicant', function() {
         var facility = TestData.dependent_Facility_1;
+        receipt.verifyPixel('CA', 'AHMO');
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.Spouse.firstName);
             expect(facilitydata.facilityName).toEqual(facility.facilityName);

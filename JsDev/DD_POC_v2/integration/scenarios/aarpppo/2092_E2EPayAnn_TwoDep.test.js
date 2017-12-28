@@ -15,7 +15,9 @@ describe('AARPPPO: 2092_E2EPayAnn_TwoDep', function() {
         console.log(' ');
         Utility.openApplication('', 'AARP');
         // Utility.openApplication(browser.params.baseUrl);
-
+    });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
@@ -126,6 +128,7 @@ describe('AARPPPO: 2092_E2EPayAnn_TwoDep', function() {
         });
     });
     it('E2E_9:Should display dependent-2 applicant', function() {
+        receipt.verifyPixel('CA', 'APPO');
         receipt.getSelectedFacilityDetails('DEPENDENT', 2).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.child1.firstName);
             console.log('E2E_9: Complete');

@@ -1,0 +1,57 @@
+{
+    "state": "California",
+    "zipcode": "94109",
+    "noofcovered": "Self + one",
+    "plan1": "PPO Plan A",
+    "plan2": "PPO Plan B",
+    "plan3": "DeltaCare ® USA Plan 15B",
+    "zipcode2": "35001",
+    "zipcode3": "10001",
+    "zipcode4": "32300",
+    "zipcode5": "35010",
+    "enrollData":
+    {
+        "PlanName": "PPO Plan B",
+        "State": "CA",
+        "ZIPcode": "94105",
+        "Country": "USA",
+        "CoverageType": "Self",
+        "IssuerCode": "AARP",
+        "NoOfPeopleCovered": "1",
+        "dob": "05-05-1988"
+    },
+    "zipcodeErrMsg": "ZIP code is invalid.",
+    "apitestdata":
+    {
+        "zipcode": "94109",
+        "distance": "35",
+        "network": "2PPO",
+        "page": "0",
+        "pe_page": "9000",
+        "max": "9000",
+        "meta_data": false
+    },
+
+    "zipcodes":
+    {
+        "PA":
+        {
+            "zipcode": 15001
+        },
+        "TX":
+        {
+            "zipcode": 79360
+
+        },
+        "FL":
+        {
+            "zipcode": 33143
+
+        },
+        "NY":
+        {
+            "zipcode": 13319
+
+        }
+    }
+}

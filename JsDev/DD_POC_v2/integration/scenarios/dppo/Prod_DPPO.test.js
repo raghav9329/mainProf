@@ -17,6 +17,9 @@ describe('Prod_DPPO', function() {
         index = TestData.index;
         console.log("index==========" + index);
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
 
     afterAll(function() {
         if (TestData.index == 12) {

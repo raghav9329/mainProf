@@ -15,6 +15,7 @@ var providerDetails = new(require('../../pageObjects/providers/provider-details-
 
 describe('Provider Search Validation', function() {
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('');
     });
     it('ProvDir_1: Verify all fields and buttons are present and displayed', function() {

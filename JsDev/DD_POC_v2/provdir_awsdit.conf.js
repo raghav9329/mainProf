@@ -8,7 +8,8 @@ exports.config = {
     //specs: ['integration/scenarios/providers/cxinit2.642.test.js'],
     //specs: ['integration/scenarios/providers/cxinit2.811.test.js'],
     // specs: ['integration/scenarios/providers/cxinit2.4.test.js'],
-    specs: ['integration/scenarios/providers/cxauto50.test.js'],
+    specs: ['integration/scenarios/providers/cxauto38-1.test.js'],
+    // specs: ['integration/scenarios/providers/cxauto38-1.test.js'],
 
     suites: {
        
@@ -39,9 +40,9 @@ exports.config = {
     },
 
     
-    seleniumServerJar:  __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
-    chromeDriver:       __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30.exe',
-    geckodriver:        __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.18.0.exe',
+    seleniumServerJar:  __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.7.1.jar',
+    chromeDriver:       __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.33.exe',
+    geckodriver:        __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.19.0.exe',
     
 
     
@@ -80,10 +81,14 @@ exports.config = {
       },
     
     params: {
-        apiurl : 'http://aw-lx0195:19002/providers',
+        // apiurl : 'http://aw-lx0195:19002/providers', //  DIT API URL
+        // apiurl : 'http://aw-lx0095:19001/providers', // DEV API URL
+        apiurl: 'https://mot-cxservices:8443/providers',
        // baseUrl: '',
         //baseUrl:'https://aw-lx0176/find-a-dentist/alpha/',
-	baseUrl:'http://aw-lx0176.deltadev.ent/find-a-dentist/alpha/directory-search.html',
+    // baseUrl:'http://aw-lx0176.deltadev.ent/find-a-dentist/alpha/directory-search.html', // DIT Front End
+    // baseUrl:'http://aw-lx0076.deltadev.ent/find-a-dentist/alpha/directory-search.html', // DEV Front End
+    baseUrl:'https://mot.deltadentalins.com/find-a-dentist/alpha/directory-search.html',
         //baseUrl:'https://mot.deltadentalins.com/enroll',
         //baseUrl:'https://mot.deltadentalins.com',
     	  exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections
@@ -94,6 +99,8 @@ exports.config = {
         assert = require('assert');
         frisby = require('frisby');
         Joi = frisby.Joi;
+
+        process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
         minWait = 75
         maxWait = 120;

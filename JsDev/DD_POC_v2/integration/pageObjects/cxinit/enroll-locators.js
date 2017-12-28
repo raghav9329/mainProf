@@ -25,17 +25,18 @@ class HomePageLocators {
         this.dob = by.id('dob');
         this.addDependent = by.id('addChild');
         this.dependentDOB = function(depno) {
-            console.log("depno===="+depno)
+            console.log("depno====" + depno)
             return element(by.xpath('//a[@id="addChild"]/parent::div/div[' + depno + ']/input'));
         };
-        this.enroll = function(planName){
-            return element(by.xpath('//span[normalize-space(text())="'+planName+'"]/ancestor::td//following-sibling::td//button[@id="applyQuotesPage"]'))
+        this.enroll = function(planName) {
+           // return element(by.xpath('//span[normalize-space(text())="' + planName + '"]/ancestor::td//following-sibling::td//button[@id="applyQuotesPage"]'))
+        return element(by.xpath('//span[normalize-space(text())="' + planName + '"]/ancestor::td//following-sibling::td//a[@class="planDetails"]'))
         }
         this.Coverage_Type = by.id('coverage_type');
         this.Effcdate = by.id('effDD');
         this.Go = by.id('btn_saveBig');
         this.PpoEnrollBtn = by.xpath('//td[contains(text(),"PPO")]/following-sibling::td//button');
-
+        this.changeSearch = by.id('modify-search');
 
     }
 }

@@ -19,6 +19,9 @@ class PlanOptionsPageLocators {
         };
         this.deltaDentalHighlights = by.css('div.plan-options__left-side div.plan-options__plan-highlights li');
         this.deltaCareHighlights = by.css('div.plan-options__right-side div.plan-options__plan-highlights li');
+        this.ppoNetworkProviders = by.xpath('//li[contains(text(),"Save with")]');
+        this.deltaCareNetworkProviders = by.xpath('//li[contains(text(),"Choose from")]');
+
 
     }
 }

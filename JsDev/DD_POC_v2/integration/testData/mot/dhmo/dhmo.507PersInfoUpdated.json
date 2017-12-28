@@ -1,0 +1,610 @@
+{
+    "NoOfPeopleCovered": "2",
+    "ZIPcode": "94105",
+    "DOB_HOME": "07/02/1988",
+    "ErrorMsg_Month": "Please enter a valid month between (01-12)",
+    "ErrorMsg_Date": "Please enter a valid day between (01-31)",
+    "ErrorMsg_Year": "Please enter a valid year",
+    "ariainvalid_error": "error",
+    "ariainvalid_success": "success",
+    "ErrorMsgBlank_FirstName": "Please enter your first name",
+    "ErrorMsgBlank_LastName": "Please enter your last name",
+    "Gender": " ",
+    "ErrorMsgBlank_Gender": "Please select a gender",
+    "ErrorMsgBlank_SSN": "Please enter your SSN",
+    "ErrorMsgBlank_MemberID": "Please enter your membership number.",
+    "FName": "Ratana Praneechai-Bass",
+    "MName": "s",
+    "LName": "O'Farrell",
+
+    "FName_TestData": {
+        "FName_Name1": {
+            "FName": "",
+            "ErrorMsg": "Please enter your first name",
+            "ServerMsg": "Please enter your first name",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name2": {
+            "FName": "223432535",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name3": {
+            "FName": "Javier Camacho-Serrano",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        },
+        "FName_Name4": {
+            "FName": "Ratana Praneechai-Bass",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        },
+        "FName_Name5": {
+            "FName": "Maëlle",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name6": {
+            "FName": "Esmé",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name7": {
+            "FName": "Shyè",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name8": {
+            "FName": "Garbiñe",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name9": {
+            "FName": "Çakırbey",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name10": {
+            "FName": "Siân",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name11": {
+            "FName": "Paul123",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name12": {
+            "FName": "';',':', '*', '^', '%', '@', '?','/', '<', '>','\\', '~', '`'",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "FName_Name13": {
+            "FName": "O'Farrell",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        }
+    },
+
+    "MI": {
+        "MI_SplChar": {
+            "MI": "$",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "Expected": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        },
+        "MI_Num": {
+            "MI": "1",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "Expected": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        },
+        "MI_Char": {
+            "MI": "A",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "Expected": "A",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        }
+    },
+
+    "LName_TestData": {
+        "LName_Name1": {
+            "LName": "Test",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        },
+        "LName_Name2": {
+            "LName": "O'Farrell",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        },
+
+        "LName_Name3": {
+            "LName": "223432535",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "LName_Name4": {
+            "LName": "Ratana Praneechai-Bass",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        },
+        "LName_Name5": {
+            "LName": "Maëlle",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "LName_Name6": {
+            "LName": "Esmé",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+
+        "LName_Name7": {
+            "LName": "Shyè",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "LName_Name8": {
+            "LName": "Garbiñe",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "LName_Name9": {
+            "LName": "Çakırbey",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "LName_Name10": {
+            "LName": "Siân",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "LName_Name11": {
+            "LName": "Paul123",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "LName_Name12": {
+            "LName": "';',':', '*', '^', '%', '@', '?','/', '<', '>','\\', '~', '`'",
+            "ErrorMsg": "Letters or punctuation only please",
+            "ServerMsg": "Letters or punctuation only please",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "LName_Name13": {
+            "LName": "",
+            "ErrorMsg": "Please enter your last name",
+            "ServerMsg": "Please enter your last name",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "LName_Name14": {
+            "LName": "Javier Camacho-Serrano",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        }
+    },
+
+    "Gender": {
+        "Gender_Female": {
+            "Gender": "Female",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        },
+        "Gender_Male": {
+            "Gender": "Male",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        },
+        "Gender_NonBinary": {
+            "Gender": "Nonbinary",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        },
+        "Gender_Nottosay": {
+            "Gender": "Prefer not to say",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        }
+    },
+    "DOB_valid": {
+        "DOB_Leapyear1": {
+            "Leapyear": "02-29-1996",
+            "ErrorMsg": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+
+        },
+        "DOB_Leapyear2": {
+            "Leapyear": "02-29-1992",
+            "ErrorMsg": "",
+            "ariainvalid": "success",
+            "ExecutionFlag": true
+        }
+    },
+    "DOB_invalid": {
+        "DOB_Leapyear1": {
+            "Leapyear": "02-29-1994",
+            "ErrorMsg": "Invalid Birthdate. Please check your entry for the correct dates.",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "DOB_Leapyear2": {
+            "Leapyear": "02-29-1993",
+            "ErrorMsg": "Invalid Birthdate. Please check your entry for the correct dates.",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        }
+    },
+    "DOB_invalidYear": {
+        "DOB_Leapyear1": {
+            "Leapyear": "02-29-1800",
+            "ErrorMsg": "Please enter a valid year",
+            "ErrorMsg2": "Invalid Birthdate. Please check your entry for the correct dates.",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "DOB_Leapyear2": {
+            "Leapyear": "02-29-1810",
+            "ErrorMsg": "Please enter a valid year",
+            "ErrorMsg2": "Invalid Birthdate. Please check your entry for the correct dates.",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        }
+    },
+    "DOB_invalidYear_futuredate": {
+        "DOB_Leapyear1": {
+            "Leapyear": "02-29-2020",
+            "ErrorMsg": "You must be at least 18 years of age.",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        }
+    },
+    "Phone_Cell": {
+        "Phone_Blank": {
+            "PhoneType": "Cell",
+            "PhoneNumber": "",
+            "ErrorMsg": "Please enter your phone number",
+            "ariainvalid": "error",
+            "ExecutionFlag": true
+        },
+        "Phone_InValid": {
+            "PhoneType": "Cell",
+            "PhoneNumber": "88",
+            "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
+            "ariainvalid": "error",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        },
+        "Phone_Valid": {
+            "PhoneType": "Cell",
+            "PhoneNumber": "123-456-7890",
+            "ErrorMsg": "",
+            "ariainvalid": "success",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        }
+    },
+    "MemberID": {
+        "MemberID_Blank": {
+            "MemberID": "",
+            "ariainvalid": "error",
+            "ErrorMsg": "Please enter your membership number.",
+            "ServerMsg": "This field is required.",
+            "ExecutionFlag": true
+        },
+
+        "MemberID_String": {
+            "MemberID": "abc-de-fgh;",
+            "ariainvalid": "error",
+            "ErrorMsg": "Please enter your membership number.",
+            "ServerMsg": "This field is required.",
+            "ExecutionFlag": true
+        },
+
+        "MemberID1": {
+            "MemberID": "111853003341",
+            "ariainvalid": "success",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        },
+        "MemberID2": {
+            "MemberID": "900-77-7887-3",
+            "ariainvalid": "success",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        },
+        "MemberID3": {
+            "MemberID": "3041586292",
+            "ariainvalid": "success",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+
+        },
+        "MemberID4": {
+            "MemberID": "090",
+            "ariainvalid": "error",
+            "ErrorMsg": "Membership numbers must have 10 digits(XXX-XXX-XXX-X).",
+            "ServerMsg": "Membership numbers must have 10 digits(XXX-XXX-XXX-X).",
+            "ExecutionFlag": true
+        }
+    },
+    "SSN": {
+        "SSN_Blank": {
+            "SSN": "",
+            "ariainvalid": "error",
+            "ErrorMsg": "Please enter your SSN",
+            "ServerMsg": "Please enter your SSN",
+            "ExecutionFlag": true
+        },
+
+        "SSN_String": {
+            "SSN": "abc-de-fgh;",
+            "ariainvalid": "error",
+            "ErrorMsg": "Please enter your SSN",
+            "ServerMsg": "Please enter your SSN",
+            "ExecutionFlag": true
+        },
+
+        "SSN1": {
+            "SSN": "100- 56-3733",
+            "ariainvalid": "success",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        },
+        "SSN2": {
+            "SSN": "900-77-7887",
+            "ariainvalid": "success",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+        },
+        "SSN3": {
+            "SSN": "090 15 7899",
+            "ariainvalid": "success",
+            "ErrorMsg": "",
+            "ServerMsg": "",
+            "ExecutionFlag": true
+
+        },
+        "SSN4": {
+            "SSN": "090",
+            "ariainvalid": "error",
+            "ErrorMsg": "Please enter your SSN completely (XXX-XX-XXXX)",
+            "ServerMsg": "Please enter your SSN completely (XXX-XX-XXXX)",
+            "ExecutionFlag": true
+        }
+    },
+    "AlternateId": {
+        "AlternateId_Blank": {
+            "AlternateId": "",
+            "ExecutionFlag": true
+        },
+
+        "AlternateId1": {
+            "AlternateId": "Any",
+            "ExecutionFlag": true
+        },
+        "AlternateId2": {
+            "AlternateId": "dd-cs-sc",
+            "ExecutionFlag": true
+        },
+        "AlternateId3": {
+            "AlternateId": "Passport: G48875945",
+            "ExecutionFlag": true
+        },
+        "AlternateId4": {
+            "AlternateId": "Passport#: G48875945",
+            "ExecutionFlag": true
+        },
+        "AlternateId5": {
+            "AlternateId": "F6789056",
+            "ExecutionFlag": true
+        },
+        "AlternateId6": {
+            "AlternateId": "135-345-456",
+            "ExecutionFlag": true
+        },
+        "AlternateId7": {
+            "AlternateId": "890-45-9876",
+            "ExecutionFlag": true
+        },
+        "AlternateId8": {
+            "AlternateId": "Drivers License-F6789056",
+            "ExecutionFlag": true
+        },
+        "AlternateId9": {
+            "AlternateId": "gpsvicki@aol.com",
+            "ExecutionFlag": true
+        }
+    },
+    "states": {
+        "CA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "PlanType": "DHMO",
+                        "PlanCode": "CAA55",
+                        "CoverageStartDate": "12/10/2017",
+                        "State": "FL",
+                        "ZIPcode": "32003",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "CA",
+                        "ZIPcode": "94105",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2017",
+                        "State": "CA",
+                        "ZIPcode": "94105",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+            }
+        },
+        "TX": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA TXA70 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/05/2017",
+                        "ZIPcode": "78251",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "01-28-1973"
+                    }
+                }
+
+            }
+        },
+        "PA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA PAA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "09/01/2017",
+                        "ZIPcode": "15001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "01-28-1973"
+                    }
+                }
+
+            }
+        },
+        "FL": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA FLA70 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "32003",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                }
+
+            }
+        }
+    }
+}

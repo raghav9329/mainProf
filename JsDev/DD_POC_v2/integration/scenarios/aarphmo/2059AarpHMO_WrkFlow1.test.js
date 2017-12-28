@@ -16,6 +16,9 @@ describe('AARPHMO:2059 AARP HMO WorkFlows1', function() {
     beforeAll(function() {
         Utility.openApplication('', 'AARP');
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
@@ -146,6 +149,7 @@ describe('AARPHMO:2059 AARP HMO WorkFlows1', function() {
             expect(facilitydata.telephone).toEqual(facility.telephone);
             console.log('2059_10 complete');
         });
+        receipt.verifyPixel('CA', 'AHMO');
     });
 
 });

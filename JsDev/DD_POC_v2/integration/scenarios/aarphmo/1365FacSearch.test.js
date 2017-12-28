@@ -9,10 +9,10 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 describe('AARPHMO:1365:MoreOptions: ', function() {
     beforeAll(function() {
         Utility.openApplication('','AARP');
-
     });
 
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('','AARP');
         enrollPage.enterHomePageDetails(TestData.enrollData);
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();

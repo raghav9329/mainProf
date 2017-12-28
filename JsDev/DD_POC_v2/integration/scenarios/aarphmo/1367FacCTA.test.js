@@ -14,6 +14,7 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 describe('AARPHMO:1367 Facilities CTA Back Next: ', function() {
     // Pre-condition: User navigated to Dependents page
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('','AARP');
         enrollPage.enterHomePageDetails(TestData.enrollData);
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();

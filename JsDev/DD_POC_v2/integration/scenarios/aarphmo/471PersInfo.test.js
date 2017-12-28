@@ -16,6 +16,7 @@ describe('AARPHMO:471: AddrSuggn Home Addr-PersInfo', function() {
 	
     
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.waitUntilPageLoaded();
         //browser.executeScript("document.body.style.zoom='75%';");
     });

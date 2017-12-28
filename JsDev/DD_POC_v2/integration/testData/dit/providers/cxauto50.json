@@ -3,6 +3,1104 @@
     "Location": {
         "Location1": {
             "params": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "Sp1": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "27822",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "27822"
+            }
+        },
+
+        "Location2": {
+            "params": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "Sp1": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "94143",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "94143"
+            }
+        },
+
+        "Location3": {
+            "params": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "Sp1": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "80123",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "80123"
+            }
+        },
+
+        "Location4": {
+            "params": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "Sp1": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "07869",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "07869"
+            }
+        },
+
+        "Location5": {
+            "params": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "Sp1": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "17402",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "17402"
+            }
+        },
+
+        "Location6": {
+            "params": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "Sp1": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "80015",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "80015"
+            }
+        },
+        
+        "Location7": {
+            "params": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "Sp1": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "46205",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "46205"
+            }
+        },
+
+        "Location8": {
+            "params": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "Sp1": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "23113",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "23113"
+            }
+        },
+
+        "Location9": {
+            "params": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false
+            },
+            "Sp1": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "92108",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "92108"
+            }
+        },
+
+        "Location10": {
+            "params": {
                 "zipcode": "94105",
                 "distance": "60",
                 "page": "0",
@@ -10,151 +1108,117 @@
                 "max": "60000",
                 "meta_data": false
             },
+            "Sp1": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "Sp2": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ENDODONTIST",
+                "meta_data": false
+            },
+            "Sp3": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL SURGEON",
+                "meta_data": false
+            },
+            "Sp4": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORTHODONTIST",
+                "meta_data": false
+            },
+            "Sp5": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PEDIATRIC DENTIST",
+                "meta_data": false
+            },
+            "Sp6": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PERIODONTIST",
+                "meta_data": false
+            },
+            "Sp7": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PROSTHODONTIST",
+                "meta_data": false
+            },
+            "Sp8": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "PUBLIC HEALTH DENTIST",
+                "meta_data": false
+            },
+            "Sp9": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "FULL TIME FACULTY",
+                "meta_data": false
+            },
+            "Sp10": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "HYGIENIST",
+                "meta_data": false
+            },
+            "Sp11": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "XR-LABORATORY",
+                "meta_data": false
+            },
+            "Sp12": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "specialty": "ORAL PATHOLOGY",
+                "meta_data": false
+            },
             "verify": {
                 "zipcode": "94105"
             }
-
-        },
-        "Location2": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94949"
-            }
-
-        },
-        "Location3": {
-            "params": {
-                "zipcode": "94952",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94952"
-            }
-
-        },
-        "Location4": {
-            "params": {
-                "zipcode": "96002",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "96002"
-            }
-
-        },
-        "Location5": {
-            "params": {
-                "zipcode": "92244",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "92244"
-            }
-
-        },
-        "Location6": {
-            "params": {
-                "zipcode": "94111",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94111"
-            }
-
-        },
-        "Location7": {
-            "params": {
-                "zipcode": "90001",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "90001"
-            }
-
-        },
-        "Location8": {
-            "params": {
-                "zipcode": "92115",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "92115"
-            }
-
-        },
-        "Location9": {
-            "params": {
-                "zipcode": "92137",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "92137"
-            }
-
-        },
-        "Location10": {
-            "params": {
-                "zipcode": "92169",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "92169"
-            }
-
-        },
-        "Location11": {
-            "params": {
-                "zipcode": "92198",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "92198"
-            }
-
         }
-
     }
 }

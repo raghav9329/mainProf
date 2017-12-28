@@ -1,35 +1,88 @@
 {
-     "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/05/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-10-1981"
-    },
-    "ZipCode": "94105",
-    "ZipCode2": "94103",
-    "Ariainvalid_error": "error",
-    "Ariainvalid_success": "success",
-    "Title": "Individual & Families",
-    "HAddress_ZIP": {
-        "PartialAddress": "949",
-        "FullAddress": "949Broadway, New York, NY, United States",
-        "ErrorMsg": "Please enter a street address",
-        "ExecutionFlag": true
-    },
-    "Address_Valid": {
-        "HomeAddress": "35995 Fremont Blvd Apt 98",
-        "City": "Fremont",
-        "State": "CA",
-        "ZIPCode": "94536"
+
+    "states": {
+        "CA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+                        "PlanType": "DHMO",
+                        "PlanCode": "CAA55",
+                        "CoverageStartDate": "12/05/2017",
+                        "State": "CA",
+                        "ZIPcode": "94105",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "ZipCode": "94105",
+                    "ZipCode2": "94103",
+                    "Ariainvalid_error": "error",
+                    "Ariainvalid_success": "success",
+                    "Title": "Personal Info | Enrollment | Delta Dental Insurance Company",
+                    "Ziperror": "Change ZIP code?",
+                    "HAddress_ZIP": {
+                        "PartialAddress": "949",
+                        "FullAddress": "949Broadway, New York, NY, United States",
+                        "ErrorMsg": "Please enter a street address",
+                        "ExecutionFlag": true
+                    },
+                    "Address_Valid": {
+                        "HomeAddress": "35995 Fremont Blvd Apt 98",
+                        "City": "Fremont",
+                        "State": "CA",
+                        "ZIPCode": "94536"
+                    }
+                }
+            }
+        },
+        "NY": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
+                        "PlanType": "DHMO",
+                        "PlanCode": "CAA55",
+                        "CoverageStartDate": "12/05/2017",
+                        "State": "NY",
+                        "ZIPcode": "10001",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "ZipCode": "10001",
+                    "ZipCode2": "10002",
+                    "Ariainvalid_error": "error",
+                    "Ariainvalid_success": "success",
+                    "Title": "Personal Info | Enrollment | Delta Dental Insurance Company",
+                    "Ziperror": "Change ZIP code?",
+                    "HAddress_ZIP": {
+                        "PartialAddress": "3351",
+                        "FullAddress": "3351Broadway, New York, NY, United States",
+                        "ErrorMsg": "Please enter a street address",
+                        "ExecutionFlag": true
+                    },
+                    "Address_Valid": {
+                        "HomeAddress": "623 5th Ave, New York, NY 10022",
+                        "City": "New York",
+                        "State": "NY",
+                        "ZIPCode": "10022"
+                    }
+                }
+            }
+        }        
     }
+
 }

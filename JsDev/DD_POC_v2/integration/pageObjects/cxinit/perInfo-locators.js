@@ -21,6 +21,7 @@ class PersonalInfoPageLocators {
         this.fieldSsn = by.id('ssn');
         this.errMsgSsn = by.id('ssn-error');
         this.errMsgMemberId = by.id('memberId-error');
+        this.coverageStartDate= by.id('startDate');
         this.fieldHomeAddr = by.id('streetAddress');
         this.fieldAlternateId = by.id('alt_id');
         this.errMsgHomeAddr = by.id('streetAddress-error');

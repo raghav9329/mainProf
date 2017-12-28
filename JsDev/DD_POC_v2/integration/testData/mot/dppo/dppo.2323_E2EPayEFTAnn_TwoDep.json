@@ -4,11 +4,8 @@
     "lastname": "App",
     "gender": "Male",
     "dob": "05-05-1971",
-   "ssn": "1234560215",
+    "ssn": "1234560215",
     "alternateid": "test@test.com",
-    "fieldHomeAddr": "100 First Street floor 4",
-    "city": "San Francisco",
-    "State": "CA",
     "contactType": "Cell",
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
@@ -28,24 +25,6 @@
     "deltaRating": 1,
     "queryAnswer": "Test",
     "discloser": "Delta_CA_PPO",
-
-    "enrollData": {
-        "PlanName": "Delta Dental PPO Individual - Basic Plan",
-        "PlanType": "DHMO",
-        "PlanCode": "PLN15B",
-        "CoverageStartDate": "08/01/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "0.00",
-        "AnnualCost": "342.96",
-        "CoverageType": "Self",
-        "PlanID": "4546969",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-05-1988"
-    },
-
     "Spouse": {
         "relationship": "Spouse",
         "firstName": "firstName",
@@ -54,7 +33,6 @@
         "gender": "Female",
         "DOB": "05-10-1995"
     },
-
     "child1": {
         "relationship": "Child",
         "firstName": "firstChild",
@@ -63,7 +41,6 @@
         "gender": "Female",
         "DOB": "05-10-2001"
     },
-
     "child2": {
         "relationship": "Child",
         "firstName": "secondChild",
@@ -72,12 +49,27 @@
         "gender": "Female",
         "DOB": "05-10-1999"
     },
-
-
-    "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
-
-    "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
-    "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
+    "dependentErrors": [
+        "Please select a relationship",
+        "This field is required.",
+        "This field is required.",
+        "Please enter a valid month between (01-12)",
+        "Please enter a valid day between (01-31)",
+        "Please enter a valid year"
+    ],
+    "paymentErrors": [
+        "Please enter your full name",
+        "Please enter your card number",
+        "Please enter a valid month between (01-12)",
+        "Please enter a valid year",
+        "Please enter CVC code from your card"
+    ],
+    "paymentAddressErrors": [
+        "Please enter a street address",
+        "Please enter a city",
+        "Please enter a state",
+        "Please enter a ZIP code"
+    ],
     "nameOnCard": "Peter Heins",
     "cardNumber": "5415240007992183",
     "expMonth": "05",
@@ -102,11 +94,53 @@
         "Xrays": "0%",
         "Cleanings": "0%",
         "Fillings": "50%",
-       "Rootcanals": "100%",
+        "Rootcanals": "100%",
         "Gumtreatment": "100%",
         "Extractions": "100%",
         "Denturerepair": "100%",
         "Crowns": "100%",
         "Orthodontics": "NA"
+    },
+    "states": {
+        "CA": {
+            "products": {
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "08/01/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    },
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA",
+                    "totalpaid": "$202.14"
+                }
+            }
+        },
+        "NY": {
+            "products": {
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "10001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "305 W 16th St APT 3C",
+                    "city": "New York",
+                    "State": "NY",
+                    "totalpaid": "$157.18"
+                }
+            }
+        }
     }
 }

@@ -12,9 +12,10 @@ var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 describe('AARPHMO:1359: 15 Dependents Max ', function() {
     beforeAll(function() {
         Utility.openApplication('', 'AARP');
-
     });
-
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
     it('Dependents Max_Step-1:should complete the Enroll Page', function() {

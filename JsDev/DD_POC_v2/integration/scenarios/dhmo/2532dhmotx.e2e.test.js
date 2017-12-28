@@ -15,6 +15,9 @@ describe('DHMO_TX:2532 E2E WorkFlows for Texas', function() {
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
@@ -25,10 +28,11 @@ describe('DHMO_TX:2532 E2E WorkFlows for Texas', function() {
             effectiveDate = sdate;
             console.log("sdate============" + sdate);
         })
+        
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
         console.log('2532_1 complete')
     });
-
+//
     //Enter the valid Test Data in the Personal Information page and Click n the Next
 
     it('E2E_2 :should populate PersInfo page', function() {
@@ -152,6 +156,7 @@ describe('DHMO_TX:2532 E2E WorkFlows for Texas', function() {
 
     it('E2E_10:Should display dependent applicant', function() {
         var facility = TestData.dependent_Facility_1;
+        receipt.verifyPixel('TX', 'DHMO');
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.Spouse.firstName);
             expect(facilitydata.facilityName).toEqual(facility.facilityName);

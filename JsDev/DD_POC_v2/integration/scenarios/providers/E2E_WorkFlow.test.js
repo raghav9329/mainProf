@@ -8,6 +8,7 @@ var providerDetails = new(require('../../pageObjects/providers/provider-details-
 
 describe('E2E workflow for Provider Search', function() {
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('');
     });
 

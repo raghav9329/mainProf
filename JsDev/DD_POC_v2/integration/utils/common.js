@@ -295,7 +295,7 @@
      }
 
 
-     this.getapiurl = function(resource,resourceKey,params) {
+     this.getapiurl = function(resource, resourceKey, params) {
 
          switch (resource.toUpperCase()) {
              case 'ABOUT':
@@ -307,17 +307,41 @@
              case 'SUGGESTIONS':
                  return (browser.params.apiurl + '/suggestions' + buildurl(params).slice(0, -1));
              case 'PROVIDERKEY':
-                 return (browser.params.apiurl +'/'+ resourceKey + buildurl(params).slice(0, -1));
+                 return (browser.params.apiurl + '/' + resourceKey + buildurl(params).slice(0, -1));
              case 'PROVIDERS':
                  return (browser.params.apiurl + buildurl(params).slice(0, -1));
          }
 
+         // function buildurl(o) {
+         //     return Object.keys(o).reduce(function(previous, key) {
+         //         return previous + key + '=' + o[key] + '&';
+         //     }, '?');
+         // }
+         // return (browser.params.apiurl + buildurl(dataObj).slice(0, -1));
+
          function buildurl(o) {
              return Object.keys(o).reduce(function(previous, key) {
-                 return previous + key + '=' + o[key] + '&';
+                 // console.log("type" + typeof o[key]);
+                 if ((typeof o[key]) === 'object') {
+                     var aa = specialty(key, o[key]);
+                     // console.log("aa==" + aa);
+                     var spl = previous + aa + '&';
+                     return spl.slice(0, -1);
+                 } else {
+                     //console.log("key + '=' + o[key] + '&'"+key + '=' + o[key] + '&')
+                     return previous + key + '=' + o[key] + '&';
+                 }
+
              }, '?');
          }
-         // return (browser.params.apiurl + buildurl(dataObj).slice(0, -1));
+
+
+         function specialty(k, vals) {
+             return vals.reduce(function(p, c) {
+                 return p + k + '=' + c + '&';
+
+             }, '')
+         }
 
 
      }

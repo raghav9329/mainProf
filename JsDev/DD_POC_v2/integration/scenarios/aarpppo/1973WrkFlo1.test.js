@@ -18,7 +18,9 @@ describe('AARPPO: 1973 Work Flow', function() {
         console.log('--- E2E WrkFlow1 ---')
         console.log(' ');
         Utility.openApplication('', 'AARP');
-
+    });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
@@ -138,6 +140,7 @@ describe('AARPPO: 1973 Work Flow', function() {
 
     it('E2E_10:Should display dependent-3 applicant', function() {
         var facility = TestData.dependent3;
+        receipt.verifyPixel('CA', 'APPO');
         receipt.getSelectedFacilityDetails('DEPENDENT', 3).then(function(facilitydata) {
             // expect(facilitydata.name).toEqual(TestData.child2.firstName);
                 expect(facilitydata.name).toContain(TestData.child2.firstName);

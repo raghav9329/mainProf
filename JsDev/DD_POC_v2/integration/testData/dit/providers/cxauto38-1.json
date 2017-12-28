@@ -8,6 +8,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Richard",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -23,6 +24,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "richard",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -39,6 +41,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "RICHARD",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -54,6 +57,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "rIcHaRd",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -69,6 +73,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Rich",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -84,6 +89,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Dennis",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -99,6 +105,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "dennis",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -114,6 +121,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "DENNIS",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -130,6 +138,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "DennIS",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -145,6 +154,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "The",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -160,6 +170,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "THE",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -175,6 +186,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "the",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -190,6 +202,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Cesar",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -206,6 +219,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "FOX",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -221,6 +235,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Fox",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -237,6 +252,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "fox",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -252,6 +268,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "fOX",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -267,6 +284,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Salameh-Punch",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -282,6 +300,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Punch",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -297,6 +316,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Salameh",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -312,6 +332,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Boghasian-Itutmazian",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -328,6 +349,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Boghasian",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -343,6 +365,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Itutmazian",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -358,6 +381,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Chavez-Grinde",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -373,6 +397,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Chavez",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -388,6 +413,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Grinde",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -404,6 +430,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Perez",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -420,6 +447,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Luu",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -435,6 +463,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Bernal",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -451,6 +480,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "bernal",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -466,6 +496,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "BERNAL",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -481,6 +512,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "bERNal",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -496,6 +528,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "western",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -511,6 +544,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "WESTERN",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -526,6 +560,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Western",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -542,6 +577,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "WEsterN",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -557,6 +593,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Dental",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -572,6 +609,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Tooth",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -587,6 +625,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "WN",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -602,6 +641,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Care",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -618,6 +658,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Mimi",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -633,6 +674,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Milpitas",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -649,6 +691,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "DDS",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -665,6 +708,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Orthodontist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -680,6 +724,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "orthodontist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -696,6 +741,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "ORTHODONTIST",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -711,6 +757,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "orthoDONTIST",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -726,6 +773,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "ORTHO",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -741,6 +789,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "ortho",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -756,6 +805,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Ortho",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -771,6 +821,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Endodontist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -787,6 +838,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "endoDONTIST",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -802,6 +854,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "ENDODONTIST",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -817,6 +870,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "endodontist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -832,6 +886,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "ENDO",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -847,6 +902,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Endo",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -863,6 +919,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "endo",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -878,7 +935,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "enDO",
-                "meta_data": false
+                "specialty": ["GENERAL DENTIST"],"meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
@@ -894,6 +951,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Periodontist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -909,6 +967,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "periodontist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -924,6 +983,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "PERIODONTIST",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -939,6 +999,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "PERIOdontist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -954,6 +1015,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Perio",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -969,6 +1031,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "perio",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -985,6 +1048,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "PERIO",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1000,6 +1064,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Prosthodontist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1015,6 +1080,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "prosthodontist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1030,6 +1096,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "PROSTHODONTIST",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1045,6 +1112,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Prostho",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1061,6 +1129,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Oral Surgeon",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1077,6 +1146,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "oral surgeon",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1092,6 +1162,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "ORAL SURGEON",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1108,6 +1179,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "Public Health Dentist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1123,6 +1195,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "public health dentist",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1138,6 +1211,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "PUBLIC HEALTH DENTIST",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1153,6 +1227,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "free_text": "pUBLIC hEALTH dENTIST",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
@@ -1168,12 +1243,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "1598994063",
+                "free_text": "1369837365",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "1598994063"
+                "free_text": "1369837365"
             }
         },
         "test78": {
@@ -1183,12 +1259,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "1174760482",
+                "free_text": "1326102823",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "1174760482"
+                "free_text": "1326102823"
             }
         },
 		"test79": {
@@ -1198,12 +1275,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "1831281112",
+                "free_text": "1477627156",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "1831281112"
+                "free_text": "1477627156"
             }
         },
         "test80": {
@@ -1213,12 +1291,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "1831306604",
+                "free_text": "1932315934",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "1831306604"
+                "free_text": "1932315934"
             }
         },
 		"test81": {
@@ -1228,12 +1307,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "1831306",
+                "free_text": "195250",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "1831306"
+                "free_text": "195250"
             }
         },
         "test82": {
@@ -1243,12 +1323,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "117447",
+                "free_text": "11645",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "117447"
+                "free_text": "11645"
             }
         },
 		"test83": {
@@ -1258,12 +1339,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "15989940",
+                "free_text": "43835",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "15989940"
+                "free_text": "43835"
             }
         },
         "test84": {
@@ -1273,12 +1355,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "7512",
+                "free_text": "3386",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "7512"
+                "free_text": "3386"
             }
         },
 
@@ -1289,12 +1372,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "1851618441",
+                "free_text": "2780 Mission St",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "1851618441"
+                "free_text": "2780 Mission St"
             }
         },
         "test86": {
@@ -1304,12 +1388,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "1003051541",
+                "free_text": "(415) 285-9900",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "1003051541"
+                "free_text": "(415) 285-9900"
             }
         },
 		"test87": {
@@ -1319,12 +1404,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "1831306604",
+                "free_text": "PPO",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "1831306604"
+                "free_text": "PPO"
             }
         },
         "test88": {
@@ -1334,12 +1420,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "18313",
+                "free_text": "($$)",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "18313"
+                "free_text": "($$)"
             }
         },
 		"test89": {
@@ -1349,12 +1436,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "03051",
+                "free_text": "Marathi",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "03051"
+                "free_text": "Marathi"
             }
         },
         "test90": {
@@ -1364,12 +1452,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "18441",
+                "free_text": "Bangla",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "18441"
+                "free_text": "Bangla"
             }
         },
 
@@ -1380,12 +1469,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "58407",
+                "free_text": "O'Connor",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "58407"
+                "free_text": "O'Connor"
             }
         },
         "test92": {
@@ -1395,12 +1485,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "48252",
+                "free_text": "Sung-Pin",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "48252"
+                "free_text": "Sung-Pin"
             }
         },
 		"test93": {
@@ -1410,12 +1501,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "22501",
+                "free_text": "Noe Valley Smiles & Braces",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "22501"
+                "free_text": "Noe Valley Smiles & Braces"
             }
         },
         "test94": {
@@ -1425,12 +1517,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "47675",
+                "free_text": "UCSF",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "47675"
+                "free_text": "UCSF"
             }
         },
 		"test95": {
@@ -1440,12 +1533,13 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "51483",
+                "free_text": "Practice-Gen",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "51483"
+                "free_text": "Practice-Gen"
             }
         },
         "test96": {
@@ -1455,12 +1549,30 @@
                 "page": "0",
                 "per_page": "60000",
                 "max": "60000",
-                "free_text": "38081",
+                "free_text": "Practice",
+                "specialty": ["GENERAL DENTIST"],
                 "meta_data": false
             },
             "verify": {
                 "zipcode": "94110",
-                "free_text": "38081"
+                "free_text": "Practice"
+            }
+        },
+
+        "test97": {
+            "params": {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "lan anh",
+                "specialty": ["GENERAL DENTIST"],
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "94110",
+                "free_text": "lan anh"
             }
         }
     }

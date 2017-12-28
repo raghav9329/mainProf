@@ -11,6 +11,7 @@ var shopping = new(require('../../pageObjects/cxinit/shopping-page.js'));
 var planOptions = new(require('../../pageObjects/cxinit/plan-options-page.js'));
 var planDetails = new(require('../../pageObjects/cxinit/plan-details-page.js'));
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
+var marketPage = require('../../pageObjects/cxinit/aarp-market-page.js');
 
 
 var footer = new(require('../../pageObjects/cxinit/footer-page.js'));
@@ -19,8 +20,8 @@ var TestData = require('../../testData/' + testDataEnv + '/aarpppo/Shopping_Navi
 
 describe('Shopping Navigations', function() {
 
-    beforeAll(function() {
-        Utility.openApplication(browser.params.baseUrl);
+    beforeAll(function() {       
+        Utility.openApplication(browser.params.baseUrl + '/aarp/');
     });
 
     dataProvider(TestData.states, function(data, description) {
@@ -31,10 +32,17 @@ describe('Shopping Navigations', function() {
             // Test Cases 1.3 for TX (Input valid data and click on "Show Plan"),
             // Test Cases 1.4 for NY (Input valid data and click on "Show Plan"),
             // Test Cases 1.5 for FL (Input valid data and click on "Show Plan")
-            Utility.openApplication(browser.params.baseUrl);
-            shopping.State.setText(data.state);
-            shopping.Zipcode.setText(data.zipcode);
-            shopping.Submit.click();
+            // Utility.openApplication(browser.params.baseUrl);
+            // shopping.State.setText(data.state);
+            // shopping.Zipcode.setText(data.zipcode);
+            // shopping.Submit.click();
+            Utility.openApplication(browser.params.baseUrl + '/aarp/');
+            marketPage.state.selectByText(data.state);
+            marketPage.continue.click();
+            marketPage.Zipcode.setText(data.zipcode);
+            marketPage.NoOFCovered.selectByText(data.noofcovered);
+            marketPage.viewQuote.click();
+            planOptions.back.click();
             expect(shopping.Zipcode.isPresentAndDisplayed()).toBeTruthy();
             expect(shopping.NoOFCovered_getAQuote.isPresentAndDisplayed()).toBeTruthy();
             expect(shopping.addDependent.isPresentAndDisplayed()).toBeTruthy();
@@ -65,13 +73,20 @@ describe('Shopping Navigations', function() {
         if (data.Executionflag) {
             // Test Case 2.1 (Validate features on Plan Options Page and click on "Edit"),
             it('Validate features on Plan Options Page and click on "Edit"', function() {
-                Utility.openApplication(browser.params.baseUrl);
-                shopping.State.setText(data.state);
-                // Question: Does this zip code input '92115' as per the Excel sheet?
+                // Utility.openApplication(browser.params.baseUrl);
+                Utility.openApplication(browser.params.baseUrl + '/aarp/');
+                // shopping.State.setText(data.state);
+                // // Question: Does this zip code input '92115' as per the Excel sheet?
 
-                //94105
-                shopping.Zipcode.setText(data.zipcode);
-                shopping.Submit.click();
+                // //94105
+                // shopping.Zipcode.setText(data.zipcode);
+                // shopping.Submit.click();
+                marketPage.state.selectByText(data.state);
+                marketPage.continue.click();
+                marketPage.Zipcode.setText(data.zipcode);
+                marketPage.NoOFCovered.selectByText(data.noofcovered);
+                marketPage.viewQuote.click();
+                planOptions.back.click();
                 expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('0');
                 shopping.addDependent.click();
                 shopping.addDependent.click();
@@ -112,7 +127,7 @@ describe('Shopping Navigations', function() {
             it('Click on Back Arrow on Plan Options Page', function() {
                 planOptions.back.click();
                 //Suggest: Again this Zip Code should validate '95112', as per the Excel file. Please change accordingly.
-                expect(shopping.Zipcode.getAttribute('value')).toEqual(data.zipcode);
+                expect(shopping.Zipcode.getAttribute('value')).toEqual(data.zipcode2);
                 expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('1');
 
             });
@@ -167,6 +182,7 @@ describe('Shopping Navigations', function() {
                 feedback.submit.click();
                 expect(feedback.thankyouMsg.getText()).toContain('Thank you for taking the time to let us hear from you.');
                 Utility.switchToFrame();
+                 feedback.feedback.click();
             });
 
             // Test Case 3.1 (Click on Footer links and again come to Personal Info)
@@ -198,7 +214,7 @@ describe('Shopping Navigations', function() {
                 planDetails.closeToolTip('Annual maximum').click();
 
 
-                expect(planDetails.getPlanDetailsByKey('Network dentist').getText()).toEqual("PD Link");
+                expect(planDetails.getPlanDetailsByKey('Network dentist').getText()).toContain("near you");
                 planDetails.tooltip('Network dentist').click();
                 expect(planDetails.getTooltipHeader('Network dentist').getText()).toEqual(data.plan1Details.NetworkDentistTooltipHeader);
                 expect(planDetails.getTooltipText('Network dentist').getText()).toEqual(data.plan1Details.NetworkDentistTooltipText);
@@ -259,7 +275,7 @@ describe('Shopping Navigations', function() {
                 planDetails.closeToolTip('Annual maximum').click();
 
 
-                expect(planDetails.getPlanDetailsByKey('Network dentist').getText()).toEqual('PD Link');
+                expect(planDetails.getPlanDetailsByKey('Network dentist').getText()).toContain('near you');
                 planDetails.tooltip('Network dentist').click();
                 expect(planDetails.getTooltipHeader('Network dentist').getText()).toEqual(data.plan2Details.NetworkDentistTooltipHeader);
                 expect(planDetails.getTooltipText('Network dentist').getText()).toEqual(data.plan2Details.NetworkDentistTooltipText);
@@ -319,7 +335,7 @@ describe('Shopping Navigations', function() {
                 planDetails.closeToolTip('Annual maximum').click();
 
 
-                expect(planDetails.getPlanDetailsByKey('Primary care dentist facilities').getText()).toEqual('PD Link');
+                expect(planDetails.getPlanDetailsByKey('Primary care dentist facilities').getText()).toContain('near you');
                 planDetails.tooltip('Primary care dentist facilities').click();
                 expect(planDetails.getTooltipHeader('Primary care dentist facilities').getText()).toEqual(data.plan3Details.PrimarycaredentistTooltipHeader);
                 expect(planDetails.getTooltipText('Primary care dentist facilities').getText()).toEqual(data.plan3Details.PrimarycareTooltipText);

@@ -104,9 +104,9 @@
         "Xrays": "0%",
         "Cleanings": "0%",
         "Fillings": "50%",
-        "Rootcanals": "50%",
-        "Gumtreatment": "50%",
-        "Extractions": "50%",
+        "Rootcanals": "100%",
+        "Gumtreatment": "100%",
+        "Extractions": "100%",
         "Denturerepair": "100%",
         "Crowns": "100%",
         "Orthodontics": "NA"

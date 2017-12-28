@@ -27,6 +27,9 @@ class PlanOptionsPage extends ControlBase {
         this.deltaDentalHighlights = new Label(this.pageObjects.deltaDentalHighlights);
         this.deltaCareHighlights = new Label(this.pageObjects.deltaCareHighlights);
         this.back = new Button(this.pageObjects.back);
+        this.ppoNetworkProviders = new Label(this.pageObjects.ppoNetworkProviders);
+        this.deltaCareNetworkProviders = new Label(this.pageObjects.deltaCareNetworkProviders);
+
     }
     isAt() {
         return this.headerContent.getText().then(function(header) {
@@ -55,6 +58,20 @@ class PlanOptionsPage extends ControlBase {
                 return acc + text + ' ';
             });
         }, '');
+    }
+    getDeltaDentalNetworkProvidersCount() {
+        return this.ppoNetworkProviders.getText().then(function(networkproviders) {
+            var nProviders = networkproviders.split(" ");
+            console.log("nProviders" + nProviders)
+            return nProviders[2];
+        })
+    };
+    getDeltaCareNetworkProvidersCount() {
+        return this.deltaCareNetworkProviders.getText().then(function(networkproviders) {
+            var nProviders = networkproviders.split(" ");
+            console.log("nProviders" + nProviders)
+            return nProviders[2];
+        })
     }
 }
 

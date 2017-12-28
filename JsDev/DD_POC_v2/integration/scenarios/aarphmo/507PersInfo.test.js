@@ -49,6 +49,7 @@ describe('AARPHMO:507: PersInfoPg: ', function() {
     });
 
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         // browser.refresh();
         // using Jquery we are facing the issue because jquery is not integrated with the application inorder to overcome this we have developed waitUntilPageLoaded in common.js
         //browser.executeScript("document.body.style.zoom='75%';");

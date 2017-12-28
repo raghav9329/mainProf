@@ -8,6 +8,7 @@ exports.config = {
 
     suites: {
 		allCxinit: 	'integration/scenarios/dhmo/*.test.js',
+		abc: 	'integration/scenarios/dhmo/489PersInfo.test.js',
 		
 		testWork: 'integration/scenarios/testWork/promiseDeferral.js',
 		testDone: 'integration/scenarios/testWork/doneTest.js',
@@ -58,9 +59,9 @@ exports.config = {
     
     params: {
         //baseUrl: ''
-          baseUrl:'https://aw-lx0176.deltadev.ent:3000/enroll/',
+       //   baseUrl:'https://aw-lx0176.deltadev.ent:3000/enroll/',
         //baseUrl:'https://mot.deltadentalins.com/enroll',
-        //baseUrl:'https://mot.deltadentalins.com',
+        baseUrl:'https://mot.deltadentalins.com',
     	  exeInspDelay:'', // Command Line controllable sleep variable for running Debug Inspections
     	  exeLogging:'OFF'  // other: INFO, TRACE, DEBUG
     },
@@ -71,6 +72,8 @@ exports.config = {
         longWait = 40000;
         PAGELOADTIME = 60000;
         //browser.manage().window().maximize();
+		isExecutionFromUI = false;
+		testDataEnv='mot'
         browser.manage().window().setSize(1050,1250);
         browser.executeScript("document.body.style.zoom='50%';");
         browser.ignoreSynchronization = true;

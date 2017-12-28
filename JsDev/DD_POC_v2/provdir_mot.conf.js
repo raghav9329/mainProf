@@ -26,6 +26,7 @@ exports.config = {
 	pd2_73: 'integration/scenarios/providers/cxinit2.73.test.js',
 	
 	pd1146:  'integration/scenarios/providers/cxinit2-1146.test.js',
+	pd11462:  'integration/scenarios/providers/cxinit2-1146_2.test.js',
 	pd1207:  'integration/scenarios/providers/cxinit2-1207.test.js',
 	auto50: [ 'integration/scenarios/providers/cxauto50.test.js',],
 	

@@ -18,6 +18,7 @@ describe('AARPHMO:804: Zip Code Popup validation', function() {
 	
 
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('','AARP');
         Utility.waitUntilPageLoaded();
         enrollPage.enterHomePageDetails(TestData.enrollData);
@@ -66,12 +67,12 @@ describe('AARPHMO:804: Zip Code Popup validation', function() {
         perInfo.fieldHomeAddr.setText(TestData.Address_Valid.HomeAddress);
         perInfo.fieldState.setText(TestData.Address_Valid.State);
         perInfo.fieldCity.setText(TestData.Address_Valid.City);
-        perInfo.fieldZipCode.setText(TestData.ZipCode2 + '\t');
+        perInfo.fieldZipCode.setText(TestData.ZipCode2);
 
         perInfo.fieldPhoneNumber.setText('');
         expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy();
         expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
-        expect(perInfo.zipPopUp.getText()).toContain('Change ZIP Code');
+        expect(perInfo.zipPopUp.getText()).toContain('Change ZIP code');
         perInfo.fieldPhoneNumber.setText('');
         perInfo.zipPopBack.click();
         expect(perInfo.fieldHomeAddr.isPresentAndDisplayed()).toBeTruthy();
@@ -94,7 +95,8 @@ describe('AARPHMO:804: Zip Code Popup validation', function() {
         perInfo.fieldHomeAddr.setText(TestData.Address_Valid.HomeAddress);
         perInfo.fieldState.setText(TestData.Address_Valid.City);
         perInfo.fieldCity.setText(TestData.Address_Valid.State);
-        perInfo.fieldZipCode.setText(TestData.ZipCode2 + '\t');
+        perInfo.fieldZipCode.setText(TestData.ZipCode2);
+         perInfo.fieldPhoneNumber.setText('');
         expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy();
         expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
         perInfo.zipPopNewQuote.click();

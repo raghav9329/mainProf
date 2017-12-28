@@ -16,6 +16,9 @@ describe('DPPO_FL:2557 Direct PPO FL WorkFlow', function() {
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
@@ -126,6 +129,7 @@ describe('DPPO_FL:2557 Direct PPO FL WorkFlow', function() {
     });
 
     it('E2E_9:Should display dependent applicant', function() {
+        receipt.verifyPixel('FL', 'DPPO');
         var facility = TestData.dependent_Facility_1;
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.Spouse.firstName);

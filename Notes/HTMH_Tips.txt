@@ -1,0 +1,5 @@
+12/15/2017
+G: basic html page layout template
+1) https://www.quackit.com/html/templates/simple_website_templates.cfm
+2) https://www.sitepoint.com/a-basic-html5-template/
+3) https://www.w3schools.com/html/default.asp    

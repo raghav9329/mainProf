@@ -8,8 +8,7 @@ var Select = require('../../controls/select-control');
 var CheckBox = require('../../controls/checkbox-control');
 var RadioButton = require('../../controls/radiobutton-control');
 var LinkText = require('../../controls/link-control');
-
-
+var pixeldata = require('./pixel.js');
 /**
  * Provides access to the functionality of ReceiptPage
  * @constructor
@@ -24,34 +23,34 @@ class ReceiptPage extends ControlBase {
         this.totalPaid = new Label(this.pageObjects.totalPaid);
         this.submit = new Button(this.pageObjects.submit);
         this.printReceipt = new LinkText(this.pageObjects.printReceipt);
-        this.saveCompletedApplication = new LinkText(this.pageObjects.saveCompletedApplication);        
+        this.saveCompletedApplication = new LinkText(this.pageObjects.saveCompletedApplication);
         this.planName = new Label(this.pageObjects.planName);
         this.thanksMsg = new Label(this.pageObjects.thanksMsg);
         this.queryAnswer = new TextBox(this.pageObjects.queryAnswer);
-        this.deltaRating = function(rating) {
+        this.deltaRating = function (rating) {
             return new RadioButton(this.pageObjects.deltaRating(rating));
         };
         this.planSummary = new Label(this.pageObjects.planSummary);
         this.applicants = new Label(this.pageObjects.applicants);
-        this.dependentName = function(dependent, dependentNo) {
+        this.dependentName = function (dependent, dependentNo) {
             return new Label(this.pageObjects.dependentName(dependent, dependentNo));
         };
-        this.facilityName = function(dependent, dependentNo) {
+        this.facilityName = function (dependent, dependentNo) {
             return new Label(this.pageObjects.facilityName(dependent, dependentNo));
         };
-        this.street = function(dependent, dependentNo) {
+        this.street = function (dependent, dependentNo) {
             return new Label(this.pageObjects.street(dependent, dependentNo));
         };
-        this.city = function(dependent, dependentNo) {
+        this.city = function (dependent, dependentNo) {
             return new Label(this.pageObjects.city(dependent, dependentNo));
         };
-        this.region = function(dependent, dependentNo) {
+        this.region = function (dependent, dependentNo) {
             return new Label(this.pageObjects.region(dependent, dependentNo));
         };
-        this.postalCode = function(dependent, dependentNo) {
+        this.postalCode = function (dependent, dependentNo) {
             return new Label(this.pageObjects.postalCode(dependent, dependentNo));
         };
-        this.telephone = function(dependent, dependentNo) {
+        this.telephone = function (dependent, dependentNo) {
             return new Label(this.pageObjects.telephone(dependent, dependentNo));
         };
     };
@@ -82,7 +81,7 @@ class ReceiptPage extends ControlBase {
     getThanksMsg() {
         var self = this;
         Utility.switchToFrame(this.pageObjects.feedbackFrame());
-        return this.thanksMsg.getText().then(function(thanksmsg) {
+        return this.thanksMsg.getText().then(function (thanksmsg) {
             Utility.switchToFrame();
             return thanksmsg;
         });
@@ -91,7 +90,7 @@ class ReceiptPage extends ControlBase {
     // getSelectedFacilityDetails(PRIMARY,1)
     getSelectedFacilityDetails(dependent, dependentNo) {
         var self = this;
-        return browser.controlFlow().execute(function() {
+        return browser.controlFlow().execute(function () {
             if (dependent.toUpperCase() == 'PRIMARY') var dep = 1;
             if (dependent.toUpperCase() == 'DEPENDENT') var dep = 2;
             if (!dependentNo) dependentNo = 1;
@@ -105,7 +104,29 @@ class ReceiptPage extends ControlBase {
                 telephone: self.telephone(dep, dependentNo).getText(),
             }
         });
+    };
+
+    verifyPixel(state, product) {
+        var states = ['CA','TX','PA','FL'];
+
+        if (states.indexOf(state) !== -1) {
+
+            if (product == "DPPO" || product == "DHMO") {
+               if(state=='CA') expect(browser.getPageSource()).toContainSourceCode(pixeldata.mxptint);
+                expect(browser.getPageSource()).toContainSourceCode(pixeldata.fls);
+            }
+            if (product == "AHMO" || product == "APPO") {
+                expect(browser.getPageSource()).toContainSourceCode(pixeldata.ddm);
+                expect(browser.getPageSource()).toContainSourceCode(pixeldata.ddnm);
+                expect(browser.getPageSource()).toContainSourceCode(pixeldata.adnxs);
+                expect(browser.getPageSource()).toContainSourceCode(pixeldata.beacon);
+                expect(browser.getPageSource()).toContainSourceCode(pixeldata.facebook);
+
+            }
+        }
+
     }
+
 
 
 };

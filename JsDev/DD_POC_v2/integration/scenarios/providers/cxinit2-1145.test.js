@@ -5,6 +5,7 @@ var providerDetails = new(require('../../pageObjects/providers/provider-details-
 
 describe('CXINIT2-1145:: Provider Search Validation', function() {
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('');
     });
 

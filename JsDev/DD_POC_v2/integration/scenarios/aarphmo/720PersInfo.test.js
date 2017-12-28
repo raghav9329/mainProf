@@ -16,6 +16,7 @@ describe('AARPHMO:720: Address Suggestion Mailing-PersInfo', function() {
     });
 
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('','AARP');
         Utility.waitUntilPageLoaded();
         enrollPage.enterHomePageDetails(TestData.enrollData);

@@ -151,7 +151,7 @@ class DependentPage extends ControlBase {
         this.firstname(dependentName).setText(dataObj.firstName);
         this.middleName(dependentName).setText(dataObj.middleName);
         this.lastname(dependentName).setText(dataObj.lastName);
-        this.gender(dependentName).selectByText(dataObj.gender);
+        if(!dataObj.gender) this.gender(dependentName).selectByText(dataObj.gender);
         this.month(dependentName).setText(Utility.getDatePart(dataObj.DOB, 'MONTH'));
         this.date(dependentName).setText(Utility.getDatePart(dataObj.DOB, 'DATE'));
         this.year(dependentName).setText(Utility.getDatePart(dataObj.DOB, 'YEAR') + '\t');

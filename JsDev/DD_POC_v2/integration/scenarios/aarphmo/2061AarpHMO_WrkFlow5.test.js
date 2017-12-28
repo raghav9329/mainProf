@@ -15,7 +15,9 @@ var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarphmo.2061AarpH
 describe('AARPHMO:2061 AARP_HMO_WorkFlows_5:', function() {
     beforeAll(function() {
         Utility.openApplication('','AARP');
-
+    });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
@@ -101,6 +103,7 @@ describe('AARPHMO:2061 AARP_HMO_WorkFlows_5:', function() {
     //Verify and Validate the Application Number and Plan Name in the Receipt Page
 
     it('E2E_7 :should generate a valid receipt page', function() {
+        receipt.verifyPixel('CA', 'AHMO');
         receipt.planSummary.click();
         receipt.applicants.click();
         receipt.getSelectedFacilityDetails('PRIMARY', 1).then(function(facilitydata) {

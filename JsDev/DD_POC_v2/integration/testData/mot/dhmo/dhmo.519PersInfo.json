@@ -1,20 +1,4 @@
 {
- "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/05/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-10-1981"
-    },
     "NoOfPeopleCovered": "2",
     "ZIPcode": "94105",
     "DOB_HOME": "07/02/1988",
@@ -22,105 +6,263 @@
 
 
     "Personalinfo": {
-         "Phone_Cell": {
-                "Phone_Blank": {
-                    "PhoneType": "Cell",
-                    "PhoneNumber": "",
-                    "ErrorMsg": "Please enter your phone number",
-                    "ariainvalid": "error",
-                    "ExecutionFlag": true
-                },
-                "Phone_InValid": {
-                    "PhoneType": "Cell",
-                    "PhoneNumber": "88",
-                    "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_Valid": {
-                    "PhoneType": "Cell",
-                    "PhoneNumber": "123-456-7890",
-                    "ErrorMsg": "",
-                    "ariainvalid": "success",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                }
-                },
+        "Phone_Cell": {
+            "Phone_Blank": {
+                "PhoneType": "Cell",
+                "PhoneNumber": "",
+                "ErrorMsg": "Please enter your phone number",
+                "ariainvalid": "error",
+                "ExecutionFlag": true
+            },
+            "Phone_InValid": {
+                "PhoneType": "Cell",
+                "PhoneNumber": "88",
+                "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
+                "ariainvalid": "error",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+            },
+            "Phone_Valid": {
+                "PhoneType": "Cell",
+                "PhoneNumber": "123-456-7890",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+            }
+        },
 
         "Phone_Home": {
-                "Phone_Blank": {
-                    "PhoneType": "Home",
-                    "PhoneNumber": "",
-                   "ErrorMsg": "Please enter your phone number",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_InValid": {
-                    "PhoneType": "Home",
-                    "PhoneNumber": "99",
-                    "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_Valid": {
-                    "PhoneType": "Home",
-                    "PhoneNumber": "012-345-6789",
-                    "ErrorMsg": "",
-                    "ariainvalid": "success",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                }
-                
- 
+            "Phone_Blank": {
+                "PhoneType": "Home",
+                "PhoneNumber": "",
+                "ErrorMsg": "Please enter your phone number",
+                "ariainvalid": "error",
+                "ServerMsg": "",
+                "ExecutionFlag": true
             },
-            "Phone_Work": {
-                "Phone_Blank": {
-                    "PhoneType": "Work",
-                    "PhoneNumber": "",
-                    "ErrorMsg": "Please enter your phone number",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_InValid": {
-                    "PhoneType": "Work",
-                     "PhoneNumber": "22",
-                    "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                },
-                "Phone_Valid": {
-                    "PhoneType": "Work",
-                   "PhoneNumber": "789-456-1230",
-                    "ErrorMsg": "",
-                    "ariainvalid": "success",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                     
-                }
+            "Phone_InValid": {
+                "PhoneType": "Home",
+                "PhoneNumber": "99",
+                "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
+                "ariainvalid": "error",
+                "ServerMsg": "",
+                "ExecutionFlag": true
             },
+            "Phone_Valid": {
+                "PhoneType": "Home",
+                "PhoneNumber": "012-345-6789",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+            }
 
-         "Email_Address": {
-                "Email_InValid": {
-                    "Email": "test",
-                    "ErrorMsg": "Please enter a valid E-mail address (example@domain.com)",
-                    "ariainvalid": "error",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
+
+        },
+        "Phone_Work": {
+            "Phone_Blank": {
+                "PhoneType": "Work",
+                "PhoneNumber": "",
+                "ErrorMsg": "Please enter your phone number",
+                "ariainvalid": "error",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+            },
+            "Phone_InValid": {
+                "PhoneType": "Work",
+                "PhoneNumber": "22",
+                "ErrorMsg": "Please enter in XXX-XXX-XXXX format",
+                "ariainvalid": "error",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+            },
+            "Phone_Valid": {
+                "PhoneType": "Work",
+                "PhoneNumber": "789-456-1230",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+
+            }
+        },
+
+        "Email_Address": {
+            "Email_InValid": {
+                "Email": "test",
+                "ErrorMsg": "Please enter a valid E-mail address (example@domain.com)",
+                "ariainvalid": "error",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+            },
+            "Email_Valid": {
+                "Email": "test@123.com",
+                "ErrorMsg": "",
+                "ariainvalid": "success",
+                "ServerMsg": "",
+                "ExecutionFlag": true
+
+            }
+        }
+    },
+
+    "states": {
+        "CA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "Address_Valid": {
+                        "HomeAddress": "35995 Fremont Blvd Apt 98",
+                        "City": "Fremont",
+                        "State": "CA",
+                        "ZipCode": "94536"
+                    }
                 },
-                "Email_Valid": {
-                    "Email": "test@123.com",
-                    "ErrorMsg": "",
-                    "ariainvalid": "success",
-                    "ServerMsg": "",
-                    "ExecutionFlag": true
-                                     
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "08/01/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    },
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA",
+                    "totalpaid": "$202.14"
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "CA",
+                        "ZIPcode": "94105",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2017",
+                        "State": "CA",
+                        "ZIPcode": "94105",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
                 }
             }
+        },
+        "NY": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "10001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    },
+                    "Address_Valid": {
+                        "HomeAddress": "35995 Fremont Blvd Apt 98",
+                        "City": "New York",
+                        "State": "NY",
+                        "ZipCode": "10001"
+                    }
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "10001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "305 W 16th St APT 3C",
+                    "city": "New York",
+                    "State": "NY",
+                    "totalpaid": "$157.18"
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "NY",
+                        "ZIPcode": "10001",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "NY",
+                        "ZIPcode": "10001",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+
+                }
+            }
+
+        }
     }
 
 }

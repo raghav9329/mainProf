@@ -26,10 +26,11 @@
     "deltaRating": 1,
     "queryAnswer": "Test",
     "discloser": "Delta_TX_DHMO_TXA70",
+
     "enrollData": {
         "PlanName": "DeltaCare® USA TXA70 Individual/Family Dental Program",
         "PlanType": "DHMO",
-        "PlanCode": "CAA55",
+        "PlanCode": "CAA55",        
         "CoverageStartDate": "12/05/2017",
         "State": "CA",
         "ZIPcode": "78251",
@@ -42,6 +43,7 @@
         "NoOfPeopleCovered": "1",
         "dob": "01-28-1973"
     },
+   
 
     "Spouse": {
         "relationship": "Spouse",

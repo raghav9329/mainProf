@@ -27,22 +27,6 @@
     "State1": "CA",
     "State2": "California",
     "State3": "**--//",
-     "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/05/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-10-1981"
-    },
 
     "FirstNameFieldHelper": {
         "FName": "ValidTxtToReduceError"
@@ -68,10 +52,51 @@
         "ExecutionFlag": true
     },
 
-    "Address_Valid": {
-        "HomeAddress": "35995 Fremont Blvd Apt 98",
-        "City": "Fremont",
-        "State": "CA",
-        "ZipCode": "94536"
+    "states": {
+        "CA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "Address_Valid": {
+                        "HomeAddress": "35995 Fremont Blvd Apt 98",
+                        "City": "Fremont",
+                        "State": "CA",
+                        "ZipCode": "94536"
+                    }
+                }
+            }
+        },
+        "NY": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "10001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    },
+                    "Address_Valid": {
+                        "HomeAddress": "35995 Fremont Blvd Apt 98",
+                        "City": "New York",
+                        "State": "NY",
+                        "ZipCode": "10001"
+                    }
+                }
+
+            }
+        }
     }
 }

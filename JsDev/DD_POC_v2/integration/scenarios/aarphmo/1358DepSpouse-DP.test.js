@@ -17,6 +17,9 @@ describe('AARPHMO:1358: Dependents - Spouse&DomesticPartner ', function() {
     beforeAll(function() {
         Utility.openApplication('', 'AARP');
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
     //   Fill the Enroll page with valid data and verify the navigation
     it('Step-1: should complete the Enroll Page', function() {
         enrollPage.enterHomePageDetails(TestData.enrollData);

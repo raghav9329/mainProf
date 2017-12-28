@@ -15,6 +15,9 @@ describe('AARPHMO:1368 Feedback : ', function() {
         enrollPage.enterHomePageDetails(TestData.enrollData);
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
 
     it('Step-1:Should be provide the feedback in personal info page', function() {
         feedback.feedback.click();

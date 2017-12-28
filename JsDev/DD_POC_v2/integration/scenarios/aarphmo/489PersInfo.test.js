@@ -4,7 +4,7 @@
 //Verifies the Home address with the empty data sets (Null Values), Invalid data and special characters
 //Validation of the above is applicable for all the fields of the Home address like Zipcode, Home address
 
-var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarphmo.489.json');
+var TestData = require('../../testData/' + testDataEnv + '/aarphmo/aarphmo.489.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 describe('AARPHMO:489: Address Home fields-PersINfo', function() {
@@ -17,6 +17,7 @@ describe('AARPHMO:489: Address Home fields-PersINfo', function() {
 
 
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.waitUntilPageLoaded();
     });
 
@@ -39,7 +40,8 @@ describe('AARPHMO:489: Address Home fields-PersINfo', function() {
     //Validate and verify the error by Tabout from the Home Address field
 
     it('Step-2:Validate Home Address field with Click/tabout', function() {
-        perInfo.fieldHomeAddr.setText('' + '\t');
+        perInfo.fieldHomeAddr.setText('');
+        perInfo.fieldCity.setText('');
         expect(perInfo.errMsgHomeAddr.getText()).toEqual(TestData.ErrorMsg_Homeaddress);
         expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
     });
@@ -47,7 +49,8 @@ describe('AARPHMO:489: Address Home fields-PersINfo', function() {
     //Validate and verify the error by Tabout from the City field under the Home Address
 
     it('Step-3:Validate City field with Click/tabout', function() {
-        perInfo.fieldCity.setText('' + '\t');
+        perInfo.fieldCity.setText('');
+        perInfo.fieldState.setText('');
         expect(perInfo.errMsgCity.getText()).toEqual(TestData.ErrorMsg_city);
         expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error);
     });
@@ -55,7 +58,8 @@ describe('AARPHMO:489: Address Home fields-PersINfo', function() {
     //Validate and verify the error by Tabout from the State field under the Home Address
 
     it('Step-4:Validate State field with Click/tabout', function() {
-        perInfo.fieldState.setText('' + '\t');
+        perInfo.fieldState.setText('');
+        perInfo.fieldZipCode.setText('');
         expect(perInfo.errMsgState.getText()).toEqual(TestData.ErrorMsg_State);
         expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error);
     });
@@ -63,7 +67,8 @@ describe('AARPHMO:489: Address Home fields-PersINfo', function() {
     //Validate and verify the error by Tabout from the Zipcode field under the Home Address
 
     it('Step-5:Validate Zip Code field with Click/tabout', function() {
-        perInfo.fieldZipCode.setText('' + '\t');
+        perInfo.fieldZipCode.setText('');
+        perInfo.fieldState.setText('');
         expect(perInfo.errMsgZipCode.getText()).toEqual(TestData.ErrorMsg_ZipCode);
         expect(perInfo.fieldZipCode.getAttribute("class")).toContain(TestData.ariainvalid_error);
     });
@@ -83,7 +88,8 @@ describe('CXINIT-489::492 - Validate Home Address field with valid and invalid d
     it('Step-6:Validate Home Address with blank data', function() {
         data = TestData.Personalinfo.HAddress_Blank;
         perInfo.fieldHomeAddr.setText(data.Home);
-        perInfo.fieldCity.setText(data.City + '\t');
+        perInfo.fieldCity.setText(data.City);
+        perInfo.fieldHomeAddr.click();
         //perInfo.fieldState.setText(data.State);     
 
         expect(perInfo.errMsgHomeAddr.getText()).toEqual(data.ErrorMsg);
@@ -96,7 +102,8 @@ describe('CXINIT-489::492 - Validate Home Address field with valid and invalid d
 
     it('Step-7:Validate Home Address with valid data', function() {
         data = TestData.Personalinfo.HAddress_Valid;
-        perInfo.fieldHomeAddr.setText(data.Home + '\t');
+        perInfo.fieldHomeAddr.setText(data.Home);
+        perInfo.fieldHomeAddr.click();
 
         expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_success);
         expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
@@ -107,7 +114,8 @@ describe('CXINIT-489::492 - Validate Home Address field with valid and invalid d
 
     it('Step-8:Validate Home Address with invalid data', function() {
         data = TestData.Personalinfo.HAddress_Invalid;
-        perInfo.fieldHomeAddr.setText(data.Home + '\t');
+        perInfo.fieldHomeAddr.setText(data.Home);
+        perInfo.fieldHomeAddr.click();
 
         expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);
         expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
@@ -142,7 +150,7 @@ describe('CXINIT-489::492 - Validate Home Address field with valid and invalid d
 
     it('Step-11:Validate Home Address changing zip code', function() {
         // browser.sleep(20000);
-        perInfo.fieldZipCode.setText('94105' + '\t');
+        perInfo.fieldZipCode.setText('94105');
         browser.sleep(4000);
         expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
         perInfo.zipPopBack.click();
@@ -170,19 +178,23 @@ describe('CXINIT-489::492- Validate city field with valid and invalid data', fun
 
     it('Step-12:Enter ' + TestData.City1 + ' data in city field', function() {
         perInfo.fieldHomeAddr.setText(TestData.Address_Valid.Home);
-        perInfo.fieldCity.setText(TestData.City1 + '\t');
+        perInfo.fieldCity.setText(TestData.City1);
+        perInfo.fieldState.click();
         expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
     });
     it('Step-13:Enter ' + TestData.City2 + ' data in city field', function() {
-        perInfo.fieldCity.setText(TestData.City2 + '\t');
+        perInfo.fieldCity.setText(TestData.City2);
+        perInfo.fieldState.click();
         expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
     });
     it('Step-14:Enter ' + TestData.City3 + ' data in city field', function() {
-        perInfo.fieldCity.setText(TestData.City3 + '\t');
+        perInfo.fieldCity.setText(TestData.City3);
+        perInfo.fieldState.click();
         expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
     });
     it('Step-15:Enter ' + TestData.City4 + '  in city field', function() {
-        perInfo.fieldCity.setText(TestData.City4 + '\t');
+        perInfo.fieldCity.setText(TestData.City4);
+        perInfo.fieldState.click();
         expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
     });
 });
@@ -205,15 +217,18 @@ describe('CXINIT-489::492 - Validate state field with valid and invalid data', f
         });*/
     });
     it('Step-16:Enter ' + TestData.State1 + ' in State field', function() {
-        perInfo.fieldState.setText(TestData.State1 + '\t');
+        perInfo.fieldState.setText(TestData.State1);
+        perInfo.fieldZipCode.click();
         expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
     });
     it('Step-17:Enter ' + TestData.State2 + ' in State field', function() {
-        perInfo.fieldState.setText(TestData.State2 + '\t');
+        perInfo.fieldState.setText(TestData.State2);
+        perInfo.fieldZipCode.click();
         expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
     });
     it('Step-18:Enter ' + TestData.State3 + ' in State field', function() {
-        perInfo.fieldState.setText(TestData.State3 + '\t');
+        perInfo.fieldState.setText(TestData.State3);
+        perInfo.fieldZipCode.click();
         expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
     });
 });
@@ -239,7 +254,7 @@ describe('CXINIT-489::492 - Validate Zip code field with valid and invalid data'
         perInfo.fieldHomeAddr.setText(data.Home);
         perInfo.fieldCity.setText(data.City);
         perInfo.fieldState.setText(data.State);
-        perInfo.fieldZipCode.setText(data.ZIPcode + '\t');
+        perInfo.fieldZipCode.setText(data.ZIPcode);
         expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
         perInfo.zipPopBack.click();
         expect(perInfo.fieldZipCode.getAttribute("class")).not.toContain(TestData.ariainvalid_error);
@@ -250,7 +265,7 @@ describe('CXINIT-489::492 - Validate Zip code field with valid and invalid data'
         perInfo.fieldHomeAddr.setText(data.Home);
         perInfo.fieldCity.setText(data.City);
         perInfo.fieldState.setText(data.State);
-        perInfo.fieldZipCode.setText(data.ZIPcode + '\t');
+        perInfo.fieldZipCode.setText(data.ZIPcode);
         expect(perInfo.errMsgZipCode.getText()).toEqual(data.ErrorMsg);
         perInfo.errMsgZipCode.click();
         expect(perInfo.fieldZipCode.getAttribute("class")).toContain(TestData.ariainvalid_error);

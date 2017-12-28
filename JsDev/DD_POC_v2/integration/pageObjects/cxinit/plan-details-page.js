@@ -27,6 +27,7 @@ class PlanDetailsPage extends ControlBase {
         this.plan1 = new Label(this.pageObjects.plan1);
         this.plan2 = new Label(this.pageObjects.plan2);
         this.accidentCoverage = new Label(this.pageObjects.accidentCoverage);
+        this.newPDCheckitOut = new Button(this.pageObjects.newPDCheckitOut);
         this.getPlanDetailsByKey = function(key) {
             return new Label(this.pageObjects.getPlanDetailsByKey(key));
         };
@@ -45,7 +46,11 @@ class PlanDetailsPage extends ControlBase {
         };
         this.closeToolTip = function(planname) {
             return new Label(this.pageObjects.closeToolTip(planname));
-        }
+        };
+
+        this.pdfDocument= function(docname){
+            return new Label(this.pageObjects.pdfDocument(docname));
+        };
     };
 
     isAt() {
@@ -53,6 +58,24 @@ class PlanDetailsPage extends ControlBase {
             return header == 'Plan Details';
         })
     };
+    getnetworkprovidersCount() {
+        return this.getPlanDetailsByKey('Network dentist').getText().then(function(providerstext) {
+            var providers = providerstext.split(" ");
+            console.log("providers" + providers);
+            return providers[0];
+        })
+    }
+
+    getPrimaryCareDentistFacilitiesCount() {
+        return this.getPlanDetailsByKey('Primary care dentist facilities').getText().then(function(providerstext) {
+            var providers = providerstext.split(" ");
+            console.log("providers" + providers);
+            return providers[0];
+        })
+    }
+
+
+
 
 }
 

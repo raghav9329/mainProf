@@ -18,7 +18,9 @@ describe('DHMO_PA:2539 Direct HMO WorkFlows -1', function() {
     beforeAll(function() {
         Utility.openApplication('', 'DELTA');
     });
-
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
     //Fill the Valid Data in the home page of Enrollment and Proceed
 
     it('E2E_1 : Should complete the Enroll Page', function() {
@@ -154,6 +156,7 @@ describe('DHMO_PA:2539 Direct HMO WorkFlows -1', function() {
 
     it('E2E_11:Should display dependent applicant', function() {
         var facility = TestData.dependent_Facility_1;
+        receipt.verifyPixel('PA', 'DHMO');
         receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.Spouse.firstName);
             expect(facilitydata.facilityName).toEqual(facility.facilityName);

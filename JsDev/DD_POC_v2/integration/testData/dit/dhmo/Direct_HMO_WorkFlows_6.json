@@ -17,34 +17,110 @@
     "coverageStartDate": "07/01/2017",
     "ariainvalid": "success",
     "darkGreen": "rgba(67, 176, 42, 1)",
-    "liteGreen":"rgba(142, 208, 127, 1)",
+    "liteGreen": "rgba(142, 208, 127, 1)",
     "gray": "rgba(191, 191, 191, 1)",
     "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
     "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
     "facilityoption1": "Kayvan Kafayi DDS",
     "facilityoption2": "Van Ness Dental Group",
-    "baseFee":"$80.76",
-    "enrollFee":"$10.0",
+    
+    "enrollFee": "$10.0",
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
     "queryAnswer": "Test",
     "discloser": "Delta_CA_DHMO_CAA55",
-    "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/05/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-10-1981"
+
+    "states": {
+        "CA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+                        "PlanType": "DHMO",
+                        "PlanCode": "CAA55",
+                        "CoverageStartDate": "12/5/2017",
+                        "State": "CA",
+                        "ZIPcode": "94105",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "planSummary": {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$15",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$25",
+                        "Fillings": "$30 - $125",
+                        "Rootcanals": "$240 - $400",
+                        "Gumtreatment": "$70 - $650",
+                        "Extractions": "$45 - $210",
+                        "Denturerepair": "$55",
+                        "Crowns": "$325 - $425",
+                        "Orthodontics": "$2,700 - $2,900"
+                    },
+                    "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+                    "baseFee": "$80.76",
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA",
+                    "discloser": "Delta_CA_DHMO_CAA55"
+                }
+            }
+        },
+        "NY": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
+                        "PlanType": "DHMO",
+                        "PlanCode": "CAA55",
+                        "CoverageStartDate": "12/5/2017",
+                        "State": "NY",
+                        "ZIPcode": "10001",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "planSummary": {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$10",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$20",
+                        "Fillings": "$25-$120",
+                        "Rootcanals": "$240-$400",
+                        "Gumtreatment": "$64-$650",
+                        "Extractions": "$30-$230",
+                        "Denturerepair": "$40-$75",
+                        "Crowns": "$125-$495",
+                        "Orthodontics": "$1400-$2800"
+                    },
+                    "planName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
+                    "baseFee": "$201.71",
+                    "fieldHomeAddr": "305 W 16th St APT 3C",
+                    "city": "New York",
+                    "discloser": "Delta_NY_Prepaid_Plan_NYA60",
+                    "State": "NY"
+                }
+
+            }
+        }
     },
 
     "Spouse": {
@@ -56,9 +132,9 @@
         "DOB": "05-10-1995"
     },
 
-    
+
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
-    
+
     "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
     "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
     "nameOnCard": "Peter Heins",
@@ -92,8 +168,8 @@
         "telephone": "650.878.3171"
     },
     "dependent_Facility_1": {
-          "facilityName": "SecondaryApplicantService-1",
-       "street": "2085 Gellert Blvd Ste 9",
+        "facilityName": "SecondaryApplicantService-1",
+        "street": "2085 Gellert Blvd Ste 9",
         "city": "Daly City",
         "region": "CA",
         "postalCode": "94015-2841",

@@ -1,0 +1,10 @@
+12/12/17
+
+
+12/12/17  "Get the time difference between two datetimes"
+https://stackoverflow.com/questions/18623783/get-the-time-difference-between-two-datetimes
+I used this in my test automation reporting mkit.bat parseLog.js scripting
+
+
+12/14/17 " How to execute shell command in Javascript "
+https://stackoverflow.com/questions/1880198/how-to-execute-shell-command-in-javascript

@@ -16,6 +16,11 @@ class ProviderDetailsPage extends ControlBase {
     constructor() {
         super(null, 'ProviderDetailsPage');
         this.pageObjects = new ProviderDetailsLocators();
+        this.headerText = new Label(this.pageObjects.headerText);
+        this.keywordSearch = new TextBox(this.pageObjects.keywordSearch);
+        this.findIcon = new Button(this.pageObjects.findIcon);
+        this.pageNation = new Label(this.pageObjects.pageNation);
+        this.page = new LinkText(this.pageObjects.page);
         this.viewLink = new Label(this.pageObjects.viewLink);
         this.backToSearchResults = new Label(this.pageObjects.backToSearchResults);
         this.providerDistance = new Label(this.pageObjects.providerDistance);
@@ -28,6 +33,12 @@ class ProviderDetailsPage extends ControlBase {
         this.providerPlaceName = new Label(this.pageObjects.providerPlaceName);
         this.providerPName = new LinkText(this.pageObjects.providerPName);
         this.providerFName = new LinkText(this.pageObjects.providerFName);
+        this.yelpReviewCount = new Label(this.pageObjects.yelpReviewCount);
+        this.yelpRating = new Label(this.pageObjects.yelpRating);
+        this.providerYelp = new LinkText(this.pageObjects.providerYelp);
+        this.providerYelpName = new Label(this.pageObjects.providerYelpName);
+        this.providerYelpFind = new TextBox(this.pageObjects.providerYelpFind);
+        this.providerYelpNear = new TextBox(this.pageObjects.providerYelpNear);
         this.providerFacility = new Label(this.pageObjects.providerFacility);
         this.providerAddress = new Label(this.pageObjects.providerAddress);
         this.providerAddressStreet = new Label(this.pageObjects.providerAddressStreet);
@@ -55,11 +66,24 @@ class ProviderDetailsPage extends ControlBase {
         this.Office_providerSearch = function(officeName) {
             return new Label(this.pageObjects.Office_providerSearch(officeName));
         };
+        this.workatOffice = function(officeName) {
+            return new Label(this.pageObjects.workatOffice(officeName));
+        };
+        
+        this.workatOffice_links = function(links) {
+            return new LinkText(this.pageObjects.workatOffice_links(links));
+        };
+        this.feedback_inaccuracy = new TextBox(this.pageObjects.feedback_inaccuracy);
+        this.dontworkSubmit_inaccuracy = new Button(this.pageObjects.dontworkSubmit_inaccuracy);
+        this.location = new TextBox(this.pageObjects.location);
+        this.menuButton = new Button(this.pageObjects.menuButton);
+        this.spanishOption = new LinkText(this.pageObjects.spanishOption);
     };
 
     getOfficeHoursByDay(day) {
+        TextBox
         return element(this.pageObjects.officeHoursByDay(day)).getTextEx().then(function(dayinfo) {
-            return (((dayinfo.split(':'))[1]).trim());
+            return (((dayinfo.split(': '))[1]).trim());
         })
     };
     getProviderAccessByfacility(facility) {
@@ -69,6 +93,13 @@ class ProviderDetailsPage extends ControlBase {
         return element(this.pageObjects.providerDataByField(fieldName)).getTextEx();
     };
 
+    getOfficeHours(hours) {
+        if (hours == null) {
+            return 'contact office for hours';
+        } else {
+            return hours;
+        }
+    }
 
 
     openView(providerName, option) {
@@ -101,13 +132,13 @@ class ProviderDetailsPage extends ControlBase {
         var self = this;
         browser.controlFlow().execute(function() {
             var pageNumber = 0;
-            var  breakflow;
+            var breakflow;
             browser.wait(function() {
                 return element(self.pageObjects.view(providerName)).isDisplayed().then(function(displayed) {
                     return true;
                 }, function() {
                     // console.log("===================Displayed else block =============")
-                        // element(by.linkText("Next")).clickIt();
+                    // element(by.linkText("Next")).clickIt();
                     return element(by.linkText("Next")).clickIt().then(function() {
                         pageNumber = pageNumber + 1;
                         // console.log("=================pageNumber===========" + pageNumber);
@@ -149,7 +180,7 @@ class ProviderDetailsPage extends ControlBase {
                 if (option.toUpperCase() == 'PLACE') self.providerPlaceName.click();
                 if (option.toUpperCase() == 'FACILITY') self.providerFacility.click();
                 if (option.toUpperCase() == 'OFFICE') self.providerPlaceName.click();
-                 if (option.toUpperCase() == 'OFFICE') self.providerPlaceName.click();
+                if (option.toUpperCase() == 'OFFICE') self.providerPlaceName.click();
 
             })
         });

@@ -4,7 +4,8 @@ class ShoppingPageLocators {
     constructor() {
 
         // Shopping page objects
-
+        this.back = by.css('a.back-arrow-link');
+         this.headerContent = by.css('h1.shopping-header-content');
         this.State = by.name('state');
         this.Zipcode = by.name('zip');
         this.NoOFCovered = by.id('noofcovered');
@@ -18,6 +19,7 @@ class ShoppingPageLocators {
         this.removeDependent = by.id('minusButton');
         this.serverErrMsgnoofCovered = by.css('a.error.noofcovered-error');
         this.serverErrMsgZipcode = by.css('a.error.zip-error');
+        this.zipCodeserverError = by.css('div.error-container.global-margin')
 
         /*this.PlanName = by.name('planName');
         this.PlanType = by.name('planType');

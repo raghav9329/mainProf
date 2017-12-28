@@ -18,7 +18,9 @@ describe('AARPHMO:2091 AARP_HMO WorkFlows_4 :', function() {
         console.log('--- E2E WrkFlow1 ---')
         console.log(' ');
         Utility.openApplication('', 'AARP');
-
+    });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
@@ -175,6 +177,7 @@ describe('AARPHMO:2091 AARP_HMO WorkFlows_4 :', function() {
 
     it('E2E_12:Should display dependent-3 applicant', function() {
         var facility = TestData.dependent3;
+        receipt.verifyPixel('CA', 'AHMO');
         receipt.getSelectedFacilityDetails('DEPENDENT', 3).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.child2.firstName);
             expect(facilitydata.facilityName).toEqual(facility.facilityName);

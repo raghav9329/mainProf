@@ -44,7 +44,7 @@ var TestData = {
             "NoOfCovered": "99",
             "ErrNoofCovered": false,
             // "ErrNoofCovered": "Number of covered can't be more than 16",
-            "ErrZipCode": "Zip code must be 5 digits long"
+            "ErrZipCode": "ZIP code must contain at least 5 numbers"
         },
         "getAQuoteDataSet3": {
             "Zipcode": "94105",
@@ -68,7 +68,7 @@ var TestData = {
             "Zipcode": "1a2!3",
             "NoOfCovered": "2",
             "ErrNoofCovered": false,
-            "ErrZipCode": "Zip code must be 5 digits long"
+            "ErrZipCode": "ZIP code must contain at least 5 numbers"
         },
         "getAQuoteDataSet7": {
             "Zipcode": "94105454",
@@ -89,8 +89,8 @@ var TestData = {
             "plan1": "PPO Plan A",
             "plan2": "PPO Plan B",
             "plan3": "DeltaCare ® USA Plan 15B",
-            "deltadentalhighlights": "Freedom to visit any dentist Choose from 1500 primary care dentist facilities near you Implants covered after 1 year 3 cleanings and exams a year ",
-            "deltacarehighlights": "No waiting period for covered services Save with 1500 network dentists near you Orthodontics coverage 2 cleanings and exams a year ",
+            "deltadentalhighlights": "Freedom to visit any dentist Save with 1027 network dentists near you Implants covered after 1 year 3 cleanings and exams a year ",
+            "deltacarehighlights": "Choose from 50 primary care dentist facilities near you No waiting period for covered services Orthodontics coverage 2 cleanings and exams a year ",
             "ppoplanA_price": "$7210",
             "ppoplanA_Content": "Get the highest coverage for services at a slightly higher monthly rate.",
             "ppoplanB_price": "$4887",
@@ -110,8 +110,8 @@ var TestData = {
             "plan1": "PPO Plan A",
             "plan2": "PPO Plan B",
             "plan3": "DeltaCare ® USA Plan 15B",
-            "deltadentalhighlights": "Freedom to visit any dentist Choose from 1500 primary care dentist facilities near you Implants covered after 1 year 3 cleanings and exams a year ",
-            "deltacarehighlights": "No waiting period for covered services Save with 1500 network dentists near you Orthodontics coverage 2 cleanings and exams a year ",
+            "deltadentalhighlights": "Freedom to visit any dentist Save with 1027 network dentists near you Implants covered after 1 year 3 cleanings and exams a year ",
+            "deltacarehighlights": "Choose from 50 primary care dentist facilities near you No waiting period for covered services Orthodontics coverage 2 cleanings and exams a year ",
             "ppoplanA_price": "$7210",
             "ppoplanA_Content": "Get the highest coverage for services at a slightly higher monthly rate.",
             "ppoplanB_price": "$4887",
@@ -132,8 +132,8 @@ var TestData = {
             "plan1": "PPO Plan A",
             "plan2": "PPO Plan B",
             "plan3": "DeltaCare ® USA Plan 15B",
-            "deltadentalhighlights": "Freedom to visit any dentist Choose from 1500 primary care dentist facilities near you Implants covered after 1 year 3 cleanings and exams a year ",
-            "deltacarehighlights": "No waiting period for covered services Save with 1500 network dentists near you Orthodontics coverage 2 cleanings and exams a year ",
+            "deltadentalhighlights": "Freedom to visit any dentist Save with 1027 network dentists near you Implants covered after 1 year 3 cleanings and exams a year ",
+            "deltacarehighlights": "Choose from 50 primary care dentist facilities near you No waiting period for covered services Orthodontics coverage 2 cleanings and exams a year ",
             //"Freedom to visit any dentist Save with 1,500 network dentists near you Implants covered after 1 year 3 cleanings and exams a year ",
             "ppoplanA_price": "$7210",
             "ppoplanA_Content": "Get the highest coverage for services at a slightly higher monthly rate.",
@@ -154,8 +154,8 @@ var TestData = {
             "plan1": "PPO Plan A",
             "plan2": "PPO Plan B",
             "plan3": "DeltaCare ® USA Plan 15B",
-            "deltadentalhighlights": "Freedom to visit any dentist Choose from 1500 primary care dentist facilities near you Implants covered after 1 year 3 cleanings and exams a year ",
-            "deltacarehighlights": "No waiting period for covered services Save with 1500 network dentists near you Orthodontics coverage 2 cleanings and exams a year ",
+            "deltadentalhighlights": "Freedom to visit any dentist Save with 1027 network dentists near you Implants covered after 1 year 3 cleanings and exams a year ",
+            "deltacarehighlights": "Choose from 50 primary care dentist facilities near you No waiting period for covered services Orthodontics coverage 2 cleanings and exams a year ",
             "ppoplanA_price": "$6048",
             "ppoplanA_Content": "Get the highest coverage for services at a slightly higher monthly rate.",
             "ppoplanB_price": "$4096",
@@ -175,8 +175,8 @@ var TestData = {
             "plan1": "PPO Plan A",
             "plan2": "PPO Plan B",
             "plan3": "DeltaCare ® USA Plan 15B",
-            "deltadentalhighlights": "Freedom to visit any dentist Choose from 1500 primary care dentist facilities near you Implants covered after 1 year 3 cleanings and exams a year ",
-            "deltacarehighlights": "No waiting period for covered services Save with 1500 network dentists near you Orthodontics coverage 2 cleanings and exams a year ",
+            "deltadentalhighlights": "Freedom to visit any dentist Save with 1027 network dentists near you Implants covered after 1 year 3 cleanings and exams a year ",
+            "deltacarehighlights": "Choose from 50 primary care dentist facilities near you No waiting period for covered services Orthodontics coverage 2 cleanings and exams a year ",
             "ppoplanA_price": "$6393",
             "ppoplanA_Content": "Get the highest coverage for services at a slightly higher monthly rate.",
             "ppoplanB_price": "$4332",
@@ -196,8 +196,8 @@ var TestData = {
             "plan1": "PPO Plan A",
             "plan2": "PPO Plan B",
             "plan3": "DeltaCare ® USA Plan 15B",
-            "deltadentalhighlights": "Freedom to visit any dentist Choose from 1500 primary care dentist facilities near you Implants covered after 1 year 3 cleanings and exams a year ",
-            "deltacarehighlights": "No waiting period for covered services Save with 1500 network dentists near you Orthodontics coverage 2 cleanings and exams a year ",
+            "deltadentalhighlights": "Freedom to visit any dentist Save with 1027 network dentists near you Implants covered after 1 year 3 cleanings and exams a year ",
+            "deltacarehighlights": "Choose from 50 primary care dentist facilities near you No waiting period for covered services Orthodontics coverage 2 cleanings and exams a year ",
             "ppoplanA_price": "$7004",
             "ppoplanA_Content": "Get the highest coverage for services at a slightly higher monthly rate.",
             "ppoplanB_price": "$4747",
@@ -217,8 +217,8 @@ var TestData = {
             "plan1": "DPO Plan A",
             "plan2": "DPO Plan B",
             "plan3": "DeltaCare ® USA Plan 15B",
-            "deltadentalhighlights": "Freedom to visit any dentist Choose from 1500 primary care dentist facilities near you Implants covered after 1 year 3 cleanings and exams a year ",
-            "deltacarehighlights": "No waiting period for covered services Save with 1500 network dentists near you Orthodontics coverage 2 cleanings and exams a year ",
+            "deltadentalhighlights": "Freedom to visit any dentist Save with 1027 network dentists near you Implants covered after 1 year 3 cleanings and exams a year ",
+            "deltacarehighlights": "Choose from 50 primary care dentist facilities near you No waiting period for covered services Orthodontics coverage 2 cleanings and exams a year ",
             "ppoplanA_price": "$6393",
             "ppoplanA_Content": "Get the highest coverage for services at a slightly higher monthly rate.",
             "ppoplanB_price": "$4332",
@@ -235,7 +235,7 @@ var TestData = {
 describe('2899:Plan_Options', function() {
 
     beforeEach(function() {
-        Utility.openApplication(browser.params.baseUrl);
+        Utility.openApplication(browser.params.baseUrl + '/shopping/aarp/test');
     });
 
     it('step1:Verify all fields displayed in get a quote page', function() {
@@ -358,11 +358,11 @@ describe('2899:Plan_Options', function() {
         planOptions.getPlanDetails('DeltaCare ® USA Plan 15B').click();
 
         expect(planDetails.isAt()).toEqual(true);
-        expect(planDetails.planStartsHelpText.getText()).toEqual('-');
-        expect(planDetails.shoppingDetailsSummary.getText()).toEqual('-');
-        expect(planDetails.planPrice.getText()).toEqual('-');
-        expect(planDetails.getPlanDetailsByKey('Annual deductible').getText()).toEqual('-');
-        expect(planDetails.getPlanDetailsByKey('feature text').getText()).toEqual('-');
+        // expect(planDetails.planStartsHelpText.getText()).toEqual('-');
+        expect(planDetails.shoppingDetailsSummary.getText()).toEqual('You choose a primary care dentist facility and visit a dentist at this facility to receive benefits.');
+        // expect(planDetails.planPrice.getText()).toEqual('-');
+        // expect(planDetails.getPlanDetailsByKey('Annual deductible').getText()).toEqual('-');
+        // expect(planDetails.getPlanDetailsByKey('feature text').getText()).toEqual('-');
 
     });
 });

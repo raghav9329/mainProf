@@ -11,6 +11,9 @@ describe('AARPHMO:504: Broker Validation-PersInfo', function() {
         console.log('cxinit 504');
         Utility.openApplication('','AARP');
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
 
     // Fill the Enroll page with valid data and verify the navigation
     it('Step-1: should complete the Enroll Page', function() {
@@ -36,7 +39,7 @@ describe('AARPHMO:504: Broker Validation-PersInfo', function() {
     dataProvider(TestData.Broker_TestData, function(data, description) {
         if (data.ExecutionFlag) {
             it('Validate Broker field with value :- "' + data.Broker + '"', function() {
-                perInfo.hiddenfieldBrokerNum.setText(data.Broker + '\t');
+                perInfo.hiddenfieldBrokerNum.setText(data.Broker);
                 //The expect condition will failed because of Mock Data.
                 expect(perInfo.hiddenbrokerName.getValue()).toContain(data.BrokerName);
 

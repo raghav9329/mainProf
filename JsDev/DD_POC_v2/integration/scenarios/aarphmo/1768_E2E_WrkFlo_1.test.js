@@ -13,7 +13,9 @@ var TestData = require('../../testData/'+testDataEnv+'/aarphmo/aarphmo.1768_E2E_
 describe('AARPHMO:1768: E2E_WorkFlow: ', function() {
     beforeAll(function() {
         Utility.openApplication('','AARP');
-
+    });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
@@ -136,6 +138,7 @@ describe('AARPHMO:1768: E2E_WorkFlow: ', function() {
     it('E2E_Flow_8: Validating the receipt page', function() {
         //expect(receipt.applicationNumber.getText()).toEqual('-');
         expect(receipt.planPurchased.getText()).toContain(TestData.planName);
+        receipt.verifyPixel('CA', 'AHMO');
         //expect(receipt.getPlanSummaryByKey('Cleanings').getText()).toEqual('-');
     });
 

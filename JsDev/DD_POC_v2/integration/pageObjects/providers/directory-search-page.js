@@ -29,6 +29,9 @@ class DirectorySearchPage extends ControlBase {
         this.refineSearch = new Label(this.pageObjects.refineSearch);
         this.homeAddressfromGoogleApi = new Label(this.pageObjects.homeAddressfromGoogleApi);
         this.distanceSelect = new Select(this.pageObjects.distanceSelect);
+        this.providerYelp = new LinkText(this.pageObjects.providerYelp);
+        this.yelpReviewCount = new Label(this.pageObjects.yelpReviewCount);
+        this.yelpRating = new Label(this.pageObjects.yelpRating);
         // this.insurenceNetworks = new Label(this.pageObjects.insurenceNetworks);
         this.iNDeltaDentalPPO = new CheckBox(this.pageObjects.iNDeltaDentalPPO);
         this.iNDeltaDentalPremier = new CheckBox(this.pageObjects.iNDeltaDentalPremier);
@@ -53,6 +56,16 @@ class DirectorySearchPage extends ControlBase {
         this.countOfProviders = new Label(this.pageObjects.countOfProviders);
         this.headerTextProviderListError = new Label(this.pageObjects.headerTextProviderListError);
         this.backtosearch = new Label(this.pageObjects.backtosearch);
+        this.filterReset = new Button(this.pageObjects.filterReset);
+        this.goBackToOldSite = new Button(this.pageObjects.goBackToOldSite);
+        this.checkItOutNewSite = new Button(this.pageObjects.checkItOutNewSite);
+        this.oldLocation = new TextBox(this.pageObjects.oldLocation);
+        this.oldDeltaDentalPPO = new CheckBox(this.pageObjects.oldDeltaDentalPPO);
+        this.oldDeltaDentalPremier = new CheckBox(this.pageObjects.oldDeltaDentalPremier);
+        this.oldDeltaDentalUSA = new CheckBox(this.pageObjects.oldDeltaDentalUSA);
+        this.oldSearch = new Button(this.pageObjects.oldSearch);
+        this.oldKeyword = new TextBox(this.pageObjects.oldKeyword);
+        this.spanish_finddentist = new Button(this.pageObjects.spanish_finddentist);
     }
     selectHomeAddress(homeaddress) {
         var self = this;
@@ -66,6 +79,20 @@ class DirectorySearchPage extends ControlBase {
         });
     };
 
+    speciltyCheck() {
+        this.filterMenuItem('Specialties').click();
+        this.endodontist.check();
+        this.oralSurgeon.check();
+        this.orthodontist.check();
+        this.pediatricDentist.check();
+        this.periodontist.check();
+        this.prosthodontist.check();
+        this.publicHealthDentist.check();
+        this.fullTimeFaculty.check();
+        this.hygienist.check();
+        this.XRLaboratory.check();
+        this.oralPathology.check();
+    };
 
     getProvidersCount() {
         var self = this;
@@ -109,6 +136,73 @@ class DirectorySearchPage extends ControlBase {
         return new Label(this.pageObjects.filterMenuItem(filterMenuName));
     };
 
+    checkSpecialty(SpecialityName) {
+
+        return new CheckBox(this.pageObjects.checkSpecialty(SpecialityName));
+    };
+
+    clearSearch() {
+        element.all(by.xpath('//div[@class="specialty-menu"]//label/input')).each(function(ele, index) {
+            ele.isSelected().then(function(status) {
+                if (status) {
+                    ele.click();
+                }
+            })
+        })
+    }
+    selectSpecialities(specialities) {
+        var self = this;
+        return browser.controlFlow().execute(function() {
+            self.getSpecialities().then(function(spl) {
+                self.clearSearch();
+                specialities.forEach(function(sp, index) {
+                    var sindex = spl.indexOf(sp.toUpperCase()) + 1;
+                    var chkbox = element(by.xpath('//div[@class="specialty-menu"]//label[' + sindex + ']'));
+                    chkbox.isSelected().then(function(status) {
+                        if (!status) {
+                            browser.sleep(1000)
+                            chkbox.click();
+                        }
+                    })
+                })
+            })
+        })
+    }
+    getSpecialities() {
+        var spl = [];
+        return browser.controlFlow().execute(function() {
+            element.all(by.xpath('//div[@class="specialty-menu"]//label')).each(function(ele, index) {
+                ele.getText().then(function(elem) {
+                    spl.push(elem.toUpperCase());
+                });
+            });
+            return spl;
+        });
+    }
+
+
+    checkNetwork(NetworkName) {
+
+        return new CheckBox(this.pageObjects.checkNetwork(NetworkName));
+    };
+
+
+
+    selectNetwork(network) {
+        var net = ["DELTA DENTAL PPO", "DELTA DENTAL PREMIER", "DELTACARE USA"];
+        network.forEach(function(nt, index) {
+
+            var nindex = net.indexOf(nt.toUpperCase()) + 1;
+            var chkbox = element(by.xpath('//div[@class="network-menu"]//label[' + nindex + ']'));
+            chkbox.isSelected().then(function(status) {
+                if (!status) {
+                    browser.sleep(1000)
+                    chkbox.click();
+                }
+            })
+        })
+    }
+
 
     getProviderdetails(providerName, providerAttribute) {
         switch (providerAttribute.toUpperCase()) {
@@ -129,6 +223,15 @@ class DirectorySearchPage extends ControlBase {
                 break;
             case 'MILAGE':
                 return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerDistance).getText();;
+                break;
+            case 'YELP':
+                return element(this.pageObjects.provider(providerName)).element(this.pageObjects.providerYelp).getText();;
+                break;
+            case 'YelpReviewCount':
+                return element(this.pageObjects.provider(providerName)).element(this.pageObjects.yelpReviewCount).getText();;
+                break;
+            case 'YelpRating':
+                return element(this.pageObjects.provider(providerName)).element(this.pageObjects.yelpRating).getText();;
                 break;
         };
     };

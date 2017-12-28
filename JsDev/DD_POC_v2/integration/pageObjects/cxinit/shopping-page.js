@@ -18,6 +18,8 @@ class ShoppingPage extends ControlBase {
     constructor() {
         super(null, 'ShoppingPage');
         this.pageObjects = new Shoppinglocators();
+         this.headerContent = new Label(this.pageObjects.headerContent);
+        this.back = new Button(this.pageObjects.back);
         this.State = new TextBox(this.pageObjects.State);
         this.Zipcode = new TextBox(this.pageObjects.Zipcode);
         this.NoOFCovered = new Select(this.pageObjects.NoOFCovered);
@@ -31,7 +33,15 @@ class ShoppingPage extends ControlBase {
         this.Showplans = new Button(this.pageObjects.Showplans);
         this.serverErrMsgnoofCovered = new Label(this.pageObjects.serverErrMsgnoofCovered);
         this.serverErrMsgZipcode = new Label(this.pageObjects.serverErrMsgZipcode);
-        }
+         this.zipCodeserverError = new Label(this.pageObjects.zipCodeserverError);
+
+        
+    }
+    isAt() {
+        return this.headerContent.getText().then(function(header) {
+            return header == 'Get a Quote';
+        })
+    };
 };
 
 /**

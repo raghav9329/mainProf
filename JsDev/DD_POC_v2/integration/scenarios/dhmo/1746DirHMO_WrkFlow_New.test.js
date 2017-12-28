@@ -22,7 +22,9 @@ dataProvider(tData, function(TestData, description) {
             beforeAll(function() {
                 browser.driver.manage().deleteAllCookies();
                 Utility.openApplication('', TestData.product);
-
+            });
+            beforeEach(function () {
+                jasmine.addMatchers(custommatcher.customMatchers);
             });
 
             //Fill the Valid Data in the home page of Enrollment and Proceed

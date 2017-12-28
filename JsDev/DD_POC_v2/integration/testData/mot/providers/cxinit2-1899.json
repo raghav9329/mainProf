@@ -1,0 +1,33 @@
+{
+
+    "Provider_Name": {
+        "ZipCode": "94949",
+        "PName": "Kwang Kim",
+        "PSpeciality": "General Dentist",
+        "PPlace": "Marin Community Clinics",
+        "PAddress": "6090 Redwood Blvd Ste D",
+        "PDistance": "6.5 mi",
+        "PNetwork": "DeltaCare USA and 3 more networks",
+        "PAvailability": "contact office for hours",
+        "PClosed": "Closed",
+        "PStreet": "6090 Redwood Blvd Ste D",
+        "PCity": "Novato",
+        "PState": "CA",
+        "PZIP": "94945-4569",
+        "PPhone": "(415) 448-1500",
+        "PParking": "Yes",
+        "PWheelChair": "Yes",
+        "PPublicTransport": "No",
+        "PInternetAccess": "No",
+        "PLanguage": "English",
+        "PNPI": "1477885960",
+        "PLicence": "59137",
+        "PLicenceState": "CA",
+        "PGender": "M",
+        "PEducation": "",
+        "OfficeTitle": "Office Detail",
+        "FacilityTitle": "Facility Detail"
+
+    }
+
+}

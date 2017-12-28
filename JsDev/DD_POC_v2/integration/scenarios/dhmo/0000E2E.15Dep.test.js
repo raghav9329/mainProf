@@ -14,6 +14,9 @@ describe('DHMO:0000', function() {
     beforeAll(function() {
         Utility.openApplication('','DELTA');
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
 

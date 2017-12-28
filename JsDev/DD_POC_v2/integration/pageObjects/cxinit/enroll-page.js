@@ -21,6 +21,7 @@ class EnrollPage extends ControlBase {
     constructor() {
         super(null, 'EnrollPage');
         this.pageObjects = new EnrollPageLocators();
+        this.changeSearch = new LinkText(this.pageObjects.changeSearch);
         this.overridelink = new Label(this.pageObjects.overridelink);
         this.PlanName = new TextBox(this.pageObjects.PlanName);
         this.PlanType = new TextBox(this.pageObjects.PlanType);
@@ -96,26 +97,26 @@ class EnrollPage extends ControlBase {
         this.Coverage_Type.selectByText(homeObj.NoOfPeopleCovered);
     }
 
-    enterHomePageDetailsNew(homeObj) {
-        return browser.controlFlow().execute(function() {
-            switch (homeObj.IssuerCode.toUpperCase()) {
-                case 'DELTA':
-                    self.deltaEnroll(homeObj);
-                    break;
-                case 'AARP':
-                    shopping.State.setText(homeObj.State);
-                    shopping.Zipcode.setText(homeObj.ZIPcode);
-                    shopping.NoOFCovered.selectByText(homeObj.CoverageType);
-                    browser.sleep(3000)
-                    //shopping.Cvgstartdate.setText(homeObj.CoverageStartDate);
-                    shopping.Submit.click();
-                    break;
-            };
-            planOptions.getPlanDetails(homeObj.PlanName).click();
-            planDetails.buyPlan.click();
-        });
+    // enterHomePageDetailsNew(homeObj) {
+    //     return browser.controlFlow().execute(function() {
+    //         switch (homeObj.IssuerCode.toUpperCase()) {
+    //             case 'DELTA':
+    //                 self.deltaEnroll(homeObj);
+    //                 break;
+    //             case 'AARP':
+    //                 shopping.State.setText(homeObj.State);
+    //                 shopping.Zipcode.setText(homeObj.ZIPcode);
+    //                 shopping.NoOFCovered.selectByText(homeObj.CoverageType);
+    //                 browser.sleep(3000)
+    //                     //shopping.Cvgstartdate.setText(homeObj.CoverageStartDate);
+    //                 shopping.Submit.click();
+    //                 break;
+    //         };
+    //         planOptions.getPlanDetails(homeObj.PlanName).click();
+    //         planDetails.buyPlan.click();
+    //     });
 
-    };
+    // };
     // Fill Home page details and navigate ti perInfo page
     enterHomePageDetails(homeObj, ppoo) {
         var self = this;
@@ -136,8 +137,16 @@ class EnrollPage extends ControlBase {
                         browser.sleep(2000);
                         browser.refresh();
                         browser.sleep(2000);
-                        self.pageObjects.enroll(homeObj.PlanName).click();
-                        return cstartDate;
+                        if (homeObj.IssuerCode.toUpperCase() == 'DELTA') {
+                            self.pageObjects.enroll(homeObj.PlanName).click();
+                            element(by.id('apply')).click();
+                            return cstartDate;
+                        }
+                        if (homeObj.IssuerCode.toUpperCase() == 'AARP') {
+                            planOptions.getPlanDetails(homeObj.PlanName).click();
+                            planDetails.buyPlan.click();
+                           return cstartDate;
+                        }
                     })
                 } else {
                     console.log("else block===============");

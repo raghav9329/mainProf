@@ -8,6 +8,7 @@ var providerDetails = new(require('../../pageObjects/providers/provider-details-
 // Navigate to PD URL
 describe('CXAUTO38: Prov Dir', function() {
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('');
     });
 

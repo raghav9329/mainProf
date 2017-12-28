@@ -16,7 +16,9 @@ describe('AARPHMO:2058 work flow 2', function() {
         console.log('--- AARP-2058 E2E WrkFlow2 ---')
         console.log(' ');
         Utility.openApplication('', 'AARP');
-
+    });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
@@ -141,6 +143,7 @@ describe('AARPHMO:2058 work flow 2', function() {
     it('E2E_10 :should generate a vaild receipt page', function() {
         receipt.planSummary.click();
         receipt.applicants.click();
+        receipt.verifyPixel('CA', 'AHMO');
         // expect(receipt.applicationNumber.getText()).toEqual('6024571');
         // expect(receipt.planName.getText()).toEqual(TestData.planName);
         // expect(receipt.getPlanSummaryByKey('Cleanings').getText()).toEqual('$25');

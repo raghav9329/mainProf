@@ -17,7 +17,9 @@ describe('DPPO_TX:2565_E2EPayCCAnn_TwoDep work flow', function() {
         console.log('--- E2E WrkFlow ---')
         console.log(' ');
         Utility.openApplication('', 'DELTA');
-
+    });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
@@ -135,6 +137,7 @@ describe('DPPO_TX:2565_E2EPayCCAnn_TwoDep work flow', function() {
         });
     });
     it('E2E_9:Should display dependent-2 applicant', function() {
+        receipt.verifyPixel('TX', 'DPPO');
         receipt.getSelectedFacilityDetails('DEPENDENT', 2).then(function(facilitydata) {
             expect(facilitydata.name).toContain(TestData.child1.firstName);
             Utility.readPDFFile(pathToPdf).then(function(test) {

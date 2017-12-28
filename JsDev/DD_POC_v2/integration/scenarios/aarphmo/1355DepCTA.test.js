@@ -17,6 +17,9 @@ describe('AARPHMO:1355 Dependents CTA Back Next: ', function() {
         console.log('--- CXINIT-1355 Dependents CTA Back Next ---')
         Utility.openApplication('', 'AARP');
     });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
+    });
     // Fill the Enroll page with valid data and verify the navigation
     it('CTA_1: should complete the Enroll Page', function() {
         enrollPage.enterHomePageDetails(TestData.enrollData);

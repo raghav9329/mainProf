@@ -5,39 +5,18 @@
     "gender": "Male",
     "dob": "05-05-1988",
     "ssn": "1234560215",
+    "MemberId": "3041586292",
+    "referralSource": "Email Advertisement",
     "alternateid": "test@test.com",
-   "fieldHomeAddr": "100 First Street floor 4",
-    "city": "San Francisco",
-    "State": "CA",
     "contactType": "Cell",
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
-    "ZipCode": "94105",
     "brokernumber": "201285",
     "coverageStartDate": "07/01/2017",
     "ariainvalid": "success",
     "DependentTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
     "facilitiesTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
-    
     "updateRelationship": "Child",
-
-    "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/5/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-         "dob": "05-10-1981"
-    },
-
     "domesticpartner1": {
         "relationship": "Domestic Partner",
         "firstName": "firstName",
@@ -46,7 +25,6 @@
         "gender": "Male",
         "DOB": "10-10-2000"
     },
-
     "Spouse1": {
         "relationship": "Spouse",
         "firstName": "firstName",
@@ -55,7 +33,6 @@
         "gender": "Female",
         "DOB": "05-10-1995"
     },
-
     "child3": {
         "relationship": "Child",
         "firstName": "firstName",
@@ -64,25 +41,22 @@
         "gender": "Female",
         "DOB": "05-10-2002"
     },
-
     "child4": {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "m",
         "lastName": "lastName",
-        "gender": "Non Binary",
+        "gender": "Nonbinary",
         "DOB": "07-19-1999"
     },
-
     "child5": {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "Q",
         "lastName": "lastName",
-        "gender": "Non Binary",
+        "gender": "Nonbinary",
         "DOB": "12-28-1995"
     },
-
     "child6": {
         "relationship": "Child",
         "firstName": "firstName",
@@ -91,7 +65,6 @@
         "gender": "Female",
         "DOB": "05-10-1995"
     },
-
     "child7": {
         "relationship": "Child",
         "firstName": "firstName",
@@ -100,25 +73,22 @@
         "gender": "Female",
         "DOB": "05-10-2002"
     },
-
     "child8": {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "m",
         "lastName": "lastName",
-        "gender": "Non Binary",
+        "gender": "Nonbinary",
         "DOB": "07-19-1999"
     },
-
     "child9": {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "Q",
         "lastName": "lastName",
-        "gender": "Non Binary",
+        "gender": "Nonbinary",
         "DOB": "12-28-1995"
     },
-
     "child10": {
         "relationship": "Child",
         "firstName": "firstName",
@@ -127,7 +97,6 @@
         "gender": "Female",
         "DOB": "05-10-1995"
     },
-
     "child11": {
         "relationship": "Child",
         "firstName": "firstName",
@@ -144,25 +113,22 @@
         "gender": "Female",
         "DOB": "05-10-2002"
     },
-
     "child13": {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "m",
         "lastName": "lastName",
-        "gender": "Non Binary",
+        "gender": "Nonbinary",
         "DOB": "07-19-1999"
     },
-
     "child14": {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "Q",
         "lastName": "lastName",
-        "gender": "Non Binary",
+        "gender": "Nonbinary",
         "DOB": "12-28-1995"
     },
-
     "child15": {
         "relationship": "Child",
         "firstName": "firstName",
@@ -171,7 +137,6 @@
         "gender": "Female",
         "DOB": "05-10-1995"
     },
-
     "invalidData": {
         "relationship": "",
         "firstName": "FirstName123",
@@ -180,11 +145,155 @@
         "gender": "",
         "DOB": "12-29-2009"
     },
-
-    "depFieldError" : "Letters or punctuation only please",
-
-    
-    "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"]
-    
-
+    "depFieldError": "Letters or punctuation only please",
+    "dependentErrors": [
+        "Please select a relationship",
+        "This field is required.",
+        "This field is required.",
+        "Please enter a valid month between (01-12)",
+        "Please enter a valid day between (01-31)",
+        "Please enter a valid year"
+    ],
+    "states": {
+        "CA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA"
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA"
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    },
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA"
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "08/01/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    },
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA"
+                }
+            }
+        },
+        "TX": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA TXA70 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/05/2017",
+                        "ZIPcode": "78251",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "01-28-1973"
+                    },
+                    "fieldHomeAddr": "10800 State highway 151, #236",
+                    "city": "San antonio",
+                    "State": "TX"
+                }
+            }
+        },
+        "PA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA PAA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "09/01/2017",
+                        "ZIPcode": "15001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "01-28-1973"
+                    },
+                    "fieldHomeAddr": "3212 Brodhead Road",
+                    "city": "Aliquippa",
+                    "State": "PA"
+                }
+            }
+        },
+        "FL": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA FLA70 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "32003",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "639 Hibernia Oaks DR",
+                    "city": "Fleming Island",
+                    "State": "FL"
+                }
+            }
+        },
+        "NY": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "10001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "305 W 16th St APT 3C",
+                    "city": "New York",
+                    "State": "NY"
+                }
+            }
+        }
+    }
 }

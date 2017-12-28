@@ -12,6 +12,7 @@ var TestData = require('../../testData/aarphmo/aarphmo.1366FacSelect.json');
 
 describe('AARPHMO:1366: Facility Selection of Facilities workflows: ', function() {
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('','AARP');
         enrollPage.enterHomePageDetails(TestData.enrollData);
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();

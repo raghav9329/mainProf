@@ -15,6 +15,7 @@ var TestData = require('../../testData/aarphmo/aarphmo.672PersInfo.json');
 
 describe('AARPHMO:672 (AARP): E2E_WorkFlow: ', function() {
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('','AARP');
         enrollPage.enterHomePageDetails(TestData.enrollData);
         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();

@@ -1,10 +1,13 @@
 "use strict"
-var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2-1146.json');
+var TestData = require('../../testData/' + testDataEnv + '/providers/cxinit2-1146.json');
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
+var feedback = new(require('../../pageObjects/providers/feedback-page.js'));
+var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 
 describe('CXINIT2-1146: Prov Dir', function() {
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('');
     });
 
@@ -14,17 +17,17 @@ describe('CXINIT2-1146: Prov Dir', function() {
                 dirSearch.location.setText(data.Loc);
                 dirSearch.findDentist.click();
                 dirSearch.getProvidersCount().then(function(totalCount) {
-             
-             // 9/27/17 remove comment when this action is completed
-             // should implement a looping construct 
-             // to iterate through the multiple distances 
-             // Same code, just a different dist varialble each time
+
+                    // 9/27/17 remove comment when this action is completed
+                    // should implement a looping construct 
+                    // to iterate through the multiple distances 
+                    // Same code, just a different dist varialble each time
                     dirSearch.refineSearch.click();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
                     dirSearch.distanceSelect.selectByText(TestData.Distance35);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance35 );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance35);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
 
@@ -33,7 +36,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.distanceSelect.selectByText(TestData.Distance25);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance25 );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance25);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
 
@@ -42,7 +45,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.distanceSelect.selectByText(TestData.Distance15);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance15 );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance15);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
 
@@ -51,7 +54,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.distanceSelect.selectByText(TestData.Distance10);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance10 );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance10);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
 
@@ -60,7 +63,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.distanceSelect.selectByText(TestData.Distance5);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount +' '+TestData.Distance5 );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance5);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
 
@@ -82,7 +85,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.iNDeltaDentalPPO.check();
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
                 });
@@ -101,7 +104,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.iNDeltaDentalPremier.check();
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
                 });
@@ -121,7 +124,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.iNDeltaCareUSA.check();
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
                 });
@@ -131,7 +134,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
 
     dataProvider(TestData.Location, function(data, description) {
         if (data.ExecutionFlag) {
-          it('ProvDir_5o13:Should show Eng Speak Office "' + data.Loc + '"', function() {
+            it('ProvDir_5o13:Should show Eng Speak Office "' + data.Loc + '"', function() {
                 dirSearch.location.setText(data.Loc);
                 dirSearch.findDentist.click();
                 dirSearch.getProvidersCount().then(function(totalCount) {
@@ -141,7 +144,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.languageFilter.selectByText(TestData.Language1);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                         providerDetails.verifyProviderLanguage(TestData.Language1, 1);
 
@@ -162,7 +165,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.languageFilter.selectByText(TestData.Language2);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                         providerDetails.verifyProviderLanguage(TestData.Language2, 1)
                     });
@@ -182,7 +185,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.languageFilter.selectByText(TestData.Language3);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                         providerDetails.verifyProviderLanguage(TestData.Language3, 1)
                     });
@@ -203,7 +206,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.languageFilter.selectByText(TestData.Language4);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                         providerDetails.verifyProviderLanguage(TestData.Language4, 1)
                     });
@@ -224,7 +227,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.generalDentist.check();
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
                 });
@@ -244,7 +247,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.endodontist.check();
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
                 });
@@ -264,7 +267,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.oralSurgeon.check();
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
                 });
@@ -284,7 +287,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.pediatricDentist.check();
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
                 });
@@ -304,12 +307,31 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.hygienist.check();
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
-                    	console.log('totalCount  & refineCount : ' +totalCount +' -> ' +refineCount );
+                        console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
                     });
                 });
             });
         };
+    });
+
+    it('ProvDir_4: Verify feedback submition', function() {
+        dirSearch.location.setText(TestData.ZipCode);
+        dirSearch.findDentist.click();
+        feedback.feedback.click();
+        Utility.switchToFrame(feedback.feedbackFrame());
+        expect(feedback.answer1.isPresentAndDisplayed()).toBe(true);
+        feedback.answer1.click();
+        expect(feedback.answer2.isPresentAndDisplayed()).toBe(true);
+        feedback.answer2.click();
+        expect(feedback.answer3.isPresentAndDisplayed()).toBe(true);
+        feedback.answer3.click();
+        expect(feedback.answer4.isPresentAndDisplayed()).toBe(true);
+        feedback.answer4.click();
+        expect(feedback.answer5.isPresentAndDisplayed()).toBe(true);
+        feedback.answer5.setText('Good');
+        feedback.submit.click();
+        expect(feedback.endOfSurvey.getText()).toContain('We thank you for your time spent taking this survey.');
     });
 
 });

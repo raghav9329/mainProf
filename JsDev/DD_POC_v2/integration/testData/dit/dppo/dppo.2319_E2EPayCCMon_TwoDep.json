@@ -6,9 +6,6 @@
     "dob": "05-05-1971",
     "ssn": "1234560215",
     "alternateid": "test@test.com",
-   "fieldHomeAddr": "100 First Street floor 4",
-    "city": "San Francisco",
-    "State": "CA",
     "contactType": "Cell",
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
@@ -28,24 +25,6 @@
     "deltaRating": 1,
     "queryAnswer": "Test",
     "discloser": "Delta_CA_PPO",
-
-    "enrollData": {
-        "PlanName": "Delta Dental PPO Individual - Basic Plan",
-        "PlanType": "DHMO",
-        "PlanCode": "PLN15B",
-        "CoverageStartDate": "08/01/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "0.00",
-        "AnnualCost": "342.96",
-        "CoverageType": "Self",
-        "PlanID": "4546969",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-05-1988"
-    },
-
     "Spouse": {
         "relationship": "Spouse",
         "firstName": "firstName",
@@ -94,7 +73,7 @@
     "accountHolderNameError": "Account Holder Name is required.",
     "routingNumberError": "Routing Number is required.",
     "accountNumberError": "Account Number is required.",
-"planSummary": {
+    "planSummary": {
         "Deductible_per_calendar": "$50.00",
         "Max_per_calendar": "$1,000.00",
         "Officevisit": "0%",
@@ -102,12 +81,56 @@
         "Xrays": "0%",
         "Cleanings": "0%",
         "Fillings": "50%",
-         "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
         "Gumtreatment": "100%",
         "Extractions": "100%",
         "Denturerepair": "100%",
         "Crowns": "100%",
         "Orthodontics": "NA"
+    },
+    "states": {
+        "CA": {
+            "products": {
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "08/01/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    },
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA",
+                    "totalpaid": "$202.14"
+                }
+            }
+        },
+        "NY": {
+            "products": {
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "10001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+
+                    },
+                    "fieldHomeAddr": "305 W 16th St APT 3C",
+                    "city": "New York",
+                    "State": "NY",
+                    "totalpaid": "$157.18"
+                }
+
+            }
+        }
     }
 
 }

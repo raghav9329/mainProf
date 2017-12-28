@@ -1,6 +1,10 @@
 URLs Go back to
 
+12/11/17 "Promises in Node.js using Q - Farewell to Callbacks"
+http://www.dotnetcurry.com/nodejs/1242/promises-nodejs-using-q-goodbye-callbacks
 
+"A Gentle Introduction to Node.js Promises with Q: Part 1 "
+http://blog.apitite.net/2015/08/a-gentle-introduction-to-nodejs.html
 
 6/12/17 "One Tab chroem extension" "mouse Jiggler"
 https://github.com/cerebrate/mousejiggler

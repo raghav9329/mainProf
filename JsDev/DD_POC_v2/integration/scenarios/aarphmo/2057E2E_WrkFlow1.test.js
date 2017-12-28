@@ -16,7 +16,9 @@ describe('AARPHMO:2057: E2E workflow 1', function() {
         console.log('--- CXINIT-2057 E2E WrkFlow1 ---')
         console.log(' ');
         Utility.openApplication('','AARP');
-
+    });
+    beforeEach(function () {
+        jasmine.addMatchers(custommatcher.customMatchers);
     });
 
     //Fill the Valid Data in the home page of Enrollment and Proceed
@@ -116,6 +118,7 @@ describe('AARPHMO:2057: E2E workflow 1', function() {
             expect(facilitydata.telephone).toEqual(facility.telephone);
             console.log('2057_8 complete');
         });
+        receipt.verifyPixel('CA', 'AHMO');
     });
 
 });

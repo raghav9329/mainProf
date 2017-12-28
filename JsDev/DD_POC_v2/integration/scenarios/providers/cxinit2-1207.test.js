@@ -11,6 +11,7 @@ var providerDetails = new(require('../../pageObjects/providers/provider-details-
 
 describe('CXINIT2-1208: Prov Dir', function() {
     beforeEach(function() {
+        jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('');
     });
            //Select DentalPPO and confirm the same network is Selected in Refine Search

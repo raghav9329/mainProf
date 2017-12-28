@@ -6,9 +6,6 @@
     "dob": "05-05-1988",
     "ssn": "1234560215",
     "alternateid": "test@test.com",
-    "fieldHomeAddr": "100 First Street floor 4",
-    "city": "San Francisco",
-    "State": "CA",
     "contactType": "Cell",
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
@@ -28,23 +25,6 @@
     "errorSSN": "Please enter your SSN",
     "SSN": "789456321",
     "errorFacility": "Please choose a facility.",
-    "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/5/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-10-1981"
-    },
-
     "domesticPartner": {
         "relationship": "Domestic Partner",
         "firstName": "firstName",
@@ -69,9 +49,52 @@
     "expMonth": "05",
     "expYear": "2020",
     "securityCode": "125",
-    "billaddr1" : "195 Nova",
-    "billingAddress" : "195 Nova Albion WaySan Rafael, CA, United States",
-    "Appartment" : " Apt 2",
-    "billingCity" : "San Rafael",
-    "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program"
+    "billaddr1": "195 Nova",
+    "billingAddress": "195 Nova Albion WaySan Rafael, CA, United States",
+    "Appartment": " Apt 2",
+    "billingCity": "San Rafael",
+    "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+    "states": {
+        "CA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+
+                    },
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA"
+                }
+            }
+        },
+        "NY": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "10001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+
+                    },
+                    "fieldHomeAddr": "305 W 16th St APT 3C",
+                    "city": "New York",
+                    "State": "NY"
+                }
+
+            }
+        }
+    }
 }

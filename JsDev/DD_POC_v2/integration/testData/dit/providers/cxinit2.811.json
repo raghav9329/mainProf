@@ -45,7 +45,7 @@
         "SPECIALITY": ["General Dentist"],
         "NETWORK": ["Premier, PPO, DeltaCare USA networks","Premier network","Premier, PPO networks"],
         "LANGUAGE":"English",
-        "Distance":"Within 5 Miles"
+        "Distance":"5 miles"
     }
 
 }

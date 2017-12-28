@@ -87,20 +87,20 @@
         "Orthodontics": "75%"
     },
     "primaryFacility": {
-        "facilityName": "Modern Dentistry&Ortho",
-        "street": "2085 Gellert Blvd Ste 9",
-        "city": "Daly City",
-        "region": "CA",
-        "postalCode": "94015-2841",
-        "telephone": "650.878.3171"
+        "facilityName": "Brident Dental and Orthodontics",
+        "street": "8803 State Highway 151 Ste 106",
+        "city": "San Antonio",
+        "region": "TX",
+        "postalCode": "78251-4613",
+        "telephone": "210.305.5895"
     },
     "dependent_Facility_1": {
-        "facilityName": "SecondaryApplicantService-1",
-        "street": "2085 Gellert Blvd Ste 9",
-        "city": "Daly City",
-        "region": "CA",
-        "postalCode": "94015-2841",
-        "telephone": "650.878.3171"
+        "facilityName": "Culebra Smiles & Ortho",
+        "street": "11010 West FM 471",
+        "city": "San Antonio",
+        "region": "TX",
+        "postalCode": "78253",
+        "telephone": "210.688.9386"
     }
 
 }
