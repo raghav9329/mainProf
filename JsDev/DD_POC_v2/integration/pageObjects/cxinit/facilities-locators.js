@@ -37,6 +37,7 @@ class FacilitiesLocators {
         this.facilityRegion = by.xpath('//ul[@id="facility-container"]/li//span[@class="region"]');
         this.facilityZipCode = by.xpath('//ul[@id="facility-container"]/li//span[@class="zipCode"]');
         this.facilityPhone = by.xpath('//ul[@id="facility-container"]/li//a[@class="practiceLocationPhone tel"]');
+        this.facilitySelectiontext = by.xpath('//h2[@id="enrolleeName"]/following::p[1]');
     }
 }
 

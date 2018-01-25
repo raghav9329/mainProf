@@ -28,7 +28,7 @@ describe('Providers CXAUTO:50-1 for Languages Search', function() {
                             frisby.get(providerKeyAPI)
                                 .then(function(res1) {
                                     let json1 = res1.json;
-                                    var Language = json1.practiceLocationLanguages;
+                                    var Language = json1.practiceLocationLanguages + json1.providerLanguages;
                                     expect(Language).toContain(data.verifyLang);
                                 })
                         })

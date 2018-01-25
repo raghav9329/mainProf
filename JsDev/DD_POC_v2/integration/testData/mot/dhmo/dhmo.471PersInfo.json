@@ -59,19 +59,12 @@
     },
 
     "FullAddress_Suggestion": {
-        "HomeAddress": "5208",
-        "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
-        "City": "Bellaire",
-        "State": "TX",
-        "ZipCode": "77401",
+        "HomeAddress": "101 East San Fe",
+        "FullAddress": "101East San Fernando Street, San Jose, CA, United States",
+        "City": "San Jose",
+        "State": "CA",
+        "ZipCode": "95112",
         "ErrorMsg": "Please enter a street address",
         "ExecutionFlag": true
-    },
-
-    "Address_Valid": {
-        "HomeAddress": "35995 Fremont Blvd Apt 98",
-        "City": "Fremont",
-        "State": "CA",
-        "ZipCode": "94536"
     }
 }

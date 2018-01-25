@@ -1,0 +1,35 @@
+{
+    "Location": {
+        "Location1": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2DeltaCare",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+            "params1": {}
+
+        },
+        "Location2": {
+            "params": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2DeltaCare",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+            "params1": {}
+
+        }
+    }
+}
+
+
+

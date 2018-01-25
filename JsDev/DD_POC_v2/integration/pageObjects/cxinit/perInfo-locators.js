@@ -96,6 +96,11 @@ class PersonalInfoPageLocators {
         this.referralSource = by.id('referralSource');
         this.errorMsgRefferalSource = by.id('referralSource-error');
         this.backToQuote = by.id('backToQuote');
+        this.emailText = by.xpath('//input[@id="paperless"]/following-sibling::span');
+        this.footer = by.xpath('//p[@class="disclaimer"]');
+        this.copyRight = by.xpath('//p[@class="copyright"]')
+        this.helpContact = by.className('phone-link');
+        this.ShoppingContact = by.xpath('//p[@id="CustNumber"]');
         
 
     }

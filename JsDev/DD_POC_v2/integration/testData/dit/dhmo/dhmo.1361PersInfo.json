@@ -1,93 +1,26 @@
 {
-
-    "states": {
-        "CA": {
-            "products": {
-                "DHMO": {
-                    "enrollData": {
-                        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-                        "PlanType": "DHMO",
-                        "PlanCode": "CAA55",
-                        "CoverageStartDate": "12/5/2017",
-                        "State": "CA",
-                        "ZIPcode": "94105",
-                        "Country": "USA",
-                        "EnrollmentFee": "10.00",
-                        "AnnualCost": "80.76",
-                        "CoverageType": "Self",
-                        "PlanID": "70422",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-10-1981"
-                    },
-
-                    "firstname": "Krishna",
-                    "mi": "K",
-                    "lastname": "K",
-                    "gender": "Male",
-                    "dob": "05-05-1988",
-                    "ssn": "6234560215",
-                    "alternateid": "test@test.com",
-                    "fieldHomeAddr": "100 First Street floor 4",
-                    "city": "San Francisco",
-                    "State": "CA",
-                    "contactType": "Cell",
-                    "phoneNumber": "987-654-3210",
-                    "email": "test@gmail.com",
-                    "ZipCode": "94105",
-                    "brokernumber": "201285",
-                    "coverageStartDate": "05/01/2018",
-                    "ariainvalid": "success",
-                    "applicationStatus": "current",
-                    "DependentTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
-                    "personalInfoerror": ["Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year", "Please enter your SSN"]
-                }
-            }
-        },
-        "NY": {
-            "products": {
-                "DHMO": {
-                    "enrollData": {
-                        "PlanName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
-                        "PlanType": "DHMO",
-                        "PlanCode": "CAA55",
-                        "CoverageStartDate": "12/5/2017",
-                        "State": "NY",
-                        "ZIPcode": "10022",
-                        "Country": "USA",
-                        "EnrollmentFee": "10.00",
-                        "AnnualCost": "80.76",
-                        "CoverageType": "Self",
-                        "PlanID": "70422",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-10-1981"
-                    },
-
-                    "firstname": "Krishna",
-                    "mi": "K",
-                    "lastname": "K",
-                    "gender": "Male",
-                    "dob": "05-05-1988",
-                    "ssn": "6234560215",
-                    "alternateid": "test@test.com",
-                    "fieldHomeAddr": "623 5th Ave",
-                    "city": "New York",
-                    "State": "NY",
-                    "contactType": "Cell",
-                    "phoneNumber": "987-654-3210",
-                    "email": "test@gmail.com",
-                    "ZipCode": "94105",
-                    "brokernumber": "201285",
-                    "coverageStartDate": "05/01/2018",
-                    "ariainvalid": "success",
-                    "applicationStatus": "current",
-                    "DependentTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
-                     "personalInfoerror": ["Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year", "Please enter your SSN"]
-                }
-            }
-        }
-    }
-
+    "firstname": "Krishna",
+    "mi": "K",
+    "lastname": "K",
+    "gender": "Male",
+    "dob": "05-05-1988",
+    "ssn": "6234560215",
+    "MemberId": "3041586292",
+    "referralSource": "Email Advertisement",
+    "alternateid": "test@test.com",
+    "fieldHomeAddr": "100 First Street floor 4",
+    "city": "San Francisco",
+    "State": "CA",
+    "contactType": "Cell",
+    "phoneNumber": "987-654-3210",
+    "email": "test@gmail.com",
+    "ZipCode": "94105",
+    "brokernumber": "201285",
+    "coverageStartDate": "05/01/2018",
+    "ariainvalid": "success",
+    "applicationStatus": "current",
+    "DependentTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
+    "personalInfoerror": ["Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year"],
+    "personalInfoerroraarp": ["Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year"]
 
 }

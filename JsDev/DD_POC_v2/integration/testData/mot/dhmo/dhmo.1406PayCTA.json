@@ -5,8 +5,10 @@
     "gender": "Male",
     "dob": "05-05-1988",
     "ssn": "1234560215",
+    "MemberId": "3041586292",
+    "referralSource": "Email Advertisement",
     "alternateid": "test@test.com",
-  "fieldHomeAddr": "100 First Street floor 4",
+    "fieldHomeAddr": "100 First Street floor 4",
     "city": "San Francisco",
     "State": "CA",
     "contactType": "Cell",
@@ -28,23 +30,6 @@
     "errorSSN": "Please enter your SSN",
     "SSN": "789456321",
     "errorFacility": "Please choose a facility.",
-    "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/5/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-10-1981"
-    },
-
     "domesticPartner": {
         "relationship": "Domestic Partner",
         "firstName": "firstName",
@@ -53,7 +38,6 @@
         "gender": "Male",
         "DOB": "10-10-2000"
     },
-
     "spouse": {
         "relationship": "Spouse",
         "firstName": "firstName",
@@ -62,8 +46,19 @@
         "gender": "Female",
         "DOB": "05-10-1995"
     },
-    "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
-    "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
+    "paymentErrors": [
+        "Please enter your full name",
+        "Please enter your card number",
+        "Please enter a valid month between (01 – 12)",
+        "Please enter a valid year",
+        "Please enter CVC code from your card"
+    ],
+    "paymentAddressErrors": [
+        "Please enter a street address",
+        "Please enter a city",
+        "Please enter a state",
+        "Please enter a ZIP code"
+    ],
     "nameOnCard": "Peter Heins",
     "cardNumber": "5415240007992183",
     "invalidCardNumber": "5415240",
@@ -71,6 +66,6 @@
     "expYear": "2018",
     "invalidYearFormat": "123",
     "securityCode": "125",
-    "errorMsgCard":"Please enter at least 15 digits",
-    "errorMsgAuth":"Please check to confirm you have read authorization statement"
+    "errorMsgCard": "Please enter at least 15 digits",
+    "errorMsgAuth": "Please check to confirm you have read authorization statement"
 }

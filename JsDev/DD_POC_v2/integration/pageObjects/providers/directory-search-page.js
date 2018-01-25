@@ -100,7 +100,9 @@ class DirectorySearchPage extends ControlBase {
             return self.countOfProviders.getText().then(function(count) {
                 if (!count.length == 0) {
                     var pCount = count.split(' ');
-                    return pCount[2];
+                   var pcount= pCount[2].split(',');
+                    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+                    return (pcount.reduce(reducer));
                 } else {
                     return 0;
                 }

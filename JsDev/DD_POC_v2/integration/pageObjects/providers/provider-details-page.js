@@ -69,7 +69,7 @@ class ProviderDetailsPage extends ControlBase {
         this.workatOffice = function(officeName) {
             return new Label(this.pageObjects.workatOffice(officeName));
         };
-        
+
         this.workatOffice_links = function(links) {
             return new LinkText(this.pageObjects.workatOffice_links(links));
         };

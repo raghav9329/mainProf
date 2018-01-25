@@ -1,0 +1,5 @@
+Tips, ect.
+
+1/18/18
+Alt - Shift - 1   Horizontal split  -> Veritical Split => and back.
+Ctrl- Shift - N  will open a new Window

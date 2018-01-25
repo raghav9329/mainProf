@@ -8,19 +8,16 @@ var depInfo = new (require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new (require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new (require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new (require('../../pageObjects/cxinit/receipt-page.js'));
-
 var enrollPage = new (require('../../pageObjects/cxinit/enroll-page.js'));
-var product = ['DHMO'];
-// var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['CA', 'TX', 'PA', 'FL']; // 
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
-dataProvider(TestData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function (sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
         dataProvider(sData.products, function (tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
-                describe('DHMO:1367 Facilities CTA Back Next: State: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
+                describe('1367 Facilities CTA Back Next: State: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
                     // Pre-condition: User navigated to Dependents page
                     beforeEach(function () {
                         jasmine.addMatchers(custommatcher.customMatchers);
@@ -28,8 +25,9 @@ dataProvider(TestData.states, function (sData, sdescription) {
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = Utility.randomNo('Number', 10);
+                            TestData.MemberId = false;  
+                            TestData.ssn="1234560215",
+                            TestData.alternateid = "test@test.com";                          
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -70,7 +68,7 @@ dataProvider(TestData.states, function (sData, sdescription) {
                                 });
                             }
                             if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                                expect(browser.getTitle()).toEqual(TestData.paymentTitle);
+                                expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
                                 // payment.back.click();
                             }
 
@@ -84,9 +82,11 @@ dataProvider(TestData.states, function (sData, sdescription) {
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                             facilities.next.click();
                             expect(facilities.validationMessage.getText()).toEqual(TestData.errorFacility);
+                            if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                             // facilities.selectFacility(TestData.facilityoption1);
                             facilities.selectFacility();
                             facilities.next.click();
+                            }
                             expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
                         }
 

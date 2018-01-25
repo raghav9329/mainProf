@@ -4,21 +4,20 @@ var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.504PersInfo
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 
-var product = ['DHMO','DPPO']; 
-var states = ['NY', 'CA', 'TX', 'PA', 'FL'];
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
-//To Navigate Personal Info Page
-dataProvider(TestData.states, function(sData, sdescription) {
+//To Navigate Personla Info Page
+// dataProvider(TestData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function (sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
-        dataProvider(sData.products, function(tData, pdescription) {
+        dataProvider(sData.products, function (tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
-
-                describe('DHMO:504: Broker Validation-PersInfo ' + sdescription + 'Product:' + pdescription + '', function() {
+                describe('504: Broker Validation-PersInfo: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
 
                     beforeAll(function() {
                         console.log('cxinit 504');
-                        Utility.openApplication('', 'DELTA');
+                         Utility.openApplication('', tData.product);
                     });
                     beforeEach(function () {
                         jasmine.addMatchers(custommatcher.customMatchers);
@@ -57,6 +56,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         if (data.ExecutionFlag) {
                             it('Validate Broker field with value :- "' + data.Broker + '"', function() {
                                 perInfo.hiddenfieldBrokerNum.setText(data.Broker + '\t');
+                                expect(perInfo.hiddenbrokerName.isPresentAndDisplayed()).toBeTruthy();
                                 expect(perInfo.hiddenbrokerName.getValue()).toContain(data.BrokerName);
                             });
                         };

@@ -31,18 +31,15 @@ Consume the error messages in the property file and validate fields display the 
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.507PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-
-
-
-var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['NY', 'CA', 'TX', 'PA', 'FL'];
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
-dataProvider(TestData.states, function(sData, sdescription) {
+// dataProvider(TestData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function (sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
-        dataProvider(sData.products, function(tData, pdescription) {
+        dataProvider(sData.products, function (tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
-                describe('DHMO:507: PersInfoPg: for state -' + sdescription + ' and Product -' + pdescription + '', function() {
+                describe('507: PersInfoPg: for state: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
                     beforeAll(function() {
                         console.log(' ');
                         console.log('--- CXINIT-507 Personal Info Fields ---')
@@ -276,7 +273,12 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         perInfo.fieldBdDD.setText(Utility.getDatePart(Utility.getfullDate('date', 'ADD', 1, (Utility.getfullDate('year', 'SUB', 18))), 'date'))
                         perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'SUB', 18), 'YEAR'));
                         perInfo.fieldHomeAddr.setText('');
-                        expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 18 years of age.');
+                        if(sdescription=='TX'){
+                            expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 19 years of age.');
+                        }else{
+                            expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 18 years of age.');
+                        }
+                       
                         console.log('507PI 16: Complete')
                     });
 
@@ -286,7 +288,11 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         perInfo.fieldBdDD.setText(Utility.getDatePart('', 'DATE'));
                         perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('month', 'ADD', 0, (Utility.getfullDate('year', 'SUB', 0))), 'YEAR'));
                         perInfo.fieldBdDD.click();
-                        expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 18 years of age.');
+                        if(sdescription=='TX'){
+                            expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 19 years of age.');
+                        }else{
+                            expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 18 years of age.');
+                        }
                         console.log('507PI 17: Complete')
                     });
 
@@ -314,7 +320,11 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         perInfo.fieldBdDD.setText(Utility.getDatePart('', 'DATE'));
                         perInfo.fieldBdYyyy.setText(Utility.getDatePart(Utility.getfullDate('year', 'ADD', 1, (Utility.getfullDate('year', 'SUB', 18))), 'YEAR'));
                         perInfo.fieldHomeAddr.setText('');
-                        expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 18 years of age.');
+                        if(sdescription=='TX'){
+                            expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 19 years of age.');
+                        }else{
+                            expect(perInfo.errMsgBdYyyy.getText()).toEqual('You must be at least 18 years of age.');
+                        }
                         console.log('507PI 19: Complete')
 
                     });

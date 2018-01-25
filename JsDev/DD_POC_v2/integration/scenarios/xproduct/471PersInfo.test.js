@@ -3,46 +3,45 @@
 //This spec Validates the Address entered partially and selects from the built-in suggestion list
 
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.471PersInfo.json');
-var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
-var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
+var perInfo = new (require('../../pageObjects/cxinit/perInfo-page.js'));
+var enrollPage = new (require('../../pageObjects/cxinit/enroll-page.js'));
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
-var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['NY', 'CA', 'TX', 'PA', 'FL'];
-
-//To Navigate Personal Info Page
-dataProvider(TestData.states, function(sData, sdescription) {
+//To Navigate Personla Info Page
+// dataProvider(TestData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function (sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
-        dataProvider(sData.products, function(tData, pdescription) {
+        dataProvider(sData.products, function (tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
-                describe('DHMO:471: AddrSugg Home ', function() {
+                describe('471: AddrSugg Home: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
 
-                    beforeAll(function() {
+                    beforeAll(function () {
                         console.log('cxinit 471');
                     });
                     beforeEach(function () {
                         jasmine.addMatchers(custommatcher.customMatchers);
                     });
                     var Fn_data = TestData.FirstNameFieldHelper;
-                    beforeAll(function() {
+                    beforeAll(function () {
                         console.log('                                            ');
                         console.log('CXINIT-471: Address Suggestion Home == Start');
                         console.log('                                            ');
                     });
-                    afterAll(function() {
+                    afterAll(function () {
                         console.log('                                    ');
                         console.log('                                    ');
                         console.log('CXINIT-471: Address Suggestion Home == Done');
                     });
-                    beforeEach(function() {
-                        Utility.openApplication('', 'DELTA');
+                    beforeEach(function () {
+                        Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
                     });
 
                     //Validate the Address field with the partial address supplied
                     // Address present in the Suggestion list
 
-                    it('Mail Addr Should accept 1st sugg partial addr', function() {
+                    it('Mail Addr Should accept 1st sugg partial addr', function () {
                         var data = TestData.PartialAddress_Suggestion;
                         //    /* Mark Addition right below */
                         // perInfo.fieldFirstName.setText(Fn_data.FName);
@@ -50,7 +49,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         perInfo.fieldHomeAddr.setText(data.PartialAddress);
                         browser.sleep(browser.params.exeInspDelay); // command line controlable delay
 
-                        perInfo.getandVerifyallAddressSuggestions(data.PartialAddress).then(function(dataa) {
+                        perInfo.getandVerifyallAddressSuggestions(data.PartialAddress).then(function (dataa) {
                             console.log("All Address  ===== " + dataa);
                             browser.sleep(browser.params.exeInspDelay); // command line controlable delay
                             //expect(dataa).toContain(data.PartialAddress);
@@ -61,7 +60,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
                     //Validate user selects the mailing address from the suggestion list of the drop down
 
-                    it('Should allow usr to select a sugg MailAddr', function() {
+                    it('Should allow usr to select a sugg MailAddr', function () {
                         var data = TestData.FullAddress_Suggestion;
                         // perInfo.fieldFirstName.setText(Fn_data.FName);
                         perInfo.fieldHomeAddr.setText(data.HomeAddress);
@@ -78,22 +77,13 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
                     // Validate and Verify the Test Data supplied and the mock values are matched
 
-                    it('Should allow usr to select Sugg in MailAddr: Validate mock vals', function() {
-                        var data = tData.Address_Valid;
-                        // perInfo.fieldFirstName.setText(Fn_data.FName);
-
-                        perInfo.fieldHomeAddr.setText(data.HomeAddress);
-                        browser.sleep(browser.params.exeInspDelay); // command line controlable delay
-                        perInfo.fieldCity.setText(data.City);
-                        browser.sleep(browser.params.exeInspDelay); // command line controlable delay
-                        perInfo.fieldState.setText(data.State);
-                        browser.sleep(browser.params.exeInspDelay); // command line controlable delay
-                        perInfo.fieldZipCode.setText(data.ZipCode);
-                        browser.sleep(browser.params.exeInspDelay); // command line controlable delay
-                        expect(perInfo.fieldHomeAddr.getAttribute("value")).toContain(data.HomeAddress);
-                        expect(perInfo.fieldCity.getAttribute("value")).toContain(data.City);
-                        expect(perInfo.fieldState.getAttribute("value")).toContain(data.State);
-                        expect(perInfo.fieldZipCode.getAttribute("value")).toContain(data.ZipCode);
+                    it('Should allow usr to select Sugg in MailAddr: Validate mock vals', function () {
+                        perInfo.fillAddress(tData);
+                        perInfo.fieldPhoneNumber.click();
+                        expect(perInfo.fieldHomeAddr.getAttribute("value")).toContain(tData.fieldHomeAddr);
+                        expect(perInfo.fieldCity.getAttribute("value")).toContain(tData.city);
+                        expect(perInfo.fieldState.getAttribute("value")).toContain(tData.State);
+                        expect(perInfo.fieldZipCode.getAttribute("value")).toContain(tData.enrollData.ZIPcode);
                     });
 
                 });

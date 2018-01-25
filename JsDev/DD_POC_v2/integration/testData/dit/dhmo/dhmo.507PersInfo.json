@@ -34,14 +34,14 @@
         },
         "FName_Name3": {
             "FName": "Javier Camacho-Serrano",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ariainvalid": "success",
             "ExecutionFlag": true
         },
         "FName_Name4": {
             "FName": "Ratana Praneechai-Bass",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ariainvalid": "success",
             "ExecutionFlag": true
@@ -103,7 +103,7 @@
         },
         "FName_Name13": {
             "FName": "O'Farrell",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ariainvalid": "success",
             "ExecutionFlag": true
@@ -140,14 +140,14 @@
     "LName_TestData": {
         "LName_Name1": {
             "LName": "Test",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ariainvalid": "success",
             "ExecutionFlag": true
         },
         "LName_Name2": {
             "LName": "O'Farrell",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ariainvalid": "success",
             "ExecutionFlag": true
@@ -162,7 +162,7 @@
         },
         "LName_Name4": {
             "LName": "Ratana Praneechai-Bass",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ariainvalid": "success",
             "ExecutionFlag": true
@@ -233,7 +233,7 @@
         },
         "LName_Name14": {
             "LName": "Javier Camacho-Serrano",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ariainvalid": "success",
             "ExecutionFlag": true
@@ -364,21 +364,21 @@
         "MemberID1": {
             "MemberID": "111853003341",
             "ariainvalid": "success",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ExecutionFlag": true
         },
         "MemberID2": {
             "MemberID": "900-77-7887-3",
             "ariainvalid": "success",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ExecutionFlag": true
         },
         "MemberID3": {
             "MemberID": "3041586292",
             "ariainvalid": "success",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ExecutionFlag": true
 
@@ -409,23 +409,23 @@
         },
 
         "SSN1": {
-            "SSN": "100- 56-3733",
+            "SSN": "100-56-3733",
             "ariainvalid": "success",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ExecutionFlag": true
         },
         "SSN2": {
             "SSN": "900-77-7887",
             "ariainvalid": "success",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ExecutionFlag": true
         },
         "SSN3": {
             "SSN": "090 15 7899",
             "ariainvalid": "success",
-            "ErrorMsg": "",
+            "ErrorMsg": false,
             "ServerMsg": "",
             "ExecutionFlag": true
 
@@ -479,377 +479,6 @@
         "AlternateId9": {
             "AlternateId": "gpsvicki@aol.com",
             "ExecutionFlag": true
-        }
-    },
-    "states": {
-        "CA": {
-            "products": {
-                "DHMO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-                        "CoverageStartDate": "12/5/2018",
-                        "ZIPcode": "94105",
-                        "CoverageType": "Self",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-10-1981"
-                    }
-                },
-                "DPPO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
-                        "PlanType": "DHMO",
-                        "PlanCode": "CAA55",
-                        "CoverageStartDate": "12/10/2018",
-                        "State": "CA",
-                        "ZIPcode": "94105",
-                        "Country": "USA",
-                        "EnrollmentFee": "10.00",
-                        "AnnualCost": "80.76",
-                        "CoverageType": "Self",
-                        "PlanID": "70422",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "2",
-                        "dob": "05-10-1981"
-                    }
-                },
-                "AHMO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "DeltaCare ® USA Plan 15B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "12/5/2018",
-                        "State": "CA",
-                        "ZIPcode": "94105",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                },
-                "APPO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "PPO Plan B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "08/05/2018",
-                        "State": "CA",
-                        "ZIPcode": "94105",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                }
-            }
-        },
-        "TX": {
-            "products": {
-                "DHMO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "DeltaCare® USA TXA70 Individual/Family Dental Program",
-                        "CoverageStartDate": "12/05/2018",
-                        "ZIPcode": "78251",
-                        "CoverageType": "Self",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "01-28-1973"
-                    }
-                },
-                "DPPO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
-                        "PlanType": "DHMO",
-                        "PlanCode": "TXA70",
-                        "CoverageStartDate": "12/10/2018",
-                        "State": "TX",
-                        "ZIPcode": "78251",
-                        "Country": "USA",
-                        "EnrollmentFee": "10.00",
-                        "AnnualCost": "80.76",
-                        "CoverageType": "Self",
-                        "PlanID": "70422",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "2",
-                        "dob": "05-10-1981"
-                    }
-                },
-                "AHMO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "DeltaCare ® USA Plan 15B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "12/1/2018",
-                        "State": "TX",
-                        "ZIPcode": "78251",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                },
-                "APPO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "PPO Plan B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "08/01/2018",
-                        "State": "TX",
-                        "ZIPcode": "78251",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                }
-
-            }
-        },
-        "PA": {
-            "products": {
-                "DHMO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "DeltaCare® USA PAA60 Individual/Family Dental Program",
-                        "CoverageStartDate": "09/01/2018",
-                        "ZIPcode": "15001",
-                        "CoverageType": "Self",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "01-28-1973"
-                    }
-                },
-                "DPPO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PAA60",
-                        "CoverageStartDate": "12/10/2018",
-                        "State": "PA",
-                        "ZIPcode": "15001",
-                        "Country": "USA",
-                        "EnrollmentFee": "10.00",
-                        "AnnualCost": "80.76",
-                        "CoverageType": "Self",
-                        "PlanID": "70422",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "2",
-                        "dob": "05-10-1981"
-                    }
-                },
-                "AHMO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "DeltaCare ® USA Plan 15B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "12/1/2018",
-                        "State": "PA",
-                        "ZIPcode": "15001",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                },
-                "APPO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "PPO Plan B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "08/01/2018",
-                        "State": "PA",
-                        "ZIPcode": "15001",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                }
-
-            }
-        },
-        "FL": {
-            "products": {
-                "DHMO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "DeltaCare® USA FLA70 Individual/Family Dental Program",
-                        "CoverageStartDate": "12/10/2018",
-                        "ZIPcode": "32003",
-                        "CoverageType": "Self",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "2",
-                        "dob": "05-10-1981"
-                    }
-                },
-                "DPPO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
-                        "PlanType": "DHMO",
-                        "PlanCode": "FLA70",
-                        "CoverageStartDate": "12/10/2018",
-                        "State": "FL",
-                        "ZIPcode": "32003",
-                        "Country": "USA",
-                        "EnrollmentFee": "10.00",
-                        "AnnualCost": "80.76",
-                        "CoverageType": "Self",
-                        "PlanID": "70422",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "2",
-                        "dob": "05-10-1981"
-                    }
-                },
-                "AHMO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "DeltaCare ® USA Plan 15B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "12/1/2018",
-                        "State": "FL",
-                        "ZIPcode": "32003",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                },
-                "APPO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "PPO Plan B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "08/01/2018",
-                        "State": "FL",
-                        "ZIPcode": "32003",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                }
-
-            }
-        },
-        "NY": {
-            "products": {
-                "DHMO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
-                        "CoverageStartDate": "12/10/2017",
-                        "ZIPcode": "10001",
-                        "CoverageType": "Self",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "2",
-                        "dob": "05-10-1981"
-                    }
-                },
-                "DPPO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
-                        "PlanType": "DHMO",
-                        "PlanCode": "NYA60",
-                        "CoverageStartDate": "12/10/2017",
-                        "State": "NY",
-                        "ZIPcode": "10001",
-                        "Country": "USA",
-                        "EnrollmentFee": "10.00",
-                        "AnnualCost": "80.76",
-                        "CoverageType": "Self",
-                        "PlanID": "70422",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "2",
-                        "dob": "05-10-1981"
-                    }
-                },
-                "AHMO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "DeltaCare ® USA Plan 15B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "12/1/2018",
-                        "State": "NY",
-                        "ZIPcode": "10001",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                },
-                "APPO": {
-                    "product": "AARP",
-                    "enrollData": {
-                        "PlanName": "PPO Plan B",
-                        "PlanType": "DHMO",
-                        "PlanCode": "PLN15B",
-                        "CoverageStartDate": "08/01/2017",
-                        "State": "NY",
-                        "ZIPcode": "10001",
-                        "Country": "USA",
-                        "EnrollmentFee": "0.00",
-                        "AnnualCost": "342.96",
-                        "CoverageType": "Self",
-                        "PlanID": "4546969",
-                        "IssuerCode": "AARP",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    }
-                }
-
-            }
         }
     }
 }

@@ -86,49 +86,5 @@
         "Denturerepair": "100%",
         "Crowns": "100%",
         "Orthodontics": "NA"
-    },
-    "states": {
-        "CA": {
-            "products": {
-                "DPPO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
-                        "CoverageStartDate": "08/01/2017",
-                        "ZIPcode": "94105",
-                        "CoverageType": "Self",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-05-1988"
-                    },
-                    "fieldHomeAddr": "100 First Street floor 4",
-                    "city": "San Francisco",
-                    "State": "CA",
-                    "totalpaid": "$202.14"
-                }
-            }
-        },
-        "NY": {
-            "products": {
-                "DPPO": {
-                    "product": "DELTA",
-                    "enrollData": {
-                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
-                        "CoverageStartDate": "12/10/2017",
-                        "ZIPcode": "10001",
-                        "CoverageType": "Self",
-                        "IssuerCode": "DELTA",
-                        "NoOfPeopleCovered": "1",
-                        "dob": "05-10-1981"
-
-                    },
-                    "fieldHomeAddr": "305 W 16th St APT 3C",
-                    "city": "New York",
-                    "State": "NY",
-                    "totalpaid": "$157.18"
-                }
-
-            }
-        }
     }
 }

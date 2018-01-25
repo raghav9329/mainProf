@@ -6,7 +6,7 @@ var suitesFile = require('./suites.js');
 
 exports.config = {
     framework: 'jasmine2',
-    specs: ['integration/scenarios/dhmo/507PersInfo_Updated.test.js'],
+    specs: ['./integration/scenarios/dhmo/507PersInfo.test.js'],
     suites: suitesFile.suitesCollection,
 
     //'./integration/scenarios/dhmo/507PersInfo_Updated.test.js'
@@ -69,7 +69,8 @@ exports.config = {
         exeInspDelay: 2000,
         isExecutionFromUI: '',
         testDataEnv: '',
-        apiurl: ''
+        apiurl: '',
+	runtimeDebug: 'somthingForLength'   // Testing an Idea
         //  apiurl: 'http://aw-lx0195:19002/providers'
         //  apiurl: 'https://mot-cxservices:8443/providers'
 
@@ -81,6 +82,13 @@ exports.config = {
         maxWait = 2000;
         longWait = 40000;
         PAGELOADTIME = 60000;
+
+         product =['DHMO','DPPO','AHMO','APPO']; 
+         states =['CA', 'TX', 'PA', 'FL','NY'];
+// var product = ['DHMO','DPPO','AHMO','APPO']; 
+// var states = ['CA', 'TX', 'PA', 'FL','NY'];
+
+
         if (browser.params.isExecutionFromUI == 'false') {
             isExecutionFromUI = false;
         } else {
@@ -100,6 +108,7 @@ exports.config = {
         Utility = new (require("./integration/utils/common.js"));
         assert = require('assert');
         frisby = require('frisby');
+         moment = require('moment');
         frisby.globalSetup({
             request: {
                 headers: {
@@ -145,7 +154,7 @@ exports.config = {
         jasmine.getEnv().addReporter(new JasmineLogReporter());
 
         //  ==================================
-        var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
+        var Jasmine2HtmlReporter = require('delta-protractor-jasmine2-html-reporter');
         jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
             savePath: './Results/',
             takeScreenshots: true,
@@ -181,9 +190,9 @@ exports.config = {
     },
     onComplete: function () {
         cmd = require('node-cmd');
-        cmd.get('node dashBoard.js', function () {});
-        cmd.get('node killProcess.js', function () {});
-        
+        cmd.get('node dashBoard.js', function () { });
+        // cmd.get('node killProcess.js', function () { });
+
     },
 
     // onComplete: function() {

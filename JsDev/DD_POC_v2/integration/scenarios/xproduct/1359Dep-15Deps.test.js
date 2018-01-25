@@ -6,20 +6,16 @@
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.1359Dep-15Deps.json');
 var perInfo = new (require('../../pageObjects/cxinit/perInfo-page.js'));
 var depInfo = new (require('../../pageObjects/cxinit/dependent-page.js'));
-
 var enrollPage = new (require('../../pageObjects/cxinit/enroll-page.js'));
-
-var product = ['DHMO'];
-// var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['CA'];
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
-dataProvider(TestData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function (sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
         dataProvider(sData.products, function (tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
-                describe('DHMO:1359: 15 Dependents Max: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
+                describe('1359: 15 Dependents Max: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
                     beforeAll(function () {
                         Utility.openApplication('', tData.product);
                     });
@@ -42,7 +38,8 @@ dataProvider(TestData.states, function (sData, sdescription) {
                     it('Dependents Max_Step_2: Verify Personal Information Page is filled with Valid data and Proceed', function () {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             TestData.MemberId = false;
-                            TestData.ssn = Utility.randomNo('Number', 10);
+                            TestData.ssn = "1234560215",
+                                TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -57,11 +54,11 @@ dataProvider(TestData.states, function (sData, sdescription) {
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             perInfo.referralSource.selectByText(TestData.referralSource);
+                            perInfo.next.click();
                         }
                         // perInfo.fillBroker(TestData);
                         // browser.sleep(4000);
                         // expect(perInfo.apptFloorNumError.getText()).toEqual('Please ensure you have entered an Apt/Floor/Suite number');
-                        depInfo.next.click();
                         expect(browser.getTitle()).toEqual(TestData.DependentTitle);
 
                     });
@@ -71,6 +68,7 @@ dataProvider(TestData.states, function (sData, sdescription) {
                     it('Dependents Max_Step_3: Verifying and Validate the Dependents of same type(Domestic Partner and Spouse do not allowed) not allowed more than 1', function () {
                         expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
                         depInfo.fieldAddDependents.click();
+                        browser.sleep(2000);
                         depInfo.firstname('Dependent1').setText(TestData.invalidData.firstName);
                         depInfo.middleName('Dependent1').setText(TestData.invalidData.middleName);
                         depInfo.lastname('Dependent1').setText(TestData.invalidData.lastName);
@@ -120,6 +118,7 @@ dataProvider(TestData.states, function (sData, sdescription) {
                         depInfo.fillDependent('Dependent14', TestData.child14, false);
                         depInfo.fillDependent('Dependent15', TestData.child15, false);
                         depInfo.next.click();
+                        depInfo.continue.click();
                         browser.sleep(5000);
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                             expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);

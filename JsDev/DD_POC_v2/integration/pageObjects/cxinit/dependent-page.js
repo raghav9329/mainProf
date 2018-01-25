@@ -40,6 +40,8 @@ class DependentPage extends ControlBase {
         this.premiumAmount = new Label(this.pageObjects.premiumAmount);
         this.enrollmentFee = new Label(this.pageObjects.enrollmentFee);
         this.depError = new Label(this.pageObjects.depError);
+        this.depPremiumChangepopupTxt = new Label(this.pageObjects.depPremiumChangepopupTxt);
+        this.depChildmaxageerror = new Label(this.pageObjects.depChildmaxageerror);
 
 
 

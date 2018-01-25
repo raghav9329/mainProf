@@ -20,8 +20,8 @@ if (states.indexOf(sdescription) != -1) {
             Utility.openApplication('', 'DELTA');
             enrollPage.enterHomePageDetails(tData.enrollData);
             expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
-            perInfo.fillPersonalInfo(tData);
-            perInfo.fillAddress(tData);
+            perInfo.fillPersonalInfo(sData);
+            perInfo.fillAddress(sData);
         });
         beforeEach(function () {
             jasmine.addMatchers(custommatcher.customMatchers);
