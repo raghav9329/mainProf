@@ -80,6 +80,14 @@ class PaymentPage extends ControlBase {
         this.routingNumberError = new Label(this.pageObjects.routingNumberError);
         this.accountNumberError = new Label(this.pageObjects.accountNumberError);
         this.discloser = new Label(this.pageObjects.discloser);
+        this.authorizetxt = new Label(this.pageObjects.authorizetxt);
+        this.paymentagreementTxt = new Label(this.pageObjects.paymentagreementTxt);
+        this.disclouserFormOption1 = new Label(this.pageObjects.disclouserFormOption1);
+        this.disclouserFormOption2 = new Label(this.pageObjects.disclouserFormOption2);
+        this.refundCCpaymentsTxt = new Label(this.pageObjects.refundCCpaymentsTxt);
+        this.paymentAuthorizationTxt = new Label(this.pageObjects.paymentAuthorizationTxt);
+        this.enrollmentfeeTxt = new Label(this.pageObjects.enrollmentfeeTxt);
+        this.discloserTxt = new Label(this.pageObjects.discloserTxt);
 
     };
     /**

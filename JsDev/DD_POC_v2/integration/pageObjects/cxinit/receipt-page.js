@@ -107,7 +107,7 @@ class ReceiptPage extends ControlBase {
     };
 
     verifyPixel(state, product) {
-        var states = ['CA','TX','PA','FL'];
+        var states = ['CA','TX','PA','FL', 'NY'];
 
         if (states.indexOf(state) !== -1) {
 

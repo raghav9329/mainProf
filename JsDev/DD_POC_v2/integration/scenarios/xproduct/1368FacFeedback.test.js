@@ -4,21 +4,18 @@ var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
-
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var feedback = new(require('../../pageObjects/cxinit/feedback-page.js'));
-var product = ['DHMO'];
-// var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['CA',,'TX','PA','FL',];
-// var states = ['CA','TX','PA','FL','NY'];
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
+
 
 //To Navigate Personla Info Page
-dataProvider(TestData.states, function(sData, sdescription) {
+dataProvider(statesData.states, function(sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
         dataProvider(sData.products, function(tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
-                describe('DHMO:1368 Feedback : ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
+                describe('1368 Feedback : ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
                     // Pre-condition: User navigated to personal info page
                     beforeEach(function() {
                         jasmine.addMatchers(custommatcher.customMatchers);
@@ -48,8 +45,9 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     });
                     it('Step-3:Should be provide the feedback in dependent page', function() {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = Utility.randomNo('Number', 10);
+                            TestData.MemberId = false;    
+                            TestData.ssn="1234560215",
+                            TestData.alternateid = "test@test.com";                          
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -77,8 +75,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     });
                     it('Step-4:Should be provide the feedback infacilities page', function() {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = Utility.randomNo('Number', 10);
+                            TestData.MemberId = false;                            
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -107,8 +104,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     });
                     it('Step-5:Should be provide the feedback in payment page', function() {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = Utility.randomNo('Number', 10);
+                            TestData.MemberId = false;                            
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -127,9 +123,11 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         }
                         expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
                         depInfo.next.click();
+                        if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                         // facilities.selectFacility(TestData.facilityoption1);
                         facilities.selectFacility();
                         facilities.next.click();
+                        }
                         feedback.feedback.click();
                         Utility.switchToFrame(feedback.feedbackFrame());
                         expect(feedback.feedbackTitle.getText()).toEqual(TestData.feedbackTitle);

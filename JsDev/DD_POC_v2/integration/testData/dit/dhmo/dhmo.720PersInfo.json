@@ -41,34 +41,91 @@
                     "City4": "áü&#",
                     "State1": "CA",
                     "State2": "California",
-                    "State3": "**--//",
-                    "PartialAddress_Suggestion": {
-                        "PartialAddress": "949",
-                        "FullAddress": "949Broadway, New York, NY, United States",
-                        "City": "New York",
-                        "State": "NY",
-                        "ZipCode": "",
-                        "ErrorMsg": "",
-                        "ExecutionFlag": true
-                    },
+                    "State3": "**--//"
 
-                    "FullAddress_Suggestion": {
-                        "HomeAddress": "5208",
-                        "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
-                        "City": "Bellaire",
-                        "State": "TX",
-                        "ZipCode": "77401",
-                        "ErrorMsg": "Please enter a street address",
-                        "ExecutionFlag": true
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "08/01/2017",
+                        "ZIPcode": "94105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
                     },
-                    "MockAddress_Suggestion": {
-                        "HomeAddress": "35995 Fremont Blvd Apt 98",
-                        "City": "Fremont",
+                    "fieldHomeAddr": "100 First Street floor 4",
+                    "city": "San Francisco",
+                    "State": "CA",
+                    "totalpaid": "$202.14"
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
                         "State": "CA",
-                        "ZipCode": "94536",
-                        "ErrorMsg": ""
+                        "ZIPcode": "94105",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
                     }
+
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2017",
+                        "State": "CA",
+                        "ZIPcode": "94105",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+
                 }
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "949",
+                "FullAddress": "949Broadway, New York, NY, United States",
+                "City": "New York",
+                "State": "NY",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "5208",
+                "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
+                "City": "Bellaire",
+                "State": "TX",
+                "ZipCode": "77401",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "35995 Fremont Blvd Apt 98",
+                "City": "Fremont",
+                "State": "CA",
+                "ZipCode": "94536",
+                "ErrorMsg": ""
             }
         },
         "NY": {
@@ -111,34 +168,387 @@
                     "City4": "áü&#",
                     "State1": "CA",
                     "State2": "California",
-                    "State3": "**--//",
-                    "PartialAddress_Suggestion": {
-                        "PartialAddress": "949",
-                        "FullAddress": "949Broadway, New York, NY, United States",
-                        "City": "New York",
-                        "State": "NY",
-                        "ZipCode": "",
-                        "ErrorMsg": "",
-                        "ExecutionFlag": true
+                    "State3": "**--//"
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "10001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
                     },
-
-                    "FullAddress_Suggestion": {
-                        "HomeAddress": "5208",
-                        "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
-                        "City": "Bellaire",
-                        "State": "TX",
-                        "ZipCode": "77401",
-                        "ErrorMsg": "Please enter a street address",
-                        "ExecutionFlag": true
-                    },
-                    "MockAddress_Suggestion": {
-                        "HomeAddress": " 623 5th Ave, New York, NY 10022",
-                        "City": "New York",
+                    "fieldHomeAddr": "305 W 16th St APT 3C",
+                    "city": "New York",
+                    "State": "NY",
+                    "totalpaid": "$157.18"
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
                         "State": "NY",
-                        "ZIPCode": "10022",
-                        "ErrorMsg": ""
+                        "ZIPcode": "10001",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "NY",
+                        "ZIPcode": "10001",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
                     }
                 }
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "949",
+                "FullAddress": "949Broadway, New York, NY, United States",
+                "City": "New York",
+                "State": "NY",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "5208",
+                "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
+                "City": "Bellaire",
+                "State": "TX",
+                "ZipCode": "77401",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "623 5th Ave, New York",
+                "City": "New York",
+                "State": "NY",
+                "ZipCode": "10022",
+                "ErrorMsg": ""
+            }
+        },
+
+        "TX": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA TXA70 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/05/2018",
+                        "ZIPcode": "78251",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "01-28-1973"
+                    }
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental DPO Individual - Basic Plan",
+                        "PlanType": "DPO",
+                        "PlanCode": "TXA70",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "TX",
+                        "ZIPcode": "78251",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "TX",
+                        "ZIPcode": "78251",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "TX",
+                        "ZIPcode": "78251",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "949",
+                "FullAddress": "949Broadway, New York, NY, United States",
+                "City": "New York",
+                "State": "NY",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "5208",
+                "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
+                "City": "Bellaire",
+                "State": "TX",
+                "ZipCode": "77401",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "35995 Fremont Blvd Apt 98",
+                "City": "Fremont",
+                "State": "CA",
+                "ZipCode": "94536",
+                "ErrorMsg": ""
+            }
+        },
+        "FL": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA FLA70 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/10/2018",
+                        "ZIPcode": "32003",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "PlanType": "DHMO",
+                        "PlanCode": "FLA70",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "FL",
+                        "ZIPcode": "32003",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "FL",
+                        "ZIPcode": "32003",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "FL",
+                        "ZIPcode": "32003",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "949",
+                "FullAddress": "949Broadway, New York, NY, United States",
+                "City": "New York",
+                "State": "NY",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "5208",
+                "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
+                "City": "Bellaire",
+                "State": "TX",
+                "ZipCode": "77401",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "35995 Fremont Blvd Apt 98",
+                "City": "Fremont",
+                "State": "CA",
+                "ZipCode": "94536",
+                "ErrorMsg": ""
+            }
+        },
+        "PA": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA PAA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "09/01/2018",
+                        "ZIPcode": "15001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "01-28-1973"
+                    }
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental Individual & Family Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "PA",
+                        "ZIPcode": "15001",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "PA",
+                        "ZIPcode": "15001",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "PA",
+                        "ZIPcode": "15001",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "949",
+                "FullAddress": "949Broadway, New York, NY, United States",
+                "City": "New York",
+                "State": "NY",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "5208",
+                "FullAddress": "5208Bellaire Boulevard, Bellaire, TX, United States",
+                "City": "Bellaire",
+                "State": "TX",
+                "ZipCode": "77401",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "35995 Fremont Blvd Apt 98",
+                "City": "Fremont",
+                "State": "CA",
+                "ZipCode": "94536",
+                "ErrorMsg": ""
             }
         }
     }

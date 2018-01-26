@@ -90,7 +90,7 @@ class DependentsLocators {
         };
         this.errorMonth = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
-            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//label[text()="Month"]/parent::p/following-sibling::div/a[1]');
+            return by.xpath('(//h2[contains(text(),"Dependent")]/parent::div)[' + number + ']/following-sibling::fieldset//label[text()="Month"]/parent::fieldset/following-sibling::div/a[1]');
         };
         this.errorDay = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
@@ -123,6 +123,8 @@ class DependentsLocators {
         this.premiumAmount = by.css('aside.product-selection-summary div.header-plan span');
         this.enrollmentFee = by.className('enrollment-fee');
         this.depError = by.css('div.error-container.global-margin a');
+        this.depPremiumChangepopupTxt = by.xpath('//h2[text()="Premium Change"]/following::p[1]');
+        this.depChildmaxageerror = by.xpath('//div[@class="indented-text"]');
 
     }
 }

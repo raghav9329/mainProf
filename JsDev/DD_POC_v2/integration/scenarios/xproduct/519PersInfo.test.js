@@ -23,19 +23,17 @@ Validate Email Address field with invalid data failures
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.519PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-
-// var product = ['AHMO'];
-var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['NY', 'CA', 'TX', 'PA', 'FL'];
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
-dataProvider(TestData.states, function(sData, sdescription) {
+// dataProvider(TestData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function (sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
-        dataProvider(sData.products, function(tData, pdescription) {
+        dataProvider(sData.products, function (tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
                 //To Navigate Personal Info Page
-                describe('DHMO:519: Contact Info-PersInfo: ' + sdescription + 'Product:' + pdescription + '', function() {
+                describe('519: Contact Info-PersInfo: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
 
                     beforeAll(function() {
                         console.log('cxinit 519');

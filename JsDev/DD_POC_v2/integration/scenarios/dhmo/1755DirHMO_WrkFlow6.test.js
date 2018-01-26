@@ -5,17 +5,12 @@ var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
-
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_6.json');
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
-var pdf2Text = require('pdf2text')
-var product = ['DHMO'];
-// var product = ['DHMO','DPPO','AHMO','APPO'];
-var states = ['CA', 'NY'];
-
-//To Navigate Personal Info Page
-dataProvider(TestData.states, function(sData, sdescription) {
+//To Navigate Personla Info Page
+dataProvider(statesData.states, function(sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
         dataProvider(sData.products, function(tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
@@ -25,7 +20,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     beforeAll(function() {
                         Utility.openApplication('', 'DELTA');
                     });
-                    beforeEach(function () {
+                    beforeEach(function() {
                         jasmine.addMatchers(custommatcher.customMatchers);
                     });
 
@@ -50,10 +45,26 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         expect(perInfo.enrollStatus('Payment & Review').getCssValue('background-color')).toEqual(TestData.gray);
                         expect(perInfo.enrollStatus('Receipt').getCssValue('background-color')).toEqual(TestData.gray);
 
+                        if (pdescription == 'DHMO' || pdescription == 'DPPO') {
+                            TestData.MemberId = false;
+                            TestData.ssn = "1234560215",
+                                TestData.alternateid = "test@test.com";
+                        }
+                        if (pdescription == 'AHMO' || pdescription == 'APPO') {
+                            TestData.MemberId = Utility.randomNo('Number', 10);
+                            TestData.ssn = false;
+                            TestData.alternateid = false;
+                        }
                         perInfo.fillPersonalInfo(TestData);
                         perInfo.fillAddress(tData);
                         perInfo.phoneNumberemail(TestData);
-                        perInfo.next.click();
+                        if (pdescription == 'DHMO' || pdescription == 'DPPO') {
+                            perInfo.fillBroker(TestData);
+                        }
+                        if (pdescription == 'AHMO' || pdescription == 'APPO') {
+                            perInfo.referralSource.selectByText(TestData.referralSource);
+                            perInfo.next.click();
+                        }
                         expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
                         console.log('1755_2 of 10 Complete')
                     });
@@ -79,112 +90,118 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         depInfo.newAdditionalPrice.getText().then(function(dep1Price) {
                             depPrice = dep1Price;
                             depInfo.continue.click();
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+
                         });
                         console.log('1755_3 of 10 Complete')
                     });
 
 
                     //Verify and Select the Facility for the Dependent
+                    if (pdescription == 'DHMO' || pdescription == 'AHMO') {
+                        it('E2E_4 :should select fac for primary', function() {
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            facilities.premiumAmount.getText().then(function(premium) {
+                                expect(premium.substring(1)).toEqual(depPrice);
+                                // expect(facilities.enrollmentFee.getText()).toEqual(TestData.enrollFee);
+                                expect(facilities.productName.getText()).toEqual(tData.planName);
 
-                    it('E2E_4 :should select fac for primary', function() {
-                        facilities.premiumAmount.getText().then(function(premium) {
-                            expect(premium.substring(1)).toEqual(depPrice);
-                            // expect(facilities.enrollmentFee.getText()).toEqual(TestData.enrollFee);
-                            expect(facilities.productName.getText()).toEqual(tData.planName);
+                                expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
+                                expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
 
-                            expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
-                            expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
+                                expect(perInfo.enrollStatus('Personal Info').getCssValue('background-color')).toEqual(TestData.liteGreen);
+                                expect(perInfo.enrollStatus('Dependents').getCssValue('background-color')).toEqual(TestData.liteGreen);
+                                expect(perInfo.enrollStatus('Facilities').getCssValue('background-color')).toEqual(TestData.darkGreen);
+                                expect(perInfo.enrollStatus('Payment & Review').getCssValue('background-color')).toEqual(TestData.gray);
+                                expect(perInfo.enrollStatus('Receipt').getCssValue('background-color')).toEqual(TestData.gray);
 
-                            expect(perInfo.enrollStatus('Personal Info').getCssValue('background-color')).toEqual(TestData.liteGreen);
-                            expect(perInfo.enrollStatus('Dependents').getCssValue('background-color')).toEqual(TestData.liteGreen);
-                            expect(perInfo.enrollStatus('Facilities').getCssValue('background-color')).toEqual(TestData.darkGreen);
-                            expect(perInfo.enrollStatus('Payment & Review').getCssValue('background-color')).toEqual(TestData.gray);
-                            expect(perInfo.enrollStatus('Receipt').getCssValue('background-color')).toEqual(TestData.gray);
+                                facilities.selectFacility().then(function(fnamee) {
+                                    facility1 = fnamee;
+                                });
+                                facilities.next.click();
 
-                            facilities.selectFacility().then(function(fnamee) {
-                                facility1 = fnamee;
+                                /*facilities.selectFacility(TestData.facilityoption1);
+                                facilities.next.click();*/
+                                console.log('1755_4 of 10 Complete')
                             });
-                            facilities.next.click();
-
-                            /*facilities.selectFacility(TestData.facilityoption1);
-                            facilities.next.click();*/
-                            console.log('1755_4 of 10 Complete')
                         });
-                    });
 
-                    //Verify and Select the Facility for the Dependent
+                        //Verify and Select the Facility for the Dependent
 
-                    it('E2E_5 :should select fac for deps', function() {
-                        facilities.premiumAmount.getText().then(function(premium) {
-                            expect(premium.substring(1)).toEqual(depPrice);
-                            // expect(facilities.enrollmentFee.getText()).toEqual(TestData.enrollFee);
+                        it('E2E_5 :should select fac for deps', function() {
+                            facilities.premiumAmount.getText().then(function(premium) {
+                                expect(premium.substring(1)).toEqual(depPrice);
+                                // expect(facilities.enrollmentFee.getText()).toEqual(TestData.enrollFee);
 
-                            expect(facilities.productName.getText()).toEqual(tData.planName);
-                            expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
-                            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.primaryFacility.facilityName);
+                                expect(facilities.productName.getText()).toEqual(tData.planName);
+                                expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
+                                expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.primaryFacility.facilityName);
 
-                            expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
+                                expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
 
-                            expect(perInfo.enrollStatus('Personal Info').getCssValue('background-color')).toEqual(TestData.liteGreen);
-                            expect(perInfo.enrollStatus('Dependents').getCssValue('background-color')).toEqual(TestData.liteGreen);
-                            expect(perInfo.enrollStatus('Facilities').getCssValue('background-color')).toEqual(TestData.darkGreen);
-                            expect(perInfo.enrollStatus('Payment & Review').getCssValue('background-color')).toEqual(TestData.gray);
-                            expect(perInfo.enrollStatus('Receipt').getCssValue('background-color')).toEqual(TestData.gray);
+                                expect(perInfo.enrollStatus('Personal Info').getCssValue('background-color')).toEqual(TestData.liteGreen);
+                                expect(perInfo.enrollStatus('Dependents').getCssValue('background-color')).toEqual(TestData.liteGreen);
+                                expect(perInfo.enrollStatus('Facilities').getCssValue('background-color')).toEqual(TestData.darkGreen);
+                                expect(perInfo.enrollStatus('Payment & Review').getCssValue('background-color')).toEqual(TestData.gray);
+                                expect(perInfo.enrollStatus('Receipt').getCssValue('background-color')).toEqual(TestData.gray);
 
-                            /*facilities.selectFacility(TestData.facilityoption2);
-                            facilities.next.click();*/
-                            facilities.selectFacility().then(function(fnamee) {
-                                facility2 = fnamee;
+                                /*facilities.selectFacility(TestData.facilityoption2);
+                                facilities.next.click();*/
+                                facilities.selectFacility().then(function(fnamee) {
+                                    facility2 = fnamee;
+                                });
+                                facilities.next.click();
+
+
+                                expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
                             });
-                            facilities.next.click();
-
-
-                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                            console.log('1755_5 of 10 Complete')
                         });
-                        console.log('1755_5 of 10 Complete')
-                    });
 
-                    //Furnish all the fields of the Payment page with the valid Test Data and proceed
-
+                        //Furnish all the fields of the Payment page with the valid Test Data and proceed
+                    }
                     it('E2E_6 :should fill out pay details', function() {
                         facilities.premiumAmount.getText().then(function(premium) {
                             expect(premium.substring(1)).toEqual(depPrice);
                             //expect(facilities.enrollmentFee.getText()).toEqual(TestData.enrollFee);
+                            if (pdescription == 'DHMO' || pdescription == 'AHMO') {
+                                expect(facilities.productName.getText()).toEqual(tData.planName);
+                                expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
+                                expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.primaryFacility.facilityName);
 
-                            expect(facilities.productName.getText()).toEqual(tData.planName);
-                            expect(facilities.pbox_dependentName(1).getText()).toEqual(TestData.firstname);
-                            expect(facilities.pbox_facilityName(1).getText()).toEqual(TestData.primaryFacility.facilityName);
-
-                            expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
-                            expect(facilities.pbox_facilityName(2).getText()).toEqual(TestData.dependent_Facility_1.facilityName);
-
+                                expect(facilities.pbox_dependentName(2).getText()).toEqual(TestData.Spouse.firstName);
+                                expect(facilities.pbox_facilityName(2).getText()).toEqual(TestData.dependent_Facility_1.facilityName);
+                            }
                             expect(perInfo.enrollStatus('Personal Info').getCssValue('background-color')).toEqual(TestData.liteGreen);
                             expect(perInfo.enrollStatus('Dependents').getCssValue('background-color')).toEqual(TestData.liteGreen);
                             expect(perInfo.enrollStatus('Facilities').getCssValue('background-color')).toEqual(TestData.liteGreen);
                             expect(perInfo.enrollStatus('Payment & Review').getCssValue('background-color')).toEqual(TestData.darkGreen);
                             expect(perInfo.enrollStatus('Receipt').getCssValue('background-color')).toEqual(TestData.gray);
+                            if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             expect(payment.discloser.getAttribute('href')).toContain(tData.discloser);
                             payment.discloser.click();
                             Utility.switchToWindow(1);
                             expect(browser.getCurrentUrl()).toContain(tData.discloser);
                             Utility.switchToWindow(0);
+                        }
                             payment.billingChkBox.check();
                             payment.summaryTotalPrice.getText().then(function(premium) {
                                 premiumAmount = premium;
                             });
                             // if (testExecutionEnv != 'production') {
                             payment.fillpayment(TestData);
+                            if (pdescription == 'AHMO' || pdescription == 'APPO') {
+                            payment.frequencyAnnualy.select();
+                        }
                             payment.purchaseNow.click();
                             Utility.delay(maxWait);
                             expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-                            // }
+                            
                         });
                         console.log('1755_6 of 10 Complete')
                     });
 
                     //Verify and Validate the Application Number and Plan Name in the Receipt Page
-
+if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                     it('E2E_7 :Should submit delta rating', function() {
                         expect(perInfo.enrollStatus('Personal Info').getCssValue('background-color')).toEqual(TestData.liteGreen);
                         expect(perInfo.enrollStatus('Dependents').getCssValue('background-color')).toEqual(TestData.liteGreen);
@@ -203,7 +220,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
                         console.log('1755_7 of 10 Complete')
                     });
-
+}
                     it('E2E_8 :Should display plansummary', function() {
                         var plansummary = tData.planSummary;
                         receipt.planSummary.click();
@@ -221,8 +238,8 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         expect(receipt.getPlanSummaryByKey('Crowns').getText()).toEqual(plansummary.Crowns);
                         expect(receipt.getPlanSummaryByKey('Orthodontics').getText()).toEqual(plansummary.Orthodontics);
                         console.log('1755_8 of 10 Complete')
-
                     });
+                    if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                     it('E2E_9 :Should display primary applicant', function() {
                         var facility = facility1;
                         //TestData.primaryFacility;
@@ -261,6 +278,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         });
                         console.log('1755_10 of 10 Complete')
                     });
+                }
 
                 });
             }

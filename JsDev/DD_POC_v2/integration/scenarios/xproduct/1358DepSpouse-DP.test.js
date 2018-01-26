@@ -9,20 +9,19 @@ var depInfo = new (require('../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new (require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new (require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new (require('../../pageObjects/cxinit/receipt-page.js'));
-
 var enrollPage = new (require('../../pageObjects/cxinit/enroll-page.js'));
-var product = ['DHMO'];
-// var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['CA'];
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
-dataProvider(TestData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function (sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
         dataProvider(sData.products, function (tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
-                describe('DHMO:1358: Dependents - Spouse&DomesticPartner: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
+                describe('1358: Dependents - Spouse&DomesticPartner: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
                     var dep2_Price;
                     beforeAll(function () {
+                        tData.enrollData.NoOfPeopleCovered= "2";
+                        tData.enrollData.dependentsDOB=["10-10-1990"];
                         Utility.openApplication('', tData.product);
                     });
                     beforeEach(function () {
@@ -36,8 +35,9 @@ dataProvider(TestData.states, function (sData, sdescription) {
                     //  Fill Personal Infor Page with valid data and verify the navigation
                     it('Step-2: should fill out Personal Information Page', function () {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = Utility.randomNo('Number', 10);
+                            TestData.MemberId = false; 
+                            TestData.ssn="1234560215",
+                            TestData.alternateid = "test@test.com";                            
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -52,6 +52,7 @@ dataProvider(TestData.states, function (sData, sdescription) {
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             perInfo.referralSource.selectByText(TestData.referralSource);
+                            perInfo.next.click();
                         }
                         expect(browser.getTitle()).toEqual(TestData.DependentTitle);
                     });

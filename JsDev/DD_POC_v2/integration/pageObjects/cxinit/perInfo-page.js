@@ -104,6 +104,11 @@ class PersonalInfoPage extends ControlBase {
         this.referralSource = new Select(this.pageObjects.referralSource);
         this.errorMsgRefferalSource = new Label(this.pageObjects.errorMsgRefferalSource);
         this.backToQuote = new LinkText(this.pageObjects.backToQuote);
+        this.emailText = new Label(this.pageObjects.emailText);
+        this.footer = new Label(this.pageObjects.footer);
+        this.copyright = new Label(this.pageObjects.copyRight);
+        this.helpContact = new Label(this.pageObjects.helpContact);
+        this.ShoppingContact = new Label(this.pageObjects.ShoppingContact);
     }
 
     enrollStatus(breadcrumbheader) {
@@ -156,7 +161,7 @@ class PersonalInfoPage extends ControlBase {
             self.fieldFirstName.setText(perinfo.firstname);
             self.fieldMidInitial.setText(perinfo.mi);
             self.fieldLastName.setText(perinfo.lastname);
-            if(!perinfo.gender) self.fieldGenderSelect.selectByText(perinfo.gender);
+            if (!perinfo.gender) self.fieldGenderSelect.selectByText(perinfo.gender);
             //expect(self.fieldGenderSelect.getAttribute("class")).toContain(perinfo.ariainvalid);
             var d = perinfo.dob;
             var datesplit = (d.split('-'))
@@ -166,8 +171,8 @@ class PersonalInfoPage extends ControlBase {
             self.fieldBdMM.setText(datesplit[0]);
             if (perinfo.MemberId) self.memberId.setText(perinfo.MemberId);
             if (perinfo.ssn) self.fieldSsn.setText(perinfo.ssn);
-            if (!perinfo.alternateid) self.fieldAlternateId.setText('');
-            if (!perinfo.alternateid) self.fieldAlternateId.setText(perinfo.alternateid);
+            if (perinfo.alternateid) self.fieldAlternateId.setText('');
+            if (perinfo.alternateid) self.fieldAlternateId.setText(perinfo.alternateid);
             self.fieldHomeAddr.setText('');
             expect(self.fieldFirstName.getAttribute("class")).toContain(perinfo.ariainvalid);
             expect(self.fieldMidInitial.getAttribute("class")).toContain(perinfo.ariainvalid);
@@ -186,7 +191,7 @@ class PersonalInfoPage extends ControlBase {
             self.fieldCity.setText(perinfo.city);
             self.fieldPhoneNumber.setText('');
             browser.sleep(2000);
-             Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg'))); 
+            Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
             // expect(self.fieldHomeAddr.getAttribute("class")).toContain(perinfo.ariainvalid);
             // expect(self.fieldCity.getAttribute("class")).toContain(perinfo.ariainvalid);
         });
@@ -227,25 +232,47 @@ class PersonalInfoPage extends ControlBase {
 
     getProfileValidationMessages() {
         var promises = [];
+        var self =this;
         promises.push(this.errMsgFirstName.getText());
         promises.push(this.errMsgLastName.getText());
         //promises.push(this.errMsgGenderSelect.getText());
         promises.push(this.errMsgBdMM.getText());
         promises.push(this.errMsgBdDD.getText());
-        promises.push(this.errMsgBdYyyy.getText());
-        promises.push(this.errMsgSsn.getText());
+        // promises.push(this.errMsgBdYyyy.getText());
+        promises.push(this.errMsgYear.getText());
+        this.serverErrMsgSsn.isPresentAndDisplayed().then(function(displayed) {
+            if (displayed) {
+                promises.push(self.serverErrMsgSsn.getText());
+            }
+        })
+        this.serverErrMsgMemberId.isPresentAndDisplayed().then(function(displayed) {
+            if (displayed) {
+                promises.push(self.serverErrMsgMemberId.getText());
+            }
+        })
         return protractor.promise.all(promises);
     };
 
     getServerProfileValidationMessages() {
         var promises = [];
+        var self=this;
         promises.push(this.serverErrMsgFirstName.getText());
         promises.push(this.serverErrMsgLastName.getText());
         // promises.push(this.serverErrMsgGenderSelect.getText());
         promises.push(this.serverErrMsgMonth.getText());
         promises.push(this.serverErrMsgDay.getText());
         promises.push(this.serverErrMsgYear.getText());
-        promises.push(this.serverErrMsgSsn.getText());
+        this.serverErrMsgSsn.isPresentAndDisplayed().then(function(displayed) {
+            if (displayed) {
+                promises.push(self.serverErrMsgSsn.getText());
+            }
+        })
+        this.serverErrMsgMemberId.isPresentAndDisplayed().then(function(displayed) {
+            if (displayed) {
+                promises.push(self.serverErrMsgMemberId.getText());
+            }
+        })
+
         return protractor.promise.all(promises);
     };
 

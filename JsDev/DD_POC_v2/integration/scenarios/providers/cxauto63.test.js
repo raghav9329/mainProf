@@ -4,7 +4,7 @@ var dirSearch = new(require('../../pageObjects/providers/directory-search-page.j
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 
 // Navigate to PD URL
-describe('CXAUTO38: Prov Dir', function() {
+describe('CXAUTO63: Prov Dir', function() {
     beforeEach(function() {
         jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('');

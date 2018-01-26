@@ -1,0 +1,198 @@
+{
+  "providers": [
+    {
+      "providerKey": "GRP841324779841324779001PRV69754080310",
+      "firstName": "Sudheer",
+      "middleName": "J",
+      "lastName": "Surpure",
+      "specialty": "Oral Surgeon",
+      "officeName": "San Francisco Surgical Arts",
+      "practiceLocationNumber": "841324779001",
+      "officePhone": "(415) 813-6400",
+      "facilityId": null,
+      "emailAddress": null,
+      "faxNumber": "(415) 813-6401",
+      "website": null,
+      "address": {
+        "addressLine": "301 Main St Unt 1A, ",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipcode": "94105-5032",
+        "latitude": 37.7892418,
+        "longitude": -122.3914108
+      },
+      "distance": 0,
+      "providerNetworks": [
+        {
+          "networkId": "2PREMIER",
+          "networkName": "Premier Network",
+          "acceptsNewPatients": "Y"
+        },
+        {
+          "networkId": "2PPO",
+          "networkName": "PPO Network",
+          "acceptsNewPatients": "Y"
+        }
+      ],
+      "boardCertified": false,
+      "referral": false
+    },
+    {
+      "providerKey": "GRP841324779841324779001PRV24067084210",
+      "firstName": "Nima",
+      "middleName": "Sayed",
+      "lastName": "Massoomi",
+      "specialty": "Oral Surgeon",
+      "officeName": "San Francisco Surgical Arts",
+      "practiceLocationNumber": "841324779001",
+      "officePhone": "(415) 813-6400",
+      "facilityId": null,
+      "emailAddress": null,
+      "faxNumber": "(415) 813-6401",
+      "website": null,
+      "address": {
+        "addressLine": "301 Main St Unt 1A, ",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipcode": "94105-5032",
+        "latitude": 37.7892418,
+        "longitude": -122.3914108
+      },
+      "distance": 0,
+      "providerNetworks": [
+        {
+          "networkId": "2PREMIER",
+          "networkName": "Premier Network",
+          "acceptsNewPatients": "Y"
+        },
+        {
+          "networkId": "2PPO",
+          "networkName": "PPO Network",
+          "acceptsNewPatients": "Y"
+        }
+      ],
+      "boardCertified": false,
+      "referral": false
+    },
+    {
+      "providerKey": "GRP841324779841324779001PRV24065326910",
+      "firstName": "Alireza",
+      "middleName": "M",
+      "lastName": "Sodeifi",
+      "specialty": "Oral Surgeon",
+      "officeName": "San Francisco Surgical Arts",
+      "practiceLocationNumber": "841324779001",
+      "officePhone": "(415) 813-6400",
+      "facilityId": null,
+      "emailAddress": null,
+      "faxNumber": "(415) 813-6401",
+      "website": null,
+      "address": {
+        "addressLine": "301 Main St Unt 1A, ",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipcode": "94105-5032",
+        "latitude": 37.7892418,
+        "longitude": -122.3914108
+      },
+      "distance": 0,
+      "providerNetworks": [
+        {
+          "networkId": "2PPO",
+          "networkName": "PPO Network",
+          "acceptsNewPatients": "Y"
+        },
+        {
+          "networkId": "2PREMIER",
+          "networkName": "Premier Network",
+          "acceptsNewPatients": "Y"
+        }
+      ],
+      "boardCertified": false,
+      "referral": false
+    },
+    {
+      "providerKey": "GRP841324779841324779001PRV24071172010",
+      "firstName": "Alexander",
+      "middleName": "S",
+      "lastName": "Hoghooghi",
+      "specialty": "Oral Surgeon",
+      "officeName": "San Francisco Surgical Arts",
+      "practiceLocationNumber": "841324779001",
+      "officePhone": "(415) 813-6400",
+      "facilityId": null,
+      "emailAddress": null,
+      "faxNumber": "(415) 813-6401",
+      "website": null,
+      "address": {
+        "addressLine": "301 Main St Unt 1A, ",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipcode": "94105-5032",
+        "latitude": 37.7892418,
+        "longitude": -122.3914108
+      },
+      "distance": 0,
+      "providerNetworks": [
+        {
+          "networkId": "2PPO",
+          "networkName": "PPO Network",
+          "acceptsNewPatients": "Y"
+        },
+        {
+          "networkId": "2PREMIER",
+          "networkName": "Premier Network",
+          "acceptsNewPatients": "Y"
+        }
+      ],
+      "boardCertified": false,
+      "referral": false
+    },
+    {
+      "providerKey": "GRP166984312166984312002PRV68446366800",
+      "firstName": "Josh",
+      "middleName": " ",
+      "lastName": "Berd",
+      "specialty": "General Dentist",
+      "officeName": "Josh Berd DDS",
+      "practiceLocationNumber": "166984312002",
+      "officePhone": "(415) 706-7687",
+      "facilityId": null,
+      "emailAddress": null,
+      "faxNumber": null,
+      "website": null,
+      "address": {
+        "addressLine": "188 Spear St Ste 105",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipcode": "94105-1750",
+        "latitude": 37.7914467,
+        "longitude": -122.3929672
+      },
+      "distance": 0.3,
+      "providerNetworks": [
+        {
+          "networkId": "2PREMIER",
+          "networkName": "Premier Network",
+          "acceptsNewPatients": "Y"
+        },
+        {
+          "networkId": "2PPO",
+          "networkName": "PPO Network",
+          "acceptsNewPatients": "Y"
+        }
+      ],
+      "boardCertified": false,
+      "referral": false
+    }
+  ],
+  "total": 5058,
+  "numberOfPages": 1012,
+  "perPage": 5,
+  "currentPage": 0,
+  "metaData": {
+    "numberOfProviders": 0,
+    "numberOfFacilities": 0,
+    "numberOfOffices": 0
+  }
+}

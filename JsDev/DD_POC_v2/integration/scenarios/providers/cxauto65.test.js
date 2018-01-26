@@ -3,7 +3,7 @@ var TestData = require('../../testData/' + testDataEnv + '/providers/cxauto65.js
 var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 
-describe('Providers CXAUTO:38-1 ', function() {
+describe('Providers CXAUTO:65 ', function() {
 
     beforeEach(function() {
         jasmine.addMatchers(custommatcher.customMatchers);

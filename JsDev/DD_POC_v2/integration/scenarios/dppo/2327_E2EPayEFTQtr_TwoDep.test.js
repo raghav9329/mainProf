@@ -6,12 +6,14 @@ var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dppo/dppo.2327_E2EPayEFTQtr_TwoDep.json');
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
+
 var product = ['DPPO'];
 // var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['CA', 'NY'];
+// var states = ['CA', 'NY']; Shounak: Not required. Specify / set the states in Config file.
 
 //To Navigate Personla Info Page
-dataProvider(TestData.states, function(sData, sdescription) {
+dataProvider(statesData.states, function(sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
         dataProvider(sData.products, function(tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {

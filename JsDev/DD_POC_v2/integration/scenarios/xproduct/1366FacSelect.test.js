@@ -10,9 +10,9 @@ var receipt = new (require('../../pageObjects/cxinit/receipt-page.js'));
 
 var enrollPage = new (require('../../pageObjects/cxinit/enroll-page.js'));
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.1366FacSelect.json');
-var product = ['DHMO'];
+var product = ['DHMO','DPPO','AHMO','APPO'];
 // var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['CA', 'TX', 'PA', 'FL'];
+var states = ['CA', 'TX', 'PA', 'FL','NY'];
 
 //To Navigate Personla Info Page
 dataProvider(TestData.states, function (sData, sdescription) {
@@ -20,15 +20,16 @@ dataProvider(TestData.states, function (sData, sdescription) {
         dataProvider(sData.products, function (tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
-                describe('DHMO:1366: Facility Selection of Facilities workflows: State: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
+                describe('1366: Facility Selection of Facilities workflows: State: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
                     beforeEach(function () {
                         jasmine.addMatchers(custommatcher.customMatchers);
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = Utility.randomNo('Number', 10);
+                            TestData.MemberId = false;  
+                            TestData.ssn="1234560215",
+                            TestData.alternateid = "test@test.com";                            
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -52,7 +53,7 @@ dataProvider(TestData.states, function (sData, sdescription) {
                         depInfo.next.click();
                         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
                         depInfo.continue.click();
-                        if (pdescription == 'DPPO' || pdescription == 'APPO') {
+                        if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                             expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
                         }
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
@@ -64,7 +65,7 @@ dataProvider(TestData.states, function (sData, sdescription) {
 
                     it('Verify and Select any facilities for all the dependents', function () {
 
-                        if (pdescription == 'DPPO' || pdescription == 'APPO') {
+                        if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                             // facilities.selectFacility(TestData.facilityoption1);
                             facilities.selectFacility();
                             facilities.next.click();
@@ -89,7 +90,7 @@ dataProvider(TestData.states, function (sData, sdescription) {
 
                     // No Facilit is selected for any dependent for the 1st time and validated the error
                     // Repetead the same for all the dependents added
-                    if (pdescription == 'DPPO' || pdescription == 'APPO') {
+                    if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                         it('Verify and No Option is Selected in the facilities page for dependents', function () {
 
                             //Validate Enrolle without selecting any Facility and the respective error

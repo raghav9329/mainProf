@@ -13,6 +13,7 @@
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
     "ZipCode": "94105",
+    "referralSource": "Email Advertisement",
     "brokernumber": "201285",
     "coverageStartDate": "07/01/2017",
     "ariainvalid": "success",
@@ -30,22 +31,7 @@
     "deltaRating": 1,
     "queryAnswer": "Test",
      "discloser": "Delta_CA_DHMO_CAA55",
-    "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/05/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-10-1981"
-    },
+    
 
     "Spouse": {
         "relationship": "Spouse",

@@ -66,6 +66,15 @@ class PaymentLocators {
         this.routingNumberError = by.id('routingNumber-error');
         this.accountNumberError = by.id('accountNumber-error');
         this.discloser= by.css('div.eCopyLayout a');
+
+        this.authorizetxt = by.xpath('//input[@id="auth"]/following::div[@class="indented-text"]');
+        this.paymentagreementTxt = by.xpath('//input[@id="saveAddress"]/following::div[@class="indented-text"]');
+        this.disclouserFormOption1 = by.xpath('//input[@id="eCopy"]/following::p[1]');
+        this.disclouserFormOption2 = by.xpath('//input[@id="mailed_copy"]/following::p[1]');
+        this.refundCCpaymentsTxt = by.xpath('//p[@class="agreement-statement"]/following::p[1]');
+        this.paymentAuthorizationTxt = by.xpath('//div[@class="details-container"]/p');
+        this.enrollmentfeeTxt = by.xpath('//div[@class="more-info-box enrollmentHidden"]/p');
+        this.discloserTxt = by.xpath('//div[@id="billing"]/following::p[1]');
     }
 
 }

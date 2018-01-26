@@ -12,7 +12,7 @@ describe('Providers CXAUTO:38-1 ', function () {
     var BackendTotal;
 
     dataProvider(TestData.testdata, function (data, description) {
-        it(" REST API with FreeText" + Utility.getapiurl('PROVIDERS', '', data.params) + " ", function (doneFn) {
+        it(" REST API with FreeText: " + Utility.getapiurl('PROVIDERS', '', data.params) + " ", function (doneFn) {
 
             let apiurl = Utility.getapiurl('PROVIDERS', '', data.params);
             logger.info("api url ------" + apiurl);
@@ -27,7 +27,7 @@ describe('Providers CXAUTO:38-1 ', function () {
                 })
                 .done(doneFn);
         });
-        it('Verification Total Count of retrived result', function () {
+        it('Verification Total Count of retrived result: '+data.verify.zipcode + ", " + data.verify.free_text, function () {
 
             dirSearch.location.setText(data.verify.zipcode);
             dirSearch.keywordSearch.setText(data.verify.free_text);

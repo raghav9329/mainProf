@@ -43,6 +43,7 @@ describe('Providers CXAUTO:36 ', function() {
                             pState = json.address.state;
                             pZipcode = json.address.zipcode;
                             pDistance = json.distance + " mi";
+
                             pYelpId = json.yelpId
                             pGender = json.gender;
                             pNPI = json.npi
@@ -72,15 +73,20 @@ describe('Providers CXAUTO:36 ', function() {
         });
 
 
-        it('ProvDir_1: Should verify Provider Page, Facility Page and Office Page by View link', function() {
+        it('ProvDir_1: Should verify Provider Page, Facility Page and Office Page by View link with ' + data.params.zipcode, function() {
             dirSearch.location.setText(data.params.zipcode);
             dirSearch.findDentist.click();
             expect(dirSearch.getProviderdetails(pPname, 'PROVIDER')).toEqual(pPname);
             expect(dirSearch.getProviderdetails(pPname, 'SPECIALTY')).toEqualIgnoreCase(pSpecialty);
             expect(dirSearch.getProviderdetails(pPname, 'PLACENAME')).toEqualIgnoreCase(pOfficeName);
             expect(dirSearch.getProviderdetails(pPname, 'ADDRESS')).toContainIgnoreCase(paddress);
-            expect(dirSearch.getProviderdetails(pPname, 'MILAGE')).toContainIgnoreCase(pDistance);
-
+            if (pDistance == "0") {
+                pDistance = "<0.1 mi";
+                expect(dirSearch.getProviderdetails(pPname, 'MILAGE')).toContainIgnoreCase(pDistance);
+            }else{
+                expect(dirSearch.getProviderdetails(pPname, 'MILAGE')).toContainIgnoreCase(pDistance);
+            }
+            
             providerDetails.openView(pPname, 'VIEW');
 
             //Provider Distance Verefication   

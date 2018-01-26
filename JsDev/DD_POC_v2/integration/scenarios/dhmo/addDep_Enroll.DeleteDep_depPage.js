@@ -5,14 +5,13 @@ var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
 var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
 var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-
 var pdf2Text = require('pdf2text')
-var product = ['DHMO'];
-// var product = ['DHMO','DPPO','AHMO','APPO'];
-var states = ['CA', 'NY'];
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
-//To Navigate Personal Info Page
-dataProvider(TestData.states, function(sData, sdescription) {
+var product = ['DHMO', 'DPPO'];
+
+//To Navigate Personla Info Page
+dataProvider(statesData.states, function(sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
         dataProvider(sData.products, function(tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
@@ -22,7 +21,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     beforeAll(function() {
                         Utility.openApplication('', 'DELTA');
                     });
-                    beforeEach(function () {
+                    beforeEach(function() {
                         jasmine.addMatchers(custommatcher.customMatchers);
                     });
 
@@ -36,10 +35,26 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     });
 
                     it('E2E_Flow_2: Verify Personal Information Page is filled with Valid data and Proceed', function() {
+                        if (pdescription == 'DHMO' || pdescription == 'DPPO') {
+                            TestData.MemberId = false;
+                            TestData.ssn = "1234560215",
+                                TestData.alternateid = "test@test.com";
+                        }
+                        if (pdescription == 'AHMO' || pdescription == 'APPO') {
+                            TestData.MemberId = Utility.randomNo('Number', 10);
+                            TestData.ssn = false;
+                            TestData.alternateid = false;
+                        }
                         perInfo.fillPersonalInfo(TestData);
                         perInfo.fillAddress(tData);
                         perInfo.phoneNumberemail(TestData);
-                        perInfo.fillBroker(TestData);
+                        if (pdescription == 'DHMO' || pdescription == 'DPPO') {
+                            perInfo.fillBroker(TestData);
+                        }
+                        if (pdescription == 'AHMO' || pdescription == 'APPO') {
+                            perInfo.referralSource.selectByText(TestData.referralSource);
+                            perInfo.next.click();
+                        }
                         expect(browser.getTitle()).toEqual(TestData.DependentTitle);
                     });
 
@@ -54,7 +69,6 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     })
                     it('E2E_Flow_4: Verify 2 dependents were added and furnished with valid Test Data for Each of them', function() {
                         depInfo.fillDependent('Dependent1', TestData.domesticpartner1, true);
-                        // depInfo.fieldAddDependents.click();
                         depInfo.fillDependent('Dependent2', TestData.child3, false);
                         depInfo.next.click();
                         Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
@@ -62,44 +76,38 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
                     });
 
-
-                    it('E2E_Flow_5: Verify and select a Facility for the primary', function() {
-                        /*facilities.selectFacility(TestData.facilityoption1);
-                        facilities.next.click();*/
-
-                        facilities.selectFacility().then(function(fnamee) {
-                            facility1 = fnamee;
+                    if (pdescription == 'DHMO' || pdescription == 'AHMO') {
+                        it('E2E_Flow_5: Verify and select a Facility for the primary', function() {
+                            facilities.selectFacility().then(function(fnamee) {
+                                facility1 = fnamee;
+                            });
+                            facilities.next.click();
                         });
-                        facilities.next.click();
-                    });
 
-                    it('E2E_Flow_5_1: Verify and select the facilities for dependents', function() {
-                        /*facilities.selectFacility(TestData.facilityoption2);
-                        facilities.next.click();*/
-
-                        facilities.selectFacility().then(function(fnamee) {
-                            facility2 = fnamee;
+                        it('E2E_Flow_5_1: Verify and select the facilities for dependents', function() {
+                            facilities.selectFacility().then(function(fnamee) {
+                                facility2 = fnamee;
+                            });
+                            facilities.next.click();
                         });
-                        facilities.next.click();
-                    });
 
-                    it('E2E_Flow_5_2: Verify and select the facilities for dependents', function() {
-                        /*facilities.selectFacility(TestData.facilityoption3);
-                        facilities.next.click();*/
-
-                        facilities.selectFacility().then(function(fnamee) {
-                            facility3 = fnamee;
+                        it('E2E_Flow_5_2: Verify and select the facilities for dependents', function() {
+                            facilities.selectFacility().then(function(fnamee) {
+                                facility3 = fnamee;
+                            });
+                            facilities.next.click();
+                            expect(browser.getTitle()).toEqual(TestData.paymentTitle);
                         });
-                        facilities.next.click();
-                        expect(browser.getTitle()).toEqual(TestData.paymentTitle);
-                    });
+                    }
 
                     it('E2E_Flow_6: Validate and Verify the Errors of both the Client and Server in the Payment Page', function() {
-                        expect(payment.discloser.getAttribute('href')).toContain(tData.discloser);
-                        payment.discloser.click();
-                        Utility.switchToWindow(1);
-                        expect(browser.getCurrentUrl()).toContain(tData.discloser);
-                        Utility.switchToWindow(0);
+                        if (pdescription == 'DHMO' || pdescription == 'DPPO') {
+                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser);
+                            payment.discloser.click();
+                            Utility.switchToWindow(1);
+                            expect(browser.getCurrentUrl()).toContain(tData.discloser);
+                            Utility.switchToWindow(0);
+                        }
                         payment.billingAddress.click();
                         payment.billingChkBox.unCheck();
                         payment.purchaseNow.click();
@@ -108,18 +116,21 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         expect(payment.getCCServerValidationMessages()).toEqual(TestData.paymentErrors);
                         expect(payment.getBillingAddressServerValidationMessages()).toEqual(TestData.paymentAddressErrors);
                     });
-                    // if (testExecutionEnv != 'production') {
+
                     it('E2E_Flow_7: Validate and Verify Payment Page Details with valid Test Data', function() {
                         payment.billingChkBox.check();
                         payment.fillpayment(TestData);
+                        if (pdescription == 'AHMO' || pdescription == 'APPO') {
+                            payment.frequencyAnnualy.select();
+                        }
                         payment.purchaseNow.click();
                         Utility.delay(maxWait);
                         expect(browser.getTitle()).toEqual(TestData.receiptTitle);
                     });
-                    // }
+
 
                     it('E2E_Flow_8 :Should display plansummary', function() {
-                        var plansummary = tData.planSummary;
+                        var plansummary = TestData.planSummary;
                         receipt.planSummary.click();
                         receipt.applicationNumber.getText().then(function(appicationNumber) {
                             console.log("Application Number == " + appicationNumber);
@@ -139,27 +150,28 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         expect(receipt.getPlanSummaryByKey('Crowns').getText()).toEqual(plansummary.Crowns);
                         expect(receipt.getPlanSummaryByKey('Orthodontics').getText()).toEqual(plansummary.Orthodontics);
                     });
-
-                    it('E2E_Flow_9 :Should display primary applicant', function() {
-                        var facility = TestData.primaryFacility;
-                        receipt.verifyPixel(sdescription, pdescription);
-                        receipt.saveCompletedApplication.click().then(function() {
-                            pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
-                        })
-                        receipt.applicants.click();
-                        receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
-                            expect(facilitydata.name).toContain(TestData.firstname);
-                            expect(facilitydata.facilityName).toEqual(TestData.primaryFacility.facilityName);
-                            expect(facilitydata.street).toEqual(facility.street);
-                            expect(facilitydata.city).toEqual(facility.city);
-                            expect(facilitydata.region).toEqual(facility.region);
-                            expect(facilitydata.postalCode).toEqual(facility.postalCode);
-                            expect(facilitydata.telephone).toEqual(facility.telephone);
-                            Utility.readPDFFile(pathToPdf).then(function(test) {
-                                expect(test).toContain(TestData.firstname);
+                    if (pdescription == 'DHMO' || pdescription == 'AHMO') {
+                        it('E2E_Flow_9 :Should display primary applicant', function() {
+                            var facility = TestData.primaryFacility;
+                            receipt.verifyPixel(sdescription, pdescription);
+                            receipt.saveCompletedApplication.click().then(function() {
+                                pathToPdf = './PDFDownloads/application' + apNumber + '.pdf';
+                            })
+                            receipt.applicants.click();
+                            receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
+                                expect(facilitydata.name).toContain(TestData.firstname);
+                                expect(facilitydata.facilityName).toEqual(TestData.primaryFacility.facilityName);
+                                expect(facilitydata.street).toEqual(facility.street);
+                                expect(facilitydata.city).toEqual(facility.city);
+                                expect(facilitydata.region).toEqual(facility.region);
+                                expect(facilitydata.postalCode).toEqual(facility.postalCode);
+                                expect(facilitydata.telephone).toEqual(facility.telephone);
+                                Utility.readPDFFile(pathToPdf).then(function(test) {
+                                    expect(test).toContain(TestData.firstname);
+                                });
                             });
                         });
-                    });
+                    }
 
                 });
             }

@@ -21,6 +21,7 @@ describe('Providers CXAUTO:77 ', function() {
             frisby.get(apiurl)
                 .then(function(res) {
                     let json = res.json;
+                    expect(json.providers.length).toBeGreaterThan(0);
                     var providerkey = json.providers[0].providerKey;
                     let providerKeyAPI = Utility.getapiurl('PROVIDERKEY', providerkey, data.params1);
                     console.log("providerKeyAPI=====" + providerKeyAPI);
@@ -28,7 +29,7 @@ describe('Providers CXAUTO:77 ', function() {
                         .then(function(res1) {
                             let json = res1.json;
                             pPname = json.firstName + " " + json.lastName;
-                            console.log("pPname=========="+pPname);
+
                         })
                 })
                 .done(doneFn);

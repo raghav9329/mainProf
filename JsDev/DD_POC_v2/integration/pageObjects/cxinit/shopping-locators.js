@@ -5,7 +5,7 @@ class ShoppingPageLocators {
 
         // Shopping page objects
         this.back = by.css('a.back-arrow-link');
-         this.headerContent = by.css('h1.shopping-header-content');
+        this.headerContent = by.css('h1.shopping-header-content');
         this.State = by.name('state');
         this.Zipcode = by.name('zip');
         this.NoOFCovered = by.id('noofcovered');
@@ -19,7 +19,40 @@ class ShoppingPageLocators {
         this.removeDependent = by.id('minusButton');
         this.serverErrMsgnoofCovered = by.css('a.error.noofcovered-error');
         this.serverErrMsgZipcode = by.css('a.error.zip-error');
-        this.zipCodeserverError = by.css('div.error-container.global-margin')
+        this.serverErrMsgInvalidZipcode = by.css('a.error');
+        this.zipCodeserverError = by.css('div.error-container.global-margin');
+        this.fieldBdMM = by.id('app0_dob_month');
+        this.fieldBdDD = by.id('app0_dob_day');
+        this.fieldBdYyyy = by.id('app0_dob_year');
+        this.appErrorMsgs = by.xpath('//fieldset[@id="birthdate-fieldset"]/following-sibling::div');
+
+        this.dependentfieldDBMM = function(dependentName) {
+            var number = dependentName.split('Dependent')[1];
+            return by.xpath('//legend[text()="Dependent ' + number + ' Birthdate "]//following::input[1]');
+        };
+        this.dependenterrorfieldDBMM = function(dependentName) {
+            var number = dependentName.split('Dependent')[1];
+            return by.xpath('(//legend[normalize-space(text())="Dependent ' + number + ' Birthdate"]/ancestor::fieldset/following-sibling::div/a[contains(@id,"dob_month")])[1]');
+        };
+        this.dependentfieldDBDD = function(dependentName) {
+            var number = dependentName.split('Dependent')[1];
+            return by.xpath('//legend[text()="Dependent ' + number + ' Birthdate "]//following::input[2]');
+        };
+
+        this.dependenterrorfieldDBDD = function(dependentName) {
+            var number = dependentName.split('Dependent')[1];
+            return by.xpath('(//legend[normalize-space(text())="Dependent ' + number + ' Birthdate"]/ancestor::fieldset/following-sibling::div/a[contains(@id,"dob_day")])[1]');
+        };
+
+        this.dependentfieldDBYY = function(dependentName) {
+            var number = dependentName.split('Dependent')[1];
+            return by.xpath('//legend[text()="Dependent ' + number + ' Birthdate "]//following::input[3]');
+        };
+
+        this.dependenterrorfieldDBYY = function(dependentName) {
+            var number = dependentName.split('Dependent')[1];
+            return by.xpath('(//legend[normalize-space(text())="Dependent ' + number + ' Birthdate"]/ancestor::fieldset/following-sibling::div/a[contains(@id,"dob_year")])[1]');
+        };
 
         /*this.PlanName = by.name('planName');
         this.PlanType = by.name('planType');

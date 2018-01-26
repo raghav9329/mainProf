@@ -13,6 +13,7 @@
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
     "ZipCode": "94105",
+    "referralSource": "Email Advertisement",
     "brokernumber": "201285",
     "coverageStartDate": "07/01/2017",
     "ariainvalid": "success",
@@ -30,23 +31,7 @@
     "updateRelationship": "Child",
       "discloser": "Delta_CA_DHMO_CAA55",
 
-    "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/5/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "4",
-        "dob": "05-10-1981",
-        "dependentsDOB":["05-10-1995","05-10-2002","07-19-1999"] 
-    },
+    
 
     "domesticpartner1": {
         "relationship": "Domestic Partner",
@@ -72,7 +57,7 @@
         "middleName": "K",
         "lastName": "lastName",
         "gender": "Female",
-        "DOB": "05-10-2002"
+        "DOB": "05-10-2003"
     },
 
     "child4": {
@@ -81,7 +66,7 @@
         "middleName": "m",
         "lastName": "lastName",
         "gender": "Non Binary",
-        "DOB": "07-19-1999"
+        "DOB": "07-19-2004"
     },
 
     "child5": {
@@ -90,7 +75,7 @@
         "middleName": "Q",
         "lastName": "lastName",
         "gender": "Non Binary",
-        "DOB": "12-28-1995"
+        "DOB": "12-28-2005"
     },
 
     "child6": {
@@ -99,7 +84,7 @@
         "middleName": "m",
         "lastName": "lastName",
         "gender": "Female",
-        "DOB": "05-10-1995"
+        "DOB": "05-10-2006"
     },
 
     "dependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year"],

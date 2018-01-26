@@ -1,0 +1,32 @@
+{
+    "Location": {
+        "Location1": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "100",
+                "max": "100",
+                "meta_data": false,
+                "specialty": [
+                    "GENERAL DENTIST"
+                ]
+            },
+            "params1": {}
+        },
+        "Location2": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "500",
+                "max": "500",
+                "meta_data": false,
+                "specialty": [
+                    "GENERAL DENTIST"
+                ]
+            },
+            "params1": {}
+        }
+    }
+}

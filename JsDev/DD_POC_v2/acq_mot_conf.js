@@ -1,23 +1,23 @@
  var mkdirp = require('mkdirp');
  var rmdir = require('rimraf');
- var path = require('path');
+ var path = require("path");
  var suitesFile = require('./suites.js');
+
  exports.config = {
      framework: 'jasmine2',
      // seleniumAddress: 'http://localhost:4444/wd/hub',
 
      //specs: ['integration/scenarios/cxinit/*.test.js'],
-     // specs: ['integration/scenarios/*.js', 'integration/scenarios/cxinit/*.js', 'integration/scenarios/aarphmo/*.js'],
-
+    specs: ['integration/scenarios/dhmo/507PersInfo.test.js'],
 	suites: suitesFile.suitesCollection,
 
 
-     seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.6.0.jar',
-     chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.33.exe',
-     geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.19.0.exe',
+     //seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.6.0.jar',
+     //chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.33.exe',
+     //geckodriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.19.0.exe',
 
      beforeLaunch: function() {
-         mkdirp('./PDFDownloads/', function(err) {});
+         mkdirp('./PDFDownloads/', function(err) { });
      },
 
 
@@ -41,12 +41,15 @@
          PAGELOADTIME = 60000;        
          isExecutionFromUI = true;
          testDataEnv = 'mot';
-         testExecutionEnv = 'staging';
+		 testExecutionEnv = 'staging';
+         highlightElement = true;
+	 if (browser.params.apiurl.includes('https')) process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+         browser.manage().timeouts().implicitlyWait(browser.params.exeInspDelay);
          browser.manage().window().setSize(1050, 1250);
          browser.ignoreSynchronization = true;
          folderName = (new Date()).toString().split('').splice(1, 4).join('');
          require("./integration/utils/element-finder-extensions.js");
-
+         custommatcher = require('./integration/utils/custom_matcher.js');
          Utility = new(require("./integration/utils/common.js"));
          assert = require('assert');
          frisby = require('frisby');
@@ -64,10 +67,10 @@
          logger = log4js.getLogger('Delta');
          logger.setLevel(browser.params.exeLogging);
      },
-
+	 
      capabilities: {
          browserName: 'chrome',
-         shardTestFiles: true,
+ //      shardTestFiles: true,
          maxInstances: 1,
          chromeOptions: {
              'args': ["disable-infobars"],

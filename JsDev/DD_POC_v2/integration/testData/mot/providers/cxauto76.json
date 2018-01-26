@@ -1,0 +1,36 @@
+{
+    "Location": {
+        "Location1": {
+            "actual": {
+                "Loc": "San Francisco, CA 94105, USA",
+                "Dist": "60 miles",
+                "Network": ["Delta Dental PPO", "Delta Dental Premier"],
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+            "expected": {
+                "Loc": "San Francisco, CA 94105, USA",
+                "Dist": "60 miles",
+                "specialty1": "general dentists",
+                "specialty2": "endodontists",
+                "network1": "PPO",
+                "network2": "Premier"
+            }
+        },
+        "Location2": {
+            "actual": {
+                "Loc": "Novato, CA 94949, USA",
+                "Dist": "60 miles",
+                "Network": ["Delta Dental PPO", "Delta Dental Premier"],
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+            "expected": {
+                "Loc": "Novato, CA 94949, USA",
+                "Dist": "60 miles",
+                "specialty1": "general dentists",
+                "specialty2": "endodontists",
+                "network1": "PPO",
+                "network2": "Premier"
+            }
+        }
+    }
+}

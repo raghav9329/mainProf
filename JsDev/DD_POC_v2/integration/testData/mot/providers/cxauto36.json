@@ -12,7 +12,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+            "params1": {
+                "lat": "37.7890",
+                "long": "-122.3915"
+            }
         },
         "Location2": {
             "params": {
@@ -26,7 +29,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+            "params1": {
+                "lat": "38.0600",
+                "long": "-122.5033"
+            }
         },
         "Location3": {
             "params": {
@@ -40,7 +46,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+            "params1": {
+                "lat": "34.7364",
+                "long": "-86.5502"
+            }
         },
         "Location4": {
             "params": {
@@ -54,7 +63,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+            "params1": {
+                "lat": "61.2200",
+                "long": "-149.9000"
+            }
         },
         "Location5": {
             "params": {
@@ -68,7 +80,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+           "params1": {
+                "lat": "33.4688",
+                "long": "-112.1967"
+            }
         },
         "Location6": {
             "params": {
@@ -82,7 +97,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+             "params1": {
+                "lat": "34.7151821",
+                "long": "-92.5098914"
+            }
         },
         "Location7": {
             "params": {
@@ -96,7 +114,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+             "params1": {
+                "lat": "33.0221231",
+                "long": "-117.074507"
+            }
         },
         "Location8": {
             "params": {
@@ -110,7 +131,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+             "params1": {
+                "lat": "39.8581",
+                "long": "-104.9564"
+            }
         },
         "Location9": {
             "params": {
@@ -124,7 +148,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+             "params1": {
+                "lat": "39.5327",
+                "long": "-104.8980"
+            }
         },
         "Location10": {
             "params": {
@@ -138,7 +165,10 @@
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {}
+            "params1": {
+                "lat": "41.7371",
+                "long": "-72.7274"
+            }
         }
     }
 }

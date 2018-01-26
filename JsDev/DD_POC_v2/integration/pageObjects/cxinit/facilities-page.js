@@ -40,6 +40,7 @@ class FacilitiesPage extends ControlBase {
         this.facilityRegion = new Label(this.pageObjects.facilityRegion);
         this.facilityZipCode = new Label(this.pageObjects.facilityZipCode);
         this.facilityPhone = new Label(this.pageObjects.facilityPhone);
+        this.facilitySelectiontext = new Label(this.pageObjects.facilitySelectiontext);
 
 
     };

@@ -1,0 +1,364 @@
+{
+    "Location": {
+        "Location1": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+
+            "ppo": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2ppo",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+            "premier": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2premier",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+            "deltacare": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2deltacare",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+            "verify": {
+                "zipcode": "94105"
+            }
+        },
+        "Location2": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+
+            "ppo": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2ppo",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+            "premier": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2premier",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+            "deltacare": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2deltacare",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+            "verify": {
+                "zipcode": "94105"
+            }
+        },
+        "Location3": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false,
+                "specialty": ["Full-time faculty", "Oral Pathology"]
+            },
+
+            "ppo": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2ppo",
+                "meta_data": false,
+                "specialty": ["Full-time faculty", "Oral Pathology"]
+            },
+            "premier": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2premier",
+                "meta_data": false,
+                "specialty": ["Full-time faculty", "Oral Pathology"]
+            },
+            "deltacare": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2deltacare",
+                "meta_data": false,
+                "specialty": ["Full-time faculty", "Oral Pathology"]
+            },
+            "verify": {
+                "zipcode": "94105"
+            }
+        },
+        "Location4": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false,
+                "specialty": ["X-ray laboratory", "Prosthodontist"]
+            },
+
+            "ppo": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2ppo",
+                "meta_data": false,
+                "specialty": ["X-ray laboratory", "Prosthodontist"]
+            },
+            "premier": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2premier",
+                "meta_data": false,
+                  "specialty": ["X-ray laboratory", "Prosthodontist"]
+            },
+            "deltacare": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2deltacare",
+                "meta_data": false,
+                  "specialty": ["X-ray laboratory", "Prosthodontist"]
+            },
+            "verify": {
+                "zipcode": "94105"
+            }
+        },
+        "Location5": {
+            "params": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+
+            "ppo": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2ppo",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+            "premier": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2premier",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+            "deltacare": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2deltacare",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST"]
+            },
+            "verify": {
+                "zipcode": "94949"
+            }
+        },
+        "Location6": {
+            "params": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+
+            "ppo": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2ppo",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+            "premier": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2premier",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+            "deltacare": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2deltacare",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST", "Endodontist"]
+            },
+            "verify": {
+                "zipcode": "94949"
+            }
+        },
+        "Location7": {
+            "params": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false,
+                "specialty": ["Full-time faculty", "Oral Pathology"]
+            },
+
+            "ppo": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2ppo",
+                "meta_data": false,
+                "specialty": ["Full-time faculty", "Oral Pathology"]
+            },
+            "premier": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2premier",
+                "meta_data": false,
+                "specialty": ["Full-time faculty", "Oral Pathology"]
+            },
+            "deltacare": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2deltacare",
+                "meta_data": false,
+                "specialty": ["Full-time faculty", "Oral Pathology"]
+            },
+            "verify": {
+                "zipcode": "94949"
+            }
+        },
+        "Location8": {
+            "params": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false,
+                "specialty": ["X-ray laboratory", "Prosthodontist"]
+            },
+
+            "ppo": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2ppo",
+                "meta_data": false,
+                "specialty": ["X-ray laboratory", "Prosthodontist"]
+            },
+            "premier": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2premier",
+                "meta_data": false,
+                  "specialty": ["X-ray laboratory", "Prosthodontist"]
+            },
+            "deltacare": {
+                "zipcode": "94949",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "network": "2deltacare",
+                "meta_data": false,
+                  "specialty": ["X-ray laboratory", "Prosthodontist"]
+            },
+            "verify": {
+                "zipcode": "94949"
+            }
+        }
+    }
+}

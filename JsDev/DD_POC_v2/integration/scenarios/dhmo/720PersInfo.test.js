@@ -7,9 +7,9 @@ var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.720PersInfo
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
 
-var product = ['DHMO'];
-// var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['NY'];
+// var product = ['DHMO'];
+var product = ['DHMO','DPPO','AHMO','APPO']; 
+var states = ['CA'];
 
 //To Navigate Personla Info Page
 dataProvider(TestData.states, function(sData, sdescription) {
@@ -17,7 +17,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
         dataProvider(sData.products, function(tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
-                describe('DHMO:720: Address Suggestion Mailing-PersInfo', function() {
+                describe('DHMO:720: Address Suggestion Mailing-PersInfo ' + sdescription + 'Product:' + pdescription + '', function() {
 
                     beforeAll(function() {
                         console.log('cxinit 720');
@@ -25,7 +25,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
                     beforeEach(function() {
                         jasmine.addMatchers(custommatcher.customMatchers);
-                        Utility.openApplication('', 'DELTA');
+                        Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
                     });
                     it('Verify partial address is present in address suggestions list for Mailing Address', function() {

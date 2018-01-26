@@ -22,20 +22,16 @@ Validation of the above is applicable for all the fields of the Home address lik
 var TestData = require('../../testData/' + testDataEnv + '/dhmo/dhmo.489PersInfo.json');
 var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
+var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 
-
-var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['NY', 'CA', 'TX', 'PA', 'FL'];
-
-
-//To Navigate Personal Info Page
-dataProvider(TestData.states, function(sData, sdescription) {
+//To Navigate Personla Info Page
+// dataProvider(TestData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function (sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
-        dataProvider(sData.products, function(tData, pdescription) {
+        dataProvider(sData.products, function (tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
-
                 //To Navigate Personla Info Page
-                describe('DHMO:489: AddrHome flds-PersInfo State:' + sdescription + 'Product:' + pdescription + '', function() {
+                describe('489: AddrHome flds-PersInfo State: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
 
                     //State and zipcode are pre-filled.State-CA & Zipcode-94560
                     //Flow 1: Tab/click in and tab/click out of the fields
@@ -102,7 +98,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
 
                 //To Navigate Personla Info Page
-                describe('DHMO-489: Validate Home Addr w/ valid & invalid data State:' + sdescription + 'Product:' + pdescription + '', function() {
+                describe('489: Validate Home Addr w/ valid & invalid data State:' + sdescription + 'Product:' + pdescription + '', function() {
                     beforeAll(function() {
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
@@ -177,7 +173,6 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         perInfo.fieldAlternateId.setText('');
                         perInfo.waitUntilLoderDisapper();
                         expect(perInfo.errinvalidAddr.getText()).toContain(data.ErrorMsg);
-                        data = tData.HAddress_SplChar;
                         perInfo.fieldHomeAddr.setText(data.Home);
                         perInfo.fieldAlternateId.setText('');
                         perInfo.waitUntilLoderDisapper();
@@ -196,9 +191,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
                     it('10X:Validate Home Addr w/ another zip code address ', function() {
                         data = TestData.Personalinfo.HAddress_ZIP;
-                        data = tData.HAddress_ZIP;
                         // perInfo.fieldHomeAddr.setText(data.Home);
-
                         perInfo.fieldHomeAddr.setText(data.HomeAddress);
                         perInfo.selectHomeAddress(data.FullAddress);
                         expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_success);
@@ -228,16 +221,15 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
                 // Validating the City field with the multiple valid and Invalid Test Data
 
-                describe('DHMO-489: Validate city w/ valid and invalid data State:' + sdescription + 'Product:' + pdescription + '', function() {
+                describe('489: Validate city w/ valid and invalid data State:' + sdescription + 'Product:' + pdescription + '', function() {
                     beforeEach(function() {
-                        Utility.openApplication('', tData.product);
-                        Utility.openApplication('', 'DELTA');
+                        Utility.openApplication('', tData.product);                  
                         enrollPage.enterHomePageDetails(tData.enrollData);
                     });
 
                     //Validated the City Field with Valid City value from Json as City1 in the dhmo.489PersInfo.json
                     it('12 should pass ' + TestData.City1 + ' data in city', function() {
-                        perInfo.fieldHomeAddr.setText(tData.Address_Valid.Home);
+                        perInfo.fieldHomeAddr.setText(tData.fieldHomeAddr);
                         perInfo.fieldCity.setText(TestData.City1);
                         perInfo.fieldEmailAddr.click();
                         expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
@@ -272,10 +264,9 @@ dataProvider(TestData.states, function(sData, sdescription) {
                 // Validating the State field with the multiple valid and Invalid Test Data
 
 
-                describe('DHMO-489: Validate state with valid and invalid data State:' + sdescription + 'Product:' + pdescription + '', function() {
+                describe('489: Validate state with valid and invalid data State:' + sdescription + 'Product:' + pdescription + '', function() {
                     beforeEach(function() {
-                        Utility.openApplication('', tData.product);
-                        Utility.openApplication('', 'DELTA');
+                        Utility.openApplication('', tData.product);                      
                         enrollPage.enterHomePageDetails(tData.enrollData);
                     });
 
@@ -306,28 +297,20 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
                 //Validate Zipcode field with the Valid and Invalid Test Data sets for all the fields (Home address, city, state and zipcode)
 
-                describe('DHMO-489: Validate Zip fld with valid and invalid data State:' + sdescription + 'Product:' + pdescription + '', function() {
+                describe('489: Validate Zip fld with valid and invalid data State:' + sdescription + 'Product:' + pdescription + '', function() {
                     beforeEach(function() {
-                        Utility.openApplication('', tData.product);
-                        Utility.openApplication('', 'DELTA');
-                        enrollPage.enterHomePageDetails(tData.enrollData);
-                        // browser.driver.findElement(by.name('planZip')).clear().then(function() {
-                        //     browser.driver.findElement(by.name('planZip')).sendKeys('94560');
-                        //     browser.actions().sendKeys(protractor.Key.ENTER).perform();
-                        //     perInfo.fillPersonalInfo(TestData);
-                        //     //return true;
-                        // });
+                        Utility.openApplication('', tData.product);                       
+                        enrollPage.enterHomePageDetails(tData.enrollData);                  
                     });
 
                     //Validate the Zip Code Field with Valid Data
                     //Validate the Zip code Pop-up Back Functionality Cleanse the Zip code and Validated the Error
                     it('19:Should ??  Enter valid values for each field', function() {
-                        data = TestData.Address_Valid;
-                        data = tData.Address_Valid;
-                        perInfo.fieldHomeAddr.setText(data.Home);
-                        perInfo.fieldCity.setText(data.City);
+                        data = tData;
+                        perInfo.fieldHomeAddr.setText(data.fieldHomeAddr);
+                        perInfo.fieldCity.setText(data.city);
                         perInfo.fieldState.setText(data.State);
-                        perInfo.fieldZipCode.setText(data.ZIPcode);
+                        perInfo.fieldZipCode.setText(data.enrollData.ZIPcode);
                         perInfo.fieldEmailAddr.click();
                         perInfo.waitUntilLoderDisapper();
                         expect(perInfo.fieldZipCode.getAttribute("class")).not.toContain(TestData.ariainvalid_error);
@@ -337,8 +320,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
                     //Validate the Zip code Field Errors displayed with In-Valid Data
                     it('20: Should ?? Enter invalid values for each field', function() {
-                        data = TestData.Address_Invalid;
-                        data = tData.Address_Invalid;
+                        data = TestData.Address_Invalid;                        
                         perInfo.fieldHomeAddr.setText(data.Home);
                         perInfo.fieldCity.setText(data.City);
                         perInfo.fieldState.setText(data.State);
