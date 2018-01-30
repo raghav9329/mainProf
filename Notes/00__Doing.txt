@@ -1,3 +1,13 @@
+1/29/18
+Rebooting mahcine
+getting payroll
+git log looking at the stuff at the bottom from Uday
+  * Looking at   https://atlassian/confluence/display/CXINIT/2016/08/08/Automation+Test+Design
+  * npm Chai, npm mocha
+  * what can I do to compare strings that are failing in content testing..... 
+  
+  
+  
 Capture stuff done on the 'fly'  shall we say
 
 12/11/17 I think I should kill this in place of 
