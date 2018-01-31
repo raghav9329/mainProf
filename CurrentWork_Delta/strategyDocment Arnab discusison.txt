@@ -1,0 +1,20 @@
+dfeliver a framwork and api to enable the developers to 
+do the page level integratio testing
+
+enable the need for scaling across products and states
+
+Api
+
+
+
+
+top on the lsit 
+deliver the freame woark to the developers
+
+Scalability
+
+Continuous Delivery / Clockwork based test runs
+
+
+
+
