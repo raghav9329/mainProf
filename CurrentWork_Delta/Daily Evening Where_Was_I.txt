@@ -1,0 +1,25 @@
+This document.  Push down.Most recent always at the top
+Order of precedence
+
+
+
+2/5/18
+I got a new__Test-run.bat to launch the app
+	* continue!!!
+Just reviewed Shounak's Framework Document
+	* It requires an exhaustive review
+Branching document 97% finished but it's not very attractive.
+
+Still outstanding is discussing pull Req with vinay
+
+
+
+2/2/18
+I was Branch instructions in Confluence.
+I was going to modd xProduct files
+	* ../ dereference added to path cus Im in ./xProduct/Pers now
+Had a meeting with Arnab 
+	* was discussing how to abstract the frame work for other 
+	* departments to use the test automation framework
+	* without have to learn TONNS
+Vinay to show on Mon the Pull Request policies
