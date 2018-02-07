@@ -2,6 +2,9 @@ This document.  Push down.Most recent always at the top
 Order of precedence
 
 
+2/6/18  
+Strategy Document
+
 
 2/5/18
 I got a new__Test-run.bat to launch the app
