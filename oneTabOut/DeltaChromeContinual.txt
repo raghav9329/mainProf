@@ -1,0 +1,383 @@
+https://atlassian/confluence/pages/editpage.action?pageId=33786122 | ____Test Strategy - Customer Experience Initiative - Delta Dental Confluence
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=dd-cx-test%2FREADME.md%20at%20dev%20%C2%B7%20DEVPROJECTS%2Fdd-cx-test&uri=https://rc-github.deltads.ent/DEVPROJECTS/dd-cx-test/blob/dev/README.md | dd-cx-test/README.md at dev · DEVPROJECTS/dd-cx-test
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=what%20is%20git%20commit%20-a%20-%20Google%20Search&uri=https://www.google.com/search?q=what+is+git+commit+-a&rlz=1C1CHBD_enUS756US756&oq=what+is+git+commit+-a&aqs=chrome..69i57.5470j0j7&sourceid=chrome&ie=UTF-8&safe=active | what is git commit -a - Google Search
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=explainshell.com%20-%20match%20command-line%20arguments%20to%20their%20help%20text&uri=https://explainshell.com/ | explainshell.com - match command-line arguments to their help text
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=git-first-commit&uri=https://www.npmjs.com/package/git-first-commit | git-first-commit
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Bus%20Route%2027&uri=http://goldengatetransit.org/schedules/current/route_27.php | Bus Route 27
+
+https://atlassian/confluence/display/CXINIT/Temp+Page+__+ONHOLD+Work | Temp Page __ ONHOLD Work - Customer Experience Initiative - Delta Dental Confluence
+https://www.google.com/search?q=Digital+Universe&rlz=1C1CHBD_enUS756US756&oq=Digital+Universe&aqs=chrome..69i57j69i65j0l4.4127j0j7&sourceid=chrome&ie=UTF-8&safe=active | Digital Universe - Google Search
+https://www.amnh.org/our-research/hayden-planetarium/resources | Resources
+https://www.amnh.org/our-research/hayden-planetarium/digital-universe/help/ | Help
+file:///C:/Users/ca34081/Downloads/Digital%20Universe%20Guide.pdf | Digital Universe Guide
+http://virdir.ncsa.illinois.edu/partiview/ | virdir.ncsa.illinois.edu/partiview/
+http://bima.astro.umd.edu/nemo/amnh/ | Immersive 4D Interactive Visualization of Large Scale Simulations
+
+https://services.github.com/on-demand/github-cli/add-commits-git | Add Local Commits With Git - On Demand Training
+
+https://www.google.com/search?safe=active&rlz=1C1CHBD_enUS756US756&ei=y_F0WpX0B8-cjwOY65XACw&q=git+is+there+a+concept+of+cleaning+up+my+development+branch&oq=git+is+there+a+concept+of+cleaning+up+my+development+bra&gs_l=psy-ab.1.0.33i160k1l3.1801234.1818627.0.1822181.58.55.0.0.0.0.355.8088.1j26j15j1.43.0....0...1.1.64.psy-ab..15.30.6033...0j0i22i30k1j0i22i10i30k1j33i22i29i30k1j33i21k1.0.dFBDwtBcc7U | git is there a concept of cleaning up my development branch - Google Search
+
+https://railsware.com/blog/2017/11/23/best-node-js-books-to-master-the-technology/ | Best Node.js Books to Master the Technology | Blog by Railsware
+
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Getting%20Started%20Guide%20-%20Chai&uri=http://chaijs.com/guide/ | Getting Started Guide - Chai
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Assertion%20Styles%20-%20Chai&uri=http://chaijs.com/guide/styles/ | Assertion Styles - Chai
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Mocha%20-%20the%20fun%2C%20simple%2C%20flexible%20JavaScript%20test%20framework&uri=https://mochajs.org/ | Mocha - the fun, simple, flexible JavaScript test framework
+https://mochajs.org/#wallabyjs | Mocha - the fun, simple, flexible JavaScript test framework
+
+https://www.google.com/search?q=Strategy+defined&rlz=1C1CHBD_enUS756US756&oq=Strategy+defined&aqs=chrome..69i57j0l2j69i60l2j0.3215j1j7&sourceid=chrome&ie=UTF-8&safe=active | Strategy defined - Google Search
+https://en.wikipedia.org/wiki/Strategy | Strategy - Wikipedia
+https://en.wikipedia.org/wiki/Strategic_planning | Strategic planning - Wikipedia
+https://en.wikipedia.org/wiki/Strategic_thinking | Strategic thinking - Wikipedia
+https://en.wikipedia.org/wiki/Scenario_planning | Scenario planning - Wikipedia
+
+https://www.google.com/search?q=git+merge+abort&rlz=1C1CHBD_enUS756US756&oq=git+merge+abort&aqs=chrome..69i57j0l5.4178j0j7&sourceid=chrome&ie=UTF-8&safe=active | git merge abort - Google Search
+https://stackoverflow.com/questions/101752/i-ran-into-a-merge-conflict-how-can-i-abort-the-merge | git - I ran into a merge conflict. How can I abort the merge? - Stack Overflow
+https://stackoverflow.com/questions/44048982/abort-a-git-merge/44049103 | Abort a Git Merge - Stack Overflow
+
+https://www.google.com/search?q=download+visimulator.dll&rlz=1C1CHBD_enUS756US756&oq=download+visimulator.dll&aqs=chrome..69i57.1411j0j8&sourceid=chrome&ie=UTF-8&safe=active | download visimulator.dll - Google Search
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Is%20there%20vim%20plugin%20for%20notepad%2B%2B%3F%20-%20Stack%20Overflow&uri=https://stackoverflow.com/questions/12817027/is-there-vim-plugin-for-notepad | Is there vim plugin for notepad++? - Stack Overflow
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Page%20not%20found%20-%20SourceForge.net&uri=https://sourceforge.net/apps/mediawiki/notepad-plus/index.php?title=Plugin_Central | Page not found - SourceForge.net
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Wayback%20Machine&uri=https://web.archive.org/web/20150113032425/http://www.visimulator.com:80/public/p/visimulator.dll | Wayback Machine
+https://www.google.com/search?q=stand+alone+small+webserver+nginx&rlz=1C1CHBD_enUS756US756&oq=stand+alone+small+webserver+nginx&aqs=chrome..69i57.11107j0j7&sourceid=chrome&ie=UTF-8 | stand alone small webserver nginx - Google Search
+
+https://www.google.com/search?q=protracgtor+suites+configuration+examples+of+using+require+in+import+the+suite+list&rlz=1C1CHBD_enUS756US756&oq=protracgtor+suites+configuration+examples+of+using+require+in+import+the+suite+list&aqs=chrome..69i57.26278j0j7&sourceid=chrome&ie=UTF-8&safe=active | protracgtor suites configuration examples of using require in import the suite list - Google Search
+https://stackoverflow.com/questions/39758088/using-external-file-for-suite-names-in-protractor | selenium - Using external file for suite names in protractor - Stack Overflow
+https://testautomation-aditya.com/2016/12/27/how-to-externalize-suite-namespick-from-an-external-file-in-protractor/ | How to externalize suite names(pick from an external file) in Protractor? | testautomationaditya
+
+https://www.quantamagazine.org/ | Quanta Magazine – Illuminating Science | Quanta Magazine
+https://www.quantamagazine.org/new-shapes-solve-infinite-pool-table-problem-20170808/ | New Shapes Solve Infinite Pool-Table Problem | Quanta Magazine
+https://www.quantamagazine.org/what-made-the-moon-new-ideas-try-to-rescue-a-troubled-theory-20170802/ | What Made the Moon? New Ideas Try to Rescue a Troubled Theory | Quanta Magazine
+https://www.quantamagazine.org/first-support-for-a-physics-theory-of-life-20170726/ | First Support for a Physics Theory of Life | Quanta Magazine
+https://www.quantamagazine.org/scientists-unveil-a-new-inventory-of-the-universes-dark-contents-20170803/ | Scientists Unveil a New Inventory of the Universe’s Dark Contents | Quanta Magazine
+
+http://blog.scottlogic.com/2015/11/06/ProtractorForBeginnersPart1.html | Protractor For Beginners Part 1
+http://blog.scottlogic.com/2015/12/15/ProtractorForBeginnersPart2.html | Protractor For Beginners Part 2
+
+https://martinfowler.com/articles/microservices.html | Microservices
+
+https://www.google.com/search?q=what+is+q+to+node.js&cad=h&safe=active | what is q to node.js - Google Search
+http://blog.apitite.net/2015/08/a-gentle-introduction-to-nodejs.html | A Gentle Introduction to Node.js Promises with Q: Part 1
+http://www.dotnetcurry.com/nodejs/1242/promises-nodejs-using-q-goodbye-callbacks | Promises in Node.js using Q - Farewell to Callbacks | DotNetCurry
+
+https://www.google.com/search?q=hdr+photography+trey+ratcliff&rlz=1C1NHXL_enUS726US726&oq=HDR+photography+ratc&aqs=chrome.1.69i57j0.16479j0j1&sourceid=chrome&ie=UTF-8&safe=active | hdr photography trey ratcliff - Google Search
+https://www.stuckincustoms.com/learn-photography/ | Online Photography Courses, Photo Software Reviews, Camera Reviews and more
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=HDR%20Camera%20%E2%80%93%20Recommendations%20for%20the%20Best%20HDR%20Camera%20%7C%20Stuck%20In%20Customs&uri=https://www.stuckincustoms.com/hdr-camera/ | HDR Camera – Recommendations for the Best HDR Camera | Stuck In Customs
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=HDR%20Software%20%7C%20HDR%20Photography%20Software&uri=https://www.stuckincustoms.com/hdr-software/ | HDR Software | HDR Photography Software
+
+https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model | Entity–relationship model - Wikipedia
+https://en.wikipedia.org/wiki/Data_structure_diagram#Bachman_diagram | Data structure diagram - Wikipedia
+https://en.wikipedia.org/wiki/IDEF1X | IDEF1X - Wikipedia
+https://en.wikipedia.org/wiki/Class_diagram | Class diagram - Wikipedia
+https://en.wikipedia.org/wiki/Object-role_modeling | Object-role modeling - Wikipedia
+
+http://elgalu.github.io/ | Leo Gallucci's blog
+
+https://www.google.com/search?q=git+what+is+the+meaning+of+fast-forward&rlz=1C1NHXL_enUS726US726&oq=git+what+is+the+meaning+of+fast-forward&aqs=chrome..69i57j69i64.10600j0j1&sourceid=chrome&ie=UTF-8&safe=active | git what is the meaning of fast-forward - Google Search
+https://sandofsky.com/ | Benjamin Sandofsky
+https://sandofsky.com/writing.html | A Collection of Essays
+https://sandofsky.com/blog/git-workflow.html | Understanding the Git Workflow
+https://confluence.atlassian.com/bitbucket/git-fast-forwards-and-branch-management-329977726.html | Git fast forwards and branch management - Atlassian Documentation
+https://ariya.io/2013/09/fast-forward-git-merge | Fast-Forward Git Merge · ariya.io
+
+https://www.healthiq.com/long/cyclist?utm_campaign=741091830&utm_source=GoogleDisplayNetwork&utm_content=39101972619&utm_term=173708025283&utm_medium=www.smartchoiceshealthyliving.com&gclid=COnom_jP0tYCFRBEfgodNhUGmA | Special Rate Life Insurance for Cyclists - Health IQ
+
+https://www.google.com/search?q=protractor+how+to+put+to+stdout+on+expect+failures&rlz=1C1NHXL_enUS726US726&oq=protractor+how+to+put+to+stdout+on+expect+failures&aqs=chrome..69i57.26727j0j1&sourceid=chrome&ie=UTF-8&safe=active | protractor how to put to stdout on expect failures - Google Search
+https://github.com/angular/protractor/issues/565 | How to specify a reason after expect FAILS · Issue #565 · angular/protractor
+https://github.com/angular/protractor/issues/224 | Call a function when an expect fails · Issue #224 · angular/protractor
+https://github.com/jasmine/jasmine/issues/641 | Adding because descriptions to expect failures · Issue #641 · jasmine/jasmine
+https://stackoverflow.com/questions/19941739/protractor-console-log | angularjs - Protractor console log - Stack Overflow
+https://stackoverflow.com/questions/42792101/how-to-log-the-name-of-the-each-it-test-in-protractor/42799705 | jasmine - How to log the name of the each it-test in Protractor - Stack Overflow
+https://stackoverflow.com/questions/31390105/execute-code-after-jasmine-test-failure | logging - Execute code after Jasmine test failure - Stack Overflow
+https://stackoverflow.com/questions/42792101/how-to-log-the-name-of-the-each-it-test-in-protractor/43297755 | jasmine - How to log the name of the each it-test in Protractor - Stack Overflow
+http://blog.ng-book.com/capture-console-log-in-your-protractor-tests/ | Capture console.log in your Protractor Tests « ng-book.com – blog
+
+https://www.google.com/search?q=protractor+can+I+define+suites+of+test+in+one+file+and+require+it+in+my+spec.conf.js+file&rlz=1C1NHXL_enUS726US726&oq=protractor+can+I+define+suites+of+test+in+one+file+and+require+it+in+my+spec.conf.js+file&aqs=chrome..69i57.28187j0j1&sourceid=chrome&ie=UTF-8&safe=active | protractor can I define suites of test in one file and require it in my spec.conf.js file - Google Search
+https://github.com/angular/protractor/blob/master/docs/api-overview.md | protractor/api-overview.md at master · angular/protractor
+https://github.com/angular/angular-cli/issues/807 | Target e2e suite · Issue #807 · angular/angular-cli
+https://github.com/angular/protractor-accessibility-plugin/issues/4 | Protractor suites and Accessibility-pluging · Issue #4 · angular/protractor-accessibility-plugin
+https://stackoverflow.com/questions/32100063/how-do-i-run-multiple-protractor-test-suites-at-once | javascript - How do I Run multiple protractor test suites at once? - Stack Overflow
+https://stackoverflow.com/questions/37173251/how-can-parametrize-protractor-config-file-for-different-browsers-and-test-suite | how can Parametrize protractor-config file for different browsers and test suites - Stack Overflow
+https://stackoverflow.com/questions/24232511/how-can-i-set-up-common-functions-that-are-available-for-my-test-suites-with-pro | javascript - How can I set up common functions that are available for my test suites with Protractor / Selenium? - Stack Overflow
+https://stackoverflow.com/questions/29406962/can-i-access-parameters-in-my-protractor-configuration-file | javascript - Can I access parameters in my protractor configuration file? - Stack Overflow
+
+https://www.google.com/search?q=what+is+protractor-accessibility-plugin&rlz=1C1NHXL_enUS726US726&oq=what+is+protractor-accessibility-plugin&aqs=chrome..69i57.4279j0j1&sourceid=chrome&ie=UTF-8&safe=active | what is protractor-accessibility-plugin - Google Search
+https://github.com/angular/protractor-accessibility-plugin | angular/protractor-accessibility-plugin: Runs a set of accessibility audits
+https://marcysutton.com/angular-protractor-accessibility-plugin/ | Protractor Accessibility Plugin | MarcySutton.com
+https://stackoverflow.com/questions/32336172/protractor-accessibility-reporting | javascript - Protractor Accessibility reporting - Stack Overflow
+
+https://www.google.com/search?q=javascript+examaples+captureing+command+line+arguments+and+writing+to+a+file&rlz=1C1NHXL_enUS726US726&oq=javascript+examaples+captureing+command+line+arguments+and+writing+to+a+file&aqs=chrome..69i57.29383j0j1&sourceid=chrome&ie=UTF-8&safe=active | javascript examaples captureing command line arguments and writing to a file - Google Search
+https://medium.freecodecamp.org/writing-command-line-applications-in-nodejs-2cf8327eee2 | Writing Command-Line Applications in NodeJS – freeCodeCamp
+https://www.google.com/search?safe=active&q=nodejs+get+hostname+of+server&cad=h | nodejs get hostname of server - Google Search
+https://stackoverflow.com/questions/7507015/get-hostname-of-current-request-in-node-js-express | Get hostname of current request in node.js Express - Stack Overflow
+
+https://www.google.com/search?q=protractor+does+the+config.js+file+have+access+to+what+the+command+line+input+was+%3F&rlz=1C1NHXL_enUS726US726&oq=protractor+does+the+config.js+file+have+access+to+what+the+command+line+input+was+%3F&aqs=chrome..69i57.26194j0j1&sourceid=chrome&ie=UTF-8&safe=active | protractor does the config.js file have access to what the command line input was ? - Google Search
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Protractor%20Parameters%3A%20Adding%20Flexibility%20to%20Automation%20Tests%20-%20Modus%20Create&uri=http://moduscreate.com/protractor_parameters_adding_flexibility_automation_tests/ | Protractor Parameters: Adding Flexibility to Automation Tests - Modus Create
+https://github.com/angular/protractor/issues/102 | reading configuration parameters from the configuration file · Issue #102 · angular/protractor
+
+https://www.google.com/search?q=protractor+how+can+I+slow+down+execution&rlz=1C1NHXL_enUS726US726&oq=protractor+how+can+I+slow+down+execution&aqs=chrome..69i57.7560j0j1&sourceid=chrome&ie=UTF-8&safe=active | protractor how can I slow down execution - Google Search
+https://github.com/angular/protractor/issues/2986 | Method for slowing down the tests · Issue #2986 · angular/protractor
+https://www.linkedin.com/pulse/control-speed-running-tests-sachini-chathurika | Control the Speed of Running Tests | Sachini Chathurika | Pulse | LinkedIn
+
+https://www.google.com/search?q=why+does+webdriver+manager+update+download+selenium-server-standalone-2.53.1.jar&rlz=1C1NHXL_enUS726US726&oq=why+does+webdriver+manager+update+download+selenium-server-standalone-2.53.1.jar&aqs=chrome..69i57.42294j0j1&sourceid=chrome&ie=UTF-8&safe=active | why does webdriver manager update download selenium-server-standalone-2.53.1.jar - Google Search
+http://docs.seleniumhq.org/download/ | Downloads
+https://www.npmjs.com/package/selenium-webdriver | selenium-webdriver
+
+https://www.google.com/search?q=protractor+pause+and+restart+at+runtime&rlz=1C1NHXL_enUS726US726&oq=protractor+pause+and+restart+at+runtime&aqs=chrome..69i57.7086j0j1&sourceid=chrome&ie=UTF-8&safe=active | protractor pause and restart at runtime - Google Search
+https://github.com/angular/protractor/blob/master/docs/debugging.md | protractor/debugging.md at master · angular/protractor
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Pausing%20Protractor&uri=http://ng-learn.org/2014/04/Pausing-Protractor/ | Pausing Protractor
+https://stackoverflow.com/questions/31406948/how-to-resume-from-debugger-without-interrupting-the-entire-test-in-protractor | debugging - How to resume from debugger without interrupting the entire test in protractor? - Stack Overflow
+
+https://www.google.com/search?q=starting+protractor+with+debugging+in+the+command+line&rlz=1C1NHXL_enUS726US726&oq=starting+protractor+with+debugging+in+the+command+line&aqs=chrome..69i57.21439j0j1&sourceid=chrome&ie=UTF-8&safe=active | starting protractor with debugging in the command line - Google Search
+https://github.com/linemanjs/lineman-angular-template/issues/22 | Running protractor tests in debugging mode? · Issue #22 · linemanjs/lineman-angular-template
+https://www.linkedin.com/pulse/debugging-protractor-sachini-chathurika | Debugging with protractor | Sachini Chathurika | Pulse | LinkedIn
+https://stackoverflow.com/documentation/protractor/3910/protractor-debugger#t=201707172355437660206 | Protractor Debugger - protractor - Stack Overflow
+
+https://www.google.com/search?safe=active&q=can+I+access+the+command+line+arguments+inside+node+Js+script&cad=h | can I access the command line arguments inside node Js script - Google Search
+https://stackoverflow.com/questions/4351521/how-do-i-pass-command-line-arguments | javascript - How do I pass command line arguments? - Stack Overflow
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=argv%20-%20raw%20command%20line%20arguments%20in%20Node.js&uri=https://code-maven.com/argv-raw-command-line-arguments-in-nodejs | argv - raw command line arguments in Node.js
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Using%20Command%20Line%20Arguments%20in%20a%20Node%20Script%20%E2%80%93%20Justin%20Davis&uri=http://justindavis.co/2014/11/24/using-command-line-arguments-in-a-node-script/ | Using Command Line Arguments in a Node Script – Justin Davis
+
+https://www.google.com/search?q=protractor+browser.wait()+explained&rlz=1C1NHXL_enUS726US726&oq=protractor+browser.wait()+explained&aqs=chrome..69i57.15527j0j1&sourceid=chrome&ie=UTF-8&safe=active | protractor browser.wait() explained - Google Search
+https://github.com/angular/protractor/issues/610 | How to use browser.wait() to wait for URL to change? · Issue #610 · angular/protractor
+https://github.com/angular/protractor/issues/2253 | Where is default timeout for browser.wait? · Issue #2253 · angular/protractor
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=javascript%20-%20Protractor%20browser.wait%20doesn't%20actually%20wait%20-%20Stack%20Overflow&uri=https://stackoverflow.com/questions/27803314/protractor-browser-wait-doesnt-actually-wait | javascript - Protractor browser.wait doesn't actually wait - Stack Overflow
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=javascript%20-%20How%20to%20explain%20using%20browser.sleep%20in%20protractor%20-%20Stack%20Overflow&uri=https://stackoverflow.com/questions/28064207/how-to-explain-using-browser-sleep-in-protractor | javascript - How to explain using browser.sleep in protractor - Stack Overflow
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=javascript%20-%20How%20to%20explain%20using%20browser.sleep%20in%20protractor%20-%20Stack%20Overflow&uri=https://stackoverflow.com/questions/28064207/how-to-explain-using-browser-sleep-in-protractor | javascript - How to explain using browser.sleep in protractor - Stack Overflow
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Protractor%20blocking%20wait%20%7C%20Emmett%20Pickerel's&uri=http://docsplendid.com/archives/209 | Protractor blocking wait | Emmett Pickerel's
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Wingify%20Engineering%20-%20Testing%20AngularJS%20Apps%20End%20to%20End%20Using%20Protractor&uri=http://engineering.wingify.com/posts/angularapp-e2e-testing-with-protractor/ | Wingify Engineering - Testing AngularJS Apps End to End Using Protractor
+
+https://www.google.com/search?q=protractor+waitReady&rlz=1C1NHXL_enUS726US726&oq=protractor+waitReady&aqs=chrome..69i57j0.6368j0j1&sourceid=chrome&ie=UTF-8&safe=active | protractor waitReady - Google Search
+https://gist.github.com/elgalu/2939aad2b2e31418c1bb | Actively wait for an element present and displayed up to specTimeoutMs ignoring useless webdriver errors like StaleElementError.
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=javascript%20-%20Protractor%3A%20Correct%20use%20of%20waitReady.js%20file%20in%20my%20tests%20-%20Stack%20Overflow&uri=https://stackoverflow.com/questions/35533139/protractor-correct-use-of-waitready-js-file-in-my-tests/35536164 | javascript - Protractor: Correct use of waitReady.js file in my tests - Stack Overflow
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=javascript%20-%20How%20to%20wait%20for%20a%20page%20to%20load%20or%20element%20to%20be%20present%20when%20using%20Protractor%20for%20a%20non-Angular%20page%20-%20Stack%20Overflow&uri=https://stackoverflow.com/questions/25249196/how-to-wait-for-a-page-to-load-or-element-to-be-present-when-using-protractor-fo | javascript - How to wait for a page to load or element to be present when using Protractor for a non-Angular page - Stack Overflow
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=javascript%20-%20Use%20protractor%20to%20test%20login%20on%20non-AngularJS%20page%20-%20Stack%20Overflow&uri=https://stackoverflow.com/questions/22239207/use-protractor-to-test-login-on-non-angularjs-page | javascript - Use protractor to test login on non-AngularJS page - Stack Overflow
+
+https://en.wikipedia.org/wiki/Go_(programming_language)#cite_note-techtalk-compiling-27 | Go (programming language) - Wikipedia
+https://www.youtube.com/watch?v=rKnDgT73v8s#t=8m53 | The Go Programming Language - YouTube
+https://www.youtube.com/watch?v=Vlie-srOU8c | Build Web Apps with Go Language (golang) - YouTube
+
+https://www.google.com/search?q=fundemental+difference+between+parabola+and+catenary+curve&rlz=1C1NHXL_enUS726US726&oq=fundemental+difference+between+parabola+and+catenary+curve&aqs=chrome..69i57.16336j0j1&sourceid=chrome&ie=UTF-8&safe=active | fundemental difference between parabola and catenary curve - Google Search
+http://mathforum.org/library/drmath/view/65729.html | Math Forum - Ask Dr. Math
+https://www.quora.com/Why-does-a-hanging-chain-form-a-catenary-shape-rather-than-a-parabola | Why does a hanging chain form a catenary shape rather than a parabola? - Quora
+http://freeandhandy.com/physics-fun/the-four-conic-sections-made-simple/what-is-the-difference-between-a-parabola-and-a-catenary/ | What is the Difference Between a Parabola and a Catenary? - Free and Handy
+https://en.wikipedia.org/wiki/Catenary | Catenary - Wikipedia
+http://whistleralley.com/hanging/hanging.htm | Hanging With Galileo
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Math%20Year%202013%3A%20The%20catenary%20and%20the%20parabola.&uri=http://mathyear2013.blogspot.com/2013/07/the-catenary-and-parabola.html | Math Year 2013: The catenary and the parabola.
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Amadeo_Huylebrouck.ppt&uri=https://www.cs.rutgers.edu/~mcgrew/dimacs/slides/Amadeo_Huylebrouck.pdf | Amadeo_Huylebrouck.ppt
+
+https://www.youtube.com/watch?v=fzF7hPlNJkQ | Lost My Dog - YouTube
+https://www.youtube.com/watch?v=SOPeQax1VHg | Shitake Mushroom Groove - YouTube
+https://www.youtube.com/watch?v=fX5rcD_7O1s | Horse Nooodles Wears Prada - YouTube
+https://www.youtube.com/watch?v=sWPE-PvLIDY | Star Trek - Bloopers - YouTube
+https://www.youtube.com/watch?v=cNzzrlGqiHc | YouTube
+https://www.youtube.com/watch?v=c-4lLj39_jI | Dr. Horse And Mr. Noodles - YouTube
+
+https://stackoverflow.com/documentation | Documentation - Stack Overflow
+https://stackoverflow.com/documentation/go/topics | All Go Topics - Stack Overflow
+https://stackoverflow.com/documentation/go/198/getting-started-with-go#t=201708172305223663085 | Getting started with Go - Go - Stack Overflow
+https://stackoverflow.com/documentation/go/732/maps#t=20170817230524585025 | Maps - Go - Stack Overflow
+https://stackoverflow.com/documentation/go/374/structs#t=201708172305259905716 | Structs - Go - Stack Overflow
+https://stackoverflow.com/documentation/go/756/http-server#t=20170817230535336916 | HTTP Server - Go - Stack Overflow
+
+https://www.promisejs.org/ | Promises
+https://www.maketecheasier.com/know-if-someone-logging-into-windows-pc/ | How To Know If Someone Else is Logging into Your Windows PC
+
+http://www.daveeddy.com/2013/03/26/synchronous-file-io-in-nodejs/ | Synchronous File IO in Node.js | dave eddy
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=All%20Dropped%20Packets%20go%20to%20Heaven%20-%20page%202%20%7C%20dave%20eddy&uri=http://www.daveeddy.com/page2/ | All Dropped Packets go to Heaven - page 2 | dave eddy
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Tech%20%7C%20dave%20eddy&uri=http://www.daveeddy.com/tech/ | Tech | dave eddy
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=DIY%20%7C%20dave%20eddy&uri=http://www.daveeddy.com/diy/ | DIY | dave eddy
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Music%20%7C%20dave%20eddy&uri=http://www.daveeddy.com/music/ | Music | dave eddy
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Bash%20Style%20Guide%20%7C%20dave%20eddy&uri=http://www.daveeddy.com/bash/ | Bash Style Guide | dave eddy
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Archive%20%7C%20dave%20eddy&uri=http://www.daveeddy.com/archive/ | Archive | dave eddy
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=About%20%7C%20dave%20eddy&uri=http://www.daveeddy.com/about/ | About | dave eddy
+
+https://www.google.com/search?q=regular+expresstion+to+find+all+occurances+starting+with+http+ending+with+pdf&rlz=1C1NHXL_enUS726US726&oq=regular+expresstion+to+find+all+occurances+starting+with+http+ending+with+pdf&aqs=chrome..69i57.20672j0j1&sourceid=chrome&ie=UTF-8&safe=active | regular expresstion to find all occurances starting with http ending with pdf - Google Search
+https://stackoverflow.com/questions/6264689/regular-expression-starting-with-http-and-ending-with-pdf | php - Regular expression starting with http and ending with pdf? - Stack Overflow
+https://www.princeton.edu/~mlovett/reference/Regular-Expressions.pdf | Regular-Expressions.pdf
+http://arcadiafalcone.net/GoogleRefineCheatSheets.pdf | GoogleRefineCheatSheets.pdf
+https://acrobatusers.com/tutorials/text-matching-regular-expressions | How to code Adobe JavaScript, how to code PDF JavaScript - Adobe Acrobat
+
+https://www.google.com/search?q=github+how+to+create+a+branch+off+master&rlz=1C1NHXL_enUS726US726&oq=github+how+to+create+a+branch+off+master&aqs=chrome..69i57j69i64.21880j0j1&sourceid=chrome&ie=UTF-8&safe=active | github how to create a branch off master - Google Search
+https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches | Create a new branch with git and manage branches · Kunena/Kunena-Forum Wiki · GitHub
+https://www.google.com/search?q=github+how+do+I+lock+master+so+that+a+PR+is+requireed&rlz=1C1NHXL_enUS726US726&oq=github+how+do+I+lock+master+so+that+a+PR+is+requireed&aqs=chrome..69i57j69i64.13719j0j1&sourceid=chrome&ie=UTF-8&safe=active | github how do I lock master so that a PR is requireed - Google Search
+https://github.com/blog/2051-protected-branches-and-required-status-checks | Protected branches and required status checks · GitHub
+https://help.github.com/search/?utf8=%E2%9C%93&q=how+to+restrict+push+or+merge+access | GitHub Help
+https://help.github.com/articles/about-branch-restrictions/ | About branch restrictions - User Documentation
+https://help.github.com/articles/enabling-branch-restrictions/ | Enabling branch restrictions - User Documentation
+
+http://www.sky-map.org/ | SKY-MAP.ORG
+
+https://www.google.com/search?q=web+based+download+speed+test&rlz=1C1NHXL_enUS726US726&oq=web+based+download+speed+test&aqs=chrome..69i57j69i65l2.5973j0j1&sourceid=chrome&ie=UTF-8&safe=active | web based download speed test - Google Search
+http://www.bandwidthplace.com/california/san-francisco/ | Data & Broadband Internet Providers, Internet Speedtests in San Francisco,CA | BandwidthPlace
+http://testmy.net/results
+
+https://stackoverflow.com/questions/7520673/how-do-you-yank-x-number-of-characters-in-vim | How do you yank X number of characters in vim? - Stack Overflow
+https://www.google.com/search?q=why+does+Firefox+present+a+dialog+when+user+refreshes+page&rlz=1C1NHXL_enUS726US726&oq=why+does+Firefox+present+a+dialog+when+user+refreshes+page+&aqs=chrome..69i57.29124j0j1&sourceid=chrome&ie=UTF-8&safe=active | why does Firefox present a dialog when user refreshes page - Google Search
+https://support.mozilla.org/en-US/questions/986520 | Dialog box pops up when refreshing pages | Firefox Support Forum | Mozilla Support
+https://support.mozilla.org/en-US/questions/1067322 | Firefox refreshes the page whenever I try to use Google or Firefox search buttons. | Firefox Support Forum | Mozilla Support
+https://support.mozilla.org/en-US/questions/1067829 | When Firefox restarts the pages do not reload they just display history, i then have to refresh to get new data Explorer always reloads and Firefox used to | Firefox Support Forum | Mozilla Support
+https://support.mozilla.org/en-US/questions/1096078 | Annoying message each time; when choose refresh.... | Firefox Support Forum | Mozilla Support
+
+https://www.google.com/search?q=protractor+browser.wait()+explained&rlz=1C1NHXL_enUS726US726&oq=protractor+browser.wait()+explained&aqs=chrome..69i57.15527j0j1&sourceid=chrome&ie=UTF-8&safe=active | protractor browser.wait() explained - Google Search
+https://github.com/angular/protractor/issues/610 | How to use browser.wait() to wait for URL to change? · Issue #610 · angular/protractor · GitHub
+https://github.com/angular/protractor/issues/2253 | Where is default timeout for browser.wait? · Issue #2253 · angular/protractor · GitHub
+https://stackoverflow.com/questions/27803314/protractor-browser-wait-doesnt-actually-wait | javascript - Protractor browser.wait doesn't actually wait - Stack Overflow
+https://stackoverflow.com/questions/28064207/how-to-explain-using-browser-sleep-in-protractor | javascript - How to explain using browser.sleep in protractor - Stack Overflow
+https://stackoverflow.com/questions/28064207/how-to-explain-using-browser-sleep-in-protractor | javascript - How to explain using browser.sleep in protractor - Stack Overflow
+http://docsplendid.com/archives/209 | Protractor blocking wait | Emmett Pickerel's
+http://engineering.wingify.com/posts/angularapp-e2e-testing-with-protractor/ | Wingify Engineering - Testing AngularJS Apps End to End Using Protractor
+
+https://www.google.com/search?q=why+use+the+page+object+madel+pattern&rlz=1C1CHBF_enUS725US725&oq=why+use+the+page+object+madel+pattern&aqs=chrome..69i57.7383j0j7&sourceid=chrome&ie=UTF-8&safe=active | why use the page object madel pattern - Google Search
+https://www.pluralsight.com/guides/software-engineering-best-practices/getting-started-with-page-object-pattern-for-your-selenium-tests | Getting started with Page Object Pattern for your Selenium tests (Example) | hack.guides()
+https://automatetheplanet.com/page-object-pattern/ | Page Object Pattern in Automated Testing
+http://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html | Page Object Model (POM) & Page Factory in Selenium: Complete Tutorial
+https://www.3pillarglobal.com/insights/abstracting-selenium-tests-using-page-object-model | Abstracting Selenium Tests using Page Object Model
+https://martinfowler.com/bliki/PageObject.html | PageObject
+
+https://www.google.com/search?q=MouseJiggle+Alistair+Young&rlz=1C1NHXL_enUS726US726&oq=MouseJiggle+Alistair+Young&aqs=chrome..69i57.13446j0j1&sourceid=chrome&ie=UTF-8&safe=active | MouseJiggle Alistair Young - Google Search
+https://github.com/cerebrate/mousejiggler | GitHub - cerebrate/mousejiggler: Mouse Jiggler is a very simple piece of software whose sole function is to "fake" mouse input to Windows, and jiggle the mouse pointer back and forth.
+
+https://www.google.com/search?q=how+to+reset+my+git+credentials&rlz=1C1NHXL_enUS726US726&oq=how+to+reset+my+git+credentials&aqs=chrome..69i57.11391j0j1&sourceid=chrome&ie=UTF-8&safe=active#safe=active&q=reset+my+command+line+git+credentials+ | reset my command line git credentials - Google Search
+https://cmatskas.com/how-to-update-your-git-credentials-on-windows/ | How to update your Git credentials on Windows
+
+https://www.google.com/search?q=android+app+that+will+let+me+send+notes+to+my+pc&rlz=1C1NHXL_enUS726US726&oq=android+app+that+will+let+me+send+notes+to+my+pc&aqs=chrome..69i57.15752j0j1&sourceid=chrome&ie=UTF-8&safe=active | android app that will let me send notes to my pc - Google Search
+https://en.wikipedia.org/wiki/List_of_backup_software | List of backup software - Wikipedia
+
+https://www.google.com/search?q=why+use+the+page+object+madel+pattern&rlz=1C1CHBF_enUS725US725&oq=why+use+the+page+object+madel+pattern&aqs=chrome..69i57.7383j0j7&sourceid=chrome&ie=UTF-8&safe=active | why use the page object madel pattern - Google Search
+https://www.pluralsight.com/guides/software-engineering-best-practices/getting-started-with-page-object-pattern-for-your-selenium-tests | Getting started with Page Object Pattern for your Selenium tests (Example) | hack.guides()
+https://automatetheplanet.com/page-object-pattern/ | Page Object Pattern in Automated Testing
+http://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html | Page Object Model (POM) & Page Factory in Selenium: Complete Tutorial
+https://www.3pillarglobal.com/insights/abstracting-selenium-tests-using-page-object-model | Abstracting Selenium Tests using Page Object Model
+https://martinfowler.com/bliki/PageObject.html | PageObject
+
+https://www.youtube.com/results?search_query=songs+with+wikiwiki+in+the+lyrics+early+1980s | songs with wikiwiki in the lyrics early 1980s - YouTube
+https://www.youtube.com/watch?v=80HZCap3aWU | Newcleus - Jam On Revenge (The Wikki Wiki Song) - YouTube
+https://www.youtube.com/watch?v=42TQFxLnLZY | wiki wiki cancion original - YouTube
+https://www.youtube.com/watch?v=Qv0gce2mRu4 | "Wiki Me" (Feat. ONE by T.L Crow) Full Song w /Lyrics - YouTube
+
+https://atlassian/confluence/pages/viewpage.action?pageId=24184960 | Story & Task 471 - 474 Address Suggestion - Customer Experience Initiative - Delta Dental Confluence
+
+https://atlassian/jira/browse/CXINIT-510 | [CXINIT-510] Automation testing - Delta Dental JIRA
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=https://atlassian/jira/browse/CXINIT-492 | [CXINIT-492] Automation testing - Delta Dental JIRA
+https://atlassian/jira/browse/CXINIT-480 | [CXINIT-480] Automation testing - Delta Dental JIRA
+https://atlassian/jira/browse/CXINIT-474 | [CXINIT-474] Automation testing - Delta Dental JIRA
+
+http://www.sosmath.com/soe/SE211105/SE211105.html | SYSTEMS OF EQUATIONS in TWO VARIABLES
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=http://www.webmath.com/gline.html | Graph a Line - WebMath
+https://www.google.com/search?q=graph+%221.8x+%2B1.2y+%3D+4%22&rlz=1C1NHXL_enUS726US726&oq=graph+%221.8x+%2B1.2y+%3D+4%22&aqs=chrome..69i57.23935j0j1&sourceid=chrome&ie=UTF-8&safe=active#safe=active&q=graph+%229x%2B6y%3D3%22&* | graph "9x+6y=3" - Google Search
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=http://www.tiger-algebra.com/drill/1.8x_1.2y=4/ | Solve 1.8x+1.2y=4 Tiger Algebra Solver
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=http://www.tiger-algebra.com/drill/9x-6y=-3/ | Solve 9x-6y=-3 Tiger Algebra Solver
+
+https://www.google.com/search?q=Protractor+IE+Async+Callback+was+not+invoked+within+timout&rlz=1C1NHXL_enUS726US726&oq=Protractor+IE+Async+Callback+was+not+invoked+within+timout+&aqs=chrome..69i57.18671j0j1&sourceid=chrome&ie=UTF-8&safe=active | Protractor IE Async Callback was not invoked within timout - Google Search
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=http://stackoverflow.com/questions/22604644/jasmine-async-callback-was-not-invoked-within-timeout-specified-by-jasmine-defa | angularjs - jasmine: Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL - Stack Overflow
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=http://stackoverflow.com/questions/29218981/jasmine-2-async-callback-was-not-invoked-within-timeout-specified-by-jasmine-d | javascript - jasmine 2 - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL - Stack Overflow
+https://github.com/angular/protractor/issues/2963 | Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL · Issue #2963 · angular/protractor · GitHub
+https://github.com/angular/protractor/issues/3575 | Message: Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL. Stack: Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL. · Issue #3575 · angular/protractor · GitHub
+https://github.com/angular/protractor/issues/2194 | Getting Async Error when running tests against IE.- · Issue #2194 · angular/protractor · GitHub
+
+https://www.google.com/search?q=protractor+testeing+with+IE+%22+a+jasmine+spec+timed+out.+Resetting+the+webriverControl+Flow%22&rlz=1C1NHXL_enUS726US726&oq=protractor+testeing+with+IE+%22+a+jasmine+spec+timed+out.+Resetting+the+webriverControl+Flow%22&aqs=chrome..69i57.38582j0j1&sourceid=chrome&ie=UTF-8&safe=active#q=protractor+testing+with+IE+%22+a+jasmine+spec+timed+out.+Resetting+the+webdriver+Control+Flow%22&safe=active&tbm=nws | protractor testing with IE " a jasmine spec timed out. Resetting the webdriver Control Flow" - Google Search
+https://github.com/angular/protractor/issues/1095 | A Jasmine Spec has timed out: Resetting the webdriver control flow · Issue #1095 · angular/protractor
+https://github.com/angular/protractor/blob/master/docs/timeouts.md | protractor/timeouts.md at master · angular/protractor
+https://github.com/angular/protractor/issues/1456 | A Jasmine spec timed out. Resetting the WebDriver Control Flow · Issue #1456 · angular/protractor
+https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver | InternetExplorerDriver · SeleniumHQ/selenium Wiki
+https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver# | InternetExplorerDriver · SeleniumHQ/selenium Wiki
+
+https://www.google.com/search?q=eclipse+how+to+tell+what+additional+software+or+plugins+have+been+added&rlz=1C1NHXL_enUS726US726&oq=eclipse+how+to+tell+what+additional+software+or+plugins+have+been+added&aqs=chrome..69i57.20655j0j1&sourceid=chrome&ie=UTF-8&safe=active#safe=active&q=eclipse+what+javascript+tools+and+plugins+are+available&* | eclipse what javascript tools and plugins are available - Google Search
+https://eclipse.org/webtools/jsdt/ | JavaScript Development Tools (JSDT)
+https://projects.eclipse.org/projects/webtools.jsdt | JavaScript Development Tools | projects.eclipse.org
+http://stackoverflow.com/questions/12269560/javascript-editor-plugin-for-eclipse | JavaScript Editor Plugin for Eclipse - Stack Overflow
+http://stackoverflow.com/questions/29299567/how-to-install-a-javascript-editor-for-eclipse | How to install a JavaScript editor for Eclipse? - Stack Overflow
+http://stackoverflow.com/questions/12387567/how-to-install-the-latest-version-of-javascript-development-tools-in-eclipse | How to install the latest version of JavaScript Development Tools in Eclipse? - Stack Overflow
+https://jaxenter.com/eclipse-mars-javascript-development-tools-118280.html | Eclipse Mars and JavaScript Development Tools – how much JS can it handle? - JAXenter
+
+https://www.google.com/search?q=how+popular+are+protractor-helpers+module&rlz=1C1NHXL_enUS726US726&oq=how+popular+are+protractor-helpers+module&aqs=chrome..69i57.9772j0j7&sourceid=chrome&ie=UTF-8&safe=active#safe=active&q=how+popular+are+protractor-helpers+libraries | how popular are protractor-helpers libraries - Google Search
+https://www.npmjs.com/package/protractor-helpers | protractor-helpers
+http://stackoverflow.com/questions/19998109/can-i-divide-my-tests-into-separate-specs-and-then-call-them-from-another-or-is | protractor - Can I divide my tests into separate specs and then call them from another or is it better to use helper functions? - Stack Overflow
+http://codecept.io/ | CodeceptJS
+http://codecept.io/helpers/ | Helpers - CodeceptJS
+
+https://www.google.com/search?q=I+put+gulp+in+my+package+file+I+ran+npn+install+how+to+I+check+gulp+version&rlz=1C1NHXL_enUS726US726&oq=I+put+gulp+in+my+package+file+I+ran+npn+install+how+to+I+check+gulp+version&aqs=chrome..69i57j69i64.31086j0j7&sourceid=chrome&ie=UTF-8&safe=active | I put gulp in my package file I ran npn install how to I check gulp version - Google Search
+https://travismaynard.com/writing/getting-started-with-gulp | Getting Started with Gulp | Travis Maynard
+https://www.sitepoint.com/introduction-gulp-js/ | An Introduction to Gulp.js - SitePoint
+
+https://www.google.com/search?q=useing+protractor+can+I+detect+calls+to+my+server+during+the+workflow&rlz=1C1NHXL_enUS726US726&oq=useing+protractor+can+I+detect+calls+to+my+server+during+the+workflow+&aqs=chrome..69i57.21926j0j7&sourceid=chrome&ie=UTF-8&safe=active#safe=active&q=protractor+js+non+angular+page+testing+detection+of+AJAX+request | protractor js non angular page testing detection of AJAX request - Google Search
+http://stackoverflow.com/questions/10783463/javascript-detect-ajax-requests | JavaScript: Detect AJAX requests - Stack Overflow
+http://stackoverflow.com/questions/3596583/javascript-detect-an-ajax-event | JavaScript detect an AJAX event - Stack Overflow
+
+https://www.google.com/search?q=what+does+model+refer+to+in+Protractor&rlz=1C1NHXL_enUS726US726&oq=what+does+model+refer+to+in+Protractor&aqs=chrome..69i57.9407j0j7&sourceid=chrome&ie=UTF-8&safe=active | what does model refer to in Protractor - Google Search
+https://www.google.com/search?q=page+object+model+defined&rlz=1C1NHXL_enUS726US726&oq=page+object+model+defined&aqs=chrome..69i57j0.8767j0j7&sourceid=chrome&ie=UTF-8&safe=active | page object model defined - Google Search
+http://stackoverflow.com/questions/29114098/protractor-get-model-value | javascript - Protractor Get Model Value - Stack Overflow
+http://moduscreate.com/protractor-and-page-objects/ | Protractor and Page Objects - Modus Create
+https://www.thoughtworks.com/insights/blog/using-page-objects-overcome-protractors-shortcomings | Using Page Objects to Overcome Protractor's Shortcomings | ThoughtWorks
+http://docs.seleniumhq.org/docs/06_test_design_considerations.jsp#page-object-design-pattern | Test Design Considerations — Selenium Documentation
+https://martinfowler.com/bliki/PageObject.html | PageObject
+https://github.com/SeleniumHQ/selenium/wiki/PageObjects | PageObjects · SeleniumHQ/selenium Wiki
+https://martinfowler.com/books/dsl.html | Domain Specific Languages
+http://www.artima.com/intv/dry.html | Orthogonality and the DRY Principle
+http://www.artima.com/intv/dry2.html | Orthogonality and the DRY Principle
+http://www.artima.com/intv/dry3.html | Orthogonality and the DRY Principle
+https://msdn.microsoft.com/magazine/msdn-magazine-issues | MSDN Magazine Issues
+
+https://www.google.com/search?q=how+to+determine+if+my+employer+is+calculating+payroll+deductions+properly&rlz=1C1NHXL_enUS726US726&oq=how+to+determine+if+my+employer+is+calculating+payroll+deductions+properly&aqs=chrome..69i57.16303j0j7&sourceid=chrome&ie=UTF-8&safe=active | how to determine if my employer is calculating payroll deductions properly - Google Search
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=https://www.surepayroll.com/resources/blog/how-to-calculate-payroll-taxes | How Do I Calculate Payroll Taxes? [Update]
+https://apps.irs.gov/app/withholdingcalculator/index3.jsp
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=https://www.thebalance.com/calculate-income-tax-withholding-from-paycheck-398714 | How to Calculate Tax Withholding from Employee Pay
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=https://www.irs.gov/pub/irs-pdf/p15a.pdf | 2016 Publication 15-A
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=https://www.surepayroll.com/resources/blog/how-to-calculate-payroll-taxes | How Do I Calculate Payroll Taxes? [Update]
+https://www.surepayroll.com/resources/calculator/payroll/tax-calculator | Free Payroll Tax Calculator | Online Payroll Calculators
+
+http://www.protractortest.org/#/api | Protractor - end-to-end testing for AngularJS
+https://jasmine.github.io/2.0/introduction | introduction.js
+
+https://www.google.com/search?q=can+gvim+install+any+file+manager+context+menus&rlz=1C1NHXL_enUS726US726&oq=can+gvim+install+any+file+manager+context+menus&aqs=chrome..69i57.20999j0j7&sourceid=chrome&ie=UTF-8&safe=active | can gvim install any file manager context menus - Google Search
+http://vim.wikia.com/wiki/Add_Vim_to_the_Windows_Explorer_context_menu | Add Vim to the Windows Explorer context menu | Vim Tips Wiki | Fandom powered by Wikia
+http://www.howtogeek.com/howto/windows-vista/add-open-with-notepad-to-the-context-menu-for-all-files/ | How to Add “Open with Notepad” to the Windows Context Menu for All Files
+http://vim.wikia.com/wiki/Adding_Vim_to_MS-Windows_File_Explorer_Menu | Adding Vim to MS-Windows File Explorer Menu | Vim Tips Wiki | Fandom powered by Wikia
+
+https://www.yearofmoo.com/2013/09/advanced-testing-and-debugging-in-angularjs.html | Advanced Testing and Debugging in AngularJS - yearofmoo.com
+http://dev9.com/article/2015/1/protractor-using-the-page-object-model | Protractor: Using the Page Object Model — Dev9
+https://teamgaslight.com/blog/getting-started-with-protractor-and-page-objects-for-angularjs-e2e-testing | Getting Started with Protractor and Page Objects for AngularJS E2E Testing
+
+https://www.youtube.com/ | YouTube
+https://www.youtube.com/watch?v=U1RgjZSQEvQ | project turbo rx8 part 25 - YouTube
+https://www.youtube.com/watch?v=5X0VJsNy7bU | YouTube
+https://www.youtube.com/watch?v=kIfTT8EGj3A | THX 1138: Comparison between Original version and Director's Cut - YouTube
+https://www.youtube.com/watch?v=DXI1iXO6qX8 | Dumb Things In The Force Awakens That Everyone Just Ignored - YouTube
+https://www.youtube.com/watch?v=3iuvwJC3Wes | Maggie Grace Has Little Penis Envy on Craig Ferguson - YouTube
+
+http://www.itnews.com/article/3163025/private-cloud/german-consumer-groups-sue-whatsapp-over-privacy-policy-changes.html?idg_eid=98cc16cbf938cc4ed7b8757faa35832f&utm_source=Sailthru&utm_medium=email&utm_campaign=ITnews%20Daily%202017-01-30&utm_term=ITnews_Daily | German consumer groups sue WhatsApp over privacy policy changes | ITNews
+http://www.itnews.com/article/3161792/smartphones/5-of-the-most-anticipated-smartphones-for-2017.html?idg_eid=98cc16cbf938cc4ed7b8757faa35832f&utm_source=Sailthru&utm_medium=email&utm_campaign=ITnews%20Daily%202017-01-30&utm_term=ITnews_Daily | 5 of the most anticipated smartphones for 2017 | ITNews
+http://www.itnews.com/article/3162546/computers/33-off-raspberry-pi-3-model-b-motherboard-deal-alert.html?idg_eid=98cc16cbf938cc4ed7b8757faa35832f&utm_source=Sailthru&utm_medium=email&utm_campaign=ITnews%20Daily%202017-01-30&utm_term=ITnews_Daily | 33% off Raspberry Pi 3 Model B Motherboard - Deal Alert | ITNews
+http://www.itnews.com/article/3160485/mobile-security/fbi-v-apple-one-year-later-it-hasn-t-settled-much.html?idg_eid=98cc16cbf938cc4ed7b8757faa35832f&utm_source=Sailthru&utm_medium=email&utm_campaign=ITnews%20Daily%202017-01-30&utm_term=ITnews_Daily | FBI v. Apple: One year later, it hasn’t settled much | ITNews
+http://www.itnews.com/article/3162416/data-center/booted-up-in-1993-this-server-still-runs-but-not-for-much-longer.html?idg_eid=98cc16cbf938cc4ed7b8757faa35832f&utm_source=Sailthru&utm_medium=email&utm_campaign=ITnews%20Daily%202017-01-30&utm_term=ITnews_Daily | Booted up in 1993, this server still runs -- but not for much longer | ITNews
+http://www.computerworld.com/article/2550661/data-center/this-server-outlasts-two-presidents.html | This Server Outlasts Two Presidents | Computerworld
+http://www.stratus.com/ | High Availability & Fault Tolerant Software & Solutions | Stratus Technologies
+http://www.computerworld.com/ | IT news, careers, business technology, reviews | Computerworld
+http://www.rd.com/funny-stuff/work-cartoons/20/ | Funny Work Cartoons to Get Through the Week | Reader's Digest
+http://getcmra.com/?gclid=CLOt37W16tECFYZhfgodWTsEwA | CMRA - The Camera Band for Apple Watch
+
+https://www.google.com/search?q=what+does+the+at+sign+mean+in+Java&rlz=1C1NHXL_enUS726US726&oq=what+does+the+at+sign+mean+in+Java&aqs=chrome..69i57j0l5.9855j0j7&sourceid=chrome&ie=UTF-8&safe=active | what does the at sign mean in Java - Google Search
+http://stackoverflow.com/questions/2971521/what-does-the-sign-means-in-java | oop - What does the @ sign means in java? - Stack Overflow
+http://stackoverflow.com/questions/31822020/in-java-what-does-the-symbol-mean | in java what does the @ symbol mean? - Stack Overflow
+http://stackoverflow.com/questions/19551022/the-symbol-in-java | The @ symbol in java - Stack Overflow
+http://stackoverflow.com/questions/11151633/what-does-the-sign-do | java - What does the @sign do? - Stack Overflow
+https://en.wikipedia.org/wiki/Java_annotation | Java annotation - Wikipedia
+
+https://www.google.com/search?q=I+put+gulp+in+my+package+file+I+ran+npn+install+how+to+I+check+gulp+version&rlz=1C1NHXL_enUS726US726&oq=I+put+gulp+in+my+package+file+I+ran+npn+install+how+to+I+check+gulp+version&aqs=chrome..69i57j69i64.31086j0j7&sourceid=chrome&ie=UTF-8&safe=active | I put gulp in my package file I ran npn install how to I check gulp version - Google Search
+https://travismaynard.com/writing/getting-started-with-gulp | Getting Started with Gulp | Travis Maynard
+https://www.sitepoint.com/introduction-gulp-js/ | An Introduction to Gulp.js - SitePoint
+
+chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#uri=http://download.oracle.com/otn-pub/jcp/jls-7-mr3-fullv-oth-JSpec/JLS-JavaSE7-Full.pdf?AuthParam=1485535446_ae2358e5bf3749862eb9af5ebda3fe85 | The Java™ Language Specification
+file:///C:/Users/ca60212/downloads/jls8.pdf | The Java® Language Specification
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html | Summary of Operators (The Java™ Tutorials > Learning the Java Language > Language Basics)
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html | Operators (The Java™ Tutorials > Learning the Java Language > Language Basics)
+http://docs.oracle.com/javase/tutorial/collections/interfaces/set.html | The Set Interface (The Java™ Tutorials > Collections > Interfaces)
+https://docs.oracle.com/javase/tutorial/collections/interfaces/collection.html | The Collection Interface (The Java™ Tutorials > Collections > Interfaces)
+http://docs.oracle.com/javase/tutorial/java/annotations/ | Lesson: Annotations (The Java™ Tutorials > Learning the Java Language)
+
+https://en.wikipedia.org/wiki/Alonzo_Church | Alonzo Church - Wikipedia
+https://en.wikipedia.org/wiki/Anonymous_function | Anonymous function - Wikipedia
+https://en.wikipedia.org/wiki/Lambda_calculus | Lambda calculus - Wikipedia
+https://en.wikipedia.org/wiki/Closure_(computer_programming) | Closure (computer programming) - Wikipedia
+
+https://docs.npmjs.com/ | npm Documentation
