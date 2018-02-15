@@ -12,4 +12,5 @@ REM  There is also unix2dos at https://sourceforge.net/projects/dos2unix/?source
 
 c:\bin\unix2dos C:\Mark\CurrentWork_Delta\Daily_Evening_Where_Was_I.txt
 
-call Notepad.exe C:\Mark\CurrentWork_Delta\Daily_Evening_Where_Was_I.txt
+start Notepad.exe C:\Mark\CurrentWork_Delta\Daily_Evening_Where_Was_I.txt
+

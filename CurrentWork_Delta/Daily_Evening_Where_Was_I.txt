@@ -3,6 +3,20 @@ Most recent always at the top
 Order of precedence
 
 
+
+2/14/18 
+looking at SAC machine why the automatic marketplace
+new__test-run.bat isn't showing activity when run from cron jobs.
+Need to go back and make sure it runs from command line properly
+Need to undo npm run buymot -- --suite=whatever
+and go back to the fully qualified protractor command.
+I've modded reportFileGenerator to capture the full command line args upto arg[9]
+Need to report back to chad with my results.
+
+2/13/18
+Presented Strat doc 
+Have got work to do
+
 2/6/18  
 Strategy Document
 
