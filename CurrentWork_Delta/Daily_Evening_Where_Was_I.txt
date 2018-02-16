@@ -4,6 +4,11 @@ Order of precedence
 
 
 
+2/15/18
+tring to setup basc market place test.
+Shortened up time. reduced states
+Just trying to get repetition
+
 2/14/18 
 looking at SAC machine why the automatic marketplace
 new__test-run.bat isn't showing activity when run from cron jobs.
