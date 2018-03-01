@@ -2,7 +2,8 @@ This document.  Push down.
 Most recent always at the top
 Order of precedence
 
-
+is my ACF for MOT/DIT access resolved.
+I was workin onthe doc and trying ot get the prior image available to the current image
 
 2/15/18
 tring to setup basc market place test.
