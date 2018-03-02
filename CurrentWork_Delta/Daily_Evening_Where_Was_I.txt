@@ -2,6 +2,11 @@ This document.  Push down.
 Most recent always at the top
 Order of precedence
 
+
+3/1/18
+Commint work in c:\mark
+
+???
 is my ACF for MOT/DIT access resolved.
 I was workin onthe doc and trying ot get the prior image available to the current image
 
