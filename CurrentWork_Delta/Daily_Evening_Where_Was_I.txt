@@ -2,6 +2,19 @@ This document.  Push down.
 Most recent always at the top
 Order of precedence
 
+
+
+3/2/18  Moved all the old config files to prevwork zip
+Brief work on SAC, just enough to keep me remembering what I was doing
+it seems like something has changes on SAC and the command window
+is back to working with my test__run batch file or what ever the name is.
+Turns out the XXX_00 batch file stopped working WFT?
+Finishing with Slide Deck
+
+3/1/18
+Commint work in c:\mark  -- Done
+
+???
 is my ACF for MOT/DIT access resolved.
 I was workin onthe doc and trying ot get the prior image available to the current image
 
