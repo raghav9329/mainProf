@@ -1,6 +1,11 @@
 General Tips
 Started 6/15/16
 
+3/8/117    -site:pintrest.com
+google for keep ***.com  filtered out of my search results
+
+Good Windows tip
+https://support.microsoft.com/en-us/help/950683/vcredist-from-vc-2008-installs-temporary-files-in-root-directory
 
 11/29/17
 my suites file abstraction
