@@ -23,48 +23,53 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     // to iterate through the multiple distances 
                     // Same code, just a different dist varialble each time
                     dirSearch.refineSearch.click();
+                    providerDetails.sortDistance.select();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
                     dirSearch.distanceSelect.selectByText(TestData.Distance35);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance35);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
 
                     dirSearch.refineSearch.click();
+                    providerDetails.sortDistance.select();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
                     dirSearch.distanceSelect.selectByText(TestData.Distance25);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance25);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
 
                     dirSearch.refineSearch.click();
+                    providerDetails.sortDistance.select();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
                     dirSearch.distanceSelect.selectByText(TestData.Distance15);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance15);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
 
                     dirSearch.refineSearch.click();
+                    providerDetails.sortDistance.select();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
                     dirSearch.distanceSelect.selectByText(TestData.Distance10);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance10);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
 
                     dirSearch.refineSearch.click();
+                    providerDetails.sortDistance.select();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
                     dirSearch.distanceSelect.selectByText(TestData.Distance5);
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount + ' ' + TestData.Distance5);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
 
                 });
@@ -86,7 +91,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
                 });
             });
@@ -105,7 +110,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
                 });
             });
@@ -125,7 +130,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
                 });
             });
@@ -145,7 +150,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                         providerDetails.verifyProviderLanguage(TestData.Language1, 1);
 
                     });
@@ -166,7 +171,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                         providerDetails.verifyProviderLanguage(TestData.Language2, 1)
                     });
                 });
@@ -186,7 +191,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                         providerDetails.verifyProviderLanguage(TestData.Language3, 1)
                     });
                 });
@@ -207,7 +212,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                         providerDetails.verifyProviderLanguage(TestData.Language4, 1)
                     });
                 });
@@ -228,7 +233,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
                 });
             });
@@ -248,7 +253,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
                 });
             });
@@ -268,7 +273,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
                 });
             });
@@ -288,7 +293,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
                 });
             });
@@ -308,7 +313,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
+                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
                     });
                 });
             });

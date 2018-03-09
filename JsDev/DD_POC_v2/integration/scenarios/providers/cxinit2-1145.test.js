@@ -16,6 +16,7 @@ describe('CXINIT2-1145:: Provider Search Validation', function() {
                 dirSearch.findDentist.click();
                 dirSearch.getProvidersCount().then(function(totalCount) {
                     dirSearch.refineSearch.click();
+                    providerDetails.sortDistance.select();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
                     dirSearch.distanceSelect.selectByText(TestData.Distance);
                     dirSearch.apply.click();
@@ -35,6 +36,7 @@ describe('CXINIT2-1145:: Provider Search Validation', function() {
                 dirSearch.findDentist.click();
                 dirSearch.getProvidersCount().then(function(totalCount) {
                     dirSearch.refineSearch.click();
+                    providerDetails.sortDistance.select();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
                     dirSearch.distanceSelect.selectByText(TestData.Distance);
                     dirSearch.apply.click();

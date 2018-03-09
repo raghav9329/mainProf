@@ -37,6 +37,14 @@ class HomePageLocators {
         this.Go = by.id('btn_saveBig');
         this.PpoEnrollBtn = by.xpath('//td[contains(text(),"PPO")]/following-sibling::td//button');
         this.changeSearch = by.id('modify-search');
+        this.quoteInfoTxt = by.xpath('//div[@class="summary grey-text"]');
+        this.quoteZipTxt = by.xpath('//label[@for="zip"]');
+        this.quotesDepTxt = by.xpath('//label[@for="noofdependents"]');
+        this.birtdateText= by.id('birthdate');
+        this.depBirthDayText= function(depno){
+            return by.xpath('//legend[normalize-space(text())="Dependent '+depno+' Birthdate"]')
+                                                      
+        }
 
     }
 }

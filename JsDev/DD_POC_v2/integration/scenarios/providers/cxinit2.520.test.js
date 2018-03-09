@@ -32,7 +32,6 @@ describe('Provider Search Validation', function() {
         dirSearch.location.setText(TestData.HAddress_ZIP.PartialAddress);
         dirSearch.selectHomeAddress(TestData.HAddress_ZIP.FullAddress);
         dirSearch.keywordSearch.setText(TestData.keywordSearch);
-        browser.sleep(2000);
         dirSearch.findDentist.click();
         expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.headerText.getText()).toContain(TestData.Header_SearchResultsPage);

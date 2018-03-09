@@ -96,6 +96,7 @@ class PersonalInfoPage extends ControlBase {
         this.serverErrMsgMailingCity = new Label(this.pageObjects.serverErrMsgMailingCity);
         this.serverErrMsgMailingState = new Label(this.pageObjects.serverErrMsgMailingState);
         this.serverErrMsgMailingZip = new Label(this.pageObjects.serverErrMsgMailingZip);
+        this.serverErrMsgEmail = new Label(this.pageObjects.serverErrMsgEmail);
         this.premiumAmount = new Label(this.pageObjects.premiumAmount);
         this.enrollmentFee = new Label(this.pageObjects.enrollmentFee);
         this.apptFloorNumError = new LinkText(this.pageObjects.apptFloorNumError);
@@ -109,6 +110,11 @@ class PersonalInfoPage extends ControlBase {
         this.copyright = new Label(this.pageObjects.copyRight);
         this.helpContact = new Label(this.pageObjects.helpContact);
         this.ShoppingContact = new Label(this.pageObjects.ShoppingContact);
+        this.contractNumber = new Label(this.pageObjects.contractNumber);
+
+        this.alternateTooltip = new Label(this.pageObjects.alternateTooltip);
+        this.alternateHelpopUp = new Label(this.pageObjects.alternateHelpopUp);
+        this.alternateidPopExit = new Label(this.pageObjects.alternateidPopExit);
     }
 
     enrollStatus(breadcrumbheader) {
@@ -164,7 +170,7 @@ class PersonalInfoPage extends ControlBase {
             if (!perinfo.gender) self.fieldGenderSelect.selectByText(perinfo.gender);
             //expect(self.fieldGenderSelect.getAttribute("class")).toContain(perinfo.ariainvalid);
             var d = perinfo.dob;
-            var datesplit = (d.split('-'))
+            var datesplit = (d.split('-'));
             self.fieldBdMM.setText(datesplit[0]);
             self.fieldBdDD.setText(datesplit[1]);
             self.fieldBdYyyy.setText(datesplit[2]);
@@ -222,8 +228,11 @@ class PersonalInfoPage extends ControlBase {
                 browser.sleep(2000);
             } else {
                 console.log('else block');
-                // self.RadBtnBrokerYes.select();
-                // self.hiddenfieldBrokerNum.setText(broker.brokernumber);
+                // Shounak: Updated the Broker # in every file
+                // Previous Broker Number had expired for DIT and MOT
+                // So, uncommenting this part
+                self.RadBtnBrokerYes.select();
+                self.hiddenfieldBrokerNum.setText(broker.brokernumber);
                 self.next.click();
                 browser.sleep(2000);
             }
@@ -309,6 +318,30 @@ class PersonalInfoPage extends ControlBase {
         promises.push(this.serverErrMsgMailingCity.getText());
         promises.push(this.serverErrMsgMailingState.getText());
         promises.push(this.serverErrMsgMailingZip.getText());
+        return protractor.promise.all(promises);
+    };
+
+    getServerValidationMessages() {
+        var promises = [];
+        promises.push(this.serverErrMsgFirstName.getText());
+        promises.push(this.serverErrMsgLastName.getText());
+        promises.push(this.serverErrMsgSsn.getText());
+        promises.push(this.serverErrMsgStreetAddress.getText());
+        promises.push(this.serverErrMsgCity.getText());
+        promises.push(this.serverErrMsgContactNumber.getText());
+        promises.push(this.serverErrMsgEmail.getText());
+        return protractor.promise.all(promises);
+    };
+
+    getClientValidationMessages() {
+        var promises = [];
+        promises.push(this.errMsgFirstName.getText());
+        promises.push(this.errMsgLastName.getText());
+        promises.push(this.errMsgSsn.getText());
+        promises.push(this.errMsgHomeAddr.getText());
+        promises.push(this.errMsgCity.getText());
+        promises.push(this.errMsgPhoneNumber.getText());
+        promises.push(this.errMsgEmailAddr.getText());
         return protractor.promise.all(promises);
     };
 

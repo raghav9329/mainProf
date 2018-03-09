@@ -21,7 +21,6 @@ describe('Provider Search Validation', function() {
     it('ProvDir_2: Verify the functionality of view Dentists when we enter invalid Address', function() {
         dirSearch.location.setText(TestData.ZipCode);
         dirSearch.findDentist.click();
-        browser.sleep(2000);
         expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeTruthy();
     });
 
@@ -35,7 +34,6 @@ describe('Provider Search Validation', function() {
     it('ProvDir_4: Verify the search results count and provider details ', function() {
         dirSearch.location.setText(TestData.HAddress_ZIP.PartialAddress);
         dirSearch.selectHomeAddress(TestData.HAddress_ZIP.FullAddress);
-        browser.sleep(2000);
         dirSearch.findDentist.click();
         expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.headerText.getText()).toContain(TestData.Header_SearchResultsPage);
@@ -51,6 +49,7 @@ describe('Provider Search Validation', function() {
         dirSearch.selectHomeAddress(TestData.HAddress_ZIP.FullAddress);
         dirSearch.findDentist.click();
         dirSearch.refineSearch.click();
+        expect(providerDetails.sortDistance.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.filterMenuItem('Networks').isPresentAndDisplayed()).toBeTruthy();
         dirSearch.filterMenuItem('Networks').click();     
@@ -83,7 +82,7 @@ describe('Provider Search Validation', function() {
         dirSearch.selectHomeAddress(TestData.HAddress_ZIP.FullAddress);
         dirSearch.findDentist.click();
         expect(dirSearch.providersListing.getCount()).toEqual(10);
-        dirSearch.openView(data.PName);
+        providerDetails.openView(data.PName);
 
         // Provider distance
         expect(providerDetails.providerDistance.getText()).toEqual(data.PDistance);

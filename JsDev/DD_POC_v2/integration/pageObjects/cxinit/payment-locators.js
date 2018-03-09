@@ -75,6 +75,8 @@ class PaymentLocators {
         this.paymentAuthorizationTxt = by.xpath('//div[@class="details-container"]/p');
         this.enrollmentfeeTxt = by.xpath('//div[@class="more-info-box enrollmentHidden"]/p');
         this.discloserTxt = by.xpath('//div[@id="billing"]/following::p[1]');
+        this.chargesAgreemetTxt = by.className('agreement-statement');
+        this.billingFreqmonthlyTxt = by.xpath('//div[contains(text(),"Monthly:")]');
     }
 
 }

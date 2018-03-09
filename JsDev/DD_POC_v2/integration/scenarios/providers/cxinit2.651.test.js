@@ -29,7 +29,6 @@ describe('Provider Search Validation', function() {
     it('ProvDir_2: Verify the search results count and provider details ', function() {
          dirSearch.location.setText(TestData.ZipCode);
         dirSearch.keywordSearch.setText(TestData.keywordSearch);
-        browser.sleep(2000);
         dirSearch.findDentist.click();
         expect(dirSearch.refineSearch.isPresentAndDisplayed()).toBeTruthy();
         expect(dirSearch.headerText.getText()).toContain(TestData.Header_SearchResultsPage);

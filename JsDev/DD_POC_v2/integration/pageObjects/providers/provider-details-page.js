@@ -23,10 +23,16 @@ class ProviderDetailsPage extends ControlBase {
         this.page = new LinkText(this.pageObjects.page);
         this.viewLink = new Label(this.pageObjects.viewLink);
         this.backToSearchResults = new Label(this.pageObjects.backToSearchResults);
+        this.bestMatch = new RadioButton(this.pageObjects.bestMatch);
+        this.sortDistance = new RadioButton(this.pageObjects.sortDistance);
+        this.asceDist = new Label(this.pageObjects.asceDist);
         this.providerDistance = new Label(this.pageObjects.providerDistance);
         this.providerName = new Label(this.pageObjects.providerName);
         this.providerSpecialty = new Label(this.pageObjects.providerSpecialty);
         this.providerNetwork = new Label(this.pageObjects.providerNetwork);
+        this.providerFacility  = new Label(this.pageObjects.providerFacility);
+        this.bjNetwork = new Label(this.pageObjects.bjNetwork);
+        this.bjDeltaCare = new Label(this.pageObjects.bjDeltaCare);
         this.providerAvailability = new Label(this.pageObjects.providerAvailability);
         this.providerMap = new Label(this.pageObjects.providerMap);
         this.providerPlace = new Label(this.pageObjects.providerPlace);
@@ -100,6 +106,22 @@ class ProviderDetailsPage extends ControlBase {
             return hours;
         }
     }
+
+    getandVerifyProvidersName(ptext, count) {
+        var self = this;
+        return browser.controlFlow().execute(function() {
+            return self.providerName.getElements().each(function(element, index) {
+                if(index <= count){
+                return element.getText().then(function(text) {
+                    expect(text).toContain(ptext);
+                });
+            }
+
+            }).then(function(data) {
+            })
+
+        });
+    };
 
 
     openView(providerName, option) {

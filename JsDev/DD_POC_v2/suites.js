@@ -2,153 +2,159 @@ module.exports = {
 
     suitesCollection: {
         pers: [
-            'integration/scenarios/xproduct/471PersInfo.test.js',
-            'integration/scenarios/xproduct/483PersInfo.test.js',
-            'integration/scenarios/xproduct/489PersInfo.test.js',
-            'integration/scenarios/xproduct/504PersInfo.test.js',
-            'integration/scenarios/xproduct/507PersInfo.test.js',
-            'integration/scenarios/xproduct/519PersInfo.test.js',
-            'integration/scenarios/xproduct/720PersInfo.test.js',
-            'integration/scenarios/xproduct/804PersInfo.test.js',
-            'integration/scenarios/xproduct/1361PersInfo.test.js',
-            'integration/scenarios/xproduct/1548PersInfo.test.js',
-            'integration/scenarios/xproduct/1549PersInfo.test.js'
+            'integration/scenarios/xproduct/pers/471PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/483PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/489PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/504PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/507PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/519PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/720PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/804PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/1361PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/1548PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/1549PersInfo.test.js'
         ],
 
         deps: [
-            'integration/scenarios/xproduct/1355DepCTA.test.js',
-            'integration/scenarios/xproduct/1356DepPremChgPop.test.js',
-            'integration/scenarios/xproduct/1357DepChildAge.test.js',
-            'integration/scenarios/xproduct/1358DepSpouse-DP.test.js',
-            'integration/scenarios/xproduct/1359Dep-15Deps.test.js'
+            'integration/scenarios/xproduct/deps/1355DepCTA.test.js',
+            'integration/scenarios/xproduct/deps/1356DepPremChgPop.test.js',
+            'integration/scenarios/xproduct/deps/1357DepChildAge.test.js',
+            'integration/scenarios/xproduct/deps/1358DepSpouse-DP.test.js',
+            'integration/scenarios/xproduct/deps/1359Dep-15Deps.test.js'
         ],
 
         facs: [
-            'integration/scenarios/xproduct/1365FacSearch.test.js',
-            'integration/scenarios/xproduct/1366FacSelect.test.js',
-            'integration/scenarios/xproduct/1367FacCTA.test.js',
-            'integration/scenarios/xproduct/1368FacFeedback.test.js'
+            'integration/scenarios/xproduct/facs/1365FacSearch.test.js',
+            'integration/scenarios/xproduct/facs/1366FacSelect.test.js',
+            'integration/scenarios/xproduct/facs/1367FacCTA.test.js',
+            'integration/scenarios/xproduct/facs/1368FacFeedback.test.js'
         ],
 
         payment: [
-            'integration/scenarios/xproduct/1403PayCCExp.test.js',
-            'integration/scenarios/xproduct/1404PayAddrSug.test.js',
-            'integration/scenarios/xproduct/1405PayConAuthChk.test.js',
-            'integration/scenarios/xproduct/1406PayCTA.test.js',
-            'integration/scenarios/xproduct/1407PayCvv.test.js'
+            'integration/scenarios/xproduct/pays/1403PayCCExp.test.js',
+            'integration/scenarios/xproduct/pays/1404PayAddrSug.test.js',
+            'integration/scenarios/xproduct/pays/1405PayConAuthChk.test.js',
+            'integration/scenarios/xproduct/pays/1406PayCTA.test.js',
+            'integration/scenarios/xproduct/pays/1407PayCvv.test.js'
         ],
 
         ape2e: [
-            'integration/scenarios/xproduct/1973WrkFlo1.test.js',
-            'integration/scenarios/xproduct/2092_E2EPayAnn_TwoDep.test.js',
-            'integration/scenarios/xproduct/2093_E2EPayAnn_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2310_E2EPaySemiAnn_TwoDep.test.js',
-            'integration/scenarios/xproduct/2311_E2EPaySemiAnn_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2312_E2EPayQua_TwoDep.test.js',
-            'integration/scenarios/xproduct/2313_E2EPayQua_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2314_E2EPayMon_TwoDep.test.js',
-            'integration/scenarios/xproduct/2315_E2EPayMon_ThreeDep.test.js'
+            'integration/scenarios/xproduct/ape2e/2092_E2EPayAnn_TwoDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2093_E2EPayAnn_ThreeDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2310_E2EPaySemiAnn_TwoDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2311_E2EPaySemiAnn_ThreeDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2312_E2EPayQua_TwoDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2313_E2EPayQua_ThreeDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2314_E2EPayMon_TwoDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2315_E2EPayMon_ThreeDep.test.js'
         ],
-        
+
         dpe2e: [
-            'integration/scenarios/xproduct/2317_E2EPayCCAnn_TwoDep.test.js',
-            'integration/scenarios/xproduct/2318_E2EPayCCAnn_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2319_E2EPayCCMon_TwoDep.test.js',
-            'integration/scenarios/xproduct/2320_E2EPayCCMon_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2321_E2EPayCCQtr_TwoDep.test.js',
-            'integration/scenarios/xproduct/2322_E2EPayCCQtr_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2323_E2EPayEFTAnn_TwoDep.test.js',
-            'integration/scenarios/xproduct/2324_E2EPayEFTAnn_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2325_E2EPayEFTMon_TwoDep.test.js',
-            'integration/scenarios/xproduct/2326_E2EPayEFTMon_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2327_E2EPayEFTQtr_TwoDep.test.js',
-            'integration/scenarios/xproduct/2328_E2EPayEFTQtr_ThreeDep.test.js'
+            'integration/scenarios/xproduct/dpe2e/2317_E2EPayCCAnn_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2318_E2EPayCCAnn_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2319_E2EPayCCMon_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2320_E2EPayCCMon_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2321_E2EPayCCQtr_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2322_E2EPayCCQtr_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2323_E2EPayEFTAnn_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2324_E2EPayEFTAnn_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2325_E2EPayEFTMon_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2326_E2EPayEFTMon_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2327_E2EPayEFTQtr_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2328_E2EPayEFTQtr_ThreeDep.test.js'
         ],
 
         e2eAllProds: [
-            'integration/scenarios/xproduct/1408.EndToEndWkFlo1.test.js',
-            'integration/scenarios/xproduct/1461.EndToEndWkFlo2.test.js',
-            'integration/scenarios/xproduct/1746DirHMO_WrkFlo1.test.js',
-            'integration/scenarios/xproduct/1753DirHMO_WrkFlo4.test.js',
-            'integration/scenarios/xproduct/1754DirHMO_WrkFlow5.test.js',
-            'integration/scenarios/xproduct/1755DirHMO_WrkFlow6.test.js',
-            'integration/scenarios/xproduct/1235E2E_POM_Workflow.js',
-            'integration/scenarios/xproduct/addDep_Enroll.DeleteDep_depPage.js',
-            'integration/scenarios/xproduct/cxauto90.test.js',
-            'integration/scenarios/xproduct/cxauto91.test.js'
+            'integration/scenarios/xproduct/e2eAP/1408.EndToEndWkFlo1.test.js',
+            'integration/scenarios/xproduct/e2eAP/1461.EndToEndWkFlo2.test.js',
+            'integration/scenarios/xproduct/e2eAP/1746DirHMO_WrkFlo1.test.js',
+            'integration/scenarios/xproduct/e2eAP/1753DirHMO_WrkFlo4.test.js',
+            'integration/scenarios/xproduct/e2eAP/1754DirHMO_WrkFlow5.test.js',
+            'integration/scenarios/xproduct/e2eAP/1755DirHMO_WrkFlow6.test.js',
+            'integration/scenarios/xproduct/e2eAP/1235E2E_POM_Workflow.js',
+            'integration/scenarios/xproduct/e2eAP/addDep_Enroll.DeleteDep_depPage.js',
+            'integration/scenarios/xproduct/e2eAP/cxauto90.test.js',
+            'integration/scenarios/xproduct/e2eAP/cxauto91.test.js'
         ],
 
         aarpShopping: [
-            'integration/scenarios/xproduct/cxinit2899_aarpshop_pageval.test.js',
-            'integration/scenarios/xproduct/Buying2Shopping.test.js',
-            'integration/scenarios/xproduct/cxauto40_aarpShop.test.js'
-    ],
+            'integration/scenarios/xproduct/shop/cxinit2899_aarpshop_pageval.test.js',
+            'integration/scenarios/xproduct/shop/Buying2Shopping.test.js',
+            'integration/scenarios/xproduct/shop/cxauto40_aarpShop.test.js'
+        ],
 
         xproduct: [
-            'integration/scenarios/xproduct/471PersInfo.test.js',
-            'integration/scenarios/xproduct/483PersInfo.test.js',
-            'integration/scenarios/xproduct/489PersInfo.test.js',
-            'integration/scenarios/xproduct/504PersInfo.test.js',
-            'integration/scenarios/xproduct/507PersInfo.test.js',
-            'integration/scenarios/xproduct/519PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/471PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/483PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/489PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/504PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/507PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/519PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/720PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/804PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/1361PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/1548PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/1549PersInfo.test.js',
 
-            'integration/scenarios/xproduct/720PersInfo.test.js',
-            'integration/scenarios/xproduct/804PersInfo.test.js',
-            'integration/scenarios/xproduct/1361PersInfo.test.js',
-            'integration/scenarios/xproduct/1548PersInfo.test.js',
-            'integration/scenarios/xproduct/1549PersInfo.test.js',
+            'integration/scenarios/xproduct/deps/1355DepCTA.test.js',
+            'integration/scenarios/xproduct/deps/1356DepPremChgPop.test.js',
+            'integration/scenarios/xproduct/deps/1357DepChildAge.test.js',
+            'integration/scenarios/xproduct/deps/1358DepSpouse-DP.test.js',
+            'integration/scenarios/xproduct/deps/1359Dep-15Deps.test.js',
 
-            'integration/scenarios/xproduct/1355DepCTA.test.js',
-            'integration/scenarios/xproduct/1356DepPremChgPop.test.js',
-            'integration/scenarios/xproduct/1357DepChildAge.test.js',
-            'integration/scenarios/xproduct/1358DepSpouse-DP.test.js',
-            'integration/scenarios/xproduct/1359Dep-15Deps.test.js',
+            'integration/scenarios/xproduct/facs/1365FacSearch.test.js',
+            'integration/scenarios/xproduct/facs/1366FacSelect.test.js',
+            'integration/scenarios/xproduct/facs/1367FacCTA.test.js',
+            'integration/scenarios/xproduct/facs/1368FacFeedback.test.js',
 
-            'integration/scenarios/xproduct/1365FacSearch.test.js',
-            'integration/scenarios/xproduct/1366FacSelect.test.js',
-            'integration/scenarios/xproduct/1367FacCTA.test.js',
-            'integration/scenarios/xproduct/1368FacFeedback.test.js',
+            'integration/scenarios/xproduct/pays/1403PayCCExp.test.js',
+            'integration/scenarios/xproduct/pays/1404PayAddrSug.test.js',
+            'integration/scenarios/xproduct/pays/1405PayConAuthChk.test.js',
+            'integration/scenarios/xproduct/pays/1406PayCTA.test.js',
+            'integration/scenarios/xproduct/pays/1407PayCvv.test.js',
 
-            'integration/scenarios/xproduct/1403PayCCExp.test.js',
-            'integration/scenarios/xproduct/1404PayAddrSug.test.js',
-            'integration/scenarios/xproduct/1405PayConAuthChk.test.js',
-            'integration/scenarios/xproduct/1406PayCTA.test.js',
-            'integration/scenarios/xproduct/1407PayCvv.test.js',
+            'integration/scenarios/xproduct/ape2e/2092_E2EPayAnn_TwoDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2093_E2EPayAnn_ThreeDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2310_E2EPaySemiAnn_TwoDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2311_E2EPaySemiAnn_ThreeDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2312_E2EPayQua_TwoDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2313_E2EPayQua_ThreeDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2314_E2EPayMon_TwoDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2315_E2EPayMon_ThreeDep.test.js',
 
-            'integration/scenarios/xproduct/2317_E2EPayCCAnn_TwoDep.test.js',
-            'integration/scenarios/xproduct/2318_E2EPayCCAnn_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2319_E2EPayCCMon_TwoDep.test.js',
-            'integration/scenarios/xproduct/2320_E2EPayCCMon_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2321_E2EPayCCQtr_TwoDep.test.js',
-            'integration/scenarios/xproduct/2322_E2EPayCCQtr_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2323_E2EPayEFTAnn_TwoDep.test.js',
-            'integration/scenarios/xproduct/2324_E2EPayEFTAnn_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2325_E2EPayEFTMon_TwoDep.test.js',
-            'integration/scenarios/xproduct/2326_E2EPayEFTMon_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2327_E2EPayEFTQtr_TwoDep.test.js',
-            'integration/scenarios/xproduct/2328_E2EPayEFTQtr_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2317_E2EPayCCAnn_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2318_E2EPayCCAnn_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2319_E2EPayCCMon_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2320_E2EPayCCMon_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2321_E2EPayCCQtr_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2322_E2EPayCCQtr_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2323_E2EPayEFTAnn_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2324_E2EPayEFTAnn_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2325_E2EPayEFTMon_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2326_E2EPayEFTMon_ThreeDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2327_E2EPayEFTQtr_TwoDep.test.js',
+            'integration/scenarios/xproduct/dpe2e/2328_E2EPayEFTQtr_ThreeDep.test.js',
+
+            'integration/scenarios/xproduct/e2eAP/1408.EndToEndWkFlo1.test.js',
+            'integration/scenarios/xproduct/e2eAP/1461.EndToEndWkFlo2.test.js',
+            'integration/scenarios/xproduct/e2eAP/1746DirHMO_WrkFlo1.test.js',
+            'integration/scenarios/xproduct/e2eAP/1753DirHMO_WrkFlo4.test.js',
+            'integration/scenarios/xproduct/e2eAP/1754DirHMO_WrkFlow5.test.js',
+            'integration/scenarios/xproduct/e2eAP/1755DirHMO_WrkFlow6.test.js',
+            'integration/scenarios/xproduct/e2eAP/1235E2E_POM_Workflow.js',
+            'integration/scenarios/xproduct/e2eAP/addDep_Enroll.DeleteDep_depPage.js',
+            'integration/scenarios/xproduct/e2eAP/cxauto90.test.js',
+            'integration/scenarios/xproduct/e2eAP/cxauto91.test.js',
+            
+            'integration/scenarios/xproduct/content/VerifyContent.test.js',
+
+            // 'integration/scenarios/xproduct/content/cxauto102.PDFValidation.test.js'
+
+        ],
+
+        xproduct2: [
 
 
-
-            // 'integration/scenarios/xproduct/1973WrkFlo1.test.js',
-            'integration/scenarios/xproduct/2092_E2EPayAnn_TwoDep.test.js',
-            'integration/scenarios/xproduct/2093_E2EPayAnn_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2310_E2EPaySemiAnn_TwoDep.test.js',
-            'integration/scenarios/xproduct/2311_E2EPaySemiAnn_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2312_E2EPayQua_TwoDep.test.js',
-            'integration/scenarios/xproduct/2313_E2EPayQua_ThreeDep.test.js',
-            'integration/scenarios/xproduct/2314_E2EPayMon_TwoDep.test.js',
-            'integration/scenarios/xproduct/2315_E2EPayMon_ThreeDep.test.js',
-            'integration/scenarios/xproduct/cxauto90.test.js',
-            'integration/scenarios/xproduct/cxauto91.test.js',
-            'integration/scenarios/xproduct/1408.EndToEndWkFlo1.test.js',
-            'integration/scenarios/xproduct/1461.EndToEndWkFlo2.test.js',
-            'integration/scenarios/xproduct/1746DirHMO_WrkFlo1.test.js',
-            'integration/scenarios/xproduct/1753DirHMO_WrkFlo4.test.js',
-            'integration/scenarios/xproduct/1754DirHMO_WrkFlow5.test.js',
-            'integration/scenarios/xproduct/1755DirHMO_WrkFlow6.test.js',
-            'integration/scenarios/xproduct/1235E2E_POM_Workflow.js',
-            'integration/scenarios/xproduct/addDep_Enroll.DeleteDep_depPage.js',
         ],
 
         //hclfocus: this suite grew way beyond the intent I had
@@ -186,7 +192,14 @@ module.exports = {
             'integration/scenarios/providers/cxinit2-1146.test.js',
             'integration/scenarios/providers/cxinit2-1207.test.js',
         ],
+        test: ['integration/scenarios/xproduct/pers/507PersInfo.test.js',
+            // 'integration/scenarios/xproduct/483PersInfo.test.js',
+            // 'integration/scenarios/xproduct/489PersInfo.test.js', 
+            //'integration/scenarios/xproduct/1355DepCTA.test.js',
+            //'integration/scenarios/xproduct/1356DepPremChgPop.test.js',
+            //'integration/scenarios/xproduct/1366FacSelect.test.js',
 
+        ],
 
 
     }

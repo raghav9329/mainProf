@@ -314,7 +314,7 @@
     "DOB_invalidYear_futuredate": {
         "DOB_Leapyear1": {
             "Leapyear": "02-29-2020",
-            "ErrorMsg": "You must be at least 18 years of age.",
+            "ErrorMsg": "Please enter a valid year",
             "ariainvalid": "error",
             "ExecutionFlag": true
         }

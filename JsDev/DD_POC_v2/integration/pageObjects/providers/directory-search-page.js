@@ -25,7 +25,9 @@ class DirectorySearchPage extends ControlBase {
         this.deltaDentalPremier = new CheckBox(this.pageObjects.deltaDentalPremier);
         this.deltaCareUSA = new CheckBox(this.pageObjects.deltaCareUSA);
         this.keywordSearch = new TextBox(this.pageObjects.keywordSearch);
+        this.autoSearch = new Button(this.pageObjects.autoSearch);
         this.findDentist = new Button(this.pageObjects.findDentist);
+        this.resultFreeText = new Label(this.pageObjects.resultFreeText);
         this.refineSearch = new Label(this.pageObjects.refineSearch);
         this.homeAddressfromGoogleApi = new Label(this.pageObjects.homeAddressfromGoogleApi);
         this.distanceSelect = new Select(this.pageObjects.distanceSelect);
@@ -130,9 +132,9 @@ class DirectorySearchPage extends ControlBase {
         });
     };
 
-    // openView(providerName) {
-    //     element(this.pageObjects.view(providerName)).clickIt();
-    // };
+    openView(providerName) {
+        element(this.pageObjects.view(providerName)).clickIt();
+    };
 
     filterMenuItem(filterMenuName) {
         return new Label(this.pageObjects.filterMenuItem(filterMenuName));

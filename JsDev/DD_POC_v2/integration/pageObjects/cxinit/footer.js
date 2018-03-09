@@ -24,6 +24,7 @@ class Footer extends ControlBase {
         this.joinAARP =new LinkText(this.pageObjects.joinAARP);
         this.renewAARP =new LinkText(this.pageObjects.renewAARP);
         this.aarporgHome =new LinkText(this.pageObjects.aarporgHome);
+        this.copyrightFooter = new Label(this.pageObjects.copyrightFooter);
 
     };
 

@@ -1,0 +1,25 @@
+{
+    "testdata": {
+        "test1": {
+            "params": {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "Richard Endo",
+                "specialty": ["GENERAL DENTIST"],
+                "meta_data": false
+            },
+            "verify": {
+                "zipcode": "94105",
+                "free_text": "Richard Endo",
+                "specialty": {
+                    "specialty1":"GENERAL DENTIST",
+                    "specialty2":"Endodontist"
+                }
+            }
+        }
+
+    }
+}

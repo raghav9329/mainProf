@@ -19,15 +19,22 @@ class Footer extends ControlBase {
         this.pageObjects = new footerLocators();
         this.calldelta = new Label(this.pageObjects.calldelta);
         this.legalNotices = new LinkText(this.pageObjects.legalNotices);
-        this.privacy =new LinkText(this.pageObjects.privacy);
-        this.languageAssistance =new LinkText(this.pageObjects.languageAssistance);
-        this.joinAARP =new LinkText(this.pageObjects.joinAARP);
-        this.renewAARP =new LinkText(this.pageObjects.renewAARP);
-        this.aarporgHome =new LinkText(this.pageObjects.aarporgHome);
+        this.privacy = new LinkText(this.pageObjects.privacy);
+        this.languageAssistance = new LinkText(this.pageObjects.languageAssistance);
+        this.joinAARP = new LinkText(this.pageObjects.joinAARP);
+        this.renewAARP = new LinkText(this.pageObjects.renewAARP);
+        this.aarporgHome = new LinkText(this.pageObjects.aarporgHome);
+        this.copyrightFooter = new Label(this.pageObjects.copyrightFooter);
+        this.footer = new Label(this.pageObjects.footer);
+        this.copyright = new Label(this.pageObjects.copyRight);
+        this.contactText = new Label(this.pageObjects.contactText);
+        this.helpContact = new Label(this.pageObjects.helpContact);
+        this.ShoppingContact = new Label(this.pageObjects.ShoppingContact);
+        this.contractNumber = new Label(this.pageObjects.contractNumber);
 
     };
 
-    verifylegalNotices(){
+    verifylegalNotices() {
         var self = this;
 
         self.legalNotices.click();
@@ -37,7 +44,7 @@ class Footer extends ControlBase {
         Utility.switchToWindow(0);
     };
 
-    verifyprivacy(){
+    verifyprivacy() {
         var self = this;
         self.privacy.click();
         Utility.switchToWindow(1);
@@ -46,7 +53,7 @@ class Footer extends ControlBase {
         Utility.switchToWindow(0);
     };
 
-    verifylanguageAssistance(){
+    verifylanguageAssistance() {
         var self = this;
         self.languageAssistance.click();
         Utility.switchToWindow(1);
@@ -55,7 +62,7 @@ class Footer extends ControlBase {
         Utility.switchToWindow(0);
     };
 
-    verifyjoinAARP(){
+    verifyjoinAARP() {
         var self = this;
         self.joinAARP.click();
         Utility.switchToWindow(1);
@@ -64,7 +71,7 @@ class Footer extends ControlBase {
         Utility.switchToWindow(0);
     };
 
-    verifyrenewAARP(){
+    verifyrenewAARP() {
         var self = this;
         self.renewAARP.click();
         Utility.switchToWindow(1);
@@ -73,7 +80,7 @@ class Footer extends ControlBase {
         Utility.switchToWindow(0);
     };
 
-    verifyaarporgHome(){
+    verifyaarporgHome() {
         var self = this;
         self.aarporgHome.click();
         Utility.switchToWindow(1);
@@ -82,7 +89,7 @@ class Footer extends ControlBase {
         Utility.switchToWindow(0);
     };
 
-    verifyFooter(){
+    verifyFooter() {
         expect(this.legalNotices.isPresentAndDisplayed()).toBeTruthy();
         expect(this.privacy.isPresentAndDisplayed()).toBeTruthy();
         expect(this.languageAssistance.isPresentAndDisplayed()).toBeTruthy();

@@ -49,6 +49,12 @@ class EnrollPage extends ControlBase {
         this.Go = new Button(this.pageObjects.Go);
         this.PpoEnrollBtn = new Button(this.pageObjects.PpoEnrollBtn);
 
+        this.quoteInfoTxt = new Label(this.pageObjects.quoteInfoTxt);
+        this.quoteZipTxt = new Label(this.pageObjects.quoteZipTxt);
+        this.quotesDepTxt = new Label(this.pageObjects.quotesDepTxt);
+        this.birtdateText = new Label(this.pageObjects.birtdateText);
+
+
     }
 
     /**
@@ -58,6 +64,9 @@ class EnrollPage extends ControlBase {
     isAt() {
         return this.GetQuote.isPresentAndDisplayed();
     };
+    depBirthDayText(depno) {
+        return new Label(this.pageObjects.depBirthDayText(depno))
+    }
     enroll(planName) {
         return new Button(this.pageObjects.enroll(planName));
     }
@@ -66,29 +75,43 @@ class EnrollPage extends ControlBase {
         return new TextBox(this.pageObjects.dependentDOB(depno));
     };
 
-    deltaEnroll(homeObj) {
+    olddeltaEnroll(homeObj) {
         var self = this;
         self.Zipcode.setText(homeObj.ZIPcode);
         self.Zipcode.setText(homeObj.ZIPcode);
         browser.sleep(1000);
         self.dob.setText(homeObj.dob);
+    };
+
+    deltaEnroll(homeObj) {
+        var self = this;
+        var noofdependents = '';
+
         browser.controlFlow().execute(function() {
             if (homeObj.dependentsDOB) {
-                homeObj.dependentsDOB.forEach(function(depdob, index) {
-                    // console.log("depdob====" + depdob);
-                    // console.log("index====" + index);
-                    self.addDependent.click().then(function() {
-                        browser.sleep(1000);
-                        var depno = index + 1;
-                        element(by.xpath('//a[@id="addChild"]/parent::div/div[' + depno + ']/input')).clear().sendKeys(depdob).then(function() {
-                            browser.sleep(1000);
-                        })
-                    })
-                });
+                noofdependents = homeObj.dependentsDOB.length;
+            } else {
+                noofdependents = 0;
             }
-
+            if (isExecutionFromUI == true) planOptions.back.click();
+            shopping.enterDOB(homeObj.dob);
+            browser.sleep(10000);
+            if (homeObj.dependentsDOB) {
+                shopping.NoOFCovered_getAQuote.setText(noofdependents + '\t');
+                browser.sleep(10000);
+                homeObj.dependentsDOB.forEach(function(depdob, index) {
+                    var depno = index + 1;
+                    shopping.enterDependentDOB('Dependent' + depno, depdob);
+                });
+            } else {
+                shopping.NoOFCovered_getAQuote.setText(noofdependents + '\t');
+            }
+            shopping.Showplans.click();
+            planOptions.getPlanDetails(homeObj.PlanName).click();
+            planDetails.buyPlan.click();
         });
     };
+
 
     aarpEnroll(homeObj) {
         this.Zipcode.setText(homeObj.ZIPcode);
@@ -97,26 +120,7 @@ class EnrollPage extends ControlBase {
         this.Coverage_Type.selectByText(homeObj.NoOfPeopleCovered);
     }
 
-    // enterHomePageDetailsNew(homeObj) {
-    //     return browser.controlFlow().execute(function() {
-    //         switch (homeObj.IssuerCode.toUpperCase()) {
-    //             case 'DELTA':
-    //                 self.deltaEnroll(homeObj);
-    //                 break;
-    //             case 'AARP':
-    //                 shopping.State.setText(homeObj.State);
-    //                 shopping.Zipcode.setText(homeObj.ZIPcode);
-    //                 shopping.NoOFCovered.selectByText(homeObj.CoverageType);
-    //                 browser.sleep(3000)
-    //                     //shopping.Cvgstartdate.setText(homeObj.CoverageStartDate);
-    //                 shopping.Submit.click();
-    //                 break;
-    //         };
-    //         planOptions.getPlanDetails(homeObj.PlanName).click();
-    //         planDetails.buyPlan.click();
-    //     });
 
-    // };
     // Fill Home page details and navigate ti perInfo page
     enterHomePageDetails(homeObj, ppoo) {
         var self = this;
@@ -125,48 +129,77 @@ class EnrollPage extends ControlBase {
                 if (isExecutionFromUI) {
                     switch (homeObj.IssuerCode.toUpperCase()) {
                         case 'DELTA':
-                            self.deltaEnroll(homeObj);
+                            self.olddeltaEnroll(homeObj);
                             break;
                         case 'AARP':
                             self.aarpEnroll(homeObj);
                             break;
                     };
                     return self.Effcdate.getSelectedText().then(function(cstartDate) {
-                        //this.Effcdate.selectByText(homeObj.CoverageStartDate);
                         self.Go.click();
-                        browser.sleep(2000);
-                        browser.refresh();
-                        browser.sleep(2000);
                         if (homeObj.IssuerCode.toUpperCase() == 'DELTA') {
-                            self.pageObjects.enroll(homeObj.PlanName).click();
-                            element(by.id('apply')).click();
+                            self.deltaEnroll(homeObj)
                             return cstartDate;
                         }
                         if (homeObj.IssuerCode.toUpperCase() == 'AARP') {
                             planOptions.getPlanDetails(homeObj.PlanName).click();
                             planDetails.buyPlan.click();
-                           return cstartDate;
+                            return cstartDate;
                         }
                     })
                 } else {
-                    console.log("else block===============");
-                    if (c.get('browserName') == 'internet explorer') self.overridelink.click();
-                    self.PlanName.setText(homeObj.PlanName);
-                    self.PlanType.setText(homeObj.PlanType);
-                    self.PlanCode.setText(homeObj.PlanCode);
-                    self.CoverageStartDate.setText(homeObj.CoverageStartDate);
-                    self.PlanState.setText(homeObj.State);
-                    self.PlanZip.setText(homeObj.ZIPcode);
-                    self.Country.setText(homeObj.Country);
-                    self.EnrollmentFee.setText(homeObj.EnrollmentFee);
-                    self.AnnualCost.setText(homeObj.AnnualCost);
-                    self.CoverageType.setText(homeObj.CoverageType);
-                    self.PlanID.setText(homeObj.PlanID);
-                    self.IssuerCode.setText(homeObj.IssuerCode);
-                    self.NoOFCovered.setText(homeObj.NoOfPeopleCovered);
-                    if (homeObj.Dob) self.Dob.setText(homeObj.Dob);
-                    self.Submit.click();
+
+                    Utility.openApplication(browser.params.baseUrl + '/shopping/delta/test');
+                    return element(by.id("eff_date")).getAttribute('value').then(function(cdate) {
+                        shopping.Zipcode.setText(homeObj.ZIPcode);
+                        element(by.name('issuerCode')).clear();
+                        element(by.name('issuerCode')).sendKeys(homeObj.IssuerCode.toLowerCase())
+
+                        shopping.Submit.click();
+                        planOptions.back.click();
+                        if (homeObj.IssuerCode.toUpperCase() == 'DELTA') {
+                            self.deltaEnroll(homeObj);
+                        }
+                        if (homeObj.IssuerCode.toUpperCase() == 'AARP') {
+                            shopping.NoOFCovered_getAQuote.setText((Number(homeObj.NoOfPeopleCovered)) + '\t');
+                            browser.sleep(5000)
+                            shopping.Showplans.click();
+                            planOptions.getPlanDetails(homeObj.PlanName).click();
+                            planDetails.buyPlan.click();
+                        }
+                        if (isExecutionFromUI == false) {
+                            var date = new Date();
+                            var month = date.getMonth() + 1;
+                            var d = new Date(month + '/01/2018');
+                            return moment(d).add(1, 'month').format('MM/DD/YYYY');
+                        } else {
+
+                            return cdate;
+                        }
+                    })
                 }
+
+
+
+                //  else {
+                //     console.log("else block===============");
+                //     if (c.get('browserName') == 'internet explorer') self.overridelink.click();
+                //     self.PlanName.setText(homeObj.PlanName);
+                //     self.PlanType.setText(homeObj.PlanType);
+                //     self.PlanCode.setText(homeObj.PlanCode);
+                //     self.CoverageStartDate.setText(homeObj.CoverageStartDate);
+                //     self.PlanState.setText(homeObj.State);
+                //     self.PlanZip.setText(homeObj.ZIPcode);
+                //     self.Country.setText(homeObj.Country);
+                //     self.EnrollmentFee.setText(homeObj.EnrollmentFee);
+                //     self.AnnualCost.setText(homeObj.AnnualCost);
+                //     self.CoverageType.setText(homeObj.CoverageType);
+                //     self.PlanID.setText(homeObj.PlanID);
+                //     self.IssuerCode.setText(homeObj.IssuerCode);
+                //     self.NoOFCovered.setText(homeObj.NoOfPeopleCovered);
+                //     if (homeObj.Dob) self.Dob.setText(homeObj.Dob);
+                //     self.Submit.click();
+                // }
             })
         });
     };

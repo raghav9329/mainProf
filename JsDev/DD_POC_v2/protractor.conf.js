@@ -2,14 +2,19 @@ var mkdirp = require('mkdirp');
 var rmdir = require('rimraf');
 var path = require("path");
 var suitesFile = require('./suites.js');
+var moment = require('moment');
 
+
+var allStates = {
+    "all": ['CA', 'TX', 'PA', 'FL', 'NY', 'DC', 'LA', 'MD', 'PR', 'TN', 'VI', 'AK', 'AL', 'DE', 'GA', 'MS', 'MT', 'NV', 'UT', 'WV'],
+    "phase0": ['CA', 'TX', 'PA', 'FL', 'NY'],
+    "phase1": ['DC', 'LA', 'MD', 'PR', 'TN', 'VI', 'AK', 'AL'],
+    "phase2": ['DE', 'GA', 'MS', 'MT', 'NV', 'UT', 'WV']
+}
 
 exports.config = {
     framework: 'jasmine2',
-    specs: ['./integration/scenarios/dhmo/507PersInfo.test.js'],
     suites: suitesFile.suitesCollection,
-
-    //'./integration/scenarios/dhmo/507PersInfo_Updated.test.js'
 
     // seleniumServerJar: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\selenium-server-standalone-3.4.0.jar',
     // chromeDriver: __dirname + '\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\chromedriver_2.30.exe',
@@ -20,10 +25,10 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         shardTestFiles: true,
-        maxInstances: 1,
+        maxInstances: 2,
         chromeOptions: {
-            'args': ["disable-infobars"],
-            // 'args': ["disable-infobars", "--headless", "--disable-gpu"],
+               'args': ["disable-infobars", "--window-size=800x600"   ],
+            // 'args': ["disable-infobars", "--headless", "--disable-gpu" , "--window-size=800x600"   ],
             prefs: {
                 download: {
                     'prompt_for_download': false,
@@ -58,8 +63,9 @@ exports.config = {
 
     // },
 
-    beforeLaunch: function () {
-        mkdirp('./PDFDownloads/', function (err) { });
+    beforeLaunch: function() {
+        rmdir('./PDFDownloads/*.pdf', function(err) {});
+        mkdirp('./PDFDownloads/', function(err) {});
     },
 
 
@@ -70,23 +76,32 @@ exports.config = {
         isExecutionFromUI: '',
         testDataEnv: '',
         apiurl: '',
-	runtimeDebug: 'somthingForLength'   // Testing an Idea
+        states: 'all',
+        runtimeDebug: 'somthingForLength' // Testing an Idea
         //  apiurl: 'http://aw-lx0195:19002/providers'
         //  apiurl: 'https://mot-cxservices:8443/providers'
 
     },
 
 
-    onPrepare: function () {
-        minWait = 1000;
-        maxWait = 2000;
-        longWait = 40000;
+
+    onPrepare: function() {
+        IE_ENSURE_CLEAN_SESSION
+        minWait = 75;
+        maxWait = 150;
+        longWait = 2000;
         PAGELOADTIME = 60000;
 
-         product =['DHMO','DPPO','AHMO','APPO']; 
-         states =['CA', 'TX', 'PA', 'FL','NY'];
-// var product = ['DHMO','DPPO','AHMO','APPO']; 
-// var states = ['CA', 'TX', 'PA', 'FL','NY'];
+        product = ['DHMO', 'DPPO', 'AHMO', 'APPO'];
+        states = [];
+        (browser.params.states).split(',').forEach(function(ele) {
+            states = states.concat(allStates[ele])
+        })
+
+
+        //states = ['CA', 'TX', 'PA', 'FL','NY','DC','LA','MD','PR','TN','VI','AK','AL']; 
+        // var product = ['DHMO','DPPO','AHMO','APPO']; 
+        // var states = ['CA', 'TX', 'PA', 'FL','NY','DC','LA','MD','PR','TN','VI','AK','DE','GA','MS','MT','NV','UT','WV'];
 
 
         if (browser.params.isExecutionFromUI == 'false') {
@@ -96,7 +111,7 @@ exports.config = {
         };
         testDataEnv = browser.params.testDataEnv;
         testExecutionEnv = 'staging';
-        highlightElement = true;
+        highlightElement = false;
         if (browser.params.apiurl.includes('https')) process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
         browser.manage().timeouts().implicitlyWait(browser.params.exeInspDelay);
         browser.manage().window().maximize();
@@ -105,20 +120,21 @@ exports.config = {
         folderName = (new Date()).toString().split('').splice(1, 4).join('');
         require("./integration/utils/element-finder-extensions.js");
         custommatcher = require('./integration/utils/custom_matcher.js');
-        Utility = new (require("./integration/utils/common.js"));
+        Utility = new(require("./integration/utils/common.js"));
         assert = require('assert');
         frisby = require('frisby');
-         moment = require('moment');
+        moment = require('moment');
         frisby.globalSetup({
             request: {
                 headers: {
                     'content-type': 'application/json'
-                }, timeout: (30 * 6000)
+                },
+                timeout: (30 * 6000)
             }
         });
         dataProvider = require('jasmine-data-provider');
         // AllureReporter = require('jasmine-allure-reporter');
-
+        //=============Log4Js Configuration Start =========
         log4js = require('log4js');
         log4js.configure({
             appenders: [
@@ -128,32 +144,13 @@ exports.config = {
         });
         logger = log4js.getLogger('DeltaDental');
         logger.setLevel(browser.params.exeLogging);
-        //========================================
-        monthMap = {
-            "1": "Jan",
-            "2": "Feb",
-            "3": "Mar",
-            "4": "Apr",
-            "5": "May",
-            "6": "Jun",
-            "7": "Jul",
-            "8": "Aug",
-            "9": "Sep",
-            "10": "Oct",
-            "11": "Nov",
-            "12": "Dec"
-        };
-        currentDate = new Date(),
-            currentHoursIn24Hour = currentDate.getHours(),
-            currentTimeInHours = currentHoursIn24Hour > 12 ? currentHoursIn24Hour - 12 : currentHoursIn24Hour;
-        // totalDateString = currentDate.getDate() + '-' + monthMap[currentDate.getMonth()] + '-' + (currentDate.getYear() + 1900) +
-        //     '-' + currentTimeInHours + 'h-' + currentDate.getMinutes() + 'm' + currentDate.getSeconds() + 's';
-        totalDateString = (currentDate.getYear() + 1900) + '-' + (currentDate.getMonth() + 1) + '-' + currentDate.getDate() + '-' + currentTimeInHours + currentDate.getMinutes();
-
+        //=============Log4Js Configuration End =========//
+        //=============Jasmine Logger Started =========//
         var JasmineLogReporter = require('./integration/utils/jasmine-log-reporter');
         jasmine.getEnv().addReporter(new JasmineLogReporter());
+        //=============Jasmine Logger End=========//
 
-        //  ==================================
+        //=============Jasmine Report Start =========//
         var Jasmine2HtmlReporter = require('delta-protractor-jasmine2-html-reporter');
         jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
             savePath: './Results/',
@@ -163,15 +160,14 @@ exports.config = {
             consolidate: true,
             consolidateAll: false,
             preserveDirectory: false,
-            filePrefix: '_' + totalDateString,
+            filePrefix: '_' + moment().format('YYYY-MM-Do-h-mm-ss-a'),
             fileName: 'TestReport',
             defaultTimeoutInterval: 10 * 60000
 
         }));
-        //==================
-        //========================
+        //=============Jasmine Report End =========//
 
-        // Allure reporter
+        //=============Allure reporter Start =========//        
 
         //jasmine.getEnv().addReporter(new AllureReporter());
         // jasmine.getEnv().addReporter(new AllureReporter({
@@ -186,19 +182,15 @@ exports.config = {
         //     })
         // });
 
-        //=========================
+        //=============Allure reporter End =========//
     },
-    onComplete: function () {
+    onComplete: function() {
         cmd = require('node-cmd');
-        cmd.get('node dashBoard.js', function () { });
+        cmd.get('node dashBoard.js', function() {});
         // cmd.get('node killProcess.js', function () { });
+        // cmd.run('allure-report.bat');
 
     },
-
-    // onComplete: function() {
-    //     cmd = require('node-cmd');
-    //     cmd.run('allure-report.bat');        
-    // },
 
     resultJsonOutputFile: 'results.json',
     jasmineNodeOpts: {
@@ -210,14 +202,24 @@ exports.config = {
 }
 
 
- //How to Run Script
+//How to Run Script
 
- // single spec               => npm run acqmot
- // PD suite on dit env       => npm run pddit -- --suite=pd2_4
- // PD suite on mot env       => npm run pdmot -- --suite=pd2_4
- // AARP suite on dit env     => npm run acqdit -- --suite=ahe2e
- // AARP suite on mot env     => npm run acqmot -- --suite=ahe2e
- // DELTA suite on dit env    => npm run acqdit -- --suite=dhe2e
- // DELTA suite on mot env    => npm run acqmot -- --suite=dhe2e
- // Shopping suite on dit env => npm run spdit -- --suite=buy2shop
- // Shopping suite on mot env => npm run spmot -- --suite=buy2shop
+// single spec               => npm run acqmot
+// PD suite on dit env       => npm run pddit -- --suite=pd2_4
+// PD suite on mot env       => npm run pdmot -- --suite=pd2_4
+// AARP suite on dit env     => npm run buydit -- --suite=ahe2e
+// AARP suite on mot env     => npm run buymot -- --suite=ahe2e
+// DELTA suite on dit env    => npm run buydit -- --suite=dhe2e
+// DELTA suite on mot env    => npm run buymot -- --suite=dhe2e
+// Shopping suite on dit env => npm run spdit -- --suite=buy2shop
+// Shopping suite on mot env => npm run spmot -- --suite=buy2shop
+
+
+//Run the script from /test URL
+
+//npm run buydittest -- --suite=xproduct
+// npm run buymottest -- --suite=xproduct --params.states phase1
+
+//Run the script from hCentive application UI
+
+//npm run buydit -- --suite=xproduct

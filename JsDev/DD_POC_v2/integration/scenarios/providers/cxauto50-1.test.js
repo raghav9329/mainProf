@@ -117,4 +117,68 @@ describe('Providers CXAUTO:50-1 for Networks Refine Search', function() {
                 .done(doneFn);
         });
     });
+
+
+
+});
+
+describe('Providers CXAUTO:50_1-1 for NY Networks', function() {
+    dataProvider(TestData.Loc, function(data, description) {
+        var pPname = data.providerFName + " " + data.providerLName;
+            var Addr = data.Address + data.City + data.State;
+        fit("Validate Networks Provider = "+pPname+" Loc = "+Addr+" ", function() {
+            Utility.openApplication('http://aw-lx0176.deltadev.ent/find-a-dentist/alpha/directory-search.html?location=New%20York,%20NY,%20USA&distance=15&addnetwork=32BJinNY&networkui=false&facilityui=false&specialty=General%20Dentist&sourceNetwork=2nyppo&targetNetwork=2nyppo&lat=40.7127753&long=-74.0059728');
+            dirSearch.location.setText(Addr);
+            dirSearch.keywordSearch.setText(pPname);
+            providerDetails.findIcon.click();
+            expect(providerDetails.bjNetwork.getText()).toContain("NY Select");
+            providerDetails.bjDeltaCare.isPresentAndDisplayed().then(function(displayed) {
+                if (displayed) {
+                    expect(providerDetails.bjDeltaCare.getText()).toEqual("DeltaCare USA network");
+                    providerDetails.providerFacility.isPresentAndDisplayed().then(function(displayed) {
+                        if (displayed) {
+                            providerDetails.providerFacility.isEnabled().then(function(displayed) {
+                                expect(displayed).toBe("False");
+                            })
+                        }
+                    })
+                }
+            })
+
+            if (providerDetails.providerName.getText() == pPname) {
+                providerDetails.openView(pPname, 'VIEW');
+                expect(providerDetails.bjNetwork.getText()).toContain("NY Select");
+                providerDetails.bjDeltaCare.isPresentAndDisplayed().then(function(displayed) {
+                    if (displayed) {
+                        expect(providerDetails.bjDeltaCare.getText()).toEqual("DeltaCare USA network");
+                        providerDetails.providerFacility.isPresentAndDisplayed().then(function(displayed) {
+                            if (displayed) {
+                                providerDetails.providerFacility.isEnabled().then(function(displayed) {
+                                    expect(displayed).toBe("False");
+                                })
+                            }
+                        })
+                    }
+                })
+                if (expect(providerDetails.providerPlaceName.isPresentAndDisplayed()).toBeTruthy()) {
+                    providerDetails.providerPlaceName.click();
+                    expect(providerDetails.bjNetwork.getText()).toContain("NY Select");
+                    providerDetails.bjDeltaCare.isPresentAndDisplayed().then(function(displayed) {
+                        if (displayed) {
+                            expect(providerDetails.bjDeltaCare.getText()).toEqual("DeltaCare USA network");
+                            providerDetails.providerFacility.isPresentAndDisplayed().then(function(displayed) {
+                                if (displayed) {
+                                    providerDetails.providerFacility.isEnabled().then(function(displayed) {
+                                        expect(displayed).toBe("False");
+                                    })
+                                }
+                            })
+                        }
+                    })
+                }
+            }else{
+                expect(providerDetails.providerName.getText()).toEqual(pPname);
+            }
+        });
+    });
 });

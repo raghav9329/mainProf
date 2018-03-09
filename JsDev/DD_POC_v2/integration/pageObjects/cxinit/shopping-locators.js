@@ -22,9 +22,15 @@ class ShoppingPageLocators {
         this.serverErrMsgInvalidZipcode = by.css('a.error');
         this.zipCodeserverError = by.css('div.error-container.global-margin');
         this.fieldBdMM = by.id('app0_dob_month');
+        this.errorBdMM = by.id('app0_dob_month-error');
         this.fieldBdDD = by.id('app0_dob_day');
+        this.errorBdDD = by.id('app0_dob_day-error');
         this.fieldBdYyyy = by.id('app0_dob_year');
+        this.errorBdYyyy = by.id('app0_dob_year-error');
         this.appErrorMsgs = by.xpath('//fieldset[@id="birthdate-fieldset"]/following-sibling::div');
+        this.errorInvalidDob = by.css('a.error.birthdate-error');
+        this.minAgeError = by.id('birthdate-fieldset-error');
+        this.depDob = by.xpath('(//fieldset[contains(@id,"dependent_dob_fieldset")])');
 
         this.dependentfieldDBMM = function(dependentName) {
             var number = dependentName.split('Dependent')[1];

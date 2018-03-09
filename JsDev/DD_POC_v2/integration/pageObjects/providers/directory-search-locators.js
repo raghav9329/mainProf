@@ -9,7 +9,9 @@ class DirectorySearchLocators {
         this.deltaDentalPremier = by.id('network_Premier');
         this.deltaCareUSA = by.id('network_DeltaCare');
         this.keywordSearch = by.id('keyword');
+        this.autoSearch = by.id('autosuggest-container');
         this.findDentist = by.buttonText('Find dentists');
+        this.resultFreeText = by.id('result-freetext');
         this.refineSearch = by.xpath('//span[contains(text(),"+ Refine")]');
         this.homeAddressfromGoogleApi = by.xpath('//div[@class="pac-item"]');
         this.distanceSelect = by.id('distance');

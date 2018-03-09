@@ -39,8 +39,56 @@ class ShoppingPage extends ControlBase {
         this.fieldBdDD = new TextBox(this.pageObjects.fieldBdDD);
         this.fieldBdYyyy = new TextBox(this.pageObjects.fieldBdYyyy);
         this.appErrorMsgs = new Label(this.pageObjects.appErrorMsgs);
+        this.errorBdMM = new Label(this.pageObjects.errorBdMM);
+        this.errorBdDD = new Label(this.pageObjects.errorBdDD);
+        this.errorBdYyyy = new Label(this.pageObjects.errorBdYyyy);
+        this.errorInvalidDob = new Label(this.pageObjects.errorInvalidDob);
+        this.minAgeError = new Label(this.pageObjects.minAgeError);
+        this.depDob = new Label(this.pageObjects.depDob);
+
 
     }
+
+    dobClienterrorMsgs() {
+        var promises = [];
+        var self = this;
+         return browser.controlFlow().execute(function() {
+        self.errorBdMM.getText().then(function(mm) {
+            console.log("mm====" + mm)
+            if (mm.length >= 1) {
+                promises.push(mm);
+            }
+        });
+        self.errorBdDD.getText().then(function(mm) {
+            console.log("mm====" + mm)
+            if (mm.length >= 1) {
+                promises.push(mm);
+            }
+        })
+        self.errorBdYyyy.getText().then(function(mm) {
+            console.log("mm====" + mm)
+            if (mm.length >= 1) {
+                promises.push(mm);
+            }
+        })
+
+        // promises.push(this.errorBdDD.getText());
+        // promises.push(this.errorBdYyyy.getText());
+        self.errorInvalidDob.isPresentAndDisplayed().then(function(displayed) {
+            if (displayed) {
+                // promises.push(self.errorInvalidDob.getText());
+                self.errorInvalidDob.getText().then(function(mm) {
+                    console.log("mm====" + mm)
+                    if (mm.length >= 1) {
+                        promises.push(mm);
+                    }
+                })
+            }
+        });
+        // return protractor.promise.all(promises);
+        return promises;
+    });
+    };
 
     isAt() {
         return this.headerContent.getText().then(function(header) {
@@ -66,7 +114,7 @@ class ShoppingPage extends ControlBase {
         return new TextBox(this.pageObjects.dependentfieldDBYY(dependentName));
     };
 
-dependenterrorfieldDBMM(dependentName) {
+    dependenterrorfieldDBMM(dependentName) {
         return new TextBox(this.pageObjects.dependenterrorfieldDBMM(dependentName));
     };
     dependenterrorfieldDBDD(dependentName) {
@@ -85,24 +133,94 @@ dependenterrorfieldDBMM(dependentName) {
         var datesplit = (d.split('-'))
         switch (datepart.toUpperCase()) {
             case 'MONTH':
-            this.dependentfieldDBMM(Dependent).setText(datesplit[0])
-            break;
+                this.dependentfieldDBMM(Dependent).setText(datesplit[0])
+                break;
 
             case 'DAY':
-            this.dependentfieldDBDD(Dependent).setText(datesplit[1]);
-            break;
+                this.dependentfieldDBDD(Dependent).setText(datesplit[1]);
+                break;
 
             case 'YEAR':
-            this.dependentfieldDBYY(Dependent).setText(datesplit[2]);
-            break;
+                this.dependentfieldDBYY(Dependent).setText(datesplit[2]);
+                break;
 
             default:
-            this.dependentfieldDBMM(Dependent).setText(datesplit[0]);
-            this.dependentfieldDBDD(Dependent).setText(datesplit[1]);
-            this.dependentfieldDBYY(Dependent).setText(datesplit[2]);
+                this.dependentfieldDBMM(Dependent).setText(datesplit[0]);
+                this.dependentfieldDBDD(Dependent).setText(datesplit[1]);
+                this.dependentfieldDBYY(Dependent).setText(datesplit[2]);
 
         }
     };
+
+    enterDOB(getdate) {
+        var self = this;
+        return browser.controlFlow().execute(function() {
+            var d = getdate;
+            var datesplit = (d.split('-'));
+            console.log(datesplit);
+            self.fieldBdMM.setText(datesplit[0]);
+            self.fieldBdDD.setText(datesplit[1]);
+            self.fieldBdYyyy.setText(datesplit[2]);
+            self.Zipcode.click();
+
+        })
+    };
+
+    enterDependentDOB(dependent, getdate) {
+        var self = this;
+        return browser.controlFlow().execute(function() {
+            var d = getdate;
+            var datesplit = (d.split('-'))
+            console.log(datesplit);
+            self.dependentfieldDBMM(dependent).setText(datesplit[0]);
+            self.dependentfieldDBDD(dependent).setText(datesplit[1]);
+            self.dependentfieldDBYY(dependent).setText(datesplit[2]);
+            self.Zipcode.click();
+
+        })
+    };
+
+    dependentDobClienterrorMsgs(dependent) {
+        var promises = [];
+        var self = this;
+         return browser.controlFlow().execute(function() {
+        self.dependenterrorfieldDBMM(dependent).getText().then(function(mm) {
+            console.log("mm====" + mm)
+            if (mm.length >= 1) {
+                promises.push(mm);
+            }
+        });
+        self.dependenterrorfieldDBDD(dependent).getText().then(function(mm) {
+            console.log("mm====" + mm)
+            if (mm.length >= 1) {
+                promises.push(mm);
+            }
+        })
+        self.dependenterrorfieldDBYY(dependent).getText().then(function(mm) {
+            console.log("mm====" + mm)
+            if (mm.length >= 1) {
+                promises.push(mm);
+            }
+        })
+
+        /*// promises.push(this.errorBdDD.getText());
+        // promises.push(this.errorBdYyyy.getText());
+        self.errorInvalidDob.isPresentAndDisplayed().then(function(displayed) {
+            if (displayed) {
+                // promises.push(self.errorInvalidDob.getText());
+                self.errorInvalidDob.getText().then(function(mm) {
+                    console.log("mm====" + mm)
+                    if (mm.length >= 1) {
+                        promises.push(mm);
+                    }
+                })
+            }
+        });
+        // return protractor.promise.all(promises);*/
+        return promises;
+    });
+    };
+
 };
 
 /**

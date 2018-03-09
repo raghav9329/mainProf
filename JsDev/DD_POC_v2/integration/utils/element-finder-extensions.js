@@ -219,8 +219,7 @@ ElementArrayFinder.prototype.getElementFromListAndPerformAction = function(index
 ElementFinder.prototype.moveMouse = function() {
     self = this;
     logger.debug('ElementFinder.prototype.moveMouse called');
-    // return getBrowser().actions().mouseMove(this).perform();
-     return true;
+    // return getBrowser().actions().mouseMove(this).perform();   
 
     //========================highlight the element==============================
     /**
@@ -228,14 +227,16 @@ ElementFinder.prototype.moveMouse = function() {
      * hence, wrote this function to highlight the element that protractor interacts with UI during execution
      * @param byObject
      */
-
-    // return browser.driver.executeScript("arguments[0].setAttribute('style', arguments[1]);", self.getWebElement(), "color: Red; border: 5px solid Yellow;").
-    // then(function(resp) {
-    //     return true;
-    // }, function(err) {
-    //     console.log("error is :" + err);
-    // });
-    //============================================================================
+    if (highlightElement) {
+        return browser.driver.executeScript("arguments[0].setAttribute('style', arguments[1]);", self.getWebElement(), "color: Red; border: 5px solid Yellow;").
+        then(function(resp) {
+            return true;
+        }, function(err) {
+            console.log("error is :" + err);
+        });
+    } else {
+        return true;
+    }
 };
 
 

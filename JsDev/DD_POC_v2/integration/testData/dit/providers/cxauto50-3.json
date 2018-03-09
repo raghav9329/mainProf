@@ -155,6 +155,19 @@
             },
             "params1": {},
             "verifyDist": "60 miles"
+        },
+        "Location13": {
+            "params": {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "meta_data": false,
+                "specialty": ["GENERAL DENTIST", "Orthodontist"]
+            },
+            "params1": {},
+            "verifyDist": "60 miles"
         }
     }
 }

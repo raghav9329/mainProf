@@ -164,7 +164,7 @@
                 "max": "60000",
                 "network": "2premier",
                 "meta_data": false,
-                  "specialty": ["X-ray laboratory", "Prosthodontist"]
+                "specialty": ["X-ray laboratory", "Prosthodontist"]
             },
             "deltacare": {
                 "zipcode": "94105",
@@ -174,7 +174,7 @@
                 "max": "60000",
                 "network": "2deltacare",
                 "meta_data": false,
-                  "specialty": ["X-ray laboratory", "Prosthodontist"]
+                "specialty": ["X-ray laboratory", "Prosthodontist"]
             },
             "verify": {
                 "zipcode": "94105"
@@ -344,7 +344,7 @@
                 "max": "60000",
                 "network": "2premier",
                 "meta_data": false,
-                  "specialty": ["X-ray laboratory", "Prosthodontist"]
+                "specialty": ["X-ray laboratory", "Prosthodontist"]
             },
             "deltacare": {
                 "zipcode": "94949",
@@ -354,11 +354,1465 @@
                 "max": "60000",
                 "network": "2deltacare",
                 "meta_data": false,
-                  "specialty": ["X-ray laboratory", "Prosthodontist"]
+                "specialty": ["X-ray laboratory", "Prosthodontist"]
             },
             "verify": {
                 "zipcode": "94949"
             }
         }
-    }
+    },
+
+
+"Loc":[{
+    "providerFName": "Phyl",
+    "providerLName": "Tross",
+    "Speciality": "General Dentist",
+    "Address": "6754 171st St",
+    "City": "Flushing",
+    "State": "NY"
+
+}, {
+    "providerFName": "Adam",
+    "providerLName": "Lublin",
+    "Speciality": "General Dentist",
+    "Address": "17515 Jamaica Ave",
+    "City": "Jamaica",
+    "State": "NY"
+    
+}, {
+    "providerFName": "Clayton",
+    "providerLName": "Johnson",
+    "Speciality": "General Dentist",
+    "Address": "17515 Jamaica Ave",
+    "City": "Jamaica",
+    "State": "NY"
+}, {
+    "providerFName": "Protima",
+    "providerLName": "Sohan",
+    "Speciality": "General Dentist",
+    "Address": "17515 Jamaica Ave",
+    "City": "Jamaica",
+    "State": "NY"
+}, {
+    "providerFName": "Salvatore",
+    "providerLName": "Coscia",
+    "Speciality": "General Dentist",
+    "Address": "96 Atlantic Ave",
+    "City": "Lynbrook",
+    "State": "NY"
+}, {
+    "providerFName": "Anthony",
+    "providerLName": "Quitoni",
+    "Speciality": "General Dentist",
+    "Address": "699 Middle Country Rd",
+    "City": "Middle Island",
+    "State": "NY"
+}, {
+    "providerFName": "D",
+    "providerLName": "Baratt",
+    "Speciality": "General Dentist",
+    "Address": "699 Middle Country Rd",
+    "City": "Middle Island",
+    "State": "NY"
+}, {
+    "providerFName": "Steven",
+    "providerLName": "Grandillo",
+    "Speciality": "General Dentist",
+    "Address": "160 Brentwood Rd",
+    "City": "Bay Shore",
+    "State": "NY"
+}, {
+    "providerFName": "Samih",
+    "providerLName": "Attia",
+    "Speciality": "General Dentist",
+    "Address": "6622 Fresh Pond Rd",
+    "City": "Ridgewood",
+    "State": "NY"
+}, {
+    "providerFName": "Jessica",
+    "providerLName": "Lee",
+    "Speciality": "General Dentist",
+    "Address": "1959A Westchester Ave",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Alexander",
+    "providerLName": "Parshin",
+    "Speciality": "General Dentist",
+    "Address": "255 Richmond Hill Rd",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Mysore",
+    "providerLName": "Ganga",
+    "Speciality": "General Dentist",
+    "Address": "6914 41st Ave Ste C-1",
+    "City": "Woodside",
+    "State": "NY"
+}, {
+    "providerFName": "Aviram",
+    "providerLName": "Shmuely",
+    "Speciality": "General Dentist",
+    "Address": "13336 Whitestone Expy",
+    "City": "Flushing",
+    "State": "NY"
+}, {
+    "providerFName": "Eli",
+    "providerLName": "Adler",
+    "Speciality": "General Dentist",
+    "Address": "249 Broadway",
+    "City": "Lynbrook",
+    "State": "NY"
+}, {
+    "providerFName": "Aleksandr",
+    "providerLName": "Azbel",
+    "Speciality": "General Dentist",
+    "Address": "6555 Woodhaven Blvd",
+    "City": "Rego Park",
+    "State": "NY"
+}, {
+    "providerFName": "Rosette",
+    "providerLName": "Imani",
+    "Speciality": "General Dentist",
+    "Address": "8418 37th Ave",
+    "City": "Jackson Heights",
+    "State": "NY"
+}, {
+    "providerFName": "Sunhoon",
+    "providerLName": "Loh",
+    "Speciality": "General Dentist",
+    "Address": "4543A Bell Blvd",
+    "City": "Bayside",
+    "State": "NY"
+}, {
+    "providerFName": "Nazanin",
+    "providerLName": "Mehrnia",
+    "Speciality": "General Dentist",
+    "Address": "14712 Rockaway Blvd",
+    "City": "Jamaica",
+    "State": "NY"
+}, {
+    "providerFName": "Raj",
+    "providerLName": "Singla",
+    "Speciality": "General Dentist",
+    "Address": "235 W 14th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Jacob",
+    "providerLName": "Orbach",
+    "Speciality": "General Dentist",
+    "Address": "17617 69th Ave",
+    "City": "Fresh Meadows",
+    "State": "NY"
+}, {
+    "providerFName": "Kambiz",
+    "providerLName": "Taheri",
+    "Speciality": "General Dentist",
+    "Address": "29 Barstow Rd",
+    "City": "Great Neck",
+    "State": "NY"
+}, {
+    "providerFName": "Deepti",
+    "providerLName": "Gupta",
+    "Speciality": "General Dentist",
+    "Address": "25620 Horace Harding Expy",
+    "City": "Little Neck",
+    "State": "NY"
+}, {
+    "providerFName": "Chinar",
+    "providerLName": "Mahadkar",
+    "Speciality": "General Dentist",
+    "Address": "135 Willowbrook Rd",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Unnati",
+    "providerLName": "Amin",
+    "Speciality": "General Dentist",
+    "Address": "135 Willowbrook Rd",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Tracey",
+    "providerLName": "Ambrister",
+    "Speciality": "General Dentist",
+    "Address": "1154 Front St",
+    "City": "Uniondale",
+    "State": "NY"
+}, {
+    "providerFName": "Sanjay",
+    "providerLName": "Kapoor",
+    "Speciality": "General Dentist",
+    "Address": "618 Targee St",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Natalya",
+    "providerLName": "Orlova",
+    "Speciality": "General Dentist",
+    "Address": "536 W 207th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Eugene",
+    "providerLName": "Milford",
+    "Speciality": "General Dentist",
+    "Address": "5610 7th Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Kenny",
+    "providerLName": "Ho",
+    "Speciality": "General Dentist",
+    "Address": "1792 70th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Glen",
+    "providerLName": "Cosman",
+    "Speciality": "General Dentist",
+    "Address": "7815 5th Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Umme",
+    "providerLName": "Rashid",
+    "Speciality": "General Dentist",
+    "Address": "3723 91st St",
+    "City": "Jackson Heights",
+    "State": "NY"
+}, {
+    "providerFName": "Kamrooz",
+    "providerLName": "Korori",
+    "Speciality": "General Dentist",
+    "Address": "9709 Jamaica Ave",
+    "City": "Woodhaven",
+    "State": "NY"
+}, {
+    "providerFName": "Sergio",
+    "providerLName": "Molinaro",
+    "Speciality": "General Dentist",
+    "Address": "9703 101st Ave",
+    "City": "Ozone Park",
+    "State": "NY"
+}, {
+    "providerFName": "Aleksandr",
+    "providerLName": "Grigoryan",
+    "Speciality": "General Dentist",
+    "Address": "187 Saint Nicholas Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Albert",
+    "providerLName": "Kadaa",
+    "Speciality": "General Dentist",
+    "Address": "2162 E 7th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Abe",
+    "providerLName": "Michaels",
+    "Speciality": "General Dentist",
+    "Address": "6637 Yellowstone Blvd",
+    "City": "Forest Hills",
+    "State": "NY"
+}, {
+    "providerFName": "Albina",
+    "providerLName": "Polt",
+    "Speciality": "General Dentist",
+    "Address": "6509 99th St Apt D",
+    "City": "Rego Park",
+    "State": "NY"
+}, {
+    "providerFName": "Alan",
+    "providerLName": "Perlmutter",
+    "Speciality": "General Dentist",
+    "Address": "650 Central Ave Ste H",
+    "City": "Cedarhurst",
+    "State": "NY"
+}, {
+    "providerFName": "Atul",
+    "providerLName": "Parikh",
+    "Speciality": "General Dentist",
+    "Address": "2050 Seagirt Blvd",
+    "City": "Far Rockaway",
+    "State": "NY"
+}, {
+    "providerFName": "Adam",
+    "providerLName": "Lighter",
+    "Speciality": "General Dentist",
+    "Address": "14108 84th Dr",
+    "City": "Briarwood",
+    "State": "NY"
+}, {
+    "providerFName": "Aaron",
+    "providerLName": "Polinsky",
+    "Speciality": "General Dentist",
+    "Address": "2532 University Ave",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Abel",
+    "providerLName": "Hendy",
+    "Speciality": "General Dentist",
+    "Address": "632 W 147th St Steb",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Abraham",
+    "providerLName": "Esses",
+    "Speciality": "General Dentist",
+    "Address": "2245 Ocean Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Yevgeniya",
+    "providerLName": "Gelman",
+    "Speciality": "General Dentist",
+    "Address": "7601 3rd Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Adewale",
+    "providerLName": "Adepetu",
+    "Speciality": "General Dentist",
+    "Address": "660 Nereid Ave",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Adly",
+    "providerLName": "Boulos",
+    "Speciality": "General Dentist",
+    "Address": "3123 Coney Island Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "ADRIJANA",
+    "providerLName": "MIKSA",
+    "Speciality": "General Dentist",
+    "Address": "6813 Myrtle Ave",
+    "City": "Glendale",
+    "State": "NY"
+}, {
+    "providerFName": "Harry",
+    "providerLName": "Satin",
+    "Speciality": "General Dentist",
+    "Address": "44 S Central Ave",
+    "City": "Valley Stream",
+    "State": "NY"
+}, {
+    "providerFName": "Jim",
+    "providerLName": "Sarji",
+    "Speciality": "General Dentist",
+    "Address": "443 9th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Ahmed",
+    "providerLName": "Taha",
+    "Speciality": "General Dentist",
+    "Address": "21884 Hempstead Ave",
+    "City": "Queens Village",
+    "State": "NY"
+}, {
+    "providerFName": "Ahron",
+    "providerLName": "Raziel",
+    "Speciality": "General Dentist",
+    "Address": "2270 Kimball St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Albert",
+    "providerLName": "Eliav",
+    "Speciality": "General Dentist",
+    "Address": "203 Nassau Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Radion",
+    "providerLName": "Eliav",
+    "Speciality": "General Dentist",
+    "Address": "203 Nassau Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Igor",
+    "providerLName": "Eliav",
+    "Speciality": "General Dentist",
+    "Address": "203 Nassau Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Waliul",
+    "providerLName": "Khan",
+    "Speciality": "General Dentist",
+    "Address": "1268 White Plains Rd",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Alan",
+    "providerLName": "Kaplan",
+    "Speciality": "General Dentist",
+    "Address": "10721 Queens Blvd Su 5",
+    "City": "Forest Hills",
+    "State": "NY"
+}, {
+    "providerFName": "Alexander",
+    "providerLName": "Ayzenberg",
+    "Speciality": "General Dentist",
+    "Address": "134 Brighton 11th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Alexander",
+    "providerLName": "Kirzhner",
+    "Speciality": "General Dentist",
+    "Address": "9401 Seaview Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Alla",
+    "providerLName": "Ilinsky",
+    "Speciality": "General Dentist",
+    "Address": "1747 Bay Ridge Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Iohana",
+    "providerLName": "Asmarandei",
+    "Speciality": "General Dentist",
+    "Address": "8327 Talbot St",
+    "City": "Kew Gardens",
+    "State": "NY"
+}, {
+    "providerFName": "Pratix",
+    "providerLName": "Shroff",
+    "Speciality": "General Dentist",
+    "Address": "26309 Union Tpke",
+    "City": "Floral Park",
+    "State": "NY"
+}, {
+    "providerFName": "German",
+    "providerLName": "Gelb",
+    "Speciality": "General Dentist",
+    "Address": "3073 Brighton 13th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Ronald",
+    "providerLName": "Deutsch",
+    "Speciality": "General Dentist",
+    "Address": "2016 Avenue M",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Alla",
+    "providerLName": "Hart",
+    "Speciality": "General Dentist",
+    "Address": "3915 Bell Blvd",
+    "City": "Bayside",
+    "State": "NY"
+}, {
+    "providerFName": "Allan",
+    "providerLName": "Lebovitz",
+    "Speciality": "General Dentist",
+    "Address": "1490 Ocean Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Boris",
+    "providerLName": "Yusupov",
+    "Speciality": "General Dentist",
+    "Address": "17 Walt Whitman Rd",
+    "City": "Huntington Station",
+    "State": "NY"
+}, {
+    "providerFName": "Veniamin",
+    "providerLName": "Levant",
+    "Speciality": "General Dentist",
+    "Address": "8411 Northern Blvd",
+    "City": "Jackson Heights",
+    "State": "NY"
+}, {
+    "providerFName": "Alopa",
+    "providerLName": "Mahadkar",
+    "Speciality": "General Dentist",
+    "Address": "534 E 138th St",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Elizabeth",
+    "providerLName": "Polin",
+    "Speciality": "General Dentist",
+    "Address": "420 W 23rd St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Kourosh",
+    "providerLName": "Mehrnia",
+    "Speciality": "General Dentist",
+    "Address": "20101 Hillside Ave",
+    "City": "Hollis",
+    "State": "NY"
+}, {
+    "providerFName": "Joshua",
+    "providerLName": "Davis",
+    "Speciality": "General Dentist",
+    "Address": "241 W 30th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Kenneth",
+    "providerLName": "Chin",
+    "Speciality": "General Dentist",
+    "Address": "241 W 30th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Philip",
+    "providerLName": "Hirschhorn",
+    "Speciality": "General Dentist",
+    "Address": "241 W 30th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Raymond",
+    "providerLName": "Swainson",
+    "Speciality": "General Dentist",
+    "Address": "241 W 30th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Robin",
+    "providerLName": "Craig",
+    "Speciality": "General Dentist",
+    "Address": "241 W 30th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Chandra",
+    "providerLName": "Kaushik",
+    "Speciality": "General Dentist",
+    "Address": "241 W 30th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Simerjit",
+    "providerLName": "Kaur",
+    "Speciality": "General Dentist",
+    "Address": "241 W 30th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Joshua",
+    "providerLName": "Davis",
+    "Speciality": "General Dentist",
+    "Address": "1659 Richmond Ave",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Perri",
+    "providerLName": "Malek",
+    "Speciality": "General Dentist",
+    "Address": "1659 Richmond Ave",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Philip",
+    "providerLName": "Hirschhorn",
+    "Speciality": "General Dentist",
+    "Address": "1659 Richmond Ave",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Angele",
+    "providerLName": "Dimitrey",
+    "Speciality": "General Dentist",
+    "Address": "1659 Richmond Ave",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Loris",
+    "providerLName": "Abraham",
+    "Speciality": "General Dentist",
+    "Address": "1659 Richmond Ave",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Fayez",
+    "providerLName": "Aziz",
+    "Speciality": "General Dentist",
+    "Address": "1659 Richmond Ave",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Ira",
+    "providerLName": "Sharma",
+    "Speciality": "General Dentist",
+    "Address": "1659 Richmond Ave",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Joshua",
+    "providerLName": "Davis",
+    "Speciality": "General Dentist",
+    "Address": "2535 Grand Concourse",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Sur",
+    "providerLName": "Lee",
+    "Speciality": "General Dentist",
+    "Address": "2535 Grand Concourse",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Philip",
+    "providerLName": "Hirschhorn",
+    "Speciality": "General Dentist",
+    "Address": "2535 Grand Concourse",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Narinder",
+    "providerLName": "Singh",
+    "Speciality": "General Dentist",
+    "Address": "2535 Grand Concourse",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Robin",
+    "providerLName": "Craig",
+    "Speciality": "General Dentist",
+    "Address": "2535 Grand Concourse",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Simerjit",
+    "providerLName": "Kaur",
+    "Speciality": "General Dentist",
+    "Address": "2535 Grand Concourse",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Joshua",
+    "providerLName": "Davis",
+    "Speciality": "General Dentist",
+    "Address": "200 Hamilton Ave",
+    "City": "White Plains",
+    "State": "NY"
+}, {
+    "providerFName": "Madelon",
+    "providerLName": "Murphy",
+    "Speciality": "General Dentist",
+    "Address": "200 Hamilton Ave",
+    "City": "White Plains",
+    "State": "NY"
+}, {
+    "providerFName": "Robin",
+    "providerLName": "Craig",
+    "Speciality": "General Dentist",
+    "Address": "200 Hamilton Ave",
+    "City": "White Plains",
+    "State": "NY"
+}, {
+    "providerFName": "Philip",
+    "providerLName": "Hirschhorn",
+    "Speciality": "General Dentist",
+    "Address": "2233 Caton Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Sherine",
+    "providerLName": "Ibrahim",
+    "Speciality": "General Dentist",
+    "Address": "2233 Caton Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Kenneth",
+    "providerLName": "Chin",
+    "Speciality": "General Dentist",
+    "Address": "1302 Kings Hwy",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Philip",
+    "providerLName": "Hirschhorn",
+    "Speciality": "General Dentist",
+    "Address": "1302 Kings Hwy",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Sherine",
+    "providerLName": "Ibrahim",
+    "Speciality": "General Dentist",
+    "Address": "1302 Kings Hwy",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "David",
+    "providerLName": "Kroner",
+    "Speciality": "General Dentist",
+    "Address": "1302 Kings Hwy",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Simerjit",
+    "providerLName": "Kaur",
+    "Speciality": "General Dentist",
+    "Address": "1302 Kings Hwy",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Joshua",
+    "providerLName": "Davis",
+    "Speciality": "General Dentist",
+    "Address": "4020 Main St",
+    "City": "Flushing",
+    "State": "NY"
+}, {
+    "providerFName": "Philip",
+    "providerLName": "Hirschhorn",
+    "Speciality": "General Dentist",
+    "Address": "4020 Main St",
+    "City": "Flushing",
+    "State": "NY"
+}, {
+    "providerFName": "Protima",
+    "providerLName": "Sohan",
+    "Speciality": "General Dentist",
+    "Address": "4020 Main St",
+    "City": "Flushing",
+    "State": "NY"
+}, {
+    "providerFName": "Chandra",
+    "providerLName": "Kaushik",
+    "Speciality": "General Dentist",
+    "Address": "4020 Main St",
+    "City": "Flushing",
+    "State": "NY"
+}, {
+    "providerFName": "Raymond",
+    "providerLName": "Swainson",
+    "Speciality": "General Dentist",
+    "Address": "6180 Jericho Tpke",
+    "City": "Commack",
+    "State": "NY"
+}, {
+    "providerFName": "Govind",
+    "providerLName": "Bapat",
+    "Speciality": "General Dentist",
+    "Address": "6180 Jericho Tpke",
+    "City": "Commack",
+    "State": "NY"
+}, {
+    "providerFName": "Kenneth",
+    "providerLName": "Chin",
+    "Speciality": "General Dentist",
+    "Address": "180 Broadway",
+    "City": "Hicksville",
+    "State": "NY"
+}, {
+    "providerFName": "Ricky",
+    "providerLName": "Munter",
+    "Speciality": "General Dentist",
+    "Address": "180 Broadway",
+    "City": "Hicksville",
+    "State": "NY"
+}, {
+    "providerFName": "Ahmed",
+    "providerLName": "Noureldeen",
+    "Speciality": "General Dentist",
+    "Address": "180 Broadway",
+    "City": "Hicksville",
+    "State": "NY"
+}, {
+    "providerFName": "Raymond",
+    "providerLName": "Swainson",
+    "Speciality": "General Dentist",
+    "Address": "180 Broadway",
+    "City": "Hicksville",
+    "State": "NY"
+}, {
+    "providerFName": "Simerjit",
+    "providerLName": "Kaur",
+    "Speciality": "General Dentist",
+    "Address": "180 Broadway",
+    "City": "Hicksville",
+    "State": "NY"
+}, {
+    "providerFName": "Philip",
+    "providerLName": "Hirschhorn",
+    "Speciality": "General Dentist",
+    "Address": "434A Albee Sq",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Inderpal",
+    "providerLName": "Garcha",
+    "Speciality": "General Dentist",
+    "Address": "2258 Western Ave",
+    "City": "Guilderland",
+    "State": "NY"
+}, {
+    "providerFName": "Joel",
+    "providerLName": "Bryk",
+    "Speciality": "General Dentist",
+    "Address": "657 Amsterdam Ave",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Andrew",
+    "providerLName": "Andreou",
+    "Speciality": "General Dentist",
+    "Address": "644 Veterans Hwy",
+    "City": "Hauppauge",
+    "State": "NY"
+}, {
+    "providerFName": "Jose",
+    "providerLName": "Andrickson",
+    "Speciality": "General Dentist",
+    "Address": "792 Flushing Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Brigette",
+    "providerLName": "Morales",
+    "Speciality": "General Dentist",
+    "Address": "12511 111th Ave",
+    "City": "South Ozone Park",
+    "State": "NY"
+}, {
+    "providerFName": "Jose",
+    "providerLName": "Angeles",
+    "Speciality": "General Dentist",
+    "Address": "1624 Central Ave",
+    "City": "Far Rockaway",
+    "State": "NY"
+}, {
+    "providerFName": "Brigette",
+    "providerLName": "Morales",
+    "Speciality": "General Dentist",
+    "Address": "1624 Central Ave",
+    "City": "Far Rockaway",
+    "State": "NY"
+}, {
+    "providerFName": "Anibal",
+    "providerLName": "Romero",
+    "Speciality": "General Dentist",
+    "Address": "4011 Warren St",
+    "City": "Elmhurst",
+    "State": "NY"
+}, {
+    "providerFName": "Ann",
+    "providerLName": "Hannon",
+    "Speciality": "General Dentist",
+    "Address": "33 Nassau Blvd",
+    "City": "West Hempstead",
+    "State": "NY"
+}, {
+    "providerFName": "Anna",
+    "providerLName": "Ganness",
+    "Speciality": "General Dentist",
+    "Address": "17817 Hillside Ave",
+    "City": "Jamaica",
+    "State": "NY"
+}, {
+    "providerFName": "Anne",
+    "providerLName": "Lombardi",
+    "Speciality": "General Dentist",
+    "Address": "561 Hempstead Ave",
+    "City": "West Hempstead",
+    "State": "NY"
+}, {
+    "providerFName": "Yelena",
+    "providerLName": "Pinkhas",
+    "Speciality": "General Dentist",
+    "Address": "9418 37th Ave",
+    "City": "Jackson Heights",
+    "State": "NY"
+}, {
+    "providerFName": "Arkady",
+    "providerLName": "Pavlov",
+    "Speciality": "General Dentist",
+    "Address": "2610 Ocean Pkway #L1",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Arthur",
+    "providerLName": "Stern",
+    "Speciality": "General Dentist",
+    "Address": "8046 Jamaica Ave",
+    "City": "Woodhaven",
+    "State": "NY"
+}, {
+    "providerFName": "Ashok",
+    "providerLName": "Dogra",
+    "Speciality": "General Dentist",
+    "Address": "4264 Kissena Blvd",
+    "City": "Flushing",
+    "State": "NY"
+}, {
+    "providerFName": "Asya",
+    "providerLName": "Dobrova",
+    "Speciality": "General Dentist",
+    "Address": "108 Beverley Rd",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Michael",
+    "providerLName": "Kats",
+    "Speciality": "General Dentist",
+    "Address": "108 Beverley Rd",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Spyridon",
+    "providerLName": "Katehis",
+    "Speciality": "General Dentist",
+    "Address": "3089 36th St",
+    "City": "Astoria",
+    "State": "NY"
+}, {
+    "providerFName": "George",
+    "providerLName": "Dourmas",
+    "Speciality": "General Dentist",
+    "Address": "3089 36th St",
+    "City": "Astoria",
+    "State": "NY"
+}, {
+    "providerFName": "Indrajeet",
+    "providerLName": "Singh",
+    "Speciality": "General Dentist",
+    "Address": "2908 30th Ave",
+    "City": "Astoria",
+    "State": "NY"
+}, {
+    "providerFName": "Andrij",
+    "providerLName": "Gouz",
+    "Speciality": "General Dentist",
+    "Address": "502 Atlantic Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Avton",
+    "providerLName": "Tinna",
+    "Speciality": "General Dentist",
+    "Address": "16833 Hillside Ave",
+    "City": "Jamaica",
+    "State": "NY"
+}, {
+    "providerFName": "Barry",
+    "providerLName": "Hecht",
+    "Speciality": "General Dentist",
+    "Address": "7721 101st Ave",
+    "City": "Ozone Park",
+    "State": "NY"
+}, {
+    "providerFName": "Boris",
+    "providerLName": "Lyakhovetsky",
+    "Speciality": "General Dentist",
+    "Address": "1225 Avenue R",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Steven",
+    "providerLName": "Ost",
+    "Speciality": "General Dentist",
+    "Address": "40 Railroad Ave",
+    "City": "Glen Head",
+    "State": "NY"
+}, {
+    "providerFName": "Beatriz",
+    "providerLName": "Vallejo",
+    "Speciality": "General Dentist",
+    "Address": "18516 Hillside Ave",
+    "City": "Jamaica",
+    "State": "NY"
+}, {
+    "providerFName": "Jarred",
+    "providerLName": "Seid",
+    "Speciality": "General Dentist",
+    "Address": "700 Hillside Ave",
+    "City": "New Hyde Park",
+    "State": "NY"
+}, {
+    "providerFName": "Lee",
+    "providerLName": "Levinson",
+    "Speciality": "General Dentist",
+    "Address": "2814A Merrick Rd",
+    "City": "Bellmore",
+    "State": "NY"
+}, {
+    "providerFName": "Benjamin",
+    "providerLName": "Medina",
+    "Speciality": "General Dentist",
+    "Address": "1 W 34th St Rm 1204",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Bharati",
+    "providerLName": "Bedi",
+    "Speciality": "General Dentist",
+    "Address": "280 Greenbelt Pkwy",
+    "City": "Holtsville",
+    "State": "NY"
+}, {
+    "providerFName": "Grigoriy",
+    "providerLName": "Sverdlov",
+    "Speciality": "General Dentist",
+    "Address": "348 Fort Washington Ave",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Carla",
+    "providerLName": "Blain",
+    "Speciality": "General Dentist",
+    "Address": "229 Post Ave",
+    "City": "Westbury",
+    "State": "NY"
+}, {
+    "providerFName": "Blaise",
+    "providerLName": "Guzzardo",
+    "Speciality": "General Dentist",
+    "Address": "9471 217th St",
+    "City": "Queens Village",
+    "State": "NY"
+}, {
+    "providerFName": "Cary",
+    "providerLName": "Blumenthal",
+    "Speciality": "General Dentist",
+    "Address": "3447 21st St",
+    "City": "Long Island City",
+    "State": "NY"
+}, {
+    "providerFName": "Peter",
+    "providerLName": "Blumenthal",
+    "Speciality": "General Dentist",
+    "Address": "3447 21st St",
+    "City": "Long Island City",
+    "State": "NY"
+}, {
+    "providerFName": "Christopher",
+    "providerLName": "Mihalios",
+    "Speciality": "General Dentist",
+    "Address": "4221 Francis Lewis Blvd",
+    "City": "Bayside",
+    "State": "NY"
+}, {
+    "providerFName": "Boris",
+    "providerLName": "Bakman",
+    "Speciality": "General Dentist",
+    "Address": "100 Avenue P",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Leonid",
+    "providerLName": "Vaynshteyn",
+    "Speciality": "General Dentist",
+    "Address": "3226 Richmond Rd",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "Eridania",
+    "providerLName": "Baez",
+    "Speciality": "General Dentist",
+    "Address": "3902 Sedgwick Ave 1st Fl",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Nayat",
+    "providerLName": "Bostanci Hacikian",
+    "Speciality": "General Dentist",
+    "Address": "1814 5th Ave",
+    "City": "Bay Shore",
+    "State": "NY"
+}, {
+    "providerFName": "Brian",
+    "providerLName": "Ketover",
+    "Speciality": "General Dentist",
+    "Address": "580 5th Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Vera",
+    "providerLName": "Heifetz-Khrakovsky",
+    "Speciality": "General Dentist",
+    "Address": "2791 W 5th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Tatianna",
+    "providerLName": "Zhelznyakak Bronstein",
+    "Speciality": "General Dentist",
+    "Address": "2981 Avenue U",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Sharon",
+    "providerLName": "Distant-Johnson",
+    "Speciality": "General Dentist",
+    "Address": "620 E 237th St",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Salamon",
+    "providerLName": "Rafailov",
+    "Speciality": "General Dentist",
+    "Address": "18706 Union Tpke",
+    "City": "Fresh Meadows",
+    "State": "NY"
+}, {
+    "providerFName": "Hussein",
+    "providerLName": "Abdelwahab",
+    "Speciality": "General Dentist",
+    "Address": "820 Flatbush Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Keith",
+    "providerLName": "Heller",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "R",
+    "providerLName": "Korngut",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Joseph",
+    "providerLName": "Izzo",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Siu",
+    "providerLName": "Lee",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Leonard",
+    "providerLName": "Morse",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Matthew",
+    "providerLName": "Lieberman",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Sari",
+    "providerLName": "Rosenwein",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "J",
+    "providerLName": "Sconzo",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Doreen",
+    "providerLName": "Amen",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Stephen",
+    "providerLName": "Scotto",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Aaron",
+    "providerLName": "Brandwein",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Jay",
+    "providerLName": "Balber",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Philip",
+    "providerLName": "Klein",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Gisele",
+    "providerLName": "Richard",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Alexander",
+    "providerLName": "Gekht",
+    "Speciality": "General Dentist",
+    "Address": "506 6th St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Bruce",
+    "providerLName": "Niedle",
+    "Speciality": "General Dentist",
+    "Address": "460 Windham Loop",
+    "City": "Staten Island",
+    "State": "NY"
+}, {
+    "providerFName": "C Edmund",
+    "providerLName": "Burton",
+    "Speciality": "General Dentist",
+    "Address": "1185 Dean St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Clifford",
+    "providerLName": "Giordano",
+    "Speciality": "General Dentist",
+    "Address": "818 N Broadway",
+    "City": "N Massapequa",
+    "State": "NY"
+}, {
+    "providerFName": "Candy",
+    "providerLName": "Sebold",
+    "Speciality": "General Dentist",
+    "Address": "2248 E 21st St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Carlo",
+    "providerLName": "Izzo",
+    "Speciality": "General Dentist",
+    "Address": "144 Lakeview Ave",
+    "City": "Lynbrook",
+    "State": "NY"
+}, {
+    "providerFName": "Carlos",
+    "providerLName": "Ovalle",
+    "Speciality": "General Dentist",
+    "Address": "201 Wadsworth Ave Ste GD2",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Carlton",
+    "providerLName": "Sumner",
+    "Speciality": "General Dentist",
+    "Address": "235 Boyle Rd",
+    "City": "Selden",
+    "State": "NY"
+}, {
+    "providerFName": "Richard",
+    "providerLName": "Rosen",
+    "Speciality": "General Dentist",
+    "Address": "402 Court St",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Luz",
+    "providerLName": "Filion",
+    "Speciality": "General Dentist",
+    "Address": "3742 90th St 1st Fl",
+    "City": "Jackson Heights",
+    "State": "NY"
+}, {
+    "providerFName": "Victoria",
+    "providerLName": "Maryansky",
+    "Speciality": "General Dentist",
+    "Address": "260 Avenue X",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Chana",
+    "providerLName": "Perl",
+    "Speciality": "General Dentist",
+    "Address": "315 Daub Ave",
+    "City": "Hewlett",
+    "State": "NY"
+}, {
+    "providerFName": "Chandra",
+    "providerLName": "Kaushik",
+    "Speciality": "General Dentist",
+    "Address": "802 Carman Ave",
+    "City": "Westbury",
+    "State": "NY"
+}, {
+    "providerFName": "Changpae",
+    "providerLName": "Yu",
+    "Speciality": "General Dentist",
+    "Address": "705 Hawkins Ave",
+    "City": "Lk Ronkonkoma",
+    "State": "NY"
+}, {
+    "providerFName": "Charlene",
+    "providerLName": "Berkman",
+    "Speciality": "General Dentist",
+    "Address": "11109 76th Rd Ste A5",
+    "City": "Forest Hills",
+    "State": "NY"
+}, {
+    "providerFName": "Chetan",
+    "providerLName": "Shah",
+    "Speciality": "General Dentist",
+    "Address": "769 Concourse Vlg W",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Vasuki",
+    "providerLName": "Thevanayagam",
+    "Speciality": "General Dentist",
+    "Address": "2878 Niagara Falls Blvd",
+    "City": "Amherst",
+    "State": "NY"
+}, {
+    "providerFName": "Aleksandr",
+    "providerLName": "Izrailov",
+    "Speciality": "General Dentist",
+    "Address": "3234 Nostrand Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Christina",
+    "providerLName": "Liu",
+    "Speciality": "General Dentist",
+    "Address": "6715 Myrtle Ave",
+    "City": "Glendale",
+    "State": "NY"
+}, {
+    "providerFName": "David",
+    "providerLName": "Asad",
+    "Speciality": "General Dentist",
+    "Address": "1025 Church Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Joseph",
+    "providerLName": "Cinquemani",
+    "Speciality": "General Dentist",
+    "Address": "2535 Middle Country Rd",
+    "City": "Centereach",
+    "State": "NY"
+}, {
+    "providerFName": "Brian",
+    "providerLName": "Leibowitz",
+    "Speciality": "General Dentist",
+    "Address": "2535 Middle Country Rd",
+    "City": "Centereach",
+    "State": "NY"
+}, {
+    "providerFName": "Clifford",
+    "providerLName": "Saloshin",
+    "Speciality": "General Dentist",
+    "Address": "2277 Westchester Ave",
+    "City": "Bronx",
+    "State": "NY"
+}, {
+    "providerFName": "Ofer",
+    "providerLName": "Cohen",
+    "Speciality": "General Dentist",
+    "Address": "4260 Broadway",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Shahroukh",
+    "providerLName": "Yaghoubian",
+    "Speciality": "General Dentist",
+    "Address": "914A Columbus Ave",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Tatyana",
+    "providerLName": "Niyazov",
+    "Speciality": "General Dentist",
+    "Address": "1809 Nostrand Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Merik",
+    "providerLName": "Niyazov",
+    "Speciality": "General Dentist",
+    "Address": "1809 Nostrand Ave",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Craig",
+    "providerLName": "Hoffman",
+    "Speciality": "General Dentist",
+    "Address": "761 Pulaski Rd",
+    "City": "Greenlawn",
+    "State": "NY"
+}, {
+    "providerFName": "Johnasina",
+    "providerLName": "Cummings",
+    "Speciality": "General Dentist",
+    "Address": "634 Park Ave",
+    "City": "Huntington",
+    "State": "NY"
+}, {
+    "providerFName": "Nabendu",
+    "providerLName": "Mukherjee",
+    "Speciality": "General Dentist",
+    "Address": "208 E 116th St",
+    "City": "New York",
+    "State": "NY"
+}, {
+    "providerFName": "Curtis",
+    "providerLName": "Johnson",
+    "Speciality": "General Dentist",
+    "Address": "9401 Astoria Blvd",
+    "City": "East Elmhurst",
+    "State": "NY"
+}, {
+    "providerFName": "Mohammed",
+    "providerLName": "Rahman",
+    "Speciality": "General Dentist",
+    "Address": "16701 Hillside Ave",
+    "City": "Jamaica",
+    "State": "NY"
+}, {
+    "providerFName": "Muslina",
+    "providerLName": "Khandakar",
+    "Speciality": "General Dentist",
+    "Address": "16701 Hillside Ave",
+    "City": "Jamaica",
+    "State": "NY"
+}, {
+    "providerFName": "Divakar",
+    "providerLName": "Chokshi",
+    "Speciality": "General Dentist",
+    "Address": "73 Eastern Pkwy",
+    "City": "Brooklyn",
+    "State": "NY"
+}, {
+    "providerFName": "Donald",
+    "providerLName": "Kim",
+    "Speciality": "General Dentist",
+    "Address": "3625 Union St Ofc A",
+    "City": "Flushing",
+    "State": "NY"
+}]
 }

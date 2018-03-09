@@ -10,7 +10,7 @@
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
     "referralSource": "Email Advertisement",
-    "brokernumber": "201285",
+    "brokernumber": "2012836",
     "ariainvalid": "success",
     "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
     "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
@@ -24,7 +24,7 @@
         "middleName": "K",
         "lastName": "lastName",
         "gender": "Female",
-        "DOB": "05-10-2005"
+        "DOB": "05-10-1985"
     },
 
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],

@@ -88,6 +88,8 @@ class PaymentPage extends ControlBase {
         this.paymentAuthorizationTxt = new Label(this.pageObjects.paymentAuthorizationTxt);
         this.enrollmentfeeTxt = new Label(this.pageObjects.enrollmentfeeTxt);
         this.discloserTxt = new Label(this.pageObjects.discloserTxt);
+        this.chargesAgreemetTxt = new Label(this.pageObjects.chargesAgreemetTxt);
+        this.billingFreqmonthlyTxt = new Label(this.pageObjects.billingFreqmonthlyTxt);
 
     };
     /**

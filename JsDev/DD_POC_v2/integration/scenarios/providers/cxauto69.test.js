@@ -72,7 +72,6 @@ describe('CXAUTO-68:Cutover Banner', function() {
             dirSearch.oldDeltaDentalPremier.check();
             dirSearch.oldDeltaDentalUSA.check();
             dirSearch.oldSearch.click();
-            browser.sleep(10000);
             expect(dirSearch.oldDeltaDentalUSA.isSelected()).toBeTruthy();
             dirSearch.checkItOutNewSite.click();
             expect(providerDetails.location.getValue()).toEqual(TestData.location);
@@ -89,7 +88,6 @@ describe('CXAUTO-68:Cutover Banner', function() {
             dirSearch.location.setText(TestData.zipcode);
             dirSearch.keywordSearch.setText(TestData.keyword);
             dirSearch.findDentist.click();
-            browser.sleep(2000);
             dirSearch.goBackToOldSite.click();
             expect(dirSearch.checkItOutNewSite.isPresentAndDisplayed()).toBeTruthy();
             expect(dirSearch.oldKeyword.getValue()).toEqual(TestData.keyword);
@@ -112,6 +110,7 @@ describe('CXAUTO-73: CXINIT2-1075: Reset search button', function() {
         dirSearch.findDentist.click();
         dirSearch.getProvidersCount().then(function(intialTotalCount) {
             dirSearch.refineSearch.click();
+            providerDetails.sortDistance.select();
             expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
             dirSearch.distanceSelect.selectByText(TestData.Distance25);
             dirSearch.apply.click();

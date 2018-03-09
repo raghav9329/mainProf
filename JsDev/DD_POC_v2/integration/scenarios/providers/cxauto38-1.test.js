@@ -1,25 +1,24 @@
 var TestData = require('../../testData/' + testDataEnv + '/providers/cxauto38-1.json');
 
-var dirSearch = new (require('../../pageObjects/providers/directory-search-page.js'));
-var providerDetails = new (require('../../pageObjects/providers/provider-details-page.js'));
+var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 
-describe('Providers CXAUTO:38-1 ', function () {
+describe('Providers CXAUTO:38-1 ', function() {
 
-    beforeEach(function () {
+    beforeEach(function() {
         jasmine.addMatchers(custommatcher.customMatchers);
         Utility.openApplication('');
     });
     var BackendTotal;
 
-    dataProvider(TestData.testdata, function (data, description) {
-        it(" REST API with FreeText: " + Utility.getapiurl('PROVIDERS', '', data.params) + " ", function (doneFn) {
-
+    dataProvider(TestData.testdata, function(data, description) {
+        it(" REST API with FreeText: " + Utility.getapiurl('PROVIDERS', '', data.params) + " ", function(doneFn) {
             let apiurl = Utility.getapiurl('PROVIDERS', '', data.params);
             logger.info("api url ------" + apiurl);
             console.log("api url ------" + apiurl);
 
             frisby.get(apiurl)
-                .then(function (res) {
+                .then(function(res) {
                     let json = res.json;
                     expect(json.providers.length).toBeGreaterThan(0);
                     BackendTotal = json.total;
@@ -27,24 +26,70 @@ describe('Providers CXAUTO:38-1 ', function () {
                 })
                 .done(doneFn);
         });
-        it('Verification Total Count of retrived result: '+data.verify.zipcode + ", " + data.verify.free_text, function () {
-
-            dirSearch.location.setText(data.verify.zipcode);
+        it('Verification Total Count of retrived result: ' + data.verify.zipcode + ", " + data.verify.free_text, function() {
             dirSearch.keywordSearch.setText(data.verify.free_text);
+            dirSearch.location.setText(data.verify.zipcode);
             dirSearch.findDentist.click();
-            // Shounak 12.11.2017: This spec was failing becuase of default General Dentist fix. 
-            // Selecting all Specialties from UI was not helping as Oral Surgeon / Pathology is buggy.
-            // So, removed Specialty check as this script should not be focussed on that
-            // Changed the data file accordingly to get only General Dentists in API Response
-            // Changed the test data significantly to cover many scenarios
-            dirSearch.getProvidersCount().then(function (totalCount) {
-                logger.info("Front End Count of Free Text====" + totalCount);
-                var FrontendTotal = Number(totalCount);
+            dirSearch.getProvidersCount().then(function(totalCount) {
+                FrontendTotal = Number(totalCount);
                 expect(BackendTotal).toBe(FrontendTotal);
-                console.log("BackendTotal=======" + BackendTotal);
-                console.log("FrontendTotal=====" + FrontendTotal);
-            })
+            });
+            providerDetails.providerName.getText().then(function(name) {
+                pdName = name;
+            });
+            for (var i = 1; i <= 3; i++) {
+                providerDetails.findIcon.click();
+                dirSearch.getProvidersCount().then(function(count1) {
+                    expect(FrontendTotal).toBe(Number(count1));
+                    expect(providerDetails.providerName.getText()).toEqual(pdName);
+                    expect(providerDetails.providerAddress.getText()).toContain(data.zipcode);
+                });
+            }
+
         });
     });
 
+
+
+    dataProvider(TestData.testdata1, function(data, description) {
+        it("Validate FreeText Search " + Utility.getapiurl('PROVIDERS', '', data.params) + " ", function(doneFn) {
+            let apiurl = Utility.getapiurl('PROVIDERS', '', data.params);
+            var pCount = 0;
+            frisby.get(apiurl)
+                .then(function(res) {
+                    let json = res.json;
+                    expect(json.providers.length).toBeGreaterThan(0);
+                    json.providers.forEach(function(providers, index) {
+                        pPname = providers.firstName + " " + providers.lastName;
+                        if (pPname == data.verify.free_text) {
+                            pCount++;
+                            if (index < 10) {
+                                expect(pPname).toEqual(data.verify.free_text);
+                            }
+                            return false;
+                        }
+
+                    })
+                })
+                .done(doneFn);
+            dirSearch.location.setText(data.verify.zipcode);
+            dirSearch.keywordSearch.setText(data.verify.free_text);
+            dirSearch.findDentist.click();
+            providerDetails.getandVerifyProvidersName(data.verify.free_text, pCount);
+        });
+    });
+
+    dataProvider(TestData.testdata2, function(data, description) {
+        it("Validate Auto Suggest FreeText Search", function() {
+            dirSearch.location.setText(data.zipcode);
+            dirSearch.keywordSearch.setText(data.free_text);
+            if (expect(dirSearch.autoSearch.isPresentAndDisplayed())) {
+                dirSearch.autoSearch.click();
+            }
+            dirSearch.findDentist.click();
+            expect(dirSearch.resultFreeText.isPresentAndDisplayed()).toBeTruthy();
+            expect(dirSearch.resultFreeText.getText()).toEqual(data.autoSuggest);
+
+        });
+    });
 });

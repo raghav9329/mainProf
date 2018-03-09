@@ -27,6 +27,7 @@ describe('Provider Search Validation', function() {
         dirSearch.selectHomeAddress(TestData.HAddress_ZIP.FullAddress);
         dirSearch.findDentist.click();
         dirSearch.refineSearch.click();
+        providerDetails.sortDistance.select();
         dirSearch.distanceSelect.selectByText(TestData.ProviderData.Distance);
         dirSearch.filterMenuItem('Specialties').click();
         dirSearch.generalDentist.check();

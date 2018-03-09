@@ -24,6 +24,7 @@ class PersonalInfoPageLocators {
         this.coverageStartDate= by.id('startDate');
         this.fieldHomeAddr = by.id('streetAddress');
         this.fieldAlternateId = by.id('alt_id');
+        this.alternateTooltip = by.id('altID-link');
         this.errMsgHomeAddr = by.id('streetAddress-error');
         this.errinvalidAddr = by.xpath('//div[@class="ajax-error-container"]/a');
         this.fieldCity = by.id('city');
@@ -81,6 +82,7 @@ class PersonalInfoPageLocators {
         this.serverErrMsgDay = by.css('a.error.day-error');
         this.serverErrMsgYear = by.css('a.error.year-error');
         this.serverErrMsgContactNumber = by.css('a.error.contactNumber-error');
+        this.serverErrMsgEmail = by.css('a.error.email-error');
         this.serverErrMsgMailingAddress = by.css('a.error.mailingAddress-error');
         this.serverErrMsgMailingCity = by.css('a.error.mailingCity-error');
         this.serverErrMsgMailingState = by.css('a.error.mailingState-error');
@@ -97,10 +99,15 @@ class PersonalInfoPageLocators {
         this.errorMsgRefferalSource = by.id('referralSource-error');
         this.backToQuote = by.id('backToQuote');
         this.emailText = by.xpath('//input[@id="paperless"]/following-sibling::span');
+      
+
         this.footer = by.xpath('//p[@class="disclaimer"]');
         this.copyRight = by.xpath('//p[@class="copyright"]')
         this.helpContact = by.className('phone-link');
         this.ShoppingContact = by.xpath('//p[@id="CustNumber"]');
+        this.contractNumber = by.xpath('//p[@class="contractNumber"]');
+        this.alternateHelpopUp = by.id('alt_id_popup');
+        this.alternateidPopExit = by.id('altID-exit');
         
 
     }

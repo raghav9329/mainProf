@@ -13,7 +13,7 @@
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
     "ZipCode": "94105",
-    "brokernumber": "201285",
+    "brokernumber": "2012836",
     "referralSource": "Email Advertisement",
     "coverageStartDate": "07/01/2017",
     "ariainvalid": "success",
@@ -22,12 +22,14 @@
     "liteGreen": "rgba(142, 208, 127, 1)",
     "lite": "rgba(102, 102, 102, 1)",
     "gray": "rgba(191, 191, 191, 1)",
-    
+
     "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
     "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
-    "facilityoption1": "Kayvan Kafayi DDS",
+    "facilityoption1": {
+        "facilityName": "SecondaryApplicantService-1"
+    },
     "facilityoption2": "Van Ness Dental Group",
-    
+
     "enrollFee": "$10.0",
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
@@ -35,7 +37,7 @@
     "queryAnswer": "Test",
     "discloser": "Delta_CA_DHMO_CAA55",
 
-    
+
 
     "Spouse": {
         "relationship": "Spouse",
@@ -72,6 +74,22 @@
         "Denturerepair": "$55",
         "Crowns": "$325 - $425",
         "Orthodontics": "$2,700 - $2,900"
+    },
+    "primaryFacility": {
+        "facilityName": "Modern Dentistry&Ortho",
+        "street": "2085 Gellert Blvd Ste 9",
+        "city": "Daly City",
+        "region": "CA",
+        "postalCode": "94015-2841",
+        "telephone": "650.878.3171"
+    },
+    "dependent1": {
+        "facilityName": "SecondaryApplicantService-1",
+        "street": "2085 Gellert Blvd Ste 9",
+        "city": "Daly City",
+        "region": "CA",
+        "postalCode": "94015-2841",
+        "telephone": "650.878.3171"
     }
 
 }

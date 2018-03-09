@@ -177,7 +177,7 @@
              });
          }, PAGELOADTIME);
      };
-     this.waitUntilElementPresent = function(timeout) {
+     this.waitUntilElementPresent = function(oElement, timeout) {
          timeout = typeof timeout !== 'undefined' ? timeout : PAGELOADTIME;
          browser.wait(function() {
              return oElement.isPresent().then(function(present) {

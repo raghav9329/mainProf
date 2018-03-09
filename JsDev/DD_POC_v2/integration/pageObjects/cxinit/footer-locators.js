@@ -11,6 +11,13 @@ class FooterLocators {
         this.renewAARP = by.xpath('//a[text()="Renew AARP"]');
         this.aarporgHome = by.xpath('//a[contains(text(),"AARP.org Home")]');
         this.disclaimer = by.xpath('//p[@class="disclaimer"]');
+        this.copyrightFooter = by.xpath('//p[@class="copyright"]');
+         this.footer = by.xpath('//p[@class="disclaimer"]');
+        this.copyRight = by.xpath('//p[@class="copyright"]');
+        this.contactText= by.css('div.footer-contact span');
+        this.helpContact = by.className('phone-link');
+        this.ShoppingContact = by.xpath('//p[@id="CustNumber"]');
+        this.contractNumber = by.xpath('//p[@class="contractNumber"]');
         
     }
 }

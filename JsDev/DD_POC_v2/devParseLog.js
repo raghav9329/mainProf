@@ -127,7 +127,7 @@ console.log( "<thead><tr><th width='34%'> |&nbsp TestDate:StartTime &nbsp|&nbsp 
 
 console.log(thenFormatted+" &nbsp |&nbsp "+nowFormatted +"<br\> ");
 
-console.log( "Total Tests &nbsp &nbsp"+"<b id=totalTests>" +total+"<br\>Total Pass "+"<b id=totalPass>" +testPass+ " &nbsp &nbsp &nbsp TotalFail "+"<b id=totalFail>" + testFails );
+console.log( "Total Tests&nbsp&nbsp "+"<b id=totalTests>" +total+"<br\>Total Pass "+"<b id=totalPass>" +testPass+ " &nbsp &nbsp &nbsp TotalFail "+"<b id=totalFail>" + testFails );
 
 console.log( "<br\> Internal execution time "+"<b id=internalDuration>" + internalDuration + " Min &nbsp <br\> External Duration "+"<b id=externalDuration>" +externalDuration+ " Min <br\>" );
 

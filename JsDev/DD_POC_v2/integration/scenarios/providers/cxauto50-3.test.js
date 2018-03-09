@@ -12,6 +12,7 @@ describe('Providers CXAUTO:50-1 for Distance Search', function() {
 
     dataProvider(TestData.Location, function(data, description) {
         var DistCount;
+        var ascDistance = [];
         it("Providers with Distance" + Utility.getapiurl('PROVIDERS', '', data.params) + " ", function(doneFn) {
             let apiurl = Utility.getapiurl('PROVIDERS', '', data.params);
             console.log("api url ------" + apiurl);
@@ -30,15 +31,22 @@ describe('Providers CXAUTO:50-1 for Distance Search', function() {
                             }
                         })
                         expect(DistCount).toBe(count);
-                       dirSearch.location.setText(data.params.zipcode);
+                        dirSearch.location.setText(data.params.zipcode);
                         dirSearch.findDentist.click();
                         dirSearch.refineSearch.click();
+                        providerDetails.sortDistance.select();
                         dirSearch.distanceSelect.selectByText(data.verifyDist);
                         dirSearch.filterMenuItem('Specialties').click();
                         dirSearch.selectSpecialities(data.params.specialty);
                         dirSearch.apply.click();
                         dirSearch.getProvidersCount().then(function(refineDistCount) {
                             expect(Number(DistCount)).toBe(Number(refineDistCount));
+                        });
+                        providerDetails.asceDist.getElements().getText().then(function(dist) {
+                            dist.forEach(function(ele) {
+                                ascDistance.push(Number(ele.replace("<", '').slice(0, -3)));
+                            })
+                            expect(ascDistance).toEqual(ascDistance.sort())
                         });
 
                     })

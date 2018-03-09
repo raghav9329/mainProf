@@ -3,7 +3,7 @@
     "mi": "K",
     "lastname": "K",
     "gender": "Male",
-    "dob": "05-05-1971",
+    "dob": "05-10-1981",
     "ssn": "1234560215",
     "alternateid": "test@test.com",
     "fieldHomeAddr": "100 First Street",
@@ -18,7 +18,7 @@
     "zipcode1": "94106",
     "facZipcode": "94111",
     "referralSource": "Email Advertisement",
-    "brokernumber": "201285",
+    "brokernumber": "2012836",
     "coverageStartDate": "07/01/2017",
     "ariainvalid": "success",
     "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
@@ -46,7 +46,7 @@
         "middleName": "K",
         "lastName": "lastName",
         "gender": "Female",
-        "DOB": "05-10-2006"
+        "DOB": "05-10-1985"
     },
 
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],

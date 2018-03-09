@@ -8,10 +8,16 @@ class ProviderDetailsLocators {
         this.pageNation = by.css('ol.pagination li');
         this.page = by.linkText('3');
         this.backToSearchResults = by.css('a.inverted.back-link');
+        this.bestMatch = by.id('sort_relevance');
+        this.sortDistance = by.id('sort_distance');
+        this.asceDist = by.xpath('//div[@class="provider__distance"]/span');
         this.providerDistance = by.css('div.provider__distance span');
         this.providerName = by.className('provider__name');
         this.providerSpecialty = by.className('provider__specialty');
         this.providerNetwork = by.className('provider__network');
+        this.providerFacility = by.className('provider__facility');
+        this.bjNetwork = by.className('state-indicator provider__network');
+        this.bjDeltaCare = by.xpath('(//span[normalize-space(text()) = "DeltaCare USA network"])[1]');
         this.providerAvailability = by.className('provider__availability');
         this.providerMap = by.className('provider__map');
         this.providerPlace = by.className('provider__place');
@@ -90,6 +96,8 @@ class ProviderDetailsLocators {
         this.viewLink = by.css('div.provider__link a');
 
     }
+
+    
 }
 
 module.exports = ProviderDetailsLocators;

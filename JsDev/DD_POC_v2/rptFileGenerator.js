@@ -60,9 +60,15 @@ fs.writeFile(fileHoseName, runnerHostName, function(error){
 });
 
 // Write the command Line Date to file
-var specConf            = process.argv[2];  // rename specConf
-var suiteExecuted       = process.argv[3];      // rename suiteExecuted
-var cmdLineFileData     = specConf+" "+suiteExecuted;
+var specConf              = process.argv[2];  // rename specConf
+var suiteExecuted         = process.argv[3];      // rename suiteExecuted
+var arg_four     = process.argv[4];
+var arg_five     = process.argv[5];
+var arg_six      = process.argv[6];
+var arg_seven    = process.argv[7];
+var arg_eight    = process.argv[8];
+var arg_nine    = process.argv[9];
+var cmdLineFileData     = specConf+" "+suiteExecuted+" "+arg_four+" "+arg_five+" "+arg_six+" "+arg_seven+" "+arg_eight+" "+arg_nine;
 fs.writeFile(fileCmdLineArgs, cmdLineFileData, function(error){
 	if (error) { console.error("write error: "+error.message);
 	} else { console.log("successful write to "+fileCmdLineArgs);

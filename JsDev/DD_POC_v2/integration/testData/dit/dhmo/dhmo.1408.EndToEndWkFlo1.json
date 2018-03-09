@@ -14,7 +14,7 @@
     "email": "test@gmail.com",
     "ZipCode": "94105",
     "referralSource": "Email Advertisement",
-    "brokernumber": "201285",
+    "brokernumber": "2012836",
     "coverageStartDate": "07/01/2017",
     "ariainvalid": "success",
     "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
@@ -42,7 +42,7 @@
         "middleName": "K",
         "lastName": "lastName",
         "gender": "Female",
-        "DOB": "05-10-2006"
+        "DOB": "05-10-1985"
     },
 
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
@@ -54,6 +54,22 @@
     "expMonth": "05",
     "expYear": "2020",
     "securityCode": "154",
-    "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program"
+    "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
+    "primaryFacility": {
+        "facilityName": "Modern Dentistry&Ortho",
+        "street": "2085 Gellert Blvd Ste 9",
+        "city": "Daly City",
+        "region": "CA",
+        "postalCode": "94015-2841",
+        "telephone": "650.878.3171"
+    },
+     "dependent1": {
+        "facilityName": "SecondaryApplicantService-1",
+        "street": "2085 Gellert Blvd Ste 9",
+        "city": "Daly City",
+        "region": "CA",
+        "postalCode": "94015-2841",
+        "telephone": "650.878.3171"
+    }
 
 }

@@ -14,6 +14,7 @@ describe('cxauto76: Provider Search Validation', function() {
             dirSearch.location.setText(data.actual.Loc);
             dirSearch.findDentist.click();
             dirSearch.refineSearch.click();
+            providerDetails.sortDistance.select();
             dirSearch.distanceSelect.selectByText(data.actual.Dist);
             dirSearch.filterMenuItem('Networks').click();
             dirSearch.selectNetwork(data.actual.Network);

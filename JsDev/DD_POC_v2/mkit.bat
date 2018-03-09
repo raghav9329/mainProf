@@ -50,7 +50,7 @@ echo Parsing results
 md5 -n results.json > FileRJMd5.txt
 					   
 														
-node getNow.js
+rem node getNow.js
 node devParseLog.js > testOutput_%TIMESTAMP%.html
 
 start testOutput_%TIMESTAMP%.html

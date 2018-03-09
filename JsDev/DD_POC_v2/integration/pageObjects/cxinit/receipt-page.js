@@ -27,6 +27,7 @@ class ReceiptPage extends ControlBase {
         this.planName = new Label(this.pageObjects.planName);
         this.thanksMsg = new Label(this.pageObjects.thanksMsg);
         this.queryAnswer = new TextBox(this.pageObjects.queryAnswer);
+        this.summaryBenefitsTxt = new Label(this.pageObjects.summaryBenefitsTxt);
         this.deltaRating = function (rating) {
             return new RadioButton(this.pageObjects.deltaRating(rating));
         };
@@ -107,7 +108,7 @@ class ReceiptPage extends ControlBase {
     };
 
     verifyPixel(state, product) {
-        var states = ['CA','TX','PA','FL', 'NY'];
+        var states = ['CA','TX','PA','FL'];
 
         if (states.indexOf(state) !== -1) {
 

@@ -20,6 +20,7 @@ class ReceiptLocators {
         };
         this.applicants = by.id('applicantPanel');
         this.planSummary = by.xpath('//*[@id="summaryPanel"]/div[1]');
+        this.summaryBenefitsTxt = by.xpath('//p[@class="details-caption"]');
         this.deltaRating = function(rating) {
 
            // return by.xpath('(//td[contains(@class,"sg-cell-data")])[' + rating + ']')

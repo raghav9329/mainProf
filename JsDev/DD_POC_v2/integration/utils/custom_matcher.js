@@ -10,8 +10,8 @@ class CustomMatcher {
             var result = {};
             result.pass = util.equals(actual.toUpperCase().trim(), expected.toUpperCase().trim(), customEqualityTesters);
             if (result.pass) {
-              result.pass = "Expected \"" + actual.toUpperCase().trim() + "\" to be \"" + expected.toUpperCase().trim() + "\" (ignoring cases sensitive)";
-              result.message = "Expected " + actual.toUpperCase().trim() + " to be (ignoring cases sensitive) " + expected.toUpperCase().trim() + "";
+              result.pass = "Expected \"" + actual.toUpperCase().trim() + "\" to Equal \"" + expected.toUpperCase().trim() + "\" (ignoring cases sensitive)";
+              result.message = "Expected " + actual.toUpperCase().trim() + " to Equal (ignoring cases sensitive) " + expected.toUpperCase().trim() + "";
             } else {
               result.message = "Expected " + actual.toUpperCase().trim() + ", but it is " + expected.toUpperCase().trim() + " (ignoring cases sensitive)";
             }
@@ -28,8 +28,8 @@ class CustomMatcher {
             var result = {};
             result.pass = util.equals(actual, expected, customEqualityTesters);
             if (result.pass) {
-              result.pass = "Expected \"" + actual + "\" to be \"" + expected + "\"";
-              result.message = "Expected " + actual + " to be " + expected + "";
+              result.pass = "Expected \"" + actual + "\" to Equal \"" + expected + "\"";
+              result.message = "Expected " + actual + " to Equal " + expected + "";
             } else {
               result.message = "Expected " + actual + ", but it is " + expected + "";
             }

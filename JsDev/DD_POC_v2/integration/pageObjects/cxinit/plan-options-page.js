@@ -17,18 +17,22 @@ class PlanOptionsPage extends ControlBase {
 
     constructor() {
         super(null, 'PlanOptionsPage');
-       
+
         this.pageObjects = new PlanOptionsPageLocators();
-         this.headerContent = new Label(this.pageObjects.headerContent);
+        this.headerContent = new Label(this.pageObjects.headerContent);
         this.planSummary = new Label(this.pageObjects.planSummary);
-        this.edit = new Label(this.pageObjects.edit);
+        this.edit = new Button(this.pageObjects.edit);
         this.deltaDentalPlanHeader = new Label(this.pageObjects.deltaDentalPlanHeader);
         this.deltaCarePlanHeader = new Label(this.pageObjects.deltaCarePlanHeader);
         this.deltaDentalHighlights = new Label(this.pageObjects.deltaDentalHighlights);
         this.deltaCareHighlights = new Label(this.pageObjects.deltaCareHighlights);
+        this.dDeltaDentalHighlights = new Label(this.pageObjects.dDeltaDentalHighlights);
+        this.dDeltaCareHighlights = new Label(this.pageObjects.dDeltaCareHighlights);
         this.back = new Button(this.pageObjects.back);
         this.ppoNetworkProviders = new Label(this.pageObjects.ppoNetworkProviders);
         this.deltaCareNetworkProviders = new Label(this.pageObjects.deltaCareNetworkProviders);
+        this.aDeltaDentalHighlightsHeader = new Label(this.pageObjects.aDeltaDentalHighlightsHeader);
+        this.aDeltaCareHighlightsHeader = new Label(this.pageObjects.aDeltaCareHighlightsHeader);
 
     }
     isAt() {
@@ -39,12 +43,21 @@ class PlanOptionsPage extends ControlBase {
     getPlanPrice(planname) {
         return new Label(this.pageObjects.getPlanPrice(planname));
     };
+    getPlanPriceDetails(planname) {
+        return new Label(this.pageObjects.getPlanPriceDetails(planname));
+    };
+
     getPlanContent(planname) {
         return new Label(this.pageObjects.getPlanContent(planname));
     };
     getPlanDetails(planname) {
         return new Label(this.pageObjects.getPlanDetails(planname));
     };
+    
+    getPlanStartsFrom(planname) {
+        return new Label(this.pageObjects.getPlanStartsFrom(planname));
+    };
+
     getdeltaDentalHighlights() {
         return element.all(this.pageObjects.deltaDentalHighlights).reduce(function(acc, elem) {
             return elem.getText().then(function(text) {
@@ -54,6 +67,20 @@ class PlanOptionsPage extends ControlBase {
     }
     getdeltaCareHighlights() {
         return element.all(this.pageObjects.deltaCareHighlights).reduce(function(acc, elem) {
+            return elem.getText().then(function(text) {
+                return acc + text + ' ';
+            });
+        }, '');
+    }
+    getdDeltaDentalHighlights() {
+        return element.all(this.pageObjects.dDeltaDentalHighlights).reduce(function(acc, elem) {
+            return elem.getText().then(function(text) {
+                return acc + text + ' ';
+            });
+        }, '');
+    }
+    getdDeltaCareHighlights() {
+        return element.all(this.pageObjects.dDeltaCareHighlights).reduce(function(acc, elem) {
             return elem.getText().then(function(text) {
                 return acc + text + ' ';
             });
