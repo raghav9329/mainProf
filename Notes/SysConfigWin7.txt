@@ -1,0 +1,4 @@
+System Configuration notes for a Windows 7 
+
+T-Clock Advanced Format String
+HH:nn:ss -||- mm/dd/yyyy

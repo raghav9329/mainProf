@@ -1,0 +1,15 @@
+The Story IDs are 
+Cxauto admin work CXAUTO-108
+CXAUTO Tech Work  CXAUTO-107
+MarketPlace Admin CXINIT-3929
+MarketPlace Tech  CXINIT-3930
+Enrollee SelfServ CXESS-1267
+Enrollee SelfServ CXESS-1268
+
+
+Cxauto admin work https://atlassian/jira/browse/CXAUTO-108
+CXAUTO Tech Work  https://atlassian/jira/browse/CXAUTO-107
+MarketPlace Admin https://atlassian/jira/browse/CXINIT-3929
+MarketPlace Tech  https://atlassian/jira/browse/CXINIT-3930
+Enrollee SelfServ Admin  https://atlassian/jira/browse/CXESS-1267
+Enrollee SelfServ Tech  https://atlassian/jira/browse/CXESS-1268
