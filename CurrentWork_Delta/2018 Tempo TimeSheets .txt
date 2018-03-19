@@ -3,8 +3,8 @@ Cxauto admin work CXAUTO-108
 CXAUTO Tech Work  CXAUTO-107
 MarketPlace Admin CXINIT-3929
 MarketPlace Tech  CXINIT-3930
-Enrollee SelfServ CXESS-1267
-Enrollee SelfServ CXESS-1268
+Enrollee Admin    CXESS-1267
+Enrollee Tech     CXESS-1268
 
 
 Cxauto admin work https://atlassian/jira/browse/CXAUTO-108
