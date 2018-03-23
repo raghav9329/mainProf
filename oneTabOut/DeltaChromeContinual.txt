@@ -1,3 +1,28 @@
+https://www.google.com/search?q=node+module+ascii+text+processing&rlz=1C1CHBD_enUS756US756&oq=node+module+ascii+text+processing&aqs=chrome..69i57.8172j0j7&sourceid=chrome&ie=UTF-8&safe=active | node module ascii text processing - Google Search
+https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/ | Build a JavaScript Command Line Interface (CLI) with Node.js — SitePoint
+
+https://en.wikipedia.org/wiki/Spring_Framework | Spring Framework - Wikipedia
+https://en.wikipedia.org/wiki/Inversion_of_control | Inversion of control - Wikipedia
+https://en.wikipedia.org/wiki/Aspect-oriented_programming | Aspect-oriented programming - Wikipedia
+
+https://www.google.com/search?q=win7+unix2dos&rlz=1C1CHBD_enUS756US756&oq=win7+unix&aqs=chrome.2.69i57j0l5.8733j0j7&sourceid=chrome&ie=UTF-8 | win7 unix2dos - Google Search
+http://www.efgh.com/software/ | Philip Erdelsky's Software Website
+http://www.efgh.com/software/htab.htm | Hash Table Package
+
+https://www.google.com/search?q=protractor+spec+suite+definitions&rlz=1C1CHBD_enUS756US756&oq=protractor+spec+suite+definitions&aqs=chrome..69i57.11830j0j7&sourceid=chrome&ie=UTF-8&safe=active | protractor spec suite definitions - Google Search
+https://stackoverflow.com/questions/30331018/suites-vs-specs-protractor | javascript - Suites vs Specs Protractor - Stack Overflow
+https://github.com/angular/protractor/issues/4206 | Execution order of Suites and Specs in Conf file Protractor · Issue #4206 · angular/protractor
+https://github.com/angular/protractor/issues/605 | multiCapabilities ignores spec · Issue #605 · angular/protractor
+https://sqa.stackexchange.com/questions/27958/organizing-and-maintaining-protractor-test-files-within-multiple-suites | automated testing - Organizing and maintaining protractor test files within multiple suites - Software Quality Assurance & Testing Stack Exchange
+https://codeburst.io/organizing-test-suites-with-protractor-ed2150718072 | Organizing test suites with Protractor – codeburst
+https://github.com/angular/protractor/blob/master/docs/api-overview.md | protractor/api-overview.md at master · angular/protractor
+https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs | WebDriverJs · SeleniumHQ/selenium Wiki
+
+https://atlassian/confluence/pages/viewpage.action?spaceKey=CXINIT&postingDay=2016%2F8%2F8&title=Automation+Test+Design | Automation Test Design - Customer Experience Initiative - Delta Dental Confluence
+https://atlassian/confluence/pages/viewpage.action?pageId=17859712 | Use Case / Scenario Level Test Cases - Customer Experience Initiative - Delta Dental Confluence
+https://atlassian/confluence/pages/viewpage.action?spaceKey=CXINIT&postingDay=2016%2F8%2F10&title=Field+Level+Test+Cases | Field Level Test Cases - Customer Experience Initiative - Delta Dental Confluence
+https://atlassian/confluence/pages/viewpage.action?pageId=17859699 | Manual Testing (Functional : Field Level & Usecase / Scenario Based) - Customer Experience Initiative - Delta Dental Confluence
+
 https://atlassian/confluence/pages/editpage.action?pageId=33786122 | ____Test Strategy - Customer Experience Initiative - Delta Dental Confluence
 chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=dd-cx-test%2FREADME.md%20at%20dev%20%C2%B7%20DEVPROJECTS%2Fdd-cx-test&uri=https://rc-github.deltads.ent/DEVPROJECTS/dd-cx-test/blob/dev/README.md | dd-cx-test/README.md at dev · DEVPROJECTS/dd-cx-test
 chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=what%20is%20git%20commit%20-a%20-%20Google%20Search&uri=https://www.google.com/search?q=what+is+git+commit+-a&rlz=1C1CHBD_enUS756US756&oq=what+is+git+commit+-a&aqs=chrome..69i57.5470j0j7&sourceid=chrome&ie=UTF-8&safe=active | what is git commit -a - Google Search
