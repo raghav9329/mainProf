@@ -1,0 +1,30 @@
+
+
+Api uniformity
+Where we can, pull calls that go dirfectly into protractor into the page object layer.  Wrap them and exose them
+in the api layer.
+
+I woudn't want the CAlls to protractor like WAit Calls or Expected Conditions ( wait things ) to be in the 
+test script.  I would want them to be in the page object layer and automatic.  The tester ( script writer ) shoudn't
+have to think about his code needing to wait.  s/he should only be thinkin about test activities.
+
+
+
+Dependencts page.  How are these methods/functions used
+Examples Simple.
+Does a single example cover all similar conditions.  means can I write once and not for every function ?
+Are the functions similar enough to have one example cover them all
+
+
+ For example say we have to use the
+
+We need details on the following level.
+IF I were explaining to a user how to code for deleting a dependent.
+Could I tell them to call deleteDependent on their dependent variable, or would I have to tell them to 
+call deleteDependent.click().
+
+Theis is an example where we are requiring the developer to cross bounderies that shouldn't be crossed.
+The Test Writer doesn't want to be constrained by Protractgor calls.  Protractgor should all b e managed by the 
+Page object layer.  Clicks, button push, send keys, etc. selenium actions   should not be in the top layer
+These calls needed to be handled in the MId Object layers.
+
