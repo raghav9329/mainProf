@@ -3,6 +3,11 @@ Most recent always at the top
 Order of precedence
 
 
+
+3/28/18 meeting notes If I need it.
+
+3/28/18 Got to get the Unix To Dos util in the /bin directory into the StdUtil directory
+
 3/6/18 
 Still working on SAC
 Working on Slide deck.  Just gave a run through. Got to Trim it down.
