@@ -5,11 +5,15 @@ MarketPlace Admin CXINIT-3929
 MarketPlace Tech  CXINIT-3930
 Enrollee Admin    CXESS-1267
 Enrollee Tech     CXESS-1268
+CoreTech  Admin		CXCORETECH-122
+CoreTech  Tech		CXCORETECH-123
 
 
-Cxauto admin work https://atlassian/jira/browse/CXAUTO-108
-CXAUTO Tech Work  https://atlassian/jira/browse/CXAUTO-107
-MarketPlace Admin https://atlassian/jira/browse/CXINIT-3929
-MarketPlace Tech  https://atlassian/jira/browse/CXINIT-3930
-Enrollee SelfServ Admin  https://atlassian/jira/browse/CXESS-1267
+Cxauto admin work 	https://atlassian/jira/browse/CXAUTO-108
+CXAUTO Tech Work  	https://atlassian/jira/browse/CXAUTO-107
+MarketPlace Admin 	https://atlassian/jira/browse/CXINIT-3929
+MarketPlace Tech  	https://atlassian/jira/browse/CXINIT-3930
+Enrollee SelfServ Admin	https://atlassian/jira/browse/CXESS-1267
 Enrollee SelfServ Tech  https://atlassian/jira/browse/CXESS-1268
+CoreTech	  Admin	https://atlassian/jira/browse/CXCORETECH-122
+CoreTech	  Tech	https://atlassian/jira/browse/CXCORETECH-123
