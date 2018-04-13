@@ -11,3 +11,6 @@ colleagues that you think would need to know of your whereabouts.
 •	Under the ‘Show As:’ drop down, select option Free to make sure that he notification doesn’t block others’ calendar.
  
 •	Under ‘Response Options’ drop down, uncheck the ‘Request Responses’ option
+
+•	Also, make sure you put a check-mark for  "All Day Event"
+ 
