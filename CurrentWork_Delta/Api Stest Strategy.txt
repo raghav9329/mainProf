@@ -1,0 +1,37 @@
+Test automation Micro service APIs
+The philosophical basis of Application Programming Interfaces is to decouple the consumer from the internal workings of the publisher
+
+API Engineering states this is no guraentee on the known technology persisting published data.
+API Engineering will only guraentee an APIs contract of specific output baseded upon valid input.
+
+The correctness of a GET API will have to be relied upon 
+
+
+Validation of API's that return data will have to rely on the stated contract of the api
+
+Valdation of APIs that do not return data but effect a change in the persisted data 
+will have to rely on GET API for this pair in order to validate the change effected by the previous API call
+
+
+
+APIs will be of two types.
+* Ones that return data
+* Ones that affect the persisted data.
+
+
+API Publication Rule:
+An Api that affects persisted data 
+will be delivered with an api to retrieve data.
+
+This pariing is the only way to inspect the correctness of the API that affects a change tothe persisted data.
+
+
+
+
+
+
+
+
+
+
+End.
