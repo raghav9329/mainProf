@@ -2,7 +2,9 @@ This document.  Push down.
 Most recent always at the top
 Order of precedence
 
-
+5/2/18
+Setting projects on the white board
+Documentation on dd-cx-testApi roll out in Confluence.
 
 3/28/18 meeting notes If I need it.
 
