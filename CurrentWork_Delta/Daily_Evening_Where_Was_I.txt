@@ -2,6 +2,10 @@ This document.  Push down.
 Most recent always at the top
 Order of precedence
 
+5/4/18 
+Finished the details that I can think of about API roll out documentation
+
+
 5/2/18
 Setting projects on the white board
 Documentation on dd-cx-testApi roll out in Confluence.
