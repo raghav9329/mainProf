@@ -2,8 +2,8 @@
 
 //This spec Validates the Address entered partially and selects from the built-in suggestion list
 
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.471PersInfo.json');
-var perInfo = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.471PersInfo.json');
+var perInfo    = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new (require('../../../pageObjects/cxinit/enroll-page.js'));
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 

@@ -19,12 +19,12 @@ Validation of the above is applicable for all the fields of the Home address lik
 
 */
 
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.489PersInfo.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
+var TestData    = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.489PersInfo.json');
+var perInfo     = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var enrollPage  = new(require('../../../pageObjects/cxinit/enroll-page.js'));
 var planOptions = new(require('../../../pageObjects/cxinit/plan-options-page.js'));
 var planDetails = new(require('../../../pageObjects/cxinit/plan-details-page.js'));
-var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
+var statesData  = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
 // dataProvider(TestData.states, function (sData, sdescription) {
@@ -149,9 +149,17 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     it('8X:Validate Home Addr w/ invalid data', function() {
                         var data = TestData.Personalinfo.HAddress_Invalid;
                         perInfo.fieldHomeAddr.setText(data.Home);
+                        perInfo.fieldCity.setText(data.City);
                         perInfo.fieldEmailAddr.click();
-                        perInfo.waitUntilLoderDisapper();
-                        expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);
+                        
+                        console.log("sdescription=====" +sdescription);
+                        if(sdescription=='VI'){
+                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMessage);
+                        }
+                        else{
+                            perInfo.waitUntilLoderDisapper();
+                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);
+                        }
                         expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
                         expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error);
                         expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error);
@@ -167,13 +175,22 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     it('9X:Validate Home Addr w/ spec char', function() {
                         var data = TestData.Personalinfo.HAddress_SplChar;
                         perInfo.fieldHomeAddr.setText(data.Home);
+                        perInfo.fieldCity.setText(data.City);
+                        perInfo.fieldEmailAddr.click();
+                        // perInfo.fieldAlternateId.setText('');
+                        perInfo.waitUntilLoderDisapper();
+                        if(sdescription=='VI'){
+                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMessage);
+                        }
+                        else{
+                            perInfo.waitUntilLoderDisapper();
+                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);
+                        }
+                        // expect(perInfo.errinvalidAddr.getText()).toContain(data.ErrorMsg);
+                        /*perInfo.fieldHomeAddr.setText(data.Home);
                         perInfo.fieldAlternateId.setText('');
                         perInfo.waitUntilLoderDisapper();
-                        expect(perInfo.errinvalidAddr.getText()).toContain(data.ErrorMsg);
-                        perInfo.fieldHomeAddr.setText(data.Home);
-                        perInfo.fieldAlternateId.setText('');
-                        perInfo.waitUntilLoderDisapper();
-                        expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);
+                        expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);*/
                         expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
                         console.log('json driven "' + data.Home + '" complete')
 

@@ -20,8 +20,8 @@
     "darkGreen": "rgba(67, 176, 42, 1)",
     "dark": "rgba(0, 0, 0, 1)",
     "liteGreen": "rgba(142, 208, 127, 1)",
-    "lite": "rgba(102, 102, 102, 1)",
-    "gray": "rgba(191, 191, 191, 1)",
+    "lite": "rgba(109, 109, 109, 1)",
+    "gray": "rgba(255, 255, 255, 1)",
 
     "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
     "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",

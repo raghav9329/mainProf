@@ -1,8 +1,8 @@
 //[Provider Dir] Create Automation Scripts for "Special Keywords Validation" in Provider Directory
 
 "use strict"
-var TestData = require('../../testData/' + testDataEnv + '/providers/cxauto38.json');
-var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var TestData        = require('../../testData/' + testDataEnv + '/providers/cxauto38.json');
+var dirSearch       = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 
 // Navigate to PD URL
@@ -22,9 +22,10 @@ describe('CXAUTO38: Prov Dir', function() {
 
                 /*Enter Location from JSON file
                 Enter corresponding Keyword Data*/
-
-                dirSearch.location.setText(data.loc);
                 dirSearch.keywordSearch.setText(data.keyword);
+                browser.sleep(longWait);
+                dirSearch.location.setText(data.loc);
+
                 dirSearch.findDentist.click();
                 //Captures the retirved number of results and also checks where no search results are found
                 dirSearch.getProvidersCount().then(function(totalCount) {
@@ -61,9 +62,9 @@ describe('CXAUTO38: Prov Dir', function() {
 
                 /*Enter Location from Excel file
                 Enter corresponding Keyword Data*/
-
-                dirSearch.location.setText(data.loc);
                 dirSearch.keywordSearch.setText(data.keyword);
+                browser.sleep(longWait);
+                dirSearch.location.setText(data.loc);
                 dirSearch.findDentist.click();
                 //Captures the retirved number of results and where no search results are found
                 dirSearch.getProvidersCount().then(function(totalCount) {
@@ -92,28 +93,7 @@ describe('CXAUTO38: Prov Dir', function() {
                 });
             });
 
-            // };
-
-            // if (data.Keytype == 'Facility') {
-            //     // if (data.ExecutionFlag) {
-            //     it('DelCareUsa_4o13:Should show view of DeltaCareUsa Net "' + description + '"', function() {
-            //         // var iterations = 3;
-            //         dirSearch.location.setText(data.loc);
-            //         dirSearch.keywordSearch.setText(data.keyword);
-            //         dirSearch.findDentist.click();
-            //         dirSearch.getProvidersCount().then(function(totalCount) {
-            //             logger.info('Total Count---->' + totalCount);
-            //             if (Number(totalCount) > 1) {
-            //                 providerDetails.openViewControl(data.keyword, 'FACILITY',3);
-            //                 expect(providerDetails.providerName.getText()).toEqual(data.keyword);
-            //                 dirSearch.backtosearch.click();
-            //             }
-            //         });
-
-
-
-            //     });
-
+           
         };
 
     });

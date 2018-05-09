@@ -1,106 +1,119 @@
 "use strict";
 
 var ControlBase = require('./base-control');
-var Locators = require('./select-locators');
+var Locators    = require('./select-locators');
 
 /**
  * Provides access to the various functions of a Select control that is a combination of Select tag with Options within
  */
 class SelectControl extends ControlBase {
 
-  /**
-   * Initializes SelectControl with its locator
-   * @param controlLocator
-   * @param labelLocator
-   */
-  constructor(controlLocator) {
-    super(controlLocator, 'SelectControl');
-    if (!controlLocator) throw Error('Locator for SelectControl is not set.');
- //   this.labelLocator = labelLocator;
-    this.locators = new Locators();
-  }
-
-  /**
-   * Gets the text of the option selected
-   * @returns {*}
+    /**
+     * Initializes SelectControl with its locator
+     * @param controlLocator
+     * @param labelLocator
      */
-  getSelectedText() {
-    return element(this.locator).element(this.locators.selectedOption).getText().then(function (text) {
-      return text.trim();
-    });
-  }
+    constructor(controlLocator) {
+        super(controlLocator, 'SelectControl');
+        if (!controlLocator) throw Error('Locator for SelectControl is not set.');
+        //   this.labelLocator = labelLocator;
+        this.locators = new Locators();
+    }
 
-  /**
-   * Gets the value attribute of the option selected
-   * @returns {string|webdriver.promise.Promise<string>|!webdriver.promise.Promise.<?string>|*}
+    /**
+     * Gets the text of the option selected
+     * @returns {*}
      */
-  getSelectedValue() {
-    return element(this.locator).element(this.locators.selectedOption).getAttribute('value');
-  }
+    getSelectedText() {
+        return element(this.locator).element(this.locators.selectedOption).getText().then(function(text) {
+            return text.trim();
+        });
+    }
 
-  /**
-   * Gets an array of all options available with their value and text
-   * @returns {*}
+    /**
+     * Gets the value attribute of the option selected
+     * @returns {string|webdriver.promise.Promise<string>|!webdriver.promise.Promise.<?string>|*}
      */
-  getAllOptions() {
-    return element(this.locator).all(this.locators.options).map(function (o) {
-      return {
-        text: o.getText(),
-        value: o.getAttribute('value')
-      };
-    });
-  }
+    getSelectedValue() {
+        return element(this.locator).element(this.locators.selectedOption).getAttribute('value');
+    }
 
-  /**
-   * Gets the count of options available
-   * @returns {*}
+    /**
+     * Gets an array of all options available with their value and text
+     * @returns {*}
      */
-  getOptionsCount() {
-    return element(this.locator).all(this.locators.options).count();
-  }
+    getAllOptions() {
+        return element(this.locator).all(this.locators.options).map(function(o) {
+            return {
+                text: o.getText(),
+                value: o.getAttribute('value')
+            };
+        });
+    }
+    /**
+     * Gets an array of all options available with their text
+     * @returns {*}
+     */
+    getAllOptionsText() {
+        return element(this.locator).all(this.locators.options).reduce(function(acc, elem) {
+            return elem.getText().then(function(text) {
+                return acc + text + ' ';
+                console.log("============" + acc + text + ' ')
+            });
+        }, '');
+    }
 
-  /**
-   * Selects the first option found based on the value passed
-   * @param value
-   * @returns {*}
-     */
-  selectByValue(value){
-    var self = this;
-    return element(this.locator).element(Locators.optionByValue(value)).waitReady().then(function (result) {
-      return element(this.locator).element(Locators.optionByValue(value))
-          .clickIt();
-    });
-  }
 
-  /**
-   * Selects the option found based on the index
-   * @param index
+    /**
+     * Gets the count of options available
+     * @returns {*}
      */
-  selectByIndex(index){
-    return element(this.locator).element(Locators.optionByIndex(index)).clickIt();
-  }
+    getOptionsCount() {
+        return element(this.locator).all(this.locators.options).count();
+    }
 
-  /**
-   * Selects the first option found based on the text
-   * @param text
+    /**
+     * Selects the first option found based on the value passed
+     * @param value
+     * @returns {*}
      */
-  selectByText(text){
-    return element(this.locator).all(Locators.optionByText(text)).then(function (els) {
-     // console.log("length"+els.length);
-      return els[0].clickIt();
-    });
-  }
-  
+    selectByValue(value) {
+        var self = this;
+        return element(this.locator).element(Locators.optionByValue(value)).waitReady().then(function(result) {
+            return element(this.locator).element(Locators.optionByValue(value))
+                .clickIt();
+        });
+    }
 
-  /**
-   * Selects the first option found based on the partialText sent
-   * @param partialText
+    /**
+     * Selects the option found based on the index
+     * @param index
      */
-  selectByPartialText(partialText){
-    return element(this.locator).all(Locators.optionByPartialText(partialText)).then(function (els) {
-      return els[0].clickIt();
-    });
-  }
+    selectByIndex(index) {
+        return element(this.locator).element(Locators.optionByIndex(index)).clickIt();
+    }
+
+    /**
+     * Selects the first option found based on the text
+     * @param text
+     */
+    selectByText(text) {
+        return element(this.locator).all(Locators.optionByText(text)).then(function(els) {
+            // console.log("length"+els.length);
+            return els[0].clickIt();
+        });
+    }
+
+
+    /**
+     * Selects the first option found based on the partialText sent
+     * @param partialText
+     */
+    selectByPartialText(partialText) {
+        return element(this.locator).all(Locators.optionByPartialText(partialText)).then(function(els) {
+            return els[0].clickIt();
+        });
+    }
 
 }
 

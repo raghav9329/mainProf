@@ -3,9 +3,9 @@
 // This Spec furnishes the data in the personal info page
 // Adds 15 dependents in the dependents page
 // Verifies and validates Error for the NUll values and dependents of same type (domestic paertner and spouse)
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1359Dep-15Deps.json');
-var perInfo = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new (require('../../../pageObjects/cxinit/dependent-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1359Dep-15Deps.json');
+var perInfo    = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo    = new (require('../../../pageObjects/cxinit/dependent-page.js'));
 var enrollPage = new (require('../../../pageObjects/cxinit/enroll-page.js'));
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
@@ -36,10 +36,13 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     // Proceed to Next page
 
                     it('Dependents Max_Step_2: Verify Personal Information Page is filled with Valid data and Proceed', function () {
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            TestData.MemberId = false;                            
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();                            
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);

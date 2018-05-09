@@ -1,26 +1,26 @@
 {
-    "Header_SearchResultsPage": "Find a Dentist",
-    "Header_InvalidAddress":"Invalid Address",
-    "ZipCode": "94103",   
+ "Header_SearchResultsPage" : "Find a Dentist",
+ "Header_InvalidAddress"    : "Invalid Address",
+ "ZipCode"                  : "94103",
     
 
- "Language": {
-         "Language1": {
-          "Lang": "English",
-        "ExecutionFlag": true
+ "Language"                 : {
+ "Language1"                : {
+ "Lang"                     : "English",
+ "ExecutionFlag"            : true
     },
-     "Language2": {
-          "Lang": "Spanish",
-        "ExecutionFlag": true
+ "Language2"                : {
+ "Lang"                     : "Spanish",
+ "ExecutionFlag"            : true
     },
 
-     "Language3": {
-          "Lang": "Chinese",
-        "ExecutionFlag": true
+ "Language3"                : {
+ "Lang"                     : "Chinese",
+ "ExecutionFlag"            : true
     },
-     "Language4": {
-          "Lang": "Telugu",
-        "ExecutionFlag": true
+ "Language4"                : {
+ "Lang"                     : "Telugu",
+ "ExecutionFlag"            : true
     }
 
    

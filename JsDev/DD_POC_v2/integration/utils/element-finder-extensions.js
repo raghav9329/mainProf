@@ -11,7 +11,7 @@
  * Current workaround until https://github.com/angular/protractor/issues/1102
  * @type {Function}
  */
-var ElementFinder = require('protractor').ElementFinder;
+var ElementFinder      = require('protractor').ElementFinder;
 var ElementArrayFinder = require('protractor').ElementArrayFinder;
 
 var getBrowser = function() {
@@ -129,6 +129,7 @@ ElementFinder.prototype.selectOption = function(text) {
 
 ElementFinder.prototype.getTextEx = function() {
     var self = this;
+     self.moveMouse();
     return self.getText().then(function(text) {
         logger.trace("getTextEx: Found '" + text + "' at " + self.locator().toString());
         return text;
@@ -136,6 +137,7 @@ ElementFinder.prototype.getTextEx = function() {
 };
 ElementFinder.prototype.getTextboxText = function() {
     var self = this;
+     self.moveMouse();
     return self.getAttribute('value').then(function(text) {
         logger.trace("getTextBoxTextEx: Found '" + text + "' at " + self.locator().toString());
         return text;
@@ -227,17 +229,34 @@ ElementFinder.prototype.moveMouse = function() {
      * hence, wrote this function to highlight the element that protractor interacts with UI during execution
      * @param byObject
      */
-    if (highlightElement) {
-        return browser.driver.executeScript("arguments[0].setAttribute('style', arguments[1]);", self.getWebElement(), "color: Red; border: 5px solid Yellow;").
-        then(function(resp) {
-            return true;
-        }, function(err) {
-            console.log("error is :" + err);
-        });
-    } else {
-        return true;
-    }
+    // if (highlightElement) {
+    //     return browser.driver.executeScript("arguments[0].setAttribute('style', arguments[1]);", self.getWebElement(), "color: Red; border: 5px solid Yellow;").
+    //     then(function(resp) {
+    //         return true;
+    //     }, function(err) {
+    //         console.log("error is :" + err);
+    //     });
+    // } else {
+    //     return true;
+    // }
+
+    return this.isPresent().then(function(present) {
+        if (present) {
+
+            function setStyle(element, style) {
+                const previous = element.getAttribute('style');
+                element.setAttribute('style', style);
+                setTimeout(() => {
+                    element.setAttribute('style', previous);
+                }, 200);
+                return "highlighted";
+            }
+            return browser.executeScript(setStyle, self.getWebElement(), 'color: red; background-color: yellow;');
+        }
+    })
 };
+
+
 
 
 ElementFinder.prototype.clickSafe = function(waitTime) {
@@ -266,6 +285,8 @@ ElementFinder.prototype.isPresentAndDisplayed = function() {
                 return visible;
             });
         }
+        return false;
+    }, function(err) {
         return false;
     });
 };

@@ -4,8 +4,8 @@
 since a change in zip code may impact product availability and product price.*/
 
 "use strict"
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.804PersInfo.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.804PersInfo.json');
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
 
 //To Navigate Personla Info Page

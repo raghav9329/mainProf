@@ -20,10 +20,10 @@ Validate Email Address field with invalid data failures
 
 "use strict"
 // var TestData = require('../../testData/'+testDataEnv+'/personalInfo.json');
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.519PersInfo.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
+var TestData    = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.519PersInfo.json');
+var perInfo     = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var enrollPage  = new(require('../../../pageObjects/cxinit/enroll-page.js'));
+var statesData  = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
 // dataProvider(TestData.states, function (sData, sdescription) {

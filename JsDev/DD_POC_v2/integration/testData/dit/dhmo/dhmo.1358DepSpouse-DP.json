@@ -21,7 +21,7 @@
     "facilityoption3": "Ocean Dental Office",
     "paymentTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptTitle": "Thank You | Delta Dental Insurance Company",
-    "depError": "You can select only 1 Spouse or Domestic Partner.",
+    "depError": "You can select only 1 Spouse or Partner.",
     "errorSSN": "Please enter your SSN",
     "SSN": "789456321",
     "domesticPartner": {

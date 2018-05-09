@@ -1,84 +1,84 @@
 {
-    "firstname": "Krishna",
-    "mi": "K",
-    "lastname": "K",
-    "gender": "Male",
-    "dob": "05-05-1988",
-    "ssn": "1234560215",
-    "MemberId": "3041586292",
-    "referralSource": "Email Advertisement",
-    "alternateid": "test@test.com",
-    "fieldHomeAddr": "100 First Street floor 4",
-    "city": "San Francisco",
-    "State": "CA",
-    "contactType": "Cell",
-    "phoneNumber": "9876543210",
-    "email": "test@gmail.com",
-    "ZipCode": "94109",
-    "brokernumber": "2012836",
-    "coverageStartDate": "07/01/2017",
-    "ariainvalid": "success",
-    "DependentTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
-    "facilitiesTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
-    "facilityoption1": "Test",
-    "facilityoption2": "Van Ness Dental Group",
-    "facilityoption3": "The Santos Dental Group Corp",
-    "facilityoption4": "Kayvan Kafayi DDS",
-    "facilityoption5": "Van Ness Dental Group",
-    "facilityoption6": "The Santos Dental Group Corp",
-    "facilityoption7": "Kayvan Kafayi DDS",
-    "paymentTitle": "Payment | Enrollment | Delta Dental Insurance Company",
-    "receiptTitle": "Thank You | Delta Dental Insurance Company",
-    "updateRelationship": "Child",
-    "domesticpartner1": {
-        "relationship": "Domestic Partner",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Male",
-        "DOB": "10-10-2000"
+    "firstname"            : "Krishna",
+    "mi"                   : "K",
+    "lastname"             : "K",
+    "gender"               : "Male",
+    "dob"                  : "05-05-1988",
+    "ssn"                  : "1234560215",
+    "MemberId"             : "3041586292",
+    "referralSource"       : "Email Advertisement",
+    "alternateid"          : "test@test.com",
+    "fieldHomeAddr"        : "100 First Street floor 4",
+    "city"                 : "San Francisco",
+    "State"                : "CA",
+    "contactType"          : "Cell",
+    "phoneNumber"          : "9876543210",
+    "email"                : "test@gmail.com",
+    "ZipCode"              : "94109",
+    "brokernumber"         : "2012836",
+    "coverageStartDate"    : "07/01/2017",
+    "ariainvalid"          : "success",
+    "DependentTitle"       : "Dependents | Enrollment | Delta Dental Insurance Company",
+    "facilitiesTitle"      : "Facilities | Enrollment | Delta Dental Insurance Company",
+    "facilityoption1"      : "Test",
+    "facilityoption2"      : "Van Ness Dental Group",
+    "facilityoption3"      : "The Santos Dental Group Corp",
+    "facilityoption4"      : "Kayvan Kafayi DDS",
+    "facilityoption5"      : "Van Ness Dental Group",
+    "facilityoption6"      : "The Santos Dental Group Corp",
+    "facilityoption7"      : "Kayvan Kafayi DDS",
+    "paymentTitle"         : "Payment | Enrollment | Delta Dental Insurance Company",
+    "receiptTitle"         : "Thank You | Delta Dental Insurance Company",
+    "updateRelationship"   : "Child",
+    "domesticpartner1"     : {
+    "relationship"         : "Domestic Partner",
+    "firstName"            : "firstName",
+    "middleName"           : "m",
+    "lastName"             : "lastName",
+    "gender"               : "Male",
+    "DOB"                  : "10-10-2000"
     },
-    "Spouse1": {
-        "relationship": "Spouse",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-1995"
+    "Spouse1"              : {
+    "relationship"         : "Spouse",
+    "firstName"            : "firstName",
+    "middleName"           : "m",
+    "lastName"             : "lastName",
+    "gender"               : "Female",
+    "DOB"                  : "05-10-1995"
     },
-    "child3": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "K",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-2002"
+    "child3"               : {
+    "relationship"         : "Child",
+    "firstName"            : "firstName",
+    "middleName"           : "K",
+    "lastName"             : "lastName",
+    "gender"               : "Female",
+    "DOB"                  : "05-10-2002"
     },
-    "child4": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Non Binary",
-        "DOB": "07-19-1999"
+    "child4"               : {
+    "relationship"         : "Child",
+    "firstName"            : "firstName",
+    "middleName"           : "m",
+    "lastName"             : "lastName",
+    "gender"               : "Non Binary",
+    "DOB"                  : "07-19-1999"
     },
-    "child5": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "Q",
-        "lastName": "lastName",
-        "gender": "Non Binary",
-        "DOB": "12-28-1995"
+    "child5"               : {
+    "relationship"         : "Child",
+    "firstName"            : "firstName",
+    "middleName"           : "Q",
+    "lastName"             : "lastName",
+    "gender"               : "Non Binary",
+    "DOB"                  : "12-28-1995"
     },
-    "child6": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-1995"
+    "child6"               : {
+    "relationship"         : "Child",
+    "firstName"            : "firstName",
+    "middleName"           : "m",
+    "lastName"             : "lastName",
+    "gender"               : "Female",
+    "DOB"                  : "05-10-1995"
     },
-    "dependentErrors": [
+    "dependentErrors"      : [
         "Please select a relationship",
         "Please enter your first name",
         "Please enter your last name",
@@ -87,24 +87,24 @@
         "Please enter a valid day between (01-31)",
         "Please enter a valid year"
     ],
-    "paymentErrors": [
+    "paymentErrors"        : [
         "Please enter your full name",
         "Please enter your card number",
         "Please enter a valid month between (01-12)",
         "Please enter a valid year",
         "Please enter CVC code from your card"
     ],
-    "paymentAddressErrors": [
+    "paymentAddressErrors" : [
         "Please enter a street address",
         "Please enter a city",
         "Please enter a state",
         "Please enter a ZIP code"
     ],
-    "nameOnCard": "Peter Heins",
-    "cardNumber": "5415240007992183",
-    "expMonth": "05",
-    "expYear": "2020",
-    "securityCode": "1254",
-    "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program"
+    "nameOnCard"           : "Peter Heins",
+    "cardNumber"           : "5415240007992183",
+    "expMonth"             : "05",
+    "expYear"              : "2020",
+    "securityCode"         : "1254",
+    "planName"             : "DeltaCare® USA CAA55 Individual/Family Dental Program"
    
 }

@@ -1,6 +1,5 @@
-var TestData = require('../../testData/' + testDataEnv + '/providers/cxauto38-1.json');
-
-var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var TestData        = require('../../testData/' + testDataEnv + '/providers/cxauto38-1.json');
+var dirSearch       = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 
 describe('Providers CXAUTO:38-1 ', function() {

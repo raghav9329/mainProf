@@ -277,8 +277,8 @@
                      return browser.get(browser.params.baseUrl).then(function() {
                          return true;
                      });
-                 } else {
-                     var appURL = browser.params.baseUrl + '/indEnroll?issuerCode=' + product;
+                 } else {                    
+                    var appURL = browser.params.baseUrl + '/shopping/' + product.toLowerCase()+'/get-a-quote';
                      console.log("URL" + appURL);
                      return browser.get(appURL).then(function(flag) {
                          console.log("flag" + flag);
@@ -437,9 +437,10 @@
              var oresult = undefined;
              switch (type.toUpperCase()) {
                  case 'STRING':
+                 oresult = '';
                      var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                      for (var i = 0; i < length; i++) {
-                         oresult = str.charAt(Math.floor(Math.random() * str.length));
+                         oresult = str.charAt(Math.floor(Math.random() * str.length))+oresult;                        
                      }
                      logger.info('random string of length ' + length + ' for is :' + oresult);
                      break;
@@ -455,6 +456,7 @@
              logger.info('ERROR', "Failed to retrieving text from alert due to " + err.message);
              return false;
          }
+
          return oresult;
      };
 

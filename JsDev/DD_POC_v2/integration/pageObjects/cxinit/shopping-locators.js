@@ -4,58 +4,54 @@ class ShoppingPageLocators {
     constructor() {
 
         // Shopping page objects
-        this.back = by.css('a.back-arrow-link');
-        this.headerContent = by.css('h1.shopping-header-content');
-        this.State = by.name('state');
-        this.Zipcode = by.name('zip');
-        this.NoOFCovered = by.id('noofcovered');
-        this.noofdependents = by.id('noofdependents');
-        this.Effcdate = by.id('eff_date');
-        this.Submit = by.xpath('//input[@value="Submit"]');
-        this.Zipcode_error = by.id('zip-error');
-        this.noofcovered_error = by.id('noofcovered-error');
-        this.addDependent = by.id('plusButton');
-        this.Showplans = by.id('showPlans');
-        this.removeDependent = by.id('minusButton');
-        this.serverErrMsgnoofCovered = by.css('a.error.noofcovered-error');
-        this.serverErrMsgZipcode = by.css('a.error.zip-error');
+        this.back                       = by.css('a.back-arrow-link');
+        this.headerContent              = by.css('h1.shopping-header-content');
+        this.State                      = by.name('state');
+        this.Zipcode                    = by.name('zip');
+        this.NoOFCovered                = by.id('noofcovered');
+        this.noofdependents             = by.id('noofdependents');
+        this.Effcdate                   = by.id('eff_date');
+        this.Submit                     = by.xpath('//input[@value="Submit"]');
+        this.Zipcode_error              = by.id('zip-error');
+        this.noofcovered_error          = by.id('noofcovered-error');
+        this.addDependent               = by.id('plusButton');
+        this.Showplans                  = by.id('showPlans');
+        this.removeDependent            = by.id('minusButton');
+        this.serverErrMsgnoofCovered    = by.css('a.error.noofcovered-error');
+        this.serverErrMsgZipcode        = by.css('a.error.zip-error');
         this.serverErrMsgInvalidZipcode = by.css('a.error');
-        this.zipCodeserverError = by.css('div.error-container.global-margin');
-        this.fieldBdMM = by.id('app0_dob_month');
-        this.errorBdMM = by.id('app0_dob_month-error');
-        this.fieldBdDD = by.id('app0_dob_day');
-        this.errorBdDD = by.id('app0_dob_day-error');
-        this.fieldBdYyyy = by.id('app0_dob_year');
-        this.errorBdYyyy = by.id('app0_dob_year-error');
-        this.appErrorMsgs = by.xpath('//fieldset[@id="birthdate-fieldset"]/following-sibling::div');
-        this.errorInvalidDob = by.css('a.error.birthdate-error');
-        this.minAgeError = by.id('birthdate-fieldset-error');
-        this.depDob = by.xpath('(//fieldset[contains(@id,"dependent_dob_fieldset")])');
-
-        this.dependentfieldDBMM = function(dependentName) {
-            var number = dependentName.split('Dependent')[1];
+        this.zipCodeserverError         = by.css('div.error-container.global-margin');
+        this.fieldBdMM                  = by.id('app0_dob_month');
+        this.errorBdMM                  = by.id('app0_dob_month-error');
+        this.fieldBdDD                  = by.id('app0_dob_day');
+        this.errorBdDD                  = by.id('app0_dob_day-error');
+        this.fieldBdYyyy                = by.id('app0_dob_year');
+        this.errorBdYyyy                = by.id('app0_dob_year-error');
+        this.appErrorMsgs               = by.xpath('//fieldset[@id="birthdate-fieldset"]/following-sibling::div');
+        this.errorInvalidDob            = by.css('a.error.birthdate-error');
+        this.minAgeError                = by.id('birthdate-fieldset-error');
+        this.depDob                     = by.xpath('(//fieldset[contains(@id,"dependent_dob_fieldset")])');
+        this.dependentfieldDBMM         = function(dependentName) {
+        var number                      = dependentName.split('Dependent')[1];
             return by.xpath('//legend[text()="Dependent ' + number + ' Birthdate "]//following::input[1]');
         };
-        this.dependenterrorfieldDBMM = function(dependentName) {
+        this.dependenterrorfieldDBMM    = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
             return by.xpath('(//legend[normalize-space(text())="Dependent ' + number + ' Birthdate"]/ancestor::fieldset/following-sibling::div/a[contains(@id,"dob_month")])[1]');
         };
-        this.dependentfieldDBDD = function(dependentName) {
+        this.dependentfieldDBDD         = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
             return by.xpath('//legend[text()="Dependent ' + number + ' Birthdate "]//following::input[2]');
         };
-
-        this.dependenterrorfieldDBDD = function(dependentName) {
+        this.dependenterrorfieldDBDD    = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
             return by.xpath('(//legend[normalize-space(text())="Dependent ' + number + ' Birthdate"]/ancestor::fieldset/following-sibling::div/a[contains(@id,"dob_day")])[1]');
         };
-
-        this.dependentfieldDBYY = function(dependentName) {
+        this.dependentfieldDBYY         = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
             return by.xpath('//legend[text()="Dependent ' + number + ' Birthdate "]//following::input[3]');
         };
-
-        this.dependenterrorfieldDBYY = function(dependentName) {
+        this.dependenterrorfieldDBYY    = function(dependentName) {
             var number = dependentName.split('Dependent')[1];
             return by.xpath('(//legend[normalize-space(text())="Dependent ' + number + ' Birthdate"]/ancestor::fieldset/following-sibling::div/a[contains(@id,"dob_year")])[1]');
         };

@@ -2,13 +2,13 @@
 
 //Start with any zip code & 0 Dep. Add 3 deps. Facilities select from initial Zip
 //This Spec is used to Validate End to End Work Flow with the Dependent
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo    = new(require('../../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var payment    = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt    = new(require('../../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_4.json');
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_4.json');
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 
@@ -45,10 +45,14 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     //Enter the valid Test Data in the Personal Information page and Click n the Next
 
                     it('E2E_2 :should populate PersInfo page', function() {
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            TestData.MemberId = false;                            
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();
+                            console.log(" TestData.ssn===" + TestData.ssn)
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -190,7 +194,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 expect(facilitydata.street).toEqual(facility.street);
                                 expect(facilitydata.city).toEqual(facility.city);
                                 expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toEqual(facility.postalCode);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode);
                                 expect(facilitydata.telephone).toEqual(facility.telephone);
                                 console.log('1753_9 complete')
                             });
@@ -208,7 +212,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 expect(facilitydata.street).toEqual(facility.street);
                                 expect(facilitydata.city).toEqual(facility.city);
                                 expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toEqual(facility.postalCode);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode);
                                 expect(facilitydata.telephone).toEqual(facility.telephone);
                             });
                             if (pdescription == 'DHMO' || pdescription == 'DPPO') {
@@ -234,7 +238,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 expect(facilitydata.street).toEqual(facility.street);
                                 expect(facilitydata.city).toEqual(facility.city);
                                 expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toEqual(facility.postalCode);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode);
                                 expect(facilitydata.telephone).toEqual(facility.telephone);
                                 console.log('1753_11 complete')
                             });
@@ -253,7 +257,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 expect(facilitydata.street).toEqual(facility.street);
                                 expect(facilitydata.city).toEqual(facility.city);
                                 expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toEqual(facility.postalCode);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode);
                                 expect(facilitydata.telephone).toEqual(facility.telephone);
                                 console.log('1753_12 complete')
                             });

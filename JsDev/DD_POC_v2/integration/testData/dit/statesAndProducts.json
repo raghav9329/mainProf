@@ -1207,8 +1207,8 @@
                         "NoOfPeopleCovered": "0",
                         "dob": "05-10-1981"
                     },
-                    "fieldHomeAddr": "110 Annapolis House Rd",
-                    "city": "Bethany Beach",
+                    "fieldHomeAddr": "14 Wedgefield Blvd",
+                    "city": "Ocean View",
                     "State": "DE",
                     "discloser": "",
                     "planSummary":
@@ -1517,6 +1517,1625 @@
                 "city": "Huntington",
                 "State": "WV",
                 "ZIPcode": "25702"
+            }
+        },
+        "CT":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "06907",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "53 Barholm Ave",
+                    "city": "Stamford",
+                    "State": "CT",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "104 GREENWICH HILLS DR # 104",
+                "city": "GREENWICH",
+                "State": "CT",
+                "ZIPcode": "06831"
+            }
+        },
+        "IL":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "61603",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "2135 N Peoria Ave",
+                    "city": "Peoria",
+                    "State": "IL",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "43461 N Deep Lake Rd",
+                "city": "Antioch",
+                "State": "IL",
+                "ZIPcode": "60002"
+            }
+        },
+        "OH":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "44136",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "14293 Calderdale Ln",
+                    "city": "Strongsville",
+                    "State": "OH",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "603 3rd St E",
+                "city": "South Point",
+                "State": "OH",
+                "ZIPcode": "45680"
+            }
+        },
+        "WA":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "98226",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4566 Anderson Way",
+                    "city": "Bellingham",
+                    "State": "WA",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "92 Victoria Way",
+                "city": "Point Roberts",
+                "State": "WA",
+                "ZIPcode": "98281"
+            }
+        },
+        "KY":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "40391",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "221 Moundale Ave",
+                    "city": "Winchester",
+                    "State": "KY",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "2671 Stevens Rd",
+                "city": "Petersburg",
+                "State": "KY",
+                "ZIPcode": "41080"
+            }
+        },
+        "MN":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "56511",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "20612 Moe Lake Rd",
+                    "city": "Audubon",
+                    "State": "MN",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "931 Pacific Ave",
+                "city": "Saint Vincent",
+                "State": "MN",
+                "ZIPcode": "56755"
+            }
+        },
+        "NH":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "03246",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "193 Pleasant St Apt 3",
+                    "city": "Laconia",
+                    "State": "NH",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "309 River Rd",
+                "city": "Manchester",
+                "State": "NH",
+                "ZIPcode": "03104"
+            }
+        },
+        "NM":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "87114",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "5900 TAURUS AVE NW",
+                    "city": "ALBUQUERQUE",
+                    "State": "NM",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "5334 GROVE EAST DR",
+                "city": "SUNLAND PARK",
+                "State": "NM",
+                "ZIPcode": "88063"
+            }
+        },
+        "OK":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "74105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "6009 S ATLANTA AVE # 2",
+                    "city": "TULSA",
+                    "State": "OK",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "204 MEADOWS LN",
+                "city": "POCOLA",
+                "State": "OK",
+                "ZIPcode": "74902"
+            }
+        },
+        "KS":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "67217",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3210 S HANDLEY ST APT 304",
+                    "city": "WICHITA",
+                    "State": "KS",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "720 E 36TH ST",
+                "city": "BAXTER SPRINGS",
+                "State": "KS",
+                "ZIPcode": "66713"
+            }
+        },
+        "ME":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "04106",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "757 MAIN ST APT 58",
+                    "city": "SOUTH PORTLAND",
+                    "State": "ME",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "832 MAIN RD",
+                "city": "ISLESBORO",
+                "State": "ME",
+                "ZIPcode": "04848"
+            }
+        },
+        "RI":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "02906",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "21 FOREST ST",
+                    "city": "PROVIDENCE",
+                    "State": "RI",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "213 WATER ST",
+                "city": "BLOCK ISLAND",
+                "State": "RI",
+                "ZIPcode": "02807"
+            }
+        },
+        "VT":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "05401",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "166 PARK ST",
+                    "city": "BURLINGTON ",
+                    "State": "VT",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "15 HUGHES DR",
+                "city": "WHITE RIVER JUNCTION",
+                "State": "VT",
+                "ZIPcode": "05001"
+            }
+        },
+        "MA":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "02072",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "76C KIM TER # C",
+                    "city": "STOUGHTON",
+                    "State": "MA",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "15 CUMMINGS WAY",
+                "city": "EDGARTOWN",
+                "State": "MA",
+                "ZIPcode": "02539"
+            }
+        },
+        "AZ":
+        {
+            "products":
+            {
+                "AHMO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "USA Plan D89",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "85012",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "355 E THOMAS RD UNIT B204",
+                    "city": "PHOENIX",
+                    "State": "AZ",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                },
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "85012",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "355 E THOMAS RD UNIT B204",
+                    "city": "PHOENIX",
+                    "State": "AZ",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "441 MOSER AVE APT D7-A",
+                "city": "BULLHEAD CITY",
+                "State": "AZ",
+                "ZIPcode": "86429"
+            }
+        },
+        "CO":
+        {
+            "products":
+            {
+                "AHMO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "USA Plan 15B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "80014",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3022 S WHEELING WAY APT 312",
+                    "city": "AURORA",
+                    "State": "CO",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                },
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "80014",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3022 S WHEELING WAY APT 312",
+                    "city": "AURORA",
+                    "State": "CO",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "2212 E 4TH ST # 2216",
+                "city": "PUEBLO",
+                "State": "CO",
+                "ZIPcode": "81001"
+            }
+        },
+        "MI":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "49307",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "209 MONROE AVE",
+                    "city": "BIG RAPIDS",
+                    "State": "MI",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "411 HENES PARK DR # 1",
+                "city": "MENOMINEE",
+                "State": "MI",
+                "ZIPcode": "49858"
+            }
+        },
+        "NC":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "27604",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "531 N PERSON ST APT 205",
+                    "city": "RALEIGH ",
+                    "State": "NC",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "117 OLD NC 345 # 204",
+                "city": "MANTEO",
+                "State": "NC",
+                "ZIPcode": "27954"
+            }
+        },
+        "NJ":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "07514",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "557 11TH AVE # 559",
+                    "city": "PATERSON",
+                    "State": "NJ",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "25 HUDSON ST APT 814",
+                "city": "JERSEY CITY",
+                "State": "NJ",
+                "ZIPcode": "07302"
+            }
+        },
+        "VA":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "23456",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3821 SHOOTING STAR DR",
+                    "city": "VIRGINIA BEACH",
+                    "State": "VA",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "721 PRESTWICK TURN",
+                "city": "CAPE CHARLES",
+                "State": "VA",
+                "ZIPcode": "23310"
+            }
+        },
+        "IN":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "46204",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "230 E 9TH ST APT 411",
+                    "city": "INDIANAPOLIS",
+                    "State": "IN",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "914 S BARKER AVE",
+                "city": "EVANSVILLE",
+                "State": "IN",
+                "ZIPcode": "47712"
+            }
+        },
+        "MO":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "63113",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4662 SAINT FERDINAND AVE",
+                    "city": "SAINT LOUIS",
+                    "State": "MO",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "1006 CHEROKEE AVE # 1004",
+                "city": "SENECA",
+                "State": "MO",
+                "ZIPcode": "64865"
+            }
+        },
+        "OR":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "97526",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "410 NE ANDERSON ST APT A",
+                    "city": "GRANTS PASS",
+                    "State": "OR",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "91 N HAYDEN BAY DR",
+                "city": "PORTLAND",
+                "State": "OR",
+                "ZIPcode": "97217"
+            }
+        },
+        "SC":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "29550",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "411 MARLBORO AVE",
+                    "city": "HARTSVILLE",
+                    "State": "SC",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "6300 N OCEAN BLVD",
+                "city": "NORTH MYRTLE BEACH",
+                "State": "SC",
+                "ZIPcode": "29582"
+            }
+        },
+        "AR":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "72143",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "587 HONEY HILL RD",
+                    "city": "SEARCY",
+                    "State": "AR",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "501 GARRISON AVE APT 6",
+                "city": "FORT SMITH",
+                "State": "AR",
+                "ZIPcode": "72901"
+            }
+        },
+        "HI":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "96748",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1000 KAMEHAMEHA V HWY",
+                    "city": "KAUNAKAKAI",
+                    "State": "HI",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "2891F KAMOOKOA RD # 5",
+                "city": "KILAUEA ",
+                "State": "HI",
+                "ZIPcode": "96754"
+            }
+        },
+        "IA":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "50312",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3930 GRAND AVE APT 409",
+                    "city": "DES MOINES",
+                    "State": "IA",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "902 WHITE ST",
+                "city": "DUBUQUE",
+                "State": "IA",
+                "ZIPcode": "52001"
+            }
+        },
+        "ID":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "83402",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "500 WALNUT ST",
+                    "city": "IDAHO FALLS",
+                    "State": "ID",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "237 16TH AVE N",
+                "city": "PAYETTE",
+                "State": "ID",
+                "ZIPcode": "83661"
+            }
+        },
+        "NE":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "68131",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "200 S 31ST AVE APT 4204",
+                    "city": "OMAHA",
+                    "State": "NE",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "1551 YORICK AVE",
+                "city": "HENRY",
+                "State": "NE",
+                "ZIPcode": "69358"
+            }
+        },
+        "ND":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "58102",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "508 20TH ST N",
+                    "city": "FARGO",
+                    "State": "ND",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "576 SOLPERS LN",
+                "city": "BOTTINEAU",
+                "State": "ND",
+                "ZIPcode": "58318"
+            }
+        },
+        "SD":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "57108",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "5101 E 61ST ST",
+                    "city": "SIOUX FALLS",
+                    "State": "SD",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "22736 S ROCHFORD RD",
+                "city": "ROCHFORD",
+                "State": "SD",
+                "ZIPcode": "57745"
+            }
+        },
+        "WI":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "53206",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3139 N 26TH ST # 3141",
+                    "city": "MILWAUKEE",
+                    "State": "WI",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "150 FRONT ST N UNIT 411",
+                "city": "PRESCOTT",
+                "State": "WI",
+                "ZIPcode": "54021"
+            }
+        },
+        "WY":
+        {
+            "products":
+            {
+                "APPO":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "82501",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "525 BUCKBOARD",
+                    "city": "RIVERTON",
+                    "State": "WY",
+                    "discloser": "",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$100",
+                        "Max_per_calendar": "$1,000",
+                        "Officevisit": "20%",
+                        "Exams": "20%, 3 per Calendar Year",
+                        "Xrays": "20%",
+                        "Cleanings": "20%, 3 per Calendar Year",
+                        "Fillings": "20%",
+                        "Rootcanals": "50%",
+                        "Gumtreatment": "50%",
+                        "Extractions": "50%",
+                        "Denturerepair": "50%",
+                        "Crowns": "50%",
+                        "Orthodontics": "Not a covered benefit"
+                    }
+                }
+            },
+            "secondaryAddress":
+            {
+                "fieldHomeAddr": "1911 THAYNE BEDFORD RD",
+                "city": "THAYNE",
+                "State": "WY",
+                "ZIPcode": "83127"
             }
         }
     }

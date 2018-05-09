@@ -1,7 +1,7 @@
 /* [Personal Info Page] Address - Mailing 483 */
 "use strict";
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.483PersInfo.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.483PersInfo.json');
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
@@ -111,8 +111,9 @@ dataProvider(statesData.states, function (sData, sdescription) {
 
                     it('Step-9:Should accept: Mailing Addr valid data', function() {
                         var data = TestData.HAddress_Valid;
-                        perInfo.hiddenfieldMailAddr.setText(data.Home + '\t');
-                        perInfo.waitUntilLoderDisapper();
+                        perInfo.hiddenfieldMailAddr.setText(data.Home);
+                        perInfo.fieldEmailAddr.click();
+                        // perInfo.waitUntilLoderDisapper();
                         expect(perInfo.hiddenfieldMailAddr.getAttribute("class")).toContain(TestData.ariainvalid_success);
                         expect(perInfo.hiddenfieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
                         expect(perInfo.hiddenfieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
@@ -122,9 +123,18 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('Step-10:Should detect Mailing Addr invalid missing Apt# ', function() {
                         var data = TestData.HAddress_Invalid;
                         perInfo.hiddenfieldMailAddr.setText(data.Home);
+                        perInfo.hiddenfieldCity.setText(data.City);
                         perInfo.fieldEmailAddr.click();
-                        perInfo.waitUntilLoderDisapper();
-                        expect(perInfo.apptFloorNumError.getText()).toEqual(data.ErrorMsg);
+                        console.log('sdescription======' +sdescription);
+                        if(sdescription=='VI'){
+                            expect(perInfo.servererrMailAddr.getText()).toEqual(data.ErrorMessage);
+                        }
+                        else{
+                            perInfo.waitUntilLoderDisapper();
+                            expect(perInfo.servererrMailAddr.getText()).toEqual(data.ErrorMsg);
+                        }
+                        // perInfo.waitUntilLoderDisapper();
+                        // expect(perInfo.apptFloorNumError.getText()).toEqual(data.ErrorMsg);
                         expect(perInfo.hiddenfieldMailAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
                         expect(perInfo.hiddenfieldState.getAttribute("class")).toContain(TestData.ariainvalid_error);
                         expect(perInfo.hiddenfieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error);
@@ -132,9 +142,18 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('Step-11:Should detect Mailing Addr Home Chars wrong', function() {
                         var data =TestData.HAddress_SplChar;
                         perInfo.hiddenfieldMailAddr.setText(data.Home);
+                        perInfo.hiddenfieldCity.setText(data.City);
                         perInfo.fieldEmailAddr.click();
                         perInfo.waitUntilLoderDisapper();
-                        expect(perInfo.apptFloorNumError.getText()).toEqual(data.ErrorMsg);
+                        if(sdescription=='VI'){
+                            expect(perInfo.servererrMailAddr.getText()).toEqual(data.ErrorMessage);
+                        }
+                        else{
+                            // perInfo.waitUntilLoderDisapper();
+                            expect(perInfo.servererrMailAddr.getText()).toEqual(data.ErrorMsg);
+                        }
+                        // perInfo.waitUntilLoderDisapper();
+                        // expect(perInfo.apptFloorNumError.getText()).toEqual(data.ErrorMsg);
                         expect(perInfo.hiddenfieldMailAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
                         // expect(perInfo.hiddenfieldMailAddr.getAttribute("class")).toContain(TestData.ariainvalid_success);
 

@@ -43,6 +43,8 @@ class BaseControl {
         return this.waitReady().then(function(result) {
             if (!self.locator) return false;
             return element(self.locator).isPresentAndDisplayed();
+        }, function(err) {
+            return false;
         });
     }
 
@@ -56,7 +58,10 @@ class BaseControl {
         if (!this.locator) return null;
         return element(this.locator).isEnabled();
     }
-
+    /**
+     * Waits until element is displayed, enabled and returns the result
+     * @returns {webdriver.promise.Promise}
+     */
     waitReady() {
         return element(this.locator).waitReady();
     }

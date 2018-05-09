@@ -15,115 +15,148 @@ var LinkText = require('../../controls/link-control');
 class ProviderDetailsPage extends ControlBase {
     constructor() {
         super(null, 'ProviderDetailsPage');
-        this.pageObjects = new ProviderDetailsLocators();
-        this.headerText = new Label(this.pageObjects.headerText);
-        this.keywordSearch = new TextBox(this.pageObjects.keywordSearch);
-        this.findIcon = new Button(this.pageObjects.findIcon);
-        this.pageNation = new Label(this.pageObjects.pageNation);
-        this.page = new LinkText(this.pageObjects.page);
-        this.viewLink = new Label(this.pageObjects.viewLink);
-        this.backToSearchResults = new Label(this.pageObjects.backToSearchResults);
-        this.bestMatch = new RadioButton(this.pageObjects.bestMatch);
-        this.sortDistance = new RadioButton(this.pageObjects.sortDistance);
-        this.asceDist = new Label(this.pageObjects.asceDist);
-        this.providerDistance = new Label(this.pageObjects.providerDistance);
-        this.providerName = new Label(this.pageObjects.providerName);
-        this.providerSpecialty = new Label(this.pageObjects.providerSpecialty);
-        this.providerNetwork = new Label(this.pageObjects.providerNetwork);
-        this.providerFacility  = new Label(this.pageObjects.providerFacility);
-        this.bjNetwork = new Label(this.pageObjects.bjNetwork);
-        this.bjDeltaCare = new Label(this.pageObjects.bjDeltaCare);
-        this.providerAvailability = new Label(this.pageObjects.providerAvailability);
-        this.providerMap = new Label(this.pageObjects.providerMap);
-        this.providerPlace = new Label(this.pageObjects.providerPlace);
-        this.providerPlaceName = new Label(this.pageObjects.providerPlaceName);
-        this.providerPName = new LinkText(this.pageObjects.providerPName);
-        this.providerFName = new LinkText(this.pageObjects.providerFName);
-        this.yelpReviewCount = new Label(this.pageObjects.yelpReviewCount);
-        this.yelpRating = new Label(this.pageObjects.yelpRating);
-        this.providerYelp = new LinkText(this.pageObjects.providerYelp);
-        this.providerYelpName = new Label(this.pageObjects.providerYelpName);
-        this.providerYelpFind = new TextBox(this.pageObjects.providerYelpFind);
-        this.providerYelpNear = new TextBox(this.pageObjects.providerYelpNear);
-        this.providerFacility = new Label(this.pageObjects.providerFacility);
-        this.providerAddress = new Label(this.pageObjects.providerAddress);
-        this.providerAddressStreet = new Label(this.pageObjects.providerAddressStreet);
-        this.providerAddressCity = new Label(this.pageObjects.providerAddressCity);
-        this.providerAddressState = new Label(this.pageObjects.providerAddressState);
-        this.providerAddressZip = new Label(this.pageObjects.providerAddressZip);
-        this.providerAddressPhone = new Label(this.pageObjects.providerAddressPhone);
+        this.pageObjects               = new ProviderDetailsLocators();
+        this.headerText                = new Label(this.pageObjects.headerText);
+        this.keywordSearch             = new TextBox(this.pageObjects.keywordSearch);
+        this.findIcon                  = new Button(this.pageObjects.findIcon);
+        this.pageNation                = new Label(this.pageObjects.pageNation);
+        this.page                      = new LinkText(this.pageObjects.page);
+        this.viewLink                  = new Label(this.pageObjects.viewLink);
+        this.backToSearchResults       = new Label(this.pageObjects.backToSearchResults);
+        this.bestMatch                 = new RadioButton(this.pageObjects.bestMatch);
+        this.sortDistance              = new RadioButton(this.pageObjects.sortDistance);
+        this.asceDist                  = new Label(this.pageObjects.asceDist);
+        this.providerDistance          = new Label(this.pageObjects.providerDistance);
+        this.providerName              = new Label(this.pageObjects.providerName);
+        this.providerSpecialty         = new Label(this.pageObjects.providerSpecialty);
+        this.providerNetwork           = new Label(this.pageObjects.providerNetwork);
+        this.providerFacility          = new Label(this.pageObjects.providerFacility);
+        this.bjNetwork                 = new Label(this.pageObjects.bjNetwork);
+        this.bjDeltaCare               = new Label(this.pageObjects.bjDeltaCare);
+        this.providerAvailability      = new Label(this.pageObjects.providerAvailability);
+        this.providerMap               = new Label(this.pageObjects.providerMap);
+        this.providerPlace             = new Label(this.pageObjects.providerPlace);
+        this.providerPlaceName         = new Label(this.pageObjects.providerPlaceName);
+        this.providerPName             = new LinkText(this.pageObjects.providerPName);
+        this.providerFName             = new LinkText(this.pageObjects.providerFName);
+        this.yelpReviewCount           = new Label(this.pageObjects.yelpReviewCount);
+        this.yelpRating                = new Label(this.pageObjects.yelpRating);
+        this.providerYelp              = new LinkText(this.pageObjects.providerYelp);
+        this.providerYelpName          = new Label(this.pageObjects.providerYelpName);
+        this.providerYelpFind          = new TextBox(this.pageObjects.providerYelpFind);
+        this.providerYelpNear          = new TextBox(this.pageObjects.providerYelpNear);
+        this.providerFacility          = new Label(this.pageObjects.providerFacility);
+        this.providerAddress           = new Label(this.pageObjects.providerAddress);
+        this.providerAddressStreet     = new Label(this.pageObjects.providerAddressStreet);
+        this.providerAddressCity       = new Label(this.pageObjects.providerAddressCity);
+        this.providerAddressState      = new Label(this.pageObjects.providerAddressState);
+        this.providerAddressZip        = new Label(this.pageObjects.providerAddressZip);
+        this.providerAddressPhone      = new Label(this.pageObjects.providerAddressPhone);
         // Office Hours
-        this.providerHours = new Label(this.pageObjects.providerHours);
+        this.providerHours             = new Label(this.pageObjects.providerHours);
         // Office access
-        this.providerAccess = new Label(this.pageObjects.providerAccess);
-        this.providerLanguage = new Label(this.pageObjects.providerLanguage);
-        this.providerData = new Label(this.pageObjects.providerData);
-        this.letUsKnow = new Label(this.pageObjects.letUsKnow);
-        this.providersList = new Label(this.pageObjects.providersList);
-        this.view = function(providerName) {
+        this.providerAccess            = new Label(this.pageObjects.providerAccess);
+        this.providerLanguage          = new Label(this.pageObjects.providerLanguage);
+        this.providerData              = new Label(this.pageObjects.providerData);
+        this.letUsKnow                 = new Label(this.pageObjects.letUsKnow);
+        this.providersList             = new Label(this.pageObjects.providersList);
+        this.view                      = function(providerName) {
             return new Label(this.pageObjects.view(providerName));
         };
-        this.placeNameByProvider = function(providerName) {
+        this.placeNameByProvider       = function(providerName) {
             return new Label(this.pageObjects.placeNameByProvider(providerName));
         };
-        this.facilityByProvider = function(providerName) {
+        this.facilityByProvider        = function(providerName) {
             return new Label(this.pageObjects.facilityByProvider(providerName));
         };
-        this.Office_providerSearch = function(officeName) {
+        this.Office_providerSearch     = function(officeName) {
             return new Label(this.pageObjects.Office_providerSearch(officeName));
         };
-        this.workatOffice = function(officeName) {
+        this.workatOffice              = function(officeName) {
             return new Label(this.pageObjects.workatOffice(officeName));
         };
-
-        this.workatOffice_links = function(links) {
+        this.workatOffice_links        = function(links) {
             return new LinkText(this.pageObjects.workatOffice_links(links));
         };
-        this.feedback_inaccuracy = new TextBox(this.pageObjects.feedback_inaccuracy);
+        this.feedback_inaccuracy       = new TextBox(this.pageObjects.feedback_inaccuracy);
         this.dontworkSubmit_inaccuracy = new Button(this.pageObjects.dontworkSubmit_inaccuracy);
-        this.location = new TextBox(this.pageObjects.location);
-        this.menuButton = new Button(this.pageObjects.menuButton);
-        this.spanishOption = new LinkText(this.pageObjects.spanishOption);
+        this.location                  = new TextBox(this.pageObjects.location);
+        this.menuButton                = new Button(this.pageObjects.menuButton);
+        this.spanishOption             = new LinkText(this.pageObjects.spanishOption);
     };
 
+    /**
+     * Returns Office hours by given day
+     * @returns {String} Officehours
+     */
     getOfficeHoursByDay(day) {
-        TextBox
         return element(this.pageObjects.officeHoursByDay(day)).getTextEx().then(function(dayinfo) {
             return (((dayinfo.split(': '))[1]).trim());
         })
     };
+    /**
+     * Returns WebElement of Provider access by facility name
+     * @param {String} facilityname
+     * @returns {WebElement}
+     */
     getProviderAccessByfacility(facility) {
         return element(this.pageObjects.providerAccessByfacility(facility)).getTextEx();
     };
+    /**
+     * Returns provider data by field name
+     * @param {String} fieldName
+     * @returns {String}
+     */
     getProviderDataByField(fieldName) {
-        return element(this.pageObjects.providerDataByField(fieldName)).getTextEx();
+        return element(this.pageObjects.providerDataByField(fieldName)).getTextEx().then(function(text) {
+            return text;
+        }, function(error) {
+            return false;
+        })
     };
 
+    /**
+     * Returns UI based Office hours depends on API response.
+     * @params {Object}
+     * @returns {String} officehours
+     */
     getOfficeHours(hours) {
-        if (hours == null) {
-            return 'contact office for hours';
+        if (hours.isOpen == false) {
+            if (hours.officeMessage == 'CLOSED') {
+                return 'CLOSED';
+            } else {
+                return 'CALL FOR DETAILS';
+            }
+
         } else {
-            return hours;
+            return hours.openTime + '–' + hours.closeTime;
         }
     }
-
+    /**
+     * Verifies Provider name
+     * @param {String} providername
+     * @param {Number} count
+     */
     getandVerifyProvidersName(ptext, count) {
         var self = this;
         return browser.controlFlow().execute(function() {
             return self.providerName.getElements().each(function(element, index) {
-                if(index <= count){
-                return element.getText().then(function(text) {
-                    expect(text).toContain(ptext);
-                });
-            }
+                if (index <= count) {
+                    return element.getText().then(function(text) {
+                        expect(text).toContain(ptext);
+                    });
+                }
 
-            }).then(function(data) {
-            })
+            }).then(function(data) {})
 
         });
     };
 
-
+    /**
+     * Performs click operation on View/place/fality/office link based on given provider name
+     * @param {String} providername
+     * @param {String} View/place/fality/office 
+     */
     openView(providerName, option) {
         var self = this;
         browser.controlFlow().execute(function() {
@@ -149,7 +182,12 @@ class ProviderDetailsPage extends ControlBase {
             }
         });
     };
-
+    /**
+     * Performs click operation on View/place/fality/office link based on given provider name and number of page iterations
+     * @param {String} providername
+     * @param {String} View/place/fality/office 
+     * @param {Number} pageIterations
+     */
     openViewControl(providerName, option, pageIterations) {
         var self = this;
         browser.controlFlow().execute(function() {
@@ -210,7 +248,9 @@ class ProviderDetailsPage extends ControlBase {
 
 
 
-
+    /**
+     * Returns provider information
+     */
     getProviderInfo() {
         var self = this;
         var providerDetails = {};
@@ -259,6 +299,12 @@ class ProviderDetailsPage extends ControlBase {
     //     "CITY": "New York",
     //     "ZIPCODE": "10010"
     // }
+    /**
+     * Verifies provider languages in given no of pages
+     * @param {Array} languages
+     * @param {Number} iterations
+     */
+
     verifyProviderLanguage(language, iterations) {
         var self = this;
         var count = 0,
@@ -311,7 +357,11 @@ class ProviderDetailsPage extends ControlBase {
         });
     };
 
-
+    /**
+     * Verifies provider details in given no of pages
+     * @param {Array} providerdata
+     * @param {Number} iterations
+     */
     verifyProviderDetails(pData, iterations) {
         var self = this;
         browser.controlFlow().execute(function() {

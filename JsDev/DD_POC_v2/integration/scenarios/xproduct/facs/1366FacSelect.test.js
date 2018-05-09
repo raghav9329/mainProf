@@ -2,17 +2,15 @@
 
 //This Spec is used to Verify and Validate Facilities selection of the Dependents
 
-var perInfo = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new (require('../../../pageObjects/cxinit/dependent-page.js'));
+var perInfo    = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo    = new (require('../../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new (require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new (require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new (require('../../../pageObjects/cxinit/receipt-page.js'));
-
+var payment    = new (require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt    = new (require('../../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new (require('../../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1366FacSelect.json');
-var product = ['DHMO','DPPO','AHMO','APPO'];
-// var product = ['DHMO','DPPO','AHMO','APPO']; 
-var states = ['CA', 'TX', 'PA', 'FL','NY'];
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1366FacSelect.json');
+var product    = ['DHMO','DPPO','AHMO','APPO'];
+var states     = ['CA', 'TX', 'PA', 'FL','NY'];
 
 //To Navigate Personla Info Page
 dataProvider(TestData.states, function (sData, sdescription) {
@@ -26,10 +24,13 @@ dataProvider(TestData.states, function (sData, sdescription) {
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;  
-                            TestData.ssn="1234560215",
-                            TestData.alternateid = "test@test.com";                            
+                            TestData.MemberId = false;                            
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();                            
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);

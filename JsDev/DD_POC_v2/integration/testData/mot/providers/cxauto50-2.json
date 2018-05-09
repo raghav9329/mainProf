@@ -1,183 +1,183 @@
 {
-    "Location": {
-        "Location1": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "Visayan/Cebuano",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location"   : {
+    "Location1"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "Visayan/Cebuano",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "Visayan/Cebuano"
+    "params1"    : {},
+    "verifyLang" : "Visayan/Cebuano"
 
         },
-        "Location2": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "Spanish",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location2"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "Spanish",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "Spanish"
+    "params1"    : {},
+    "verifyLang" : "Spanish"
 
         },
-        "Location3": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "Chinese",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location3"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "Chinese",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "Chinese"
+    "params1"    : {},
+    "verifyLang" : "Chinese"
 
         },
-        "Location4": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "French",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location4"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "French",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "French"
+    "params1"    : {},
+    "verifyLang" : "French"
 
         },
-        "Location5": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "German",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location5"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "German",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "German"
+    "params1"    : {},
+    "verifyLang" : "German"
 
         },
-        "Location6": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "Visayan/Cebuano",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location6"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "Visayan/Cebuano",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "Visayan/Cebuano"
+    "params1"    : {},
+    "verifyLang" : "Visayan/Cebuano"
 
         },
-        "Location7": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "Visayan/Cebuano",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location7"  : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "Visayan/Cebuano",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "Visayan/Cebuano"
+    "params1"    : {},
+    "verifyLang" : "Visayan/Cebuano"
 
         },
-        "Location8": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "Spanish",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location8"  : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "Spanish",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "Spanish"
+    "params1"    : {},
+    "verifyLang" : "Spanish"
 
         },
-        "Location9": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "Chinese",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location9"  : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "Chinese",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "Chinese"
+    "params1"    : {},
+    "verifyLang" : "Chinese"
 
         },
-        "Location10": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "French",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location10" : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "French",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "French"
+    "params1"    : {},
+    "verifyLang" : "French"
 
         },
-        "Location11": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "German",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location11" : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "German",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "German"
+    "params1"    : {},
+    "verifyLang" : "German"
 
         },
-        "Location12": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "language": "Visayan/Cebuano",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location12" : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "language"   : "Visayan/Cebuano",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyLang": "Visayan/Cebuano"
+    "params1"    : {},
+    "verifyLang" : "Visayan/Cebuano"
 
         }
     }

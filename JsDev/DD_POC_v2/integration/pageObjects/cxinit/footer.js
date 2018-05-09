@@ -1,13 +1,13 @@
 "use strict";
 var footerLocators = require('./footer-locators');
-var ControlBase = require('../../controls/base-control');
-var Button = require('../../controls/button-control');
-var TextBox = require('../../controls/textbox-control');
-var Label = require('../../controls/label-control');
-var Select = require('../../controls/select-control');
-var CheckBox = require('../../controls/checkbox-control');
-var RadioButton = require('../../controls/radiobutton-control');
-var LinkText = require('../../controls/link-control');
+var ControlBase    = require('../../controls/base-control');
+var Button         = require('../../controls/button-control');
+var TextBox        = require('../../controls/textbox-control');
+var Label          = require('../../controls/label-control');
+var Select         = require('../../controls/select-control');
+var CheckBox       = require('../../controls/checkbox-control');
+var RadioButton    = require('../../controls/radiobutton-control');
+var LinkText       = require('../../controls/link-control');
 
 /**
  * Provides access to the functionality of Footer
@@ -16,15 +16,15 @@ var LinkText = require('../../controls/link-control');
 class Footer extends ControlBase {
     constructor() {
         super(null, 'Footer');
-        this.pageObjects = new footerLocators();
-        this.calldelta = new Label(this.pageObjects.calldelta);
-        this.legalNotices = new LinkText(this.pageObjects.legalNotices);
-        this.privacy =new LinkText(this.pageObjects.privacy);
-        this.languageAssistance =new LinkText(this.pageObjects.languageAssistance);
-        this.joinAARP =new LinkText(this.pageObjects.joinAARP);
-        this.renewAARP =new LinkText(this.pageObjects.renewAARP);
-        this.aarporgHome =new LinkText(this.pageObjects.aarporgHome);
-        this.copyrightFooter = new Label(this.pageObjects.copyrightFooter);
+        this.pageObjects        = new footerLocators();
+        this.calldelta          = new Label(this.pageObjects.calldelta);
+        this.legalNotices       = new LinkText(this.pageObjects.legalNotices);
+        this.privacy            = new LinkText(this.pageObjects.privacy);
+        this.languageAssistance = new LinkText(this.pageObjects.languageAssistance);
+        this.joinAARP           = new LinkText(this.pageObjects.joinAARP);
+        this.renewAARP          = new LinkText(this.pageObjects.renewAARP);
+        this.aarporgHome        = new LinkText(this.pageObjects.aarporgHome);
+        this.copyrightFooter    = new Label(this.pageObjects.copyrightFooter);
 
     };
 

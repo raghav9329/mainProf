@@ -1,12 +1,12 @@
 /* CXINIT-1356:Premium Change Pop up
  *  This Script will validates the functionality of Premium change Popup
  */
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1356DepPremChgPop.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1356DepPremChgPop.json');
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo    = new(require('../../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var payment    = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt    = new(require('../../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
@@ -39,10 +39,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
 
                     //    Fill Personal Infor Page with valid data and verify the navigation
                     it('PremChgPU-2:should fill out Personal Information Page', function() {
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            TestData.MemberId = false;                            
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();                            
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);

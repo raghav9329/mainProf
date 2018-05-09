@@ -1,15 +1,15 @@
 {
-    "zipcode": "94105",
-    "contactUs": "Contact Us - Delta Dental Insurance",
-    "languageAssistance": "Get assistance in a language other than English - Delta Dental for Individuals and Families",
-    "legalNotices": "Legal Notices - Delta Dental Insurance",
-    "privacy": "Privacy and Security - Delta Dental Insurance",
-    "lastUpdated": "Last updated",
-    "deltaDentalInfo": "This website is the home of Delta Dental of California; Delta Dental Insurance Company; Delta Dental of Pennsylvania; Delta Dental of New York, Inc.; Delta Dental of the District of Columbia; Delta Dental of Delaware, Inc.; Delta Dental of West Virginia, Inc. and their affiliated companies. For other Delta Dental Plans Association member companies, visit the Delta Dental Plans Association website",
-    "serviceInfo": "Please note: Services from dental school clinics may be provided by students of dentistry or instructors who are not licensed by the dental board of your state. All enrollees are entitled to full and equal access to covered services, including enrollees with disabilities as required under the Americans with Disabilities Act of 1990 and Section 504 of the Rehabilitation Act of 1973",
-    "deltaCareInfo": "USA is underwritten by Delta Dental of California. Delta Dental Insurance Company acts as the DeltaCare USA administrator in this state. These companies are financially responsible for their own products",
-    "location": "San Francisco, CA 94105, USA",
-    "Distance25": "25 miles",
-    "Language":"English",
-    "keyword":"general dentist"    
+    "zipcode"            : "94105",
+    "contactUs"          : "Contact Us - Delta Dental Insurance",
+    "languageAssistance" : "Get assistance in a language other than English - Delta Dental for Individuals and Families",
+    "legalNotices"       : "Legal Notices - Delta Dental Insurance",
+    "privacy"            : "Privacy and Security - Delta Dental Insurance",
+    "lastUpdated"        : "Last updated",
+    "deltaDentalInfo"    : "This website is the home of Delta Dental of California; Delta Dental Insurance Company; Delta Dental of Pennsylvania; Delta Dental of New York, Inc.; Delta Dental of the District of Columbia; Delta Dental of Delaware, Inc.; Delta Dental of West Virginia, Inc. and their affiliated companies. For other Delta Dental Plans Association member companies, visit the Delta Dental Plans Association website",
+    "serviceInfo"        : "Please note: Services from dental school clinics may be provided by students of dentistry or instructors who are not licensed by the dental board of your state. All enrollees are entitled to full and equal access to covered services, including enrollees with disabilities as required under the Americans with Disabilities Act of 1990 and Section 504 of the Rehabilitation Act of 1973",
+    "deltaCareInfo"      : "USA is underwritten by Delta Dental of California. Delta Dental Insurance Company acts as the DeltaCare USA administrator in this state. These companies are financially responsible for their own products",
+    "location"           : "San Francisco, CA 94105, USA",
+    "Distance25"         : "25 miles",
+    "Language"           : "English",
+    "keyword"            : "general dentist"
 }

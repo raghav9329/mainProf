@@ -1,13 +1,13 @@
 //CXINIT-1408 : E2E Work Flow 1 with the dependent age verification
 
 //This Spec is used to Validate End to End Work Flow with the Dependent age Error
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo    = new(require('../../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var payment    = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt    = new(require('../../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1408.EndToEndWkFlo1.json');
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1408.EndToEndWkFlo1.json');
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
@@ -37,16 +37,21 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         })
                         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
 
-                        console.log('1408_1 complete')
+                        console.log('1408_1 complete');
                     });
 
                     //Enter the valid Test Data in the Personal Information page and Click n the Next
 
                     it('E2E_2 :should populate PersInfo page', function() {
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            // TestData.ssn = "1234560215",
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();
+                            console.log(" TestData.ssn===" + TestData.ssn)
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);

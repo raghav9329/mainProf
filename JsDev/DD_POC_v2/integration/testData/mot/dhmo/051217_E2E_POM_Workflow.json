@@ -5,6 +5,7 @@
     "gender": "Male",
     "dob": "05-05-1988",
     "ssn": "1234560215",
+    "MemberId": "1234567890",
     "alternateid": "test@test.com",
     "fieldHomeAddr": "100 First Street floor 4",
     "city": "San Francisco",
@@ -12,7 +13,7 @@
     "contactType": "Cell",
     "phoneNumber": "9876543210",
     "email": "test@gmail.com",
-    "ZipCode": "94105",
+    "ZipCode": "94103",
     "referralSource": "Email Advertisement",
     "brokernumber": "2012836",
     "coverageStartDate": "07/01/2017",
@@ -29,11 +30,13 @@
     "paymentTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptTitle": "Thank You | Delta Dental Insurance Company",
     "updateRelationship": "Child",
-     "discloser": "Delta_CA_DHMO_CAA55",
+    "discloser": "Delta_CA_DHMO_CAA55",
+    "maxlengthFirstname": "Davidmax Hennry Willson P",
+    "maxlengthMiddlename": "D",
+    "maxlengthLastname": "DeltaCare USA CAAAA Individual Fami",
 
-    
-
-    "domesticpartner1": {
+    "domesticpartner1":
+    {
         "relationship": "Domestic Partner",
         "firstName": "firstName",
         "middleName": "m",
@@ -42,7 +45,8 @@
         "DOB": "10-10-2000"
     },
 
-    "Spouse1": {
+    "Spouse1":
+    {
         "relationship": "Spouse",
         "firstName": "firstName",
         "middleName": "m",
@@ -51,7 +55,8 @@
         "DOB": "05-10-1995"
     },
 
-    "child3": {
+    "child3":
+    {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "K",
@@ -60,7 +65,8 @@
         "DOB": "05-10-2003"
     },
 
-    "child4": {
+    "child4":
+    {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "m",
@@ -69,7 +75,8 @@
         "DOB": "07-19-2004"
     },
 
-    "child5": {
+    "child5":
+    {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "Q",
@@ -78,7 +85,8 @@
         "DOB": "12-28-2005"
     },
 
-    "child6": {
+    "child6":
+    {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "m",
@@ -88,6 +96,9 @@
     },
 
     "dependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year"],
+    "NulldependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year"],
+    "personalInfoErrors": ["Please enter your first name", "Please enter your last name", "Please enter your SSN", false, "Please enter a street address", "Please enter a city", "Please enter your phone number", "Please enter your E-mail address"],
+    "personalInfoErrorsAarp": ["Please enter your first name", "Please enter your last name", false, "Please enter your membership number.", "Please enter a street address", "Please enter a city", "Please enter your phone number", "Please enter your E-mail address"],
 
     "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01 – 12)", "Please enter a valid year", "Please enter CVC code from your card"],
     "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
@@ -98,23 +109,10 @@
     "securityCode": "125",
     "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
     "thanksMsg": "Thank you for taking our survey. Your response is very important to us.",
-    
-    "planSummary": {
-        "Deductible_per_calendar": "$0",
-        "Max_per_calendar": "$0",
-        "Officevisit": "$15",
-        "Exams": "$0",
-        "Xrays": "$0",
-        "Cleanings": "$25",
-        "Fillings": "$30 - $125",
-        "Rootcanals": "$240 - $400",
-        "Gumtreatment": "$70 - $650",
-        "Extractions": "$45 - $210",
-        "Denturerepair": "$55",
-        "Crowns": "$325 - $425",
-        "Orthodontics": "$2,700 - $2,900"
-    },
-    "primaryFacility": {
+
+   
+    "primaryFacility":
+    {
         "facilityName": "Kayvan Kafayi DDS",
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",

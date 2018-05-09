@@ -2,16 +2,15 @@
 start with 3 dependents so primary plus spouse plus 2 children
 (maybe thaat's 4)*/
 
-var perInfo = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
-var enrollhomepage = new (require('../../../pageObjects/cxinit/home-page.js'));
-var depInfo = new (require('../../../pageObjects/cxinit/dependent-page.js'));
-var facilities = new (require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new (require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new (require('../../../pageObjects/cxinit/receipt-page.js'));
-var enrollPage = new (require('../../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../../testData/' + testDataEnv + '/aarpppo/aarpppo.2311_E2EPaySemiAnn_ThreeDep.json');
-var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
-var product = ['APPO'];
+var perInfo        = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo        = new (require('../../../pageObjects/cxinit/dependent-page.js'));
+var facilities     = new (require('../../../pageObjects/cxinit/facilities-page.js'));
+var payment        = new (require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt        = new (require('../../../pageObjects/cxinit/receipt-page.js'));
+var enrollPage     = new (require('../../../pageObjects/cxinit/enroll-page.js'));
+var TestData       = require('../../../testData/' + testDataEnv + '/aarpppo/aarpppo.2311_E2EPaySemiAnn_ThreeDep.json');
+var statesData     = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
+var product        = ['APPO'];
 
 //To Navigate Personla Info Page
 dataProvider(statesData.states, function (sData, sdescription) {
@@ -44,6 +43,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
 
                     it('E2E_2 :should populate PersInfo page', function () {
                         TestData.MemberId = Utility.randomNo('Number', 10);
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         perInfo.fillPersonalInfo(TestData);
                         perInfo.fillAddress(tData);
                         perInfo.phoneNumberemail(TestData);

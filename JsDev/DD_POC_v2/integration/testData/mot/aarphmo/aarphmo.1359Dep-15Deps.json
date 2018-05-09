@@ -1,184 +1,183 @@
 {
-    "firstname": "Test",
-    "mi": "K",
-    "lastname": "App",
-    "MemberId": "3041586292",
-    "gender": "Male",
-    "dob": "05-05-1988",  
-   "fieldHomeAddr": "100 First Street floor 4",
-    "city": "San Francisco",
-    "State": "CA",
-    "contactType": "Cell",
-    "phoneNumber": "9876543210",
-    "email": "test@gmail.com",
-     "referralSource": "Email Advertisement",
-    "ZipCode": "94105",
-    "brokernumber": "2012836",
-    "coverageStartDate": "07/01/2017",
-    "ariainvalid": "success",
-    "DependentTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
-    "facilitiesTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
-
-    "updateRelationship": "Child",
+   "firstname"          : "Test",
+   "mi"                 : "K",
+   "lastname"           : "App",
+   "MemberId"           : "3041586292",
+   "gender"             : "Male",
+   "dob"                : "05-05-1988",
+   "fieldHomeAddr"      : "100 First Street floor 4",
+   "city"               : "San Francisco",
+   "State"              : "CA",
+   "contactType"        : "Cell",
+   "phoneNumber"        : "9876543210",
+   "email"              : "test@gmail.com",
+   "referralSource"     : "Email Advertisement",
+   "ZipCode"            : "94105",
+   "brokernumber"       : "2012836",
+   "coverageStartDate"  : "07/01/2017",
+   "ariainvalid"        : "success",
+   "DependentTitle"     : "Dependents | Enrollment | Delta Dental Insurance Company",
+   "facilitiesTitle"    : "Facilities | Enrollment | Delta Dental Insurance Company",
+   "updateRelationship" : "Child",
 
     "enrollData": {
-        "PlanName": "DeltaCare ® USA Plan 15B",
-        "PlanType": "DHMO",
-        "PlanCode": "PLN15B",
-        "CoverageStartDate": "12/1/2018",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "0.00",
-        "AnnualCost": "342.96",
-        "CoverageType": "Self",
-        "PlanID": "4546969",
-        "IssuerCode": "AARP",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-05-1988"
+        "PlanName"          : "DeltaCare ® USA Plan 15B",
+        "PlanType"          : "DHMO",
+        "PlanCode"          : "PLN15B",
+        "CoverageStartDate" : "12/1/2018",
+        "State"             : "CA",
+        "ZIPcode"           : "94105",
+        "Country"           : "USA",
+        "EnrollmentFee"     : "0.00",
+        "AnnualCost"        : "342.96",
+        "CoverageType"      : "Self",
+        "PlanID"            : "4546969",
+        "IssuerCode"        : "AARP",
+        "NoOfPeopleCovered" : "1",
+        "dob"               : "05-05-1988"
     },
 
     "domesticpartner1": {
-        "relationship": "Domestic Partner",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Male",
-        "DOB": "10-10-2000"
+        "relationship" : "Domestic Partner",
+        "firstName"    : "firstName",
+        "middleName"   : "m",
+        "lastName"     : "lastName",
+        "gender"       : "Male",
+        "DOB"          : "10-10-2000"
     },
 
     "Spouse1": {
-        "relationship": "Spouse",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-1995"
+        "relationship" : "Spouse",
+        "firstName"    : "firstName",
+        "middleName"   : "m",
+        "lastName"     : "lastName",
+        "gender"       : "Female",
+        "DOB"          : "05-10-1995"
     },
 
     "child3": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "K",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-2002"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "K",
+        "lastName"     : "lastName",
+        "gender"       : "Female",
+        "DOB"          : "05-10-2002"
     },
 
     "child4": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Prefer Not To Say",
-        "DOB": "07-19-1999"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "m",
+        "lastName"     : "lastName",
+        "gender"       : "Prefer Not To Say",
+        "DOB"          : "07-19-1999"
     },
 
     "child5": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "Q",
-        "lastName": "lastName",
-        "gender": "Prefer Not To Say",
-        "DOB": "12-28-1995"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "Q",
+        "lastName"     : "lastName",
+        "gender"       : "Prefer Not To Say",
+        "DOB"          : "12-28-1995"
     },
 
     "child6": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-1995"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "m",
+        "lastName"     : "lastName",
+        "gender"       : "Female",
+        "DOB"          : "05-10-1995"
     },
 
     "child7": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "K",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-2002"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "K",
+        "lastName"     : "lastName",
+        "gender"       : "Female",
+        "DOB"          : "05-10-2002"
     },
 
     "child8": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Prefer Not To Say",
-        "DOB": "07-19-1999"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "m",
+        "lastName"     : "lastName",
+        "gender"       : "Prefer Not To Say",
+        "DOB"          : "07-19-1999"
     },
 
     "child9": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "Q",
-        "lastName": "lastName",
-        "gender": "Prefer Not To Say",
-        "DOB": "12-28-1995"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "Q",
+        "lastName"     : "lastName",
+        "gender"       : "Prefer Not To Say",
+        "DOB"          : "12-28-1995"
     },
 
     "child10": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-1995"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "m",
+        "lastName"     : "lastName",
+        "gender"       : "Female",
+        "DOB"          : "05-10-1995"
     },
 
     "child11": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-1995"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "m",
+        "lastName"     : "lastName",
+        "gender"       : "Female",
+        "DOB"          : "05-10-1995"
     },
     "child12": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "K",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-2002"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "K",
+        "lastName"     : "lastName",
+        "gender"       : "Female",
+        "DOB"          : "05-10-2002"
     },
 
     "child13": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Prefer Not To Say",
-        "DOB": "07-19-1999"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "m",
+        "lastName"     : "lastName",
+        "gender"       : "Prefer Not To Say",
+        "DOB"          : "07-19-1999"
     },
 
     "child14": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "Q",
-        "lastName": "lastName",
-        "gender": "Prefer Not To Say",
-        "DOB": "12-28-1995"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "Q",
+        "lastName"     : "lastName",
+        "gender"       : "Prefer Not To Say",
+        "DOB"          : "12-28-1995"
     },
 
     "child15": {
-        "relationship": "Child",
-        "firstName": "firstName",
-        "middleName": "m",
-        "lastName": "lastName",
-        "gender": "Female",
-        "DOB": "05-10-1995"
+        "relationship" : "Child",
+        "firstName"    : "firstName",
+        "middleName"   : "m",
+        "lastName"     : "lastName",
+        "gender"       : "Female",
+        "DOB"          : "05-10-1995"
     },
 
-    "invalidData": {
-        "relationship": "",
-        "firstName": "FirstName123",
-        "middleName": "m",
-        "lastName": "LastName122",
-        "gender": "",
-        "DOB": "12-29-2009"
+    "invalidData"  : {
+    "relationship" : "",
+    "firstName"    : "FirstName123",
+    "middleName"   : "m",
+    "lastName"     : "LastName122",
+    "gender"       : "",
+    "DOB"          : "12-29-2009"
     },
 
     "depFieldError": "Letters or punctuation only please",

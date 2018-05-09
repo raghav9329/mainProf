@@ -8,13 +8,14 @@ var Select = require('../../controls/select-control');
 var CheckBox = require('../../controls/checkbox-control');
 var RadioButton = require('../../controls/radiobutton-control');
 var LinkText = require('../../controls/link-control');
-
 var shopping = new(require('./shopping-page.js'));
 var planOptions = new(require('./plan-options-page.js'));
 var planDetails = new(require('./plan-details-page.js'));
+var pixeldata = require('./pixel.js');
+
 /**
- * Provides access to the functionality of Personal Info page
- * @constructor
+ * Provides access to the functionality of get a quote page 
+ * @constructor 
  */
 class EnrollPage extends ControlBase {
 
@@ -38,67 +39,63 @@ class EnrollPage extends ControlBase {
         this.NoOFCovered = new TextBox(this.pageObjects.NoOFCovered);
         this.Dob = new TextBox(this.pageObjects.Dob);
         this.Submit = new Button(this.pageObjects.Submit);
-
         // Enroll UI Objects
         this.Zipcode = new TextBox(this.pageObjects.Zipcode);
         this.dob = new TextBox(this.pageObjects.dob);
         this.addDependent = new Label(this.pageObjects.addDependent);
-
         this.Coverage_Type = new Select(this.pageObjects.Coverage_Type);
         this.Effcdate = new Select(this.pageObjects.Effcdate);
         this.Go = new Button(this.pageObjects.Go);
         this.PpoEnrollBtn = new Button(this.pageObjects.PpoEnrollBtn);
-
         this.quoteInfoTxt = new Label(this.pageObjects.quoteInfoTxt);
         this.quoteZipTxt = new Label(this.pageObjects.quoteZipTxt);
         this.quotesDepTxt = new Label(this.pageObjects.quotesDepTxt);
         this.birtdateText = new Label(this.pageObjects.birtdateText);
-
-
     }
 
     /**
-     * Returns true if GetQuote is displayed or not
+     * Is used to verify that user in Get A Quote page or not
+     * Returns true if Get a Quote page is displayed
      * @returns {Promise<Boolean>}
      */
     isAt() {
         return this.GetQuote.isPresentAndDisplayed();
     };
+    /**
+     * Returns webelement of dependent birthday text based on given dependent number
+     * @param {Number} depnumber dependent birthday number
+     * @returns {WebElement}
+     */
     depBirthDayText(depno) {
         return new Label(this.pageObjects.depBirthDayText(depno))
     }
     enroll(planName) {
         return new Button(this.pageObjects.enroll(planName));
     }
-
+    /**
+     * Returns webelement of dependent birthday text field based on given dependent number
+     * @param {Number} depnumber dependent birthday number
+     * @returns {WebElement}
+     */
     dependentDOB(depno) {
         return new TextBox(this.pageObjects.dependentDOB(depno));
-    };
-
-    olddeltaEnroll(homeObj) {
-        var self = this;
-        self.Zipcode.setText(homeObj.ZIPcode);
-        self.Zipcode.setText(homeObj.ZIPcode);
-        browser.sleep(1000);
-        self.dob.setText(homeObj.dob);
     };
 
     deltaEnroll(homeObj) {
         var self = this;
         var noofdependents = '';
-
         browser.controlFlow().execute(function() {
             if (homeObj.dependentsDOB) {
                 noofdependents = homeObj.dependentsDOB.length;
             } else {
                 noofdependents = 0;
             }
-            if (isExecutionFromUI == true) planOptions.back.click();
+            shopping.Zipcode.setText(homeObj.ZIPcode);
             shopping.enterDOB(homeObj.dob);
-            browser.sleep(10000);
+            browser.sleep(5000);
             if (homeObj.dependentsDOB) {
                 shopping.NoOFCovered_getAQuote.setText(noofdependents + '\t');
-                browser.sleep(10000);
+                browser.sleep(5000);
                 homeObj.dependentsDOB.forEach(function(depdob, index) {
                     var depno = index + 1;
                     shopping.enterDependentDOB('Dependent' + depno, depdob);
@@ -106,46 +103,70 @@ class EnrollPage extends ControlBase {
             } else {
                 shopping.NoOFCovered_getAQuote.setText(noofdependents + '\t');
             }
-            shopping.Showplans.click();
-            planOptions.getPlanDetails(homeObj.PlanName).click();
-            planDetails.buyPlan.click();
         });
     };
 
 
     aarpEnroll(homeObj) {
-        this.Zipcode.setText(homeObj.ZIPcode);
-        this.Zipcode.setText(homeObj.ZIPcode);
-        browser.sleep(2000);
-        this.Coverage_Type.selectByText(homeObj.NoOfPeopleCovered);
+        var noofdependents = '';
+        browser.controlFlow().execute(function() {
+            shopping.Zipcode.setText(homeObj.ZIPcode);
+            if (homeObj.dependentsDOB) {
+                noofdependents = homeObj.dependentsDOB.length;
+            } else {
+                noofdependents = 0;
+            }
+            expect(browser.getPageSource()).toContainSourceCode(pixeldata.secureAccordant);
+            shopping.NoOFCovered_getAQuote.setText(noofdependents + '\t');
+
+        })
+
     }
 
 
-    // Fill Home page details and navigate ti perInfo page
-    enterHomePageDetails(homeObj, ppoo) {
+    /**
+     * Fill get a quote page details and navigate to perInfo page
+     * @param {Object} enrollData enroll data{
+                        "PlanName": "",
+                        "CoverageStartDate": "",
+                        "ZIPcode": "",
+                        "CoverageType": "",
+                        "IssuerCode": "",
+                        "NoOfPeopleCovered": "",
+                        "dob": ""
+                    }
+     * @returns {String<planstartsdate>} 
+     */
+    enterHomePageDetails(homeObj) {
         var self = this;
         return browser.controlFlow().execute(function() {
             return browser.getCapabilities().then((c) => {
                 if (isExecutionFromUI) {
-                    switch (homeObj.IssuerCode.toUpperCase()) {
-                        case 'DELTA':
-                            self.olddeltaEnroll(homeObj);
-                            break;
-                        case 'AARP':
-                            self.aarpEnroll(homeObj);
-                            break;
-                    };
-                    return self.Effcdate.getSelectedText().then(function(cstartDate) {
-                        self.Go.click();
-                        if (homeObj.IssuerCode.toUpperCase() == 'DELTA') {
-                            self.deltaEnroll(homeObj)
-                            return cstartDate;
-                        }
-                        if (homeObj.IssuerCode.toUpperCase() == 'AARP') {
-                            planOptions.getPlanDetails(homeObj.PlanName).click();
-                            planDetails.buyPlan.click();
-                            return cstartDate;
-                        }
+                    if (homeObj.IssuerCode.toUpperCase() == 'DELTA') {
+                        self.deltaEnroll(homeObj);
+                    }
+                    if (homeObj.IssuerCode.toUpperCase() == 'AARP') {
+                        self.aarpEnroll(homeObj);
+                    }
+                    shopping.Showplans.click();
+                    if (homeObj.IssuerCode.toUpperCase() == 'AARP') {
+                        // need to enhance the condition
+                        // states.forEach(function(state) {
+                        //     if (['DE', 'GA', 'MS', 'MT', 'NV', 'UT', 'WV'].indexOf(state) !== -1) {
+                        expect(browser.getPageSource()).toContainSourceCode(pixeldata.pOptions1);
+                        expect(browser.getPageSource()).toContainSourceCode(pixeldata.pOptions2);
+
+                        //     }
+                        // })
+                    }
+                    return planOptions.getPlanStartsFrom(homeObj.PlanName).getText().then(function(startdate) {
+                        console.log("startdate=================" + startdate)
+
+                        planOptions.getPlanDetails(homeObj.PlanName).click();
+                        var sDate = startdate.replace(/\r?\n|\r/g, "").slice(-11);
+                        var date = new Date(sDate);
+                        planDetails.buyPlan.click();
+                        return moment(date).format('MM/DD/YYYY')
                     })
                 } else {
 
@@ -156,9 +177,22 @@ class EnrollPage extends ControlBase {
                         element(by.name('issuerCode')).sendKeys(homeObj.IssuerCode.toLowerCase())
 
                         shopping.Submit.click();
+                        if (homeObj.IssuerCode.toUpperCase() == 'AARP') {
+                            // need to enhance the condition
+                            states.forEach(function(state) {
+                                if (['DE', 'GA', 'MS', 'MT', 'NV', 'UT', 'WV'].indexOf(state) !== -1) {
+                                    expect(browser.getPageSource()).toContainSourceCode(pixeldata.pOptions1);
+                                    expect(browser.getPageSource()).toContainSourceCode(pixeldata.pOptions2);
+                                    expect(browser.getPageSource()).toContainSourceCode(pixeldata.secureAccordant);
+                                }
+                            })
+                        }
                         planOptions.back.click();
                         if (homeObj.IssuerCode.toUpperCase() == 'DELTA') {
                             self.deltaEnroll(homeObj);
+                            shopping.Showplans.click();
+                            planOptions.getPlanDetails(homeObj.PlanName).click();
+                            planDetails.buyPlan.click();
                         }
                         if (homeObj.IssuerCode.toUpperCase() == 'AARP') {
                             shopping.NoOFCovered_getAQuote.setText((Number(homeObj.NoOfPeopleCovered)) + '\t');
@@ -166,6 +200,13 @@ class EnrollPage extends ControlBase {
                             shopping.Showplans.click();
                             planOptions.getPlanDetails(homeObj.PlanName).click();
                             planDetails.buyPlan.click();
+                            browser.sleep(3000)
+                            states.forEach(function(state) {
+                                if (['DE', 'GA', 'MS', 'MT', 'NV', 'UT', 'WV'].indexOf(state) !== -1) {
+                                    expect(browser.getPageSource()).toContainSourceCode(pixeldata.pInfo1);
+                                }
+                            })
+
                         }
                         if (isExecutionFromUI == false) {
                             var date = new Date();
@@ -176,40 +217,16 @@ class EnrollPage extends ControlBase {
 
                             return cdate;
                         }
+
                     })
                 }
-
-
-
-                //  else {
-                //     console.log("else block===============");
-                //     if (c.get('browserName') == 'internet explorer') self.overridelink.click();
-                //     self.PlanName.setText(homeObj.PlanName);
-                //     self.PlanType.setText(homeObj.PlanType);
-                //     self.PlanCode.setText(homeObj.PlanCode);
-                //     self.CoverageStartDate.setText(homeObj.CoverageStartDate);
-                //     self.PlanState.setText(homeObj.State);
-                //     self.PlanZip.setText(homeObj.ZIPcode);
-                //     self.Country.setText(homeObj.Country);
-                //     self.EnrollmentFee.setText(homeObj.EnrollmentFee);
-                //     self.AnnualCost.setText(homeObj.AnnualCost);
-                //     self.CoverageType.setText(homeObj.CoverageType);
-                //     self.PlanID.setText(homeObj.PlanID);
-                //     self.IssuerCode.setText(homeObj.IssuerCode);
-                //     self.NoOFCovered.setText(homeObj.NoOfPeopleCovered);
-                //     if (homeObj.Dob) self.Dob.setText(homeObj.Dob);
-                //     self.Submit.click();
-                // }
             })
         });
     };
-
-
-
 }
 
 /**
  *
- * @type {EnrollPage}
+ * @type {GetAQuotePage}
  */
 module.exports = EnrollPage;

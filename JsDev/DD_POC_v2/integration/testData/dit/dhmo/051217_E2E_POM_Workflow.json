@@ -5,6 +5,7 @@
     "gender": "Male",
     "dob": "05-05-1988",
     "ssn": "1234560215",
+    "MemberId":"1234560215",
     "alternateid": "test@test.com",
     "fieldHomeAddr": "100 First Street floor 4",
     "city": "San Francisco",
@@ -33,8 +34,6 @@
     "maxlengthFirstname": "Davidmax Hennry Willson P",
     "maxlengthMiddlename": "D",
     "maxlengthLastname": "DeltaCare USA CAAAA Individual Fami",
-
-
 
     "domesticpartner1":
     {
@@ -98,7 +97,8 @@
 
     "dependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year"],
     "NulldependentErrors": ["Please select a relationship", "Please enter your first name", "Please enter your last name", "Please enter a valid month between (01 – 12)", "Please enter a valid day between (01 – 31)", "Please enter a valid year"],
-    "personalInfoServerErrors": ["Please enter your first name","Please enter your last name","Please enter your SSN","Please enter a street address","Please enter a city","Please enter your phone number","Please enter your E-mail address"],
+    "personalInfoErrors": ["Please enter your first name", "Please enter your last name", "Please enter your SSN", false, "Please enter a street address", "Please enter a city", "Please enter your phone number", "Please enter your E-mail address"],
+    "personalInfoErrorsAarp": ["Please enter your first name", "Please enter your last name", false, "Please enter your membership number.", "Please enter a street address", "Please enter a city", "Please enter your phone number", "Please enter your E-mail address"],
 
     "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01 – 12)", "Please enter a valid year", "Please enter CVC code from your card"],
     "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],

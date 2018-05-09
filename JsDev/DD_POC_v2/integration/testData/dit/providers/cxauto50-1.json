@@ -98,7 +98,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "meta_data": false,
-                "specialty": ["Full-time faculty", "Oral Pathology"]
+                "specialty": ["Full-time faculty", "Oral pathologist"]
             },
 
             "ppo": {
@@ -109,7 +109,7 @@
                 "max": "60000",
                 "network": "2ppo",
                 "meta_data": false,
-                "specialty": ["Full-time faculty", "Oral Pathology"]
+                "specialty": ["Full-time faculty", "Oral pathologist"]
             },
             "premier": {
                 "zipcode": "94105",
@@ -119,7 +119,7 @@
                 "max": "60000",
                 "network": "2premier",
                 "meta_data": false,
-                "specialty": ["Full-time faculty", "Oral Pathology"]
+                "specialty": ["Full-time faculty", "Oral pathologist"]
             },
             "deltacare": {
                 "zipcode": "94105",
@@ -129,7 +129,7 @@
                 "max": "60000",
                 "network": "2deltacare",
                 "meta_data": false,
-                "specialty": ["Full-time faculty", "Oral Pathology"]
+                "specialty": ["Full-time faculty", "Oral pathologist"]
             },
             "verify": {
                 "zipcode": "94105"
@@ -278,7 +278,7 @@
                 "per_page": "60000",
                 "max": "60000",
                 "meta_data": false,
-                "specialty": ["Full-time faculty", "Oral Pathology"]
+                "specialty": ["Full-time faculty", "Oral pathologist"]
             },
 
             "ppo": {
@@ -289,7 +289,7 @@
                 "max": "60000",
                 "network": "2ppo",
                 "meta_data": false,
-                "specialty": ["Full-time faculty", "Oral Pathology"]
+                "specialty": ["Full-time faculty", "Oral pathologist"]
             },
             "premier": {
                 "zipcode": "94949",
@@ -299,7 +299,7 @@
                 "max": "60000",
                 "network": "2premier",
                 "meta_data": false,
-                "specialty": ["Full-time faculty", "Oral Pathology"]
+                "specialty": ["Full-time faculty", "Oral pathologist"]
             },
             "deltacare": {
                 "zipcode": "94949",
@@ -309,7 +309,7 @@
                 "max": "60000",
                 "network": "2deltacare",
                 "meta_data": false,
-                "specialty": ["Full-time faculty", "Oral Pathology"]
+                "specialty": ["Full-time faculty", "Oral pathologist"]
             },
             "verify": {
                 "zipcode": "94949"

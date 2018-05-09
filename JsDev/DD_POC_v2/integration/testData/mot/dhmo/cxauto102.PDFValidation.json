@@ -545,6 +545,1270 @@
                     "State": "NY"
                 }
             }
+        },
+        "CT":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "06907",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "53 Barholm Ave",
+                    "city": "Stamford",
+                    "State": "CT"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "06907",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "53 Barholm Ave",
+                    "city": "Stamford",
+                    "State": "CT"
+                }
+            }
+        },
+        "IL":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "61603",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "2135 N Peoria Ave",
+                    "city": "Peoria",
+                    "State": "IL"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "61603",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "2135 N Peoria Ave",
+                    "city": "Peoria",
+                    "State": "IL"
+                }
+            }
+        },
+        "OH":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "44136",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "14293 Calderdale Ln",
+                    "city": "Strongsville",
+                    "State": "OH"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "44136",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "14293 Calderdale Ln",
+                    "city": "Strongsville",
+                    "State": "OH"
+                }
+            }
+        },
+        "WA":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "98226",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4566 Anderson Way",
+                    "city": "Bellingham",
+                    "State": "WA"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "98226",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4566 Anderson Way",
+                    "city": "Bellingham",
+                    "State": "WA"
+                }
+            }
+        },
+        "KY":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "40391",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "221 Moundale Ave",
+                    "city": "Winchester",
+                    "State": "KY"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "40391",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "221 Moundale Ave",
+                    "city": "Winchester",
+                    "State": "KY"
+                }
+            }
+        },
+        "MN":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "56511",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "20612 Moe Lake Rd",
+                    "city": "Audubon",
+                    "State": "MN"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "56511",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "20612 Moe Lake Rd",
+                    "city": "Audubon",
+                    "State": "MN"
+                }
+            }
+        },
+        "NH":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "03246",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "193 Pleasant St Apt 3",
+                    "city": "Laconia",
+                    "State": "NH"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "03246",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "193 Pleasant St Apt 3",
+                    "city": "Laconia",
+                    "State": "NH"
+                }
+            }
+        },
+        "DE":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "19970",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "14 Wedgefield Blvd",
+                    "city": "Ocean View",
+                    "State": "DE"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "19970",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "14 Wedgefield Blvd",
+                    "city": "Ocean View",
+                    "State": "DE"
+                }
+            }
+        },
+        "GA":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "31324",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "67 Port Dr",
+                    "city": "Richmond Hill",
+                    "State": "GA"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "31324",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "67 Port Dr",
+                    "city": "Richmond Hill",
+                    "State": "GA"
+                }
+            }
+        },
+        "MS":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "38951",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "199 N Murphree St",
+                    "city": "Pittsboro",
+                    "State": "MS"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "38951",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "199 N Murphree St",
+                    "city": "Pittsboro",
+                    "State": "MS"
+                }
+            }
+        },
+        "MT":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "59405",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4448 3rd Ave N",
+                    "city": "Great Falls",
+                    "State": "MT"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "59405",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4448 3rd Ave N",
+                    "city": "Great Falls",
+                    "State": "MT"
+                }
+            }
+        },
+        "NV":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "89109",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "125 E Harmon Ave Unit 20",
+                    "city": "Las Vegas",
+                    "State": "NV"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "89109",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "125 E Harmon Ave Unit 20",
+                    "city": "Las Vegas",
+                    "State": "NV"
+                }
+            }
+        },
+        "UT":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "84092",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "9260 E Lodge Dr Apt 714",
+                    "city": "Sandy",
+                    "State": "UT"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "84092",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "9260 E Lodge Dr Apt 714",
+                    "city": "Sandy",
+                    "State": "UT"
+                }
+            }
+        },
+        "WV":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "25314",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1202 Hunters Ridge Rd",
+                    "city": "Charleston",
+                    "State": "WV"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "25314",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1202 Hunters Ridge Rd",
+                    "city": "Charleston",
+                    "State": "WV"
+                }
+            }
+        },
+        "NM":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "87114",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "5900 TAURUS AVE NW",
+                    "city": "ALBUQUERQUE",
+                    "State": "NM"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "87114",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "5900 TAURUS AVE NW",
+                    "city": "ALBUQUERQUE",
+                    "State": "NM"
+                }
+            }
+        },
+        "OK":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "74105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "6009 S ATLANTA AVE # 2",
+                    "city": "TULSA",
+                    "State": "OK"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "74105",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "6009 S ATLANTA AVE # 2",
+                    "city": "TULSA",
+                    "State": "OK"
+                }
+            }
+        },
+        "KS":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "67217",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3210 S HANDLEY ST APT 304",
+                    "city": "WICHITA",
+                    "State": "KS"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "67217",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3210 S HANDLEY ST APT 304",
+                    "city": "WICHITA",
+                    "State": "KS"
+                }
+            }
+        },
+        "ME":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "04106",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "757 MAIN ST APT 58",
+                    "city": "SOUTH PORTLAND",
+                    "State": "ME"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "04106",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "757 MAIN ST APT 58",
+                    "city": "SOUTH PORTLAND",
+                    "State": "ME"
+                }
+            }
+        },
+        "RI":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "02906",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "21 FOREST ST",
+                    "city": "PROVIDENCE",
+                    "State": "RI"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "02906",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "21 FOREST ST",
+                    "city": "PROVIDENCE",
+                    "State": "RI"
+                }
+            }
+        },
+        "VT":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "05401",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "166 PARK ST",
+                    "city": "BURLINGTON ",
+                    "State": "VT"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "05401",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "166 PARK ST",
+                    "city": "BURLINGTON ",
+                    "State": "VT"
+                }
+            }
+        },
+        "MA":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "02072",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "76C KIM TER # C",
+                    "city": "STOUGHTON",
+                    "State": "MA"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "02072",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "76C KIM TER # C",
+                    "city": "STOUGHTON",
+                    "State": "MA"
+                }
+            }
+        },
+        "AZ":
+        {
+            "products":
+            {
+                "AHMO1":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "ZIPcode": "85012",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    },
+                    "fieldHomeAddr": "355 E THOMAS RD UNIT B204",
+                    "city": "PHOENIX",
+                    "State": "AZ"
+
+                },
+                 "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "85012",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "355 E THOMAS RD UNIT B204",
+                    "city": "PHOENIX",
+                    "State": "AZ"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "85012",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "355 E THOMAS RD UNIT B204",
+                    "city": "PHOENIX",
+                    "State": "AZ"
+                }
+            }
+        },
+        "CO":
+        {
+            "products":
+            {
+                "AHMO1":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "DeltaCare ® USA Plan 15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "ZIPcode": "80014",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    },
+                    "fieldHomeAddr": "3022 S WHEELING WAY APT 312",
+                    "city": "AURORA",
+                    "State": "CO"
+
+                },
+                 "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "80014",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3022 S WHEELING WAY APT 312",
+                    "city": "AURORA",
+                    "State": "CO"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "80014",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3022 S WHEELING WAY APT 312",
+                    "city": "AURORA",
+                    "State": "CO"
+                }
+            }
+        },
+        "MI":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "49307",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "209 MONROE AVE",
+                    "city": "BIG RAPIDS",
+                    "State": "MI"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "49307",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "209 MONROE AVE",
+                    "city": "BIG RAPIDS",
+                    "State": "MI"
+                }
+            }
+        },
+        "NC":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "27604",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "531 N PERSON ST APT 205",
+                    "city": "RALEIGH ",
+                    "State": "NC"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "27604",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "531 N PERSON ST APT 205",
+                    "city": "RALEIGH ",
+                    "State": "NC"
+                }
+            }
+        },
+        "NJ":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "07514",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "557 11TH AVE # 559",
+                    "city": "PATERSON",
+                    "State": "NJ"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "07514",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "557 11TH AVE # 559",
+                    "city": "PATERSON",
+                    "State": "NJ"
+                }
+            }
+        },
+        "VA":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "23456",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3821 SHOOTING STAR DR",
+                    "city": "VIRGINIA BEACH",
+                    "State": "VA"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "23456",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "3821 SHOOTING STAR DR",
+                    "city": "VIRGINIA BEACH",
+                    "State": "VA"
+                }
+            }
+        },
+        "IN":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "46204",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "230 E 9TH ST APT 411",
+                    "city": "INDIANAPOLIS",
+                    "State": "IN"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "46204",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "230 E 9TH ST APT 411",
+                    "city": "INDIANAPOLIS",
+                    "State": "IN"
+                }
+            }
+        },
+        "MO":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "63113",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4662 SAINT FERDINAND AVE",
+                    "city": "SAINT LOUIS",
+                    "State": "MO"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "63113",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4662 SAINT FERDINAND AVE",
+                    "city": "SAINT LOUIS",
+                    "State": "MO"
+                }
+            }
+        },
+        "OR":
+        {
+            "products":
+            {
+                
+                "APPOA":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "97526",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "410 NE ANDERSON ST APT A",
+                    "city": "GRANTS PASS",
+                    "State": "OR"
+                },
+                "APPOB":
+                {
+                    "product": "AARP",
+                    "enrollData":
+                    {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "97526",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "410 NE ANDERSON ST APT A",
+                    "city": "GRANTS PASS",
+                    "State": "OR"
+                }
+            }
         }
     }
 

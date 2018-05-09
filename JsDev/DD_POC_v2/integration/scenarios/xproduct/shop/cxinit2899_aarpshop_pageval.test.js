@@ -7,12 +7,11 @@ baseUrl: 'https://aw-lx0176.deltadev.ent:3001/shopping/aarp/test',
 
 
 
-var shopping = new(require('../../../pageObjects/cxinit/shopping-page.js'));
+var shopping    = new(require('../../../pageObjects/cxinit/shopping-page.js'));
 var planOptions = new(require('../../../pageObjects/cxinit/plan-options-page.js'));
 var planDetails = new(require('../../../pageObjects/cxinit/plan-details-page.js'));
-
-var footer = new(require('../../../pageObjects/cxinit/footer-page.js'));
-var feedback = new(require('../../../pageObjects/cxinit/feedback-page.js'));
+var footer      = new(require('../../../pageObjects/cxinit/footer-page.js'));
+var feedback    = new(require('../../../pageObjects/cxinit/feedback-page.js'));
 var TestData = {
     "state": "CA",
     "zipcode": "94105",

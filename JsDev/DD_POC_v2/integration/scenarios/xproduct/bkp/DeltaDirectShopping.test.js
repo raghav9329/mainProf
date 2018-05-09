@@ -5,20 +5,19 @@ baseUrl: 'https://aw-lx0176.deltadev.ent:3001/shopping/aarp/test',
 
 2. isExecutionFromUI = false; in onprepare section*/
 
-var shopping = new(require('../../pageObjects/cxinit/shopping-page.js'));
+var shopping    = new(require('../../pageObjects/cxinit/shopping-page.js'));
 var planOptions = new(require('../../pageObjects/cxinit/plan-options-page.js'));
 var planDetails = new(require('../../pageObjects/cxinit/plan-details-page.js'));
-var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
-var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
-var marketPage = require('../../pageObjects/cxinit/aarp-market-page.js');
-var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-
-var footer = new(require('../../pageObjects/cxinit/footer-page.js'));
-var feedback = new(require('../../pageObjects/cxinit/feedback-page.js'));
-var TestData = require('../../testData/' + testDataEnv + '/dhmo/DirectDeltaShopping.json');
+var perInfo     = new(require('../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo     = new(require('../../pageObjects/cxinit/dependent-page.js'));
+var facilities  = new(require('../../pageObjects/cxinit/facilities-page.js'));
+var payment     = new(require('../../pageObjects/cxinit/payment-page.js'));
+var receipt     = new(require('../../pageObjects/cxinit/receipt-page.js'));
+var marketPage  = require('../../pageObjects/cxinit/aarp-market-page.js');
+var enrollPage  = new(require('../../pageObjects/cxinit/enroll-page.js'));
+var footer      = new(require('../../pageObjects/cxinit/footer-page.js'));
+var feedback    = new(require('../../pageObjects/cxinit/feedback-page.js'));
+var TestData    = require('../../testData/' + testDataEnv + '/dhmo/DirectDeltaShopping.json');
 
 describe('Shopping Navigations', function() {
 

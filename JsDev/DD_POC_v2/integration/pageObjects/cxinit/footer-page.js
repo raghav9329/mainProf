@@ -1,13 +1,13 @@
 "use strict";
 var footerLocators = require('./footer-locators');
-var ControlBase = require('../../controls/base-control');
-var Button = require('../../controls/button-control');
-var TextBox = require('../../controls/textbox-control');
-var Label = require('../../controls/label-control');
-var Select = require('../../controls/select-control');
-var CheckBox = require('../../controls/checkbox-control');
-var RadioButton = require('../../controls/radiobutton-control');
-var LinkText = require('../../controls/link-control');
+var ControlBase    = require('../../controls/base-control');
+var Button         = require('../../controls/button-control');
+var TextBox        = require('../../controls/textbox-control');
+var Label          = require('../../controls/label-control');
+var Select         = require('../../controls/select-control');
+var CheckBox       = require('../../controls/checkbox-control');
+var RadioButton    = require('../../controls/radiobutton-control');
+var LinkText       = require('../../controls/link-control');
 
 /**
  * Provides access to the functionality of Footer
@@ -16,34 +16,38 @@ var LinkText = require('../../controls/link-control');
 class Footer extends ControlBase {
     constructor() {
         super(null, 'Footer');
-        this.pageObjects = new footerLocators();
-        this.calldelta = new Label(this.pageObjects.calldelta);
-        this.legalNotices = new LinkText(this.pageObjects.legalNotices);
-        this.privacy = new LinkText(this.pageObjects.privacy);
+        this.pageObjects        = new footerLocators();
+        this.calldelta          = new Label(this.pageObjects.calldelta);
+        this.legalNotices       = new LinkText(this.pageObjects.legalNotices);
+        this.privacy            = new LinkText(this.pageObjects.privacy);
         this.languageAssistance = new LinkText(this.pageObjects.languageAssistance);
-        this.joinAARP = new LinkText(this.pageObjects.joinAARP);
-        this.renewAARP = new LinkText(this.pageObjects.renewAARP);
-        this.aarporgHome = new LinkText(this.pageObjects.aarporgHome);
-        this.copyrightFooter = new Label(this.pageObjects.copyrightFooter);
-        this.footer = new Label(this.pageObjects.footer);
-        this.copyright = new Label(this.pageObjects.copyRight);
-        this.contactText = new Label(this.pageObjects.contactText);
-        this.helpContact = new Label(this.pageObjects.helpContact);
-        this.ShoppingContact = new Label(this.pageObjects.ShoppingContact);
-        this.contractNumber = new Label(this.pageObjects.contractNumber);
+        this.joinAARP           = new LinkText(this.pageObjects.joinAARP);
+        this.renewAARP          = new LinkText(this.pageObjects.renewAARP);
+        this.aarporgHome        = new LinkText(this.pageObjects.aarporgHome);
+        this.copyrightFooter    = new Label(this.pageObjects.copyrightFooter);
+        this.footer             = new Label(this.pageObjects.footer);
+        this.copyright          = new Label(this.pageObjects.copyRight);
+        this.contactText        = new Label(this.pageObjects.contactText);
+        this.helpContact        = new Label(this.pageObjects.helpContact);
+        this.ShoppingContact    = new Label(this.pageObjects.ShoppingContact);
+        this.contractNumber     = new Label(this.pageObjects.contractNumber);
+        this.footer_ses_timeout = new Label(this.pageObjects.footer_ses_timeout);
 
     };
-
+    /**
+     * Verifies that Legal notice is opened in new window     
+     */
     verifylegalNotices() {
         var self = this;
-
         self.legalNotices.click();
         Utility.switchToWindow(1);
         expect(browser.getCurrentUrl()).toContain('https://www.deltadentalins.com/about/legal/');
         browser.close();
         Utility.switchToWindow(0);
     };
-
+    /**
+     * Verifies that Privacy page is opened in new window    
+     */
     verifyprivacy() {
         var self = this;
         self.privacy.click();
@@ -52,7 +56,9 @@ class Footer extends ControlBase {
         browser.close();
         Utility.switchToWindow(0);
     };
-
+    /**
+     * Verifies that language Assistance page is opened in new window    
+     */
     verifylanguageAssistance() {
         var self = this;
         self.languageAssistance.click();
@@ -61,7 +67,9 @@ class Footer extends ControlBase {
         browser.close();
         Utility.switchToWindow(0);
     };
-
+    /**
+     * Verifies that Join AARP page is opened in new window    
+     */
     verifyjoinAARP() {
         var self = this;
         self.joinAARP.click();
@@ -70,7 +78,9 @@ class Footer extends ControlBase {
         browser.close();
         Utility.switchToWindow(0);
     };
-
+    /**
+     * Verifies that renew AARP page is opened in new window    
+     */
     verifyrenewAARP() {
         var self = this;
         self.renewAARP.click();
@@ -79,7 +89,9 @@ class Footer extends ControlBase {
         browser.close();
         Utility.switchToWindow(0);
     };
-
+    /**
+     * Verifies that AARP ORG home page is opened in new window    
+     */
     verifyaarporgHome() {
         var self = this;
         self.aarporgHome.click();
@@ -88,7 +100,9 @@ class Footer extends ControlBase {
         browser.close();
         Utility.switchToWindow(0);
     };
-
+    /**
+     * Verifies that all links functionality in footer
+     */
     verifyFooter() {
         expect(this.legalNotices.isPresentAndDisplayed()).toBeTruthy();
         expect(this.privacy.isPresentAndDisplayed()).toBeTruthy();

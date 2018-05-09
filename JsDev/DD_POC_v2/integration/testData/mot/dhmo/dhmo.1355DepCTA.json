@@ -25,11 +25,12 @@
     "facilityoption3": "Van Ness Dental Group",
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptTitle": "Thank You | Delta Dental Insurance Company",
-    "depError": "You can select only 1 Spouse or Domestic Partner.",
+    "depError": "You can select only 1 Spouse or Partner.",
     "updateRelationship": "Child",
     "errorSSN": "Please enter your SSN",
     "SSN": "789456321",
-    "domesticPartner": {
+    "domesticPartner":
+    {
         "relationship": "Domestic Partner",
         "firstName": "firstName",
         "middleName": "m",
@@ -37,7 +38,8 @@
         "gender": "Male",
         "DOB": "10-10-2000"
     },
-    "spouse": {
+    "spouse":
+    {
         "relationship": "Spouse",
         "firstName": "firstName",
         "middleName": "m",

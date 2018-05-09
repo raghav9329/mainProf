@@ -1,10 +1,10 @@
 //CXAUTO-69
 
 "use strict"
-var TestData = require('../../testData/' + testDataEnv + '/providers/cxauto69.json');
-var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var TestData        = require('../../testData/' + testDataEnv + '/providers/cxauto69.json');
+var dirSearch       = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
-var footer = new(require('../../pageObjects/providers/footer-page.js'));
+var footer          = new(require('../../pageObjects/providers/footer-page.js'));
 
 describe('CXAUTO-69 : Verify the footer links and disclaimer', function() {
     beforeAll(function() {
@@ -35,7 +35,7 @@ describe('CXAUTO-69 : Verify the footer links and disclaimer', function() {
 });
 
 //CXAUTO-68:Cutover Banner
-describe('CXAUTO-68:Cutover Banner', function() {
+describe('CXAUTO-69-1:Cutover Banner', function() {
         beforeEach(function() {
             Utility.openApplication('');
 
@@ -54,9 +54,6 @@ describe('CXAUTO-68:Cutover Banner', function() {
             expect(dirSearch.goBackToOldSite.isPresentAndDisplayed()).toBeTruthy();
             expect(providerDetails.location.getValue()).toEqual(TestData.location);
         });
-        // CXAUTO-70 Validate Go Back Button for multiple inputs / providers
-        // select deltadental ppo in new site and navigate to old site and verify
-        // select all network options in old site and navigate to new site and validate 
         it('Validate Go Back Button for multiple inputs / providers', function() {
             dirSearch.location.setText(TestData.zipcode);
             dirSearch.findDentist.click();

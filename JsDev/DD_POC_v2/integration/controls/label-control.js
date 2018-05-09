@@ -34,18 +34,22 @@ class LabelControl extends ControlBase {
      * @returns {!webdriver.promise.Promise.<void>|webdriver.promise.Promise<void>}
      */
     click() {
-            return element(this.locator).clickIt();
-        }
+        return element(this.locator).clickIt();
+    }
     /**
-    * Gets the value attribute of the Label
-    * @returns {string|webdriver.promise.Promise<string>|!webdriver.promise.Promise.<?string>|*}
-    */
+     * Gets the value attribute of the Label
+     * @returns {string|webdriver.promise.Promise<string>|!webdriver.promise.Promise.<?string>|*}
+     */
     getAttribute(attribute) {
         return element(this.locator).getAttribute(attribute);
     }
+    /**
+     * Gets the css value of the Label
+     * @returns {string|webdriver.promise.Promise<string>|!webdriver.promise.Promise.<?string>|*}
+     */
     getCssValue(attribute) {
         return element(this.locator).getCssValue(attribute);
-    } 
+    }
 
     /**
      * Gets the count of labels available
@@ -54,8 +58,11 @@ class LabelControl extends ControlBase {
     getCount() {
         return element.all(this.locator).count();
     }
-
-    getElements(){
+    /**
+     * Gets the all elements of labels available
+     * @returns {webdriver.promise.Promise<Array<WebElements>>}
+     */
+    getElements() {
         return element.all(this.locator)
 
     }

@@ -1,6 +1,6 @@
 "use strict"
-var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2-1145.json');
-var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var TestData        = require('../../testData/' + testDataEnv + '/providers/cxinit2-1145.json');
+var dirSearch       = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 
 describe('CXINIT2-1145:: Provider Search Validation', function() {
@@ -117,7 +117,7 @@ describe('CXINIT2-1145:: Provider Search Validation', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
-                        providerDetails.verifyProviderLanguage(TestData.Language1,1)
+                        providerDetails.verifyProviderLanguage(TestData.Language1, 1)
                     });
                 });
             });
@@ -136,7 +136,7 @@ describe('CXINIT2-1145:: Provider Search Validation', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
-                        providerDetails.verifyProviderLanguage(TestData.Language2,1)
+                        providerDetails.verifyProviderLanguage(TestData.Language2, 1)
                     });
                 });
             });
@@ -155,7 +155,7 @@ describe('CXINIT2-1145:: Provider Search Validation', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
-                        providerDetails.verifyProviderLanguage(TestData.Language3,1)
+                        providerDetails.verifyProviderLanguage(TestData.Language3, 1)
                     });
                 });
             });
@@ -175,7 +175,7 @@ describe('CXINIT2-1145:: Provider Search Validation', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         expect(Number(totalCount)).toBeGreaterThan(Number(refineCount));
-                        providerDetails.verifyProviderLanguage(TestData.Language4,1)
+                        providerDetails.verifyProviderLanguage(TestData.Language4, 1)
                     });
                 });
             });

@@ -1,15 +1,15 @@
-var TestData = require('../../testData/' + testDataEnv + '/dhmo/CXAUTO_101.test.json');
-var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
-var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
-var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var footer = new(require('../../pageObjects/cxinit/footer-page.js'));
-var shopping = new(require('../../pageObjects/cxinit/shopping-page.js'));
+var TestData    = require('../../testData/' + testDataEnv + '/dhmo/CXAUTO_101.test.json');
+var perInfo     = new(require('../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo     = new(require('../../pageObjects/cxinit/dependent-page.js'));
+var facilities  = new(require('../../pageObjects/cxinit/facilities-page.js'));
+var payment     = new(require('../../pageObjects/cxinit/payment-page.js'));
+var receipt     = new(require('../../pageObjects/cxinit/receipt-page.js'));
+var enrollPage  = new(require('../../pageObjects/cxinit/enroll-page.js'));
+var footer      = new(require('../../pageObjects/cxinit/footer-page.js'));
+var shopping    = new(require('../../pageObjects/cxinit/shopping-page.js'));
 var planOptions = new(require('../../pageObjects/cxinit/plan-options-page.js'));
 var planDetails = new(require('../../pageObjects/cxinit/plan-details-page.js'));
-var product = ['APPOB']; //'AHMO', 'APPOA', 'APPOB'  'DHMO'
+var product     = ['APPOB']; //'AHMO', 'APPOA', 'APPOB'  'DHMO'
 dataProvider(TestData.states, function(sData, sdescription) {
 
     if (states.indexOf(sdescription) != -1) {

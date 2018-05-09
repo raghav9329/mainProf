@@ -2,15 +2,14 @@
 
 //This Spec is used to Validate End to End Work Flow with the 2 Dependents and different facilities
 
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
-var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
-var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1461EndToEndWkFlo2.json');
-var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
-
+var perInfo     = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo     = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var facilities  = new(require('../../../pageObjects/cxinit/facilities-page.js'));
+var payment     = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt     = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var enrollPage  = new(require('../../../pageObjects/cxinit/enroll-page.js'));
+var TestData    = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1461EndToEndWkFlo2.json');
+var statesData  = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 var planOptions = new(require('../../../pageObjects/cxinit/plan-options-page.js'));
 var planDetails = new(require('../../../pageObjects/cxinit/plan-details-page.js'));
 
@@ -47,10 +46,14 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     //Switchback clickng on the Pop up Back
 
                     it('E2E_2 :should populate PersInfo page, change the Zip code and select "Go Back" on Zip Code Change Pop Up', function() {
+                         TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            TestData.MemberId = false;                            
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();
+                            console.log(" TestData.ssn===" + TestData.ssn)
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -95,13 +98,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         // So the only thing needed here is "continuing with the same flow (using a new address)"
                         // I have added a secondary address in global data file
                         // This will give us an option to use change of address functionality from global file
-                        if (tData.product == 'DELTA') {
-                            enrollPage.deltaEnroll(tData.enrollData);
-                        }
-                        if (tData.product == 'AARP') {
+                        // if (tData.product == 'DELTA') {
+                        //     enrollPage.deltaEnroll(tData.enrollData);
+                        // }
+                        // if (tData.product == 'AARP') {
                             planOptions.getPlanDetails(tData.enrollData.PlanName).click();
                             planDetails.buyPlan.click();
-                        }
+                       // }
                         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
                         console.log('1461_4 complete')
                     });

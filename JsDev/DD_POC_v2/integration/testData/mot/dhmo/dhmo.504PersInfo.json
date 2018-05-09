@@ -1,62 +1,62 @@
 {
-      "enrollData": {
-        "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-        "PlanType": "DHMO",
-        "PlanCode": "CAA55",
-        "CoverageStartDate": "12/5/2017",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "10.00",
-        "AnnualCost": "80.76",
-        "CoverageType": "Self",
-        "PlanID": "70422",
-        "IssuerCode": "DELTA",
-        "NoOfPeopleCovered": "1",
-        "dob": "05-10-1981"
+    "enrollData"        : {
+    "PlanName"          : "DeltaCare® USA CAA55 Individual/Family Dental Program",
+    "PlanType"          : "DHMO",
+    "PlanCode"          : "CAA55",
+    "CoverageStartDate" : "12/5/2017",
+    "State"             : "CA",
+    "ZIPcode"           : "94105",
+    "Country"           : "USA",
+    "EnrollmentFee"     : "10.00",
+    "AnnualCost"        : "80.76",
+    "CoverageType"      : "Self",
+    "PlanID"            : "70422",
+    "IssuerCode"        : "DELTA",
+    "NoOfPeopleCovered" : "1",
+    "dob"               : "05-10-1981"
     },
-    "brokerToolTipText": "Your broker will get credit for helping you",
-    "Broker_TestData": {
-        "Broker_Name1": {
-            "Broker": "",
-            "BrokerName": " ",
-            "ErrorMsg": "Please enter a Broker ID",
-            "ExecutionFlag": true
+    "brokerToolTipText" : "Your broker will get credit for helping you",
+    "Broker_TestData"   : {
+    "Broker_Name1"      : {
+    "Broker"            : "",
+    "BrokerName"        : " ",
+    "ErrorMsg"          : "Please enter a Broker ID",
+    "ExecutionFlag"     : true
         },
-        "Broker_Name2": {
-            "Broker": "201285",
-            "BrokerName": "TAMANIKA PIPER",
-            "ExecutionFlag": true
+    "Broker_Name2"      : {
+    "Broker"            : "201285",
+    "BrokerName"        : "TAMANIKA PIPER",
+    "ExecutionFlag"     : true
         },
-        "Broker_Name3": {
-            "Broker": "201280",
-            "BrokerName": "MARGARET GACHELIN",
-            "ExecutionFlag": true
+    "Broker_Name3"      : {
+    "Broker"            : "201280",
+    "BrokerName"        : "MARGARET GACHELIN",
+    "ExecutionFlag"     : true
         },
-        "Broker_Name4": {
-            "Broker": "201281",
-            "BrokerName": "HYACINTH ROWE",
-            "ExecutionFlag": true
+    "Broker_Name4"      : {
+    "Broker"            : "201281",
+    "BrokerName"        : "HYACINTH ROWE",
+    "ExecutionFlag"     : true
         },
-        "Broker_Name5": {
-            "Broker": "201283",
-            "BrokerName": "CHERICE HARRELL",
-            "ExecutionFlag": true
+    "Broker_Name5"      : {
+    "Broker"            : "201283",
+    "BrokerName"        : "CHERICE HARRELL",
+    "ExecutionFlag"     : true
         },
-        "Broker_Name6": {
-            "Broker": "201284",
-            "BrokerName": "JEFFREY OVERHOLSER",
-            "ExecutionFlag": true
+    "Broker_Name6"      : {
+    "Broker"            : "201284",
+    "BrokerName"        : "JEFFREY OVERHOLSER",
+    "ExecutionFlag"     : true
         },
-        "Broker_Name7": {
-            "Broker": "2012835",
-            "BrokerName": "LIONEL SCHIFF",
-            "ExecutionFlag": true
+    "Broker_Name7"      : {
+    "Broker"            : "2012835",
+    "BrokerName"        : "LIONEL SCHIFF",
+    "ExecutionFlag"     : true
         },
-        "Broker_Name8": {
-            "Broker": "2012836",
-            "BrokerName": "CHARLES DARROW",
-            "ExecutionFlag": true
+    "Broker_Name8"      : {
+    "Broker"            : "2012836",
+    "BrokerName"        : "CHARLES DARROW",
+    "ExecutionFlag"     : true
         }
     }
 

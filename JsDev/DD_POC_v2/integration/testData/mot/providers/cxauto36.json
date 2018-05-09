@@ -1,173 +1,173 @@
 {
-    "Location": {
-        "Location1": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location"   : {
+    "Location1"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {
-                "lat": "37.7890",
-                "long": "-122.3915"
+    "params1"    : {
+    "lat"        : "37.7890",
+    "long"       : "-122.3915"
             }
         },
-        "Location2": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location2"  : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {
-                "lat": "38.0600",
-                "long": "-122.5033"
+    "params1"    : {
+    "lat"        : "38.0600",
+    "long"       : "-122.5033"
             }
         },
-        "Location3": {
-            "params": {
-                "zipcode": "35801",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location3"  : {
+    "params"     : {
+    "zipcode"    : "35801",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {
-                "lat": "34.7364",
-                "long": "-86.5502"
+    "params1"    : {
+    "lat"        : "34.7364",
+    "long"       : "-86.5502"
             }
         },
-        "Location4": {
-            "params": {
-                "zipcode": "99524",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location4"  : {
+    "params"     : {
+    "zipcode"    : "99524",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {
-                "lat": "61.2200",
-                "long": "-149.9000"
+    "params1"    : {
+    "lat"        : "61.2200",
+    "long"       : "-149.9000"
             }
         },
-        "Location5": {
-            "params": {
-                "zipcode": "85035",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location5"  : {
+    "params"     : {
+    "zipcode"    : "85035",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-           "params1": {
-                "lat": "33.4688",
-                "long": "-112.1967"
+    "params1"    : {
+    "lat"        : "33.4688",
+    "long"       : "-112.1967"
             }
         },
-        "Location6": {
-            "params": {
-                "zipcode": "72210",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location6"  : {
+    "params"     : {
+    "zipcode"    : "72210",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-             "params1": {
-                "lat": "34.7151821",
-                "long": "-92.5098914"
+    "params1"    : {
+    "lat"        : "34.7151821",
+    "long"       : "-92.5098914"
             }
         },
-        "Location7": {
-            "params": {
-                "zipcode": "92198",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location7"  : {
+    "params"     : {
+    "zipcode"    : "92198",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-             "params1": {
-                "lat": "33.0221231",
-                "long": "-117.074507"
+    "params1"    : {
+    "lat"        : "33.0221231",
+    "long"       : "-117.074507"
             }
         },
-        "Location8": {
-            "params": {
-                "zipcode": "80229",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location8"  : {
+    "params"     : {
+    "zipcode"    : "80229",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-             "params1": {
-                "lat": "39.8581",
-                "long": "-104.9564"
+    "params1"    : {
+    "lat"        : "39.8581",
+    "long"       : "-104.9564"
             }
         },
-        "Location9": {
-            "params": {
-                "zipcode": "80124",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location9"  : {
+    "params"     : {
+    "zipcode"    : "80124",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-             "params1": {
-                "lat": "39.5327",
-                "long": "-104.8980"
+    "params1"    : {
+    "lat"        : "39.5327",
+    "long"       : "-104.8980"
             }
         },
-        "Location10": {
-            "params": {
-                "zipcode": "06110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": [
+    "Location10" : {
+    "params"     : {
+    "zipcode"    : "06110",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : [
                     "GENERAL DENTIST"
                 ]
             },
-            "params1": {
-                "lat": "41.7371",
-                "long": "-72.7274"
+    "params1"    : {
+    "lat"        : "41.7371",
+    "long"       : "-72.7274"
             }
         }
     }

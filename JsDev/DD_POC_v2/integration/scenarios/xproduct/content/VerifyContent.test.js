@@ -1,18 +1,21 @@
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/CXAUTO_101.test.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
-var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
-var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var footer = new(require('../../../pageObjects/cxinit/footer-page.js'));
-var shopping = new(require('../../../pageObjects/cxinit/shopping-page.js'));
+var TestData    = require('../../../testData/' + testDataEnv + '/dhmo/CXAUTO_101.test.json');
+var perInfo     = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo     = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var facilities  = new(require('../../../pageObjects/cxinit/facilities-page.js'));
+var payment     = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt     = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var enrollPage  = new(require('../../../pageObjects/cxinit/enroll-page.js'));
+var footer      = new(require('../../../pageObjects/cxinit/footer-page.js'));
+var shopping    = new(require('../../../pageObjects/cxinit/shopping-page.js'));
 var planOptions = new(require('../../../pageObjects/cxinit/plan-options-page.js'));
 var planDetails = new(require('../../../pageObjects/cxinit/plan-details-page.js'));
-var cData = '';
-var product = ['AHMO'];
+var cData       = '';
 
-console.log("states=========="+states)
+var product     = ['APPOA', 'APPOB'];
+
+// var product = ['DHMOA', 'DHMOB', 'DPPOA', 'DPPOB', 'AHMO', 'APPOA', 'APPOB'];
+
+
 //'DHMOA', 'DHMOB', 'DPPOA', 'DPPOB', 'AHMO', 'APPOA', 'APPOB'
 dataProvider(TestData.states, function(sData, sdescription) {
 
@@ -36,10 +39,87 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     });
 
                     if (isExecutionFromUI) {
+                        it('Verify the Copy Right text in footer when we land on Get-a-Quote Page for the first time (no State is selected at this point)', function() {
+                            //Footer Text 1
+                            expect(footer.copyright.getText()).toEqual(cData.copyright);
+                        });
+
+                        it('Verify Universal Footer text when we land on Get-a-Quote Page for the first time (no State is selected at this point)', function() {
+                            //Footer Text 2
+                            if (tData.product == 'DELTA') {
+                                expect(footer.footer.getText().then(function(discaimer) {
+                                    expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(TestData.sessiontimeout_delta_disclaimer);
+                                }));
+                            }
+                            if (tData.product == 'AARP') {
+                                expect(footer.footer.getText().then(function(discaimer) {
+                                    expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(TestData.aarp_disclaimer);
+                                }));
+                            }
+
+                        });
+
+                        it('Verify the footer disclaimer in session/server time out page', function() {
+                            if (tData.product == 'DELTA') {
+                                enrollPage.deltaEnroll(tData.enrollData);
+                            }
+
+                            if (tData.product == 'AARP') {
+                                enrollPage.aarpEnroll(tData.enrollData);
+                            }
+                            shopping.Showplans.click();
+                            planOptions.getPlanDetails(tData.enrollData.PlanName).click();
+                            browser.executeScript('window.sessionStorage.clear();');
+                            browser.executeScript('window.localStorage.clear();');
+                            browser.manage().deleteAllCookies();
+                            browser.navigate().refresh();
+                            planDetails.buyPlan.click();
+                            if (tData.product == 'DELTA') {
+                                expect(footer.footer.getText().then(function(discaimer) {
+                                    expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(TestData.sessiontimeout_delta_disclaimer);
+                                }));
+                            }
+                            if (tData.product == 'AARP') {
+                                expect(footer.footer.getText().then(function(discaimer) {
+                                    expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(sData.disclaimer);
+                                }));
+                            }
+                            Utility.openApplication('', tData.product);
+
+                        })
+                        it('Verify the footer disclaimer in technical issue page', function() {
+                            if (tData.product == 'DELTA') {
+                                enrollPage.deltaEnroll(tData.enrollData);
+                            }
+
+                            if (tData.product == 'AARP') {
+                                enrollPage.aarpEnroll(tData.enrollData);
+                            }
+                            shopping.Showplans.click();
+                            planOptions.getPlanDetails(tData.enrollData.PlanName).click();
+                            planDetails.buyPlan.click();
+                            browser.getCurrentUrl().then(function(url) {
+                                browser.navigate().to(url.replace('personal-info', 'receipt'))
+                            })
+
+                            if (tData.product == 'DELTA') {
+                                expect(footer.footer.getText().then(function(discaimer) {
+                                    expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(TestData.sessiontimeout_delta_disclaimer);
+                                }));
+                            }
+                            if (tData.product == 'AARP') {
+                                expect(footer.footer.getText().then(function(discaimer) {
+                                    expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(sData.disclaimer);
+                                }));
+                            }
+                            Utility.openApplication('', tData.product);
+                        })
+
+
                         if (tData.product == 'DELTA') {
                             it('Navigate to Plan Options Page', function() {
-                                enrollPage.olddeltaEnroll(tData.enrollData);
-                                enrollPage.Go.click();
+                                enrollPage.deltaEnroll(tData.enrollData);
+                                shopping.Showplans.click();
                                 expect(planOptions.isAt()).toBe(true);
                             })
                         }
@@ -47,7 +127,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         if (tData.product == 'AARP') {
                             it('Verify the contract Number in Plan Options Page', function() {
                                 enrollPage.aarpEnroll(tData.enrollData);
-                                enrollPage.Go.click();
+                                shopping.Showplans.click();
                                 //Form Number
                                 expect(footer.contractNumber.getText()).toEqual(tData.contractNumber);
                             });
@@ -60,56 +140,68 @@ dataProvider(TestData.states, function(sData, sdescription) {
                             element(by.name('issuerCode')).clear();
                             element(by.name('issuerCode')).sendKeys(tData.enrollData.IssuerCode.toLowerCase());
                             shopping.Submit.click();
-                            
+
                         })
                     }
 
-                    it('Verify the Get a Quote Page title', function() {
+                    it('Verify the Get-a-Quote Page title', function() {
                         planOptions.edit.click();
                         //Quotes-Information
                         expect(browser.getTitle()).toEqual('Get A Quote');
                         shopping.NoOFCovered_getAQuote.setText(2 + '\t');
                     });
-                    it('Verify the Quotes-Information in Get a Quote Page', function() {
+                    it('Verify the Quotes-Information text in Get-a-Quote Page', function() {
                         //Quotes-Information
                         expect(enrollPage.quoteInfoTxt.getText()).toEqual(cData.quoteInfoTxt);
                     });
-                    it('Verify the Quotes-Zip code text in Get a Quote Page', function() {
+                    it('Verify the Zip code text in Get-a-Quote Page', function() {
                         //Quotes-Zip Code
                         expect(enrollPage.quoteZipTxt.getText()).toEqual(cData.quoteZipTxt);
                     });
-                    it('Verify the enroll birthdate text in Get a Quote Page', function() {
+                    it('Verify the DOB text in Get-a-Quote Page', function() {
                         //Quotes-Dependents
                         expect(enrollPage.quotesDepTxt.getText()).toEqual(cData.quotesDepTxt);
                     });
 
                     if (tData.product == 'DELTA') {
-                        it('Verify the Quotes-Dependents text in Get a Quote Page', function() {
+                        it('Verify the Dependents DOB text in Get-a-Quote Page', function() {
                             //Quotes-Dependents
                             expect(enrollPage.birtdateText.getText()).toEqual(cData.birthdatetext);
                         });
 
-                        it('Verify the dependent-1 birthdate text in Get a Quote Page', function() {
+                        it('Verify the dependent-1 DOB text in Get-a-Quote Page', function() {
                             expect(enrollPage.depBirthDayText(1).getText()).toEqual(cData.dep1birthdatetext);
                         });
-                        it('Verify the dependent-2 birthdate text in Get a Quote Page', function() {
+                        it('Verify the dependent-2 DOB text in Get-a-Quote Page', function() {
                             expect(enrollPage.depBirthDayText(2).getText()).toEqual(cData.dep2birthdatetext);
                         });
                     }
                     if (tData.product == 'AARP') {
-                        it('Verify the Contract Number in Get a Quote Page', function() {
-                            //Form Number
+                        it('Verify the Contract Number in Get-a-Quote Page', function() {
+                            //Form Number on Get-a-Quote Page
                             expect(footer.contractNumber.getText()).toEqual(cData.contractNumberQuote);
                         });
                     }
-                    it('Verify the Copy Right in footer', function() {
+
+                    it('Verify the Copy Right text in footer on Get-a-Quote Page (after a State is selected)', function() {
+                        //Footer Text 1
+                        expect(footer.copyright.getText()).toEqual(cData.copyright);
+                    });
+                    it('Verify Universal Footer text on Get-a-Quote Page (after a State is selected)', function() {
+                        //Footer Text 2
+                        expect(footer.footer.getText().then(function(discaimer) {
+                            expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(cData.disclaimer);
+                        }));
+                    });
+
+                    it('Verify the Copy Right in footer on Plan Options Page', function() {
                         shopping.NoOFCovered_getAQuote.setText(0 + '\t');
                         expect(shopping.Showplans.getText()).toEqual(sData.showplansText)
                         shopping.Showplans.click();
                         //Footer Text 1
                         expect(footer.copyright.getText()).toEqual(cData.copyright);
                     });
-                    it('Verify the Disclaimer in footer', function() {
+                    it('Verify the Universal Footer on Plan Options Page', function() {
                         //Footer Text 2
                         expect(footer.footer.getText().then(function(discaimer) {
                             expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(cData.disclaimer);
@@ -121,10 +213,10 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     });
 
                     if (tData.product == 'AARP') {
-                        it('Verify the Plan Content ', function() {
+                        it('Verify the Plan Content by Plan ', function() {
                             expect(planOptions.getPlanContent(cData.plan1).getText()).toContain(cData.plan1Info);
                             expect(planOptions.getPlanContent(cData.plan2).getText()).toContain(cData.plan2Info);
-                           if (['CA', 'TX', 'PA', 'FL', 'NY'].indexOf(sdescription)!== -1) expect(planOptions.getPlanContent(cData.plan3).getText()).toContain(cData.plan3Info);
+                            if (['CA', 'TX', 'PA', 'FL', 'NY'].indexOf(sdescription) !== -1) expect(planOptions.getPlanContent(cData.plan3).getText()).toContain(cData.plan3Info);
 
                         })
                         it('Verify the DeltaDental Highlights title in plan options page', function() {
@@ -140,7 +232,13 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         it('Verify the Delta Dental plan details Highlights', function() {
                             //Plan Details Highlights
                             planOptions.getdeltaDentalHighlights().then(function(text) {
-                                expect(text.replace(/(with)(.+?)(?= network)/, "$1 XXX")).toEqual(cData.deltadentalhighlights);
+                                if (text.includes('network')) {
+                                    expect(text.replace(/(with)(.+?)(?= network)/, "$1 XXX")).toEqual(cData.deltadentalhighlights);
+
+                                } else {
+                                    expect(text.replace(/(with)(.+?)(?= network)/, "$1 XXX")).toEqual(cData.deltadentalhighlights.replace(/(Save)(.+?)(?=Implants)/, ""));
+
+                                }
                             })
 
                         });
@@ -167,7 +265,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         });
 
 
-                        it('Verify the Plan price ', function() {
+                        it('Verify the Plan price by plan ', function() {
 
                             planOptions.getPlanPriceDetails(cData.plan1).getText().then(function(price) {
                                 expect(price.replace(/\r?\n|\r/g, "")).toContain(cData.plan1Price);
@@ -187,14 +285,14 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         });
 
 
-                        it('Verify the Plan Content ', function() {
+                        it('Verify the Plan Content by plan ', function() {
                             expect(planOptions.getPlanContent(cData.plan1).getText()).toContain(cData.plan1Info);
                             expect(planOptions.getPlanContent(cData.plan2).getText()).toContain(cData.plan2Info);
                             expect(planOptions.getPlanContent(cData.plan3).getText()).toContain(cData.plan3Info);
                             if (sdescription == 'CA') expect(planOptions.getPlanContent(cData.plan4).getText()).toContain(cData.plan4Info);
 
                         })
-                        it('Verify the plan starts from', function() {
+                        it('Verify the plan starts from by plan', function() {
                             expect(planOptions.getPlanStartsFrom(cData.plan1).getText()).toContain(cData.startsfrom);
                             expect(planOptions.getPlanStartsFrom(cData.plan2).getText()).toContain(cData.startsfrom);
                             expect(planOptions.getPlanStartsFrom(cData.plan3).getText()).toContain(cData.startsfrom);
@@ -238,7 +336,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                             browser.close();
                             Utility.switchToWindow(0);
                         });
-                        it('Verify the name of the PDF documents', function() {
+                        it('Verify the details of PDF documents', function() {
                             planDetails.getPDFNameInfoByIndex(1).getText().then(function(text) {
                                 expect(text.replace(/\r?\n|\r/g, "")).toContain(cData.pdfText1Info);
                             });
@@ -310,6 +408,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                             planDetails.accidentCoverage.isPresentAndDisplayed().then(function(displayed) {
                                 if (displayed) {
                                     expect(planDetails.accidentCoverage.getText()).toEqual(tData.accidentCoverage);
+                                    expect(planDetails.accidentCoverageText.getText()).toEqual(sData.accidentCoverageText);
                                 }
                             })
                         });
@@ -318,6 +417,9 @@ dataProvider(TestData.states, function(sData, sdescription) {
                             expect(planDetails.shoppingFeatureDisclaimer.getText()).toEqual(tData.shoppingFeatureDisclaimer);
 
                             if (pdescription == 'AHMO') {
+                                expect(planDetails.getPlanDetailsByKey('Annual deductible').getText()).toEqual(tData.annualdeductibleAmount);
+                                expect(planDetails.getPlanDetailsByKey('Annual maximum').getText()).toEqual(tData.annualmaximumAmount);
+
                                 //Cleanings
                                 expect(planDetails.getPlanDetailsDisclaimer('Cleanings').getText()).toEqual(cData.cleanings);
                                 //Gum cleanings
@@ -325,26 +427,31 @@ dataProvider(TestData.states, function(sData, sdescription) {
                             }
 
                         });
-                        it('Verify the tootltip text for Annual Deductible', function() {
+                        it('Verify the Annual Deductible and its tootltip text', function() {
                             //Annual Deductible
-
                             planDetails.tooltip('Annual deductible').click();
                             expect(planDetails.getTooltipText('Annual deductible').getText()).toEqual(tData.annualdeductible);
+                            expect(planDetails.getPlanDetailsByKey('Annual deductible').getText()).toEqual(tData.annualdeductibleAmount);
                             planDetails.closeToolTip('Annual deductible').click();
 
                         });
-                        it('Verify the tooltip text for Annual maximum', function() {
+                        it('Verify the Annual maximum and its tooltip text', function() {
                             planDetails.tooltip('Annual maximum').click();
                             expect(planDetails.getTooltipText('Annual maximum').getText()).toEqual(tData.annualmaximum);
+                            expect(planDetails.getPlanDetailsByKey('Annual maximum').getText()).toEqual(tData.annualmaximumAmount);
                             planDetails.closeToolTip('Annual maximum').click();
 
                         });
 
                         if (pdescription !== 'AHMO') {
                             it('Verify the tooltip text for Network dentists', function() {
-                                planDetails.tooltip('Network dentists').click();
-                                expect(planDetails.getTooltipText('Network dentists').getText()).toEqual(tData.networkdentists);
-                                planDetails.closeToolTip('Network dentists').click();
+                                planDetails.tooltip('Network dentists').isPresentAndDisplayed().then(function(displayed) {
+                                    if (displayed) {
+                                        planDetails.tooltip('Network dentists').click();
+                                        expect(planDetails.getTooltipText('Network dentists').getText()).toEqual(tData.networkdentists);
+                                        planDetails.closeToolTip('Network dentists').click();
+                                    }
+                                });
                             });
                         }
                         it('Verify the tooltip text for TMJ treatment', function() {
@@ -393,26 +500,28 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     });
 
 
-                    it('MailTxt_Cell should equal emailtext', function() {
+                    it('Verify the email text', function() {
                         perInfo.phoneNumberemail(TestData);
                         console.log("Compare the Email text content");
-                        expect(perInfo.emailText.getText()).toEqual(cData.mailText);
+                        perInfo.emailText.getText().then(function(mailtext) {
+                            expect(mailtext.replace(/\r?\n|\r/g, "")).toEqual(cData.mailText);
+                        });
 
                     });
 
-                    it('footerCopyRight_Cell should equal footerCRtxt', function() {
+                    it('Verify that Copy Right in footer', function() {
                         console.log("Compare the Footer CopyRight");
                         expect(perInfo.copyright.getText()).toEqual(cData.copyright);
 
                     });
-                    it('footerdisclaimer_cell should equal footertxt', function() {
+                    it('Verify that footer disclaimer in footer', function() {
                         console.log("Compare the Footer Disclaimer");
                         expect(footer.footer.getText().then(function(discaimer) {
                             expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(cData.disclaimer);
                         }));
                     });
 
-                    it('buyingContactNumber_cell should equal buyingcontact', function() {
+                    it('Verify that buying Contact Number', function() {
                         console.log("Compare the Buying Contact Ph#");
                         expect(perInfo.helpContact.getText()).toEqual(cData.helpContact);
 
@@ -420,9 +529,12 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
 
                     it('should be able to nav to dependent page', function() {
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription.includes('DHMO') || pdescription.includes('DPPO')) {
                             TestData.MemberId = false;
-                            TestData.ssn = "1234560215";
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();
                             TestData.alternateid = "test@test.com";
                         }
                         if (pdescription.includes('AHMO') || pdescription.includes('APPO')) {
@@ -431,12 +543,22 @@ dataProvider(TestData.states, function(sData, sdescription) {
                             TestData.alternateid = false;
                         }
                         perInfo.fillPersonalInfo(TestData);
+                        if (pdescription.includes('AHMO') || pdescription.includes('APPO')) {
+                            var date = new Date();
+                            var month = date.getMonth() + 1;
+                            var d = new Date(month + '/01/2018');
+                            var startDateFrom = moment(d).add(1, 'month').format('MMM DD, YYYY') + ' ' + moment(d).add(2, 'month').format('MMM DD, YYYY') + ' ' + moment(d).add(3, 'month').format('MMM DD, YYYY') + ' ';
+                            expect(perInfo.coverageStartDate.getAllOptionsText()).toEqual(startDateFrom)
+                        }
                         perInfo.fillAddress(sData);
                         perInfo.phoneNumberemail(TestData);
                         if (pdescription.includes('DHMO') || pdescription.includes('DPPO')) {
+                            expect(perInfo.brokerLabel.getText()).toEqual(sData.brokerLabel)
                             perInfo.fillBroker(TestData);
                         }
                         if (pdescription.includes('AHMO') || pdescription.includes('APPO')) {
+                            expect(perInfo.referralSourceText.getText()).toEqual(cData.referralSourceText);
+                            expect(perInfo.referralSource.getAllOptionsText()).toEqual(cData.referralSources)
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
@@ -445,6 +567,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
                     it('should fill out generic dependent info, and check Dep Disable Text ', function() {
                         depInfo.fillDependent('Dependent1', TestData.child, false);
+                        expect(depInfo.relationship('Dependent1').getAllOptionsText()).toEqual(sData.relationship)
                         depInfo.next.click();
                         if (sdescription !== 'NY') {
                             depInfo.isHandicapped('Dependent1').isPresentAndDisplayed().then(function(displayed) {
@@ -506,7 +629,11 @@ dataProvider(TestData.states, function(sData, sdescription) {
 
                     it('Should compare the Authorization Statement block', function() {
                         payment.paymentAuthorizationTxt.getText().then(function(text) {
-                            expect(text.replace(/\r?\n|\r/g, "")).toContain(tData.payDeadline);
+                            // Shounak, 04/03/2018: This verification should always be toEqual and NOT toContain
+                            // payDeadline consists of 2 Content pieces from Excel file: Authorization Fraud Statement & Authorization Statement
+                            // Both should be present on Payments Page, so toEqual is the correct check
+                            // toContain will pass the test even if only one of the above 2 is present on the page
+                            expect(text.replace(/\r?\n|\r/g, "")).toEqual(tData.payDeadline);
                         });
                     });
 
@@ -546,16 +673,37 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         });
 
                     }
-                    it('Fill out payment details', function() {
+                    it('Verify the Payment Options in payment page', function() {
                         payment.billingChkBox.check();
                         payment.fillpayment(TestData);
                         if (pdescription.includes('AHMO') || pdescription.includes('APPO')) {
                             payment.frequencyAnnualy.select();
+                            expect(payment.billingFreqmonthlyTxt.getText()).toContain(cData.billingFreqmonthlyTxt)
+                            expect(payment.billingFreqmonthlyTxt.getText()).toContain('Monthly');
+                            expect(payment.billingFreqAnnuallyTxt.getText()).toContain('Annually');
+
+                            if (pdescription.includes('APPO')) {
+                                expect(payment.billingFreqQuarterlyTxt.getText()).toContain('Quarterly');
+                                expect(payment.billingFreqSemiAnnuallyTxt.getText()).toContain('Semi-annually');
+                            }
+
                         }
+
+
+                    });
+
+                    it('Verify the purchase Charges Agreement', function() {
+                        expect(payment.purchaseNowText.getText()).toContain(sData.purchaseNowText)
                         payment.purchaseNow.click();
                         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
 
                     });
+                    it('Verify footer in session timeout page', function() {
+                        browser.navigate().back();
+                        expect(footer.footer_ses_timeout.getText().then(function(discaimer) {
+                            expect(discaimer.replace(/\r?\n|\r/g, "")).toEqual(TestData.sessiontimeout_disclaimer);
+                        }));
+                    })
                 });
 
 

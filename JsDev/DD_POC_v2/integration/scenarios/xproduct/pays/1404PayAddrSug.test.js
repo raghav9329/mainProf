@@ -1,12 +1,12 @@
 //CXINIT-1404 : Billing Address Suggestion
 // This Spec is used to verify and Validate the Address in the Payment Page
 
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1404PayAddrSug.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1404PayAddrSug.json');
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo    = new(require('../../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var payment    = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt    = new(require('../../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
@@ -25,10 +25,13 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;    
-                            TestData.ssn="1234560215",
-                            TestData.alternateid = "test@test.com";                         
+                            TestData.MemberId = false;                            
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();                            
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -37,6 +40,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         }
                         perInfo.fillPersonalInfo(TestData);
                         perInfo.fillAddress(tData);
+                        perInfo.fillMailingAddress(TestData);
                         perInfo.phoneNumberemail(TestData);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             perInfo.fillBroker(TestData);
@@ -64,10 +68,27 @@ dataProvider(statesData.states, function (sData, sdescription) {
 
                     it('Step-1: Validate the Billing Address in the Payment page', function() {
 
+                        payment.billingAddress.click();
                         payment.billingChkBox.unCheck();
+                        payment.streetAddress.setText("");
+                        payment.city.setText("");
+                        payment.state.setText("");
+                        payment.zipCode.setText("");
+
+
                         payment.streetAddress.setText(TestData.billaddr1);
                         payment.selectHomeAddress(TestData.billingAddress);
                         payment.streetAddress.setText(TestData.Appartment, true);
+                        if(sdescription=='VI'){
+                            payment.city.setText(TestData.billingCity);
+                            payment.state.setText(TestData.billingState);
+                            payment.zipCode.setText(TestData.billingZip);
+                            expect(payment.errStreetAddress.getText()).toEqual(TestData.ErrorMessage);
+
+                        }
+                        else{
+                            expect(payment.errStreetAddress.getText()).toEqual(TestData.ErrorMsg);
+                        }
                         // payment.streetAddress.setText(TestData.billingAddress);
                         // payment.city.setText(TestData.billingCity);
                         // payment.state.setText(TestData.State);
@@ -81,6 +102,14 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         payment.purchaseNow.click();
                         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
 
+
+                    });
+
+                    it('Step-2: Validate the Billing Address is same as the mailing address', function(){
+                        payment.billingAddress.click();
+                        // payment.billingChkBox.unCheck();
+                        expect(payment.billingStreetaddressTxt.getText()).toEqual(TestData.fieldMailAddr);
+                        expect(payment.billingLocalityTxt.getText()).toEqual(TestData.fieldMailCity+', '+TestData.fieldMailState+' '+TestData.fieldMailZipCode);
 
                     });
                 });

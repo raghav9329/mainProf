@@ -1,13 +1,17 @@
 {
-    "testdata": {
+    "testdata":
+    {
 
-        "test1": {
+        "test1":
+        {
             "providerKey": "GRP240645139240645139001PRV24072991700",
-            "params": {
+            "params":
+            {
                 "latitude": 37.7931023,
                 "longitude": -122.3924255
             },
-            "verify": {
+            "verify":
+            {
                 "providerKey": "GRP240645139240645139001PRV24072991700",
                 "firstName": "Yvette",
                 "middleName": "D",
@@ -20,7 +24,8 @@
                 "emailAddress": "info@sanfrandental.com",
                 "faxNumber": null,
                 "website": "http://www.sanfrandental.com",
-                "address": {
+                "address":
+                {
                     "addressLine": "131 Steuart St Ste 323",
                     "city": "San Francisco",
                     "state": "CA",
@@ -28,60 +33,114 @@
                     "latitude": 37.7931023,
                     "longitude": -122.3924255
                 },
-                "distance": 0,
-                "providerNetworks": [{
+                "distance": 0.0,
+                "providerNetworks": [
+                {
                     "networkId": "2PREMIER",
                     "networkName": "Delta Dental Premier",
                     "acceptsNewPatients": "Y"
-                }, {
+                },
+                {
                     "networkId": "2PPO",
                     "networkName": "Delta Dental PPO",
                     "acceptsNewPatients": "Y"
                 }],
                 "boardCertified": false,
                 "referral": false,
+                "yelp":
+                {
+                    "yelpId": "san-francisco-dental-office-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/san-francisco-dental-office-san-francisco?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+                    "yelpReviewCount": 73,
+                    "yelpRating": 3.5,
+                    "yelpDeltaDentalId": null
+                },
                 "gender": "F",
                 "npi": "1083804132",
-                "license": {
+                "license":
+                {
                     "licenseNumber": "44613",
                     "licenseState": "CA"
                 },
                 "education": [],
                 "providerLanguages": [],
-                "practiceLocationLanguages": [
-                    "Cantonese",
-                    "Mandarin",
-                    "English",
-                    "Spanish"
-                ],
-                "practiceHours": {
-                    "mondayHours": "07:30-16:30",
-                    "tuesdayHours": "07:30-16:30",
-                    "wednesdayHours": "10:30-18:30",
-                    "thursdayHours": "10:30-18:30",
-                    "fridayHours": "07:30-16:30",
-                    "saturdayHours": "Closed",
-                    "sundayHours": "Closed"
+                "practiceLocationLanguages": ["English", "Cantonese", "Mandarin", "Spanish"],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "07:30 AM ",
+                        "closeTime": " 04:30 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "07:30 AM ",
+                        "closeTime": " 04:30 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "10:30 AM ",
+                        "closeTime": " 06:30 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "10:30 AM ",
+                        "closeTime": " 06:30 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "07:30 AM ",
+                        "closeTime": " 04:30 PM",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
                 },
-                "accessibility": {
+                "accessibility":
+                {
                     "freeParking": "No",
                     "wheelChairAccess": "Yes",
                     "publicTransitAccess": "Yes",
                     "internetAccess": "Yes"
                 },
-                "patientConsiderations": {
+                "patientConsiderations":
+                {
                     "treatsChildren": "Yes",
                     "treatsDisabledAdults": "No",
                     "treatsDisabledChildren": "No"
                 }
             }
         },
-        "test2": {
+        "test2":
+        {
             "providerKey": "GRP240603555240603555001PRV24001043400",
-            "params": {
+            "params":
+            {
                 "networkId": "2PREMIER"
             },
-            "verify": {
+            "verify":
+            {
                 "providerKey": "GRP240603555240603555001PRV24001043400",
                 "firstName": "Hung",
                 "middleName": "Quang",
@@ -91,10 +150,11 @@
                 "practiceLocationNumber": "240603555001",
                 "officePhone": "(415) 348-1100",
                 "facilityId": null,
-                "emailAddress": "esthetics_dental@yahoo.com",
+                "emailAddress": "esthetics_dental@att.net",
                 "faxNumber": "(415) 348-1103",
                 "website": null,
-                "address": {
+                "address":
+                {
                     "addressLine": "500 Howard St Ste 101",
                     "city": "San Francisco",
                     "state": "CA",
@@ -102,55 +162,109 @@
                     "latitude": 37.7884445,
                     "longitude": -122.3967133
                 },
-                "distance": 0,
-                "providerNetworks": [{
+                "distance": 0.0,
+                "providerNetworks": [
+                {
                     "networkId": "2PREMIER",
                     "networkName": "Delta Dental Premier",
                     "acceptsNewPatients": "Y"
                 }],
                 "boardCertified": false,
                 "referral": false,
+                "yelp":
+                {
+                    "yelpId": "hung-vo-dmd-esthetics-dental-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/hung-vo-dmd-esthetics-dental-san-francisco?adjust_creative=CEYLdeFm-ZCbM2th0XE_xw&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=CEYLdeFm-ZCbM2th0XE_xw",
+                    "yelpReviewCount": 82,
+                    "yelpRating": 4.5,
+                    "yelpDeltaDentalId": null
+                },
                 "gender": "M",
                 "npi": "1154456606",
-                "license": {
+                "license":
+                {
                     "licenseNumber": "50009",
                     "licenseState": "CA"
                 },
                 "education": [],
                 "providerLanguages": [],
-                "practiceLocationLanguages": [
-                    "Chinese",
-                    "English",
-                    "Vietnamese"
-                ],
-                "practiceHours": {
-                    "mondayHours": "09:00-17:30",
-                    "tuesdayHours": "09:00-17:30",
-                    "wednesdayHours": "09:00-17:30",
-                    "thursdayHours": "10:00-18:30",
-                    "fridayHours": "09:00-17:30",
-                    "saturdayHours": "Call For Details",
-                    "sundayHours": "Closed"
+                "practiceLocationLanguages": ["Chinese", "English", "Vietnamese"],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:30 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:30 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:30 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "10:00 AM ",
+                        "closeTime": " 06:30 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:30 PM",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Call For Details"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
                 },
-                "accessibility": {
+                "accessibility":
+                {
                     "freeParking": "No",
                     "wheelChairAccess": "No",
                     "publicTransitAccess": "Yes",
                     "internetAccess": "No"
                 },
-                "patientConsiderations": {
+                "patientConsiderations":
+                {
                     "treatsChildren": "Yes",
                     "treatsDisabledAdults": "No",
                     "treatsDisabledChildren": "No"
                 }
             }
         },
-        "test3": {
+        "test3":
+        {
             "providerKey": "GRP841324779841324779001PRV24067084210",
-            "params": {
+            "params":
+            {
                 "latitude": 37.7892418
             },
-            "verify": {
+            "verify":
+            {
                 "providerKey": "GRP841324779841324779001PRV24067084210",
                 "firstName": "Nima",
                 "middleName": "Sayed",
@@ -163,7 +277,8 @@
                 "emailAddress": "info@sfsurgicalarts.com",
                 "faxNumber": "(415) 813-6401",
                 "website": "http://www.sfsurgicalarts.com",
-                "address": {
+                "address":
+                {
                     "addressLine": "301 Main St Unt 1A, ",
                     "city": "San Francisco",
                     "state": "CA",
@@ -171,57 +286,114 @@
                     "latitude": 37.7892418,
                     "longitude": -122.3914108
                 },
-                "distance": 0,
-                "providerNetworks": [{
+                "distance": 0.0,
+                "providerNetworks": [
+                {
                     "networkId": "2PPO",
                     "networkName": "Delta Dental PPO",
                     "acceptsNewPatients": "Y"
-                }, {
+                },
+                {
                     "networkId": "2PREMIER",
                     "networkName": "Delta Dental Premier",
                     "acceptsNewPatients": "Y"
                 }],
                 "boardCertified": false,
                 "referral": false,
+                "yelp":
+                {
+                    "yelpId": "san-francisco-surgical-arts-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/san-francisco-surgical-arts-san-francisco?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+                    "yelpReviewCount": 40,
+                    "yelpRating": 4.5,
+                    "yelpDeltaDentalId": null
+                },
                 "gender": "M",
                 "npi": "1346397221",
-                "license": {
-                    "licenseNumber": "81",
+                "license":
+                {
+                    "licenseNumber": "OMS81",
                     "licenseState": "CA"
                 },
                 "education": [],
                 "providerLanguages": [],
-                "practiceLocationLanguages": [
-                    "English"
-                ],
-                "practiceHours": {
-                    "mondayHours": "09:00-17:00",
-                    "tuesdayHours": "09:00-17:00",
-                    "wednesdayHours": "09:00-17:00",
-                    "thursdayHours": "09:00-17:00",
-                    "fridayHours": "09:00-17:00",
-                    "saturdayHours": "Closed",
-                    "sundayHours": "Closed"
+                "practiceLocationLanguages": ["English"],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
                 },
-                "accessibility": {
+                "accessibility":
+                {
                     "freeParking": "No",
                     "wheelChairAccess": "Yes",
                     "publicTransitAccess": "Yes",
                     "internetAccess": "Yes"
                 },
-                "patientConsiderations": {
+                "patientConsiderations":
+                {
                     "treatsChildren": "No",
                     "treatsDisabledAdults": "No",
                     "treatsDisabledChildren": "No"
                 }
             }
         },
-        "test4": {
+        "test4":
+        {
             "providerKey": "GRP841324779841324779001PRV24065326910",
-            "params": {
+            "params":
+            {
                 "longitude": -122.3914108
             },
-            "verify": {
+            "verify":
+            {
                 "providerKey": "GRP841324779841324779001PRV24065326910",
                 "firstName": "Alireza",
                 "middleName": "M",
@@ -234,7 +406,8 @@
                 "emailAddress": "info@sfsurgicalarts.com",
                 "faxNumber": "(415) 813-6401",
                 "website": "http://www.sfsurgicalarts.com",
-                "address": {
+                "address":
+                {
                     "addressLine": "301 Main St Unt 1A, ",
                     "city": "San Francisco",
                     "state": "CA",
@@ -242,60 +415,117 @@
                     "latitude": 37.7892418,
                     "longitude": -122.3914108
                 },
-                "distance": 0,
-                "providerNetworks": [{
+                "distance": 0.0,
+                "providerNetworks": [
+                {
                     "networkId": "2PREMIER",
                     "networkName": "Delta Dental Premier",
                     "acceptsNewPatients": "Y"
-                }, {
+                },
+                {
                     "networkId": "2PPO",
                     "networkName": "Delta Dental PPO",
                     "acceptsNewPatients": "Y"
                 }],
                 "boardCertified": false,
                 "referral": false,
+                "yelp":
+                {
+                    "yelpId": "san-francisco-surgical-arts-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/san-francisco-surgical-arts-san-francisco?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+                    "yelpReviewCount": 40,
+                    "yelpRating": 4.5,
+                    "yelpDeltaDentalId": null
+                },
                 "gender": "M",
                 "npi": "1851407753",
-                "license": {
+                "license":
+                {
                     "licenseNumber": "55700",
                     "licenseState": "CA"
                 },
                 "education": [],
                 "providerLanguages": [],
-                "practiceLocationLanguages": [
-                    "English"
-                ],
-                "practiceHours": {
-                    "mondayHours": "09:00-17:00",
-                    "tuesdayHours": "09:00-17:00",
-                    "wednesdayHours": "09:00-17:00",
-                    "thursdayHours": "09:00-17:00",
-                    "fridayHours": "09:00-17:00",
-                    "saturdayHours": "Closed",
-                    "sundayHours": "Closed"
+                "practiceLocationLanguages": ["English"],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
                 },
-                "accessibility": {
+                "accessibility":
+                {
                     "freeParking": "No",
                     "wheelChairAccess": "Yes",
                     "publicTransitAccess": "Yes",
                     "internetAccess": "Yes"
                 },
-                "patientConsiderations": {
+                "patientConsiderations":
+                {
                     "treatsChildren": "No",
                     "treatsDisabledAdults": "No",
                     "treatsDisabledChildren": "No"
                 }
             }
         },
-        "test5": {
+        "test5":
+        {
             "providerKey": "GRP240615694240615694001PRV49981212900",
-            "params": {
+            "params":
+            {
                 "latitude": 37.7899399,
                 "longitude": -122.3948441,
                 "networkId": "2PPO"
 
             },
-            "verify": {
+            "verify":
+            {
                 "providerKey": "GRP240615694240615694001PRV49981212900",
                 "firstName": "Thomas",
                 "middleName": "M",
@@ -308,7 +538,8 @@
                 "emailAddress": null,
                 "faxNumber": null,
                 "website": "http://www.leongdental.com",
-                "address": {
+                "address":
+                {
                     "addressLine": "199 Fremont St Ste 105",
                     "city": "San Francisco",
                     "state": "CA",
@@ -316,60 +547,115 @@
                     "latitude": 37.7899399,
                     "longitude": -122.3948441
                 },
-                "distance": 0,
-                "providerNetworks": [{
+                "distance": 0.0,
+                "providerNetworks": [
+                {
                     "networkId": "2PREMIER",
                     "networkName": "Delta Dental Premier",
                     "acceptsNewPatients": "Y"
-                }, {
+                },
+                {
                     "networkId": "2PPO",
                     "networkName": "Delta Dental PPO",
                     "acceptsNewPatients": "Y"
                 }],
                 "boardCertified": false,
                 "referral": false,
+                "yelp":
+                {
+                    "yelpId": "leong-dental-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/leong-dental-san-francisco?adjust_creative=NdoemlSw6nWqA08FFBz-Hg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=NdoemlSw6nWqA08FFBz-Hg",
+                    "yelpReviewCount": 41,
+                    "yelpRating": 4.0,
+                    "yelpDeltaDentalId": null
+                },
                 "gender": "M",
                 "npi": "1427495373",
-                "license": {
+                "license":
+                {
                     "licenseNumber": "64818",
                     "licenseState": "CA"
                 },
                 "education": [],
                 "providerLanguages": [],
-                "practiceLocationLanguages": [
-                    "Cantonese",
-                    "English",
-                    "Chinese"
-                ],
-                "practiceHours": {
-                    "mondayHours": "09:30-18:00",
-                    "tuesdayHours": "09:30-18:00",
-                    "wednesdayHours": "09:30-18:00",
-                    "thursdayHours": "09:30-18:00",
-                    "fridayHours": "Closed",
-                    "saturdayHours": "Closed",
-                    "sundayHours": "Closed"
+                "practiceLocationLanguages": ["English", "Chinese", "Cantonese"],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
                 },
-                "accessibility": {
+                "accessibility":
+                {
                     "freeParking": "No",
                     "wheelChairAccess": "Yes",
                     "publicTransitAccess": "No",
                     "internetAccess": "Yes"
                 },
-                "patientConsiderations": {
+                "patientConsiderations":
+                {
                     "treatsChildren": "No",
                     "treatsDisabledAdults": "No",
                     "treatsDisabledChildren": "No"
                 }
             }
         },
-        "test6": {
+        "test6":
+        {
             "providerKey": "GRP240615694240615694001PRV49981212900",
-            "params": {
+            "params":
+            {
                 "latitude": 37.7892418,
                 "longitude": -122.3914108
             },
-            "verify": {
+            "verify":
+            {
                 "providerKey": "GRP240615694240615694001PRV49981212900",
                 "firstName": "Thomas",
                 "middleName": "M",
@@ -382,7 +668,8 @@
                 "emailAddress": null,
                 "faxNumber": null,
                 "website": "http://www.leongdental.com",
-                "address": {
+                "address":
+                {
                     "addressLine": "199 Fremont St Ste 105",
                     "city": "San Francisco",
                     "state": "CA",
@@ -390,62 +677,117 @@
                     "latitude": 37.7899399,
                     "longitude": -122.3948441
                 },
-                "distance": 0,
-                "providerNetworks": [{
+                "distance": 0.0,
+                "providerNetworks": [
+                {
                     "networkId": "2PREMIER",
                     "networkName": "Delta Dental Premier",
                     "acceptsNewPatients": "Y"
-                }, {
+                },
+                {
                     "networkId": "2PPO",
                     "networkName": "Delta Dental PPO",
                     "acceptsNewPatients": "Y"
                 }],
                 "boardCertified": false,
                 "referral": false,
+                "yelp":
+                {
+                    "yelpId": "leong-dental-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/leong-dental-san-francisco?adjust_creative=NdoemlSw6nWqA08FFBz-Hg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=NdoemlSw6nWqA08FFBz-Hg",
+                    "yelpReviewCount": 41,
+                    "yelpRating": 4.0,
+                    "yelpDeltaDentalId": null
+                },
                 "gender": "M",
                 "npi": "1427495373",
-                "license": {
+                "license":
+                {
                     "licenseNumber": "64818",
                     "licenseState": "CA"
                 },
                 "education": [],
                 "providerLanguages": [],
-                "practiceLocationLanguages": [
-                    "Cantonese",
-                    "English",
-                    "Chinese"
-                ],
-                "practiceHours": {
-                    "mondayHours": "09:30-18:00",
-                    "tuesdayHours": "09:30-18:00",
-                    "wednesdayHours": "09:30-18:00",
-                    "thursdayHours": "09:30-18:00",
-                    "fridayHours": "Closed",
-                    "saturdayHours": "Closed",
-                    "sundayHours": "Closed"
+                "practiceLocationLanguages": ["English", "Chinese", "Cantonese"],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
                 },
-                "accessibility": {
+                "accessibility":
+                {
                     "freeParking": "No",
                     "wheelChairAccess": "Yes",
                     "publicTransitAccess": "No",
                     "internetAccess": "Yes"
                 },
-                "patientConsiderations": {
+                "patientConsiderations":
+                {
                     "treatsChildren": "No",
                     "treatsDisabledAdults": "No",
                     "treatsDisabledChildren": "No"
                 }
             }
         },
-        "test7": {
+        "test7":
+        {
             "providerKey": "GRP240615694240615694001PRV49981212900",
-            "params": {
+            "params":
+            {
                 "latitude": 37.7899399,
                 "longitude": -122.3948441,
                 "networkId": "2PREMIER"
 
             },
-            "verify": {
+            "verify":
+            {
                 "providerKey": "GRP240615694240615694001PRV49981212900",
                 "firstName": "Thomas",
                 "middleName": "M",
@@ -458,7 +800,8 @@
                 "emailAddress": null,
                 "faxNumber": null,
                 "website": "http://www.leongdental.com",
-                "address": {
+                "address":
+                {
                     "addressLine": "199 Fremont St Ste 105",
                     "city": "San Francisco",
                     "state": "CA",
@@ -466,47 +809,99 @@
                     "latitude": 37.7899399,
                     "longitude": -122.3948441
                 },
-                "distance": 0,
-                "providerNetworks": [{
+                "distance": 0.0,
+                "providerNetworks": [
+                {
                     "networkId": "2PREMIER",
                     "networkName": "Delta Dental Premier",
                     "acceptsNewPatients": "Y"
-                }, {
+                },
+                {
                     "networkId": "2PPO",
                     "networkName": "Delta Dental PPO",
                     "acceptsNewPatients": "Y"
                 }],
                 "boardCertified": false,
                 "referral": false,
+                "yelp":
+                {
+                    "yelpId": "leong-dental-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/leong-dental-san-francisco?adjust_creative=NdoemlSw6nWqA08FFBz-Hg&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=NdoemlSw6nWqA08FFBz-Hg",
+                    "yelpReviewCount": 41,
+                    "yelpRating": 4.0,
+                    "yelpDeltaDentalId": null
+                },
                 "gender": "M",
                 "npi": "1427495373",
-                "license": {
+                "license":
+                {
                     "licenseNumber": "64818",
                     "licenseState": "CA"
                 },
                 "education": [],
                 "providerLanguages": [],
-                "practiceLocationLanguages": [
-                    "Cantonese",
-                    "English",
-                    "Chinese"
-                ],
-                "practiceHours": {
-                    "mondayHours": "09:30-18:00",
-                    "tuesdayHours": "09:30-18:00",
-                    "wednesdayHours": "09:30-18:00",
-                    "thursdayHours": "09:30-18:00",
-                    "fridayHours": "Closed",
-                    "saturdayHours": "Closed",
-                    "sundayHours": "Closed"
+                "practiceLocationLanguages": ["English", "Chinese", "Cantonese"],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:30 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
                 },
-                "accessibility": {
+                "accessibility":
+                {
                     "freeParking": "No",
                     "wheelChairAccess": "Yes",
                     "publicTransitAccess": "No",
                     "internetAccess": "Yes"
                 },
-                "patientConsiderations": {
+                "patientConsiderations":
+                {
                     "treatsChildren": "No",
                     "treatsDisabledAdults": "No",
                     "treatsDisabledChildren": "No"

@@ -3,8 +3,8 @@
 /* As a user I want to see a list of address suggestions 
 as I start to input my address so that I can click on a suggestion and auto-fill all of the address fields.*/
 
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.720PersInfo.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.720PersInfo.json');
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
 
 //To Navigate Personla Info Page

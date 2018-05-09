@@ -1,7 +1,6 @@
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1548PersInfo.json');
-
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1548PersInfo.json');
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
 //To Navigate Personla Info Page
 dataProvider(TestData.states, function(sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {

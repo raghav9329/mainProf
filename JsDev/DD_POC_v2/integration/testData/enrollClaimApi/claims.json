@@ -1,0 +1,21 @@
+{
+    "testdata": {
+        "test1": {
+            "claimId": "20172286063197",
+            "PersonId": "0464210315454765",
+            "ClientKey": "12345",
+            "firstName": "Pearline",
+            "middleName": null,
+            "lastName": "Stillman",
+            "birthDate": "1977-02-08 00:00:00",
+            "providerId": "GRP542491127",
+            "providerType": "DE  ",
+            "providerKey": "GRP542491127542491127001PRV79346117400",
+            "providerName": "Priscila A Donangelo",
+            "officeAddress": null,
+            "officePhone": null,
+            "officeName": null
+        }
+
+    }
+}

@@ -17,24 +17,32 @@ class FeedbackPage extends ControlBase {
     constructor() {
         super(null, 'FeedbackPage');
         this.pageObjects = new FeedbackLocators();
-        this.feedback = new Button(this.pageObjects.feedback);
-        this.answer1 = new Label(this.pageObjects.answer1);
-        this.answer2 = new Label(this.pageObjects.answer2);
-        this.answer3 = new Label(this.pageObjects.answer3);
-        this.answer4 = new Label(this.pageObjects.answer4);
-        this.answer5 = new TextBox(this.pageObjects.answer5);
-        this.submit = new Button(this.pageObjects.submit);
-        this.endOfSurvey = new Label(this.pageObjects.endOfSurvey);  
+        this.feedback    = new Button(this.pageObjects.feedback);
+        this.answer1     = new Label(this.pageObjects.answer1);
+        this.answer2     = new Label(this.pageObjects.answer2);
+        this.answer3     = new Label(this.pageObjects.answer3);
+        this.answer4     = new Label(this.pageObjects.answer4);
+        this.answer5     = new TextBox(this.pageObjects.answer5);
+        this.submit      = new Button(this.pageObjects.submit);
+        this.endOfSurvey = new Label(this.pageObjects.endOfSurvey);
 
-       
+
     };
+
+    /**
+     * Returns webelement of feedback frame
+     * @returns {WebElement}
+     */
     feedbackFrame() {
         return browser.driver.findElement(protractor.By.css('div.feedback.expanded iframe'))
     }
 
-    verifyFeedback(){
+    /**
+     * Performs click operation on feedback button
+     */
+    verifyFeedback() {
         this.feedback.click();
-        
+
     }
 };
 

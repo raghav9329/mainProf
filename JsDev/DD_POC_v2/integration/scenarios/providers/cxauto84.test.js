@@ -1,8 +1,8 @@
 "use strict"
-var TestData = require('../../testData/' + testDataEnv + '/providers/cxauto84.json');
-var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var TestData        = require('../../testData/' + testDataEnv + '/providers/cxauto84.json');
+var dirSearch       = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
-var footer = new(require('../../pageObjects/providers/footer-page.js'));
+var footer          = new(require('../../pageObjects/providers/footer-page.js'));
 
 
 //CXAUTO-84:Cutover Banner
@@ -26,7 +26,7 @@ describe('CXAUTO-84:Spanish', function() {
         dirSearch.apply.click();
 
         browser.getCurrentUrl().then(function(url) {
-            console.log('URL=======' +url)
+            console.log('URL=======' + url)
             url1 = url.slice(16);
             console.log('1st URL===========' + url1);
         })

@@ -1,11 +1,11 @@
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/addDep_Enroll.DeleteDep_depPage.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/addDep_Enroll.DeleteDep_depPage.json');
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo    = new(require('../../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var payment    = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt    = new(require('../../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var pdf2Text = require('pdf2text')
+var pdf2Text   = require('pdf2text')
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
@@ -33,10 +33,14 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     });
 
                     it('E2E_Flow_2: Verify Personal Information Page is filled with Valid data and Proceed', function() {
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            TestData.MemberId = false;                            
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();
+                            console.log(" TestData.ssn===" + TestData.ssn)
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -170,11 +174,11 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             receipt.applicants.click();
                             receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
                                 expect(facilitydata.name).toContain(TestData.firstname);
-                                expect(facilitydata.facilityName).toEqual(TestData.primaryFacility.facilityName);
+                                expect(facilitydata.facilityName).toEqual(facility.facilityName);
                                 expect(facilitydata.street).toEqual(facility.street);
                                 expect(facilitydata.city).toEqual(facility.city);
                                 expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toEqual(facility.postalCode);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode);
                                 expect(facilitydata.telephone).toEqual(facility.telephone);
                             });
                         }

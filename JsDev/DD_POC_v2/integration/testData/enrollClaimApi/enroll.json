@@ -1,0 +1,72 @@
+{
+    "testdata": {
+        "test1": {
+            "enrolleeId": "113164149901",
+            "PersonId": "0464210315454765",
+            "ClientKey": "12345",
+            "claimId": "20172286063643",
+            "claimStatus": "Claim Paid",
+            "dateOfService": "08-14-2017",
+            "providerKey": "GRP542491127542491127001PRV75250112600",
+            "providerName": "Rachana Jha",
+            "active": true,
+            "gender": "Female",
+            "phoneNumber": "(512) 206-4484",
+            "procedureCode": "D0120",
+            "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+            "procedureCount": 1,
+            "enrolleeResponsibilityAmount": 0
+        },
+        "test2": {
+            "enrolleeId": "239973584302",
+            "PersonId": "7997000007699287",
+            "ClientKey": "12345",
+            "claimId": "20170536005443",
+            "claimStatus": "Claim Paid",
+            "dateOfService": "02-21-2017",
+            "providerKey": "GRP299530028299530028001PRV29953002200",
+            "providerName": null,
+            "active": false,
+            "gender": null,
+            "phoneNumber": null,
+            "procedureCode": "D2331",
+            "procedureDescription": "RESIN-BASED COMPOSITE - TWO SURFACES, ANTERIOR TOOTH",
+            "procedureCount": 1,
+            "enrolleeResponsibilityAmount": 0
+        },
+        "test3": {
+            "enrolleeId": "100487195002",
+            "PersonId": "0002580916542268",
+            "ClientKey": "12345",
+            "claimId": "20172196068993",
+            "claimStatus": "Claim Paid",
+            "dateOfService": "08-07-2017",
+            "providerKey": "GRP240764119240764119001PRV25390000400",
+            "providerName": null,
+            "active": false,
+            "gender": null,
+            "phoneNumber": null,
+            "procedureCode": "D2150",
+            "procedureDescription": "AMALGAM - TWO SURFACES, PRIMARY OR PERMANENT TOOTH",
+            "procedureCount": 1,
+            "enrolleeResponsibilityAmount": 129.2
+        },
+        "test4": {
+            "enrolleeId": "113164149905",
+            "PersonId": "464210315454765",
+            "ClientKey": "12345",
+            "shortDescription": "Unauthorized access.",
+            "detailedDescription": "Person is not in the contract. Person is not authorized to view the Enrollee's records."
+
+        },
+        "test5": {
+            "enrolleeId": "100487195004",
+            "PersonId": "0358980916542245",
+            "ClientKey": "12345",
+            "shortDescription": "Unauthorized access.",
+            "detailedDescription": "Person is a primary member. However, this member has no permission to view this enrollee's claim records."
+
+        }
+
+    }
+}

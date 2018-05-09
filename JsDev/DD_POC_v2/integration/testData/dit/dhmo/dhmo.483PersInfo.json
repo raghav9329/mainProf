@@ -76,14 +76,17 @@
         "State": "CA",
         "ZIPcode": "94903",
         "ErrorMsg": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
-        "ErrorMsg1": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
+        "ErrorMsg1": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
+        "ErrorMessage": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information. Call Delta Dental toll-free at 866-583-2085 (TTY: 800-735-2929) Mon–Fri 7 a.m.–11 p.m., Sat 9 a.m.–5 p.m. (Eastern time)."
     },
 
     "HAddress_SplChar": {
         "Home": "^&&$#@*&^",
+        "City": "Fremont",
         "ErrorMsg": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
         "ErrorMsg0": "Please check the street number to match the city, state and zipcode",
-        "ErrorMsg1": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
+        "ErrorMsg1": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
+        "ErrorMessage": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information. Call Delta Dental toll-free at 866-583-2085 (TTY: 800-735-2929) Mon–Fri 7 a.m.–11 p.m., Sat 9 a.m.–5 p.m. (Eastern time)."
     },
 
     "HAddress_ZIP": {

@@ -103,11 +103,15 @@
             "City": "Fremont",
             "State": "CA",
             "ZIPcode": "94903",
-            "ErrorMsg": "The street address entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
+            "ErrorMsg": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
+            "ErrorMsg0": "The street address entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information.",
+            "ErrorMessage": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information. Call Delta Dental toll-free at 866-583-2085 (TTY: 800-735-2929) Mon–Fri 7 a.m.–11 p.m., Sat 9 a.m.–5 p.m. (Eastern time)."
         },
 
         "HAddress_SplChar": {
             "Home": "^&&$#@*&^",
+            "City": "Fremont",
+            "ErrorMessage": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information. Call Delta Dental toll-free at 866-583-2085 (TTY: 800-735-2929) Mon–Fri 7 a.m.–11 p.m., Sat 9 a.m.–5 p.m. (Eastern time).",
             "ErrorMsg": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
         },
 
@@ -115,6 +119,7 @@
             "HomeAddress":"949",
             "FullAddress": "949Broadway, New York, NY, United States",
             "ErrorMsg": "Please enter a street address",
+            "ErrorMessage": "The street number entered does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information. Call Delta Dental toll-free at 866-583-2085 (TTY: 800-735-2929) Mon–Fri 7 a.m.–11 p.m., Sat 9 a.m.–5 p.m. (Eastern time).",
             "ExecutionFlag": true
         }
 

@@ -1,43 +1,43 @@
 {
-    "testdata": {
-        "test1": {
-            "actual": {
-                "zipcode": "95014",
-                "keyword": "joanne"
+    "testdata"   : {
+    "test1"      : {
+    "actual"     : {
+    "zipcode"    : "95014",
+    "keyword"    : "joanne"
             },
-            "expected": {
-                "loc": "Cupertino, CA 95014, USA",
-                "pagenation": ""
+    "expected"   : {
+    "loc"        : "Cupertino, CA 95014, USA",
+    "pagenation" : ""
             }
         },
-        "test2": {
-            "actual": {
-                "zipcode": "95014",
-                "keyword": "jane"
+    "test2"      : {
+    "actual"     : {
+    "zipcode"    : "95014",
+    "keyword"    : "jane"
             },
-            "expected": {
-                "loc": "Cupertino, CA 95014, USA",
-                "pagenation": "1,2"
+    "expected"   : {
+    "loc"        : "Cupertino, CA 95014, USA",
+    "pagenation" : "1,2"
             }
         },
-        "test3": {
-            "actual": {
-                "zipcode": "95014",
-                "keyword": "susan"
+    "test3"      : {
+    "actual"     : {
+    "zipcode"    : "95014",
+    "keyword"    : "susan"
             },
-            "expected": {
-                "loc": "Cupertino, CA 95014, USA",
-                "pagenation": "1,2"
+    "expected"   : {
+    "loc"        : "Cupertino, CA 95014, USA",
+    "pagenation" : "1,2"
             }
         },
-        "test4": {
-            "actual": {
-                "zipcode": "95014",
-                "keyword": "charles"
+    "test4"      : {
+    "actual"     : {
+    "zipcode"    : "95014",
+    "keyword"    : "charles"
             },
-            "expected": {
-                "loc": "Cupertino, CA 95014, USA",
-                "pagenation": "1,2,3,4"
+    "expected"   : {
+    "loc"        : "Cupertino, CA 95014, USA",
+    "pagenation" : "1,2,3,4"
             }
         }
     }

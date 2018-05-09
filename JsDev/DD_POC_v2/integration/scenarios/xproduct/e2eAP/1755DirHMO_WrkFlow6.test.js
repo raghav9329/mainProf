@@ -1,12 +1,12 @@
 //CXINIT-1755 : Add Progress bar check to all tests
 
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo    = new(require('../../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var payment    = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt    = new(require('../../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_6.json');
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/Direct_HMO_WorkFlows_6.json');
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
@@ -59,10 +59,14 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         }
 
 
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            TestData.MemberId = false;                            
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();
+                            console.log(" TestData.ssn===" + TestData.ssn)
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -335,7 +339,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 expect(facilitydata.street).toEqual(facility.street);
                                 expect(facilitydata.city).toEqual(facility.city);
                                 expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toEqual(facility.postalCode);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode);
                                 expect(facilitydata.telephone).toEqual(facility.telephone);
                             });
                         }
@@ -356,7 +360,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 expect(facilitydata.street).toEqual(facility.street);
                                 expect(facilitydata.city).toEqual(facility.city);
                                 expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toEqual(facility.postalCode);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode);
                                 expect(facilitydata.telephone).toEqual(facility.telephone);
                             });
                         }

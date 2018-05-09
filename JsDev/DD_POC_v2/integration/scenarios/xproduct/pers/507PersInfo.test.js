@@ -28,10 +28,10 @@ Consume the error messages in the property file and validate fields display the 
 
 "use strict"
 // var TestData = require('../../testData/'+testDataEnv+'/personalInfo.json');
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.507PersInfo.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
+var TestData    = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.507PersInfo.json');
+var perInfo     = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var enrollPage  = new(require('../../../pageObjects/cxinit/enroll-page.js'));
+var statesData  = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
 // dataProvider(TestData.states, function (sData, sdescription) {

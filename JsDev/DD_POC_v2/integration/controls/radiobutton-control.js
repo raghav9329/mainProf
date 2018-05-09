@@ -8,7 +8,7 @@ var ControlBase = require('./base-control');
 class RadioControl extends ControlBase {
 
     /**
-     * Initializes Checkbox control with its locator
+     * Initializes RadioButton control with its locator
      * @param controlLocator    
      */
     constructor(controlLocator) {
@@ -23,7 +23,10 @@ class RadioControl extends ControlBase {
     isSelected() {
         return element(this.locator).isSelected();
     }
-
+    /**
+     * Selects the radio button
+     * @returns {webdriver.promise.Promise<string>}
+     */
     select() {
         var self = this;
         return this.isSelected().then(function(val) {
@@ -32,9 +35,6 @@ class RadioControl extends ControlBase {
         });
     }
 
-    deselect() {
-
-    }
 }
 
 

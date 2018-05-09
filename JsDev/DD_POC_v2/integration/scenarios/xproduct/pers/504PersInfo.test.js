@@ -1,9 +1,8 @@
 /*CXINIT-504 Broker Validation*/
 
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.504PersInfo.json');
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.504PersInfo.json');
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
 var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page

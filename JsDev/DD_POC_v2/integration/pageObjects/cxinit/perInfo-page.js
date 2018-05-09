@@ -1,13 +1,13 @@
 "use strict";
 var PersInfoLocators = require('./perInfo-locators');
-var ControlBase = require('../../controls/base-control');
-var Button = require('../../controls/button-control');
-var TextBox = require('../../controls/textbox-control');
-var Label = require('../../controls/label-control');
-var Select = require('../../controls/select-control');
-var CheckBox = require('../../controls/checkbox-control');
-var RadioButton = require('../../controls/radiobutton-control');
-var LinkText = require('../../controls/link-control');
+var ControlBase      = require('../../controls/base-control');
+var Button           = require('../../controls/button-control');
+var TextBox          = require('../../controls/textbox-control');
+var Label            = require('../../controls/label-control');
+var Select           = require('../../controls/select-control');
+var CheckBox         = require('../../controls/checkbox-control');
+var RadioButton      = require('../../controls/radiobutton-control');
+var LinkText         = require('../../controls/link-control');
 
 /**
  * Provides access to the functionality of Personal Info page
@@ -17,104 +17,104 @@ class PersonalInfoPage extends ControlBase {
 
     constructor() {
         super(null, 'PersonalInfoPage');
-        this.pageObjects = new PersInfoLocators();
-        this.fieldFirstName = new TextBox(this.pageObjects.fieldFirstName);
-        this.errMsgFirstName = new Label(this.pageObjects.errMsgFirstName);
-        this.fieldMidInitial = new TextBox(this.pageObjects.fieldMidInitial);
-        this.fieldLastName = new TextBox(this.pageObjects.fieldLastName);
-        this.errMsgLastName = new Label(this.pageObjects.errMsgLastName);
-        this.fieldGenderSelect = new Select(this.pageObjects.fieldGenderSelect);
-        this.errMsgGenderSelect = new Label(this.pageObjects.errMsgGenderSelect);
-        this.fieldBdMM = new TextBox(this.pageObjects.fieldBdMM);
-        this.errMsgBdMM = new Label(this.pageObjects.errMsgBdMM);
-        this.fieldBdDD = new TextBox(this.pageObjects.fieldBdDD);
-        this.errMsgBdDD = new Label(this.pageObjects.errMsgBdDD);
-        this.fieldBdYyyy = new TextBox(this.pageObjects.fieldBdYyyy);
-        this.errMsgBdYyyy = new Label(this.pageObjects.errMsgBdYyyy);
-        this.errMsgYear = new Label(this.pageObjects.errMsgYear);
-        this.errBirthDate = new Label(this.pageObjects.errBirthDate);
-        this.fieldSsn = new TextBox(this.pageObjects.fieldSsn);
-        this.coverageStartDate = new Select(this.pageObjects.coverageStartDate);
-        this.errMsgSsn = new Label(this.pageObjects.errMsgSsn);
-        this.errMsgMemberId = new Label(this.pageObjects.errMsgMemberId);
-        this.fieldHomeAddr = new TextBox(this.pageObjects.fieldHomeAddr);
-        this.errMsgHomeAddr = new Label(this.pageObjects.errMsgHomeAddr);
-        this.errinvalidAddr = new Label(this.pageObjects.errinvalidAddr);
-        this.fieldCity = new TextBox(this.pageObjects.fieldCity);
-        this.errMsgCity = new Label(this.pageObjects.errMsgCity);
-        this.fieldState = new TextBox(this.pageObjects.fieldState);
-        this.errMsgState = new Label(this.pageObjects.errMsgState);
-        this.fieldZipCode = new TextBox(this.pageObjects.fieldZipCode);
-        this.fieldAlternateId = new TextBox(this.pageObjects.fieldAlternateId);
-        this.errMsgZipCode = new Label(this.pageObjects.errMsgZipCode);
-        this.chkBoxDiffMailAddr = new CheckBox(this.pageObjects.chkBoxDiffMailAddr);
-        this.fieldPhoneSelect = new Select(this.pageObjects.fieldPhoneSelect);
-        this.fieldPhoneNumber = new TextBox(this.pageObjects.fieldPhoneNumber);
-        this.errMsgPhoneNumber = new Label(this.pageObjects.errMsgPhoneNumber);
-        this.fieldEmailAddr = new TextBox(this.pageObjects.fieldEmailAddr);
-        this.errMsgEmailAddr = new Label(this.pageObjects.errMsgEmailAddr);
-        this.chkBoxPaperless = new CheckBox(this.pageObjects.chkBoxPaperless);
-        this.paperLessTerms = new LinkText(this.pageObjects.paperLessTerms);
-        this.RadBtnBrokerYes = new RadioButton(this.pageObjects.RadBtnBrokerYes);
-        this.RadBtnBrokerNo = new RadioButton(this.pageObjects.RadBtnBrokerNo);
-        this.zipPopNewQuote = new Button(this.pageObjects.zipPopNewQuote);
-        this.zipPopBack = new Button(this.pageObjects.zipPopBack);
-        this.zipPopUp = new Label(this.pageObjects.zipPopUp);
-        this.next = new Button(this.pageObjects.persPageButtonNext);
-        this.allerrMsg = new Label(this.pageObjects.allerrMsg);
-        this.hiddenfieldMailAddr = new TextBox(this.pageObjects.hiddenfieldMailAddr);
-        this.errMsghiddenfieldMailAddr = new Label(this.pageObjects.errMsghiddenfieldMailAddr);
-        this.servererrMailAddr = new Label(this.pageObjects.servererrMailAddr);
-        this.hiddenfieldCity = new TextBox(this.pageObjects.hiddenfieldCity);
-        this.errMsghiddenfieldCity = new Label(this.pageObjects.errMsghiddenfieldCity);
-        this.hiddenfieldState = new TextBox(this.pageObjects.hiddenfieldState);
-        this.errMsghiddenfieldState = new Label(this.pageObjects.errMsghiddenfieldState);
-        this.hiddenfieldZipCode = new TextBox(this.pageObjects.hiddenfieldZipCode);
-        this.errMsghiddenfieldZipCode = new Label(this.pageObjects.errMsghiddenfieldZipCode);
-        this.hiddenfieldBrokerNum = new TextBox(this.pageObjects.hiddenfieldBrokerNum);
+        this.pageObjects                = new PersInfoLocators();
+        this.fieldFirstName             = new TextBox(this.pageObjects.fieldFirstName);
+        this.errMsgFirstName            = new Label(this.pageObjects.errMsgFirstName);
+        this.fieldMidInitial            = new TextBox(this.pageObjects.fieldMidInitial);
+        this.fieldLastName              = new TextBox(this.pageObjects.fieldLastName);
+        this.errMsgLastName             = new Label(this.pageObjects.errMsgLastName);
+        this.fieldGenderSelect          = new Select(this.pageObjects.fieldGenderSelect);
+        this.errMsgGenderSelect         = new Label(this.pageObjects.errMsgGenderSelect);
+        this.fieldBdMM                  = new TextBox(this.pageObjects.fieldBdMM);
+        this.errMsgBdMM                 = new Label(this.pageObjects.errMsgBdMM);
+        this.fieldBdDD                  = new TextBox(this.pageObjects.fieldBdDD);
+        this.errMsgBdDD                 = new Label(this.pageObjects.errMsgBdDD);
+        this.fieldBdYyyy                = new TextBox(this.pageObjects.fieldBdYyyy);
+        this.errMsgBdYyyy               = new Label(this.pageObjects.errMsgBdYyyy);
+        this.errMsgYear                 = new Label(this.pageObjects.errMsgYear);
+        this.errBirthDate               = new Label(this.pageObjects.errBirthDate);
+        this.fieldSsn                   = new TextBox(this.pageObjects.fieldSsn);
+        this.coverageStartDate          = new Select(this.pageObjects.coverageStartDate);
+        this.errMsgSsn                  = new Label(this.pageObjects.errMsgSsn);
+        this.errMsgMemberId             = new Label(this.pageObjects.errMsgMemberId);
+        this.fieldHomeAddr              = new TextBox(this.pageObjects.fieldHomeAddr);
+        this.errMsgHomeAddr             = new Label(this.pageObjects.errMsgHomeAddr);
+        this.errinvalidAddr             = new Label(this.pageObjects.errinvalidAddr);
+        this.fieldCity                  = new TextBox(this.pageObjects.fieldCity);
+        this.errMsgCity                 = new Label(this.pageObjects.errMsgCity);
+        this.fieldState                 = new TextBox(this.pageObjects.fieldState);
+        this.errMsgState                = new Label(this.pageObjects.errMsgState);
+        this.fieldZipCode               = new TextBox(this.pageObjects.fieldZipCode);
+        this.fieldAlternateId           = new TextBox(this.pageObjects.fieldAlternateId);
+        this.errMsgZipCode              = new Label(this.pageObjects.errMsgZipCode);
+        this.chkBoxDiffMailAddr         = new CheckBox(this.pageObjects.chkBoxDiffMailAddr);
+        this.fieldPhoneSelect           = new Select(this.pageObjects.fieldPhoneSelect);
+        this.fieldPhoneNumber           = new TextBox(this.pageObjects.fieldPhoneNumber);
+        this.errMsgPhoneNumber          = new Label(this.pageObjects.errMsgPhoneNumber);
+        this.fieldEmailAddr             = new TextBox(this.pageObjects.fieldEmailAddr);
+        this.errMsgEmailAddr            = new Label(this.pageObjects.errMsgEmailAddr);
+        this.chkBoxPaperless            = new CheckBox(this.pageObjects.chkBoxPaperless);
+        this.paperLessTerms             = new LinkText(this.pageObjects.paperLessTerms);
+        this.RadBtnBrokerYes            = new RadioButton(this.pageObjects.RadBtnBrokerYes);
+        this.RadBtnBrokerNo             = new RadioButton(this.pageObjects.RadBtnBrokerNo);
+        this.brokerLabel                = new Label(this.pageObjects.brokerLabel);
+        this.zipPopNewQuote             = new Button(this.pageObjects.zipPopNewQuote);
+        this.zipPopBack                 = new Button(this.pageObjects.zipPopBack);
+        this.zipPopUp                   = new Label(this.pageObjects.zipPopUp);
+        this.next                       = new Button(this.pageObjects.persPageButtonNext);
+        this.allerrMsg                  = new Label(this.pageObjects.allerrMsg);
+        this.hiddenfieldMailAddr        = new TextBox(this.pageObjects.hiddenfieldMailAddr);
+        this.errMsghiddenfieldMailAddr  = new Label(this.pageObjects.errMsghiddenfieldMailAddr);
+        this.servererrMailAddr          = new Label(this.pageObjects.servererrMailAddr);
+        this.hiddenfieldCity            = new TextBox(this.pageObjects.hiddenfieldCity);
+        this.errMsghiddenfieldCity      = new Label(this.pageObjects.errMsghiddenfieldCity);
+        this.hiddenfieldState           = new TextBox(this.pageObjects.hiddenfieldState);
+        this.errMsghiddenfieldState     = new Label(this.pageObjects.errMsghiddenfieldState);
+        this.hiddenfieldZipCode         = new TextBox(this.pageObjects.hiddenfieldZipCode);
+        this.errMsghiddenfieldZipCode   = new Label(this.pageObjects.errMsghiddenfieldZipCode);
+        this.hiddenfieldBrokerNum       = new TextBox(this.pageObjects.hiddenfieldBrokerNum);
         this.errMsghiddenfieldBrokerNum = new Label(this.pageObjects.errMsghiddenfieldBrokerNum);
-        this.whatIsThis = new Label(this.pageObjects.whatIsThis);
-        this.brokerToolTip = new Label(this.pageObjects.brokerToolTip);
-        this.brokerToolTipText = new Label(this.pageObjects.brokerToolTipText);
-        this.hiddenbrokerName = new TextBox(this.pageObjects.hiddenbrokerName);
-        this.homeAddressfromGoogleApi = new Label(this.pageObjects.homeAddressfromGoogleApi);
-        this.birthdateerror = new Label(this.pageObjects.birthdateerror);
-        this.serverErrMsgFirstName = new Label(this.pageObjects.serverErrMsgFirstName);
-        this.serverErrMsgLastName = new Label(this.pageObjects.serverErrMsgLastName);
-        this.serverErrMsgGenderSelect = new Label(this.pageObjects.serverErrMsgGenderSelect);
-        this.serverErrMsgSsn = new Label(this.pageObjects.serverErrMsgSsn);
-        this.serverErrMsgMemberId = new Label(this.pageObjects.serverErrMsgMemberId);
-        this.serverErrMsgStreetAddress = new Label(this.pageObjects.serverErrMsgStreetAddress);
-        this.serverErrMsgCity = new Label(this.pageObjects.serverErrMsgCity);
-        this.serverErrMsgState = new Label(this.pageObjects.serverErrMsgState);
-        this.serverErrMsgZipCode = new Label(this.pageObjects.serverErrMsgZipCode);
-        this.serverErrMsgMonth = new Label(this.pageObjects.serverErrMsgMonth);
-        this.serverErrMsgDay = new Label(this.pageObjects.serverErrMsgDay);
-        this.serverErrMsgYear = new Label(this.pageObjects.serverErrMsgYear);
-        this.serverErrMsgContactNumber = new Label(this.pageObjects.serverErrMsgContactNumber);
+        this.whatIsThis                 = new Label(this.pageObjects.whatIsThis);
+        this.brokerToolTip              = new Label(this.pageObjects.brokerToolTip);
+        this.brokerToolTipText          = new Label(this.pageObjects.brokerToolTipText);
+        this.hiddenbrokerName           = new TextBox(this.pageObjects.hiddenbrokerName);
+        this.homeAddressfromGoogleApi   = new Label(this.pageObjects.homeAddressfromGoogleApi);
+        this.birthdateerror             = new Label(this.pageObjects.birthdateerror);
+        this.serverErrMsgFirstName      = new Label(this.pageObjects.serverErrMsgFirstName);
+        this.serverErrMsgLastName       = new Label(this.pageObjects.serverErrMsgLastName);
+        this.serverErrMsgGenderSelect   = new Label(this.pageObjects.serverErrMsgGenderSelect);
+        this.serverErrMsgSsn            = new Label(this.pageObjects.serverErrMsgSsn);
+        this.serverErrMsgMemberId       = new Label(this.pageObjects.serverErrMsgMemberId);
+        this.serverErrMsgStreetAddress  = new Label(this.pageObjects.serverErrMsgStreetAddress);
+        this.serverErrMsgCity           = new Label(this.pageObjects.serverErrMsgCity);
+        this.serverErrMsgState          = new Label(this.pageObjects.serverErrMsgState);
+        this.serverErrMsgZipCode        = new Label(this.pageObjects.serverErrMsgZipCode);
+        this.serverErrMsgMonth          = new Label(this.pageObjects.serverErrMsgMonth);
+        this.serverErrMsgDay            = new Label(this.pageObjects.serverErrMsgDay);
+        this.serverErrMsgYear           = new Label(this.pageObjects.serverErrMsgYear);
+        this.serverErrMsgContactNumber  = new Label(this.pageObjects.serverErrMsgContactNumber);
         this.serverErrMsgMailingAddress = new Label(this.pageObjects.serverErrMsgMailingAddress);
-        this.serverErrMsgMailingCity = new Label(this.pageObjects.serverErrMsgMailingCity);
-        this.serverErrMsgMailingState = new Label(this.pageObjects.serverErrMsgMailingState);
-        this.serverErrMsgMailingZip = new Label(this.pageObjects.serverErrMsgMailingZip);
-        this.serverErrMsgEmail = new Label(this.pageObjects.serverErrMsgEmail);
-        this.premiumAmount = new Label(this.pageObjects.premiumAmount);
-        this.enrollmentFee = new Label(this.pageObjects.enrollmentFee);
-        this.apptFloorNumError = new LinkText(this.pageObjects.apptFloorNumError);
-
-        this.memberId = new TextBox(this.pageObjects.memberId);
-        this.referralSource = new Select(this.pageObjects.referralSource);
-        this.errorMsgRefferalSource = new Label(this.pageObjects.errorMsgRefferalSource);
-        this.backToQuote = new LinkText(this.pageObjects.backToQuote);
-        this.emailText = new Label(this.pageObjects.emailText);
-        this.footer = new Label(this.pageObjects.footer);
-        this.copyright = new Label(this.pageObjects.copyRight);
-        this.helpContact = new Label(this.pageObjects.helpContact);
-        this.ShoppingContact = new Label(this.pageObjects.ShoppingContact);
-        this.contractNumber = new Label(this.pageObjects.contractNumber);
-
-        this.alternateTooltip = new Label(this.pageObjects.alternateTooltip);
-        this.alternateHelpopUp = new Label(this.pageObjects.alternateHelpopUp);
-        this.alternateidPopExit = new Label(this.pageObjects.alternateidPopExit);
+        this.serverErrMsgMailingCity    = new Label(this.pageObjects.serverErrMsgMailingCity);
+        this.serverErrMsgMailingState   = new Label(this.pageObjects.serverErrMsgMailingState);
+        this.serverErrMsgMailingZip     = new Label(this.pageObjects.serverErrMsgMailingZip);
+        this.serverErrMsgEmail          = new Label(this.pageObjects.serverErrMsgEmail);
+        this.premiumAmount              = new Label(this.pageObjects.premiumAmount);
+        this.enrollmentFee              = new Label(this.pageObjects.enrollmentFee);
+        this.apptFloorNumError          = new LinkText(this.pageObjects.apptFloorNumError);
+        this.memberId                   = new TextBox(this.pageObjects.memberId);
+        this.referralSource             = new Select(this.pageObjects.referralSource);
+        this.referralSourceText         = new Label(this.pageObjects.referralSourceText);
+        this.errorMsgRefferalSource     = new Label(this.pageObjects.errorMsgRefferalSource);
+        this.backToQuote                = new LinkText(this.pageObjects.backToQuote);
+        this.emailText                  = new Label(this.pageObjects.emailText);
+        this.footer                     = new Label(this.pageObjects.footer);
+        this.copyright                  = new Label(this.pageObjects.copyRight);
+        this.helpContact                = new Label(this.pageObjects.helpContact);
+        this.ShoppingContact            = new Label(this.pageObjects.ShoppingContact);
+        this.contractNumber             = new Label(this.pageObjects.contractNumber);
+        this.alternateTooltip           = new Label(this.pageObjects.alternateTooltip);
+        this.alternateHelpopUp          = new Label(this.pageObjects.alternateHelpopUp);
+        this.alternateidPopExit         = new Label(this.pageObjects.alternateidPopExit);
     }
 
     enrollStatus(breadcrumbheader) {
@@ -122,34 +122,43 @@ class PersonalInfoPage extends ControlBase {
     };
 
     /**
-     * Returns true if first  name is displayed or not
+     * Is used to verify that user in Personal info page or not
+     * Returns true if Personal Info page is displayed
      * @returns {Promise<Boolean>}
      */
     isAt() {
         return this.fieldFirstName.isPresentAndDisplayed();
     };
-
+    /**
+     * Selects given Home Address from Home address auto suggestion (Google API)
+     * @param {String} homeaddress Home Address
+     * @returns {Promise}
+     */
     selectHomeAddress(homeaddress) {
         var self = this;
         return browser.controlFlow().execute(function() {
             browser.sleep(3000);
             return self.homeAddressfromGoogleApi.getElements().filter(function(elem, index) {
                 return elem.getText().then(function(text) {
-                    console.log("text=========" + text);
-                    console.log("homeaddress==" + homeaddress);
+                    // console.log("text=========" + text);
+                    // console.log("homeaddress==" + homeaddress);
                     return text === homeaddress;
                 });
             }).last().clickIt();
         });
     };
-
+    /**
+     * Verifies and returns addesses from Auto suggestion based on given sub address string
+     * @param {String} subhomeaddress Sub string of Home Address
+     * @returns {Object<Array>} Returns all auto suggestion addresses
+     */
     getandVerifyallAddressSuggestions(ptext) {
         var dataarray = [];
         var self = this;
         return browser.controlFlow().execute(function() {
             return self.homeAddressfromGoogleApi.getElements().each(function(element, index) {
                 return element.getText().then(function(text) {
-                    console.log("text=========" + text);
+                    // console.log("text=========" + text);
                     expect(text).toContain(ptext);
                     return dataarray.push(text);
                 });
@@ -160,7 +169,11 @@ class PersonalInfoPage extends ControlBase {
 
         });
     };
-
+    /**
+     * Used to fill personal info text fields
+     * @param {Object} personalinfodata personal info data
+     * @returns {Promise} null
+     */
     fillPersonalInfo(perinfo) {
         var self = this;
         return browser.controlFlow().execute(function() {
@@ -190,8 +203,15 @@ class PersonalInfoPage extends ControlBase {
         });
     };
 
+    /**
+     * Used to fill address section in personal info page
+     * @param {Object} addressdata  Address section {"fieldHomeAddr":"","city":""}
+     * @returns {Promise} null
+     */
     fillAddress(perinfo) {
         var self = this;
+        // console.log("perinfo.fieldHomeAddr===============" + perinfo.fieldHomeAddr);
+        // console.log("perinfo.city=========================" + perinfo.city)
         return browser.controlFlow().execute(function() {
             self.fieldHomeAddr.setText(perinfo.fieldHomeAddr);
             self.fieldCity.setText(perinfo.city);
@@ -202,10 +222,19 @@ class PersonalInfoPage extends ControlBase {
             // expect(self.fieldCity.getAttribute("class")).toContain(perinfo.ariainvalid);
         });
     };
+    /**
+     * Waits until Loader Disapper 
+     */
     waitUntilLoderDisapper() {
         var loder = element(by.xpath('//img[@class="loaderImg"]'));
         Utility.waitUntilElementNotPresent(loder, longWait);
     }
+    /**
+     * Used to fill phone number,email,alternate id in personal info page
+     * @param {Object} object phone number,email,alternate id {"contactType":"",
+     * "phoneNumber":"","email":""} 
+     * @returns {Promise} null
+     */
     phoneNumberemail(phno) {
         var self = this;
         return browser.controlFlow().execute(function() {
@@ -220,6 +249,11 @@ class PersonalInfoPage extends ControlBase {
         });
     };
 
+    /**
+     * Fill broker information in personal info page
+     * @param {Object} brokerdata  Broker number {"brokernumber":""}
+     * @returns {Promise} null
+     */
     fillBroker(broker) {
         var self = this;
         return browser.controlFlow().execute(function() {
@@ -227,10 +261,6 @@ class PersonalInfoPage extends ControlBase {
                 self.next.click();
                 browser.sleep(2000);
             } else {
-                console.log('else block');
-                // Shounak: Updated the Broker # in every file
-                // Previous Broker Number had expired for DIT and MOT
-                // So, uncommenting this part
                 self.RadBtnBrokerYes.select();
                 self.hiddenfieldBrokerNum.setText(broker.brokernumber);
                 self.next.click();
@@ -238,10 +268,13 @@ class PersonalInfoPage extends ControlBase {
             }
         });
     };
-
+    /**
+     * Returns Profile Client side error messages
+     * @returns {Promise<Array>} Profile Client side error messages
+     */
     getProfileValidationMessages() {
         var promises = [];
-        var self =this;
+        var self = this;
         promises.push(this.errMsgFirstName.getText());
         promises.push(this.errMsgLastName.getText());
         //promises.push(this.errMsgGenderSelect.getText());
@@ -261,10 +294,13 @@ class PersonalInfoPage extends ControlBase {
         })
         return protractor.promise.all(promises);
     };
-
+    /**
+     * Returns Profile Server side error messages
+     * @returns {Promise<Array>} Profile Client Server error messages
+     */
     getServerProfileValidationMessages() {
         var promises = [];
-        var self=this;
+        var self = this;
         promises.push(this.serverErrMsgFirstName.getText());
         promises.push(this.serverErrMsgLastName.getText());
         // promises.push(this.serverErrMsgGenderSelect.getText());
@@ -284,7 +320,10 @@ class PersonalInfoPage extends ControlBase {
 
         return protractor.promise.all(promises);
     };
-
+    /**
+     * Returns Home Address Client side error messages
+     * @returns {Promise<Array>} Home Address Client side error messages
+     */
     getContactValidationMessages() {
         var promises = [];
         promises.push(this.errMsgHomeAddr.getText());
@@ -293,7 +332,10 @@ class PersonalInfoPage extends ControlBase {
         promises.push(this.errMsgZipCode.getText());
         return protractor.promise.all(promises);
     };
-
+    /**
+     * Returns Home Address Server side error messages
+     * @returns {Promise<Array>} Home Server Client side error messages
+     */
     getServerContactValidationMessages() {
         var promises = [];
         promises.push(this.serverErrMsgStreetAddress.getText());
@@ -302,7 +344,10 @@ class PersonalInfoPage extends ControlBase {
         promises.push(this.serverErrMsgZipCode.getText());
         return protractor.promise.all(promises);
     };
-
+    /**
+     * Returns Mailing Address Client side error messages
+     * @returns {Promise<Array>} Mailing Address Client side error messages
+     */
     getMailAddressValidationMessages() {
         var promises = [];
         promises.push(this.errMsghiddenfieldMailAddr.getText());
@@ -311,7 +356,10 @@ class PersonalInfoPage extends ControlBase {
         promises.push(this.errMsghiddenfieldZipCode.getText());
         return protractor.promise.all(promises);
     };
-
+    /**
+     * Returns Mailing Address Server side error messages
+     * @returns {Promise<Array>} Mailing Address Server side error messages
+     */
     getServerMailAddressValidationMessages() {
         var promises = [];
         promises.push(this.serverErrMsgMailingAddress.getText());
@@ -320,30 +368,62 @@ class PersonalInfoPage extends ControlBase {
         promises.push(this.serverErrMsgMailingZip.getText());
         return protractor.promise.all(promises);
     };
-
+    /**
+     * Returns personal info page all Server error messages
+     * @returns {Promise<Array>} personal info page all Server error messages
+     */
     getServerValidationMessages() {
         var promises = [];
+        var self = this;
         promises.push(this.serverErrMsgFirstName.getText());
         promises.push(this.serverErrMsgLastName.getText());
-        promises.push(this.serverErrMsgSsn.getText());
+        promises.push(self.serverErrMsgSsn.getText());
+        promises.push(self.serverErrMsgMemberId.getText());
         promises.push(this.serverErrMsgStreetAddress.getText());
         promises.push(this.serverErrMsgCity.getText());
         promises.push(this.serverErrMsgContactNumber.getText());
         promises.push(this.serverErrMsgEmail.getText());
         return protractor.promise.all(promises);
     };
-
+    /**
+     * Returns personal info page all client error messages
+     * @returns {Promise<Array>} personal info page all client error messages
+     */
     getClientValidationMessages() {
         var promises = [];
+        var self = this;
         promises.push(this.errMsgFirstName.getText());
         promises.push(this.errMsgLastName.getText());
         promises.push(this.errMsgSsn.getText());
+        promises.push(self.errMsgMemberId.getText());
         promises.push(this.errMsgHomeAddr.getText());
         promises.push(this.errMsgCity.getText());
         promises.push(this.errMsgPhoneNumber.getText());
         promises.push(this.errMsgEmailAddr.getText());
         return protractor.promise.all(promises);
     };
+
+ /**
+     * Used to fill Mailing address section in personal info page
+     * @param {Object} mailingaddressdata Mailing Address {"fieldMailAddr":"","fieldMailCity":"","fieldMailState":"","fieldMailZipCode":""}
+     * @returns {Promise} null
+     */
+    fillMailingAddress(perinfo) {
+        var self = this;
+        self.chkBoxDiffMailAddr.unCheck();      
+        return browser.controlFlow().execute(function() {
+            self.hiddenfieldMailAddr.setText(perinfo.fieldMailAddr);
+            self.hiddenfieldCity.setText(perinfo.fieldMailCity);
+            self.hiddenfieldState.setText(perinfo.fieldMailState);
+            self.hiddenfieldZipCode.setText(perinfo.fieldMailZipCode);
+            self.fieldPhoneNumber.setText('');
+            browser.sleep(2000);
+            Utility.waitUntilElementNotPresent(element(by.css('img.loaderImg')));
+            // expect(self.fieldHomeAddr.getAttribute("class")).toContain(perinfo.ariainvalid);
+            // expect(self.fieldCity.getAttribute("class")).toContain(perinfo.ariainvalid);
+        });
+    };
+
 
 
 };

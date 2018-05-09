@@ -2,16 +2,15 @@
 start with 3 dependents so primary plus spouse plus 2 children
 (maybe thaat's 4)*/
 
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var enrollhomepage = new(require('../../../pageObjects/cxinit/home-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
-var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
-var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../../testData/' + testDataEnv + '/dppo/dppo.2326_E2EPayEFTMon_ThreeDep.json');
-var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
-var product = ['DPPO'];
+var perInfo        = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo        = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var facilities     = new(require('../../../pageObjects/cxinit/facilities-page.js'));
+var payment        = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt        = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var enrollPage     = new(require('../../../pageObjects/cxinit/enroll-page.js'));
+var TestData       = require('../../../testData/' + testDataEnv + '/dppo/dppo.2326_E2EPayEFTMon_ThreeDep.json');
+var statesData     = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
+var product        = ['DPPO'];
 
 //To Navigate Personla Info Page
 dataProvider(statesData.states, function (sData, sdescription) {
@@ -33,8 +32,10 @@ dataProvider(statesData.states, function (sData, sdescription) {
 
                     //Fill the Valid Data in the home page of Enrollment and Proceed
                     it('E2E_1 : Should complete the Enroll Page', function() {
-                        TestData.firstname = Utility.randomNo('String', 5);
-                        TestData.lastname = Utility.randomNo('String', 5);
+                      TestData.firstname = Utility.randomNo('String', 8);
+                       TestData.lastname = Utility.randomNo('String', 8);
+                       var ssn = Utility.randomNo('Number', 8);
+                       TestData.ssn = '1' + ssn.toString();
                         enrollPage.enterHomePageDetails(tData.enrollData).then(function(sdate) {
                             effectiveDate = sdate;
                             expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();

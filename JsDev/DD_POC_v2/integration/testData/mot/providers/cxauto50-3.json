@@ -1,160 +1,160 @@
 {
-    "Location": {
-        "Location1": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "5",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location"   : {
+    "Location1"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "5",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "5 miles"
+    "params1"    : {},
+    "verifyDist" : "5 miles"
         },
-        "Location2": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "10",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location2"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "10",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "10 miles"
+    "params1"    : {},
+    "verifyDist" : "10 miles"
         },
-        "Location3": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "15",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location3"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "15",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "15 miles"
+    "params1"    : {},
+    "verifyDist" : "15 miles"
         },
-        "Location4": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "25",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location4"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "25",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "25 miles"
+    "params1"    : {},
+    "verifyDist" : "25 miles"
         },
-        "Location5": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "35",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location5"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "35",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "35 miles"
+    "params1"    : {},
+    "verifyDist" : "35 miles"
         },
-        "Location6": {
-            "params": {
-                "zipcode": "94105",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location6"  : {
+    "params"     : {
+    "zipcode"    : "94105",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "60 miles"
+    "params1"    : {},
+    "verifyDist" : "60 miles"
         },
-        "Location7": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "5",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location7"  : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "5",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "5 miles"
+    "params1"    : {},
+    "verifyDist" : "5 miles"
         },
-        "Location8": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "10",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location8"  : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "10",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "10 miles"
+    "params1"    : {},
+    "verifyDist" : "10 miles"
         },
-        "Location9": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "15",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location9"  : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "15",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "15 miles"
+    "params1"    : {},
+    "verifyDist" : "15 miles"
         },
-        "Location10": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "25",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location10" : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "25",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "25 miles"
+    "params1"    : {},
+    "verifyDist" : "25 miles"
         },
-        "Location11": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "35",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location11" : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "35",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "35 miles"
+    "params1"    : {},
+    "verifyDist" : "35 miles"
         },
-        "Location12": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "meta_data": false,
-                "specialty": ["GENERAL DENTIST", "Endodontist"]
+    "Location12" : {
+    "params"     : {
+    "zipcode"    : "94949",
+    "distance"   : "60",
+    "page"       : "0",
+    "per_page"   : "60000",
+    "max"        : "60000",
+    "meta_data"  : false,
+    "specialty"  : ["GENERAL DENTIST", "Endodontist"]
             },
-            "params1": {},
-            "verifyDist": "60 miles"
+    "params1"    : {},
+    "verifyDist" : "60 miles"
         }
     }
 }

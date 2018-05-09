@@ -1,12 +1,12 @@
 const XlsxPopulate = require('xlsx-populate');
-var TestData = require('../../testData/' + testDataEnv + '/dhmo/CXAUTO_101-PPO.test.json');
-var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../pageObjects/cxinit/dependent-page.js'));
-var facilities = new(require('../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../pageObjects/cxinit/receipt-page.js'));
-var enrollPage = new(require('../../pageObjects/cxinit/enroll-page.js'));
-var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
+var TestData       = require('../../testData/' + testDataEnv + '/dhmo/CXAUTO_101-PPO.test.json');
+var perInfo        = new(require('../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo        = new(require('../../pageObjects/cxinit/dependent-page.js'));
+var facilities     = new(require('../../pageObjects/cxinit/facilities-page.js'));
+var payment        = new(require('../../pageObjects/cxinit/payment-page.js'));
+var receipt        = new(require('../../pageObjects/cxinit/receipt-page.js'));
+var enrollPage     = new(require('../../pageObjects/cxinit/enroll-page.js'));
+var statesData     = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
 var mailtxt;
 
 describe('Verify Excel Data__ PersInfoPg: for state -', function() {

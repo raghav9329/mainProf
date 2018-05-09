@@ -2,16 +2,16 @@
 
 //This Spec is used to Verify and Validate Ene to End Work Flow with the Errors and the Happy path
 
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new(require('../../../pageObjects/cxinit/dependent-page.js'));
-var facilities = new(require('../../../pageObjects/cxinit/facilities-page.js'));
-var payment = new(require('../../../pageObjects/cxinit/payment-page.js'));
-var receipt = new(require('../../../pageObjects/cxinit/receipt-page.js'));
-var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/051217_E2E_POM_Workflow.json');
-var pdf2Text = require('pdf2text')
-var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
-var shopping = new(require('../../../pageObjects/cxinit/shopping-page.js'));
+var perInfo     = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo     = new(require('../../../pageObjects/cxinit/dependent-page.js'));
+var facilities  = new(require('../../../pageObjects/cxinit/facilities-page.js'));
+var payment     = new(require('../../../pageObjects/cxinit/payment-page.js'));
+var receipt     = new(require('../../../pageObjects/cxinit/receipt-page.js'));
+var enrollPage  = new(require('../../../pageObjects/cxinit/enroll-page.js'));
+var TestData    = require('../../../testData/' + testDataEnv + '/dhmo/051217_E2E_POM_Workflow.json');
+var pdf2Text    = require('pdf2text')
+var statesData  = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
+var shopping    = new(require('../../../pageObjects/cxinit/shopping-page.js'));
 var planOptions = new(require('../../../pageObjects/cxinit/plan-options-page.js'));
 var planDetails = new(require('../../../pageObjects/cxinit/plan-details-page.js'));
 
@@ -39,22 +39,34 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         })
                         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
                         perInfo.next.click();
-                        expect(perInfo.getServerValidationMessages()).toEqual(TestData.personalInfoServerErrors);
-                        expect(perInfo.getClientValidationMessages()).toEqual(TestData.personalInfoServerErrors);
+                        if (pdescription == 'DHMO' || pdescription == 'DPPO') {
+                            expect(perInfo.getServerValidationMessages()).toEqual(TestData.personalInfoErrors);
+                            expect(perInfo.getClientValidationMessages()).toEqual(TestData.personalInfoErrors);
+                        }
+
+
+                        if (pdescription == 'AHMO' || pdescription == 'APPO') {
+                            expect(perInfo.getServerValidationMessages()).toEqual(TestData.personalInfoErrorsAarp);
+                            expect(perInfo.getClientValidationMessages()).toEqual(TestData.personalInfoErrorsAarp);
+
+                        }
                     });
 
 
                     it('E2E_1.1 : Should complete the Personal info page with Max characters of the fields in Page', function() {
-                        enrollPage.enterHomePageDetails(tData.enrollData).then(function(sdate) {
-                            effectiveDate = sdate;
-                            console.log("sdate============" + sdate);
-                        })
+                        // enrollPage.enterHomePageDetails(tData.enrollData).then(function(sdate) {
+                        //     effectiveDate = sdate;
+                        //     console.log("sdate============" + sdate);
+                        // })
                         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
-
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();
+                            console.log(" TestData.ssn===" + TestData.ssn)
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -71,80 +83,50 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         perInfo.fieldLastName.setText(TestData.maxlengthLastname);
 
                         perInfo.fieldLastName.getValue().then(function(lname) {
-                                console.log("lname.length==" + lname.length);
-                                expect(perInfo.fieldLastName.getAttribute('maxlength')).toEqual(lname.length.toString());
-                            })
-                            /*if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                                perInfo.fieldSsn.setText(TestData.ssn);
-                                perInfo.fieldAlternateId.setText(TestData.alternateid);
-                                perInfo.alternateTooltip.click();
-                                expect(perInfo.alternateHelpopUp.isPresentAndDisplayed()).toBeTruthy();
-                                perInfo.alternateidPopExit.click();
-                            }*/
-
-
+                            console.log("lname.length==" + lname.length);
+                            expect(perInfo.fieldLastName.getAttribute('maxlength')).toEqual(lname.length.toString());
+                        })
                         perInfo.fieldZipCode.getValue().then(function(zipcode) {
                             console.log("Zipcode===" + zipcode);
                             expect(zipcode).toEqual(tData.enrollData.ZIPcode);
-                            // expect(zipcode).toEqual(TestData.ZipCode);
                         })
-                        perInfo.fieldZipCode.setText(tData.enrollData.ZIPcode);
+                        perInfo.fieldZipCode.setText(TestData.ZipCode);
                         perInfo.fieldPhoneNumber.click();
-                        if (perInfo.zipPopUp.isPresentAndDisplayed()) {
-                            expect(perInfo.zipPopUp.isPresentAndDisplayed()).toBeTruthy();
-                            perInfo.zipPopBack.click();
-                        }
-
+                        perInfo.zipPopUp.isPresentAndDisplayed().then(function(displayed) {
+                            if (displayed) {
+                                expect(perInfo.zipPopUp.isPresentAndDisplayed()).toBeTruthy();
+                                perInfo.zipPopBack.click();
+                            }
+                        })
                         perInfo.fieldZipCode.getValue().then(function(zipcode) {
                             console.log("Zipcode===" + zipcode);
-                            tData
                             expect(zipcode).toEqual(tData.enrollData.ZIPcode);
-                            // expect(zipcode).toEqual(TestData.ZipCode);
                         })
                         perInfo.fieldZipCode.setText(tData.enrollData.ZIPcode);
                         perInfo.fieldPhoneNumber.click();
-                        if (perInfo.zipPopUp.isPresentAndDisplayed()) {
-                            expect(perInfo.zipPopUp.isPresentAndDisplayed()).toBeTruthy();
-                            perInfo.zipPopNewQuote.click();
-                        }
-                        if(sdescription == 'CA' && pdescription == 'DPPO'){
-                            console.log("CA State and DPPO Product");
-                            // expect(browser.getTitle()).toEqual('Get A Quote');
-                            enrollPage.enterHomePageDetails(tData.enrollData).then(function(sdate) {
-                            effectiveDate = sdate;
-                            console.log("sdate============" + sdate);
+                        perInfo.zipPopUp.isPresentAndDisplayed().then(function(displayed) {
+                            if (displayed) {
+                                expect(perInfo.zipPopUp.isPresentAndDisplayed()).toBeTruthy();
+                                perInfo.zipPopNewQuote.click();
+                                expect(planOptions.isAt()).toEqual(true);
+                                planOptions.getPlanDetails(tData.enrollData.PlanName).click();
+                                planDetails.buyPlan.click();
+                            }
                         })
 
-                        }
-                        // if (sdescription == 'CA' || sdescription == 'TX' || sdescription == 'PA' || sdescription == 'FL' || sdescription == 'NY' || sdescription == 'AK' || sdescription == 'TN' || sdescription == 'VI' || sdescription == 'DC' || sdescription == 'LA' || sdescription == 'MD') {
-                            expect(planOptions.isAt()).toEqual(true);
-                            planOptions.getPlanDetails(tData.enrollData.PlanName).click();
-                            // planOptions.getPlanDetails(TestData.PlanOptionsPlan).click();
-                            planDetails.buyPlan.click();
-                        // }
-
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
-                        perInfo.fillPersonalInfo(TestData);
-                        perInfo.fillAddress(TestData);
-                        perInfo.phoneNumberemail(TestData);
-                        perInfo.next.click();
-
-                        /*expect(shopping.Zipcode.isPresentAndDisplayed()).toBeTruthy();
-                        expect(browser.getTitle()).toEqual("Get A Quote");
-                        shopping.Zipcode.setText(tData.enrollData.ZIPcode);
-                        shopping.enterDOB(TestData.dob);
-                        shopping.removeDependent.click();
-                        shopping.Showplans.click();*/
-                        // perInfo.next.click();maxlength
                     });
 
                     //Enter the valid Test Data in the Personal Information page and Click n the Next
 
                     it('E2E_Flow_2: Verify Personal Information Page is filled with Valid data and Proceed', function() {
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();
+                            console.log(" TestData.ssn===" + TestData.ssn)
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);
@@ -185,7 +167,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
                         depInfo.continue.click();
                         Utility.scrollToTop();
-                        expect(depInfo.depError.getText()).toEqual("You can select only 1 Spouse or Domestic Partner.");
+                        expect(depInfo.depError.getText()).toEqual("You can select only 1 Spouse or Partner.");
                         depInfo.relationship('Dependent2').selectByText(TestData.updateRelationship);
 
                     });

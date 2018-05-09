@@ -1,6 +1,6 @@
 "use strict"
-var TestData = require('../../testData/' + testDataEnv + '/providers/cxauto77.json');
-var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var TestData        = require('../../testData/' + testDataEnv + '/providers/cxauto77.json');
+var dirSearch       = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 
 describe('Providers CXAUTO:77 ', function() {

@@ -18,22 +18,25 @@
     "coverageStartDate": "07/01/2017",
     "ariainvalid": "success",
     "darkGreen": "rgba(67, 176, 42, 1)",
-    "liteGreen":"rgba(142, 208, 127, 1)",
+    "dark": "rgba(0, 0, 0, 1)",
+    "liteGreen": "rgba(142, 208, 127, 1)",
+    "lite": "rgba(102, 102, 102, 1)",
     "gray": "rgba(191, 191, 191, 1)",
     "DependentPageTitle": "Dependents | Enrollment | Delta Dental Insurance Company",
     "facilitiesPageTitle": "Facilities | Enrollment | Delta Dental Insurance Company",
     "facilityoption1": "Kayvan Kafayi DDS",
     "facilityoption2": "Van Ness Dental Group",
-    "baseFee":"$80.76",
-    "enrollFee":"$10.0",
+    "baseFee": "$80.76",
+    "enrollFee": "$10.0",
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "deltaRating": 1,
     "queryAnswer": "Test",
-     "discloser": "Delta_CA_DHMO_CAA55",
-    
+    "discloser": "Delta_CA_DHMO_CAA55",
 
-    "Spouse": {
+
+    "Spouse":
+    {
         "relationship": "Spouse",
         "firstName": "Seetha",
         "middleName": "m",
@@ -42,9 +45,9 @@
         "DOB": "05-10-1995"
     },
 
-    
+
     "dependentErrors": ["Please select a relationship", "This field is required.", "This field is required.", "Please enter a valid month between (01-12)", "Please enter a valid day between (01-31)", "Please enter a valid year"],
-    
+
     "paymentErrors": ["Please enter your full name", "Please enter your card number", "Please enter a valid month between (01-12)", "Please enter a valid year", "Please enter CVC code from your card"],
     "paymentAddressErrors": ["Please enter a street address", "Please enter a city", "Please enter a state", "Please enter a ZIP code"],
     "nameOnCard": "Peter Heins",
@@ -54,7 +57,8 @@
     "securityCode": "125",
     "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
     "thanksMsg": "Thank you for taking our survey. Your response is very important to us.",
-    "planSummary": {
+    "planSummary":
+    {
         "Deductible_per_calendar": "$0",
         "Max_per_calendar": "$0",
         "Officevisit": "$15",
@@ -69,7 +73,8 @@
         "Crowns": "$325 - $425",
         "Orthodontics": "$2,700 - $2,900"
     },
-    "primaryFacility": {
+    "primaryFacility":
+    {
         "facilityName": "Kayvan Kafayi DDS",
         "street": "450 Sutter St Rm 1433",
         "city": "San Francisco",
@@ -77,8 +82,9 @@
         "postalCode": "94108-4010",
         "telephone": "415.398.2360"
     },
-    "dependent_Facility_1": {
-          "facilityName": "Van Ness Dental Group",
+    "dependent_Facility_1":
+    {
+        "facilityName": "Van Ness Dental Group",
         "street": "2243 Van Ness Ave Ste 201",
         "city": "San Francisco",
         "region": "CA",

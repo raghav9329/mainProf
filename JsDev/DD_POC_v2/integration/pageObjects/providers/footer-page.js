@@ -12,16 +12,19 @@ class FooterPage extends ControlBase {
 
     constructor() {
         super(null, 'FooterPage');
-        this.pageObjects = new FooterLocators();
-        this.contactUs = new LinkText(this.pageObjects.contactUs);
+        this.pageObjects        = new FooterLocators();
+        this.contactUs          = new LinkText(this.pageObjects.contactUs);
         this.languageAssistance = new LinkText(this.pageObjects.languageAssistance);
-        this.legalNotices = new LinkText(this.pageObjects.legalNotices);
-        this.privacy = new LinkText(this.pageObjects.privacy);
-        this.lastUpdated = new Label(this.pageObjects.lastUpdated);
-        this.disclaimer = new Label(this.pageObjects.disclaimer);
-
+        this.legalNotices       = new LinkText(this.pageObjects.legalNotices);
+        this.privacy            = new LinkText(this.pageObjects.privacy);
+        this.lastUpdated        = new Label(this.pageObjects.lastUpdated);
+        this.disclaimer         = new Label(this.pageObjects.disclaimer);
     }
 
+    /**
+     * Verifies footer
+     * @param {Object} footerdata
+     */
     verifyFooter(footerDataObj) {
 
         expect(this.contactUs.isPresentAndDisplayed()).toBeTruthy();
@@ -48,7 +51,7 @@ class FooterPage extends ControlBase {
         browser.navigate().back();
 
         expect(this.lastUpdated.getText()).toContain(footerDataObj.lastUpdated);
-        
+
         expect(this.disclaimer.getText()).toContain(footerDataObj.deltaDentalInfo);
         expect(this.disclaimer.getText()).toContain(footerDataObj.serviceInfo);
         expect(this.disclaimer.getText()).toContain(footerDataObj.deltaCareInfo);

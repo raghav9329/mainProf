@@ -1,6 +1,6 @@
 "use strict"
-var TestData = require('../../testData/'+testDataEnv+'/providers/cxinit2-1146.json');
-var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var TestData        = require('../../testData/'+testDataEnv+'/providers/cxinit2-1146.json');
+var dirSearch       = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 //var isUrlBlocked = new (require (''));
 

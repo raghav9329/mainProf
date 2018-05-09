@@ -2,8 +2,8 @@
 
 
 "use strict"
-var TestData = require('../../testData/' + testDataEnv + '/providers/cxauto36.json');
-var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var TestData        = require('../../testData/' + testDataEnv + '/providers/cxauto36.json');
+var dirSearch       = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
 
 describe('Providers CXAUTO:36 ', function() {
@@ -83,10 +83,10 @@ describe('Providers CXAUTO:36 ', function() {
             if (pDistance == "0") {
                 pDistance = "<0.1 mi";
                 expect(dirSearch.getProviderdetails(pPname, 'MILAGE')).toContainIgnoreCase(pDistance);
-            }else{
+            } else {
                 expect(dirSearch.getProviderdetails(pPname, 'MILAGE')).toContainIgnoreCase(pDistance);
             }
-            
+
             providerDetails.openView(pPname, 'VIEW');
 
             //Provider Distance Verefication   
@@ -96,7 +96,7 @@ describe('Providers CXAUTO:36 ', function() {
             expect(providerDetails.providerName.getText()).toEqual(pPname);
             expect(providerDetails.providerSpecialty.getText()).toEqualIgnoreCase(pSpecialty);
 
-            // //Provider Address
+            //Provider Address
             expect(providerDetails.providerPlaceName.getText()).toEqualIgnoreCase(pOfficeName);
             expect(providerDetails.providerAddressStreet.getText()).toEqualIgnoreCase(paddress);
             expect(providerDetails.providerAddressCity.getText()).toEqualIgnoreCase(pCity);
@@ -116,23 +116,25 @@ describe('Providers CXAUTO:36 ', function() {
             expect(providerDetails.getOfficeHoursByDay('Sat')).toEqualIgnoreCase(psaturdayHours);
             expect(providerDetails.getOfficeHoursByDay('Sun')).toEqualIgnoreCase(psundayHours);
 
-            // // Provider Facility
-
+            // Provider Facility
+            expect(providerDetails.providerAccess.isPresentAndDisplayed()).toBeTruthy();
             expect(providerDetails.getProviderAccessByfacility('Free parking')).toEqualIgnoreCase(pfreeParking);
             expect(providerDetails.getProviderAccessByfacility('Wheelchair access')).toEqualIgnoreCase(pwheelChairAccess);
             expect(providerDetails.getProviderAccessByfacility('Public transit access')).toEqualIgnoreCase(ppublicTransitAccess);
             expect(providerDetails.getProviderAccessByfacility('Network access')).toEqualIgnoreCase(pinternetAccess);
 
             // //Languages
-            expect(providerDetails.providerLanguage.getText()).toContainIgnoreCase(ppracticeLocationLanguages);
+            providerDetails.providerLanguage.getText().then(function(lang) {
+                expect(lang.replace(/\r?\n|\r/g, "")).toContainIgnoreCase(ppracticeLocationLanguages.toString().replace(/[^a-zA-Z]|\s/g, ""));
+            })
 
-            // //Get Provider Data
+            //Get Provider Data
 
             expect(providerDetails.getProviderDataByField('Dentist NPI')).toEqualIgnoreCase(pNPI);
             expect(providerDetails.getProviderDataByField('License #')).toEqualIgnoreCase(plicenseNumber);
             expect(providerDetails.getProviderDataByField('License State')).toEqualIgnoreCase(plicenseState);
-            expect(providerDetails.getProviderDataByField('Gender')).toEqualIgnoreCase(pGender);
-            //Checking to Inaccurate Information Page
+            expect(providerDetails.getProviderDataByField('Gender')).toContainIgnoreCase(pGender);
+            // Checking to Inaccurate Information Page
             expect(providerDetails.letUsKnow.isPresentAndDisplayed()).toBeTruthy();
             providerDetails.letUsKnow.click();
             providerDetails.workatOffice('I work at this office.').click();
@@ -157,17 +159,21 @@ describe('Providers CXAUTO:36 ', function() {
                 expect(providerDetails.getOfficeHoursByDay('Sat')).toEqualIgnoreCase(psaturdayHours);
                 expect(providerDetails.getOfficeHoursByDay('Sun')).toEqualIgnoreCase(psundayHours);
 
+                expect(providerDetails.providerAccess.isPresentAndDisplayed()).toBeTruthy();
                 expect(providerDetails.getProviderAccessByfacility('Free parking')).toEqualIgnoreCase(pfreeParking);
                 expect(providerDetails.getProviderAccessByfacility('Wheelchair access')).toEqualIgnoreCase(pwheelChairAccess);
                 expect(providerDetails.getProviderAccessByfacility('Public transit access')).toEqualIgnoreCase(ppublicTransitAccess);
                 expect(providerDetails.getProviderAccessByfacility('Network access')).toEqualIgnoreCase(pinternetAccess);
 
                 // //Languages
-                expect(providerDetails.providerLanguage.getText()).toContainIgnoreCase(ppracticeLocationLanguages);
+                providerDetails.providerLanguage.getText().then(function(lang) {
+                    expect(lang.replace(/\r?\n|\r/g, "")).toContainIgnoreCase(ppracticeLocationLanguages.toString().replace(/[^a-zA-Z]|\s/g, ""));
+                })
 
                 // //Get Provider Data
-
-                expect(providerDetails.getProviderDataByField('Group Practice NPI')).toEqualIgnoreCase(pNPI);
+                providerDetails.getProviderDataByField('Group Practice NPI').then(function(displayed) {
+                    if (displayed) expect(providerDetails.getProviderDataByField('Group Practice NPI')).toEqualIgnoreCase(pNPI);
+                })
 
                 //Checking to Inaccurate Information Page
                 expect(providerDetails.letUsKnow.isPresentAndDisplayed()).toBeTruthy();

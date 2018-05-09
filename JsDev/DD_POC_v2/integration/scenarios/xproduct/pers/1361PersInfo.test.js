@@ -2,11 +2,10 @@
 
 //This spec is used to :As a product owner I want to allow the user to move back and forth into the application pages.
 
-var TestData = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1361PersInfo.json');
-var perInfo = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
-var depInfo = new (require('../../../pageObjects/cxinit/dependent-page.js'));
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.1361PersInfo.json');
+var perInfo    = new (require('../../../pageObjects/cxinit/perInfo-page.js'));
+var depInfo    = new (require('../../../pageObjects/cxinit/dependent-page.js'));
 var facilities = new (require('../../../pageObjects/cxinit/facilities-page.js'));
-
 var enrollPage = new (require('../../../pageObjects/cxinit/enroll-page.js'));
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
@@ -61,10 +60,13 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     //Verify and Validate the all the fields of the Personal Info page are filled with valid Test Data and proceed
 
                     it('Verify Personal Information Page is filled with Valid data and Proceed', function () {
+                        TestData.firstname = Utility.randomNo('String', 8);
+                        TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;
-                            TestData.ssn = "1234560215",
-                                TestData.alternateid = "test@test.com";
+                            TestData.MemberId = false;                            
+                            var ssn = Utility.randomNo('Number', 8);
+                            TestData.ssn = '1' + ssn.toString();                            
+                            TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             TestData.MemberId = Utility.randomNo('Number', 10);

@@ -1,9 +1,9 @@
-var marketPage = require('../../../pageObjects/cxinit/aarp-market-page.js');
+var marketPage  = require('../../../pageObjects/cxinit/aarp-market-page.js');
 var planOptions = new(require('../../../pageObjects/cxinit/plan-options-page.js'));
 var planDetails = new(require('../../../pageObjects/cxinit/plan-details-page.js'));
-var perInfo = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var getaQuote = new(require('../../../pageObjects/cxinit/shopping-page.js'));
+var perInfo     = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var enrollPage  = new(require('../../../pageObjects/cxinit/enroll-page.js'));
+var getaQuote   = new(require('../../../pageObjects/cxinit/shopping-page.js'));
 
 
 

@@ -1,114 +1,125 @@
 {
-    "NoOfPeopleCovered": "2",
-    "ZIPcode": "94536",
-    "DOB_HOME": "07/02/1988",
-    "firstname": "Krishna",
-    "mi": "K",
-    "lastname": "K",
-    "gender": "Male",
-    "dob": "05-05-1988",
-    "ssn": "1234560215",
-    "alternateid": "test@test.com",
-    "ariainvalid": "success",
-    "ErrorMsg_Homeaddress": "Please enter a street address",
-    "ErrorMsg_city": "Please enter a city",
-    "ErrorMsg_State": "Please enter a state",
-    "ErrorMsg_ZipCode": "Please enter a ZIP code",
-    "ErrorMsg_PhoneNumber": "Please enter your phone number",
-    "ErrorMsg_Month": "Please enter a valid month between (01-12)",
-    "ErrorMsg_Date": "Please enter a valid day between (01-31)",
-    "ErrorMsg_Year": "Please enter a valid year",
-    "ariainvalid_error": "error",
-    "ariainvalid_success": "success",
-    "City1": "Union City",
-    "City2": "Cardiff-by-the-sea",
-    "City3": "La Cañada Flintridge",
-    "City4": "áü&#",
-    "State1": "CA",
-    "State2": "California",
-    "State3": "**--//",
+    "NoOfPeopleCovered"    : "2",
+    "ZIPcode"              : "94536",
+    "DOB_HOME"             : "07/02/1988",
+    "firstname"            : "Krishna",
+    "mi"                   : "K",
+    "lastname"             : "K",
+    "gender"               : "Male",
+    "dob"                  : "05-05-1988",
+    "ssn"                  : "1234560215",
+    "alternateid"          : "test@test.com",
+    "ariainvalid"          : "success",
+    "ErrorMsg_Homeaddress" : "Please enter a street address",
+    "ErrorMsg_city"        : "Please enter a city",
+    "ErrorMsg_State"       : "Please enter a state",
+    "ErrorMsg_ZipCode"     : "Please enter a ZIP code",
+    "ErrorMsg_PhoneNumber" : "Please enter your phone number",
+    "ErrorMsg_Month"       : "Please enter a valid month between (01-12)",
+    "ErrorMsg_Date"        : "Please enter a valid day between (01-31)",
+    "ErrorMsg_Year"        : "Please enter a valid year",
+    "ariainvalid_error"    : "error",
+    "ariainvalid_success"  : "success",
+    "City1"                : "Union City",
+    "City2"                : "Cardiff-by-the-sea",
+    "City3"                : "La Cañada Flintridge",
+    "City4"                : "áü&#",
+    "State1"               : "CA",
+    "State2"               : "California",
+    "State3"               : "**--//",
 
-     "enrollData": {
-        "PlanName": "DeltaCare ® USA Plan 15B",
-        "PlanType": "DHMO",
-        "PlanCode": "PLN15B",
-        "CoverageStartDate": "12/1/2018",
-        "State": "CA",
-        "ZIPcode": "94105",
-        "Country": "USA",
-        "EnrollmentFee": "0.00",
-        "AnnualCost": "342.96",
-        "CoverageType": "Self",
-        "PlanID": "4546969",
-        "IssuerCode": "AARP",
-        "NoOfPeopleCovered": "1",
-          "dob":"05-05-1988"
+    "enrollData":
+    {
+        "PlanName"          : "DeltaCare ® USA Plan 15B",
+        "PlanType"          : "DHMO",
+        "PlanCode"          : "PLN15B",
+        "CoverageStartDate" : "12/1/2018",
+        "State"             : "CA",
+        "ZIPcode"           : "94105",
+        "Country"           : "USA",
+        "EnrollmentFee"     : "0.00",
+        "AnnualCost"        : "342.96",
+        "CoverageType"      : "Self",
+        "PlanID"            : "4546969",
+        "IssuerCode"        : "AARP",
+        "NoOfPeopleCovered" : "1",
+        "dob"               : "05-05-1988"
     },
 
-    "FirstNameFieldHelper": {
+    "FirstNameFieldHelper":
+    {
         "FName": "ValidTxtToReduceError"
     },
 
-    "Address_Suggestion": {
-        "PartialAddress": "949",
-        "FullAddress": "949Broadway, New York, NY, United States",
-        "City": "New York",
-        "State": "NY",
-        "ZipCode": "10010"
+    "Address_Suggestion":
+    {
+        "PartialAddress" : "949",
+        "FullAddress"    : "949Broadway, New York, NY, United States",
+        "City"           : "New York",
+        "State"          : "NY",
+        "ZipCode"        : "10010"
     },
 
-    "Address_Valid": {
-        "Home": "100 First street, #4",
-        "City": "San Francisco",
-        "State": "California",
-        "ZIPcode": "94105-2635",
-        "ErrorMsg": "Please enter a valid number."
+    "Address_Valid":
+    {
+        "Home"     : "100 First street, #4",
+        "City"     : "San Francisco",
+        "State"    : "California",
+        "ZIPcode"  : "94105-2635",
+        "ErrorMsg" : "Please enter a valid number."
     },
-    "Address_Invalid": {
-        "Home": "35995 Fremont Blvd",
-        "City": "gg****",
-        "State": "CA",
-        "ZIPcode": "123",
-        "ErrorMsg": "ZIP code must have at least 5 digits"
+    "Address_Invalid":
+    {
+        "Home"     : "35995 Fremont Blvd",
+        "City"     : "gg****",
+        "State"    : "CA",
+        "ZIPcode"  : "123",
+        "ErrorMsg" : "ZIP code must have at least 5 digits"
     },
 
-    "Personalinfo": {
-        "HAddress_Blank": {
-            "Home": "",
-            "City": "Fremont",
-            "State": "CA",
-            "ZIPcode": "94903",
-            "ErrorMsg": "Please enter a street address"
+    "Personalinfo":
+    {
+        "HAddress_Blank":
+        {
+            "Home"     : "",
+            "City"     : "Fremont",
+            "State"    : "CA",
+            "ZIPcode"  : "94903",
+            "ErrorMsg" : "Please enter a street address"
         },
-        "HAddress_Valid": {
-            "Home": "35995 Fremont Blvd Apt 98",
-            "City": "Fremont",
-            "State": "CA",
-            "ZIPcode": "94903",
-            "ErrorMsg": ""
-        },
-
-        "HAddress_Invalid": {
-            "Home": "35995 Fremont Blvd",
-            "City": "Fremont",
-            "State": "CA",
-            "ZIPcode": "94903",
-            "ErrorMsg": "Please ensure you have entered an Apt/Floor/Suite number",
-            "ErrorMsg1": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
+        "HAddress_Valid":
+        {
+            "Home"     : "35995 Fremont Blvd Apt 98",
+            "City"     : "Fremont",
+            "State"    : "CA",
+            "ZIPcode"  : "94903",
+            "ErrorMsg" : ""
         },
 
-        "HAddress_SplChar": {
-            "Home": "^&&$#@*&^",
-            "ErrorMsg": "Please ensure you have entered an Apt/Floor/Suite number",
-            "ErrorMsg0": "Please check the street number to match the city, state and zipcode",
-            "ErrorMsg1": "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
+        "HAddress_Invalid":
+        {
+            "Home"      : "35995 Fremont Blvd",
+            "City"      : "Fremont",
+            "State"     : "CA",
+            "ZIPcode"   : "94903",
+            "ErrorMsg"  : "Please ensure you have entered an Apt/Floor/Suite number",
+            "ErrorMsg1" : "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
         },
 
-        "HAddress_ZIP": {
-            "HomeAddress": "949",
-            "FullAddress": "949Broadway, New York, NY, United States",
-            "ErrorMsg": "Please enter a street address",
-            "ExecutionFlag": true
+        "HAddress_SplChar":
+        {
+            "Home"      : "^&&$#@*&^",
+            "ErrorMsg"  : "Please ensure you have entered an Apt/Floor/Suite number",
+            "ErrorMsg0" : "Please check the street number to match the city, state and zipcode",
+            "ErrorMsg1" : "Invalid Address. Your address does not match US Postal Service records. You may want to visit usps.com to confirm your address and resubmit your information."
+        },
+
+        "HAddress_ZIP":
+        {
+            "HomeAddress"   : "949",
+            "FullAddress"   : "949Broadway, New York, NY, United States",
+            "ErrorMsg"      : "Please enter a street address",
+            "ExecutionFlag" : true
         }
 
     }

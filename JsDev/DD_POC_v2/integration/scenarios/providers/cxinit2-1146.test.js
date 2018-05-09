@@ -1,9 +1,9 @@
 "use strict"
-var TestData = require('../../testData/' + testDataEnv + '/providers/cxinit2-1146.json');
-var dirSearch = new(require('../../pageObjects/providers/directory-search-page.js'));
+var TestData        = require('../../testData/' + testDataEnv + '/providers/cxinit2-1146.json');
+var dirSearch       = new(require('../../pageObjects/providers/directory-search-page.js'));
 var providerDetails = new(require('../../pageObjects/providers/provider-details-page.js'));
-var feedback = new(require('../../pageObjects/providers/feedback-page.js'));
-var perInfo = new(require('../../pageObjects/cxinit/perInfo-page.js'));
+var feedback        = new(require('../../pageObjects/providers/feedback-page.js'));
+var perInfo         = new(require('../../pageObjects/cxinit/perInfo-page.js'));
 
 describe('CXINIT2-1146: Prov Dir', function() {
     beforeEach(function() {
@@ -17,11 +17,6 @@ describe('CXINIT2-1146: Prov Dir', function() {
                 dirSearch.location.setText(data.Loc);
                 dirSearch.findDentist.click();
                 dirSearch.getProvidersCount().then(function(totalCount) {
-
-                    // 9/27/17 remove comment when this action is completed
-                    // should implement a looping construct 
-                    // to iterate through the multiple distances 
-                    // Same code, just a different dist varialble each time
                     dirSearch.refineSearch.click();
                     providerDetails.sortDistance.select();
                     expect(dirSearch.distanceSelect.isPresentAndDisplayed()).toBeTruthy();
@@ -253,7 +248,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
+                        expect(Number(refineCount)).not.toBeLessThan(Number(totalCount));
                     });
                 });
             });
@@ -273,7 +268,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
+                        expect(Number(refineCount)).not.toBeLessThan(Number(totalCount));
                     });
                 });
             });
@@ -293,7 +288,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
+                        expect(Number(refineCount)).not.toBeLessThan(Number(totalCount));
                     });
                 });
             });
@@ -313,7 +308,7 @@ describe('CXINIT2-1146: Prov Dir', function() {
                     dirSearch.apply.click();
                     dirSearch.getProvidersCount().then(function(refineCount) {
                         console.log('totalCount  & refineCount : ' + totalCount + ' -> ' + refineCount);
-                        expect(Number(totalCount)).not.toBeLessThan(Number(refineCount));
+                        expect(Number(refineCount)).not.toBeLessThan(Number(totalCount));
                     });
                 });
             });

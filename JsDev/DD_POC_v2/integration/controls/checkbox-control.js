@@ -24,7 +24,10 @@ class CheckboxControl extends ControlBase {
     isSelected() {
         return element(this.locator).isSelected();
     }
-
+    /**
+     * Checks the checkbox if checkbox not checked
+     * @returns {webdriver.promise.Promise<string>}
+     */
     check() {
         var self = this;
         return this.isSelected().then(function(val) {
@@ -32,11 +35,14 @@ class CheckboxControl extends ControlBase {
             return true;
         });
     }
-
+    /**
+     * Unchecks the checkbox if checkbox  checked
+     * @returns {webdriver.promise.Promise<string>}
+     */
     unCheck() {
         var self = this;
         return this.isSelected().then(function(val) {
-            console.log("Is check box checked  ========= "+val);
+            console.log("Is check box checked  ========= " + val);
             if (val) return element(self.locator).clickIt();
             return true;
         });

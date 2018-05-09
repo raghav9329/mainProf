@@ -1,65 +1,65 @@
 {
-    "Header_SearchResultsPage": "Find a dentist",
-    "Header_InvalidAddress": "Invalid Address",
-    "ZipCode": "94103",
-    "HAddress_ZIP": {
-        "PartialAddress": "949",
-        "FullAddress": "949Broadway, New York, NY, United States",
-        "ErrorMsg": "Please enter a street address",
-        "Dimentions": "40.7409957, -73.9896776",
-        "ExecutionFlag": true
+    "Header_SearchResultsPage" : "Find a dentist",
+    "Header_InvalidAddress"    : "Invalid Address",
+    "ZipCode"                  : "94103",
+    "HAddress_ZIP"             : {
+    "PartialAddress"           : "949",
+    "FullAddress"              : "949Broadway, New York, NY, United States",
+    "ErrorMsg"                 : "Please enter a street address",
+    "Dimentions"               : "40.7409957, -73.9896776",
+    "ExecutionFlag"            : true
     },
-    "Address_Valid": {
-        "HomeAddress": "35995 Fremont Blvd Apt 98",
-        "City": "Fremont",
-        "State": "CA",
-        "ZIPCode": "94536"
+    "Address_Valid"            : {
+    "HomeAddress"              : "35995 Fremont Blvd Apt 98",
+    "City"                     : "Fremont",
+    "State"                    : "CA",
+    "ZIPCode"                  : "94536"
     },
-    "Provider1": {
-        "Name": "Jeffrey Gold",
-        "SPECIALTY": "General Dentist",
-        "PLACENAME": "Aesthetic Dentistry PC",
-        "NETWORK": "2PREMIER,2PPO",
-        "ADDRESS": "156 5th Ave Ste 304"
+    "Provider1"                : {
+    "Name"                     : "Jeffrey Gold",
+    "SPECIALTY"                : "General Dentist",
+    "PLACENAME"                : "Aesthetic Dentistry PC",
+    "NETWORK"                  : "2PREMIER,2PPO",
+    "ADDRESS"                  : "156 5th Ave Ste 304"
     },
-    "Provider2": {
-        "Name": "Yuliya Kanatova",
-        "SPECIALTY": "General Dentist",
-        "PLACENAME": "Aesthetic Dentistry PC",
-        "NETWORK": "2PREMIER,2PPO",
-        "ADDRESS": "156 5th Ave Ste 304, New York, NY 100108255",
-        "Distance": "0.2",
-        "Availability": "Accepting new patients",
-        "Address": {
-            "Place": "Union Square Dental Pc",
-            "Street": "29 W 19th St,",
-            "City": "New York",
-            "State": "NY",
-            "ZipCode": "100114232",
-            "Phone": "(212) 675-7877"
+    "Provider2"                : {
+    "Name"                     : "Yuliya Kanatova",
+    "SPECIALTY"                : "General Dentist",
+    "PLACENAME"                : "Aesthetic Dentistry PC",
+    "NETWORK"                  : "2PREMIER,2PPO",
+    "ADDRESS"                  : "156 5th Ave Ste 304, New York, NY 100108255",
+    "Distance"                 : "0.2",
+    "Availability"             : "Accepting new patients",
+    "Address"                  : {
+    "Place"                    : "Union Square Dental Pc",
+    "Street"                   : "29 W 19th St,",
+    "City"                     : "New York",
+    "State"                    : "NY",
+    "ZipCode"                  : "100114232",
+    "Phone"                    : "(212) 675-7877"
         },
-        "AvailabilityTime": {
-            "Monday": "0900-0600",
-            "Tuesday": "0900-0600",
-            "Wednesday": "0900-0600",
-            "Thursday": "0900-0600",
-            "Friday": "0900-0500",
-            "Saturday": "CLOSED",
-            "Sunday": "CLOSED"
+    "AvailabilityTime"         : {
+    "Monday"                   : "0900-0600",
+    "Tuesday"                  : "0900-0600",
+    "Wednesday"                : "0900-0600",
+    "Thursday"                 : "0900-0600",
+    "Friday"                   : "0900-0500",
+    "Saturday"                 : "CLOSED",
+    "Sunday"                   : "CLOSED"
         },
-        "OfficeAccess": {
-            "FreeParking": "Yes",
-            "WheelChairAccess": "No",
-            "PublicTransitAccess": "Yes",
-            "InternetAccess": "No"
+    "OfficeAccess"             : {
+    "FreeParking"              : "Yes",
+    "WheelChairAccess"         : "No",
+    "PublicTransitAccess"      : "Yes",
+    "InternetAccess"           : "No"
         },
-        "Language": "English",
-        "ProviderData": {
-            "ProviderNPI": "1740330463",
-            "License": "52112",
-            "LicenseState": "NY",
-            "Education": "N/A",
-            "Gender": "M"
+    "Language"                 : "English",
+    "ProviderData"             : {
+    "ProviderNPI"              : "1740330463",
+    "License"                  : "52112",
+    "LicenseState"             : "NY",
+    "Education"                : "N/A",
+    "Gender"                   : "M"
         }
 
     }

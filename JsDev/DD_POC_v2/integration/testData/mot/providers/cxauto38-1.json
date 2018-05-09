@@ -1,1723 +1,1723 @@
 {
-    "testdata": {
-        "test1": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Richard",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "testdata"    : {
+    "test1"       : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Richard",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Richard"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Richard"
             }
         },
-        "test2": {
-            "params": {
-                "zipcode": "San Francisco, CA 94110, United States",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "richard",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test2"       : {
+    "params"      : {
+    "zipcode"     : "San Francisco, CA 94110, United States",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "richard",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "richard"
-            }
-        },
-
-        "test3": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "RICHARD",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "RICHARD"
-            }
-        },
-        "test4": {
-            "params": {
-                "zipcode": "San Francisco, CA 94110, United States",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "rIcHaRd",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "rIcHaRd"
-            }
-        },
-        "test5": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Rich",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Rich"
-            }
-        },
-        "test6": {
-            "params": {
-                "zipcode": "San Francisco, CA 94110, United States",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Dennis",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Dennis"
-            }
-        },
-        "test7": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "dennis",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "dennis"
-            }
-        },
-        "test8": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "DENNIS",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "DENNIS"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "richard"
             }
         },
 
-        "test9": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "DennIS",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test3"       : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "RICHARD",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "DennIS"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "RICHARD"
             }
         },
-        "test10": {
-            "params": {
-                "zipcode": "San Francisco, CA 94110, United States",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "The",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test4"       : {
+    "params"      : {
+    "zipcode"     : "San Francisco, CA 94110, United States",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "rIcHaRd",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "The"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "rIcHaRd"
             }
         },
-        "test11": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "THE",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test5"       : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Rich",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "THE"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Rich"
             }
         },
-        "test12": {
-            "params": {
-                "zipcode": "95112",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Jr",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test6"       : {
+    "params"      : {
+    "zipcode"     : "San Francisco, CA 94110, United States",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Dennis",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "95112",
-                "free_text": "Jr"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Dennis"
             }
         },
-        "test13": {
-            "params": {
-                "zipcode": "San Francisco, CA 94110, United States",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Cesar",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test7"       : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "dennis",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Cesar"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "dennis"
             }
         },
-
-        "test14": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "FOX",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test8"       : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "DENNIS",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "FOX"
-            }
-        },
-        "test15": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Fox",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Fox"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "DENNIS"
             }
         },
 
-        "test16": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "fox",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test9"       : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "DennIS",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "fox"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "DennIS"
             }
         },
-        "test17": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "fOX",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test10"      : {
+    "params"      : {
+    "zipcode"     : "San Francisco, CA 94110, United States",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "The",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "fOX"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "The"
             }
         },
-        "test18": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Salameh-Punch",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test11"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "THE",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Salameh-Punch"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "THE"
             }
         },
-        "test19": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Punch",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test12"      : {
+    "params"      : {
+    "zipcode"     : "95112",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Jr",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Punch"
+    "verify"      : {
+    "zipcode"     : "95112",
+    "free_text"   : "Jr"
             }
         },
-        "test20": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Salameh",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test13"      : {
+    "params"      : {
+    "zipcode"     : "San Francisco, CA 94110, United States",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Cesar",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Salameh"
-            }
-        },
-        "test21": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Elloway Norman I.",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94949",
-                "free_text": "Elloway Norman I."
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Cesar"
             }
         },
 
-        "test22": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "I.",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test14"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "FOX",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94949",
-                "free_text": "I."
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "FOX"
             }
         },
-        "test23": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "elloway I.",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test15"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Fox",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94949",
-                "free_text": "elloway I."
-            }
-        },
-        "test24": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Chavez-Grinde",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Chavez-Grinde"
-            }
-        },
-        "test25": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "tran,",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94949",
-                "free_text": "tran,"
-            }
-        },
-        "test26": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Grinde",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Grinde"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Fox"
             }
         },
 
-        "test27": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Perez",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test16"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "fox",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Perez"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "fox"
+            }
+        },
+    "test17"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "fOX",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "fOX"
+            }
+        },
+    "test18"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Salameh-Punch",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Salameh-Punch"
+            }
+        },
+    "test19"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Punch",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Punch"
+            }
+        },
+    "test20"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Salameh",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Salameh"
+            }
+        },
+    "test21"      : {
+    "params"      : {
+    "zipcode"     : "94949",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Elloway Norman I.",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94949",
+    "free_text"   : "Elloway Norman I."
             }
         },
 
-        "test28": {
-            "params": {
-                "zipcode": "10013",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "3CK",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test22"      : {
+    "params"      : {
+    "zipcode"     : "94949",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "I.",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "10013",
-                "free_text": "3CK"
+    "verify"      : {
+    "zipcode"     : "94949",
+    "free_text"   : "I."
             }
         },
-        "test29": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Bernal",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test23"      : {
+    "params"      : {
+    "zipcode"     : "94949",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "elloway I.",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Bernal"
+    "verify"      : {
+    "zipcode"     : "94949",
+    "free_text"   : "elloway I."
             }
         },
-
-        "test30": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "bernal",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test24"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Chavez-Grinde",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "bernal"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Chavez-Grinde"
             }
         },
-        "test31": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "BERNAL",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test25"      : {
+    "params"      : {
+    "zipcode"     : "94949",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "tran,",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "BERNAL"
+    "verify"      : {
+    "zipcode"     : "94949",
+    "free_text"   : "tran,"
             }
         },
-        "test32": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "bERNal",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test26"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Grinde",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "bERNal"
-            }
-        },
-        "test33": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "western",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "western"
-            }
-        },
-        "test34": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "WESTERN",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "WESTERN"
-            }
-        },
-        "test35": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Western",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Western"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Grinde"
             }
         },
 
-        "test36": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "WEsterN",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test27"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Perez",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "WEsterN"
-            }
-        },
-        "test37": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Dental",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Dental"
-            }
-        },
-        "test38": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Tooth",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Tooth"
-            }
-        },
-        "test39": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "WN",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "WN"
-            }
-        },
-        "test40": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Care",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Care"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Perez"
             }
         },
 
-        "test41": {
-            "params": {
-                "zipcode": "94949",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "BRIGHT Now!",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test28"      : {
+    "params"      : {
+    "zipcode"     : "10013",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "3CK",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94949",
-                "free_text": "BRIGHT Now!"
+    "verify"      : {
+    "zipcode"     : "10013",
+    "free_text"   : "3CK"
             }
         },
-        "test42": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Milpitas",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test29"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Bernal",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Milpitas"
-            }
-        },
-
-        "test43": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "DDS",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "DDS"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Bernal"
             }
         },
 
-        "test44": {
-            "params": {
-                "zipcode": "San Francisco, CA 94110, United States",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Orthodontist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test30"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "bernal",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Orthodontist"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "bernal"
             }
         },
-        "test45": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "orthodontist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test31"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "BERNAL",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "orthodontist"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "BERNAL"
             }
         },
-
-        "test46": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "ORTHODONTIST",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test32"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "bERNal",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "ORTHODONTIST"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "bERNal"
             }
         },
-        "test47": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "orthoDONTIST",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test33"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "western",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "orthoDONTIST"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "western"
             }
         },
-        "test48": {
-            "params": {
-                "zipcode": "San Francisco, CA 94110, United States",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "ORTHO",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test34"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "WESTERN",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "ORTHO"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "WESTERN"
             }
         },
-        "test49": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "ortho",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test35"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Western",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "ortho"
-            }
-        },
-        "test50": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Ortho",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Ortho"
-            }
-        },
-        "test51": {
-            "params": {
-                "zipcode": "San Francisco, CA 94110, United States",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Endodontist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Endodontist"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Western"
             }
         },
 
-        "test52": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "endoDONTIST",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test36"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "WEsterN",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "endoDONTIST"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "WEsterN"
             }
         },
-        "test53": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "ENDODONTIST",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test37"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Dental",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "ENDODONTIST"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Dental"
             }
         },
-        "test54": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "endodontist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test38"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Tooth",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "endodontist"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Tooth"
             }
         },
-        "test55": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "ENDO",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test39"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "WN",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "ENDO"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "WN"
             }
         },
-        "test56": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Endo",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test40"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Care",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Endo"
-            }
-        },
-
-        "test57": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "endo",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "endo"
-            }
-        },
-        "test58": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "enDO",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "enDO"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Care"
             }
         },
 
-        "test59": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Periodontist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test41"      : {
+    "params"      : {
+    "zipcode"     : "94949",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "BRIGHT Now!",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Periodontist"
+    "verify"      : {
+    "zipcode"     : "94949",
+    "free_text"   : "BRIGHT Now!"
             }
         },
-        "test60": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "periodontist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test42"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Milpitas",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "periodontist"
-            }
-        },
-        "test61": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "PERIODONTIST",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "PERIODONTIST"
-            }
-        },
-        "test62": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "PERIOdontist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "PERIOdontist"
-            }
-        },
-        "test63": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Perio",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Perio"
-            }
-        },
-        "test64": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "perio",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "perio"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Milpitas"
             }
         },
 
-        "test65": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "PERIO",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test43"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "DDS",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "PERIO"
-            }
-        },
-        "test66": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Prosthodontist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Prosthodontist"
-            }
-        },
-        "test67": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "prosthodontist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "prosthodontist"
-            }
-        },
-        "test68": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "PROSTHODONTIST",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "PROSTHODONTIST"
-            }
-        },
-        "test69": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Prostho",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Prostho"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "DDS"
             }
         },
 
-        "test70": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Oral Surgeon",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test44"      : {
+    "params"      : {
+    "zipcode"     : "San Francisco, CA 94110, United States",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Orthodontist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Oral Surgeon"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Orthodontist"
+            }
+        },
+    "test45"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "orthodontist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "orthodontist"
             }
         },
 
-        "test71": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "oral surgeon",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test46"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "ORTHODONTIST",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "oral surgeon"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "ORTHODONTIST"
             }
         },
-        "test72": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "ORAL SURGEON",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test47"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "orthoDONTIST",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "ORAL SURGEON"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "orthoDONTIST"
             }
         },
-
-        "test73": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Public Health Dentist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test48"      : {
+    "params"      : {
+    "zipcode"     : "San Francisco, CA 94110, United States",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "ORTHO",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Public Health Dentist"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "ORTHO"
             }
         },
-        "test74": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "public health dentist",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test49"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "ortho",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "public health dentist"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "ortho"
             }
         },
-        "test75": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "PUBLIC HEALTH DENTIST",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test50"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Ortho",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "PUBLIC HEALTH DENTIST"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Ortho"
             }
         },
-        "test76": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "pUBLIC hEALTH dENTIST",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test51"      : {
+    "params"      : {
+    "zipcode"     : "San Francisco, CA 94110, United States",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Endodontist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "pUBLIC hEALTH dENTIST"
-            }
-        },
-
-        "test77": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "1369837365",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "1369837365"
-            }
-        },
-        "test78": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "1326102823",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "1326102823"
-            }
-        },
-        "test79": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "1477627156",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "1477627156"
-            }
-        },
-        "test80": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "1932315934",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "1932315934"
-            }
-        },
-        "test81": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "195250",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "195250"
-            }
-        },
-        "test82": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "11645",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "11645"
-            }
-        },
-        "test83": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "43835",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "43835"
-            }
-        },
-        "test84": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "3386",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "3386"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Endodontist"
             }
         },
 
-        "test85": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "2780 Mission St",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test52"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "endoDONTIST",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "2780 Mission St"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "endoDONTIST"
             }
         },
-        "test86": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "(415) 285-9900",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test53"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "ENDODONTIST",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "(415) 285-9900"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "ENDODONTIST"
             }
         },
-        "test87": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "PPO",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test54"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "endodontist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "PPO"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "endodontist"
             }
         },
-        "test88": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "($$)",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test55"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "ENDO",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "($$)"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "ENDO"
             }
         },
-        "test89": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Marathi",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test56"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Endo",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Marathi"
-            }
-        },
-        "test90": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Bangla",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Bangla"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Endo"
             }
         },
 
-        "test91": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "O'Connor",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test57"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "endo",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "O'Connor"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "endo"
             }
         },
-        "test92": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Sung-Pin",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "test58"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "enDO",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Sung-Pin"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "enDO"
+            }
+        },
+
+    "test59"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Periodontist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Periodontist"
+            }
+        },
+    "test60"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "periodontist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "periodontist"
+            }
+        },
+    "test61"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "PERIODONTIST",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "PERIODONTIST"
+            }
+        },
+    "test62"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "PERIOdontist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "PERIOdontist"
+            }
+        },
+    "test63"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Perio",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Perio"
+            }
+        },
+    "test64"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "perio",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "perio"
+            }
+        },
+
+    "test65"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "PERIO",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "PERIO"
+            }
+        },
+    "test66"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Prosthodontist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Prosthodontist"
+            }
+        },
+    "test67"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "prosthodontist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "prosthodontist"
+            }
+        },
+    "test68"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "PROSTHODONTIST",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "PROSTHODONTIST"
+            }
+        },
+    "test69"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Prostho",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Prostho"
+            }
+        },
+
+    "test70"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Oral Surgeon",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Oral Surgeon"
+            }
+        },
+
+    "test71"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "oral surgeon",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "oral surgeon"
+            }
+        },
+    "test72"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "ORAL SURGEON",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "ORAL SURGEON"
+            }
+        },
+
+    "test73"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Public Health Dentist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Public Health Dentist"
+            }
+        },
+    "test74"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "public health dentist",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "public health dentist"
+            }
+        },
+    "test75"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "PUBLIC HEALTH DENTIST",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "PUBLIC HEALTH DENTIST"
+            }
+        },
+    "test76"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "pUBLIC hEALTH dENTIST",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "pUBLIC hEALTH dENTIST"
+            }
+        },
+
+    "test77"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "1369837365",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "1369837365"
+            }
+        },
+    "test78"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "1326102823",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "1326102823"
+            }
+        },
+    "test79"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "1477627156",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "1477627156"
+            }
+        },
+    "test80"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "1932315934",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "1932315934"
+            }
+        },
+    "test81"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "195250",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "195250"
+            }
+        },
+    "test82"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "11645",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "11645"
+            }
+        },
+    "test83"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "43835",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "43835"
+            }
+        },
+    "test84"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "3386",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "3386"
+            }
+        },
+
+    "test85"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "2780 Mission St",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "2780 Mission St"
+            }
+        },
+    "test86"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "(415) 285-9900",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "(415) 285-9900"
+            }
+        },
+    "test87"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "PPO",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "PPO"
+            }
+        },
+    "test88"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "($$)",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "($$)"
+            }
+        },
+    "test89"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Marathi",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Marathi"
+            }
+        },
+    "test90"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Bangla",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Bangla"
+            }
+        },
+
+    "test91"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "O'Connor",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "O'Connor"
+            }
+        },
+    "test92"      : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Sung-Pin",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Sung-Pin"
             }
         }
     },
-    "testdata1": {
-        "freeText1": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Dae Kim",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "testdata1"   : {
+    "freeText1"   : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Dae Kim",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Dae Kim"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Dae Kim"
             }
         },
-        "freeText2": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Yoo Kim",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "freeText2"   : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Yoo Kim",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Yoo Kim"
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Yoo Kim"
             }
         },
-        "freeText3": {
-            "params": {
-                "zipcode": "94127",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "LOW",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
+    "freeText3"   : {
+    "params"      : {
+    "zipcode"     : "94127",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "LOW",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
             },
-            "verify": {
-                "zipcode": "94127",
-                "free_text": "Jobie Low"
-            }
-        }
-    },
-    "testdata2": {
-        "freeText1": {
-                "zipcode": "94110",
-                "free_text": "Ort",
-                "autoSuggest": "Orthodontist"
-        },
-        "freeText2": {
-                "zipcode": "94110",
-                "free_text": "Pedi",
-                "autoSuggest": "Pediatric Dentist"
-        },
-        "freeText3": {
-                "zipcode": "94110",
-                "free_text": "Perio",
-                "autoSuggest": "Periodontist"
-        },
-        "freeText4": {
-                "zipcode": "94110",
-                "free_text": "Endo",
-                "autoSuggest": "Endodontist"
-        },
-        "freeText5": {
-                "zipcode": "94110",
-                "free_text": "Full-time",
-                "autoSuggest": "Full Time Faculty"
-        },
-        "freeText6": {
-                "zipcode": "94110",
-                "free_text": "Hygi",
-                "autoSuggest": "Hygienist"
-        },
-        "freeText7": {
-                "zipcode": "94110",
-                "free_text": "Oral P",
-                "autoSuggest": "Oral Pathologist"
-        },
-        "freeText8": {
-                "zipcode": "94110",
-                "free_text": "Oral",
-                "autoSuggest": "Oral Surgeon"
-        },
-        "freeText9": {
-                "zipcode": "94110",
-                "free_text": "Prost",
-                "autoSuggest": "Prosthodontist"
-        },
-        "freeText10": {
-                "zipcode": "94110",
-                "free_text": "Prostho",
-                "autoSuggest": "Prosthodontist"
-        },
-        "freeText11": {
-                "zipcode": "94110",
-                "free_text": "Prostho",
-                "autoSuggest": "Prosthodontist"
-        },
-        "freeText12": {
-                "zipcode": "94110",
-                "free_text": "ende",
-                "autoSuggest": "ende"
-        }
-    },
-    "testdata1": {
-        "freeText1": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Dae Kim",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Dae Kim"
-            }
-        },
-        "freeText2": {
-            "params": {
-                "zipcode": "94110",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Yoo Kim",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94110",
-                "free_text": "Yoo Kim"
-            }
-        },
-        "freeText3": {
-            "params": {
-                "zipcode": "94127",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "LOW",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "94127",
-                "free_text": "Jobie Low"
+    "verify"      : {
+    "zipcode"     : "94127",
+    "free_text"   : "Jobie Low"
             }
         }
     },
-    "testdata2": {
-        "freeText1": {
-                "zipcode": "94110",
-                "free_text": "Ort",
-                "autoSuggest": "Orthodontist"
+    "testdata2"   : {
+    "freeText1"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Ort",
+    "autoSuggest" : "Orthodontist"
         },
-        "freeText2": {
-                "zipcode": "94110",
-                "free_text": "Pedi",
-                "autoSuggest": "Pediatric Dentist"
+    "freeText2"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Pedi",
+    "autoSuggest" : "Pediatric Dentist"
         },
-        "freeText3": {
-                "zipcode": "94110",
-                "free_text": "Perio",
-                "autoSuggest": "Periodontist"
+    "freeText3"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Perio",
+    "autoSuggest" : "Periodontist"
         },
-        "freeText4": {
-                "zipcode": "94110",
-                "free_text": "Endo",
-                "autoSuggest": "Endodontist"
+    "freeText4"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Endo",
+    "autoSuggest" : "Endodontist"
         },
-        "freeText5": {
-                "zipcode": "94110",
-                "free_text": "Full-time",
-                "autoSuggest": "Full Time Faculty"
+    "freeText5"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Full-time",
+    "autoSuggest" : "Full Time Faculty"
         },
-        "freeText6": {
-                "zipcode": "94110",
-                "free_text": "Hygi",
-                "autoSuggest": "Hygienist"
+    "freeText6"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Hygi",
+    "autoSuggest" : "Hygienist"
         },
-        "freeText7": {
-                "zipcode": "94110",
-                "free_text": "Oral P",
-                "autoSuggest": "Oral Pathologist"
+    "freeText7"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Oral P",
+    "autoSuggest" : "Oral Pathologist"
         },
-        "freeText8": {
-                "zipcode": "94110",
-                "free_text": "Oral",
-                "autoSuggest": "Oral Surgeon"
+    "freeText8"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Oral",
+    "autoSuggest" : "Oral Surgeon"
         },
-        "freeText9": {
-                "zipcode": "94110",
-                "free_text": "Prost",
-                "autoSuggest": "Prosthodontist"
+    "freeText9"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Prost",
+    "autoSuggest" : "Prosthodontist"
         },
-        "freeText10": {
-                "zipcode": "94110",
-                "free_text": "Prostho",
-                "autoSuggest": "Prosthodontist"
+    "freeText10"  : {
+    "zipcode"     : "94110",
+    "free_text"   : "Prostho",
+    "autoSuggest" : "Prosthodontist"
         },
-        "freeText11": {
-                "zipcode": "94110",
-                "free_text": "Prostho",
-                "autoSuggest": "Prosthodontist"
+    "freeText11"  : {
+    "zipcode"     : "94110",
+    "free_text"   : "Prostho",
+    "autoSuggest" : "Prosthodontist"
         },
-        "freeText12": {
-                "zipcode": "94110",
-                "free_text": "ende",
-                "autoSuggest": "ende"
+    "freeText12"  : {
+    "zipcode"     : "94110",
+    "free_text"   : "ende",
+    "autoSuggest" : "ende"
+        }
+    },
+    "testdata1"   : {
+    "freeText1"   : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Dae Kim",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Dae Kim"
+            }
+        },
+    "freeText2"   : {
+    "params"      : {
+    "zipcode"     : "94110",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "Yoo Kim",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94110",
+    "free_text"   : "Yoo Kim"
+            }
+        },
+    "freeText3"   : {
+    "params"      : {
+    "zipcode"     : "94127",
+    "distance"    : "60",
+    "page"        : "0",
+    "per_page"    : "60000",
+    "max"         : "60000",
+    "free_text"   : "LOW",
+    "specialty"   : ["GENERAL DENTIST"],
+    "meta_data"   : false
+            },
+    "verify"      : {
+    "zipcode"     : "94127",
+    "free_text"   : "Jobie Low"
+            }
+        }
+    },
+    "testdata2"   : {
+    "freeText1"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Ort",
+    "autoSuggest" : "Orthodontist"
+        },
+    "freeText2"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Pedi",
+    "autoSuggest" : "Pediatric Dentist"
+        },
+    "freeText3"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Perio",
+    "autoSuggest" : "Periodontist"
+        },
+    "freeText4"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Endo",
+    "autoSuggest" : "Endodontist"
+        },
+    "freeText5"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Full-time",
+    "autoSuggest" : "Full Time Faculty"
+        },
+    "freeText6"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Hygi",
+    "autoSuggest" : "Hygienist"
+        },
+    "freeText7"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Oral P",
+    "autoSuggest" : "Oral Pathologist"
+        },
+    "freeText8"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Oral",
+    "autoSuggest" : "Oral Surgeon"
+        },
+    "freeText9"   : {
+    "zipcode"     : "94110",
+    "free_text"   : "Prost",
+    "autoSuggest" : "Prosthodontist"
+        },
+    "freeText10"  : {
+    "zipcode"     : "94110",
+    "free_text"   : "Prostho",
+    "autoSuggest" : "Prosthodontist"
+        },
+    "freeText11"  : {
+    "zipcode"     : "94110",
+    "free_text"   : "Prostho",
+    "autoSuggest" : "Prosthodontist"
+        },
+    "freeText12"  : {
+    "zipcode"     : "94110",
+    "free_text"   : "ende",
+    "autoSuggest" : "ende"
         }
     }
 }
