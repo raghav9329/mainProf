@@ -16,4 +16,5 @@ call "PsKill TeamsApp.bat"
 call "PsKill VIPApp.bat "
 call "PsKill VLC.bat"
 call "PsKill TeamsApp.bat"
+call "PsKill chromeDrivers.bat"
 

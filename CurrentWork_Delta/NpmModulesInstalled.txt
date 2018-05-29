@@ -1,0 +1,12 @@
+ npm install mkdirp --save-dev
+ npm install rimraf --save-dev
+ npm install frisby --save-dev
+ npm install moment --save-dev
+ npm install jasmine-data-provider --save-dev
+ npm install log4js --save-dev
+ npm install hat --save-dev
+ npm install string.prototype.startswith --save-dev
+ npm install node-cmd --save-dev
+ npm install pdf2text --save-dev
+
+Assert ???
