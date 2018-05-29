@@ -1,0 +1,4145 @@
+commit 8a3cdfdadcb1fe69abb38ab978a965d3249898ed
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue May 15 21:37:54 2018 -0700
+
+    5/15/18 added a page for API tests
+
+commit 140e7cdffef8f3f682f8ea0dea09fff088b32690
+Merge: 033cdb4 96138ce
+Author: atkmh <atkmh@sonic.net>
+Date:   Tue May 8 17:20:22 2018 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 033cdb4245b6ce96098a199f9e93ab86239f499b
+Author: atkmh <atkmh@sonic.net>
+Date:   Tue May 8 17:19:19 2018 -0700
+
+    5/8/18  major capture
+
+commit 96138cedf5ee4961913b2c5f6b934cc04b7356d8
+Merge: 33aae81 c58d538
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue May 8 08:53:25 2018 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 33aae81979cfe3c28efe22ee65bf86d06ed509a4
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue May 8 08:53:11 2018 -0700
+
+    5/8/18 smoe days back capture
+
+commit c58d538569f54d7d6cbbd4ccf79e34100abdfe80
+Author: atkmh <atkmh@sonic.net>
+Date:   Fri May 4 17:20:53 2018 -0700
+
+    5/4/18 capture
+
+commit 279b369e44196429a20572797a50dea9616355b9
+Author: atkmh <atkmh@sonic.net>
+Date:   Thu May 3 14:39:58 2018 -0700
+
+    5/3/18 capture
+
+commit cefcd782563325f1e6668682b05d8435cf268dff
+Author: atkmh <atkmh@sonic.net>
+Date:   Wed May 2 14:34:37 2018 -0700
+
+    5/2/18 payroll capture
+
+commit 3bb7d3d13b1f09580f5114fb8e67f6da43d2a696
+Author: atkmh <atkmh@sonic.net>
+Date:   Thu Apr 26 17:23:32 2018 -0700
+
+    4/26/18 capture of what I don't know
+
+commit 743958932747a3308a4eb302ad8c9d63f84c0671
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Apr 24 14:47:51 2018 -0700
+
+    4/24/18 Instruction on how to properly git TAG a branch
+
+commit fbaf16e71536007bef244c2e517b529063a0a7d4
+Author: atkmh <atkmh@sonic.net>
+Date:   Mon Apr 23 17:22:36 2018 -0700
+
+    4/23/18 generally some mods to things
+
+commit 2a31de070eb43b4bbf0482ca93244835e32212ae
+Author: atkmh <atkmh@sonic.net>
+Date:   Fri Apr 20 17:19:38 2018 -0700
+
+    4/20/18 new files and capture
+
+commit dbd7b0c7fc134773d5e0c5dfc377ef3b85a11461
+Author: At Kmh <atkmh@sonic.net>
+Date:   Fri Apr 20 10:01:44 2018 -0700
+
+    4/20 new work and some capture
+
+commit 4348d192678e9dd047cda82fd98dd0b8a16b26f3
+Author: atkmh <atkmh@sonic.net>
+Date:   Thu Apr 19 16:48:13 2018 -0700
+
+    4/19/18 Capture of work
+
+commit 14a40b2fe7bdfa2251adf6d55c40782f380d811e
+Author: At Kmh <atkmh@sonic.net>
+Date:   Thu Apr 19 09:33:20 2018 -0700
+
+    4/19/18 Capture
+
+commit ee3e467de48f19c8e2c369f49c908df8d54aa4e2
+Author: atkmh <atkmh@sonic.net>
+Date:   Tue Apr 17 17:04:45 2018 -0700
+
+    4/17/18 capture
+
+commit 5c47477d03f8291351755ae0566e4a813b1425fb
+Author: atkmh <atkmh@sonic.net>
+Date:   Tue Apr 17 09:13:12 2018 -0700
+
+    4/17/18 payroll capture up to date
+
+commit d8f33bdab2a1b728823ae9e1abaab7e683179d05
+Author: atkmh <atkmh@sonic.net>
+Date:   Mon Apr 16 17:30:42 2018 -0700
+
+    4/16/18
+    Capture
+
+commit 034c55d9c0a056b53d6a0f010ed79f072293da71
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Apr 16 09:03:54 2018 -0700
+
+    4/13/18 minor add
+
+commit 04b2247f76e4eb16ba32b6a6bf0ef97af75ec484
+Author: atkmh <atkmh@sonic.net>
+Date:   Fri Apr 13 16:01:17 2018 -0700
+
+    4/13/18 capture
+
+commit 4a0e6f2eed5aecdb5309480352ba331add8b4120
+Author: At Kmh <atkmh@sonic.net>
+Date:   Fri Apr 13 09:14:00 2018 -0700
+
+    4/13/18 minor add
+
+commit b65e61eb01aa6c8a0edc00e7aa24309825c0e1d5
+Merge: a3f16b0 2a064b1
+Author: At Kmh <atkmh@sonic.net>
+Date:   Fri Apr 13 09:00:42 2018 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 2a064b158c6c92306d08bab6bf59908c4d706748
+Author: atkmh <atkmh@sonic.net>
+Date:   Thu Apr 12 17:31:34 2018 -0700
+
+    4/12/18 mods to file
+
+commit 930eef8c2e0d67168544ac1684e8fae87460c991
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Apr 12 14:30:09 2018 -0700
+
+    4/12/18 continued work on slided
+    and calculations of test cases
+
+commit 5e9d3b7af1fe2419c86b434750055f3d531d3516
+Author: atkmh <atkmh@sonic.net>
+Date:   Tue Apr 10 16:25:50 2018 -0700
+
+    4/10/18 revision on excel and pics.  mods to slides
+
+commit ffdb2e27cde13fd5ca45082a452477d0d6c31a14
+Author: atkmh <atkmh@sonic.net>
+Date:   Tue Apr 10 10:41:40 2018 -0700
+
+    4/10/18 minor add to batch list
+
+commit a3f16b0f41afff9dd38c5f36be8e9f81a23a05a8
+Author: At Kmh <atkmh@sonic.net>
+Date:   Fri Apr 6 10:14:51 2018 -0700
+
+    4/5/18 file add
+
+commit d2328e1bb71dd6ff86ad51d85a6f5031ad143c7f
+Author: atkmh <atkmh@sonic.net>
+Date:   Wed Apr 4 16:28:22 2018 -0700
+
+    4/4/18 some new files come mods in other files
+
+commit b37b83a51f4ff3530d5db30c4f423de15e21829c
+Author: At Kmh <atkmh@sonic.net>
+Date:   Fri Mar 30 09:51:40 2018 -0700
+
+    3/30/18 slight mods, home capture
+
+commit c9ae46853d0d690d3051696600fd6dad6e44a3ea
+Author: atkmh <atkmh@sonic.net>
+Date:   Thu Mar 29 16:50:41 2018 -0700
+
+    3/29/18  EOD capture
+
+commit a6a15d2465de43ff53679ee3edbf60fd6b9505fa
+Author: atkmh <atkmh@sonic.net>
+Date:   Thu Mar 29 13:26:01 2018 -0700
+
+    3/29/18 redistribution of directories to zip files
+    and some other...
+
+commit c56723721bac47faf156d579a9406b9ce4253c49
+Merge: 602a4bd 44e0ad3
+Author: atkmh <atkmh@sonic.net>
+Date:   Thu Mar 29 10:45:36 2018 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 602a4bd797d77e0e1a5e19708c7ca70d01c7c999
+Author: atkmh <atkmh@sonic.net>
+Date:   Thu Mar 29 10:45:10 2018 -0700
+
+    3/29/18 file management
+
+commit 44e0ad35445ea9a5e5f6ed581d9612838c0978f0
+Author: At Kmh <atkmh@sonic.net>
+Date:   Thu Mar 29 08:00:21 2018 -0700
+
+    3/29/18 file capture
+
+commit 7fe1eee0e72af81f91bb1171e12716d78c5d078a
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Mar 28 17:56:41 2018 -0700
+
+    3 28 18
+
+commit e7f3adf0b5268588833b6bc0ebcffff9a0b1383b
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Mar 28 12:29:38 2018 -0700
+
+    3/28/18 general capture
+
+commit 46f9df416c318664e52487da19c838db4c12fa28
+Author: atkmh <atkmh@sonic.net>
+Date:   Tue Mar 27 16:48:44 2018 -0700
+
+    3/27/28 mods and file capture
+
+commit ae91ae463916477d07f8fce001ecee8a88cdf5f2
+Author: atkmh <atkmh@sonic.net>
+Date:   Mon Mar 26 17:26:43 2018 -0700
+
+    3/26/18 Capture
+
+commit 4896cece4e59f3c0269b716aedd75c8ac9b31e83
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Mar 23 11:53:43 2018 -0700
+
+    3/23/18 adding WFH Meeting settings,
+    today's export of Chorme OneTab Page URLs
+
+commit 3d4c94b7c2aeca10882f92264645bfbe2b5a8b7b
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Mar 20 17:33:30 2018 -0700
+
+    3/20/18 mods
+
+commit a3588f1bb751df1e3b01ecebfca65c2688c611bf
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 19 13:55:56 2018 -0700
+
+    3/19/18 capture work and std util configs
+
+commit 4196d9b0204a01590ddd0bbe891a2798d496f646
+Author: Mark Atkinson <dca34081@deltadev.ent>
+Date:   Fri Mar 16 16:44:45 2018 -0700
+
+    3/16/18  added new pages per Nisheet
+
+commit 0c41598662f9791ef5abb748daa1398003a96274
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 15 17:07:01 2018 -0700
+
+    3/15/18 additions
+
+commit 3293fea441446ccb962bfe100a7f3a14fcc71f0f
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Mar 14 19:11:11 2018 -0700
+
+    3/14/18 cv work capture, transit calc
+
+commit 7f1945d6cf8e251cee9ab07e2d195bd00c636ca2
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Mar 12 18:34:40 2018 -0700
+
+    3/12/18 masive cleanup
+
+commit 2a71052c75abd2c106b8a9e026e8e64d3ac9679e
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Mar 12 11:02:19 2018 -0700
+
+    3/12/18 large amount of work, but just cleanup
+
+commit 2c0d9d9757957076c0681066da66264e34bdcf65
+Merge: 2df664c 6714621
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Mar 9 15:52:17 2018 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 2df664c8137f448cff0d850b01c5c79c5e199ad9
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Mar 9 15:51:37 2018 -0800
+
+    3/9/18 general capture
+
+commit c8a0697ecdaed6885553cd3896ebb81aa2fd2085
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Mar 9 15:38:51 2018 -0800
+
+    3/9/18 powerpoint capture
+
+commit 67146211ccbbfa8eda9ea4f2238d18ec8924a5b8
+Author: At Kmh <atkmh@sonic.net>
+Date:   Thu Mar 8 10:53:23 2018 -0800
+
+    3/8/18 capture
+
+commit 5a4761e1e1d4294f9aa2111c4fd051cbf730ca90
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Mar 6 17:21:59 2018 -0800
+
+    3/6/18 notes from Powerpoint run thru
+
+commit 6051f1a8e2ca4712203c7d86220c4a8426020e1a
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Mar 6 15:15:29 2018 -0800
+
+    3/6/18 work capture
+
+commit 9d8472b641e2871fab06a8ef3025ff5829572018
+Merge: 070770e ca5df7c
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Mar 6 09:27:45 2018 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 070770e8372bc83cfdf5661a227b87f40658043c
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Mar 6 09:27:18 2018 -0800
+
+    3/6/18 util added
+
+commit ca5df7c61384b642e322eba7000356a9a9475702
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 5 17:25:20 2018 -0800
+
+    3/5/18 EOD update slides and talking points: file capture
+
+commit 7c04006893d454c96d95e38355ccf852a8597b3c
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 5 11:37:42 2018 -0800
+
+    3/5/18 update payroll, and file capture
+
+commit 5d801e1dd4d0dfef860c13259720bbd06d253801
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Mar 2 15:12:15 2018 -0800
+
+    3/2/18 update payroll, and file capture
+
+commit 4f2a4bb68d17431909e467fe3c5bac5c98a3f513
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 1 14:31:32 2018 -0800
+
+    3/1/18 update formula for 3/2/18 in excel sheet
+
+commit 08faa03f4888c7fe61119d66fa0da0d3dbc6ddf6
+Merge: 80c6096 e6a14df
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 1 14:23:42 2018 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 80c60962fe1f2bbf6e7a0eb6a79aae8b485dc96e
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 1 14:20:57 2018 -0800
+
+    3/1/18 reg capture
+
+commit e6a14df38addbbdc87c53d329f0ba2e269be1a86
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Feb 28 20:41:50 2018 -0800
+
+    2/18/18 Drive Tree capture , Transit cost mod
+
+commit 1cc85c57ca07f6d2f147fdd027a2759464084c67
+Merge: 542d5df 3ade817
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Feb 28 08:37:28 2018 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 542d5df87b1e75e587a43e988a9efe75d38ceb8e
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Feb 28 08:36:53 2018 -0800
+
+    2/28/18 capture
+
+commit 3ade8176164ff061bb472cf45b6d64c22c4e7626
+Author: Mark Atkinson <dca34081@deltadev.ent>
+Date:   Tue Feb 27 17:31:37 2018 -0800
+
+    2/17/18 First Mod last today to Strat Powerpoint
+
+commit 3ca2b4612c4d2ee2de2fd5a1e6bc7362ae23ceb9
+Author: Mark Atkinson <dca34081@deltadev.ent>
+Date:   Tue Feb 27 12:23:30 2018 -0800
+
+    2/17/18 First Mods to Strat Powerpoint
+
+commit ca6a1e4bd12655c9b7bd5bbfa1b97b5b25e161cd
+Author: Mark Atkinson <dca34081@deltadev.ent>
+Date:   Tue Feb 27 11:29:19 2018 -0800
+
+    2/17/18 Adding Strat Powerpoint
+
+commit f747dd221eab305931e626dc9287e9aea1048c74
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Feb 16 11:38:38 2018 -0800
+
+    2/16/18 Feb16 Payroll
+
+commit e252ae169735f5325f925529f57bf998f17a953e
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Feb 15 17:00:00 2018 -0800
+
+    2/15/18 where was I capture
+
+commit 6a30c5c4d5fa5bc766b334bc2b553a80977b1b63
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Feb 15 12:08:39 2018 -0800
+
+    2/15/18 finished bat file and modified text file
+
+commit e1d5e097a74ce354c66c49a94e68364b610038f5
+Merge: 80b6ab0 6b66293
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Feb 15 11:45:32 2018 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 80b6ab05f8270e0990ab013faded166e822ecbee
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Feb 15 11:45:10 2018 -0800
+
+    2/15/18 working out a daily tracking file
+    naming conention, unix2dos, etc.
+    other completed work capture
+
+commit 6b6629385f281c8a50365e56abc6e77319b31074
+Merge: b60a4da 85a9758
+Author: At Kmh <atkmh@sonic.net>
+Date:   Thu Feb 15 08:14:50 2018 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit b60a4dadc64e59280cdbc06f48e73d8c16f514eb
+Author: At Kmh <atkmh@sonic.net>
+Date:   Thu Feb 15 08:14:38 2018 -0800
+
+    2/15/17 transit cost mods
+
+commit 85a975810968f4b9153ea0f9430dc72073b6b72b
+Merge: fd7ff2c b9d2a06
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Feb 14 14:22:53 2018 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit fd7ff2c45d89c9a5f088e5d69257ed2926c1099b
+Author: Mark Atkinson <ca34081@delta.org>
+Date:   Wed Feb 14 14:21:27 2018 -0800
+
+    2/14/18 xFered music finally moved out of repo
+
+commit b9d2a06a4339d6c2ca41937045e209afcb799fca
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Feb 14 08:25:14 2018 -0800
+
+    2/14/18 mod to runGit for gitPush test
+
+commit 901f321d629d3bdc30a1627edbcc704e75fd77c9
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Feb 14 08:23:41 2018 -0800
+
+    2/14/18 mod to transit code simulation
+
+commit 3cdfa38c098cbec889095fba1724a34049372b4e
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Feb 13 14:36:48 2018 -0800
+
+    2/13/18 work capture strategy pics
+
+commit 7702709b351ca6d38cf42b8fc92693986a19012d
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Feb 13 10:30:47 2018 -0800
+
+    2/13/18 delete file : actually moved
+
+commit 3fe5537e13a71ffbfda95d2c950a4dd33da9c134
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Feb 13 08:44:46 2018 -0800
+
+    2/13/18 some change warrented capture
+
+commit 317ca1481548bebca1ae3edda3d7ce666b159b0d
+Merge: 5783e2d 318e8d9
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Feb 12 17:05:21 2018 -0800
+
+    2/12/18 at home trying to resolve conslicts
+
+commit 5783e2d4442b519baf7a8c4b607005abd8e10066
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Feb 12 17:01:16 2018 -0800
+
+    2/12/18  Strategy Test Reporing work
+
+commit 318e8d93b08e3f7a93168a502e7ea2b5382cbc91
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Feb 9 15:44:17 2018 -0800
+
+    2/9/19 settup up utilities repo
+
+commit 136fa819081124e727aaeeef4bfd0dbd4659c205
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Fri Feb 9 15:43:00 2018 -0800
+
+    2/9/18 just getting a file
+
+commit fe3fd68d8f3b6924a1b0a7e0d8dd82e0636aaef0
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Feb 9 12:23:13 2018 -0800
+
+    2/9/18 moved a few things around, zipped up SVB src,
+    tied chrome_OneTabExport to the desktop w/ shortcut
+    created the std location for PC Utilities
+
+commit 6159b685f0e4fb8bf22f701353281e64ab791216
+Merge: af7b100 bad5481
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Feb 6 18:42:59 2018 -0800
+
+    2/6/18  Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit bad5481a87058b5ec34931c3fe75d2e277b7435a
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Feb 6 16:58:16 2018 -0800
+
+    2/6/18 work capture
+
+commit af7b10092ae735aba202ccc10438d1725cc2a482
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Feb 5 19:08:05 2018 -0800
+
+    2/5/18 Let's see whal cr and LF look like now
+
+commit c234ec003dee10d259375a4a8b7b3a5e14beba28
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Feb 5 17:07:55 2018 -0800
+
+    2/5/18 what did I do
+
+commit b1da71eed1abda9ac3d5e96e5bc4bd8a46ab19fb
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Feb 2 14:05:22 2018 -0800
+
+    2/2/18 Payroll++
+
+commit 86d7851e69147888c4612c2b4a81e00dc8c4fa30
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Feb 2 13:38:11 2018 -0800
+
+    2/2/18 Diagrams, Payroll
+
+commit b2164cff7133ee2c80a498b74da933531172d6ef
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Jan 30 16:39:49 2018 -0800
+
+    1/30/18 New Dir, old file new file
+    Current work on test automation strategy
+
+commit c757a64c2ba2f467ad67ca794e610a069ef688ec
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Jan 30 00:17:33 2018 -0800
+
+    1/29/18 config mod, capture
+
+commit 348be4866e6b6cf3363a30999bac8c5344dede89
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Jan 29 19:21:53 2018 -0800
+
+    1/29/18 removing a file
+
+commit c7e57e9f854589bf019b744bd35a4bf34ada39ee
+Merge: 4d1adc5 00b3f2e
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Jan 29 19:13:00 2018 -0800
+
+    1/19/18 pre...Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 4d1adc515e80f585044476d38a49f046eb08b91b
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Jan 29 19:12:40 2018 -0800
+
+    1/29/18 temp alteration to avoide conflict
+
+commit 00b3f2e09fa95a46f80e3ec9f3165d1cad41191f
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Jan 29 16:59:32 2018 -0800
+
+    1/29/18 strategy word doc capture
+
+commit 99d825cc560ee7c6268801248f6f2c66b7cd2dbe
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Jan 29 13:47:54 2018 -0800
+
+    1/29/18 payroll and note capture
+
+commit 38846e3c2072698120ecf4bc7ca8c57b75de7c23
+Merge: 9dabac6 3472cc4
+Author: At Kmh <atkmh@sonic.net>
+Date:   Fri Jan 26 15:55:49 2018 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 9dabac658299d583375d762e976c99e5bbf25a15
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Jan 24 19:42:45 2018 -0800
+
+    1/24/18 capture of some work and getting rid BC&Kitty :(
+
+commit 3472cc4446c73ca6b7e71ef660a9669fdd434942
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Jan 24 16:52:34 2018 -0800
+
+    1/24/18 Need for Arnab
+
+commit 828a8459fb3abe403f2c8d4957fc11f21df953f3
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Jan 24 16:11:18 2018 -0800
+
+    1/24/18 Capture
+
+commit 4f10bd365235ab4425cb32dfc6e64b9ffbd8e0a6
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Jan 8 18:51:59 2018 -0800
+
+    1/8/18 last of zeroMusicNew
+
+commit 308519e6d7b734b92175980e59f2d0a69dae8f74
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Jan 8 18:39:05 2018 -0800
+
+    1/8/18 Second of zeroMusicNew
+
+commit 77ae58a39b5be8bcc034b4f1b921c774e3a7ce59
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Jan 8 18:32:49 2018 -0800
+
+    1/8/18 First of zeroMusicNew
+
+commit 5197b2f6e165d2b94fb6a0fce9bfd565f4d3fe72
+Merge: 4fa23ac 2229240
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Jan 8 18:26:58 2018 -0800
+
+    1/8/18  Supposed to clean this all up
+
+commit 4fa23ac28a3056853c8cd76462e5f973dbc1bed3
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Jan 8 18:24:22 2018 -0800
+
+    1/8/18 trying to clean up
+
+commit 222924069845a44b458e7d7d2707899dbd795fdc
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Jan 8 14:19:15 2018 -0800
+
+    1/8/18 del NextRound _ONE
+
+commit 4b651f675eba717f1f62f6acd4322fa060bb8337
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 16:01:45 2018 -0800
+
+    1/5/18 NextRound _ONE
+
+commit 2c0fad391fea3dec962b24c730b2f5d48b968578
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 15:54:46 2018 -0800
+
+    1/5/18 del 5&6
+
+commit 04767e986789af9e6158465143be8c413790fd62
+Merge: 87c757b 5746450
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 15:12:25 2018 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 5746450c84417563354152af80a4851be723d889
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 14:52:49 2018 -0800
+
+    1/5/17 Del XXREAL[ Two, Three, Four]
+
+commit 87c757b9f8e2713ff323a3ef46e2df4f181f91f1
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 14:47:33 2018 -0800
+
+    1/5/18 11 Five&Six
+
+commit 9f0fc09c72d6ccd50b2f99a401f58c36cbb09ee1
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 14:30:58 2018 -0800
+
+    1/5/18 Ten FOUR
+
+commit 8a29471c8d006f7b711e22d68a51539175c3d365
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 14:18:19 2018 -0800
+
+    1/5/18 Nine THREE
+
+commit 6a99aa047a7621337a4a42e3f2b014631cd94e21
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 14:04:25 2018 -0800
+
+    1/5/18 Eight
+
+commit ee61ee8bcc992fc26e1ae8a5ab2f6a4000e81e32
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 11:44:44 2018 -0800
+
+    1/5/18 seven Del
+
+commit 408b850ab91e1bb5ac82b88b40d84209f11eb3e5
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 11:26:35 2018 -0800
+
+    1/5/18 seven
+
+commit 817e97002fa90ccc22934361f24040d43b7d7596
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 11:18:39 2018 -0800
+
+    1/5/18 six Del
+
+commit 6c25b3988e70dc214eb53ba0cd097d7fd9bbf064
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 11:00:38 2018 -0800
+
+    1/5/18 six
+
+commit 7121dd3e37a1bb62a4d556c7b691ea00964f2c1b
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 10:44:54 2018 -0800
+
+    1/5/18 five Del
+
+commit ea396c7ed66635609d7c8a76ab525a29f742485b
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Jan 5 10:31:39 2018 -0800
+
+    1/5/18 Five
+
+commit 72a95fcf051092c8cb9b4f2143674aa51faad872
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Jan 3 17:30:17 2018 -0800
+
+    1/3/18 delFour
+
+commit d60781f1e97397a2e57765f0055cf4e1c685e28d
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Jan 3 17:21:08 2018 -0800
+
+    1/3/18 four
+
+commit ca5f3ea0e4e42ce9534d2656bd15bed425290858
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Jan 3 17:18:46 2018 -0800
+
+    1/3/18 delThree
+
+commit 6a0d75432afb7e4b034688e6dd964bc34b512454
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Jan 3 17:09:34 2018 -0800
+
+    1/2/18 capture three
+
+commit 819f825cc9a7dd819046370e0b628301dc119a37
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Jan 3 17:01:10 2018 -0800
+
+    1/2/18 capture two
+
+commit 84e1b61f405917a882631460bd47fd9f83ffc7b4
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Jan 3 16:57:31 2018 -0800
+
+    1/2/18 capture one
+
+commit c491a91038549500f9eeb544c384c870e4a14ccc
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Jan 3 12:54:30 2018 -0800
+
+    010318 Catchup captureing a file
+
+commit c011bdd4cdbd6ed7a4e011e33663dc4699e5a3a1
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Dec 27 17:28:44 2017 -0800
+
+    12/27/17 Test Repo capture
+
+commit a42d5b0ca057c150790ea08718e36be34f685be9
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Nov 30 16:24:42 2017 -0800
+
+    11/30/17 notes capture and the year end DD prof reveiw page
+
+commit 03397893220e029ac69136ba333ad9c07619e526
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Nov 7 12:25:13 2017 -0800
+
+    11/7/17 gen caputure
+
+commit 8fb73c080cf0245d55e4fc0668988aab6f9e77ed
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Nov 6 15:07:48 2017 -0800
+
+    11/6/17 edit mods and other files
+
+commit 3b7919ca372aa8f47d7897f874fe7c26c63cf3f2
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Nov 3 18:14:15 2017 -0700
+
+    11/3/17 edits added
+
+commit cbe8cadc38b07309ee8ffa574c3873c5f36fde3c
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Nov 1 19:21:38 2017 -0700
+
+    11/1/17 Test auto strategy update
+
+commit 061a8b3d83d068c7c4b4409fc67a94192a350045
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Nov 1 17:41:54 2017 -0700
+
+    11/1/17 slides for strategy presentation
+
+commit da6e9a9ad482ad5c6df02ad3bee9fce07416a0be
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Oct 31 18:57:04 2017 -0700
+
+    10/31/17  file mods
+
+commit e6230a34ff8eff7e275e805766b4adcc48c40bf2
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Oct 31 17:52:45 2017 -0700
+
+    10/31/17 Initial capture of file
+
+commit 07d41f4b540774d16bd482ac7c5fdc7f441d32fa
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Oct 30 23:42:14 2017 -0700
+
+    10/30/17 picking up corrections
+
+commit 6cbde100b341e0684212d2946fd7908892ebd3d1
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Oct 30 23:15:27 2017 -0700
+
+    10/30/17 capture pastubs and commute cost
+
+commit 6621b4849bf873f4401e6d810495112b385a3263
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Oct 24 09:44:12 2017 -0700
+
+    10/24/17 repo capture
+
+commit 7aec2743c6912ae017418a4150eef78903199986
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Oct 24 09:40:05 2017 -0700
+
+    10/24/17 DevOp Bat files, Disk Structure recordings
+
+commit a8b87195a49879ad68d04ed0f01261953f665604
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Sep 20 16:07:49 2017 -0700
+
+    9/20/17 payroll added plus calendar
+
+commit 5d9b84dc0716d86ff77a459f92a2296fd0f9242e
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Sep 20 13:50:50 2017 -0700
+
+    9/20/17 Batch killers mods
+
+commit f23f9382f71bb8ce9b57108a98a7cdc52d861c5b
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Sep 19 16:27:58 2017 -0700
+
+    9/19/17 repo capture
+
+commit 555ac437373e94a3e73629528373a3ef5778f354
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Sep 19 16:25:41 2017 -0700
+
+    9/19/17 DotFilesCapture and a note or two
+
+commit 845675ae8eb8b966db2e8289e9cb0a659fc7cf53
+Author: Mark Atkinson <ca34081@delta.org>
+Date:   Tue Sep 12 13:05:47 2017 -0700
+
+    9/12/17 Genaral capture
+
+commit 644073e75703ed2cca0b4a6760df4676b7bb611f
+Author: Mark Atkinson <ca34081@delta.org>
+Date:   Tue Sep 12 12:35:32 2017 -0700
+
+    9/12/17 Notes capture
+
+commit 01371008f41abe5addc179fd8eff3809e21ec60d
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Aug 28 13:55:34 2017 -0700
+
+    8/28/17 repo capture
+
+commit 13ee2ca7f55cabff6100dd6016fcab7eb3d79303
+Merge: 7af7b5c d20c5a2
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Aug 28 13:52:58 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 7af7b5cfaf8075b35182632edcb252949731689f
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Aug 28 13:52:01 2017 -0700
+
+    8/28/17 [Image | Notes ] capture
+
+commit d20c5a28e4d848ec5798025fcac6525080262e9f
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Aug 22 17:30:20 2017 -0700
+
+    8/22/17 image addition
+
+commit 572a1f742fb44de414000fe907635d6efd9216eb
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Aug 17 16:03:05 2017 -0700
+
+    8/17/17 file capture
+
+commit f363bb02ea3077b838a807b96a65a925521d64ae
+Merge: 309520e df68bd0
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Aug 15 09:53:38 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 309520ec777d0f0f4b9d3637b9c6a79524b9fe90
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Aug 15 09:53:11 2017 -0700
+
+    8/15/17 win dsktop&menu config capture, notes
+
+commit df68bd0f1446b75b82a3922ed5b00253736fb421
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Aug 14 23:43:00 2017 -0700
+
+    8/14/17 DD Payroll
+
+commit 4f77cf9d586975d351f936400d53496213b75176
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Aug 8 16:47:41 2017 -0700
+
+    8/8/17 Code Capture
+
+commit f6f38c2ba318cda926f7ec90b899a77c6d1faa94
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Aug 8 16:45:22 2017 -0700
+
+    8/8/17 Notes capture
+
+commit 25bce049247b215f6a6846b00f58e8cd18e6e807
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Aug 8 08:57:02 2017 -0700
+
+    8/8/17 Notes from 7th
+
+commit 0b005e682849b229d52bf299598170096664e1c5
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Aug 7 18:36:12 2017 -0700
+
+    8/7/17 temp note to incorporate
+
+commit b5631a8555dc763c8b901d025d2a03e4588ceb9b
+Merge: 27411a4 8786470
+Author: At Kmh <atkmh@sonic.net>
+Date:   Mon Aug 7 18:16:34 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 8786470510bc9ea1b8efdefe07d334e7c3649bf9
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Fri Aug 4 13:53:51 2017 -0700
+
+    8/4/17 code capture, some bats the rest product code
+
+commit ba83c8c6e4314c8a71f763a9aa65340349dc857f
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Mon Jul 10 10:48:18 2017 -0700
+
+    7/10/17 wrap/zip up of hours files. removal duplicate protractor calculator work
+
+commit 27411a40bb17dca7aa1305b7463e904d866ed67c
+Merge: 8b3a560 fb86ce7
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Jun 28 18:34:03 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 8b3a5602ac89f5420387fadbad5e06f13c7b57a6
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Jun 28 18:33:33 2017 -0700
+
+    6/28/17 sounds captured
+
+commit fb86ce702b6774d6c648dc52122c40d3d88720a4
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Mon Jun 26 09:26:36 2017 -0700
+
+    6/26/17 code capture
+
+commit 5cb9a8e27f67f975a16d8ccf2ccf931ce1e72952
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Mon Jun 26 09:24:53 2017 -0700
+
+    6/26/17 Notes, win bat proc killers relies on Sysinternals pskill
+
+commit 2409a9b2d036dba3f6dcbda3374888b404531f8a
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Mon Jun 19 16:39:06 2017 -0700
+
+    6/19/17 Its about time, but heres a working capture , woot
+
+commit ddb2ca511221f647056225a4dd03b72017b20333
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Mon Jun 19 16:34:06 2017 -0700
+
+    6/19/17 getting notes file
+
+commit f8deb5215e22fbd32dc405dbe416287b52fd7b7f
+Merge: 49435dd 3702bc5
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Wed Jun 14 10:19:54 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 49435ddc990afa97d75a01eec3735e0d41c41f22
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Wed Jun 14 10:19:26 2017 -0700
+
+    6/14/17 Notes added
+
+commit 3702bc5d539ae9aa290b2676ac952c960b14cf0e
+Merge: 37a7d54 cc26cd5
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed May 31 08:40:26 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 37a7d54f724d221fd2c5f74cd8b841a267244043
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed May 31 08:39:54 2017 -0700
+
+    5/31/17 svbWebPay dir cleanup zipup, Notes
+
+commit cc26cd51ccdd28c1bd745128b3eeb842131caa43
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Fri May 26 09:50:13 2017 -0700
+
+    5/26/17 Add Notes, git cheet sheet , Image
+
+commit ca6542f6f67e1b9207608770a9d3b57e33689af4
+Author: Mark Atkinson <ca34081@deltads.ent>
+Date:   Mon May 22 12:46:08 2017 -0700
+
+    5/22/17 Dotfiles framework : initial add
+
+commit efb279c88ce14514e47f3e25dc9d584a48948d12
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Fri May 19 16:33:44 2017 -0700
+
+    5/19/17 repo2repo update
+
+commit d009865945bff7067804399824b3b73109911592
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Fri May 19 12:38:38 2017 -0700
+
+    5/19/17 Catchup cleanup, img added, img del, story code
+
+commit f7f7a3d4aea6351990dfdc6bfd175b5742bf7563
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Mon May 15 17:09:28 2017 -0700
+
+    5/15/17 Big Capture of recent adds in development and configuraiton
+
+commit 29ecd2a0d554c7433ed035aff0a185214d8e7fc6
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Mon May 15 16:10:47 2017 -0700
+
+    5/15/17 removing radio stations that went south : added notes & and image
+
+commit ea551265ed778bcc900569a4c3f33f8339f6a3f4
+Merge: 50e2cb9 c595dab
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Tue Apr 25 12:16:30 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 50e2cb9950e51730d9d2bea5b1f8a04a4464b44b
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Tue Apr 25 12:13:38 2017 -0700
+
+    4/25/17 image caputre
+
+commit c595dabf6110f9f1d82f3194b76bc0f0004f7b45
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Apr 25 07:45:50 2017 -0700
+
+    4/25/17 just did git fetch all , git reset --hard origin/master
+    seems to have cleared up all the conflicts that I didn't care aobut
+
+commit 8422da39625e2768c6f7d4928f6fbdb471c27169
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Mon Apr 24 16:41:56 2017 -0700
+
+    4/24/17 EOD main capture
+
+commit 330fa232599bd731629edb9ecffddc586b9e9ef4
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Fri Apr 21 16:17:53 2017 -0700
+
+    4/21/17 capture recent off shore work
+
+commit cf5a16a76aef3d30cd1dc0c5762df22f9e68f56c
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Fri Apr 21 16:06:50 2017 -0700
+
+    4/21/17 general capture covering some significant changes started off shore
+
+commit 793fcc72101a7e1a0201173eba38874c9e4140f3
+Author: matkinson@delta.org <matkinson@delta.org>
+Date:   Fri Apr 21 16:02:24 2017 -0700
+
+    4/21/17 Capture notes
+
+commit 0595f4d99dae560aff44562c96f4f550fd77ac6e
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Apr 12 09:59:57 2017 -0700
+
+    4/12/17 Cleanup delete RemoteSystemsTempFiles.  No idea what it was for
+
+commit c37116e2685661a3f7301827e87e6cc5f12368f4
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Apr 12 09:54:39 2017 -0700
+
+    4/12/17 removed some low qual images. Higher qual images remain
+
+commit adf7d9b684d74cfbcf71607aa70017e8583ad2d4
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Apr 12 09:51:33 2017 -0700
+
+    4/12/17 Rename file DD poc.zip
+
+commit 5cace6b7996e6357ea9bbe3c7aa5f7f3eca9ee8b
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Apr 12 09:48:47 2017 -0700
+
+    4/12/17 removing DD_offShore directory.  didn't turn out to e a good way to go
+
+commit 39d6567e5fc7d8abf7ea9e91d46ab84a575aa1f1
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Apr 10 10:55:37 2017 -0700
+
+    4/10/17 capture of offshore obj technique that works
+
+commit 1a2c4d7fe15f604f71150d40f831d0ed220fcc62
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Apr 7 16:01:59 2017 -0700
+
+    4/7/17 notes capture
+
+commit e0afcaa074be070d49b5200cb3b0d71453f2b21c
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Apr 7 16:00:15 2017 -0700
+
+    4/7/17 Image capture
+
+commit f711aff4a354ded2460b8866a86b3fbcd268f483
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Apr 4 11:56:52 2017 -0700
+
+    4/4/17 Conversion FTE first set of docs
+
+commit fc4594db8b39be8199273d83b97caf1d0a6508e7
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Apr 4 11:48:09 2017 -0700
+
+    4/4/17 dir added, future possibilities
+
+commit 4bec0afeef67887c0a23a4436ef5dd935cc19adf
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Apr 4 11:33:06 2017 -0700
+
+    4/4/17 Notes catchup
+
+commit 1cbe80c8d37a6d428cdbeb1ea5361ddaf1733218
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Mar 28 17:44:09 2017 -0700
+
+    3/28/17 eod capture
+
+commit 967dd4598ad891a63425ac42987b48e1d8b36f00
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 27 13:12:41 2017 -0700
+
+    3/27/17 Capture of work done in Production Repo. copy here
+
+commit 37a6f4d7ea8cb5dd101e35a1b92024263e02da59
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 27 13:05:52 2017 -0700
+
+    3/27/17 Capture off shore team ideas in the new directory
+
+commit 8f4d17e0aba99fc5be673c8684194b7105325118
+Merge: 6b435d8 41f0519
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 27 13:01:55 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 6b435d848f18205d9f7c3198de7d9165b06417a7
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 27 13:01:24 2017 -0700
+
+    3/27/17 capture gitignore additions, test-run.bat, Notes file
+
+commit 41f0519b6cbf5c95f0981b3845c0ac38ad1eed2f
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Sun Mar 26 14:34:03 2017 -0700
+
+    Add files via upload
+
+commit 6ac91010d959769aa213ed0377c0fec25c252fee
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Mar 24 15:35:42 2017 -0700
+
+    3/24/17 capture POM model organization : file names, var names, etc.
+
+commit 1ac1d330f31e4dba937e4af2dc2e44088abb6044
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Mar 22 19:21:25 2017 -0700
+
+    3/22/17 Home Pc POMLab work Capture Idea
+
+commit 392103fd984e8c011c420a247fa30585a52566bd
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Mar 21 19:04:57 2017 -0700
+
+    3/21/17 Pom lab capture stuff
+
+commit 589a7eff850c42f070a81b522c58d0870efdddd6
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Mar 21 18:59:56 2017 -0700
+
+    3/21/17 local lab work capture
+
+commit 31700078afd9a5cd45d1321901aa68f42a0b737a
+Merge: 7e50557 ebcb7e8
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Mar 15 07:56:05 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 7e50557d1fa08c19f0153711f0f06d493b44f751
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Mar 15 07:55:09 2017 -0700
+
+    3/15/17 capture URL for work at home
+
+commit ebcb7e89dd743ff47471d4f4d6e4bc9ee1154a4c
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Mar 14 17:26:19 2017 -0700
+
+    3/14/17 gitignore to ignore new report files.  Capture the big reconfig of the describes and it's
+    so that reporting isn's so horrendous
+
+commit eb54eb66440ceb0563dabe5cbd8f8a4c1c311d06
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Mar 14 15:21:32 2017 -0700
+
+    3/14/17  Just white space edit and commened added line to get a caputure after git err mgs
+
+commit 9fc57d2a873a40a4c51f397a98992c5e654d0e95
+Merge: e4a226d 0b0c43e
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Mar 14 15:18:10 2017 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit e4a226d3f1a38fc5a5037506b31f7f094ea5db2b
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Mar 14 15:16:55 2017 -0700
+
+    3/14/17 capture of the reporting components from C.Ullman
+
+commit 9f444b495d215198f71678eadf81e2849a1b05fe
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Mar 14 15:14:47 2017 -0700
+
+    3/14/17 notes and test reporting development
+
+commit 0b0c43eed7fa1483726f07ddef268b2068d6331f
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Mar 14 09:07:53 2017 -0700
+
+    3/14/17 Some home configs
+
+commit e1c5d4fd5a27a1e00020dc4ebcb835aa5da0e0fd
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 13 17:19:32 2017 -0700
+
+    3/13/17 EoD capture of attempted solutions in CAA55SimplePlan... , reviewed thinking of prot config: took out
+    reports directory and put it back at the root the same way my prod testing is done w/ Chads new command
+    additions
+
+commit 0449f6b79c692d4e5915f3cd1bd682a3aa38e1a1
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 13 15:37:46 2017 -0700
+
+    3/13/17 .gitignore keeping results.json out of the repo
+
+commit 44df2768a1f9baaefbfadcd5e418cacf0e2493a9
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Mon Mar 13 15:31:58 2017 -0700
+
+    1/13/17 Capture execution config chgs, report output
+
+commit 2203796edc954814b799fcaf8a520a07c4576881
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 9 17:25:43 2017 -0800
+
+    3/9/17 General capture of the dev repo
+
+commit 7719bd6f5a44d2405eb85a176caa136ba22af1e2
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 9 17:11:12 2017 -0800
+
+    3/9/17 removing the reports directory and files
+
+commit 24fa9fdf47952a93b03b946e09010c490de4f384
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 9 17:03:38 2017 -0800
+
+    3/9/17 capture ongoing R&D mods
+
+commit 1ede409fdd71fdd1456001b884e3cc7be2c1b568
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 9 16:59:33 2017 -0800
+
+    3/9/17 cleaning up difficulties with gulp
+
+commit 292520c2103e19e48429cd290117c6533551ecf3
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 9 16:48:30 2017 -0800
+
+    3/9/17 capture of POM_Lab stuff that works
+
+commit e8b5ec16238497e4d334a255b43cce460796cf20
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 9 16:45:22 2017 -0800
+
+    3/9/17 Notes deletion, Notes Addition, images add, sounds pls deletion
+
+commit 7bf914383a976c016be7beadf1523d0fa491d631
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 9 16:41:33 2017 -0800
+
+    3/9/17 Notes captured
+
+commit 2522cd7adae1952ed98cb342d3b0114a0a9bf686
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Thu Mar 9 16:37:09 2017 -0800
+
+    3/9/17 new sounds capture
+
+commit 629399025917e14a125a9d45f6075e2bf9a47fe9
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Mar 1 17:33:53 2017 -0800
+
+    3/1/17 eod capture with a working page obj model ! Woot^3
+
+commit 281c7a0577463b7810da7a2869085d797036ca0f
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Mar 1 09:57:26 2017 -0800
+
+    3/1/17 a little Notes files reorg
+
+commit ebe2cca85d9207c470dc8ec9c5297d032f0cc630
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Tue Feb 28 08:20:12 2017 -0800
+
+    2/28/27  EOD 2/27/17 Capture, Deb Ringtone FireFly, notes
+
+commit b0f2c1559fde4e4d53a62f67bacf7d5232d2810a
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Feb 24 17:23:58 2017 -0800
+
+    2/24/17 EOD capture.  At line 315 in workflow
+
+commit e25c0e8de539fc6fb996aaa2dbb9b6b063e15820
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Feb 24 10:09:08 2017 -0800
+
+    2/24/17 notes and clasic radio stations
+
+commit 10b996eecefa2927d1b28030f720588d70704e9e
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Feb 24 09:11:19 2017 -0800
+
+    2/24/17 FleetwoodMac Hypnotized
+
+commit 1a6fcd6e64d7a17b8b7b0606f2282bed1a3aec62
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Fri Feb 24 08:57:01 2017 -0800
+
+    2/24/17 edits or mods to WasSrPlan, dev evolution to CAA55PlanSelect , Notes, excel sheet for workflow
+
+commit 011f9c233dc7d0a256b4718511e2c5ef70289272
+Author: Mark Atkinson <matkinson@delta.org>
+Date:   Wed Feb 15 17:22:02 2017 -0800
+
+    2/15/17 EOD capture
+
+commit c072b662e74c5a83207804761970bbdb16e4dd77
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Wed Feb 15 12:24:49 2017 -0800
+
+    2/15/17 removing plan that had not nor would ever be started
+
+commit 66ab13e06c6ccd1ea41648fef4dc4c48b45ab8fb
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Wed Feb 15 11:26:27 2017 -0800
+
+    2/15/17 capture Uday's previous work
+
+commit 05bec4ec954c79187958be8d2e64e2d9150d6ae9
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Wed Feb 15 11:23:55 2017 -0800
+
+    2/15/17 Capture of 2/14.... file nameing change finish....
+
+commit 4c1d55fe662933f216f64d6a154a62720596d294
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Wed Feb 15 11:14:31 2017 -0800
+
+    2/15/17 Notes added
+
+commit 9c220c527be88413cb8563601da6e33c4b759583
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Mon Feb 13 17:04:55 2017 -0800
+
+    2/13/17 Some file name changes .  trying to align to a better naming convention
+
+commit c0ed0006b4c1496ef08e07369de37bb7fb8bbea6
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Mon Feb 13 16:34:15 2017 -0800
+
+    2/13/17 Capture of the working Test repo :  New structure : starting the page object model pattern
+
+commit 3b794a51a4dc0227621cb92cafa459d3aadf8968
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Mon Feb 13 16:30:06 2017 -0800
+
+    2/13/17 new pics from last week : gettting them captured now
+
+commit bafe1906044895ca8a3857b3af56505d3d9345b5
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Mon Feb 13 16:19:11 2017 -0800
+
+    2/13/17 new notes
+
+commit f868ab8df899292d5f8855a1cff6586ab9581bb8
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Wed Feb 8 16:30:27 2017 -0800
+
+    2/8/17 More POC Repo Cleanup.  Re established allignment for all configuration.  all npm run actions in package.json
+    should work cleanly
+
+commit 11f51e0f014e0bedc6c4f8568670500341067cc8
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Wed Feb 8 16:18:44 2017 -0800
+
+    2/8/17 POC Repo Cleanup.  Removed the integration_scenarios as my copy alias wasn't updating that dir.... ops
+    created a storage.zip to capture old crap that shouldn't be deleted
+    removed other orig proof of concep stuff
+
+commit 3641c2f56064525547ef60cd5a5f3486278141bf
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Wed Feb 8 15:47:12 2017 -0800
+
+    2/8/17 Zipped up and removed the original DD_POC directory.  Added as a directory zip
+
+commit 20afec43024018556f38ce247cd65db2d2669bcc
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Wed Feb 8 15:39:54 2017 -0800
+
+    2/8/17 Notes Capture
+
+commit acedf2da5d938f883574344855b88fe3d125fa26
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Wed Feb 8 15:15:16 2017 -0800
+
+    2/8/17 General capture.  Small changes to the Senior Test plan
+    Mostly timing sleeping issues.  Added a TODO file from my Notes App
+
+commit 027e821d71c9732802475ce2f23d0b66c40c2c2c
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Tue Feb 7 16:13:33 2017 -0800
+
+    2/7/17 The Senior plan works.  Needs some mods and adds but minimally
+
+commit 815ee1dd8e13dcfe2bf94face04dcede48fd05a5
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Tue Feb 7 09:53:56 2017 -0800
+
+    2/7/17 Early morning capture
+
+commit 78e5bf2700899a8618f3dc20beba214bd89f9875
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Mon Feb 6 16:59:19 2017 -0800
+
+    2/6/17 Capture of work hours time sheets.  These are UnSubmitted but ready
+
+commit 1c67969fbfd7a72b5cfb306261d7929f0528eb13
+Author: Mark Atkinson <ca60212@delta.org>
+Date:   Mon Feb 6 16:54:58 2017 -0800
+
+    2/6/17 capture from work repo
+
+commit 41d22d39a377c6c200fb3d755661508179775cca
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Fri Feb 3 14:06:27 2017 -0800
+
+    2/3/17 bringing over test repo code for the first time.
+
+commit 0142ea8b918e58d86f0b49f90af8bc560ea39747
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Fri Feb 3 13:47:08 2017 -0800
+
+    2/3/17 File capture
+
+commit 669cd220ecbfe9b5407395ac574a0f338da0ffe4
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Fri Feb 3 13:44:55 2017 -0800
+
+    2/3/17 Notes Capture
+
+commit d1cfe4ea9022e4c56f9431fd9db4bb740f5b9330
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Fri Feb 3 13:42:29 2017 -0800
+
+    2/3/17 Capture of sources.
+    Have since moved to DD repo for farther work
+    capturing other files as well.
+
+commit 9c2fc3ab15c0d8e1a4caeea85590e743d5391a1f
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Fri Jan 27 17:25:20 2017 -0800
+
+    1/27/17 end of day capture
+
+commit 7867cd45f8eaedba07b2e4a08e3115c692049f94
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Thu Jan 26 17:02:17 2017 -0800
+
+    1/26/17 EOD capture
+
+commit dd97cbf413472b4b397d58e11267fc9b8dcbeb2e
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Thu Jan 26 15:32:51 2017 -0800
+
+    1/26/17 Mid afternoon capture, Addition of several other files that have been waiting for upload, Adding a workHoursDir and time sheets
+
+commit 2f2c707e354f4633a75f5a4d3905b877e3f023b6
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Thu Jan 26 12:55:17 2017 -0800
+
+    1/26/17 Just a mid day capture
+
+commit a898bb8f627627b45f4e725e1ea62eae5feeb7fe
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Thu Jan 26 10:44:19 2017 -0800
+
+    1/26/17 mid morning capture
+
+commit 7b53c3e0128313806cdd062bac7e183f64b245e0
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Wed Jan 25 17:32:15 2017 -0800
+
+    1/25/17 end of day capture.  it woked without failing, but again the broker field is null so, it prints nothing
+
+commit e4750a7fb2252d80e30e6d93203a956cd2f2b445
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Wed Jan 25 13:12:58 2017 -0800
+
+    1/25/17 mid day capture.  currently entire Personal Info page working
+
+commit 58fd8f20a61d060643fd6600c45df4965f075b43
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Tue Jan 24 17:03:59 2017 -0800
+
+    1/24/17 end of day capture
+
+commit de8d089e8988649f30dc305ca3766b9a868c055f
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Tue Jan 24 13:56:32 2017 -0800
+
+    1/24/17 Mid day capture
+
+commit 86ea0358ed40dd24989c66d93d1f62f61cd5ce74
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Tue Jan 24 12:30:50 2017 -0800
+
+    1/24/17 Just want to capture the mornings work
+
+commit e0d1aa1c8e96fa5a24b2b3e1643b020f1de315fe
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Mon Jan 23 18:28:02 2017 -0800
+
+    1/23/17  Got it. the page that is.
+
+commit a57d00aff0baf4e78417fa5ec2c94e3ab939d81a
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Mon Jan 23 16:38:45 2017 -0800
+
+    1/23/17 MidLateAfternoon capture
+
+commit c1bc4168dcd52c085c24f1c86e7b6ffb7e980fc0
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Mon Jan 23 15:11:59 2017 -0800
+
+    1/23/17 Initial commit of the day.  Need a benchmark on things changing
+
+commit 0efb32edddb7879b655c2d4dca59ba24ea3a6143
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Fri Jan 20 17:35:34 2017 -0800
+
+    1/20/17 end of day end of week capture on SrPlan at line 65 and 88
+    is dialog present and has it gone away
+
+commit ae36c23e734af539f78a9fc7d82f956b6c353c37
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Thu Jan 19 14:49:13 2017 -0800
+
+    1/19/17 New files with more uniform names(copies etc.) added scripts values to package.json, general capture
+
+commit 10dfe4b9d817792c1cdcc946887e7211f31fd61f
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Thu Jan 19 13:05:38 2017 -0800
+
+    1/19/17 Capture
+
+commit a2185301d6d9b89c55f92b528d84bea18ccecb05
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Wed Jan 18 17:33:22 2017 -0800
+
+    new capture
+
+commit cd3f3ba6310b6a93547d4286cdfb4e2ac1961a04
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Wed Jan 18 12:03:32 2017 -0800
+
+    1/18/17 adding V2 of DD_POC.  Working to resolve proper installation of npm, node, protractor, selenium, etc
+
+commit 1aa52b3c3dd155355db0e8578463d31c9f51d3bc
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Wed Jan 18 10:01:44 2017 -0800
+
+    1/18/17 gitignore added *node_modules, node_modules*
+
+commit 226aafad5c8947d2cf96f4d51f731ba1dd60a899
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Wed Jan 18 09:57:26 2017 -0800
+
+    1/18/17 Notes capture
+
+commit 842b9c3383122903616226c1897918cebc2db36c
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Fri Jan 13 16:58:05 2017 -0800
+
+    1/13/17 Completed happy path on DDCX, added capabilities to conf.
+
+commit f38b964dcd6491a941cf689b45175550f9333bbd
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Wed Jan 11 17:24:50 2017 -0800
+
+    1/11/17 Final of the day.  Some cleanup and improvement.
+    Currently finishes the Facilities page and makes it to Payment.
+
+commit abb3cacb5425493b956517d3cf89264eda515fc5
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Wed Jan 11 16:03:44 2017 -0800
+
+    1/11/17 capture .  All the way to the Payment page. Facilities is buggy
+
+commit b9f5e58fd988ea526515c5db9e6cc38908ab379b
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Tue Jan 10 17:21:55 2017 -0800
+
+    1/10/17 Fleshed out pers info.  Broke up into several specs.
+
+commit 16b56e00df4a0fba0211c324a0070823a9744004
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Mon Jan 9 17:30:30 2017 -0800
+
+    1/9/17 End of the day submission
+
+commit a5008c062e62efb173f53c4017d3137cffa4ecd2
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Mon Jan 9 13:04:47 2017 -0800
+
+    1/9/17 capture DD_persInfo_java & DD_POC Protractor POC
+
+commit 2907a34174268a981d57da2ae89fddd31172c8d3
+Author: Mark Atkinson <ca60212@deltads.ent>
+Date:   Fri Jan 6 10:38:42 2017 -0800
+
+    1/6/17 New files. Some capture of simple changes. Work: Windows:
+
+commit 561d0460d456bb17082b8fe1d49fc1b3c4abbfe0
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Dec 23 09:45:28 2016 -0800
+
+    12/23/16 capture JavaScrits and DotFiles
+
+commit a063897bead8287ae6c374ec014b04021327c3f8
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Dec 22 19:08:16 2016 -0800
+
+    12/21/16 readme file consolidation
+
+commit e87933650b9a572ffe53ee32b1bc612a5d4f8fc5
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Dec 22 19:01:27 2016 -0800
+
+    directory cleanup moved png to Books
+
+commit 7374997f65e8e29623f3802d26836e4bb86d89c6
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Dec 22 18:58:34 2016 -0800
+
+    12/21/16 Notes Cleanup Addition and deletion
+
+commit 1dbbe0b5876eeff98aa900f536cf9930b1953f99
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Dec 22 18:45:39 2016 -0800
+
+    12/21/16 Notes consolidations
+
+commit 60a3d1ebd5fd3c2af587dc35417f7d664c71073c
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Dec 22 17:33:28 2016 -0800
+
+    12/21/16 Notes additions
+
+commit 133f9d7f5736a1f30b4dd32918d62b0a90c90cc9
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Dec 22 17:31:34 2016 -0800
+
+    12/21/16 cleanup and addition
+
+commit 68477aa89d1b6536901bd401aa2b38d51b341467
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Dec 21 09:00:48 2016 -0800
+
+    12/21/16 Letter update, deletion ubuntu.iso
+
+commit c1ca3e9e51fe477b01116ea6fc7f3d3bc8cef7a4
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 16:58:21 2016 -0800
+
+    12/20/16 package.json mods
+
+commit 182db571c69d5ec51007648fe32e62e922b1bbb2
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 11:17:39 2016 -0800
+
+    12/20/16 removing unnecessary file
+
+commit 681f34e47e0e125c0d56dd69a48def23dc3926d1
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 11:10:34 2016 -0800
+
+    12/20/16 some name changes and droping one old version: a saved package.json
+
+commit ca78ff5c7edcc375694438e4c4ff775c44eb0c77
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 10:57:41 2016 -0800
+
+    12/20/16_2 file name change
+
+commit fe0a12e4da02115200667b0566e72ce8cdccae23
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 10:56:03 2016 -0800
+
+    12/20/16 file name change
+
+commit c4d518be08cb6339b376d391b70ea119dc6d2b1c
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 10:43:33 2016 -0800
+
+    12/20/16 Morning dot file capture
+
+commit 0647d126d8f05da29402029bd5e86390ca55dfd2
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 10:32:56 2016 -0800
+
+    12/20/16 copy and mv to capture what was.  this before createing the Calc-v2 directory
+
+commit 5e233ccb29cc690d818d15283cdd0f1f0e18cedd
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 10:31:49 2016 -0800
+
+    12/20/16 got the gitignore rigt
+
+commit 57e1af5ecd45ca68371224b49f2b7f85e115aafc
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 10:29:43 2016 -0800
+
+    12/20/16 file renamed so a git rm <file name> was needed
+
+commit be2e302868705c319f1518550fa472ac25ebd66f
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 10:21:03 2016 -0800
+
+    12/20/16 captured sounds
+
+commit 768bcceeafbbe950cd982ae865667bad4caf49b5
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 10:15:01 2016 -0800
+
+    12/20/16 update package.json
+
+commit 0865fe3757c35e37ce752491545378555a479885
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 08:51:25 2016 -0800
+
+    12/20/16 Recent image capture lunar images
+
+commit 4bd96ba168479d01bb95f72b669ce77b4b99af39
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 20 08:49:14 2016 -0800
+
+    12/20/16 Adding Calc-v2 and working contents minus node_modules
+
+commit 32c459102f46cbcb33b2294112e33cd2c727ade4
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Dec 19 11:56:02 2016 -0800
+
+    12/19/16 Capture and addition of current known & similar new files
+
+commit 8aceba070d1ea8046ebb1ea08b12350d9cb1d074
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Dec 19 11:05:06 2016 -0800
+
+    12/19/16  Adding example Stroy
+
+commit 14c9f7f3c3651814988432358f5963638544e3cb
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Dec 15 19:02:10 2016 -0800
+
+    12/15/16 track added
+
+commit 54029345fed7d904d79a5eebf7ac8d8989e56748
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 13 13:37:37 2016 -0800
+
+    12/13/16 Interesting content capture
+
+commit 29e832c08ebbe687d51789f1d7e5f3dc010d4044
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Dec 13 12:31:07 2016 -0800
+
+    12/13/16 General Capture, added DT-Automation Directory and contents
+
+commit 19cc2265d19cbc72a6497fa9d95a7374bb4c5103
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Nov 28 08:32:56 2016 -0800
+
+    11/28/16 Notes capture
+
+commit 27f4e3ee33a031f66f2dbbc993c7a18c24c74dd0
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Nov 28 08:24:15 2016 -0800
+
+    11/28/16 disk structure
+
+commit 78b18b2eb9309db9262ca3a5423f0dca3b513fa2
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Nov 28 08:20:38 2016 -0800
+
+    11/28/16 general roundup of recent work
+
+commit 6c50b1f6c3c636acebc8de776ec6e9a4c3aef4bc
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Nov 14 10:27:07 2016 -0800
+
+    Dot Files , Mashup text, Excel files
+
+commit a779b9de798b830d68f5df5c8c5a41a929bcf5c3
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Nov 7 17:56:38 2016 -0800
+
+    11/7/16 oneliner
+
+commit 88360e57fe07cc552cf4aec56553f13aa7b57491
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Nov 7 17:16:37 2016 -0800
+
+    somehtin
+
+commit 6c4f0df1f68920bc9d7e35ae22b98493b4cee1d8
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Nov 4 08:41:34 2016 -0700
+
+    11/4/16 getting T3 shell funcs in place
+
+commit 90922d340e9e802a089ba65a908e5b3875964ea6
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Nov 3 18:13:58 2016 -0700
+
+    11/3/16 file renaming by cretting new file . will deprecate older file later...
+
+commit 26dde9ec9395dc3d58ad43c21d59cd00afbecc32
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Nov 3 15:40:27 2016 -0700
+
+    11/3/16 again, just prudent
+
+commit 1e03ae9a03be2d05737cd4c3463e6d3eca4c000d
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Nov 3 15:39:24 2016 -0700
+
+    10/3/16 just prudent
+
+commit e339d9413c41c4f83349950bee8f89d8544f7db8
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Nov 1 16:39:37 2016 -0700
+
+    fixed the find / grep call with @Tested and //@Test
+
+commit b365c68a824888c7807e76bdd35bea92262a3628
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Oct 31 17:28:47 2016 -0700
+
+    10/31/16 Correction to lost FuncCode in sandboxUTCount.
+    was missing the awk to give just subdir and not path, all funcNames, etc.
+
+commit 2306fe03c757925a184409b88ef3477b06df47e5
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Oct 31 13:05:44 2016 -0700
+
+    Mods and some v8 dot file deletions
+
+commit e7160593291c55602b6ca95cd2c8dfcecb82191d
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Oct 27 16:36:02 2016 -0700
+
+    10/27/16 close to finishing Test count Funcs
+
+commit c91c1d78e97fe326ac88b46c3ace9563d2a6bd86
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Oct 26 14:06:18 2016 -0700
+
+    aliases and more Funcs development
+
+commit 34f65599c474e04bbf44bfcaf7a730f4eb8fe3e8
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 25 20:23:39 2016 -0700
+
+    10/25/16 getting closer on arithmetic operaitons
+
+commit 36db52a29dad98939f0e9268337949215bb9a119
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 25 17:22:41 2016 -0700
+
+    10/25/1more shell fun work: func returning value to other func
+
+commit e67890086676e4cd6f2183d88fdb8a8836a44577
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 25 14:24:57 2016 -0700
+
+    10/25/16 refactor svbshellFuncs into ...Func2 cleanup .bashrc & alias work
+
+commit d3dba525bec57eda34a8ea316da784fac2ff3dee
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Oct 24 11:34:22 2016 -0700
+
+    10/24/16 changed variables arrayIndex -> Index: index -> x
+
+commit df21b599506ec79c23e434573571e82835be6a4d
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Oct 21 18:03:51 2016 -0700
+
+    10/21/16 some aliases and shell func work
+
+commit 8a8fa714d7611917482a6847c5fa8b64a648ece1
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Oct 20 17:08:17 2016 -0700
+
+    10/20/16 dots, Exce files
+
+commit d70fa21258701ce3c498599328b41eba0fa023b2
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Oct 19 12:08:41 2016 -0700
+
+    10/19/16 just sayin
+
+commit ecc2910a2c519521b487a3de1ec3d64b05373a07
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 18 13:50:33 2016 -0700
+
+    10/18/16 AppleScript(never know why) eConnectAPI doc, ubuntu14DeskTop.iso
+
+commit b3339ec02134134aa3b314716f314ab35a0cd905
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Oct 14 17:18:36 2016 -0700
+
+    getting accpet matrix
+
+commit 876983af192042bfa5bca9de7e128ac6ec5f6d9f
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Oct 14 11:36:03 2016 -0700
+
+    10/14/16 PrimeNum .metadata & .recommenders cleanup
+
+commit ac3fc98f8937d44493495a5806e53bfe38b516a1
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Oct 14 11:33:40 2016 -0700
+
+    10/14/16 Java projects cleanup bin directory
+
+commit 844782898eef5e370577127bf86346df5bfcb7ea
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Oct 14 11:21:24 2016 -0700
+
+    trying to fix files that I don't want tracked:  want to remove ../JavaDev/.metadata, and any other metadata or such
+
+commit d7bab78b884836af4f4fe98f606df3c28c291d0c
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Oct 14 11:17:47 2016 -0700
+
+    10/14/16 ShellFunc mods and cleanup: dotfiles, applescripts ?(don't know why), Accept matrix
+
+commit 1ea40aab6e58475c3436a09ec9eca326551d0cd9
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Oct 13 12:55:42 2016 -0700
+
+    10/13/16 ShellFuncs Added code to get through SandBox repoDirectories
+
+commit a1e82e59db8c6e551e06e8ae6d28ff5bea0afac1
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Oct 12 17:42:07 2016 -0700
+
+    10/12/16 Dot files Completed the repo Integrate count Func, etc.
+
+commit 5e240b163af84d9321981781043d2ea642049ac2
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 11 16:07:51 2016 -0700
+
+    10/11/16 mostly svbshellFunc getting the integrationCount to work
+
+commit 9251930ad2f3ace5877d077680042dd47e082ed7
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 11 10:32:56 2016 -0700
+
+    10/11/16 contiuing cleanup
+
+commit 3a7c998cc2ffb58c80a9a10d091e8045d1d6f9d8
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 11 10:18:43 2016 -0700
+
+    10/11/16 open-close browser main scpt file ( don't know what chaged or why, also desk top short cuts
+
+commit f99eabc8d800b260746a6d49e929667b02f0e960
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 11 10:10:01 2016 -0700
+
+    .gitignore changes , improvements hopefully
+
+commit 8c7b5afc0f7b2dd5fa061f73212f45703479b2de
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 11 10:06:05 2016 -0700
+
+    improving .gitignore removed Javadev-.recommenders*
+
+commit 960b94e32c1bd4e6cf17ce0fb9922f3716672ad0
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Oct 11 10:02:46 2016 -0700
+
+    10/11/16 Notes, mainrun.java prime number code....
+
+commit 950cb792e6bf570c445e8496b2d3149bdf8e9de5
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Oct 7 16:13:12 2016 -0700
+
+    10/7/16 more Accept matrix adds
+
+commit 3805a046c5a8735df8a23088d60f9982e56db4d5
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Oct 7 11:33:48 2016 -0700
+
+    10/7/16 Accetance Matrix capture
+
+commit b732a66b4a69df5a656b10b8be04e24084cdce2c
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Oct 7 10:15:08 2016 -0700
+
+    10/7/16 capturing Notes
+
+commit d1482738c5f24c161a46797da7fe5d580992540b
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Oct 6 16:34:59 2016 -0700
+
+    10/6/16 dot files and shellFunc and aList
+
+commit 096744c2d6249f8be1add1f0fcc9f6197f2b798f
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Oct 6 16:14:52 2016 -0700
+
+    10/6/16  getting PrimeNumber Recoreded
+
+commit cde4c7f19c13a9478673c4c180b7e3060e5fc1c2
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Oct 6 16:07:47 2016 -0700
+
+    10/6/16 cuz I'd like to get linkList and prime num recoreded
+
+commit 17ccf7e93171fee0aa2f34d5bd242ea91e93c89d
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Oct 5 14:17:22 2016 -0700
+
+    10/5/16 14:17 dotfile changes , aList file changes
+
+commit 08624e50cd78f210dcd7ef7dc0c452f795978104
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Oct 5 09:32:57 2016 -0700
+
+    10-5-16.2 dotFiles submission
+
+commit c8f3ad73bb002d93e4befd4f6042d2baba3c9472
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Oct 5 09:31:44 2016 -0700
+
+    10-5-16 dotFiles submission
+
+commit f67de47bfd3d55d6a0f22688681f075b9631ab82
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Sep 30 18:36:24 2016 -0700
+
+    09-30-2016_18:36:18
+
+commit af256d6fe195bcc6460a0ffe33b74eab2c113bba
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Sep 30 18:36:13 2016 -0700
+
+    trying to get my JavaDev directory fleshed out with previous work
+
+commit e4e3737ecd211416ebec1c62c3a69015138273cd
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Sep 30 16:23:32 2016 -0700
+
+    09-30-2016_16:23:26
+
+commit 18ab668bf5d6267b6f9f24ecef103e99de3b6fd5
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Sep 30 12:15:06 2016 -0700
+
+    09-30-2016_12:15:00
+
+commit 538710b1ffa27ac26c61b885b4ca7bb672f9555f
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Sep 30 11:59:21 2016 -0700
+
+    resolving .metadata and .recommenders deletions
+
+commit 4a3be21a5bff14321741e43d83471b4834983ad5
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Sep 30 11:41:28 2016 -0700
+
+    committing materials removed
+
+commit 1656f2d9d763183869d9e1b08509ec759e77c53f
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Sep 29 09:21:25 2016 -0700
+
+    09-29-2016_09:21:19
+
+commit 64ca77f239034d0cada08453b487f8665b726768
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Sep 29 09:16:58 2016 -0700
+
+    09-29-2016_09:16:52
+
+commit 03799dc54416df66b374c443aa19ab8db0b7b1c1
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Sep 26 09:14:18 2016 -0700
+
+    09-26-2016_09:14:12
+
+commit ddfb6cb3b945ea928c11b3a37c01353a35e98584
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Sep 26 09:01:30 2016 -0700
+
+    09-26-2016_09:01:24
+
+commit c423c55c89c93ca7b729a9bf85fcec5355a555d6
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Sep 22 14:07:38 2016 -0700
+
+    09-22-2016_14:07:32
+
+commit d46da6dd897c1013cc17614753d07b5f32599c23
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Sep 22 11:12:50 2016 -0700
+
+    09-22-2016_11:12:44
+
+commit b8b8315fd3a73cf26fe44237ad6e208ec6edf2e6
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Sep 22 10:55:46 2016 -0700
+
+    09-22-2016_10:55:39
+
+commit 8b97d2f99ec9e4d774a642f58d495d3212e20dc3
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Sep 22 08:13:37 2016 -0700
+
+    deleted JavaDev/.metadata entries that were gone from disk
+
+commit 8e2edb4f719b2498ca05b85ec4dac2b726094d57
+Merge: fa12ba9 6021ca9
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Sep 21 18:36:45 2016 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit fa12ba9a1d7421c90ef78eb68956a338a4309ffe
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Sep 21 18:36:31 2016 -0700
+
+    additions and changes
+
+commit 6021ca92acb0405ed45661ae0925b270073beff4
+Merge: 39b16c0 a359215
+Author: At Kmh <atkmh@sonic.net>
+Date:   Fri Sep 16 03:18:36 2016 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit 39b16c0c8b1d6342f5b0008cb9ed7a8487d7d842
+Author: At Kmh <atkmh@sonic.net>
+Date:   Fri Sep 16 03:17:53 2016 -0700
+
+    PC oneTab contents for 9 30 2016
+
+commit a359215af1982057464d1b7e0b6a26ba973f007f
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Sep 9 11:54:48 2016 -0700
+
+    09-09-2016_11:54:42
+
+commit d94208ee5462ffaa8af579dc9e22e3b5d07388c3
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Sep 7 14:24:44 2016 -0700
+
+    09-07-2016_14:24:37
+
+commit f34f1c759b2c5ea23e5bda05fafe2a5cb6347b44
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Sep 1 00:03:38 2016 -0700
+
+    09-01-2016_00:03:32
+
+commit 2b907bb52bbe1aa22954f544c560a06ba2187723
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Aug 31 23:59:32 2016 -0700
+
+    08-31-2016_23:59:26
+
+commit a76e72a2089c1c20de98ef8a5bf6e99661601a02
+Merge: e84e7a0 4ffb1ed
+Author: At Kmh <atkmh@sonic.net>
+Date:   Sun Aug 28 23:00:23 2016 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/mainProf
+
+commit e84e7a030e40181f0f2aa6d081ff7787602cb64c
+Author: At Kmh <atkmh@sonic.net>
+Date:   Sun Aug 28 22:58:25 2016 -0700
+
+     CreateList and ListNode Some changes prior to 8/28/16 on PC
+
+commit 4ffb1edfdabb6a6f203e8cc3891ba129265a4467
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Aug 26 17:21:33 2016 -0700
+
+    08-26-2016_17:21:27
+
+commit 33dddfd7faf70d72724e80702945d313f84b9796
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Aug 25 17:34:00 2016 -0700
+
+    08-25-2016_17:33:54
+
+commit 82729c64cac9c3e3c1febb4c8b401ec6ef926295
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Aug 25 14:41:56 2016 -0700
+
+    08-25-2016_14:41:50
+
+commit 65043d95d9045c4697a9bf5f8e503a8d3fbcbf30
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Aug 23 14:07:15 2016 -0700
+
+    08-23-2016_14:07:05
+
+commit bff8cd5804a8aab4a16f2c97f379a77ba2bc20cc
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Aug 19 17:47:53 2016 -0700
+
+    08-19-2016_17:47:47
+
+commit 2c430014f21e7f9723eb77b668090bcdab106ca6
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Aug 19 17:30:48 2016 -0700
+
+    08-19-2016_17:30:42
+
+commit d9f3610ff52b05574ec09e2182ade974a1af5b86
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Aug 19 09:52:33 2016 -0700
+
+    08-19-2016_09:52:26
+
+commit 6252fbd4d6c441ea9604e57761d0042324ccda77
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Aug 19 09:23:03 2016 -0700
+
+    08-19-2016_09:22:57
+
+commit 2531db1f87622c5b1562299d515d9618313b6b8a
+Author: At Kmh <atkmh@sonic.net>
+Date:   Thu Aug 18 09:52:30 2016 -0700
+
+    Removed all commented code cuz refactoring made it irrelevent
+
+commit df30f93fd70afe3502d80ece8a1d012ccb07c8c7
+Author: At Kmh <atkmh@sonic.net>
+Date:   Thu Aug 18 09:48:53 2016 -0700
+
+    Refactoring ListNode.print signature
+
+commit 32f5f160a37806f01268689c2f747cfbcf3774d0
+Author: At Kmh <atkmh@sonic.net>
+Date:   Thu Aug 18 09:29:19 2016 -0700
+
+    Refactoring
+
+commit 076c7c8e9073c7a2ffc6e4b32b9885d6a40d246d
+Author: At Kmh <atkmh@sonic.net>
+Date:   Thu Aug 18 08:54:18 2016 -0700
+
+    Refactored the solution out of the sepate Solution class and into the ListNode class as a class method
+
+commit 37eec49603ef47c80a7e27a0b9737b269f1b6e74
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Aug 17 19:07:51 2016 -0700
+
+    Corretions and refactoring of counting and count of duplicates. Dont need the CountListDups class any longer.  That concept is now part of ListNode.
+
+commit 0d499bf2e47473e2951025e7ed14c48c9889a586
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Aug 17 18:42:11 2016 -0700
+
+    Corrections and refactoring into class method
+
+commit b9c0f1409b9e672ceab871359b556b21216deb75
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Aug 17 17:54:51 2016 -0700
+
+    Cleanup: reset to primary operation create List, put in duplicates, count duplicates, Solve duplicates in list and display
+
+commit d4d0e0a23ad84a4956ab21d92fc65efc4fcf646e
+Author: At Kmh <atkmh@sonic.net>
+Date:   Wed Aug 17 07:02:04 2016 -0700
+
+    PC recloned 8/16/16
+
+commit 2e85a8b388e96634638b60ec4e24787e6e22590e
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Aug 16 08:11:13 2016 -0700
+
+    08-16-2016_08:11:07
+
+commit 6c62d3fb219c49be0b3a9f752cea5f245b0e45b0
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Aug 16 07:58:54 2016 -0700
+
+    08-16-2016_07:58:48
+
+commit 1ce78e9cd8ea6e6610fcf0a3ad4dfa79d11ece14
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Aug 16 07:41:45 2016 -0700
+
+    08-16-2016_07:41:38
+
+commit 294b727d8769990aeb702205ef630c7fef60ae36
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Sat Aug 13 13:37:13 2016 -0700
+
+    08-13-2016_13:37:07
+
+commit 9ac9c21c0d790d4852f49c501c3d2c29e4800d68
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Aug 12 16:39:16 2016 -0700
+
+    08-12-2016_16:39:10
+
+commit 070a40524a872d55fd53aba456a63e9336ef0d97
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Aug 12 08:00:57 2016 -0700
+
+    08-12-2016_08:00:51
+
+commit ba0716082f66906d54eb65aa533721a6d85acb35
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Aug 11 12:40:38 2016 -0700
+
+    08-11-2016_12:40:32
+
+commit 2f1d4cf1b49fba5b2d4dd8e1196712529e2b0c35
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Aug 11 12:36:46 2016 -0700
+
+    08-11-2016_12:36:40
+
+commit 9433a2c080c4c94eaac8451e44165c73af2ee793
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Aug 11 12:28:39 2016 -0700
+
+    08-11-2016_12:28:32
+
+commit df108c67a7b38bfc7cca305e7b4bcd5e9099d069
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Aug 8 11:47:04 2016 -0700
+
+    08-08-2016_11:46:58
+
+commit 34ece18504b90b77c7356647e4823f1504e369cf
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jul 29 18:48:20 2016 -0700
+
+    07-29-2016_18:48:14
+
+commit 882ed1f87113deca2396498d46640dbcd0611679
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jul 29 18:38:06 2016 -0700
+
+    07-29-2016_18:38:00
+
+commit 2d0b2a5aaa0ee152fdacd4d0b17aaff84d15a672
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jul 29 18:25:33 2016 -0700
+
+    07-29-2016_18:25:26
+
+commit cee1e11d4c75ddb8652be2ebc1a0d56891e0a608
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Jul 27 08:36:37 2016 -0700
+
+    07-27-2016_08:36:31
+
+commit 0f6427b19c28e7649d7496ad31d2d10e4e0bbd1e
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Jul 25 16:11:08 2016 -0700
+
+    07-25-2016_16:11:02
+
+commit b7d5f467dcba7d0d021a4d2ee924ce2cd0b75196
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Jul 12 18:19:17 2016 -0700
+
+    07-12-2016_18:19:11
+
+commit 7e2aec64118b9779a3133da3a78b0756885cf26c
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Jul 12 18:17:38 2016 -0700
+
+    07-12-2016_18:17:32
+
+commit 4dc37a7c1a3561d061f9f2588cd9c67cffaf9283
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Jul 12 13:52:51 2016 -0700
+
+    07-12-2016_13:52:45
+
+commit 3874f61ab9a226d591ab4bf7add49f1f52c9d6b9
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Jul 6 11:30:59 2016 -0700
+
+    07-06-2016_11:30:53
+
+commit 76a26c8479eaa119665a2db4124fee5b9a77fc35
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Wed Jul 6 11:11:44 2016 -0700
+
+    07-06-2016_11:11:38
+
+commit 71638c7c776b085a9ff85a31eeab93739370550d
+Merge: 885191d c00c3ed
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jul 1 16:59:20 2016 -0700
+
+    big commit caused by what ever I did #2
+
+commit 885191d1505db290cea69b99bfc95cb636da4fc8
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jul 1 15:21:41 2016 -0700
+
+    removed actual PDFs from Edu_DOM-Edu
+
+commit c8f19f006486a6144374e2ebfdd2e26f3c1d4b3b
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jul 1 15:12:34 2016 -0700
+
+    07-01-2016_15:12:27
+
+commit a2042856a8cfec8ae0c529f729bc8fb84673f732
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jul 1 13:23:28 2016 -0700
+
+    07-01-2016_13:23:18
+
+commit c00c3ed6101c328d954edca2904cc3db0042e21f
+Author: At Kmh <atkmh@sonic.net>
+Date:   Tue Jun 28 01:07:23 2016 -0700
+
+    pc getting it all straight 06:28:2016-01:07
+
+commit 8a918616a404f39a796b1b1962a75df21d62d8b0
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Jun 27 12:04:44 2016 -0700
+
+    06-27-2016_12:04:38
+
+commit 3ddb80c3ef1aa05031262fcce1cdfa6dbf5b06b8
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Thu Jun 23 11:32:44 2016 -0700
+
+    06-23-2016_11:32:38
+
+commit 2f270b86ce5847e5447ca364a36d4f8bd8b8dced
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Jun 21 09:02:20 2016 -0700
+
+    06-21-2016_09:02:14
+
+commit 58e9361be46b537ec4794c0040df97de9a7e2d63
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Jun 21 08:56:36 2016 -0700
+
+    06-21-2016_08:56:30
+
+commit d0de97bfec4206b3688cab845a23c7aadf9818bd
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Jun 21 08:33:14 2016 -0700
+
+    06-21-2016_08:33:08
+
+commit 79c61c5403a63f829e435433b2cf2f1ee6037ce7
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Mon Jun 20 17:30:41 2016 -0700
+
+    06-20-2016_17:30:35
+
+commit 7ffe38eb4a847313f50273ddb49f2123ac3554a0
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Jun 14 08:56:52 2016 -0700
+
+    06-14-2016_08:56:44
+
+commit b46fdc6699e37e240caa117338ec47fcf71ee24c
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Tue Jun 7 10:28:33 2016 -0700
+
+    06-07-2016_10:28:26
+
+commit 45a73e5735947e41707f007a37e756a3f8107981
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jun 3 12:07:39 2016 -0700
+
+    06-03-2016_12:07:33
+
+commit d742d695b1c71f26bc0c614d8719e525080cda5c
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jun 3 12:06:42 2016 -0700
+
+    06-03-2016_12:06:36
+
+commit d3ebdb9b0db340b523fd386b4cb67145b630e408
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jun 3 12:06:12 2016 -0700
+
+    06-03-2016_12:06:06
+
+commit 4e6e2bb5c7ee2c97bceccfd12155503b2340e33b
+Author: Mark Atkinson <matkinson2@svb.com>
+Date:   Fri Jun 3 10:10:08 2016 -0700
+
+    06-03-2016_10:10:02
+
+commit 240e9a41a3aa98f245337277952d93ab0ace829e
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed May 11 14:08:20 2016 -0700
+
+    05-11-2016_14:08:14
+
+commit 73a48ec8a916fe46605291a650f77d8c782d1145
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue May 10 18:17:20 2016 -0700
+
+    05-10-2016_18:17:14
+
+commit 5ce2761fbf70bfaca0fe2c924c585d96b35495ba
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed May 4 16:39:31 2016 -0700
+
+    05-04-2016_16:39:25
+
+commit 2e53b047ca9176f514940145fe2139fabd6e27a8
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Apr 28 18:31:44 2016 -0700
+
+    04-28-2016_18:31:38
+
+commit 6d15a76b8d45795a6a83595fe191d518af973f06
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Apr 27 09:41:05 2016 -0700
+
+    04-27-2016_09:40:59
+
+commit a30e1caa9f14ebaee37bae86f83af849cf8d44e6
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Apr 27 09:27:20 2016 -0700
+
+    04-27-2016_09:27:14
+
+commit 4660685f262ad535e02f044a41766cd71bfe7d0e
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Apr 27 09:20:47 2016 -0700
+
+    04-27-2016_09:20:41
+
+commit b0bfc0e71976a8b9cb895300a4e4cb38922e5293
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Apr 27 09:19:26 2016 -0700
+
+    04-27-2016_09:19:20
+
+commit cb9c6572f2f6633b9cd4b1265d6711cee81f2e6d
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 25 10:06:02 2016 -0700
+
+    04-25-2016_10:05:56
+
+commit cd2736633e96b3e71084433d978432772066f219
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 18 15:41:51 2016 -0700
+
+    04-18-2016_15:41:45
+
+commit 0ef9334f7e6b5f4951f6c4a57960bbc8186664da
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Apr 12 19:22:14 2016 -0700
+
+    04-12-2016_19:22:08
+
+commit 220baec38e9e5267285b5cf9fa9da703ed540fdb
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Apr 7 19:07:45 2016 -0700
+
+    04-07-2016_19:07:39
+
+commit 2cfc9ef7c9467cca7c20005883a1b7df0a375106
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 16:19:17 2016 -0700
+
+    04-04-2016_16:19:11
+
+commit f99b1d2c680ebe55c445b174112bb98124e45867
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 15:10:54 2016 -0700
+
+    04-04-2016_15:10:48
+
+commit 51b3a120b9de85d5ded72b7897d2c24cb276eef0
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 15:08:37 2016 -0700
+
+    04-04-2016_15:08:31
+
+commit 93242a5ec06e5acd758a68d775f41a877c58de30
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 13:09:10 2016 -0700
+
+    04-04-2016_13:09:03
+
+commit 549a0e2fe0c2a8986710cdaec808f9dee85a820e
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 12:53:27 2016 -0700
+
+    04-04-2016_12:53:21
+
+commit 0ef28463a3b6636e40916912bc961af35148a0f8
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 12:12:06 2016 -0700
+
+    04-04-2016_12:12:00
+
+commit fcf7ba504b387c49bffa6bd9f19eba9c71719bbc
+Merge: e311f18 8ec4bd0
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 11:51:37 2016 -0700
+
+    Merge remote-tracking branch 'Notes/master'
+
+commit e311f18ddaf2bd0fbee520c3eee0e165103ee9b6
+Merge: 6176966 580ea79
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 11:51:25 2016 -0700
+
+    commiting cuz its complaing that it's necess
+
+commit 8ec4bd041c4b49ef8c01b739ba5141919d8290a5
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 11:43:19 2016 -0700
+
+    Moved gitignore into subdir
+
+commit 166005cb6c97f6086f03bc30b20f48f13fd4bf5e
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 11:40:24 2016 -0700
+
+    04-04-2016_11:40:18
+
+commit 580ea79ef6c62683849aff6d7a7e5d25050b5d6c
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 10:12:06 2016 -0700
+
+    adding gitignore with .DS_Store entry
+
+commit 6ff90043bd19330a7bfa99a388fc09ad18e4cfa5
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 10:12:06 2016 -0700
+
+    adding gitignore with .DS_Store entry
+
+commit 4adfa01576dd7b70141c029a1c7678d633fe8d84
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 10:10:38 2016 -0700
+
+    04-04-2016_10:10:32
+
+commit 406e02f0d44ac5ab73b59197af9aa5c34e2c1500
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 10:10:38 2016 -0700
+
+    04-04-2016_10:10:32
+
+commit 61769663932872b3f4ddb100d46cc03c783b121e
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 08:40:45 2016 -0700
+
+    04-04-2016_08:40:39
+
+commit 40effd03bcca75d2e34944f271b5b388371210cc
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 08:24:29 2016 -0700
+
+    04-04-2016_08:24:22
+
+commit 5abfc84d30437ab44ede01a3f31d9045415d4ef1
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Apr 4 08:21:20 2016 -0700
+
+    Subtree merged in SVB_Notes.
+    These insctructions on how were found at URL: https://github.com/atkmh/SVB_Notes.git
+
+commit dcb1015ebe27aa74648cac38f6229f83b1918c08
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Apr 3 21:32:09 2016 -0700
+
+    04-03-2016_21:32:03
+
+commit 4d598a54434ebeeebc94e246aedc1eb97073391a
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Apr 3 21:19:15 2016 -0700
+
+    04-03-2016_21:19:09
+
+commit 44f610f336ec3f6940c3a3269570c2ccd44d45ee
+Merge: 6734ceb bf2546f
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Apr 3 21:12:27 2016 -0700
+
+    imported Notes as a subtree
+
+commit 6734cebe8929648d3b3a4c857229df43929acbb6
+Merge: 092d743 4405400
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Apr 3 17:42:48 2016 -0700
+
+    Merge remote-tracking branch 'temp/master'
+
+commit 440540037059c13c5f4b26dcfd3b557f6c2bb9dd
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Apr 3 17:39:55 2016 -0700
+
+    prep for moving Notes into MarkGit
+
+commit b8c47a93b073548f9fdc5d29f6ba9e7eb88d9ac9
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Apr 3 17:08:09 2016 -0700
+
+    04-03-2016_17:08:03
+
+commit 97a6b4b65f4554fe64cd34026289694a7ef65df1
+Merge: c0c0860 bf2546f
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Apr 3 16:56:27 2016 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/SVB_Notes
+
+commit 5daec0ed138ffa67c722afffdc5eea20ae8cdd8b
+Merge: c519c58 55f8cc3
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Apr 3 16:56:27 2016 -0700
+
+    Merge branch 'master' of https://github.com/atkmh/SVB_Notes
+
+commit 092d7433f1023b147e0ef853c5745e14b66dc08b
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Fri Apr 1 18:55:39 2016 -0700
+
+    04-01-2016_18:55:33
+
+commit eb2b466d9eff39e3b94847e75712844dacad6fa9
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Fri Apr 1 18:29:55 2016 -0700
+
+    04-01-2016_18:29:44
+
+commit 41b5783bbcdafa9684576331e36e0e1a51d6f9c0
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Fri Apr 1 18:28:45 2016 -0700
+
+    adding gitignore with .DS_Store inside
+
+commit c0c0860fd9a1873caae8a7a79365dfde27d3cda0
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 28 16:56:55 2016 -0700
+
+    03-28-2016_16:56:49
+
+commit c519c580904d88627fe423a4f639b861847e0719
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 28 16:56:55 2016 -0700
+
+    03-28-2016_16:56:49
+
+commit ac4a0069b7761f023fefe2b3b738abe2671d8e0d
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 28 16:47:18 2016 -0700
+
+    03-28-2016_16:47:12
+
+commit 842cefc14b3ba44105910571d981838b51087f47
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 28 16:47:18 2016 -0700
+
+    03-28-2016_16:47:12
+
+commit 1afe31d712dc750a10871535a247bea9eea5eb32
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Fri Mar 18 17:03:13 2016 -0700
+
+    03-18-2016_17:03:03
+
+commit bf2546f6c377fe63a7c5dbde889a9219007f87e3
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Thu Mar 17 23:37:28 2016 -0700
+
+    03-17-2016_23:37:XX
+    
+    Belongs in one of the Techincal how to or URL to reconsider
+
+commit 55f8cc3cefd85fb39d430370d5b672ad0ad3ca68
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Thu Mar 17 23:37:28 2016 -0700
+
+    03-17-2016_23:37:XX
+    
+    Belongs in one of the Techincal how to or URL to reconsider
+
+commit af9da3b012521c8f16e1b33a4766482ca6760dad
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Mar 17 09:40:52 2016 -0700
+
+    03-17-2016_09:40:46
+
+commit c84f9a077b2127977795d647bb5928b33af7dafe
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Mar 17 09:40:52 2016 -0700
+
+    03-17-2016_09:40:46
+
+commit 3f9db0d1923015f32fffec5f2f5e40361f489f03
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Mar 17 09:33:59 2016 -0700
+
+    03-17-2016_09:33:53
+
+commit 58a7333fd243bf81d85a76fe447e870d15e0f64a
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Mar 17 09:33:59 2016 -0700
+
+    03-17-2016_09:33:53
+
+commit 605760491d605b3e0eab42fb588236bf5aa63624
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Mar 17 08:57:34 2016 -0700
+
+    03-17-2016_08:57:28
+
+commit 61697416fecc9aee2006ecff8b3e6cfadc0befa1
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Mar 16 16:12:47 2016 -0700
+
+    03-16-2016_16:12:39
+
+commit 75cb7f9ca98fd330513f0bb1084004a0aeb37cab
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Mar 16 16:00:52 2016 -0700
+
+    03-16-2016_16:00:43
+
+commit 1d623090204c9b418cac9566b217bf55c0ef258f
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Mar 16 15:51:48 2016 -0700
+
+    file name changes warrent
+
+commit 0c38abb92c7510cd7fb4443aa28ec4ff0e365137
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Mar 16 12:58:04 2016 -0700
+
+    03-16-2016_12:57:58
+
+commit 41c82da7a931edd1719f13c82fb32808aadea9d3
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Mar 16 12:55:38 2016 -0700
+
+    03-16-2016_12:55:32
+
+commit dda6ebc1a3edfc11b64d5363ddb57f0e56fb44c0
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Wed Mar 16 12:42:35 2016 -0700
+
+    03-16-2016_12:40:13
+    
+    03-16-2016_12:40:13
+
+commit f152540b0ec912ec6469d7418b05e5730db5e42c
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Wed Mar 16 12:28:13 2016 -0700
+
+    03-16-2016_12:26:54
+    
+    03-16-2016_12:26:54
+
+commit 042185eaaf60024649eb10a44484e3636d4ad668
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Wed Mar 16 12:16:48 2016 -0700
+
+    Added files via upload
+
+commit 216fb6c02f0de21382d59a5d979fa6b55dc8fd40
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Wed Mar 16 11:47:47 2016 -0700
+
+    03-16-2016_11:46:31
+    
+    03-16-2016_11:46:31
+
+commit d119f98d08bc5ce0ce4b3c4a2fc84ac1dc9de848
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Wed Mar 16 11:29:53 2016 -0700
+
+    03-16-2016_11:29:23
+
+commit ceaebb072b40700a29c32447ac374f4a2bf999f6
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Mar 16 11:19:45 2016 -0700
+
+    03-16-2016_11:19:34
+
+commit c05f3d94de8a1ae85dc401f90f5d4b4c28d9012b
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Mar 16 11:03:13 2016 -0700
+
+    03-16-2016_11:03:05
+
+commit 1d60a73c81b4557bce547280c369f64f4b8769c0
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Mar 16 10:51:04 2016 -0700
+
+    added images dir and one file
+
+commit 52e51a99cfc77c4b4a38ff074b7fb49de7de1187
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Mar 16 10:48:57 2016 -0700
+
+    add sounds director with one file
+
+commit 54bef1e4e7d42b163acc7613c90847775dcb4930
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Mar 15 19:58:08 2016 -0700
+
+    03-15-2016_19:58:02
+
+commit a7423c16dada4f5a2cac1930d0d1d181fecf76a5
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Mar 15 19:58:08 2016 -0700
+
+    03-15-2016_19:58:02
+
+commit f917dd4dc3f5756bf782bf88aa347c549cc891bb
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Mar 15 19:46:51 2016 -0700
+
+    03-15-2016_19:46:45
+
+commit d4337fcf68cfb9aca7b34651cb3a03676340e91a
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Mar 15 19:44:35 2016 -0700
+
+    03-15-2016_19:44:29
+
+commit e25b81ed984af3d8fdfc7339d8b56e8875dde913
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Mar 15 19:42:21 2016 -0700
+
+    03-15-2016_19:42:15
+
+commit 502c6cbf8e411dae3be2434c58b62a77e67b729e
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Fri Mar 11 08:47:42 2016 -0800
+
+    03-11-2016_08:47:XX
+
+commit 6efa6c4b23c160f1f79cade47dd5e9e037cff0e2
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Mar 10 18:01:00 2016 -0800
+
+    test
+
+commit 9124ccfb9550cdc957e7c5acbafe376f86e2679a
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Mar 10 17:58:29 2016 -0800
+
+    03-10-2016_17:58:XX
+
+commit 153fcaa5b5d146667716ca82d617d4a4bcf37ade
+Merge: 50969c5 6a5d3fc
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:33:25 2016 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/SVB_Notes
+
+commit ccb72a726af85847e460220aa3004e57c051e959
+Merge: f31269c 479bd83
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:33:25 2016 -0800
+
+    Merge branch 'master' of https://github.com/atkmh/SVB_Notes
+
+commit 50969c502dcf4d973b5d22776561fffcc67c99a1
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:33:06 2016 -0800
+
+    03-07-2016_12:33:00
+
+commit f31269c56ec17b4495c8d256193399e1972ff04e
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:33:06 2016 -0800
+
+    03-07-2016_12:33:00
+
+commit 9c73e4c591a547a7ef72c78763bbb9a8a059482c
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:31:14 2016 -0800
+
+    03-07-2016_12:31:08
+
+commit 4d7feec9fcd69997da286b514d5bc06bc7063340
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:31:14 2016 -0800
+
+    03-07-2016_12:31:08
+
+commit ebbfd37b70db692f5c4f3ddcba856167dcf58c2b
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:29:00 2016 -0800
+
+    03-07-2016_12:28:54
+
+commit 31862805632fd396415c6a1e0ad3226d4c03a2d1
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:29:00 2016 -0800
+
+    03-07-2016_12:28:54
+
+commit 6a5d3fcee3f1c51039a176d8ae04637c81d44265
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Mar 7 12:26:31 2016 -0800
+
+    Delete xxxxx.txt
+
+commit 479bd835662b560e0dc12b035b9a416a8076d19b
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Mar 7 12:26:31 2016 -0800
+
+    Delete xxxxx.txt
+
+commit af8f16a52e5566438e2d53aedfb802a63e5135b1
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Mar 7 12:26:24 2016 -0800
+
+    Delete typescript
+
+commit b20c7e895f2dffc521887414f50f7254b469f701
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Mar 7 12:26:24 2016 -0800
+
+    Delete typescript
+
+commit 2196141741b3cd29e6725695daf4cdb788b21638
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Mar 7 12:22:15 2016 -0800
+
+    Delete X Jira Sprint 15 Notes.txt
+
+commit 4f03f0cb461d9f8b6d1b4ea3f49079206c4c71c5
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Mar 7 12:22:15 2016 -0800
+
+    Delete X Jira Sprint 15 Notes.txt
+
+commit 47bf6cf44b037c601dd08ba5839934aef53418f5
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:19:54 2016 -0800
+
+    03-07-2016_12:19:43
+
+commit c0b184e51570f532b86d180d2c3c7ec58489f769
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Mar 7 12:19:54 2016 -0800
+
+    03-07-2016_12:19:43
+
+commit 6a05b4cbc32e49c970efc065c1f45a3846721008
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Mar 6 14:59:55 2016 -0800
+
+    03-06-2016_14:59:45
+
+commit 7402c847ca7dc4f98247102a0b30d8d7c130c45f
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Sun Mar 6 14:59:55 2016 -0800
+
+    03-06-2016_14:59:45
+
+commit 4be01a27c2c78f88b3d7d3e1f0dd3bde0346c8e6
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Mar 1 17:20:02 2016 -0800
+
+    03-01-2016_17:19:52
+
+commit 03bb4b3473237f65107ed48d2cee84df46a6c776
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Mar 1 17:20:02 2016 -0800
+
+    03-01-2016_17:19:52
+
+commit 5df0cb876cff72a376dc8d3cf5bb0651e6a12010
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 17:05:44 2016 -0800
+
+    Delete testScript
+
+commit 98e381aa535b2a06c07884d154044e9e97a5a35a
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 17:05:44 2016 -0800
+
+    Delete testScript
+
+commit c9ae5972cf3b7f437393af37fd759250f61734c9
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 17:05:38 2016 -0800
+
+    Delete script
+
+commit 707e8f06759421343168e379082e3e82722c2833
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 17:05:38 2016 -0800
+
+    Delete script
+
+commit 259566241f87b18d87905cacdd4f7e0d51e5bc37
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 17:05:30 2016 -0800
+
+    Delete README.txt
+
+commit d2780abcf651d3653a01216413babf4a97e8a0bf
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 17:05:30 2016 -0800
+
+    Delete README.txt
+
+commit 6cecf1b90f465e06d72bf07911db725828efa4d3
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:38 2016 -0800
+
+    Delete XX Jira Sprint 13 Notes.txt
+
+commit 43a81b0020ba861a72031b9f5aaf467d7a7f8596
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:38 2016 -0800
+
+    Delete XX Jira Sprint 13 Notes.txt
+
+commit 690853c44ad35cd7fd97d862981129594ea4b16b
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:36 2016 -0800
+
+    Delete XX Jira Sprint 14 Notes-.txt
+
+commit 605081acf5a6a513f598cca540b180a794fe1cfb
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:36 2016 -0800
+
+    Delete XX Jira Sprint 14 Notes-.txt
+
+commit 7a984236f9160d58fee83a60c93c2cb70d28d506
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:34 2016 -0800
+
+    Delete XX Jire Sprint 13 Notes.txt
+
+commit c839d26ae62003e38c3be5427b90912c1041734c
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:34 2016 -0800
+
+    Delete XX Jire Sprint 13 Notes.txt
+
+commit 32f6eef27665f240e312163da35fc66eb9d21a23
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:32 2016 -0800
+
+    Delete XX Murano Proj focus.txt
+
+commit 097df8e5f10da0ec5c855992f82f17bd07d40366
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:32 2016 -0800
+
+    Delete XX Murano Proj focus.txt
+
+commit 6f63786d58dee7c62be99198c99e6e5b64a71748
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:30 2016 -0800
+
+    Delete XX SprintPlan 1:6:16.txt
+
+commit ac86a655978ca613d00f7ef5cb9974826cdff83d
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:30 2016 -0800
+
+    Delete XX SprintPlan 1:6:16.txt
+
+commit 3ed2bf167fef6405faf9b3a9577ea418b5aeb2e9
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:28 2016 -0800
+
+    Delete XXX Murano Proj focus.txt
+
+commit 5c77b206a2d5aa3b8e25c64b220f2df8ea3a2ad1
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:28 2016 -0800
+
+    Delete XXX Murano Proj focus.txt
+
+commit 1dd00156c72b95c9aba6b16f572c734855ada830
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:25 2016 -0800
+
+    Delete XXX SprintPlan 1:6:16.txt
+
+commit e2eb4bb2844890b8ed4f0c7b3ae988e8acca1860
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:54:25 2016 -0800
+
+    Delete XXX SprintPlan 1:6:16.txt
+
+commit 0462195c2d2f881a843656b145504aab969669ee
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:39 2016 -0800
+
+    Delete XX Jira Sprint 12 Stories- .txt
+
+commit d823441d125c3def8b50f30e2524b40297d452c2
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:39 2016 -0800
+
+    Delete XX Jira Sprint 12 Stories- .txt
+
+commit 1da43ff560ba968fb0b5c7c951850c881b27a988
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:37 2016 -0800
+
+    Delete XX Jira Sprint 12 Notes- .txt
+
+commit ec96d3361db01207bfb308b0f699647ae997934a
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:37 2016 -0800
+
+    Delete XX Jira Sprint 12 Notes- .txt
+
+commit 50fd4931f462013957ca42471497924a483e18f0
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:34 2016 -0800
+
+    Delete XX Help desk.txt
+
+commit 73fefb70b83b91dad1e63f2b777fc179989cf3bc
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:34 2016 -0800
+
+    Delete XX Help desk.txt
+
+commit ca8b56b13de513cf867e37642631a8a378461aac
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:32 2016 -0800
+
+    Delete X SprintPlan 1:6:16.txt
+
+commit 30ed6fa0abed1cbfc2fd16d9ea5ff39cdb10d215
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:32 2016 -0800
+
+    Delete X SprintPlan 1:6:16.txt
+
+commit a4d1b675594956f5ac620c37f2d74f8e63042aea
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:29 2016 -0800
+
+    Delete X Murano Proj focus.txt
+
+commit b954ab42129f81195d0b2db40cd620ce4e838af2
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:29 2016 -0800
+
+    Delete X Murano Proj focus.txt
+
+commit a9a327f8623f2184958b85022ff8f82b33514ed7
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:27 2016 -0800
+
+    Delete X Jira Sprint 15 Notes.txt
+
+commit b4a2df64fb1991e61ab24cdea65c609594ee796b
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:27 2016 -0800
+
+    Delete X Jira Sprint 15 Notes.txt
+
+commit 3041a7921fdb12d9c07f80d0bc22341e67239b24
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:23 2016 -0800
+
+    Delete Work Hours.txt
+
+commit 1bedb5039f558017c0a3ac9fa221f8ffa31783d5
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:23 2016 -0800
+
+    Delete Work Hours.txt
+
+commit c72af1854e1ebde3c07dcacb4e8a6dd869f89438
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:21 2016 -0800
+
+    Delete URLs Go back to.txt
+
+commit 22e4bb9c741ac81430d7163d6c52699e66f346ae
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:21 2016 -0800
+
+    Delete URLs Go back to.txt
+
+commit b4763bdfa3d71d259aea56dc09a2b71daf024baf
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:18 2016 -0800
+
+    Delete ToDo_General.txt
+
+commit 45395e9a9d97917ecfc156b68292cd9e7676a2a6
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:18 2016 -0800
+
+    Delete ToDo_General.txt
+
+commit d70f745692a0f5b58597bfed39458d507aeaf137
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:16 2016 -0800
+
+    Delete TmpTicket_place.txt
+
+commit e81e4a9a62a4deb26ff08ca4c3d5e4475e8b24ea
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:16 2016 -0800
+
+    Delete TmpTicket_place.txt
+
+commit 1afcfc1fb8a2d45b627c2c6bc79cf8725eaa14ab
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:13 2016 -0800
+
+    Delete Testing Notes-.txt
+
+commit dcec02a98db3ce4ccd1d28fba1c01f6dbbe0130b
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:13 2016 -0800
+
+    Delete Testing Notes-.txt
+
+commit ac015875af995560c2384b683746f652c3aaa045
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:11 2016 -0800
+
+    Delete JustText.txt
+
+commit 80a0e7010cde909c4534a806ed364876eaf8ab00
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:11 2016 -0800
+
+    Delete JustText.txt
+
+commit 53ae08650b5d21dba8654eda8e738dff61a18ee6
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:09 2016 -0800
+
+    Delete JiraTicket_EntrySpace .txt
+
+commit 9d49e8e3778e0845ecb448b1a5e09a2def007442
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:09 2016 -0800
+
+    Delete JiraTicket_EntrySpace .txt
+
+commit f1d42c0b1b70e2857f6b8c0d892567d4fecb689f
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:06 2016 -0800
+
+    Delete Jira Notes Searches.txt
+
+commit 7a1b1983b00f8b25152f14fc493533c83eb7fe94
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:06 2016 -0800
+
+    Delete Jira Notes Searches.txt
+
+commit ccc216eb7f215c8f5a3c3325bc53458bdf0d96bd
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:04 2016 -0800
+
+    Delete IN_Work.txt
+
+commit b6b39fea3b9cc779466b91d50fc5ac322ae113dc
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:53:04 2016 -0800
+
+    Delete IN_Work.txt
+
+commit 9cf9921b09d2b97d36c2544e41bd4cbb27bccff7
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:50:51 2016 -0800
+
+    Delete General Notes.txt
+
+commit 8be98a032d3e90473ed996de3ca576b938efd151
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:50:51 2016 -0800
+
+    Delete General Notes.txt
+
+commit d62812637cbd392a449e4b57639665b0525572ef
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:44:36 2016 -0800
+
+    Delete XXX_TmpTicket_place.txt
+
+commit fccebc54f23fb728f06611313875227804602b9b
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:44:36 2016 -0800
+
+    Delete XXX_TmpTicket_place.txt
+
+commit e5ea903b7933cc41891a90f90cfc85c1e079632d
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:44:25 2016 -0800
+
+    Delete XXX_TmpTicket_place.txt.sb-43a622ea-mFSOyZ
+
+commit c96ea59ee595e7855a07c5f6c00ab70a8ccaca18
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Tue Mar 1 16:44:25 2016 -0800
+
+    Delete XXX_TmpTicket_place.txt.sb-43a622ea-mFSOyZ
+
+commit af7a1afc63ef9a84021df1d355afc3f73d63a946
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 17:03:42 2016 -0800
+
+    Rename X Jira Sprint 15 Notes-.txt to X Jira Sprint 15 Notes.txt
+
+commit 34cf480a526730cc0a87998524dcb8bfa661a8a2
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 17:03:42 2016 -0800
+
+    Rename X Jira Sprint 15 Notes-.txt to X Jira Sprint 15 Notes.txt
+
+commit d258b75d5b627de43dc3ec6d2614463e3a003403
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:27:49 2016 -0800
+
+    Delete X Jira Sprint 14 Notes-.txt
+
+commit bc9386226c8aadcb22bcc26857df8f51bfc419b9
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:27:49 2016 -0800
+
+    Delete X Jira Sprint 14 Notes-.txt
+
+commit aa652051db885a745ba87e8860b58d2f29d74614
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:26:14 2016 -0800
+
+    Rename General Notes 1:4:16.txt to General Notes.txt
+
+commit 9fd04ee4802b36804122da521c74e75f1b90a93f
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:26:14 2016 -0800
+
+    Rename General Notes 1:4:16.txt to General Notes.txt
+
+commit 36638f7d7abd039fc80f0cb0f3fe158abc38b694
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:33 2016 -0800
+
+    Delete X Murano Proj focus.pdf
+
+commit 75c38c2d90d13bba6252226e9aa8ff0dac8e484d
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:33 2016 -0800
+
+    Delete X Murano Proj focus.pdf
+
+commit a091d158e4dc4e07a206c802861b8cb5283b5713
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:30 2016 -0800
+
+    Delete X SprintPlan 1:6:16.pdf
+
+commit a9b8aa914f588aae94b5912d57007e28361f44e2
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:30 2016 -0800
+
+    Delete X SprintPlan 1:6:16.pdf
+
+commit e5a624680b4fb7745888bbccca3b1710e3ade8a1
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:29 2016 -0800
+
+    Delete XX Jira Sprint 12 Notes: .pdf
+
+commit abc6b692bdeb7e3254a0e7ca6d22369ce199cdf5
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:29 2016 -0800
+
+    Delete XX Jira Sprint 12 Notes: .pdf
+
+commit 13dc4b94653a56263967ad9a9eb6a8013aa7feda
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:27 2016 -0800
+
+    Delete XX Jira Sprint 12 Stories: .pdf
+
+commit 15564e87b9bee99bbc036329dab8f1b33050b013
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:27 2016 -0800
+
+    Delete XX Jira Sprint 12 Stories: .pdf
+
+commit eb2cfed81560045c4543cea38bb0b446cc6bf59e
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:25 2016 -0800
+
+    Delete XX Jira Sprint 13 Notes.pdf
+
+commit 588ec435600e747d5281190e2e90513b40e6732c
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:25 2016 -0800
+
+    Delete XX Jira Sprint 13 Notes.pdf
+
+commit 48022a95b933d8d68d68d4f8351ab05dab363e1c
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:23 2016 -0800
+
+    Delete XX Help desk.pdf
+
+commit 9634edb9f2065dae416798426a21e574a334937c
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:23 2016 -0800
+
+    Delete XX Help desk.pdf
+
+commit 505c54951badc6ebe5ed3c04f5cc5f4eedf35b46
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:22 2016 -0800
+
+    Delete XX Jira Sprint 14 Notes:.pdf.pdf
+
+commit a10d263c82174a43d03c47402b06cacdd07e1d26
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:22 2016 -0800
+
+    Delete XX Jira Sprint 14 Notes:.pdf.pdf
+
+commit 7f81189037532d69a3d7117b4d23b0255e6e38aa
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:20 2016 -0800
+
+    Delete XX Jire Sprint 13 Notes.pdf
+
+commit ba3cb457e14844fb64f8761c0860e413455d01ba
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:20 2016 -0800
+
+    Delete XX Jire Sprint 13 Notes.pdf
+
+commit a581629a1bcabb3fdddebe27c946b4f788382e96
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:17 2016 -0800
+
+    Delete XX Murano Proj focus.pdf
+
+commit 02a0fad18be88b9af0821cbf36aa027ccf1bf4a8
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:17 2016 -0800
+
+    Delete XX Murano Proj focus.pdf
+
+commit 9961995bc3af1a2fc942a8ee4610fba03fd139df
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:16 2016 -0800
+
+    Delete XX SprintPlan 1:6:16.pdf
+
+commit 10a26d50dfbe9d38240e699fcc6e42ea4ac53ee3
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:16 2016 -0800
+
+    Delete XX SprintPlan 1:6:16.pdf
+
+commit 593640ae72a5a3e5b81b27148d8ea05fde519f43
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:14 2016 -0800
+
+    Delete XXX Murano Proj focus.pdf
+
+commit 42affc68d39e6f42eabf95f095db8607a3d19a96
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:14 2016 -0800
+
+    Delete XXX Murano Proj focus.pdf
+
+commit bb15ac035ea078d65d0ca6e1ce8ddde56747c372
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:13 2016 -0800
+
+    Delete XXX SprintPlan 1:6:16.pdf
+
+commit c57c4ffba4ae3ccf1fb22d2b5486cc4d8707541e
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:13 2016 -0800
+
+    Delete XXX SprintPlan 1:6:16.pdf
+
+commit 29593cdab039f27081ace97ed6f6d42ec60d7241
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:13 2016 -0800
+
+    Delete XXX TmpTicket_place.pdf
+
+commit 8fdb1df2f478d756466d1b279196740a35cd67d2
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:13 2016 -0800
+
+    Delete XXX TmpTicket_place.pdf
+
+commit c915b7a5c75a30b6604f9347ccb9fd31be3d8cde
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:10 2016 -0800
+
+    Delete XXX_TmpTicket_place.pdf
+
+commit d5ba49548852acfc0f829b6c5ac44645137d42b3
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:23:10 2016 -0800
+
+    Delete XXX_TmpTicket_place.pdf
+
+commit f4076fc36418cdcbee104070408794689602cdda
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:23 2016 -0800
+
+    Delete JiraTicket_EntrySpace .pdf
+
+commit 9a666658f81a307a0f256bb05c82e4ff1691b467
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:23 2016 -0800
+
+    Delete JiraTicket_EntrySpace .pdf
+
+commit 81d81e72c725ab1b2d515c5652a56246e7c34504
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:21 2016 -0800
+
+    Delete JustText.pdf
+
+commit 1bde58776cf94a0fd6a277df038280ea156d6ffc
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:21 2016 -0800
+
+    Delete JustText.pdf
+
+commit 0b0cbc1288a55f2f3896151f8d6bdb15cf5aed05
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:19 2016 -0800
+
+    Delete Testing Notes:.pdf.pdf
+
+commit a92fff40e5ffcc711e05e17f2c73d3b2399d9169
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:19 2016 -0800
+
+    Delete Testing Notes:.pdf.pdf
+
+commit adaa78c8f9d678a658bb5d5554780b4aa74b2383
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:16 2016 -0800
+
+    Delete TmpTicket_place.pdf
+
+commit ab5590e371fd92997c38b2edfddf311225a09b38
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:16 2016 -0800
+
+    Delete TmpTicket_place.pdf
+
+commit 13bffe1e099dfac47cd8fa04575b376b88ca8c22
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:13 2016 -0800
+
+    Delete ToDo_General.pdf
+
+commit e9a23aabd88145365669c95ed1e9a3914783ec1b
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:13 2016 -0800
+
+    Delete ToDo_General.pdf
+
+commit f25030b674c30232a8fd330ad8696a7e3e43b7f8
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:10 2016 -0800
+
+    Delete URLs Go back to.pdf
+
+commit c7e6562a5a6af2e46559198fd1bb4d372a44f140
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:10 2016 -0800
+
+    Delete URLs Go back to.pdf
+
+commit 5787b40f81de5ef069dbe9d28bfef112ef6051f2
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:09 2016 -0800
+
+    Delete Work Hours.pdf
+
+commit b7876285ee0bb0b63d9896a9e638bf090b9f9f38
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:09 2016 -0800
+
+    Delete Work Hours.pdf
+
+commit 014d4bc3fdf42f29c81c7470dcedb82f12c25440
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:07 2016 -0800
+
+    Delete X Jira Sprint 15 Notes:.pdf.pdf
+
+commit 913255c42b05b6a1791ba3a00a7e915e29eb8140
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:21:07 2016 -0800
+
+    Delete X Jira Sprint 15 Notes:.pdf.pdf
+
+commit ee3a01ffc55849bb93de2b8a1dcceca99f742ad9
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:20:09 2016 -0800
+
+    Delete Jira Notes Searches.pdf
+
+commit 936ceafa88165d7e67ce788ec02780b9e003d07e
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:20:09 2016 -0800
+
+    Delete Jira Notes Searches.pdf
+
+commit c7ee7a801742345e9505363bfbf0d5e46bce0849
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:19:59 2016 -0800
+
+    Delete IN_Work.pdf
+
+commit 0c57d1542ab513f20f17efd7a887177583f49190
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:19:59 2016 -0800
+
+    Delete IN_Work.pdf
+
+commit 301b3474ff5f7f47aee9722d0044b62fbe291969
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:19:53 2016 -0800
+
+    Delete General Notes 1:4:16.pdf
+
+commit b194cd932e5c6198808f2faab0e52ad49e811b4d
+Author: atkmh <atkmh@users.noreply.github.com>
+Date:   Mon Feb 29 16:19:53 2016 -0800
+
+    Delete General Notes 1:4:16.pdf
+
+commit b4b0d30df252c1918e51350ad8320fefa1a0e416
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Feb 29 12:00:54 2016 -0800
+
+    02-29-2016_12:00:44
+
+commit 31dbfa48720cf567770d212574c86f973c519d94
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Feb 29 12:00:54 2016 -0800
+
+    02-29-2016_12:00:44
+
+commit e2ad6e7b235153a3ec26b28b5dc1b19777164ffe
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Feb 29 11:58:58 2016 -0800
+
+    02-29-2016_11:58:48
+
+commit 938fff552fd2fa2bc91549263c29f05f18266e24
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Feb 29 11:58:58 2016 -0800
+
+    02-29-2016_11:58:48
+
+commit 54e8389385902881372a05e13260310e5386d2ea
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Feb 29 11:44:54 2016 -0800
+
+    02-29-2016_11:44:54
+
+commit 94fa2e51496dd863aafb534c5ef48e72e6284491
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Feb 29 11:44:54 2016 -0800
+
+    02-29-2016_11:44:54
+
+commit dfe5b472cbd9ea36cf9f7f17f4a0b5604413c1d5
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Feb 29 11:36:01 2016 -0800
+
+    varDateNow
+
+commit ff73e5decee3b2230c87b2ea4a78121cb286d75c
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Mon Feb 29 11:36:01 2016 -0800
+
+    varDateNow
+
+commit d7351f94e736e0ef80c3334191a6d94512d0240b
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Feb 23 14:31:06 2016 -0800
+
+    PDFs on 2-23-16
+
+commit f450ceb6fb321108997acdeac18b54f781f27fbb
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Feb 23 14:31:06 2016 -0800
+
+    PDFs on 2-23-16
+
+commit b023abdedcee35db42cf17a3619faebeb8263e81
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Feb 23 14:24:31 2016 -0800
+
+    02232016_1424
+
+commit feff3babd759d46181ff77146bbe1f4194939cf6
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Feb 23 14:24:31 2016 -0800
+
+    02232016_1424
+
+commit e93e93be382c392474271ff9ce4ebb5ee222aa41
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Feb 11 19:44:54 2016 -0800
+
+    02112016_1944
+
+commit 6c529d107ad5c485872b8fff21c28372759762d4
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Thu Feb 11 19:44:54 2016 -0800
+
+    02112016_1944
+
+commit a52b976d624fba6cc9545559868ccbc94b02f571
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Feb 9 19:13:39 2016 -0800
+
+    02092016_1913
+
+commit a416784bebca72eabfe9525f362cc70b94c5db3c
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Tue Feb 9 19:13:39 2016 -0800
+
+    02092016_1913
+
+commit 6caf50aa24237af316cc97d0297c823414c40e01
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Feb 3 18:35:32 2016 -0800
+
+    02032016_1835
+
+commit 353be16ab1a65441acb2789dd54f86efdd181aae
+Author: Mark Atkinson <atkmh@sonic.net>
+Date:   Wed Feb 3 18:35:32 2016 -0800
+
+    02032016_1835
+
+commit 3f8e410e550b920fd103d5a9d6840170f98fe66b
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.local.tld>
+Date:   Fri Jan 29 18:25:09 2016 -0800
+
+    01292016_1825
+
+commit b315da916023d4dcbf12da776b8dca03953fc3ff
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.local.tld>
+Date:   Fri Jan 29 18:25:09 2016 -0800
+
+    01292016_1825
+
+commit 70f7a04182fbde7992ed88de7928182bec071e4e
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Mon Jan 25 17:01:54 2016 -0800
+
+    01252015_1701
+
+commit 5eee14b09b30a3a3a8ec20623aa7f5474af2a7ca
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Mon Jan 25 17:01:54 2016 -0800
+
+    01252015_1701
+
+commit fc2374adca0ee835ef89aae89b25ffaf0334434a
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.local.tld>
+Date:   Fri Jan 22 07:45:10 2016 -0800
+
+    01222016_0745
+
+commit aeff72ee1273b8f1da5ff33c71163b42acc79076
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.local.tld>
+Date:   Fri Jan 22 07:45:10 2016 -0800
+
+    01222016_0745
+
+commit 5a04baf60bd0884dc96a75a87b326bf70cdf1a99
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.local.tld>
+Date:   Fri Jan 22 07:37:31 2016 -0800
+
+    changed fm rtf to txt
+
+commit 8db285e61af0473e3bc8a1e655d8e652bf46f2c2
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.local.tld>
+Date:   Fri Jan 22 07:37:31 2016 -0800
+
+    changed fm rtf to txt
+
+commit b2c2fa74f32640a3276ae195e4cad07bb073222d
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Thu Jan 21 17:34:09 2016 -0800
+
+    01212016_1734
+
+commit 771f209ba5fb980809d351cb9e2d890c76a04fdb
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Thu Jan 21 17:34:09 2016 -0800
+
+    01212016_1734
+
+commit 6a8bb7292b2463130b3b83353060fc206b2b2f51
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.local.tld>
+Date:   Wed Jan 20 17:53:41 2016 -0800
+
+    01202016_1753
+
+commit c01e2db4e95b492f9bf755231929bc79097fb78f
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.local.tld>
+Date:   Wed Jan 20 17:53:41 2016 -0800
+
+    01202016_1753
+
+commit 3bb54dd9ae3f9d742f32e2d673327e2fceb82b65
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Tue Jan 19 13:49:53 2016 -0800
+
+    1/19/16 13:49
+
+commit ca3de177ec8bebb61f79cec747f9121e4bdff7ed
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Tue Jan 19 13:49:53 2016 -0800
+
+    1/19/16 13:49
+
+commit 44b98374c80fc37e0f060999cdc807a97d5aba12
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Tue Jan 19 13:45:32 2016 -0800
+
+    1/19/16 13:45
+
+commit f566d59ac93d95f7504500c8b10896c691fe3fe9
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Tue Jan 19 13:45:32 2016 -0800
+
+    1/19/16 13:45
+
+commit 05ef8c6cc9ef0c97430392196a2120f4f6bbe492
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Tue Jan 19 13:13:27 2016 -0800
+
+    1/19/16 13:12
+
+commit a56aa4763ab79f73ebc9fdf1d0357927a871b885
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Tue Jan 19 13:13:27 2016 -0800
+
+    1/19/16 13:12
+
+commit a821841202e5c70adc1d2048ee23fad06c7bfeb4
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Wed Jan 13 17:40:16 2016 -0800
+
+    update 011316_1740
+
+commit 326499a722bcece11316cf4add2859b69771eb37
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Wed Jan 13 17:40:16 2016 -0800
+
+    update 011316_1740
+
+commit 78a3163287f5c018ef6a39d0798f0e923943de24
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Wed Jan 13 17:33:32 2016 -0800
+
+    update 011316_1733
+
+commit 3c479031ddb4d5325c92e198d2bf5a1ac94392d4
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Wed Jan 13 17:33:32 2016 -0800
+
+    update 011316_1733
+
+commit a5b11fdfa38797130bd26edf5acd3232711a6337
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Wed Jan 13 15:47:15 2016 -0800
+
+    added pdfs
+
+commit 2b23b3933c49c6a46a9354a7cf41629f95d27510
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Wed Jan 13 15:47:15 2016 -0800
+
+    added pdfs
+
+commit 6be814afd70cede7b5655926e9496b6767e3e61f
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Wed Jan 13 14:59:20 2016 -0800
+
+    first commit
+
+commit 57e7d1949d487003319bf0163eaf4373f6233bcc
+Author: Mark Atkinson <maatkins@chb-m-lpt90034.corp.svbank.com>
+Date:   Wed Jan 13 14:59:20 2016 -0800
+
+    first commit
