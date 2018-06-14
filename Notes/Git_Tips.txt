@@ -1,3 +1,19 @@
+6/14/18 
+an attempt to remove almost everything histroically 
+https://gist.github.com/stephenhardy/5470814#file-git-clearhistory-L4
+This didn't work at the push step
+so, I took the original most recent pull and moved all the current actual data.
+I copied off all the real data
+I deleted the repo,
+I recloned the repo
+I took all the real data copied off and put it directly in place
+inthe newly cloned repo
+git status identified 4 notes text files and maybe something else
+I did git add . and rechecked git status.
+Nothing showed being staged
+So, I'm figureing all is well
+ 
+
 6/1/18 
 How to tell if anything has ever changed on a branch
 git diff --name-only <branch name>
