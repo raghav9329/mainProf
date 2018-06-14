@@ -1,0 +1,53 @@
+
+6/11/18 This doc wasd formerly tmp.txt on the desktop
+
+
+arnab sinha
+
+415-974-7038 (x7038)
+ASinha@delta.org
+Customer Experience		Dept Name
+Information Systems		Division Name
+" ??   ?? "			Cost Center
+
+
+
+IT SYSTEM ACCESS:
+This off shore engineer needs a deltaDev account.
+
+This needs to be approved by Arnab Sinha at ASinha@delta.org
+
+
+Name		OS/DOS	JenkAccMC NodeApp
+HanumaPrasad G.	60336   NO	  Yes
+Naresh Babu K	60414	NO	  Yes
+Murali Krishna 	60382	NO	  Yes
+
+
+Swath Chatuverdi CA61374
+
+
+
+
+
+Name		OS/DOS	
+Hanuma Prasad G  60336    
+Naresh Babu K    60414	 
+Murali Krishna   60382	
+
+
+
+Drive P on the network:  \\SACFPS600\HomeDirs600J$\CA34081 
+
+
+Jenkins :  
+https://atlassian/jira/browse/ASSIGN-82645 
+
+
+
+Some old stuff
+is the content valuable 
+
+https://atlassian/confluence/display/TESTAUTO/HowTo+Set+up+Autologin+in++Win2k8+Server 
+http://aw-lx0101.deltadev.ent/indEnroll?issuerCode=DELTA 
+http://aw-lx0101.deltadev.ent/indEnroll?issuerCode=AARP 

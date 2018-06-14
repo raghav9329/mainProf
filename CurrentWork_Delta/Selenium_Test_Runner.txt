@@ -1,0 +1,31 @@
+User: deltapre\SELENIUM_RUNNER
+Pass: !@#20_Overrun_15!!
+
+
+SACAPPSEID01.DELTADEV.ENT
+dca34081                  // doesn't require an AD Domain 
+
+
+deltads\svc_qtp_testrunner_3
+popcorn
+
+
+
+AWSAPPSTAD02.DELTADEV.ENT
+
+DELTADEV\dca34081               changes
+
+deltads\svc_qtp_testrunner_3    popcorn
+
+AWSAPPSTAD03.DELTADEV.ENT   deltadev\AWS_SVC_QTP_TRun_3  <>Marathonman
+
+
+
+P: ===   \\SACFPS600\HomeDirs600J$\CA34081 
+
+SAC Jenkins
+TestAutoAdmin
+!!TestAutoAdmin         !!TestAutoAdmin
+!!TestAutoAdmin
+
+Test Automation Administrator       Test Automation Administrator
