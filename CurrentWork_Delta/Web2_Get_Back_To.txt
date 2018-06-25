@@ -1,1 +1,39 @@
+
+
+6/18/18
+https://www.google.com/search?q=uml+graphical+notation&safe=active&rlz=1C1CHBD_enUS756US756&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwj9jJqbqM_bAhVrwVQKHc0FDQQQsAQIbQ
+https://www.smartdraw.com/uml-diagram/
+https://www.tutorialspoint.com/uml/uml_basic_notations.htm   plus all the associated pages listed in Ui to left
+http://help.eclipse.org/kepler/index.jsp?topic=%2Forg.eclipse.graphiti.doc%2Fresources%2Fdocu%2Fgfw%2Fgraphiti-introduction.htm  :  An interesting possibility
+
+'G:' meansGoogle Search
+
+G: headless browser protractor 2018
+https://www.google.com/search?safe=active&rlz=1C1CHBD_enUS756US756&ei=WvYnW5v8Iov9_wSfrqTICQ&q=headless+browser+protractor+2018&oq=headless+browser+protractor+2018&gs_l=psy-ab.3...5246.17136.0.17968.36.32.3.0.0.0.230.3546.1j20j3.24.0..2..0...1.1.64.psy-ab..9.26.3444...0j0i67k1j0i20i264k1j0i20i263k1j0i10k1j0i22i10i30k1j0i22i30k1j33i22i29i30k1j33i160k1.0._tOMq3ouSMQ
+https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3
+
+Interesting and want to follow up with .
+https://developer.github.com/enterprise/2.9/v3/guides/building-a-ci-server/
+http://sinatrarb.com/intro.html
+...
+https://assertible.com/docs/guide/automation#trigger-urls
+https://sqa.stackexchange.com/questions/20001/how-to-test-the-rest-apis-effectively-complete
+
+
+Again interesting but fleeting....
+https://www.atlassian.com/blog/git/simple-git-workflow-simple
+https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+
+
+GitHub branching basics:
+https://gist.github.com/blackfalcon/8428401
+
+ 
+----------------------
+ * * * * * * * * * * *
+----------------------
+older:
+
 https://atlassian/confluence/display/CXINIT/2016/08/08/Automation+Test+Design
+
+end.
