@@ -1,3 +1,22 @@
+6/28/18 Big Capture:  Got to reduce my memory footprint
+G: uml diagram connector types
+https://www.google.com/search?q=uml+diagram+connector+types&rlz=1C1CHBD_enUS756US756&oq=uml+diagram+connector+types&aqs=chrome..69i57j0.14510j0j7&sourceid=chrome&ie=UTF-8&safe=active
+https://stackoverflow.com/questions/1874049/explanation-of-the-uml-arrows
+https://msdn.microsoft.com/library/dd409437%28VS.140%29.aspx
+
+G:entity relationship diagram explained
+https://www.google.com/search?q=entity+relationship+diagram+explained&rlz=1C1CHBD_enUS756US756&oq=Entity+relationship+diagram+expl&aqs=chrome.0.0j69i57j0l4.9335j1j7&sourceid=chrome&ie=UTF-8&safe=active
+https://www.edrawsoft.com/entity-relationship-diagrams.php
+https://www.smartdraw.com/entity-relationship-diagram/
+https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/
+
+G:integration of phantomjs with protractor spec scripting
+https://www.google.com/search?safe=active&rlz=1C1CHBD_enUS756US756&q=integration+of+phantomjs+with+protractor+spec+scripting&spell=1&sa=X&ved=0ahUKEwjtgaTQqpzbAhUSMH0KHd3sD7IQBQgmKAA&biw=1210&bih=770
+https://medium.com/@rokerkony/end-to-end-testing-with-phantomjs-and-angular-acc2291f3efc
+
+Really Interesting page by Soma Das about setting up simple Jenkins build and test execute
+https://atlassian/confluence/pages/viewpage.action?spaceKey=CXINIT&title=Jenkins+Job+setup+for+API+Automation+scripts
+
 6/27/18
 http://www.infotoday.com/searcher/jul06/Mattison.shtml
 In Relation to Anvil Studio
