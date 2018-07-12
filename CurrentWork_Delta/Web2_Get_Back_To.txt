@@ -1,3 +1,59 @@
+
+
+7/9/18
+What ever I was doing a couple of weeks ago I stumbled across 
+https://developer.github.com/enterprise/2.9/v3/guides/building-a-ci-server/
+that lead to 
+http://sinatrarb.com/intro.html
+that looks really interesting
+
+Also I attached this page that was presented by some colleague
+https://medium.com/capital-one-developers/blazing-fast-data-lookup-in-a-microservices-world-dd3ae548ca45
+
+I looked this over and started the test at
+https://triplebyte.com/
+
+Project Management Gant layout
+https://www.ganttproject.biz/download/upgrade
+
+G: javascript protractor what is the functional meaning of "let"
+https://www.google.com/search?q=javascript+protractor+what+is+the+functional+meaning+of+%22let%22&rlz=1C1CHBD_enUS756US756&oq=javascript+protractor+what+is+the+functional+meaning+of+%22let%22&aqs=chrome..69i57.28101j1j7&sourceid=chrome&ie=UTF-8&safe=active
+https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable-in-jav
+https://www.protractortest.org/#/toc
+https://www.protractortest.org/#/async-await
+
+I may be done with the following
+G: github settings branches protected branches
+https://www.google.com/search?safe=active&rlz=1C1CHBD_enUS756US756&ei=-gj2WsS3H46AjwOqmrDQAw&q=github+settings+branches+protected+branches&oq=github+settings+branches+protected+bran&gs_l=psy-ab.1.0.33i21k1j33i160k1l2.9934.21914.0.24992.36.35.0.0.0.0.223.3593.7j18j3.28.0....0...1.1.64.psy-ab..8.24.2990...0j0i131i20i263k1j0i20i263i264k1j0i20i263k1j0i22i30k1j33i22i29i30k1.0.BaQBJSL3FNw
+https://help.github.com/articles/about-protected-branches/
+https://help.github.com/articles/configuring-protected-branches/
+https://help.github.com/enterprise/2.13/admin/guides/developer-workflow/configuring-protected-branches-and-required-status-checks/
+
+G:github pull request workflow
+https://www.google.com/search?q=github+pull+request+workflow&rlz=1C1CHBD_enUS756US756&oq=git+hub+pull+request+work&aqs=chrome.1.69i57j0l3j69i64.10299j1j7&sourceid=chrome&ie=UTF-8&safe=active
+https://gist.github.com/Chaser324/ce0505fbed06b947d962
+https://guides.github.com/introduction/flow/
+
+
+
+
+Total Fun:
+https://en.wikipedia.org/wiki/List_of_Star_Trek_Starfleet_starships
+https://en.wikipedia.org/wiki/Fan_fiction
+https://en.wikipedia.org/wiki/List_of_Star_Trek_characters_(G%E2%80%93M)#Rachel_Garrett
+More
+https://www.atlasobscura.com/articles/titan-i-1960-nuclear-accident
+https://www.atlasobscura.com/articles/nuclear-physicist-bomb-videos
+https://www.atlasobscura.com/articles/how-to-build-secret-nuclear-city
+https://www.atlasobscura.com/articles/radical-1970s-group-relevant-science-for-the-people-politics
+http://www.zergnet.com/news/3008881/new-study-supports-a-100-year-old-hypothesis-about-schizophrenia
+https://www.atlasobscura.com/articles/70-years-ago-the-us-military-set-off-a-nuke-underwater-and-it-went-very-badly
+
+
+
+
+
+
 6/28/18 Big Capture:  Got to reduce my memory footprint
 G: uml diagram connector types
 https://www.google.com/search?q=uml+diagram+connector+types&rlz=1C1CHBD_enUS756US756&oq=uml+diagram+connector+types&aqs=chrome..69i57j0.14510j0j7&sourceid=chrome&ie=UTF-8&safe=active

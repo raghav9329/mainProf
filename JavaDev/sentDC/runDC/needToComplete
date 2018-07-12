@@ -1,0 +1,19 @@
+10/1/15
+need a method / scrpt callbackRepo.sh backport2Repo.sh 
+that will rsync the contents of this directory back 
+to  mark-Mac-DevVm:../dc30_dev/qa/runDC for git repo push
+
+
+This is a current wishlist
+
+Currently the following runs against qa-DC30-master1.qa.geneticfinance.com  @  10.12.0.60
+From
+mark-Mac-DevVm  Karls's instruction based Ub14 vm in VBox on my Mac
+
+to be run from
+~/dc30_dev/qa/runDC
+rsync -az --progress matkinson@qa-DC30-master1.qa.geneticfinance.com:/home/matkinson/runDC/* .
+
+at time time being run from
+~/tempHold-ToBePutInRepo/qa/runDC
+
