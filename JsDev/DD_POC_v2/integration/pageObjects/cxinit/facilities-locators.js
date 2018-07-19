@@ -29,6 +29,7 @@ class FacilitiesLocators {
         this.depNameVerify          = by.id('enrolleeName');
         this.facilityName           = by.xpath('//ul[@id="facility-container"]/li//span[@class="providerFacilityName"]');
         this.facilityChkBox         = by.xpath('//ul[@id="facility-container"]/li//input[@name="selectFacility"]');
+
         this.facilityAddress        = by.xpath('//ul[@id="facility-container"]/li//span[@class="addressLine1"]');
         this.facilityCity           = by.xpath('//ul[@id="facility-container"]/li//span[@class="city"]');
         this.facilityState          = by.xpath('//ul[@id="facility-container"]/li//span[@class="state"]');
@@ -36,6 +37,8 @@ class FacilitiesLocators {
         this.facilityZipCode        = by.xpath('//ul[@id="facility-container"]/li//span[@class="zipCode"]');
         this.facilityPhone          = by.xpath('//ul[@id="facility-container"]/li//a[@class="practiceLocationPhone tel"]');
         this.facilitySelectiontext  = by.xpath('//h2[@id="enrolleeName"]/following::p[1]');
+        this.cancel                 = by.xpath('//*[text()="Cancel"]');
+        this.update                 = by.id('nextButton');  
     }
 }
 

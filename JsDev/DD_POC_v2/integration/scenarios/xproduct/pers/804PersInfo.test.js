@@ -28,14 +28,14 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     it('Verify the functionality of Go Back link in Zip code pop Up while Updating Home address', function() {
                         perInfo.fieldHomeAddr.setText(sData.HAddress_ZIP.PartialAddress);
                         perInfo.selectHomeAddress(sData.HAddress_ZIP.FullAddress);
-                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.zipPopUp.getText()).toContain(tData.Ziperror);
+                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy('Verifies that "ZIP Pop New Quote" is diaplyed');
+                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy('Verifies that "ZIP Pop Back" is diaplyed');
+                        expect(perInfo.zipPopUp.getText()).toContain(tData.Ziperror,'verifies that "ZIP PopUp" Should be'+tData.Ziperror);
                         perInfo.zipPopBack.click();
-                        expect(perInfo.fieldHomeAddr.getAttribute("value")).toEqual('');
-                        expect(perInfo.fieldState.getAttribute("value")).toEqual(sData.Address_Valid.State);
-                        expect(perInfo.fieldCity.getAttribute("value")).toEqual('');
-                        expect(perInfo.fieldZipCode.getAttribute("value")).toEqual(sData.ZipCode);
+                        expect(perInfo.fieldHomeAddr.getAttribute("value")).toEqual('','Verifies that "Home Address" field should be '+'');
+                        expect(perInfo.fieldState.getAttribute("value")).toEqual(sData.Address_Valid.State,'Verifies that "State" should be '+sData.Address_Valid.State);
+                        expect(perInfo.fieldCity.getAttribute("value")).toEqual('','Verifies that "City" field should be '+'');
+                        expect(perInfo.fieldZipCode.getAttribute("value")).toEqual(sData.ZipCode,'Verifies that "ZIP Code" Should be '+sData.ZipCode);
                     });
 
                     //Validate the Change Zip code Pop up is displayed when the zipcode value is changed
@@ -45,11 +45,12 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     it('Verify the functionality of New Quote button in Zip code pop Up while Updating Home address', function() {
                         perInfo.fieldHomeAddr.setText(sData.HAddress_ZIP.PartialAddress);
                         perInfo.selectHomeAddress(sData.HAddress_ZIP.FullAddress);
-                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.zipPopUp.getText()).toContain(sData.Ziperror);
+                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy('Verifies that "ZIP Pop New Quote" is diaplyed');
+                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy('Verifies that "ZIP Pop Back" is diaplyed');
+                        expect(perInfo.zipPopUp.getText()).toContain(sData.Ziperror,'verifies that "ZIP PopUp" Should be'+sData.Ziperror);
                         perInfo.zipPopNewQuote.click();
-                        expect(browser.getTitle()).toContain(sData.Title);
+                        expect(browser.getTitle()).toContain(sData.Title,'Verifies that "Current URl" is '+sData.Title);
+
                     });
 
                     //Update the home Address and Zipcode 
@@ -61,15 +62,15 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         perInfo.fieldCity.setText(sData.Address_Valid.City);
                         perInfo.fieldZipCode.setText(sData.ZipCode2);
                         perInfo.fieldPhoneNumber.setText('');
-                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.zipPopUp.getText()).toContain(sData.Ziperror);
+                         expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy('Verifies that "ZIP Pop New Quote" is diaplyed');
+                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy('Verifies that "ZIP Pop Back" is diaplyed');
+                        expect(perInfo.zipPopUp.getText()).toContain(sData.Ziperror,'verifies that "ZIP PopUp" Should be'+sData.Ziperror);
                         perInfo.fieldPhoneNumber.setText('');
                         perInfo.zipPopBack.click();
                         // expect(perInfo.fieldHomeAddr.getAttribute("value")).toEqual(TestData.Address_Valid.HomeAddress);
                         // expect(perInfo.fieldState.getAttribute("value")).toEqual(TestData.Address_Valid.State);
                         // expect(perInfo.fieldCity.getAttribute("value")).toEqual(TestData.Address_Valid.City);
-                        expect(perInfo.fieldZipCode.getAttribute("value")).toEqual(sData.ZipCode);
+                        expect(perInfo.fieldZipCode.getAttribute("value")).toEqual(sData.ZipCode,'verifies that "ZIP Code" Should be'+sData.ZipCode);
                     });
 
                     //Verify and Validate the New Quote button in the Change zipcode Pop up
@@ -82,10 +83,14 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         perInfo.fieldCity.setText(sData.Address_Valid.State);
                         perInfo.fieldZipCode.setText(sData.ZipCode2);
                         perInfo.fieldPhoneNumber.setText('');
-                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
+                         expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy('Verifies that "ZIP Pop New Quote" is diaplyed');
+                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy('Verifies that "ZIP Pop Back" is diaplyed');
                         perInfo.zipPopNewQuote.click();
-                        expect(browser.getTitle()).toContain(sData.Title);
+                        expect(browser.getTitle()).toContain(sData.Title,'Verifies that "Current URl" is '+sData.Title);
+                        perInfo.fieldZipCode.getValue().then(function(zipcode) {
+                            console.log("Zipcode===" + zipcode);
+                            expect(zipcode).toEqual(tData.enrollData.ZIPcode, 'Verify Zipcode is equal as' + tData.enrollData.ZIPcode);
+                        })
                     });
 
                 });

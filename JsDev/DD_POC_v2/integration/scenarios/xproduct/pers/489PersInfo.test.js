@@ -38,6 +38,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     //State and zipcode are pre-filled.State-CA & Zipcode-94560
                     //Flow 1: Tab/click in and tab/click out of the fields
                     beforeAll(function() {
+                        jasmine.addMatchers(custommatcher.customMatchers);
                         console.log('cxinit 489');
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
@@ -49,11 +50,11 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     //Validate all the fields of the Home Address is present and displayed
 
                     it('1:Validate all flds present displayed', function() {
-                        expect(perInfo.fieldHomeAddr.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.fieldCity.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.fieldState.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.fieldZipCode.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.chkBoxDiffMailAddr.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldHomeAddr.isPresentAndDisplayed()).toBeTruthy('Verify that "HOme Address" field is displayed');
+                        expect(perInfo.fieldCity.isPresentAndDisplayed()).toBeTruthy('Verify that "City" field is displayed');
+                        expect(perInfo.fieldState.isPresentAndDisplayed()).toBeTruthy('Verify that "State" field is displayed');
+                        expect(perInfo.fieldZipCode.isPresentAndDisplayed()).toBeTruthy('Verify that "ZIP Code" field is displayed');
+                        expect(perInfo.chkBoxDiffMailAddr.isPresentAndDisplayed()).toBeTruthy('Verify that "Mail Address" Check Box is displayed');
                         console.log('489PI 1: Complete')
                     });
 
@@ -62,8 +63,8 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     it('2:Validate Home Addr w/ Click/tabout  ??? loose focus ???', function() {
                         perInfo.fieldHomeAddr.setText('');
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.errMsgHomeAddr.getText()).toEqual(TestData.ErrorMsg_Homeaddress);
-                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.errMsgHomeAddr.getText()).toEqual(TestData.ErrorMsg_Homeaddress,'Verify that "HOme Address" field error message should be '+TestData.ErrorMsg_Homeaddress);
+                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "HOme Address" field should be '+TestData.ariainvalid_error);
                         console.log('489PI 2: Complete')
                     });
 
@@ -72,8 +73,8 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     it('3:Validate City w/ Click/tabout', function() {
                         perInfo.fieldCity.setText('');
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.errMsgCity.getText()).toEqual(TestData.ErrorMsg_city);
-                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.errMsgCity.getText()).toEqual(TestData.ErrorMsg_city,'Verify that "City" field error message should be '+TestData.ErrorMsg_city);
+                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "City" field should be '+TestData.ariainvalid_error);
                         console.log('489PI 3: Complete')
                     });
 
@@ -82,8 +83,8 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     it('4:Validate State w/ Click/tabout', function() {
                         perInfo.fieldState.setText('');
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.errMsgState.getText()).toEqual(TestData.ErrorMsg_State);
-                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.errMsgState.getText()).toEqual(TestData.ErrorMsg_State,'Verify that "State" field error message should be '+TestData.ErrorMsg_State);
+                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "State" field should be '+TestData.ariainvalid_error);
                         console.log('489PI 4: Complete')
                     });
 
@@ -92,8 +93,8 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     it('5:Validate Zip w/ Click/tabout', function() {
                         perInfo.fieldZipCode.setText('');
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.errMsgZipCode.getText()).toEqual(TestData.ErrorMsg_ZipCode);
-                        expect(perInfo.fieldZipCode.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.errMsgZipCode.getText()).toEqual(TestData.ErrorMsg_ZipCode,'Verify that "ZIP Code" field error message should be '+TestData.ErrorMsg_ZipCode);
+                        expect(perInfo.fieldZipCode.getAttribute("class")).toContain(TestData.ariainvalid_errorr,'Verify that "ZIP Code" field should be '+TestData.ariainvalid_errorr);
                         console.log('489PI 5: Complete')
                     });
                     // });
@@ -116,10 +117,10 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         perInfo.fieldEmailAddr.click();
                         //perInfo.fieldState.setText(data.State);     
 
-                        expect(perInfo.errMsgHomeAddr.getText()).toEqual(data.ErrorMsg);
-                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.errMsgHomeAddr.getText()).toEqual(data.ErrorMsg,'Verify that "HOme Address" field error message should be '+data.ErrorMsg);
+                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "HOme Address" field should be '+TestData.ariainvalid_error);
                         //expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
-                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
+                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success,'Verify that "City" field should be '+TestData.ariainvalid_success);
                         console.log('json driven "' + data.Home + '" complete')
                     });
 
@@ -134,9 +135,9 @@ dataProvider(statesData.states, function(sData, sdescription) {
 
                         perInfo.fieldHomeAddr.setText(data.Home);
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
-                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error);
-                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "HOme Address" field should be '+TestData.ariainvalid_error);
+                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "State" field should be '+TestData.ariainvalid_error);
+                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "City" field should be '+TestData.ariainvalid_error);
                         console.log('json driven "' + data.Home + '" complete')
                     });
 
@@ -154,15 +155,15 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         
                         console.log("sdescription=====" +sdescription);
                         if(sdescription=='VI'){
-                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMessage);
+                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMessage,'Verify that "HOme Address" field error message should be '+data.ErrorMessage);
                         }
                         else{
                             perInfo.waitUntilLoderDisapper();
-                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);
+                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg,'Verify that "HOme Address" field error message should be '+data.ErrorMsg);
                         }
-                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
-                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error);
-                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "HOme Address" field should be '+TestData.ariainvalid_error);
+                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "State" field should be '+TestData.ariainvalid_error);
+                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "City" field should be '+TestData.ariainvalid_error);
                         console.log('json driven "' + data.Home + '" complete')
                     });
 
@@ -180,18 +181,18 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         // perInfo.fieldAlternateId.setText('');
                         perInfo.waitUntilLoderDisapper();
                         if(sdescription=='VI'){
-                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMessage);
+                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMessage,'Verify that "HOme Address" field error message should be '+data.ErrorMessage);
                         }
                         else{
                             perInfo.waitUntilLoderDisapper();
-                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);
+                            expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg,'Verify that "HOme Address" field error message should be '+data.ErrorMsg);
                         }
                         // expect(perInfo.errinvalidAddr.getText()).toContain(data.ErrorMsg);
                         /*perInfo.fieldHomeAddr.setText(data.Home);
                         perInfo.fieldAlternateId.setText('');
                         perInfo.waitUntilLoderDisapper();
                         expect(perInfo.errinvalidAddr.getText()).toEqual(data.ErrorMsg);*/
-                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "HOme Address" field should be '+TestData.ariainvalid_error);
                         console.log('json driven "' + data.Home + '" complete')
 
                     });
@@ -208,7 +209,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         // perInfo.fieldHomeAddr.setText(data.Home);
                         perInfo.fieldHomeAddr.setText(data.HomeAddress);
                         perInfo.selectHomeAddress(data.FullAddress);
-                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_success);
+                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_success,'Verify that "HOme Address" field should be '+TestData.ariainvalid_success);
                         console.log('json driven "' + data.HomeAddress + '" complete')
 
                     });
@@ -222,10 +223,10 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
                         perInfo.zipPopBack.click();
                         perInfo.waitUntilLoderDisapper();
-                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error);
-                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error);
-                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error);
-                        expect(perInfo.fieldZipCode.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.fieldHomeAddr.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "HOme Address" field should be '+TestData.ariainvalid_error);
+                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "State" field should be '+TestData.ariainvalid_error);
+                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "City" field should be '+TestData.ariainvalid_error);
+                        expect(perInfo.fieldZipCode.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "ZIP Code" field should be '+TestData.ariainvalid_error);
                         console.log('489PI 11: Completed')
 
                     });
@@ -240,7 +241,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         perInfo.fieldHomeAddr.setText(tData.fieldHomeAddr);
                         perInfo.fieldCity.setText(TestData.City1);
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
+                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success,'Verify that "City" field should be '+TestData.ariainvalid_success);
                         console.log('489PI 12: Completed')
                     });
 
@@ -250,7 +251,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         perInfo.fieldCity.setText(TestData.City2);
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
+                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success,'Verify that "City" field should be '+TestData.ariainvalid_success);
                         console.log('489PI 13: Completed')
                     });
 
@@ -260,7 +261,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         perInfo.fieldCity.setText(TestData.City3);
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
+                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success,'Verify that "City" field should be '+TestData.ariainvalid_success);
                         console.log('489PI 14: Completed')
                     });
 
@@ -270,7 +271,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         perInfo.fieldCity.setText(TestData.City4);
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success);
+                        expect(perInfo.fieldCity.getAttribute("class")).toContain(TestData.ariainvalid_success,'Verify that "City" field should be '+TestData.ariainvalid_success);
                         console.log('489PI 15: Completed')
                     });
                     // });
@@ -284,7 +285,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         perInfo.fieldState.setText(TestData.State1);
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
+                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success,'Verify that "State" field should be '+TestData.ariainvalid_success);
                         console.log('489PI 16: Completed')
                     });
 
@@ -294,7 +295,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         perInfo.fieldState.setText(TestData.State2);
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
+                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success,'Verify that "State" field should be '+TestData.ariainvalid_success);
                         console.log('489PI 17: Completed')
                     });
 
@@ -304,7 +305,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         perInfo.fieldState.setText(TestData.State3);
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success);
+                        expect(perInfo.fieldState.getAttribute("class")).toContain(TestData.ariainvalid_success,'Verify that "State" field should be '+TestData.ariainvalid_success);
                         console.log('489PI 18: Completed')
                     });
                     //  });
@@ -323,7 +324,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         perInfo.fieldZipCode.setText(data.enrollData.ZIPcode);
                         perInfo.fieldEmailAddr.click();
                         perInfo.waitUntilLoderDisapper();
-                        expect(perInfo.fieldZipCode.getAttribute("class")).not.toContain(TestData.ariainvalid_error);
+                        expect(perInfo.fieldZipCode.getAttribute("class")).not.toContain(TestData.ariainvalid_error,'Verify that "ZIP Code" field should be '+TestData.ariainvalid_error);
                         console.log('489PI 19: Completed')
 
                     });
@@ -336,11 +337,11 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         perInfo.fieldHomeAddr.setText(data.Home);
                         perInfo.fieldCity.setText(data.City);
                         perInfo.fieldState.setText(data.State);
-                        perInfo.fieldZipCode.setText(data.ZIPcode);
+                        perInfo.fieldZipCode.setText(data.ZIPcode,'Verify that "ZIP Code" field should be '+data.ZIPcode);
                         perInfo.fieldEmailAddr.click();
-                        expect(perInfo.errMsgZipCode.getText()).toEqual(data.ErrorMsg);
+                        expect(perInfo.errMsgZipCode.getText()).toEqual(data.ErrorMsg,'Verify that "ZIP Code" field should be '+data.ErrorMsg);
                         perInfo.errMsgZipCode.click();
-                        expect(perInfo.fieldZipCode.getAttribute("class")).toContain(TestData.ariainvalid_error);
+                        expect(perInfo.fieldZipCode.getAttribute("class")).toContain(TestData.ariainvalid_error,'Verify that "ZIP Code" field should be '+TestData.ariainvalid_error);
                         console.log('489PI 20: Completed')
                     });
 
@@ -358,7 +359,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         perInfo.fieldEmailAddr.click();
                         expect(perInfo.zipPopUp.isPresentAndDisplayed()).toBeTruthy().then(function() {
                             perInfo.zipPopNewQuote.click();
-                            expect(browser.getTitle()).toEqual(TestData.hCentivePlanOptionsTitle);
+                            expect(browser.getTitle()).toEqual(TestData.hCentivePlanOptionsTitle,'Verify that "Hcentive Plan Option Page Title" should be '+TestData.hCentivePlanOptionsTitle);
                         });
                         console.log('489PI 21: Completed')
                     });
@@ -376,7 +377,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         perInfo.fieldEmailAddr.click();
                         expect(perInfo.zipPopUp.isPresentAndDisplayed()).toBeTruthy().then(function() {
                             perInfo.zipPopNewQuote.click();
-                            expect(planOptions.isAt()).toEqual(true);
+                            expect(planOptions.isAt()).toEqual(true,'Verify that "Plan Options" is true');
                         });
                         console.log('489PI 22: Completed')
                     });
@@ -388,7 +389,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
                         perInfo.backToQuote.click();
-                        expect(planDetails.isAt()).toBe(true);
+                        expect(planDetails.isAt()).toBe(true,'Verify that "Plan Options" is true');
                         console.log('489PI 23: Completed')
                     });
                 });

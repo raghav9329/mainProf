@@ -38,7 +38,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             effectiveDate = sdate;
                             console.log("sdate============" + sdate);
                         })
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                         console.log('1461_1 complete')
                     });
 
@@ -63,10 +63,10 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         perInfo.fillPersonalInfo(TestData);
                         perInfo.fieldZipCode.setText(TestData.zipcode1);
                         perInfo.fieldPhoneNumber.setText('');
-                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy('Verify the New Quote Option is Displayed in the Zip code Pop Up');
+                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy('Verify Back Option is Displayed in the Zip code Pop Up');
                         perInfo.zipPopBack.click();
-                        expect(perInfo.fieldZipCode.getValue()).toBe(tData.enrollData.ZIPcode);
+                        expect(perInfo.fieldZipCode.getValue()).toBe(tData.enrollData.ZIPcode, 'Verify the Zipcode Value in the Application is same as Test Data as: ' +tData.enrollData.ZIPcode);
                         console.log('1461_2 complete')
                     });
 
@@ -75,10 +75,10 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     it('E2E_3 :Change the Zip Code again, Click on "Get a New Quote" and validate if redirected to Plan Options Page', function() {
                         perInfo.fieldZipCode.setText(sData.secondaryAddress.ZIPcode);
                         perInfo.fieldPhoneNumber.setText('');
-                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.zipPopNewQuote.isPresentAndDisplayed()).toBeTruthy('Verify the New Quote Option is Displayed in the Zip code Pop Up');
+                        expect(perInfo.zipPopBack.isPresentAndDisplayed()).toBeTruthy('Verify Back Option is Displayed in the Zip code Pop Up');
                         perInfo.zipPopNewQuote.click();
-                        expect(planOptions.isAt()).toBeTruthy();
+                        expect(planOptions.isAt()).toBeTruthy('Verify the Plan Options Page is Displayed');
                         console.log('1461_3 complete')
                     });
 
@@ -105,7 +105,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             planOptions.getPlanDetails(tData.enrollData.PlanName).click();
                             planDetails.buyPlan.click();
                        // }
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                         console.log('1461_4 complete')
                     });
 
@@ -152,13 +152,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.DependentPageTitle);
                         console.log('1461_6 complete')
                     });
 
 
                     it('E2E_7 :should add 2 Deps, child & spouse', function() {
-                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy('Verify Add Dependent field is Displayed and Present');
                         depInfo.fillDependent('Dependent1', TestData.Spouse, false);
 
                         depInfo.fillDependent('Dependent2', TestData.child, false);
@@ -167,8 +167,8 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             depInfo.next.click();
                             depInfo.next.click();
                         } else {
-                            expect(depInfo.isHandicapped('Dependent2').isPresentAndDisplayed()).toBeTruthy();
-                            expect(depInfo.handicappedHelpTxt('Dependent2').getText()).toContain(TestData.handicappedHelpText);
+                            expect(depInfo.isHandicapped('Dependent2').isPresentAndDisplayed()).toBeTruthy('Verify Is isHandicapped Checkbox is Displayed and Present');
+                            expect(depInfo.handicappedHelpTxt('Dependent2').getText()).toContain(TestData.handicappedHelpText, 'Verify is handicappedHelpText Displayed is same as: ' +TestData.handicappedHelpText);
                             depInfo.isHandicapped('Dependent2').check();
                             depInfo.next.click();
                         }
@@ -180,8 +180,8 @@ dataProvider(statesData.states, function(sData, sdescription) {
 
                     if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                         it('E2E_8 :Change the Zip code in the Facility Page and should select fac for Prime', function() {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                             // Change the Zip Code to the original Zip Code for Primary
                             facilities.zipCode.setText(tData.enrollData.ZIPcode);
                             facilities.search.click().then(function(){
@@ -189,7 +189,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                     facility1 = fnamee;
                                     facilities.next.click();
                                 });
-                                expect(facilities.zipCode.getValue()).toBe(sData.secondaryAddress.ZIPcode);
+                                expect(facilities.zipCode.getValue()).toBe(sData.secondaryAddress.ZIPcode, 'Verify the Zip Code of Secondary Address is same as: '+sData.secondaryAddress.ZIPcode);
                                 facilities.selectFacility().then(function(fnamee) {
                                     facility2 = fnamee;
                                     facilities.next.click();
@@ -205,17 +205,17 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                     facility3 = fnamee;
                                 });
                                 facilities.next.click();
-                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                             console.log('1461_9 complete')
                         });
 
                     }
                     it('E2E_10 :should fill out pay details', function() {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser);
+                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser,'Verify Discloser in Payment has same as: ' +tData.discloser);
                             payment.discloser.click();
                             Utility.switchToWindow(1);
-                            expect(browser.getCurrentUrl()).toContain(tData.discloser);
+                            expect(browser.getCurrentUrl()).toContain(tData.discloser,'Verify the Discloser in the URL is same as: '+tData.discloser);
                             Utility.switchToWindow(0);
                         }
                         payment.billingChkBox.check();
@@ -225,7 +225,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         }
                         payment.purchaseNow.click();
                         Utility.delay(maxWait);
-                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle, 'Verify "Receipt" Page is displayed and the Tilte is Equal as' +TestData.receiptPageTitle);
                         console.log('1461_10 complete')
                     });
 
@@ -248,7 +248,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             browser.sleep(10000);
                             Utility.readPDFFile(pathToPdf).then(function(test) {
-                                expect(test).toContain(TestData.firstname);
+                                expect(test).toContain(TestData.firstname,'Verify the First Name is Displayed in the PDF is same as: ' +TestData.firstname);
                             });
                         }
                         console.log('1461_12 complete')

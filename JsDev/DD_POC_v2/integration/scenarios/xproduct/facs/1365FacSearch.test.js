@@ -25,7 +25,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         jasmine.addMatchers(custommatcher.customMatchers);
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                         TestData.firstname = Utility.randomNo('String', 8);
                         TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
@@ -49,7 +49,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy('Verify that "Add Dependent" button is displayed in the Dependent Page');
                         depInfo.fillDependent('Dependent1', TestData.domesticpartner1, false);
                         depInfo.next.click();
                         depInfo.continue.click();
@@ -60,14 +60,14 @@ dataProvider(statesData.states, function (sData, sdescription) {
 
                     it('More facilities should be displayed for the pre-selected zipcode', function () {
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                            expect(facilities.moreResults.isPresentAndDisplayed()).toBeTruthy();
+                            if(!facilities.moreResults)expect(facilities.moreResults.isPresentAndDisplayed()).toBeTruthy('Verify that the "More Results" link is aviable and displayed in the Facilities Page');
                             expect(facilities.facilityBox.getCount()).toBeGreaterThan(3);
                             facilities.moreResults.click();
                             expect(facilities.facilityBox.getCount()).toBeGreaterThan(0);
                             facilities.next.click();
                         }
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentTitle);
                         }
                     });
 

@@ -27,8 +27,8 @@ class HomePageLocators {
             return element(by.xpath('//a[@id="addChild"]/parent::div/div[' + depno + ']/input'));
         };
         this.enroll            = function(planName) {
-           // return element(by.xpath('//span[normalize-space(text())="' + planName + '"]/ancestor::td//following-sibling::td//button[@id="applyQuotesPage"]'))
-        return element(by.xpath('//span[normalize-space(text())="' + planName + '"]/ancestor::td//following-sibling::td//a[@class="planDetails"]'))
+          return element(by.xpath('//span[normalize-space(text())="' + planName + '"]/ancestor::td//following-sibling::td//button[@id="applyQuotesPage"]'))
+       // return element(by.xpath('//span[normalize-space(text())="' + planName + '"]/ancestor::td//following-sibling::td//a[@class="planDetails"]'))
         }
         this.Coverage_Type     = by.id('coverage_type');
         this.Effcdate          = by.id('effDD');
@@ -37,12 +37,15 @@ class HomePageLocators {
         this.changeSearch      = by.id('modify-search');
         this.quoteInfoTxt      = by.xpath('//div[@class="summary grey-text"]');
         this.quoteZipTxt       = by.xpath('//label[@for="zip"]');
-        this.quotesDepTxt      = by.xpath('//label[@for="noofdependents"]');
+        this.quotesDepTxt      = by.xpath('//label[@for="noofcovered"]');
         this.birtdateText      = by.id('birthdate');
         this.depBirthDayText   = function(depno){
             return by.xpath('//legend[normalize-space(text())="Dependent '+depno+' Birthdate"]')
                                                       
-        }
+        };
+        this.costcoZip         = by.id('zip');
+        this.viewPlans = by.xpath('//input[@value="View Plans"]');
+
 
     }
 }

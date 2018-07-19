@@ -20,20 +20,20 @@ Validate Email Address field with invalid data failures
 
 "use strict"
 // var TestData = require('../../testData/'+testDataEnv+'/personalInfo.json');
-var TestData    = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.519PersInfo.json');
-var perInfo     = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
-var enrollPage  = new(require('../../../pageObjects/cxinit/enroll-page.js'));
-var statesData  = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
+var TestData   = require('../../../testData/' + testDataEnv + '/dhmo/dhmo.519PersInfo.json');
+var perInfo    = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
+var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
+var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
 // dataProvider(TestData.states, function (sData, sdescription) {
-dataProvider(statesData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function(sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
-        dataProvider(sData.products, function (tData, pdescription) {
+        dataProvider(sData.products, function(tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
                 //To Navigate Personal Info Page
-                describe('519: Contact Info-PersInfo: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
+                describe('519: Contact Info-PersInfo: ||State:' + sdescription + '||Product:' + pdescription + '||', function() {
 
                     beforeAll(function() {
                         console.log('cxinit 519');
@@ -54,7 +54,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('519PI 1:should be able to open Enroll page and verify', function() {
                         enrollPage.enterHomePageDetails(tData.enrollData, true);
 
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                         console.log('519PI 1: Complete')
                     });
 
@@ -72,8 +72,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
                                     perInfo.fieldPhoneSelect.selectByText(data.PhoneType);
                                 }
                                 perInfo.fieldPhoneNumber.setText(data.PhoneNumber + '\t');
-                                expect(perInfo.fieldPhoneNumber.getValue()).toEqual(data.PhoneNumber);
-                                expect(perInfo.fieldPhoneNumber.getAttribute("class")).toContain(data.ariainvalid);
+                                expect(perInfo.fieldPhoneNumber.getValue()).toEqual(data.PhoneNumber, 'Verifies that "Phone Number" should be ' + data.PhoneNumber);
+                                expect(perInfo.fieldPhoneNumber.getAttribute("class")).toContain(data.ariainvalid, 'Verifies that "Phone Number" should be ' + data.ariainvalid);
                                 console.log('json driven "' + data.PhoneType + '" complete');
                             });
                         };
@@ -93,8 +93,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
                                     perInfo.fieldPhoneSelect.selectByText(data.PhoneType);
                                 }
                                 perInfo.fieldPhoneNumber.setText(data.PhoneNumber + '\t');
-                                expect(perInfo.fieldPhoneNumber.getValue()).toEqual(data.PhoneNumber);
-                                expect(perInfo.fieldPhoneNumber.getAttribute("class")).toContain(data.ariainvalid);
+                                expect(perInfo.fieldPhoneNumber.getValue()).toEqual(data.PhoneNumber, 'Verifies that "Phone Number" should be ' + data.PhoneNumber);
+                                expect(perInfo.fieldPhoneNumber.getAttribute("class")).toContain(data.ariainvalid, 'Verifies that "Phone Number" should be ' + data.ariainvalid);
                                 console.log('json driven "' + data.PhoneType + '" complete');
                             });
                         };
@@ -114,8 +114,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
                                     perInfo.fieldPhoneSelect.selectByText(data.PhoneType);
                                 }
                                 perInfo.fieldPhoneNumber.setText(data.PhoneNumber + '\t');
-                                expect(perInfo.fieldPhoneNumber.getValue()).toEqual(data.PhoneNumber);
-                                expect(perInfo.fieldPhoneNumber.getAttribute("class")).toContain(data.ariainvalid);
+                                expect(perInfo.fieldPhoneNumber.getValue()).toEqual(data.PhoneNumber, 'Verifies that "Phone Number" should be ' + data.PhoneNumber);
+                                expect(perInfo.fieldPhoneNumber.getAttribute("class")).toContain(data.ariainvalid, 'Verifies that "Phone Number" should be ' + data.ariainvalid);
                                 console.log('json driven "' + data.PhoneType + '" complete');
                             });
                         };
@@ -132,8 +132,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         if (data.ExecutionFlag) {
                             it('519PI 4X:Eval Email Address with value "' + data.Email + '"', function() {
                                 perInfo.fieldEmailAddr.setText(data.Email + '\t');
-                                expect(perInfo.fieldEmailAddr.getValue()).toEqual(data.Email);
-                                expect(perInfo.fieldEmailAddr.getAttribute("class")).toContain(data.ariainvalid);
+                                expect(perInfo.fieldEmailAddr.getValue()).toEqual(data.Email, 'Verifies that "Email" should be ' +data.Email);
+                                expect(perInfo.fieldEmailAddr.getAttribute("class")).toContain(data.ariainvalid, 'Verifies that "Email" should be ' +data.ariainvalid);
                                 console.log('json driven "' + data.Email + '" complete');
                             });
                         };
@@ -142,9 +142,9 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     //Validating the Paper less check box functionality by unchecking it 
 
                     it('519PI 5: Validate Checkbox PaperLess Checked or Not', function() {
-                        expect(perInfo.chkBoxPaperless.isSelected()).toBeTruthy();
+                        expect(perInfo.chkBoxPaperless.isSelected()).toBeTruthy('Verifies that "Paper Less Check Box" is selected');
                         perInfo.chkBoxPaperless.unCheck();
-                        expect(perInfo.chkBoxPaperless.isSelected()).toBeFalsy();
+                        expect(perInfo.chkBoxPaperless.isSelected()).toBeFalsy('Verifies that "Paper Less Check Box" is not selected');
                         console.log('519PI 5: Complete')
 
                     });
@@ -154,7 +154,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('519PI 6: Validate Electronic Documents Terms and Conditions', function() {
                         perInfo.paperLessTerms.click();
                         Utility.switchToWindow(1);
-                        expect(browser.getCurrentUrl()).toEqual(TestData.ElectronicDocPaperLess);
+                        expect(browser.getCurrentUrl()).toEqual(TestData.ElectronicDocPaperLess,'Verifies that "Current URl" is '+TestData.ElectronicDocPaperLess);
                         browser.close();
                         Utility.switchToWindow(0);
                         console.log('519PI 6: Complete')

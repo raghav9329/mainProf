@@ -27,7 +27,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
 
                     it('Dependents Max_Step-1:should complete the Enroll Page', function () {
                         enrollPage.enterHomePageDetails(tData.enrollData);
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verifies that user is in personal info page and "First Name" field is displayed');
                     });
 
 
@@ -61,14 +61,14 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         }
                         // perInfo.fillBroker(TestData);
                         // expect(perInfo.apptFloorNumError.getText()).toEqual('Please ensure you have entered an Apt/Floor/Suite number');
-                        expect(browser.getTitle()).toEqual(TestData.DependentTitle);
+                        expect(browser.getTitle()).toEqual(TestData.DependentTitle,'Verifies that "Dependent Page Title" is '+TestData.DependentTitle);
 
                     });
 
                     //Validate field level Error Verification
 
                     it('Dependents Max_Step_3: Verifying and Validate the Dependents of same type(Domestic Partner and Spouse do not allowed) not allowed more than 1', function () {
-                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy('Verifies that "Add Dependent" button is displayed');
                         depInfo.fieldAddDependents.click();
                         depInfo.firstname('Dependent1').setText(TestData.invalidData.firstName);
                         depInfo.middleName('Dependent1').setText(TestData.invalidData.middleName);
@@ -77,27 +77,27 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         depInfo.date('Dependent1').setText(Utility.getDatePart(TestData.invalidData.DOB, 'DATE'));
                         depInfo.year('Dependent1').setText(Utility.getDatePart(TestData.invalidData.DOB, 'YEAR'));
                         depInfo.next.click();
-                        expect(depInfo.errorRelationship('Dependent1').getText()).toEqual("Please select a relationship");
-                        expect(depInfo.errorFirstName('Dependent1').getText()).toEqual(TestData.depFieldError);
-                        expect(depInfo.errorLastName('Dependent1').getText()).toEqual(TestData.depFieldError);
+                        expect(depInfo.errorRelationship('Dependent1').getText()).toEqual("Please select a relationship",'Verifies that "Relation Ship" error message is "Please select a relationship"');
+                        expect(depInfo.errorFirstName('Dependent1').getText()).toEqual(TestData.depFieldError,'Verifies that "First Name" error should be '+TestData.depFieldError);
+                        expect(depInfo.errorLastName('Dependent1').getText()).toEqual(TestData.depFieldError,'Verifies that "Last Name" error should be '+TestData.depFieldError);
                         Utility.scrollToTop();
                         depInfo.deleteDependent('Dependent1').click();
                     });
 
                     // Validating the Dependents of same type(Domestic partner and spouse) 
-                    // Validating the error "You can select only 1 Spouse or Domestic Partner." and Premium change Pop-up
+                    // Validating the error "You can select only 1 Spouse or Partner." and Premium change Pop-up
                     // updates the Dependent one of the same relation type dependent to child
 
 
                     it('Dependents Max_Step_3: Verifying and Validate the Dependents of same type(Domestic Partner and Spouse do not allowed) not allowed more than 1', function () {
-                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy('Verifies that "Add Dependent" button is displayed');
                         depInfo.fillDependent('Dependent1', TestData.domesticpartner1, false);
                         depInfo.fillDependent('Dependent2', TestData.Spouse1, false);
                         depInfo.next.click();
-                        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy('Verifies that Premium Change Popup is Selected');
                         depInfo.continue.click();
                         Utility.scrollToTop();
-                        expect(depInfo.depError.getText()).toEqual("You can select only 1 Spouse or Domestic Partner.");
+                        expect(depInfo.depError.getText()).toEqual("You can select only 1 Spouse or Partner.",'Verifies that "Dependent" error should be You can select only 1 Spouse or Partner.');
                         depInfo.relationship('Dependent2').selectByText(TestData.updateRelationship);
 
                     });
@@ -121,11 +121,11 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         depInfo.next.click();
                         depInfo.continue.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesTitle,'Verifies that "Facilitie Page Title" should be '+TestData.facilitiesTitle);
 
                         }
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentTitle,'Verifies that "Payment Page Title" should be '+TestData.paymentTitle);
                         }
                     });
                 });

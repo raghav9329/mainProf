@@ -12,19 +12,25 @@
  *
  */
 
-var mkdirp              = require('mkdirp');
-var rmdir               = require('rimraf');
-var path                = require("path");
-var suitesFile          = require('./suites.js');
-var statesFile          = require('./states.js');
+var mkdirp = require('mkdirp');
+var rmdir = require('rimraf');
+var path = require("path");
+var suitesFile = require('./suites.js');
+var statesFile = require('./states.js');
 var testRunRptInternals = require('./rptFileGenerator');
-var allStates           = statesFile.statesCollection;
-var fs                  = require("fs");
-var m                   = require('moment');
+var allStates = statesFile.statesCollection;
+var fs = require("fs");
+var m = require('moment');
+
+var util = new(require("./integration/utils/common.js"));
+util.renameReports();
 
 exports.config = {
     framework: 'jasmine2',
-    suites: suitesFile.suitesCollection,
+    	suites: suitesFile.suitesCollection,
+
+    // 7_10_2018 Mark need the Specs Line probably for another two weeks
+    // specs: ['integration/scenarios/xproduct/pers/471PersInfo.test.js'],  
 
     // chrome capabilities
     capabilities: {
@@ -46,6 +52,8 @@ exports.config = {
     },
 
     // Firefox/IE Capabilities
+    // Enable below capabilities to run scripts on firfox browser
+
     // capabilities: {
     //     'browserName': 'firefox',
     //     // 'browserName': 'internet explorer',
@@ -68,21 +76,6 @@ exports.config = {
 
     // },
 
-    beforeLaunch: function() {
-        // Naresh -Enable below statement to remove all previous reports 
-        mkdirp('./previousResults/', function(err) {});
-        mkdirp('./results/', function(err) {});
-        fs.rename('./results', './previousResults/results_' + m().format('YYYY-MM-Do-h-mm'), function(err) {
-            if (err) throw err;
-            console.log('results directory renam completed');
-        });
-        // rmdir('./results/*', function(err) {});
-        rmdir('./PDFDownloads/*.pdf', function(err) {});
-        mkdirp('./PDFDownloads/', function(err) {});
-
-
-    },
-
     params: {
         baseUrl: '',
         exeLogging: 'OFF',
@@ -90,7 +83,7 @@ exports.config = {
         isExecutionFromUI: '',
         testDataEnv: '',
         apiurl: '',
-        states: 'all',
+        states: 'oneStateTest', // If nothing is selected, run only for CA and not ALL states
         runtimeDebug: 'somthingForLength' // Testing an Idea [Mark]
     },
 
@@ -99,7 +92,7 @@ exports.config = {
         maxWait = 150;
         longWait = 2000;
         PAGELOADTIME = 60000;
-        product = ['DHMO', 'DPPO'];
+        product = ['DHMO','DPPO','AHMO', 'APPO'];
         states = [];
 
         /**
@@ -116,7 +109,7 @@ exports.config = {
          * Naresh - Enable below states statement and add the states insteadof passing from the cmd
          *****************************************************************/
 
-        // states = ["SC", "AR", "HI", "IA", "ID", "NE", "ND", "SD", "WI", "WY"];
+       // states = ["CA"] // WV,MS,NV,MT,DC,DE
 
         /******************************************************************
          *  Preparation for execution entry points implement by Dev for
@@ -255,7 +248,11 @@ exports.config = {
             defaultTimeoutInterval: 10 * 60000
 
         }));
-        //=============Jasmine Report End =========//        
+        //=============Jasmine Report End =========//   
+
+
+
+        //     
     },
 
 
@@ -302,7 +299,3 @@ exports.config = {
 // npm run buydit -- --suite=xproduct --params.states phase1
 // npm run buymot -- --suite=xproduct --params.states phase1
 
-
-//Run the script from /test URL
-// npm run buydittest -- --suite=xproduct
-// npm run buymottest -- --suite=xproduct --params.states phase1

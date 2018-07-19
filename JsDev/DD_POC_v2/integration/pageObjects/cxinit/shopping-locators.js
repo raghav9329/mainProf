@@ -9,7 +9,7 @@ class ShoppingPageLocators {
         this.State                      = by.name('state');
         this.Zipcode                    = by.name('zip');
         this.NoOFCovered                = by.id('noofcovered');
-        this.noofdependents             = by.id('noofdependents');
+        this.noofdependents             = by.id('noofcovered');
         this.Effcdate                   = by.id('eff_date');
         this.Submit                     = by.xpath('//input[@value="Submit"]');
         this.Zipcode_error              = by.id('zip-error');

@@ -23,7 +23,7 @@ dataProvider(TestData.states, function (sData, sdescription) {
                         jasmine.addMatchers(custommatcher.customMatchers);
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verifies that user is in personal info page and "First Name" field is displayed');
                         TestData.firstname = Utility.randomNo('String', 8);
                         TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
@@ -47,18 +47,18 @@ dataProvider(TestData.states, function (sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.DependentTitle);
+                        expect(browser.getTitle()).toEqual(TestData.DependentTitle,'Verifies that "Dependent Page Title" should be '+TestData.DependentTitle);
                         depInfo.fillDependent('Dependent1', TestData.domesticpartner1, false);
                         depInfo.fillDependent('Dependent2', TestData.child3, false);
                         depInfo.fillDependent('Dependent3', TestData.child4, false);
                         depInfo.next.click();
-                        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy('Verifies that "Premium Change Popup" is displayed');
                         depInfo.continue.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesTitle,'Verifies that "Facilities Page Title" should be '+TestData.facilitiesTitle);
                         }
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentTitle,'Verifies that "Payment Page Title" should be '+TestData.paymentTitle);
                         }
 
                     });
@@ -83,7 +83,7 @@ dataProvider(TestData.states, function (sData, sdescription) {
 
                         }
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentTitle,'Verifies that "Payment Page Title" should be '+TestData.paymentTitle);
                         }
 
 
@@ -97,9 +97,9 @@ dataProvider(TestData.states, function (sData, sdescription) {
                             //Validate Enrolle without selecting any Facility and the respective error
 
                             facilities.next.click();
-                            expect(facilities.enrolleFacNullErr.getText()).toEqual(TestData.facilityselectionError);
-                            expect(facilities.enrolleFacNullHelpText.getText()).toEqual(TestData.enrolleFacNullHelpText);
-                            expect(facilities.depNameVerify.getText()).toEqual(TestData.firstname);
+                            expect(facilities.enrolleFacNullErr.getText()).toEqual(TestData.facilityselectionError,'Verifies that "Enrolle Facility Error Message" should be '+TestData.facilityselectionError);
+                            expect(facilities.enrolleFacNullHelpText.getText()).toEqual(TestData.enrolleFacNullHelpText,'Verifies that "Enrollee Null Help Text" Should be '+TestData.enrolleFacNullHelpText);
+                            expect(facilities.depNameVerify.getText()).toEqual(TestData.firstname,'Verifies that "Dep Name" Should be '+TestData.firstname);
 
                             //Select the Facility for the Enrolle and Proceed
                             // facilities.selectFacility(TestData.facilityoption1);
@@ -108,9 +108,9 @@ dataProvider(TestData.states, function (sData, sdescription) {
 
                             //Validate Dependent - 1 without selecting any Facility and the respective error
                             facilities.next.click();
-                            expect(facilities.enrolleFacNullErr.getText()).toEqual(TestData.facilityselectionError);
-                            expect(facilities.enrolleFacNullHelpText.getText()).toEqual(TestData.enrolleFacNullHelpText);
-                            expect(facilities.depNameVerify.getText()).toEqual(TestData.domesticpartner1.firstName);
+                             expect(facilities.enrolleFacNullErr.getText()).toEqual(TestData.facilityselectionError,'Verifies that "Enrolle Facility Error Message" should be '+TestData.facilityselectionError);
+                            expect(facilities.enrolleFacNullHelpText.getText()).toEqual(TestData.enrolleFacNullHelpText,'Verifies that "Enrollee Null Help Text" Should be '+TestData.enrolleFacNullHelpText);
+                            expect(facilities.depNameVerify.getText()).toEqual(TestData.domesticpartner1.firstName,'Verifies that "Dep Name" Should be '+TestData.domesticpartner1.firstName);
 
                             //Select the Facility for the Dependent - 1 and Proceed
                             // facilities.selectFacility(TestData.facilityoption2);
@@ -119,9 +119,9 @@ dataProvider(TestData.states, function (sData, sdescription) {
 
                             //Validate Dependent - 2 without selecting any Facility and the respective error
                             facilities.next.click();
-                            expect(facilities.enrolleFacNullErr.getText()).toEqual(TestData.facilityselectionError);
-                            expect(facilities.enrolleFacNullHelpText.getText()).toEqual(TestData.enrolleFacNullHelpText);
-                            expect(facilities.depNameVerify.getText()).toEqual(TestData.child3.firstName);
+                             expect(facilities.enrolleFacNullErr.getText()).toEqual(TestData.facilityselectionError,'Verifies that "Enrolle Facility Error Message" should be '+TestData.facilityselectionError);
+                            expect(facilities.enrolleFacNullHelpText.getText()).toEqual(TestData.enrolleFacNullHelpText,'Verifies that "Enrollee Null Help Text" Should be '+TestData.enrolleFacNullHelpText);
+                            expect(facilities.depNameVerify.getText()).toEqual(TestData.child3.firstName,'Verifies that "Dep Name" Should be '+TestData.child3.firstName);
 
                             //Select the Facility for the Dependent - 2 and Proceed
                             // facilities.selectFacility(TestData.facilityoption3);
@@ -130,15 +130,15 @@ dataProvider(TestData.states, function (sData, sdescription) {
 
                             //Validate Dependent - 3 without selecting any Facility and the respective error
                             facilities.next.click();
-                            expect(facilities.enrolleFacNullErr.getText()).toEqual(TestData.facilityselectionError);
-                            expect(facilities.enrolleFacNullHelpText.getText()).toEqual(TestData.enrolleFacNullHelpText);
-                            expect(facilities.depNameVerify.getText()).toEqual(TestData.child4.firstName);
+                               expect(facilities.enrolleFacNullErr.getText()).toEqual(TestData.facilityselectionError,'Verifies that "Enrolle Facility Error Message" should be '+TestData.facilityselectionError);
+                            expect(facilities.enrolleFacNullHelpText.getText()).toEqual(TestData.enrolleFacNullHelpText,'Verifies that "Enrollee Null Help Text" Should be '+TestData.enrolleFacNullHelpText);
+                            expect(facilities.depNameVerify.getText()).toEqual(TestData.child4.firstName,'Verifies that "Dep Name" Should be '+TestData.child4.firstName);
 
                             //Select the Facility for the Dependent - 3 and Proceed
                             // facilities.selectFacility(TestData.facilityoption4);
                             facilities.selectFacility();
                             facilities.next.click();
-                            expect(browser.getTitle()).toEqual(TestData.paymentTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentTitle,'Verifies that "Payment Page Title" should be '+TestData.paymentTitle);
 
                         });
                     }

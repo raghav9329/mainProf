@@ -1,4 +1,4 @@
-//CXINIT-1408 : E2E Work Flow 1 with the dependent age verification
+//CXINIT-CXAUTO102 : E2E Work Flow 1 with the dependent age verification
 
 //This Spec is used to Validate End to End Work Flow with the Dependent age Error
 var perInfo       = new(require('../../../pageObjects/cxinit/perInfo-page.js'));
@@ -9,7 +9,7 @@ var receipt       = new(require('../../../pageObjects/cxinit/receipt-page.js'));
 var enrollPage    = new(require('../../../pageObjects/cxinit/enroll-page.js'));
 var TestData      = require('../../../testData/' + testDataEnv + '/dhmo/cxauto102.PDFValidation.json');
 // var statesData = require('../../testData/' + testDataEnv + '/statesAndProducts.json');
-var product    = ['APPOA','APPOB']; //, 'DHMO2', 'DPPO1', 'DPPO2','AHMO1'
+var product    = ['DPPOA','DPPOB']; //, 'DHMO2', 'DPPO1', 'DPPO2','AHMO1'
 // var product       = ['APPOA', 'APPOB'];
 //To Navigate Personla Info Page
 dataProvider(TestData.states, function(sData, sdescription) {
@@ -22,7 +22,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                     var effectiveDate, apNumber, pathToPdf, facility1, facility2;
                     beforeAll(function() {
                         console.log(' ');
-                        console.log('--- CXINIT-1408 E2E WrkFlow1 ---')
+                        console.log('--- CXINIT-CXAUTO102 E2E WrkFlow1 ---')
                         console.log(' ');
                         Utility.openApplication('', tData.product);
                     });
@@ -40,7 +40,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         })
                         expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
 
-                        console.log('1408_1 complete')
+                        console.log('CXAUTO102_1 complete')
                         console.log("pdescription.includes('DHMO')====" + pdescription.includes('DHMO'))
                     });
 
@@ -72,7 +72,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                             perInfo.next.click();
                         }
                         expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
-                        console.log('1408_2 complete')
+                        console.log('CXAUTO102_2 complete')
 
                     });
 
@@ -96,7 +96,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         depInfo.next.click();
                         depInfo.continue.click();
 
-                        console.log('1408_3 complete')
+                        console.log('CXAUTO102_3 complete')
                     });
 
 
@@ -110,8 +110,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                                 facilities.next.click();
                             });
 
-
-                            console.log('1408_4 complete')
+                            console.log('CXAUTO102_4 complete')
                         });
 
                         //Verify and Select the Facility for the Dependent
@@ -123,7 +122,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                             facilities.next.click();
 
                             expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
-                            console.log('1408_5 complete')
+                            console.log('CXAUTO102_5 complete')
                         });
                     }
 
@@ -143,7 +142,7 @@ dataProvider(TestData.states, function(sData, sdescription) {
                         payment.purchaseNow.click();
                         Utility.delay(maxWait);
                         expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
-                        console.log('1408_6 complete')
+                        console.log('CXAUTO102_6 complete')
                     });
                     if (pdescription.includes('DHMO') || pdescription.includes('AHMO') || pdescription.includes('DPPO')) {
                         it('E2E_7 :Should display primary apllicant', function() {

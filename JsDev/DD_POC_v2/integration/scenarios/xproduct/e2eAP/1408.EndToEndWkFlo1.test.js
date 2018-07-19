@@ -35,7 +35,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             effectiveDate = sdate;
                             console.log("sdate============" + sdate);
                         })
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
 
                         console.log('1408_1 complete');
                     });
@@ -49,7 +49,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             TestData.MemberId = false;
                             // TestData.ssn = "1234560215",
                             var ssn = Utility.randomNo('Number', 8);
-                            TestData.ssn = '1' + ssn.toString();
+                            TestData.ssn = '2' + ssn.toString();
                             console.log(" TestData.ssn===" + TestData.ssn)
                             TestData.alternateid = "test@test.com";
                         }
@@ -57,6 +57,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             TestData.MemberId = Utility.randomNo('Number', 10);
                             TestData.ssn = false;
                             TestData.alternateid = false;
+                        }
+                        if(tData.product=='COSTCO'){
+                             TestData.MemberId=false;
+                             TestData.ssn = false;
+                            TestData.alternateid = false;
+                            TestData.costcomemberid="3333333333"
+
                         }
                         perInfo.fillPersonalInfo(TestData);
                         perInfo.fillAddress(tData);
@@ -68,7 +75,11 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
+                         if(tData.product=='COSTCO'){
+                            perInfo.next.click();
+                         }
+
+                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.DependentPageTitle);
                         console.log('1408_2 complete')
 
                     });
@@ -77,17 +88,18 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     //Validate the Dependet age is greater than 26 and with the disability check box
 
                     it('E2E_3 :should add 1 Child Dep', function() {
-                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy('Verify the Field "Add Dependent" is displayed and present');
                         depInfo.fillDependent('Dependent1', TestData.child3, false);
                         if (sdescription == 'NY') {
                             depInfo.year('Dependent1').setText(Utility.getDatePart(moment().subtract(10, 'years').format('MM-DD-YYYY'), 'YEAR'))
                             depInfo.next.click();
-                            depInfo.next.click();
+                            // depInfo.next.click();
                         } else {
-                            expect(depInfo.isHandicapped('Dependent1').isPresentAndDisplayed()).toBeTruthy();
-                            expect(depInfo.handicappedHelpTxt('Dependent1').getText()).toContain(TestData.handicappedHelpText);
+                            expect(depInfo.isHandicapped('Dependent1').isPresentAndDisplayed()).toBeTruthy('Verify is isHandicapped Check box is displayed and Present in the Dependent Page');
+                            expect(depInfo.handicappedHelpTxt('Dependent1').getText()).toContain(TestData.handicappedHelpText, 'Verify the is handicappedHelpText is displayed and same as: ' +TestData.handicappedHelpText);
                             depInfo.isHandicapped('Dependent1').check();
                             depInfo.next.click();
+                            browser.sleep(5000)
                         }
                         depInfo.continue.click();
 
@@ -99,7 +111,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     if (pdescription == 'DHMO' || pdescription == 'AHMO') {
 
                         it('E2E_4 :should select fac for primary', function() {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                             facilities.selectFacility().then(function(fnamee) {
                                 facility1 = fnamee;
                                 facilities.next.click();
@@ -117,27 +129,28 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             });
                             facilities.next.click();
 
-                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                             console.log('1408_5 complete')
                         });
                     }
 
                     it('E2E_6 :should fill out pay details', function() {
-                        if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser);
-                            payment.discloser.click();
-                            Utility.switchToWindow(1);
-                            expect(browser.getCurrentUrl()).toContain(tData.discloser);
-                            Utility.switchToWindow(0);
-                        }
-                        payment.billingChkBox.check();
+                       
+                       // payment.billingChkBox.check();
                         payment.fillpayment(TestData);
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             payment.frequencyAnnualy.select();
                         }
+                        if (pdescription == 'DHMO' || pdescription == 'DPPO') {
+                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser,'Verify the "Payment Discloser" contains text same as' +tData.discloser);
+                            payment.discloser.click();
+                            Utility.switchToWindow(1);
+                            expect(browser.getCurrentUrl()).toContain(tData.discloser,'Verify the URL has discloser text same as' +tData.discloser);
+                            Utility.switchToWindow(0);
+                        }
                         payment.purchaseNow.click();
                         Utility.delay(maxWait);
-                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle, 'Verify "Receipt" Page is displayed and the Tilte is Equal as' +TestData.receiptPageTitle);
                         console.log('1408_6 complete')
                     });
 
@@ -160,13 +173,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 var facility = facility1;
                             }
                             receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
-                                expect(facilitydata.name).toContain(TestData.firstname);
-                                expect(facilitydata.facilityName).toContain(facility.facilityName);
-                                expect(facilitydata.street).toContain(facility.street);
-                                expect(facilitydata.city).toContain(facility.city);
-                                expect(facilitydata.region).toContain(facility.region);
-                                expect(facilitydata.postalCode).toContain(facility.postalCode);
-                                expect(facilitydata.telephone).toContain(facility.telephone);
+                                expect(facilitydata.name).toContain(TestData.firstname,'Verify "Primary Facility First Name" is avaialble in the Receipt Page' +TestData.firstname);
+                                expect(facilitydata.facilityName).toContain(facility.facilityName,'Verify "Primary Facility facilityName" is avaialble in the Receipt Page' +facility.facilityName);
+                                expect(facilitydata.street).toContain(facility.street,'Verify "Primary Facility street" is avaialble in the Receipt Page' +facility.street);
+                                expect(facilitydata.city).toContain(facility.city,'Verify "Primary Facility city" is avaialble in the Receipt Page' +facility.city);
+                                expect(facilitydata.region).toContain(facility.region,'Verify "Primary Facility region" is avaialble in the Receipt Page' +facility.region);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode,'Verify "Primary Facility postalCode" is avaialble in the Receipt Page' +facility.postalCode);
+                                expect(facilitydata.telephone).toContain(facility.telephone,'Verify "Primary Facility telephone" is avaialble in the Receipt Page' +facility.telephone);
 
                             });
                         }
@@ -183,19 +196,19 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             }
                             receipt.verifyPixel(sdescription, pdescription);
                             receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
-                                expect(facilitydata.name).toContain(TestData.child3.firstName);
-                                expect(facilitydata.facilityName).toContain(facility.facilityName);
-                                expect(facilitydata.street).toContain(facility.street);
-                                expect(facilitydata.city).toContain(facility.city);
-                                expect(facilitydata.region).toContain(facility.region);
-                                expect(facilitydata.postalCode).toContain(facility.postalCode);
-                                expect(facilitydata.telephone).toContain(facility.telephone);
+                                expect(facilitydata.name).toContain(TestData.child3.firstName,'Verify "Dependent Facility First Name" is avaialble in the Receipt Page' +TestData.child3.firstName);
+                                expect(facilitydata.facilityName).toContain(facility.facilityName,'Verify "Dependent Facility facilityName" is avaialble in the Receipt Page' +facility.facilityName);
+                                expect(facilitydata.street).toContain(facility.street,'Verify "Dependent Facility street" is avaialble in the Receipt Page' +facility.street);
+                                expect(facilitydata.city).toContain(facility.city,'Verify "Dependent Facility city" is avaialble in the Receipt Page' +facility.city);
+                                expect(facilitydata.region).toContain(facility.region,'Verify "Dependent Facility region" is avaialble in the Receipt Page' +facility.region);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode,'Verify "Dependent Facility postalCode" is avaialble in the Receipt Page' +facility.postalCode);
+                                expect(facilitydata.telephone).toContain(facility.telephone,'Verify "Dependent Facility telephone" is avaialble in the Receipt Page' +facility.telephone);
                             })
                         };
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             browser.sleep(50000);
                             Utility.readPDFFile(pathToPdf).then(function(test) {
-                                expect(test).toContain(TestData.firstname);
+                                expect(test).toContain(TestData.firstname, 'Verify the PDF Path has the First Name in it as' +TestData.firstname);
                                 console.log('E2E_8: Complete');
                             });
                         }

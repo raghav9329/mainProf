@@ -1575,40 +1575,6 @@
                 "zipcode": "94110",
                 "free_text": "lan anh"
             }
-        },
-
-        "test98": {
-            "params": {
-                "zipcode": "92115",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "a+",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "92115",
-                "free_text": "a+"
-            }
-        },
-
-        "test99": {
-            "params": {
-                "zipcode": "92115",
-                "distance": "60",
-                "page": "0",
-                "per_page": "60000",
-                "max": "60000",
-                "free_text": "Hill /Tamara",
-                "specialty": ["GENERAL DENTIST"],
-                "meta_data": false
-            },
-            "verify": {
-                "zipcode": "92115",
-                "free_text": "Hill /Tamara"
-            }
         }
     },
     "testdata1": {

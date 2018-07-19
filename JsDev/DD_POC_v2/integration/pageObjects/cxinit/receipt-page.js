@@ -28,6 +28,7 @@ class ReceiptPage extends ControlBase {
         this.thanksMsg                = new Label(this.pageObjects.thanksMsg);
         this.queryAnswer              = new TextBox(this.pageObjects.queryAnswer);
         this.summaryBenefitsTxt       = new Label(this.pageObjects.summaryBenefitsTxt);
+        this.payLaterConfirmationTxt  = new Label(this.pageObjects.payLaterConfirmationTxt);
         /**
          * Returns webelement of delta rating
          * @param {Number} rating rating in number
@@ -185,6 +186,8 @@ class ReceiptPage extends ControlBase {
         if (states.indexOf(state) !== -1) {
 
             if (product == "DPPO" || product == "DHMO") {
+                 expect(browser.getPageSource()).toContainSourceCode(pixeldata.floodlight_receipt);
+                 expect(browser.getPageSource()).toContainSourceCode(pixeldata.vendor_receipt);
                 if (state == 'CA') expect(browser.getPageSource()).toContainSourceCode(pixeldata.mxptint);
                 expect(browser.getPageSource()).toContainSourceCode(pixeldata.fls);
             }

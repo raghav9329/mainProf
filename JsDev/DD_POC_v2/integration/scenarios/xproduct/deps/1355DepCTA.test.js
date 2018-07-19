@@ -30,7 +30,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     // Fill the Enroll page with valid data and verify the navigation
                     it('CTA_1: should complete the Enroll Page', function () {
                         enrollPage.enterHomePageDetails(tData.enrollData);
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verifies that user is in personal info page and "First Name" field is displayed');
                         console.log('CTA1 complete');
                     });
 
@@ -61,7 +61,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle,'Verifies that user should be in "Dependent Page"'+TestData.dependentPageTitle);
                         console.log('CTA2 complete')
                     });
 
@@ -70,8 +70,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('CTA_3: should vaildate proper error with no input data', function () {
                         depInfo.fieldAddDependents.click();
                         depInfo.next.click();
-                        expect(depInfo.getValidationMessages('Dependent1')).toEqual(TestData.dependentErrors);
-                        expect(depInfo.getServerValidationMessages()).toEqual(TestData.dependentErrors);
+                        expect(depInfo.getValidationMessages('Dependent1')).toEqual(TestData.dependentErrors,'Verifies that "Dependent" error message should be '+TestData.dependentErrors);
+                        expect(depInfo.getServerValidationMessages()).toEqual(TestData.dependentErrors,'Verifies that "Dependent" error message should be '+TestData.dependentErrors);
                         depInfo.premiumAmount.getText().then(function (val) {
                             depPremiumAmount = val;
                         })
@@ -83,14 +83,14 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('CTA_4: should generate a PremChgPop on dep add', function () {
                         depInfo.fillDependent('Dependent1', TestData.domesticPartner, true);
                         depInfo.next.click();
-                        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy('Verifies that Premium change popup is displayed');
                         console.log('CTA4 complete')
                     });
 
                     //  Click on "Go Back" link in premium change popup and verify the functionality
                     it('CTA_5: should go back from prem chg pop back button', function () {
                         depInfo.gobackPremiumPopUP.click();
-                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle,'Verifies that user should be in "Dependent Page"'+TestData.dependentPageTitle);
                         console.log('CTA5 complete')
                     });
 
@@ -99,14 +99,14 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         depInfo.next.click();
                         depInfo.continue.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verifies that user should be in "Facilities Page"'+TestData.facilitiesPageTitle);
                             facilities.premiumAmount.getText().then(function (val) {
                                 facilitiesPremiumAmount = val;
                             })
 
                         }
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verifies that user should be in "Payment Page"'+TestData.paymentPageTitle);
                         }
                         console.log('CTA6 complete')
                     });
@@ -124,8 +124,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         depInfo.fillDependent('Dependent2', TestData.spouse, false);
                         depInfo.next.click();
                         depInfo.continue.click();
-                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
-                        expect(depInfo.depError.getText()).toEqual(TestData.depError);
+                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle,'Verifies that user should be in "Dependent Page"'+TestData.dependentPageTitle);
+                        expect(depInfo.depError.getText()).toEqual(TestData.depError,'Verifies that "Dependent" should be '+TestData.depError);
                         console.log('CTA7 complete')
                     });
 
@@ -135,13 +135,13 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         depInfo.next.click();
                         depInfo.continue.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verifies that user should be in "Facilities Page"'+TestData.facilitiesPageTitle);
                             facilities.premiumAmount.getText().then(function (val) {
                                 facilitiesPremiumAmount2 = val;
                             })
                         }
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verifies that user should be in "Payment Page"'+TestData.paymentPageTitle);
                         }
                         console.log('CTA8 complete')
                     });
@@ -157,7 +157,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         }
                         depInfo.back.click();
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(perInfo.fieldSsn.getAttribute('value')).toEqual('');
+                            expect(perInfo.fieldSsn.getAttribute('value')).toEqual('','Verifies that "SSN" should be NULL');
+                            expect(perInfo.fieldGenderSelect.getText()).toEqual('Prefer not to say', 'verify that Gender selected after the clicking on bcl is "Prefer not to say" ');
                         }
                         console.log('CTA9 complete')
                     });
@@ -166,8 +167,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('CTA_10: Error message should be displayed for SSN field', function () {
                         perInfo.next.click();
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(perInfo.errMsgSsn.getText()).toEqual(TestData.errorSSN);
-                            expect(perInfo.serverErrMsgSsn.getText()).toEqual(TestData.errorSSN);
+                            expect(perInfo.errMsgSsn.getText()).toEqual(TestData.errorSSN,'Verifies that "SSN" error message should be '+TestData.errorSSN);
+                            expect(perInfo.serverErrMsgSsn.getText()).toEqual(TestData.errorSSN,'Verifies that "SSN" error message should be '+TestData.errorSSN);
                         }
                         console.log('CTA10 complete')
                     });
@@ -180,7 +181,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                             perInfo.fieldSsn.setText(TestData.SSN);
                         }
                         perInfo.next.click();
-                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle,'Verifies that user should be in "Dependent Page"'+TestData.dependentPageTitle);
                         perInfo.next.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                         facilities.selectFacility();
@@ -190,7 +191,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         facilities.selectFacility();
                         facilities.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verifies that user should be in "Payment Page"'+TestData.paymentPageTitle);
                         console.log('CTA11 complete')
                     });
                 });

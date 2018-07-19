@@ -3,7 +3,7 @@
 class PlanOptionsPageLocators {
     constructor() {
         this.planSummary                  = by.css('div.plan-options__summary.grey-text');
-        this.headerContent                = by.css('h1.shopping-header-content');
+        this.headerContent                = by.css('h1.shopping-header-external');
         this.edit                         = by.linkText('Edit');
         this.deltaDentalPlanHeader        = by.css('div.plan-options__left-side h2');
         this.deltaCarePlanHeader          = by.css('div.plan-options__right-side h2');

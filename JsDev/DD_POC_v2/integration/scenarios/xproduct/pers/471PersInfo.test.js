@@ -63,10 +63,11 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         // perInfo.fieldFirstName.setText(Fn_data.FName);
                         perInfo.fieldHomeAddr.setText(data.HomeAddress);
                         perInfo.selectHomeAddress(data.FullAddress);
-                        expect(perInfo.fieldHomeAddr.getAttribute("value")).toContain(data.HomeAddress);
-                        expect(perInfo.fieldCity.getAttribute("value")).toContain(data.City);
-                        expect(perInfo.fieldState.getAttribute("value")).toContain(data.State);
-                        expect(perInfo.fieldZipCode.getAttribute("value")).toContain(data.ZipCode);
+                        browser.sleep(3000);
+                        expect(perInfo.fieldHomeAddr.getAttribute("value")).toContain(data.HomeAddress,'Verifies that "Home Address filed" Should be '+data.HomeAddress);
+                        expect(perInfo.fieldCity.getAttribute("value")).toContain(data.City,'Verifies that "fieldCity filed" Should be '+data.City);
+                        expect(perInfo.fieldState.getAttribute("value")).toContain(data.State,'Verifies that "State filed" Should be '+data.State);
+                        expect(perInfo.fieldZipCode.getAttribute("value")).toContain(data.ZipCode,'Verifies that "ZIP Code filed" Should be '+data.ZipCode);
                     });
 
                     // Validate and Verify the Test Data supplied and the mock values are matched
@@ -74,10 +75,10 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('Should allow usr to select Sugg in MailAddr: Validate mock vals', function () {
                         perInfo.fillAddress(tData);
                         perInfo.fieldPhoneNumber.click();
-                        expect(perInfo.fieldHomeAddr.getAttribute("value")).toContain(tData.fieldHomeAddr);
-                        expect(perInfo.fieldCity.getAttribute("value")).toContain(tData.city);
-                        expect(perInfo.fieldState.getAttribute("value")).toContain(tData.State);
-                        expect(perInfo.fieldZipCode.getAttribute("value")).toContain(tData.enrollData.ZIPcode);
+                        expect(perInfo.fieldHomeAddr.getAttribute("value")).toContain(tData.fieldHomeAddr,'Verifies that "Home Address filed" Should be '+tData.fieldHomeAddr);
+                        expect(perInfo.fieldCity.getAttribute("value")).toContain(tData.city,'Verifies that "fieldCity filed" Should be '+tData.city);
+                        expect(perInfo.fieldState.getAttribute("value")).toContain(tData.State,'Verifies that "State filed" Should be '+tData.State);
+                        expect(perInfo.fieldZipCode.getAttribute("value")).toContain(tData.enrollData.ZIPcode,'Verifies that "ZIP Code filed" Should be '+tData.enrollData.ZIPcode);
                     });
 
                 });

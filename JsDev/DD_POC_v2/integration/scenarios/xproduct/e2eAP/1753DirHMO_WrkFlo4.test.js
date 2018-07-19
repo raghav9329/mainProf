@@ -38,7 +38,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             effectiveDate = sdate;
                             console.log("sdate============" + sdate);
                         })
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                         console.log('1753_1 complete')
                     });
 
@@ -69,14 +69,14 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.DependentPageTitle);
                         console.log('1753_2 complete')
                     });
 
                     // Add Dependents in the dependent page with 2 Child and 1 DM and Proceed
 
                     it('E2E_3 :should add 3 Dependents, 2 child and DM', function() {
-                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy('Verify the Field "Add Dependent" is displayed and present');
                         depInfo.fillDependent('Dependent1', TestData.Spouse, false);
                         depInfo.fillDependent('Dependent2', TestData.child1, false);
                         depInfo.fillDependent('Dependent3', TestData.child2, false);
@@ -89,12 +89,12 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     //Verify and Select the Facility for the Dependent
                     if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                         it('E2E_4 :should select fac for primary', function() {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                             facilities.selectFacility().then(function(fnamee) {
                                 facility1 = fnamee;
                             });
                             facilities.next.click();
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                             console.log('1753_4 complete')
                         });
 
@@ -113,7 +113,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 facility4 = fnamee;
                             });
                             facilities.next.click();
-                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                             console.log('1753_5 complete')
                         });
                     }
@@ -121,10 +121,10 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     // if (testExecutionEnv != 'production') {
                     it('E2E_6 :should fill out pay details', function() {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser);
+                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser,'Verify Discloser in Payment has same as: ' +tData.discloser);
                             payment.discloser.click();
                             Utility.switchToWindow(1);
-                            expect(browser.getCurrentUrl()).toContain(tData.discloser);
+                            expect(browser.getCurrentUrl()).toContain(tData.discloser,'Verify the Discloser in the URL is same as: '+tData.discloser);
                             Utility.switchToWindow(0);
                         }
                         payment.billingChkBox.check();
@@ -137,7 +137,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         });
                         payment.purchaseNow.click();
                         Utility.delay(maxWait);
-                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle, 'Verify "Receipt" Page is displayed and the Tilte is Equal as' +TestData.receiptPageTitle);
                         console.log('1753_6 complete')
                     });
                     //Verify and Validate the Application Number and Plan Name in the Receipt Page
@@ -145,7 +145,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     it('E2E_7 :Should submit delta rating', function() {
                         receipt.submitRating(TestData.deltaRating);
                         receipt.answerQuery(TestData.queryAnswer);
-                        expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg);
+                        expect(receipt.getThanksMsg()).toEqual(TestData.thanksMsg,'Verify the Thanks Message displayed in the receipt page is same as: ' +TestData.thanksMsg);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             receipt.applicationNumber.getText().then(function(appicationNumber) {
                                 console.log("Application Number == " + appicationNumber);
@@ -154,9 +154,9 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 })
                             })
                         }
-                        expect(receipt.planPurchased.getText()).toContain(tData.planName);
-                        expect(receipt.effectiveDate.getText()).toEqual(effectiveDate);
-                        expect(receipt.totalPaid.getText()).toEqual(premiumAmount);
+                        expect(receipt.planPurchased.getText()).toContain(tData.planName,'Verify "Purchased Plan" name is same as: ' +tData.planName);
+                        expect(receipt.effectiveDate.getText()).toEqual(effectiveDate,'Verify Effective Date in Displayed and Present in the receipt page is same as: ' +effectiveDate);
+                        expect(receipt.totalPaid.getText()).toEqual(premiumAmount,'Verify Total premium amount paid is same as: ' +premiumAmount);
                         console.log('1753_7 complete')
                     });
 
@@ -164,19 +164,19 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     it('E2E_8 :Should display plansummary', function() {
                         var plansummary = tData.planSummary;
                         receipt.planSummary.click();
-                        expect(receipt.getPlanSummaryByKey('Deductible per calendar year per person').getText()).toEqual(plansummary.Deductible_per_calendar);
-                        expect(receipt.getPlanSummaryByKey('Maximum per calendar year per person').getText()).toEqual(plansummary.Max_per_calendar);
-                        expect(receipt.getPlanSummaryByKey('Office visit').getText()).toEqual(plansummary.Officevisit);
-                        expect(receipt.getPlanSummaryByKey('Exams').getText()).toEqual(plansummary.Exams);
-                        expect(receipt.getPlanSummaryByKey('X-rays').getText()).toEqual(plansummary.Xrays);
-                        expect(receipt.getPlanSummaryByKey('Cleanings').getText()).toEqual(plansummary.Cleanings);
-                        expect(receipt.getPlanSummaryByKey('Fillings').getText()).toEqual(plansummary.Fillings);
-                        expect(receipt.getPlanSummaryByKey('Root canals').getText()).toEqual(plansummary.Rootcanals);
-                        expect(receipt.getPlanSummaryByKey('Gum treatment').getText()).toEqual(plansummary.Gumtreatment);
-                        expect(receipt.getPlanSummaryByKey('Extractions').getText()).toEqual(plansummary.Extractions);
-                        expect(receipt.getPlanSummaryByKey('Denture repair').getText()).toEqual(plansummary.Denturerepair);
-                        expect(receipt.getPlanSummaryByKey('Crowns').getText()).toEqual(plansummary.Crowns);
-                        expect(receipt.getPlanSummaryByKey('Orthodontics').getText()).toEqual(plansummary.Orthodontics);
+                        expect(receipt.getPlanSummaryByKey('Deductible per calendar year per person').getText()).toEqual(plansummary.Deductible_per_calendar, 'Verify "Deductable value" field under Plansummary is same as: ' +plansummary.Deductible_per_calendar);
+                        expect(receipt.getPlanSummaryByKey('Maximum per calendar year per person').getText()).toEqual(plansummary.Max_per_calendar, 'Verify Max Per "Calendar value" under Plan summary is same as: ' +plansummary.Max_per_calendar);
+                        expect(receipt.getPlanSummaryByKey('Office visit').getText()).toEqual(plansummary.Officevisit,'Verify "Officevisit field value under Plan summary is same as: ' +plansummary.Officevisit);
+                        expect(receipt.getPlanSummaryByKey('Exams').getText()).toEqual(plansummary.Exams,'Verify "Exams value" under Plan summary is same as: ' +plansummary.Exams);
+                        expect(receipt.getPlanSummaryByKey('X-rays').getText()).toEqual(plansummary.Xrays,'Verify "Xrays" value under Plan summary is same as: ' +plansummary.Xrays);
+                        expect(receipt.getPlanSummaryByKey('Cleanings').getText()).toEqual(plansummary.Cleanings,'Verify "Cleanings" field value under plan summary is same as: ' +plansummary.Cleanings);
+                        expect(receipt.getPlanSummaryByKey('Fillings').getText()).toEqual(plansummary.Fillings,'Verify "Fillings" field value under plan summary is same as: ' +plansummary.Fillings);
+                        expect(receipt.getPlanSummaryByKey('Root canals').getText()).toEqual(plansummary.Rootcanals,'Verify "Rootcanals" field value under plan summary is same as: ' +plansummary.Rootcanals);
+                        expect(receipt.getPlanSummaryByKey('Gum treatment').getText()).toEqual(plansummary.Gumtreatment,'Verify "Gumtreatment" field value under plan summary is same as: ' +plansummary.Gumtreatment);
+                        expect(receipt.getPlanSummaryByKey('Extractions').getText()).toEqual(plansummary.Extractions,'Verify "Extractions" field value under plan summary is same as: ' +plansummary.Extractions);
+                        expect(receipt.getPlanSummaryByKey('Denture repair').getText()).toEqual(plansummary.Denturerepair,'Verify "Denturerepair" field value under plan summary is same as: ' +plansummary.Denturerepair);
+                        expect(receipt.getPlanSummaryByKey('Crowns').getText()).toEqual(plansummary.Crowns,'Verify "Crowns" field value under plan summary is same as: ' +plansummary.Crowns);
+                        expect(receipt.getPlanSummaryByKey('Orthodontics').getText()).toEqual(plansummary.Orthodontics,'Verify "Crowns" field value under plan summary is same as: ' +plansummary.Orthodontics);
                         console.log('1753_8 complete')
 
                     });
@@ -189,13 +189,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             }
                             receipt.applicants.click();
                             receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
-                                expect(facilitydata.name).toContain(TestData.firstname);
-                                expect(facilitydata.facilityName).toEqual(facility.facilityName);
-                                expect(facilitydata.street).toEqual(facility.street);
-                                expect(facilitydata.city).toEqual(facility.city);
-                                expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toContain(facility.postalCode);
-                                expect(facilitydata.telephone).toEqual(facility.telephone);
+                                expect(facilitydata.name).toContain(TestData.firstname,'Verify the "First Name" field value of Primary Facility is same as: ' +TestData.firstname);
+                                expect(facilitydata.facilityName).toEqual(facility.facilityName,'Verify the "facilityName" field value of Primary Facility is same as: ' +facility.facilityName);
+                                expect(facilitydata.street).toEqual(facility.street,'Verify the "street" field value of Primary Facility is same as: ' +facility.street);
+                                expect(facilitydata.city).toEqual(facility.city,'Verify the "city" field value of Primary Facility is same as: ' +facility.city);
+                                expect(facilitydata.region).toEqual(facility.region,'Verify the "region" field value of Primary Facility is same as: ' +facility.region);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode,'Verify the "postalCode" field value of Primary Facility is same as: ' +facility.postalCode);
+                                expect(facilitydata.telephone).toEqual(facility.telephone,'Verify the "telephone" field value of Primary Facility is same as: ' +facility.telephone);
                                 console.log('1753_9 complete')
                             });
                         });
@@ -207,18 +207,18 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 var facility = facility2;
                             }
                             receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
-                                expect(facilitydata.name).toContain(TestData.Spouse.firstName);
-                                expect(facilitydata.facilityName).toEqual(facility.facilityName);
-                                expect(facilitydata.street).toEqual(facility.street);
-                                expect(facilitydata.city).toEqual(facility.city);
-                                expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toContain(facility.postalCode);
-                                expect(facilitydata.telephone).toEqual(facility.telephone);
+                                expect(facilitydata.name).toContain(TestData.Spouse.firstName,'Verify the "First Name" field value of Dependent-1 Facility is same as: ' +TestData.Spouse.firstName);
+                                expect(facilitydata.facilityName).toEqual(facility.facilityName,'Verify the "facilityName" field value of Dependent-1 Facility is same as: ' +facility.facilityName);
+                                expect(facilitydata.street).toEqual(facility.street,'Verify the "street" field value of Dependent-1 Facility is same as: ' +facility.street);
+                                expect(facilitydata.city).toEqual(facility.city,'Verify the "city" field value of Dependent-1 Facility is same as: ' +facility.city);
+                                expect(facilitydata.region).toEqual(facility.region,'Verify the "region" field value of Dependent-1 Facility is same as: ' +facility.region);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode,'Verify the "postalCode" field value of Dependent-1 Facility is same as: ' +facility.postalCode);
+                                expect(facilitydata.telephone).toEqual(facility.telephone,'Verify the "telephone" field value of Dependent-1 Facility is same as: ' +facility.telephone);
                             });
                             if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                                 browser.sleep(50000);
                                 Utility.readPDFFile(pathToPdf).then(function(test) {
-                                    expect(test).toContain(TestData.firstname);
+                                    expect(test).toContain(TestData.firstname, 'Verify the "FirstName" field value displayed in the PDF is same as: ' +TestData.firstname);
                                 });
                             };
                             console.log('1753_10 complete')
@@ -233,13 +233,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 var facility = facility3;
                             }
                             receipt.getSelectedFacilityDetails('DEPENDENT', 2).then(function(facilitydata) {
-                                expect(facilitydata.name).toContain(TestData.child1.firstName);
-                                expect(facilitydata.facilityName).toEqual(facility.facilityName);
-                                expect(facilitydata.street).toEqual(facility.street);
-                                expect(facilitydata.city).toEqual(facility.city);
-                                expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toContain(facility.postalCode);
-                                expect(facilitydata.telephone).toEqual(facility.telephone);
+                                expect(facilitydata.name).toContain(TestData.child1.firstName,'Verify the "First Name" field value of Dependent-2 Facility is same as: ' +TestData.child1.firstName);
+                                expect(facilitydata.facilityName).toEqual(facility.facilityName,'Verify the "facilityName" field value of Dependent-2 Facility is same as: ' +facility.facilityName);
+                                expect(facilitydata.street).toEqual(facility.street,'Verify the "street" field value of Dependent-2 Facility is same as: ' +facility.street);
+                                expect(facilitydata.city).toEqual(facility.city,'Verify the "city" field value of Dependent-2 Facility is same as: ' +facility.city);
+                                expect(facilitydata.region).toEqual(facility.region,'Verify the "region" field value of Dependent-2 Facility is same as: ' +facility.region);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode,'Verify the "postalCode" field value of Dependent-2 Facility is same as: ' +facility.postalCode);
+                                expect(facilitydata.telephone).toEqual(facility.telephone,'Verify the "telephone" field value of Dependent-2 Facility is same as: ' +facility.telephone);
                                 console.log('1753_11 complete')
                             });
                         });
@@ -252,13 +252,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             }
                             receipt.verifyPixel(sdescription, pdescription);
                             receipt.getSelectedFacilityDetails('DEPENDENT', 3).then(function(facilitydata) {
-                                expect(facilitydata.name).toContain(TestData.child2.firstName);
-                                expect(facilitydata.facilityName).toEqual(facility.facilityName);
-                                expect(facilitydata.street).toEqual(facility.street);
-                                expect(facilitydata.city).toEqual(facility.city);
-                                expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toContain(facility.postalCode);
-                                expect(facilitydata.telephone).toEqual(facility.telephone);
+                                expect(facilitydata.name).toContain(TestData.child2.firstName,'Verify the "First Name" field value of Dependent-3 Facility is same as: ' +TestData.child2.firstName);
+                                expect(facilitydata.facilityName).toEqual(facility.facilityName,'Verify the "facilityName" field value of Dependent-3 Facility is same as: ' +facility.facilityName);
+                                expect(facilitydata.street).toEqual(facility.street,'Verify the "street" field value of Dependent-3 Facility is same as: ' +facility.street);
+                                expect(facilitydata.city).toEqual(facility.city,'Verify the "city" field value of Dependent-3 Facility is same as: ' +facility.city);
+                                expect(facilitydata.region).toEqual(facility.region,'Verify the "region" field value of Dependent-3 Facility is same as: ' +facility.region);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode,'Verify the "postalCode" field value of Dependent-3 Facility is same as: ' +facility.postalCode);
+                                expect(facilitydata.telephone).toEqual(facility.telephone,'Verify the "telephone" field value of Dependent-3 Facility is same as: ' +facility.telephone);
                                 console.log('1753_12 complete')
                             });
                         });

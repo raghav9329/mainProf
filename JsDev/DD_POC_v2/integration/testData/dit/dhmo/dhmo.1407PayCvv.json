@@ -22,6 +22,7 @@
     "facilityoption3": "Ocean Dental Office",
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
+    "receiptpaylaterTxt": "Over the next few days, we'll send you some information about using your plan.Since you selected to make your first payment later, we'll send you a letter with instructions on how to provide your payment information.We must receive your payment information by the 21st of the month before your coverage start date.Thank you for choosing us for your dental coverage needs. We look forward to helping you keep your smile healthy and bright!",
     "depError": "You can select only 1 Spouse or Partner.",
     "updateRelationship": "Child",
     "errorSSN": "Please enter your SSN",

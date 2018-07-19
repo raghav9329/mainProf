@@ -116,6 +116,8 @@ class DependentsLocators {
         this.depError                 = by.css('div.error-container.global-margin a');
         this.depPremiumChangepopupTxt = by.xpath('//h2[text()="Premium Change"]/following::p[1]');
         this.depChildmaxageerror      = by.xpath('//div[@class="indented-text"]');
+        this.cancel                   = by.xpath('//a[text()="Cancel"]');
+        this.update                   = by.id('nextButton');  
 
     }
 }

@@ -1,4 +1,22 @@
- pdf2Text = require('pdf2text');
+ pdf2Text                    = require('pdf2text');
+ var mkdirp                  = require('mkdirp');
+ var m                       = require('moment');
+ var fs                      = require("fs");
+ var fileName                = './metadata.json';
+ var metadata                = {};
+
+ var testSuiteStartTime      = m().format("MM/DD/YYYY HH:mm:ss");
+ metadata.testSuiteStartTime = testSuiteStartTime;
+
+ //Capturing Commandline arguments
+ var cmdLineFileData         = '';
+ process.argv.forEach(function(ele, index) {
+     if (index > 1) {
+         cmdLineFileData = cmdLineFileData + process.argv[index];
+     }
+ })
+
+ metadata.executionCommand = cmdLineFileData;
 
  var Utility = function() {
 
@@ -241,9 +259,9 @@
       */
      this.delay = function(timeInMs) {
          return browser.sleep(timeInMs).then(function() {
-                 //        return browser.sleep(25).then(function() { // 6/27/17 trying to see how this 
-                 return true; // might be slowing everything down
-             }) // evaluating execution with 507
+             //        return browser.sleep(25).then(function() { // 6/27/17 trying to see how this 
+             return true; // might be slowing everything down
+         }) // evaluating execution with 507
      };
 
      /**
@@ -277,8 +295,8 @@
                      return browser.get(browser.params.baseUrl).then(function() {
                          return true;
                      });
-                 } else {                    
-                    var appURL = browser.params.baseUrl + '/shopping/' + product.toLowerCase()+'/get-a-quote';
+                 } else {
+                     var appURL = browser.params.baseUrl + '/shopping/' + product.toLowerCase() + '/get-a-quote';
                      console.log("URL" + appURL);
                      return browser.get(appURL).then(function(flag) {
                          console.log("flag" + flag);
@@ -437,10 +455,10 @@
              var oresult = undefined;
              switch (type.toUpperCase()) {
                  case 'STRING':
-                 oresult = '';
+                     oresult = '';
                      var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                      for (var i = 0; i < length; i++) {
-                         oresult = str.charAt(Math.floor(Math.random() * str.length))+oresult;                        
+                         oresult = str.charAt(Math.floor(Math.random() * str.length)) + oresult;
                      }
                      logger.info('random string of length ' + length + ' for is :' + oresult);
                      break;
@@ -467,8 +485,42 @@
                  return pages.toString();
              })
          })
-     }
+     };
+     this.renameReports = function(obj) {
+         try {
+             console.log("*********************renameReports*************************")
+             if (fs.existsSync('./results/') == false) {
+                 mkdirp('./previousResults/', function(err) {});
+                 //  mkdirp('./results/', function(err) {});
+             }
 
+             fs.writeFile(fileName, JSON.stringify(metadata), function(err) {
+                 // if (err) return console.log(err);
+             });
+
+             fs.readFile('./dashboardNGTA.html', 'utf8', function(err, data) {
+                 if (!err) {
+                     data.replace(/LAST UPDATED AT:-(.*?)<\/h2><\/td>/g, function(
+                         match,
+                         datestring
+                     ) {
+                         dt = new Date(datestring)
+                         sd = m(dt).format('YYYY-MM-Do-h-mm-ss');
+                         console.log(sd);
+                         fs.rename('./dashboardNGTA.html', './dashboardNGTA_' + sd + '.html', function(err) {
+                             //     if (err) throw err;
+                         });
+
+                     });
+                 }
+                 fs.rename('./results', './previousResults/results_' + m().format('YYYY-MM-Do-h-mm-ss'), function(err) {
+                     //    if (err) throw err;
+                 });
+             });
+         } catch (err) {
+             console.log(err)
+         }
+     }
 
  }
 

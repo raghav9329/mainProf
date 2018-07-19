@@ -100,6 +100,14 @@ class PaymentPage extends ControlBase {
         this.acc_no_link                = new Button(this.pageObjects.acc_no_link);
         this.routing_close              = new Button(this.pageObjects.routing_close);
         this.account_Close              = new Button(this.pageObjects.account_Close);
+        this.paymentLater               = new Label(this.pageObjects.paymentLater);
+        this.paymentLaterHeading        = new Label(this.pageObjects.paymentLaterHeading);
+        this.payNow                     = new RadioButton(this.pageObjects.payNow);
+        this.payLater                   = new RadioButton(this.pageObjects.payLater);
+        this.next                       = new Button(this.pageObjects.next);
+        this.cancel                     = new Label(this.pageObjects.cancel);
+        this.update                     = new Label(this.pageObjects.update);
+
     };
     /**
      * Is used to verify that user in Payment page or not
@@ -123,13 +131,21 @@ class PaymentPage extends ControlBase {
      * @param {Boolean} authChkBox if false, checks auth checkbox
      * @returns {WebElement}
      */
-    fillpayment(paymentData, skipAuthChecked) {
+    fillpayment(paymentData, skipAuthChecked, nextskip) {
         var self = this;
         self.nameOnCard.setText(paymentData.nameOnCard);
         self.cardNumber.setText(paymentData.cardNumber);
         self.expMonth.setText(paymentData.expMonth);
         self.expYear.setText(paymentData.expYear);
         self.securityCode.setText(paymentData.securityCode);
+        if (!nextskip) {
+            self.next.isPresentAndDisplayed().then(function(displeayed) {
+                if (displeayed) self.next.click();
+            }, function(err) {
+
+            })
+        }
+
         if (!skipAuthChecked) self.authChkBox.check();
     };
     /**
@@ -137,8 +153,9 @@ class PaymentPage extends ControlBase {
      * @param {Object} bankdetails {"bankName":"","accountHolderName":"","routingNumber":"","accountNumber":"","accountNumberRetype":""}
      */
     fillBankDetails(bankData) {
+        browser.sleep(3000)
         this.routing_no_link.click();
-        expect(this.routingNumberToolTipText.getText()).toContain('13');
+        expect(this.routingNumberToolTipText.getText()).toContain('nine-digit');
         this.routing_close.click();
         this.acc_no_link.click();
         expect(this.accountNumberToolTipText.getText()).toContain('17');

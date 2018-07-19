@@ -1,16 +1,36 @@
 module.exports = {
 
     suitesCollection: {
+
+        regression: [
+            'integration/scenarios/xproduct/bkp/DeltaDirectShopping.test.js',
+            'integration/scenarios/xproduct/shop/cxauto40_aarpShop.test.js',
+            'integration/scenarios/xproduct/pers/507PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/519PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/1361PersInfo.test.js',
+            'integration/scenarios/xproduct/deps/1356DepPremChgPop.test.js',
+            'integration/scenarios/xproduct/deps/1357DepChildAge.test.js',
+            'integration/scenarios/xproduct/facs/1365FacSearch.test.js',
+            'integration/scenarios/xproduct/facs/1368FacFeedback.test.js', // Feedback form is not getting displayed
+            'integration/scenarios/xproduct/facs/1367FacCTA.test.js',
+            'integration/scenarios/xproduct/pays/CXAUTO-186_payLater.test.js',
+            'integration/scenarios/xproduct/pays/1406PayCTA.test.js',
+            'integration/scenarios/xproduct/pays/1404PayAddrSug.test.js',
+            'integration/scenarios/xproduct/e2eAP/1408.EndToEndWkFlo1.test.js'
+        ],
         pers: [
             'integration/scenarios/xproduct/pers/471PersInfo.test.js',
-            'integration/scenarios/xproduct/pers/483PersInfo.test.js',
-            'integration/scenarios/xproduct/pers/489PersInfo.test.js',
             'integration/scenarios/xproduct/pers/504PersInfo.test.js',
             'integration/scenarios/xproduct/pers/507PersInfo.test.js',
             'integration/scenarios/xproduct/pers/519PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/1361PersInfo.test.js',
+            // All the specs in this suite cannot go across states as they are doing address validations
+            // We need to see if we can make them go X-State 
+            // However, They can go across products
+            'integration/scenarios/xproduct/pers/483PersInfo.test.js',
+            'integration/scenarios/xproduct/pers/489PersInfo.test.js',
             'integration/scenarios/xproduct/pers/720PersInfo.test.js',
             'integration/scenarios/xproduct/pers/804PersInfo.test.js',
-            'integration/scenarios/xproduct/pers/1361PersInfo.test.js',
             'integration/scenarios/xproduct/pers/1548PersInfo.test.js',
             'integration/scenarios/xproduct/pers/1549PersInfo.test.js'
         ],
@@ -35,7 +55,8 @@ module.exports = {
             'integration/scenarios/xproduct/pays/1404PayAddrSug.test.js',
             'integration/scenarios/xproduct/pays/1405PayConAuthChk.test.js',
             'integration/scenarios/xproduct/pays/1406PayCTA.test.js',
-            'integration/scenarios/xproduct/pays/1407PayCvv.test.js'
+            'integration/scenarios/xproduct/pays/1407PayCvv.test.js',
+            'integration/scenarios/xproduct/pays/CXINIT-4897Edit_ChangeFunctionality.test.js'
         ],
 
         ape2e: [
@@ -156,13 +177,6 @@ module.exports = {
 
         ],
 
-        xproduct2: [
-
-
-        ],
-
-        //hclfocus: this suite grew way beyond the intent I had
-
         pdall: ['integration/scenarios/providers/*.test.js', ],
 
         pdearlyWork: [
@@ -217,6 +231,21 @@ module.exports = {
         claimsApi: [
             // 'integration/scenarios/enrollClaimApi/claims.test.js',
             'integration/scenarios/enrollClaimApi/enroll.test.js'
+        ],
+        enrollee: [
+            'integration/scenarios/enrollee/CXAUTO-188_LoginTo_Enrollee_Portal.test.js',
+            'integration/scenarios/enrollee/CXAUTO-191_Dashboard_Page_Validation.test.js',
+            'integration/scenarios/enrollee/CXAUTO-198_Benefits_Overview.test.js',
+            'integration/scenarios/enrollee/CXAUTO-199_Claims_Visits.test.js',
+            'integration/scenarios/enrollee/CXAUTO-204_PrintID_Card.test.js',
+            'integration/scenarios/enrollee/CXAUTO-205_When_No_Claims_RecentVisits.test.js',
+        ],
+
+        newDitMpValidate: [
+            'integration/scenarios/xproduct/pers/507PersInfo.test.js',
+            'integration/scenarios/xproduct/deps/1355DepCTA.test.js',
+            'integration/scenarios/xproduct/dpe2e/2321_E2EPayCCQtr_TwoDep.test.js',
+            'integration/scenarios/xproduct/ape2e/2310_E2EPaySemiAnn_TwoDep.test.js'
         ]
     }
 }

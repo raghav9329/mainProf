@@ -36,7 +36,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             effectiveDate = sdate;
                             console.log("sdate============" + sdate);
                         })
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                         console.log("1754_1 of 8 Complete")
                     });
 
@@ -67,7 +67,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.DependentPageTitle);
                         console.log("1754_2 of 8 Complete")
 
                     });
@@ -77,7 +77,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     dataProvider(TestData.Dependents, function(data, description) {
 
                         it('E2E_3 :should add 15 Dep', function() {
-                            expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
+                            expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy('Verify the Field "Add Dependent" is displayed and present');
                             depInfo.fillDependent(data.dependent, data, false);
                             depInfo.next.click();
                             if (sdescription !== 'NY') {
@@ -100,7 +100,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             depInfo.next.click();
                         }
                         depInfo.next.click();
-                        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy('Verify Premium Change Pop Up isDisplayed and Present');
                         depInfo.continue.click();
                         console.log("1754_4 of 8 Complete")
                     });
@@ -110,7 +110,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         dataProvider(TestData.facilites, function(data, description) {
 
                             it('E2E_5 :should Select Facilities for 15 Dep ' + description, function() {
-                                expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                                expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                                 facilities.selectFacility().then(function(fnamee) {
                                     facility1 = fnamee;
                                 });
@@ -124,12 +124,12 @@ dataProvider(statesData.states, function(sData, sdescription) {
 
                     it('E2E_6 :should fill out pay details', function() {
                         facilities.next.click();
-                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser);
+                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser,'Verify Discloser in Payment has same as: ' +tData.discloser);
                             payment.discloser.click();
                             Utility.switchToWindow(1);
-                            expect(browser.getCurrentUrl()).toContain(tData.discloser);
+                            expect(browser.getCurrentUrl()).toContain(tData.discloser,'Verify the Discloser in the URL is same as: '+tData.discloser);
                             Utility.switchToWindow(0);
                         }
                         payment.fillpayment(TestData);
@@ -138,7 +138,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         }
                         payment.purchaseNow.click();
                         Utility.delay(maxWait);
-                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle, 'Verify "Receipt" Page is displayed and the Tilte is Equal as' +TestData.receiptPageTitle);
                         console.log('1754_6 of 8 complete');
                     });
                     // }
@@ -164,13 +164,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             }
 
                             receipt.getSelectedFacilityDetails('PRIMARY', 1).then(function(facilitydata) {
-                                expect(facilitydata.name).toContain(TestData.firstname);
-                                expect(facilitydata.facilityName).toEqual(facility.facilityName);
-                                expect(facilitydata.street).toEqual(facility.street);
-                                expect(facilitydata.city).toEqual(facility.city);
-                                expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toContain(facility.postalCode);
-                                expect(facilitydata.telephone).toEqual(facility.telephone);
+                                expect(facilitydata.name).toContain(TestData.firstname,'Verify the "First Name" field value of Primary Facility is same as: ' +TestData.firstname);
+                                expect(facilitydata.facilityName).toEqual(facility.facilityName,'Verify the "facilityName" field value of Primary Facility is same as: ' +facility.facilityName);
+                                expect(facilitydata.street).toEqual(facility.street,'Verify the "street" field value of Primary Facility is same as: ' +facility.street);
+                                expect(facilitydata.city).toEqual(facility.city,'Verify the "city" field value of Primary Facility is same as: ' +facility.city);
+                                expect(facilitydata.region).toEqual(facility.region,'Verify the "region" field value of Primary Facility is same as: ' +facility.region);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode,'Verify the "postalCode" field value of Primary Facility is same as: ' +facility.postalCode);
+                                expect(facilitydata.telephone).toEqual(facility.telephone,'Verify the "telephone" field value of Primary Facility is same as: ' +facility.telephone);
                             });
                             console.log('1754_7 of 8 complete');
                         }
@@ -181,7 +181,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             browser.sleep(500000);
                             Utility.readPDFFile(pathToPdf).then(function(test) {
-                                expect(test).toContain(TestData.firstname);
+                                expect(test).toContain(TestData.firstname, 'Verify the "FirstName" field value displayed in the PDF is same as: ' +TestData.firstname);
                             });
                         }
                         console.log('1754_8 complete')

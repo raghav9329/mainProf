@@ -107,6 +107,11 @@
     "expMonth": "05",
     "expYear": "2020",
     "securityCode": "125",
+    "bankName"               : "BOA",
+    "accountHolderName"      : "testName",
+    "routingNumber"          : "111100035",
+    "accountNumber"          : "234324",
+    "accountNumberRetype"    : "234324",
     "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
     "thanksMsg": "Thank you for taking our survey. Your response is very important to us.",
 

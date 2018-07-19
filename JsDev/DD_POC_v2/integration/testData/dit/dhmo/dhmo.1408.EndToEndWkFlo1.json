@@ -4,7 +4,7 @@
     "lastname": "K",
     "gender": "Male",
     "dob": "05-05-1971",
-    "ssn": "1234560215",
+    "ssn": "234560215",
     "alternateid": "test@test.com",
     "fieldHomeAddr": "100 First Street floor 4",
     "city": "San Francisco",
@@ -25,9 +25,8 @@
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "discloser": "Delta_CA_DHMO_CAA55",
 
-   
-
-    "Spouse1": {
+    "Spouse1":
+    {
         "relationship": "Spouse",
         "firstName": "firstName",
         "middleName": "m",
@@ -36,7 +35,8 @@
         "DOB": "05-10-1995"
     },
 
-    "child3": {
+    "child3":
+    {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "K",
@@ -54,22 +54,29 @@
     "expMonth": "05",
     "expYear": "2020",
     "securityCode": "154",
+    "bankName": "BOA",
+    "accountHolderName": "testName",
+    "routingNumber": "111100035",
+    "accountNumber": "234324",
+    "accountNumberRetype": "234324",
     "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-    "primaryFacility": {
-        "facilityName": "Modern Dentistry&Ortho",
-        "street": "2085 Gellert Blvd Ste 9",
-        "city": "Daly City",
+    "primaryFacility":
+    {
+        "facilityName": "The Santos Dental Group Corp",
+        "street": "450 Sutter St Rm 1114",
+        "city": "San Francisco",
         "region": "CA",
-        "postalCode": "94015-2841",
-        "telephone": "650.878.3171"
+        "postalCode": "94108-3913",
+        "telephone": "415.362.9893"
     },
-     "dependent1": {
-        "facilityName": "SecondaryApplicantService-1",
-        "street": "2085 Gellert Blvd Ste 9",
-        "city": "Daly City",
+    "dependent1":
+    {
+        "facilityName": "The Santos Dental Group Corp",
+        "street": "450 Sutter St Rm 1114",
+        "city": "San Francisco",
         "region": "CA",
-        "postalCode": "94015-2841",
-        "telephone": "650.878.3171"
+        "postalCode": "94108-3913",
+        "telephone": "415.362.9893"
     }
 
 }

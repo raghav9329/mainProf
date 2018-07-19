@@ -7,11 +7,11 @@ class PlanDetailsPageLocators {
         this.planPrice                          = by.css('div.shopping-details-hero__details h3');
         this.anualprice                         = by.css('p.annual_price');
         this.enroll_fee                         = by.css('p.enroll_fee');
-        this.shopping_details_highlightsByIndex     = function(index) {
-         by.xpath('//ul[@class="shopping-details__icon-highlights"]/li['+index+']/h3');
+        this.shopping_details_highlightsByIndex     = (index) => {
+        return by.xpath('//ul[@class="shopping-details__icon-highlights"]/li['+index+']/h3');
         }
-        this.shopping_details_highlightsInfoBYIndex = function(index) {
-            by.xpath('//ul[@class="shopping-details__icon-highlights"]/li['+index+']/p');
+        this.shopping_details_highlightsInfoBYIndex = (index) => {
+          return  by.xpath('//ul[@class="shopping-details__icon-highlights"]/li['+index+']/p');
         }
         this.planStartsHelpText                     = by.css('div.shopping-details-hero__cta p');
         this.shoppingDetailsSummary                 = by.css('div.shopping-details-hero__summary-inner');
@@ -56,6 +56,7 @@ class PlanDetailsPageLocators {
             return by.xpath('//div[@class="shopping-downloads-list"]/div[' + index + ']/p');
         };
         this.seeOtherOptions                        = by.css('div.shopping-details-options-inner h3');
+        this.findLink                               = by.xpath('//div[@class="shopping-details-hero__summary"]//a');
     }
 
 }

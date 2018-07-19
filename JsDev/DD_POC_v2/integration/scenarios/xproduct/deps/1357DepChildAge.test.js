@@ -28,7 +28,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     //   Fill the Enroll page with valid data and verify the navigation
                     it('Step-1:Should complete the Enroll Page', function() {
                         enrollPage.enterHomePageDetails(tData.enrollData);
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                     });
                     //  Fill Personal Infor Page with valid data and verify the navigation
                     it('Step-2: Should fill out Personal Information Page', function() {
@@ -55,20 +55,22 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle, 'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.DependentPageTitle);
                     });
                     // Fill the dependent with child and the age af the child is greater than 26
                     // Verify the handicapped check box and Help text  
                     it('Step-3:Should display the handicapped check box with help text', function() {
                         depInfo.fillDependent('Dependent1', TestData.ChildData1, true);
+                        // browser.sleep(50000);
                         depInfo.next.click();
                         if (sdescription == 'NY') {
                             depInfo.year('Dependent1').setText(Utility.getDatePart(moment().subtract(13, 'years').format('MM-DD-YYYY'), 'YEAR'))
                         } else {
                             if (pdescription == 'DHMO' && sdescription == 'TX') TestData.handicappedHelpText = "Dependent children may not be more than 25 years old";
                             if (sdescription !== 'TX') TestData.handicappedHelpText = "Dependent children may not be more than 26 years old";
-                            expect(depInfo.isHandicapped('Dependent1').isPresentAndDisplayed()).toBeTruthy();
-                            expect(depInfo.handicappedHelpTxt('Dependent1').getText()).toContain(TestData.handicappedHelpText);
+                            expect(depInfo.isHandicapped('Dependent1').isPresentAndDisplayed()).toBeTruthy('Verify isHandicapped Check box is displayed for "Dependent-1"');
+                            expect(depInfo.handicappedHelpTxt('Dependent1').getText()).toContain(TestData.handicappedHelpText, 'Verify isHandicapped Text Message is displayed for "Dependent-1"');
+                            // depInfo.next.click();
                         }
                     });
                     // Check the handicapped check box and verify the functionality of next navigation
@@ -82,10 +84,10 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         depInfo.next.click();
                         depInfo.continue.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle, 'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                         }
                         if (pdescription == 'APPO' || pdescription == 'DPPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentTitle, 'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentTitle);
                         }
                     });
                     // Go back to dependent page and verify handicapped checkbox for second dependent
@@ -103,22 +105,22 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             depInfo.year('Dependent1').setText(Utility.getDatePart(moment().subtract(13, 'years').format('MM-DD-YYYY'), 'YEAR'))
                         } else {
                             depInfo.continue.click();
-                            expect(depInfo.isHandicapped('Dependent2').isPresentAndDisplayed()).toBeTruthy();
-                            expect(depInfo.handicappedHelpTxt('Dependent2').getText()).toContain(TestData.handicappedHelpText);
+                            expect(depInfo.isHandicapped('Dependent2').isPresentAndDisplayed()).toBeTruthy('Verify isHandicapped Check box is displayed for "Dependent-2"');
+                            expect(depInfo.handicappedHelpTxt('Dependent2').getText()).toContain(TestData.handicappedHelpText, 'Verify isHandicapped Text Message is displayed for "Dependent-2"');
                         }
                     });
                     // Update the child age to below 26 years and Verify the next button functionality
                     // Should be navigate to Facilities page
                     it('Step-6:Should be navigaye to Facilities page', function() {
                         depInfo.year('Dependent2').setText(Utility.getDatePart(TestData.ChildData2.DOB, 'YEAR') + '\t');
-                        expect(depInfo.isHandicapped('Dependent2').isPresentAndDisplayed()).toBeFalsy();
+                        expect(depInfo.isHandicapped('Dependent2').isPresentAndDisplayed()).toBeFalsy('Verify isHandicapped Check box is "NOT Displayed" for "Dependent-2"');
                         depInfo.next.click();
                         depInfo.continue.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle, 'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                         }
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentTitle, 'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentTitle);
                         }
                     });
 

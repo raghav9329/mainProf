@@ -33,7 +33,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             effectiveDate = sdate;
                             console.log("sdate============" + sdate);
                         })
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                         TestData.firstname = Utility.randomNo('String', 8);
                         TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
@@ -66,14 +66,14 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             perInfo.RadBtnBrokerYes.select();
                             perInfo.hiddenfieldBrokerNum.setText(TestData.brokernumber + '\t');
-                            expect(perInfo.hiddenbrokerName.isPresentAndDisplayed()).toBeTruthy();
-                            expect(perInfo.hiddenbrokerName.getValue()).toEqualIgnoreCase(TestData.brokername);
+                            expect(perInfo.hiddenbrokerName.isPresentAndDisplayed()).toBeTruthy('Verify Broker Name firld is Displayed and Present');
+                            expect(perInfo.hiddenbrokerName.getValue()).toEqualIgnoreCase(TestData.brokername,'Verify broker name field value is same as: ' +TestData.brokername);
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                         }
                         perInfo.next.click();
-                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.DependentPageTitle);
                         console.log('CXAUTO-90_2 complete')
 
                     });
@@ -82,7 +82,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     //Validate the Dependet age is greater than 26 and with the disability check box
 
                     it('E2E_3 :should add 1 Child Dep', function() {
-                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.fieldAddDependents.isPresentAndDisplayed()).toBeTruthy('Verify the Field "Add Dependent" is displayed and present');
                         if (sdescription == 'NY') {
                             TestData.child.DOB = moment().subtract(19, 'years').format('MM-DD-YYYY');
                         }
@@ -98,10 +98,10 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
                         depInfo.continue.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                         }
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                         }
                         console.log('CXAUTO-90_3 complete')
 
@@ -109,13 +109,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
 
 
                     it('E2E_3.1 :Navigate Back to Dependent and Verify Data persist in the Dependent Page', function() {
-                        expect(facilities.back.isPresentAndDisplayed()).toBeTruthy();
+                        expect(facilities.back.isPresentAndDisplayed()).toBeTruthy('Verify "Back Button" field is Displayed and Present in the Facilites Page');
                         facilities.back.click();
-                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
-                        expect(depInfo.firstname('Dependent1').getValue()).toEqual(TestData.child.firstName);
-                        expect(depInfo.middleName('Dependent1').getValue()).toEqual(TestData.child.middleName);
-                        expect(depInfo.lastname('Dependent1').getValue()).toEqual(TestData.child.lastName);
-                        expect(depInfo.gender('Dependent1').getSelectedText()).toEqualIgnoreCase(TestData.child.genderVerify);
+                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.DependentPageTitle);
+                        expect(depInfo.firstname('Dependent1').getValue()).toEqual(TestData.child.firstName,'Verify "First Name" field value of "Dependent-1" is same as: ' +TestData.child.firstName);
+                        expect(depInfo.middleName('Dependent1').getValue()).toEqual(TestData.child.middleName,'Verify "Middle Name" field value of "Dependent-1" is same as: ' +TestData.child.middleName);
+                        expect(depInfo.lastname('Dependent1').getValue()).toEqual(TestData.child.lastName,'Verify "Last Name" field value of "Dependent-1" is same as: ' +TestData.child.lastName);
+                        expect(depInfo.gender('Dependent1').getSelectedText()).toEqualIgnoreCase(TestData.child.genderVerify,'Verify "Gender" field value of "Dependent-1" is same as: ' +TestData.child.genderVerify);
 
                         console.log('CXAUTO-90_3.1 complete')
                     });
@@ -127,27 +127,27 @@ dataProvider(statesData.states, function(sData, sdescription) {
                     // Re-enter SSN and navigate to the Happy path accorss the tabs
 
                     it('E2E_3.2 :Navigates back to Personal INfo and validates the Data persist', function() {
-                        expect(depInfo.back.isPresentAndDisplayed()).toBeTruthy();
+                        expect(depInfo.back.isPresentAndDisplayed()).toBeTruthy('Verify "Back Button" field is Displayed and Present in the Dependent Page');
                         depInfo.back.click();
-                        expect(browser.getTitle()).toEqual(TestData.PersonalPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.PersonalPageTitle,'Verfiy "Personal-Info Page" is Displayed and the title is Equal as' +TestData.PersonalPageTitle);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(perInfo.fieldSsn.getValue()).toEqual('');
+                            expect(perInfo.fieldSsn.getValue()).toEqual('','Verify "SSN" field value is empty');
                         }
-                        expect(perInfo.fieldGenderSelect.getSelectedText()).toEqualIgnoreCase(TestData.gendereverification);
+                        expect(perInfo.fieldGenderSelect.getSelectedText()).toEqualIgnoreCase(TestData.gendereverification,'Verify the Gender Selected in the Personal Info Page is same as: ' +TestData.gendereverification);
 
-                        expect(perInfo.hiddenfieldMailAddr.getValue()).toEqual(TestData.mailaddress);
-                        expect(perInfo.hiddenfieldCity.getValue()).toEqual(TestData.city);
-                        expect(perInfo.hiddenfieldState.getValue()).toEqual(TestData.State);
-                        expect(perInfo.hiddenfieldZipCode.getValue()).toEqual(TestData.ZipCode);
-                        expect(perInfo.fieldPhoneSelect.getSelectedText()).toEqual(TestData.contactType);
+                        expect(perInfo.hiddenfieldMailAddr.getValue()).toEqual(TestData.mailaddress,'Verify the MailAddress field value in the Personal Info Page is same as: ' +TestData.mailaddress);
+                        expect(perInfo.hiddenfieldCity.getValue()).toEqual(TestData.city,'Verify the city field value in the Personal Info Page is same as: ' +TestData.city);
+                        expect(perInfo.hiddenfieldState.getValue()).toEqual(TestData.State,'Verify the State field value in the Personal Info Page is same as: ' +TestData.State);
+                        expect(perInfo.hiddenfieldZipCode.getValue()).toEqual(TestData.ZipCode,'Verify the ZipCode field value in the Personal Info Page is same as: ' +TestData.ZipCode);
+                        expect(perInfo.fieldPhoneSelect.getSelectedText()).toEqual(TestData.contactType,'Verify the contactType field value in the Personal Info Page is same as: ' +TestData.contactType);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(perInfo.hiddenfieldBrokerNum.getValue()).toEqual(TestData.brokernumber);
-                            expect(perInfo.hiddenbrokerName.isPresentAndDisplayed()).toBeTruthy();
-                            expect(perInfo.hiddenbrokerName.getValue()).toEqualIgnoreCase(TestData.brokername);
+                            expect(perInfo.hiddenfieldBrokerNum.getValue()).toEqual(TestData.brokernumber,'Verify hiddenBroker Number field in the Personal info Page is same as: ' +TestData.brokernumber);
+                            expect(perInfo.hiddenbrokerName.isPresentAndDisplayed()).toBeTruthy('Verify hiddenBrokerName value is Displayed and Present');
+                            expect(perInfo.hiddenbrokerName.getValue()).toEqualIgnoreCase(TestData.brokername,'Verify hiddenBroker Name in the Personal Info Page is same as: ' +TestData.brokername);
 
                             perInfo.hiddenfieldBrokerNum.setText(TestData.updatedbrokernumber + '\t');
-                            expect(perInfo.hiddenbrokerName.isPresentAndDisplayed()).toBeTruthy();
-                            expect(perInfo.hiddenbrokerName.getValue()).toEqualIgnoreCase(TestData.updatedbrokername);
+                            expect(perInfo.hiddenbrokerName.isPresentAndDisplayed()).toBeTruthy('Verify hiddenBrokerName value is Displayed and Present');
+                            expect(perInfo.hiddenbrokerName.getValue()).toEqualIgnoreCase(TestData.updatedbrokername,'Verify hiddenBroker Name in the Personal Info Page is same as: ' +TestData.updatedbrokername);
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             perInfo.referralSource.selectByText(TestData.referralSource);
@@ -173,10 +173,10 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         // depInfo.next.click();
                         // expect(depInfo.premiumChangePopUp.isPresentAndDisplayed()).toBeTruthy();
                         // depInfo.continue.click();
-                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.DependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.DependentPageTitle);
                         depInfo.next.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
 
                             facilities.selectFacility().then(function(fnamee) {
                                 facility1 = fnamee;
@@ -195,7 +195,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             });
                             facilities.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                         console.log('CXAUTO-90_5 complete')
                     });
 
@@ -203,10 +203,10 @@ dataProvider(statesData.states, function(sData, sdescription) {
 
                     it('E2E_6 :should fill out pay details', function() {
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser);
+                            expect(payment.discloser.getAttribute('href')).toContain(tData.discloser,'Verify Discloser in Payment has same as: ' +tData.discloser);
                             payment.discloser.click();
                             Utility.switchToWindow(1);
-                            expect(browser.getCurrentUrl()).toContain(tData.discloser);
+                            expect(browser.getCurrentUrl()).toContain(tData.discloser,'Verify the Discloser in the URL is same as: '+tData.discloser);
                             Utility.switchToWindow(0);
                         }
                         payment.billingChkBox.check();
@@ -216,7 +216,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         }
                         payment.purchaseNow.click();
                         Utility.delay(maxWait);
-                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle, 'Verify "Receipt" Page is displayed and the Tilte is Equal as' +TestData.receiptPageTitle);
                         console.log('CXAUTO-90_6 complete')
                     });
 
@@ -237,13 +237,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 var facility = facility1;
                             }
                             receipt.getSelectedFacilityDetails('PRIMARY').then(function(facilitydata) {
-                                expect(facilitydata.name).toContain(TestData.firstname);
-                                expect(facilitydata.facilityName).toEqual(facility.facilityName);
-                                expect(facilitydata.street).toEqual(facility.street);
-                                expect(facilitydata.city).toEqual(facility.city);
-                                expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toContain(facility.postalCode);
-                                expect(facilitydata.telephone).toEqual(facility.telephone);
+                                expect(facilitydata.name).toContain(TestData.firstname,'Verify the "First Name" field value of Primary Facility is same as: ' +TestData.firstname);
+                                expect(facilitydata.facilityName).toEqual(facility.facilityName,'Verify the "facilityName" field value of Primary Facility is same as: ' +facility.facilityName);
+                                expect(facilitydata.street).toEqual(facility.street,'Verify the "street" field value of Primary Facility is same as: ' +facility.street);
+                                expect(facilitydata.city).toEqual(facility.city,'Verify the "city" field value of Primary Facility is same as: ' +facility.city);
+                                expect(facilitydata.region).toEqual(facility.region,'Verify the "region" field value of Primary Facility is same as: ' +facility.region);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode,'Verify the "postalCode" field value of Primary Facility is same as: ' +facility.postalCode);
+                                expect(facilitydata.telephone).toEqual(facility.telephone,'Verify the "telephone" field value of Primary Facility is same as: ' +facility.telephone);
                             });
                         }
                     });
@@ -260,19 +260,19 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                 var facility = facility2;
                             }
                             receipt.getSelectedFacilityDetails('DEPENDENT', 1).then(function(facilitydata) {
-                                expect(facilitydata.name).toContain(TestData.child.firstName);
-                                expect(facilitydata.facilityName).toEqual(facility.facilityName);
-                                expect(facilitydata.street).toEqual(facility.street);
-                                expect(facilitydata.city).toEqual(facility.city);
-                                expect(facilitydata.region).toEqual(facility.region);
-                                expect(facilitydata.postalCode).toContain(facility.postalCode);
-                                expect(facilitydata.telephone).toEqual(facility.telephone);
+                                expect(facilitydata.name).toContain(TestData.child.firstName,'Verify the "First Name" field value of Dependent-1 Facility is same as: ' +TestData.child.firstName);
+                                expect(facilitydata.facilityName).toEqual(facility.facilityName,'Verify the "facilityName" field value of Dependent-1 Facility is same as: ' +facility.facilityName);
+                                expect(facilitydata.street).toEqual(facility.street,'Verify the "street" field value of Dependent-1 Facility is same as: ' +facility.street);
+                                expect(facilitydata.city).toEqual(facility.city,'Verify the "city" field value of Dependent-1 Facility is same as: ' +facility.city);
+                                expect(facilitydata.region).toEqual(facility.region,'Verify the "region" field value of Dependent-1 Facility is same as: ' +facility.region);
+                                expect(facilitydata.postalCode).toContain(facility.postalCode,'Verify the "postalCode" field value of Dependent-1 Facility is same as: ' +facility.postalCode);
+                                expect(facilitydata.telephone).toEqual(facility.telephone,'Verify the "telephone" field value of Dependent-1 Facility is same as: ' +facility.telephone);
                             });
                         };
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             receipt.verifyPixel(sdescription, pdescription);
                             Utility.readPDFFile(pathToPdf).then(function(test) {
-                                expect(test).toContain(TestData.firstname);
+                                expect(test).toContain(TestData.firstname 'Verify the "FirstName" field value displayed in the PDF is same as: ' +TestData.firstname);
                                 console.log('CXAUTO-90_E2E_8: Complete');
                             });
                         }

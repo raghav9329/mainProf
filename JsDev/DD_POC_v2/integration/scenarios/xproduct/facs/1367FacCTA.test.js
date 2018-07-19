@@ -23,13 +23,13 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         jasmine.addMatchers(custommatcher.customMatchers);
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                         TestData.firstname = Utility.randomNo('String', 8);
                         TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
                             TestData.MemberId = false;                            
                             var ssn = Utility.randomNo('Number', 8);
-                            TestData.ssn = '1' + ssn.toString();                            
+                            TestData.ssn = '2' + ssn.toString();                            
                             TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
@@ -47,7 +47,7 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.dependentPageTitle);
 
                     });
                     // Add one dependent and navigate to facilities page
@@ -58,20 +58,20 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         depInfo.newAdditionalPrice.getText().then(function(dep1Price) {
                             depInfo.continue.click();
                             if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                                expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                                expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                                 facilities.premiumAmount.getText().then(function(premium) {
-                                    expect(premium.substring(1)).toEqual(dep1Price);
+                                    expect(premium.substring(1)).toEqual(dep1Price, 'Verify that the Dependent 1 Price is same as:' +dep1Price);
                                     // facilities.selectFacility(TestData.facilityoption1);
                                     facilities.selectFacility();
                                     facilities.next.click();
                                     // facilities.selectFacility(TestData.facilityoption2);
                                     facilities.selectFacility();
                                     facilities.next.click();
-                                    expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                                    expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                                 });
                             }
                             if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                                expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                                expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                                 // payment.back.click();
                             }
 
@@ -84,17 +84,17 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         Utility.scrollToBottom();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                             facilities.next.click();
-                            expect(facilities.validationMessage.getText()).toEqual(TestData.errorFacility);
+                            expect(facilities.validationMessage.getText()).toEqual(TestData.errorFacility, 'Verify the "Select Facility" error message is dispayed and Present in the Facilities Page');
                             if (pdescription == 'DHMO' || pdescription == 'AHMO') {
                                 // facilities.selectFacility(TestData.facilityoption1);
                                 facilities.selectFacility();
                                 facilities.next.click();
                             }
-                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                         }
 
                         if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                            expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                             // payment.back.click();
                         }
 
@@ -107,27 +107,27 @@ dataProvider(statesData.states, function(sData, sdescription) {
                             depInfo.continue.click();
 
                             if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                                expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                                expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                                 facilities.premiumAmount.getText().then(function(premium) {
-                                    expect(premium.substring(1)).toEqual(dep1Price);
+                                    expect(premium.substring(1)).toEqual(dep1Price, 'Verify that the Dependent Price is same as:' +dep1Price);
                                     // facilities.selectFacility(TestData.facilityoption1);
                                     facilities.selectFacility().then(function(facility) {
                                         facilities.next.click();
                                         facilities.back.click();
-                                        if (testDataEnv == 'dit') {
-                                            expect(facilities.RecentSelectedFacility.getText()).toEqual(TestData.facilityoption);
-                                        } else {
-                                            expect(facilities.RecentSelectedFacility.getText()).toEqual(facility.facilityName);
-                                        }
+                                        //if (testDataEnv == 'dit') {
+                                        //    expect(facilities.RecentSelectedFacility.getText()).toEqual(TestData.facilityoption);
+                                      //  } else {
+                                            expect(facilities.RecentSelectedFacility.getText()).toEqual(facility.facilityName, 'Verify the Recently Selected Facility and the Equal as:' +facility.facilityName);
+                                      //  }
                                         facilities.back.click();
-                                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
+                                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.dependentPageTitle);
                                     });
                                 });
                             }
                             if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                                expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                                expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                                 payment.back.click();
-                                expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
+                                expect(browser.getTitle()).toEqual(TestData.dependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.dependentPageTitle);
                             }
                         });
                     });
@@ -138,9 +138,9 @@ dataProvider(statesData.states, function(sData, sdescription) {
                         depInfo.newAdditionalPrice.getText().then(function(dep1Price) {
                             depInfo.continue.click();
                             if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                                expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle);
+                                expect(browser.getTitle()).toEqual(TestData.facilitiesPageTitle,'Verify "Facility" page is displayed and the title is Equal as' +TestData.facilitiesPageTitle);
                                 facilities.premiumAmount.getText().then(function(premium) {
-                                    expect(premium.substring(1)).toEqual(dep1Price);
+                                    expect(premium.substring(1)).toEqual(dep1Price, 'Verify that the Dependent Price is same as:' +dep1Price);
                                     // facilities.selectFacility(TestData.facilityoption1);
 
                                     facilities.selectFacility().then(function(facility) {
@@ -148,24 +148,24 @@ dataProvider(statesData.states, function(sData, sdescription) {
                                         // facilities.selectFacility(TestData.facilityoption2);
                                         facilities.selectFacility();
                                         facilities.next.click();
-                                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                                         Utility.scrollToBottom();
                                         payment.back.click();
                                         facilities.back.click();
-                                        if (testDataEnv == 'dit') {
-                                            expect(facilities.RecentSelectedFacility.getText()).toEqual(TestData.facilityoption);
-                                        } else {
-                                            expect(facilities.RecentSelectedFacility.getText()).toEqual(facility.facilityName);
-                                        }
+                                        // if (testDataEnv == 'dit') {
+                                        //     expect(facilities.RecentSelectedFacility.getText()).toEqual(TestData.facilityoption);
+                                        // } else {
+                                            expect(facilities.RecentSelectedFacility.getText()).toEqual(facility.facilityName, 'Verify the Recently Selected Facility and the Equal as:' +facility.facilityName);
+                                       // }
                                         facilities.back.click()
-                                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
+                                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.dependentPageTitle);
                                     });
                                 })
                             }
                             if (pdescription == 'DPPO' || pdescription == 'APPO') {
-                                expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                                expect(browser.getTitle()).toEqual(TestData.paymentPageTitle,'Verify "Payment" page is displayed and the title is Equal as' +TestData.paymentPageTitle);
                                 payment.back.click();
-                                expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
+                                expect(browser.getTitle()).toEqual(TestData.dependentPageTitle,'Verfiy "Dependent Page" is Displayed and the title is Equal as' +TestData.dependentPageTitle);
                             }
                         });
                     });

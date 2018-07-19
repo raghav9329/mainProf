@@ -20,6 +20,8 @@ class PersonalInfoPageLocators {
         this.errBirthDate               = by.css('label.error.birthdate-error');
         this.fieldSsn                   = by.id('ssn');
         this.errMsgSsn                  = by.id('ssn-error');
+        this.fieldCostcoMemberId        = by.id('costcoMemberId');
+        this.errMsgCostcoMemberId       = by.id('costcoMemberId-error')
         this.errMsgMemberId             = by.id('memberId-error');
         this.coverageStartDate          = by.id('startDate');
         this.fieldHomeAddr              = by.id('streetAddress');
@@ -33,9 +35,7 @@ class PersonalInfoPageLocators {
         this.errMsgState                = by.id('state-error');
         this.fieldZipCode               = by.id('zipCode');
         this.errMsgZipCode              = by.id('zipCode-error');
-        this.chkBoxDiffMailAddr         = by.css('label.diffmail input');
-        //xpath('//label[contains(text(), "My mailing address is the same as my home address.")]');
-        //label[@class                  = "diffmail"]');
+        this.chkBoxDiffMailAddr         = by.css('label.diffmail input');      
         this.fieldPhoneSelect           = by.id('contactType');
         this.fieldPhoneNumber           = by.id('contactNumber');
         this.errMsgPhoneNumber          = by.id('contactNumber-error');
@@ -75,6 +75,7 @@ class PersonalInfoPageLocators {
         this.serverErrMsgGenderSelect   = by.css('a.error.gender-error');
         this.serverErrMsgSsn            = by.css('a.error.ssn-error');
         this.serverErrMsgMemberId       = by.css('a.error.memberId-error');
+        this.serverErrMsgCostcoMemberId = by.css('a.error.costcoMemberId-error');
         this.serverErrMsgStreetAddress  = by.css('a.error.streetAddress-error');
         this.serverErrMsgCity           = by.css('a.error.city-error');
         this.serverErrMsgState          = by.css('a.error.state-error');
@@ -107,7 +108,9 @@ class PersonalInfoPageLocators {
         this.ShoppingContact           = by.xpath('//p[@id="CustNumber"]');
         this.contractNumber            = by.xpath('//p[@class="contractNumber"]');
         this.alternateHelpopUp         = by.id('alt_id_popup');
-        this.alternateidPopExit        = by.id('altID-exit');       
+        this.alternateidPopExit        = by.id('altID-exit');
+        this.cancel                    = by.xpath('//a[text()="Cancel"]');
+        this.update                    = by.id('nextButton');       
     }
 }
 

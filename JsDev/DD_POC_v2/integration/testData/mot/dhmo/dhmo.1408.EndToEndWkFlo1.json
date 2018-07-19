@@ -34,5 +34,10 @@
     "cardNumber"           : "5415240007992183",
     "expMonth"             : "05",
     "expYear"              : "2020",
-    "securityCode"         : "154"
+    "securityCode"         : "154",
+    "bankName"               : "BOA",
+    "accountHolderName"      : "testName",
+    "routingNumber"          : "111100035",
+    "accountNumber"          : "234324",
+    "accountNumberRetype"    : "234324"
 }

@@ -24,8 +24,7 @@
     "paymentPageTitle": "Payment | Enrollment | Delta Dental Insurance Company",
     "receiptPageTitle": "Thank You | Delta Dental Insurance Company",
     "discloser": "Delta_CA_DHMO_CAA55",
-    "Spouse1":
-    {
+    "Spouse1": {
         "relationship": "Spouse",
         "firstName": "firstName",
         "middleName": "m",
@@ -34,8 +33,7 @@
         "DOB": "05-10-1995"
     },
 
-    "child3":
-    {
+    "child3": {
         "relationship": "Child",
         "firstName": "firstName",
         "middleName": "K",
@@ -54,17 +52,12 @@
     "expYear": "2020",
     "securityCode": "154",
     "planName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
-    "states":
-    {
-        "CA":
-        {
-            "products":
-            {
-                "DHMO1":
-                {
+    "states": {
+        "CA": {
+            "products": {
+                "DHMO1": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare® USA CAA55 Individual/Family Dental Program",
                         "CoverageStartDate": "12/5/2017",
                         "ZIPcode": "94105",
@@ -77,11 +70,9 @@
                     "city": "San Francisco",
                     "State": "CA"
                 },
-                "DHMO2":
-                {
+                "DHMO2": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare® USA CAA54 Individual/Family Dental Program",
                         "CoverageStartDate": "12/5/2017",
                         "ZIPcode": "94105",
@@ -94,11 +85,9 @@
                     "city": "San Francisco",
                     "State": "CA"
                 },
-                "DPPO1":
-                {
+                "DPPOA": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental PPO Individual - Basic Plan",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "94105",
@@ -111,11 +100,9 @@
                     "city": "San Francisco",
                     "State": "CA"
                 },
-                "DPPO2":
-                {
+                "DPPOB": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental PPO Individual - Premium Plan",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "94105",
@@ -128,11 +115,9 @@
                     "city": "San Francisco",
                     "State": "CA"
                 },
-                "AHMO1":
-                {
+                "AHMO1": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare ® USA Plan 15B",
                         "CoverageStartDate": "12/1/2018",
                         "ZIPcode": "94105",
@@ -146,11 +131,9 @@
                     "State": "CA"
 
                 },
-                "APPO1":
-                {
+                "APPO1": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "08/01/2017",
                         "ZIPcode": "94105",
@@ -163,11 +146,9 @@
                     "city": "San Francisco",
                     "State": "CA"
                 },
-                "APPO2":
-                {
+                "APPO2": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "08/01/2017",
                         "ZIPcode": "94105",
@@ -182,15 +163,11 @@
                 }
             }
         },
-        "TX":
-        {
-            "products":
-            {
-                "DHMO1":
-                {
+        "TX": {
+            "products": {
+                "DHMO1": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare® USA TXA70 Individual/Family Dental Program",
                         "CoverageStartDate": "12/05/2017",
                         "ZIPcode": "78251",
@@ -204,11 +181,9 @@
                     "State": "TX"
                 },
 
-                "DPPO1":
-                {
+                "DPPOA": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental DPO Individual - Basic Plan",
                         "CoverageStartDate": "12/05/2017",
                         "ZIPcode": "78251",
@@ -221,11 +196,9 @@
                     "city": "San Antonio",
                     "State": "TX"
                 },
-                "DPPO2":
-                {
+                "DPPOB": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental DPO Individual - Premium Plan",
                         "CoverageStartDate": "12/05/2017",
                         "ZIPcode": "78251",
@@ -238,11 +211,9 @@
                     "city": "San Antonio",
                     "State": "TX"
                 },
-                "AHMO":
-                {
+                "AHMO": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare ® USA Plan 15B",
                         "CoverageStartDate": "12/05/2017",
                         "ZIPcode": "78251",
@@ -255,11 +226,9 @@
                     "city": "San Antonio",
                     "State": "TX"
                 },
-                "APPO":
-                {
+                "APPO": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DPO Plan B",
                         "CoverageStartDate": "12/05/2017",
                         "ZIPcode": "78251",
@@ -274,15 +243,11 @@
                 }
             }
         },
-        "PA":
-        {
-            "products":
-            {
-                "DHMO1":
-                {
+        "PA": {
+            "products": {
+                "DHMO1": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare® USA PAA60 Individual/Family Dental Program",
                         "CoverageStartDate": "09/01/2017",
                         "ZIPcode": "15001",
@@ -294,11 +259,9 @@
                     "fieldHomeAddr": "3212 Brodhead Rd",
                     "city": "Aliquippa"
                 },
-                "DPPO1":
-                {
+                "DPPOA": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental Individual & Family Delta Dental PPO Basic Plan",
                         "CoverageStartDate": "09/01/2017",
                         "ZIPcode": "15001",
@@ -311,11 +274,9 @@
                     "city": "Aliquippa",
                     "State": "PA"
                 },
-                "DPPO2":
-                {
+                "DPPOB": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental PPO Individual - Premium Plan",
                         "CoverageStartDate": "09/01/2017",
                         "ZIPcode": "15001",
@@ -328,11 +289,9 @@
                     "city": "Aliquippa",
                     "State": "PA"
                 },
-                "AHMO":
-                {
+                "AHMO": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare ® USA Plan 15B",
                         "CoverageStartDate": "09/01/2017",
                         "ZIPcode": "15001",
@@ -345,11 +304,9 @@
                     "city": "Aliquippa",
                     "State": "PA"
                 },
-                "APPO":
-                {
+                "APPO": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "09/01/2017",
                         "ZIPcode": "15001",
@@ -364,15 +321,11 @@
                 }
             }
         },
-        "FL":
-        {
-            "products":
-            {
-                "DHMO1":
-                {
+        "FL": {
+            "products": {
+                "DHMO1": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare® USA FLA70 Individual/Family Dental Program",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "32003",
@@ -385,11 +338,9 @@
                     "city": "Fleming Island",
                     "State": "FL"
                 },
-                "DPPO1":
-                {
+                "DPPOA": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental PPO Individual - Basic Plan",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "32003",
@@ -402,11 +353,9 @@
                     "city": "Fleming Island",
                     "State": "FL"
                 },
-                "DPPO2":
-                {
+                "DPPOB": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental PPO Individual - Premium Plan",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "32003",
@@ -419,11 +368,9 @@
                     "city": "Fleming Island",
                     "State": "FL"
                 },
-                "AHMO":
-                {
+                "AHMO": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare ® USA Plan 15B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "32003",
@@ -436,11 +383,9 @@
                     "city": "Fleming Island",
                     "State": "FL"
                 },
-                "APPO":
-                {
+                "APPO": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "32003",
@@ -455,15 +400,11 @@
                 }
             }
         },
-        "NY":
-        {
-            "products":
-            {
-                "DHMO1":
-                {
+        "NY": {
+            "products": {
+                "DHMO1": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare® USA NYA60 Individual/Family Dental Program",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "10011",
@@ -476,11 +417,9 @@
                     "city": "New York",
                     "State": "NY"
                 },
-                "DPPO1":
-                {
+                "DPPOA": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental PPO Individual - Basic Plan",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "10011",
@@ -493,11 +432,9 @@
                     "city": "New York",
                     "State": "NY"
                 },
-                "DPPO2":
-                {
+                "DPPOB": {
                     "product": "DELTA",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "Delta Dental PPO Individual - Premium Plan",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "10011",
@@ -510,11 +447,9 @@
                     "city": "New York",
                     "State": "NY"
                 },
-                "AHMO":
-                {
+                "AHMO": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare ® USA Plan 15B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "10011",
@@ -527,11 +462,9 @@
                     "city": "New York",
                     "State": "NY"
                 },
-                "APPO":
-                {
+                "APPO": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "10011",
@@ -546,16 +479,12 @@
                 }
             }
         },
-        "CT":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "CT": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "06907",
@@ -568,11 +497,9 @@
                     "city": "Stamford",
                     "State": "CT"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "06907",
@@ -587,16 +514,12 @@
                 }
             }
         },
-        "IL":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "IL": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "61603",
@@ -609,11 +532,9 @@
                     "city": "Peoria",
                     "State": "IL"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "61603",
@@ -628,16 +549,12 @@
                 }
             }
         },
-        "OH":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "OH": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "44136",
@@ -650,11 +567,9 @@
                     "city": "Strongsville",
                     "State": "OH"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "44136",
@@ -669,16 +584,12 @@
                 }
             }
         },
-        "WA":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "WA": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "98226",
@@ -691,11 +602,9 @@
                     "city": "Bellingham",
                     "State": "WA"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "98226",
@@ -710,16 +619,12 @@
                 }
             }
         },
-        "KY":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "KY": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "40391",
@@ -732,11 +637,9 @@
                     "city": "Winchester",
                     "State": "KY"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "40391",
@@ -751,16 +654,12 @@
                 }
             }
         },
-        "MN":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "MN": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "56511",
@@ -773,11 +672,9 @@
                     "city": "Audubon",
                     "State": "MN"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "56511",
@@ -792,16 +689,12 @@
                 }
             }
         },
-        "NH":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "NH": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "03246",
@@ -814,11 +707,9 @@
                     "city": "Laconia",
                     "State": "NH"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "03246",
@@ -833,16 +724,43 @@
                 }
             }
         },
-        "DE":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "DE": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "19970",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "14 Wedgefield Blvd",
+                    "city": "Ocean View",
+                    "State": "DE"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "19970",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "14 Wedgefield Blvd",
+                    "city": "Ocean View",
+                    "State": "DE"
+                },
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "19970",
@@ -855,11 +773,9 @@
                     "city": "Ocean View",
                     "State": "DE"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "19970",
@@ -874,16 +790,43 @@
                 }
             }
         },
-        "GA":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "GA": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "31324",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "67 Port Dr",
+                    "city": "Richmond Hill",
+                    "State": "GA"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "31324",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "67 Port Dr",
+                    "city": "Richmond Hill",
+                    "State": "GA"
+                },
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "31324",
@@ -896,11 +839,9 @@
                     "city": "Richmond Hill",
                     "State": "GA"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "31324",
@@ -915,16 +856,43 @@
                 }
             }
         },
-        "MS":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "MS": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "38951",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "199 N Murphree St",
+                    "city": "Pittsboro",
+                    "State": "MS"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "38951",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "199 N Murphree St",
+                    "city": "Pittsboro",
+                    "State": "MS"
+                },
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "38951",
@@ -937,11 +905,9 @@
                     "city": "Pittsboro",
                     "State": "MS"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "38951",
@@ -956,16 +922,43 @@
                 }
             }
         },
-        "MT":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "MT": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "59405",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4448 3rd Ave N",
+                    "city": "Great Falls",
+                    "State": "MT"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "59405",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4448 3rd Ave N",
+                    "city": "Great Falls",
+                    "State": "MT"
+                },
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "59405",
@@ -978,11 +971,9 @@
                     "city": "Great Falls",
                     "State": "MT"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "59405",
@@ -997,16 +988,43 @@
                 }
             }
         },
-        "NV":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "NV": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "89109",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "125 E Harmon Ave Unit 20",
+                    "city": "Las Vegas",
+                    "State": "NV"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "89109",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "125 E Harmon Ave Unit 20",
+                    "city": "Las Vegas",
+                    "State": "NV"
+                },
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "89109",
@@ -1019,11 +1037,9 @@
                     "city": "Las Vegas",
                     "State": "NV"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "89109",
@@ -1038,16 +1054,43 @@
                 }
             }
         },
-        "UT":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "UT": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "84092",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "9260 E Lodge Dr Apt 714",
+                    "city": "Sandy",
+                    "State": "UT"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "84092",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "9260 E Lodge Dr Apt 714",
+                    "city": "Sandy",
+                    "State": "UT"
+                },
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "84092",
@@ -1060,11 +1103,9 @@
                     "city": "Sandy",
                     "State": "UT"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "84092",
@@ -1079,16 +1120,43 @@
                 }
             }
         },
-        "WV":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "WV": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "25314",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1202 Hunters Ridge Rd",
+                    "city": "Charleston",
+                    "State": "WV"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "25314",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1202 Hunters Ridge Rd",
+                    "city": "Charleston",
+                    "State": "WV"
+                },
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "25314",
@@ -1101,11 +1169,9 @@
                     "city": "Charleston",
                     "State": "WV"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "25314",
@@ -1120,16 +1186,12 @@
                 }
             }
         },
-        "NM":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "NM": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "87114",
@@ -1142,11 +1204,9 @@
                     "city": "ALBUQUERQUE",
                     "State": "NM"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "87114",
@@ -1161,16 +1221,12 @@
                 }
             }
         },
-        "OK":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "OK": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "74105",
@@ -1183,11 +1239,9 @@
                     "city": "TULSA",
                     "State": "OK"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "74105",
@@ -1202,16 +1256,12 @@
                 }
             }
         },
-        "KS":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "KS": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "67217",
@@ -1224,11 +1274,9 @@
                     "city": "WICHITA",
                     "State": "KS"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "67217",
@@ -1243,16 +1291,12 @@
                 }
             }
         },
-        "ME":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "ME": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "04106",
@@ -1265,11 +1309,9 @@
                     "city": "SOUTH PORTLAND",
                     "State": "ME"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "04106",
@@ -1284,16 +1326,12 @@
                 }
             }
         },
-        "RI":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "RI": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "02906",
@@ -1306,11 +1344,9 @@
                     "city": "PROVIDENCE",
                     "State": "RI"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "02906",
@@ -1325,16 +1361,12 @@
                 }
             }
         },
-        "VT":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "VT": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "05401",
@@ -1347,11 +1379,9 @@
                     "city": "BURLINGTON ",
                     "State": "VT"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "05401",
@@ -1366,16 +1396,12 @@
                 }
             }
         },
-        "MA":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "MA": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "02072",
@@ -1388,11 +1414,9 @@
                     "city": "STOUGHTON",
                     "State": "MA"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "02072",
@@ -1407,15 +1431,11 @@
                 }
             }
         },
-        "AZ":
-        {
-            "products":
-            {
-                "AHMO1":
-                {
+        "AZ": {
+            "products": {
+                "AHMO1": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare ® USA Plan 15B",
                         "CoverageStartDate": "12/1/2018",
                         "ZIPcode": "85012",
@@ -1429,11 +1449,9 @@
                     "State": "AZ"
 
                 },
-                 "APPOA":
-                {
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "85012",
@@ -1446,11 +1464,9 @@
                     "city": "PHOENIX",
                     "State": "AZ"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "85012",
@@ -1465,15 +1481,11 @@
                 }
             }
         },
-        "CO":
-        {
-            "products":
-            {
-                "AHMO1":
-                {
+        "CO": {
+            "products": {
+                "AHMO1": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "DeltaCare ® USA Plan 15B",
                         "CoverageStartDate": "12/1/2018",
                         "ZIPcode": "80014",
@@ -1487,11 +1499,9 @@
                     "State": "CO"
 
                 },
-                 "APPOA":
-                {
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "80014",
@@ -1504,11 +1514,9 @@
                     "city": "AURORA",
                     "State": "CO"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "80014",
@@ -1523,16 +1531,12 @@
                 }
             }
         },
-        "MI":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "MI": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "49307",
@@ -1545,11 +1549,9 @@
                     "city": "BIG RAPIDS",
                     "State": "MI"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "49307",
@@ -1564,16 +1566,12 @@
                 }
             }
         },
-        "NC":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "NC": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "27604",
@@ -1586,11 +1584,9 @@
                     "city": "RALEIGH ",
                     "State": "NC"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "27604",
@@ -1605,16 +1601,12 @@
                 }
             }
         },
-        "NJ":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "NJ": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "07514",
@@ -1627,11 +1619,9 @@
                     "city": "PATERSON",
                     "State": "NJ"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "07514",
@@ -1646,16 +1636,12 @@
                 }
             }
         },
-        "VA":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "VA": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "23456",
@@ -1668,11 +1654,9 @@
                     "city": "VIRGINIA BEACH",
                     "State": "VA"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "23456",
@@ -1687,16 +1671,12 @@
                 }
             }
         },
-        "IN":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "IN": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "46204",
@@ -1709,11 +1689,9 @@
                     "city": "INDIANAPOLIS",
                     "State": "IN"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "46204",
@@ -1728,16 +1706,12 @@
                 }
             }
         },
-        "MO":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "MO": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "63113",
@@ -1750,11 +1724,9 @@
                     "city": "SAINT LOUIS",
                     "State": "MO"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "63113",
@@ -1769,16 +1741,12 @@
                 }
             }
         },
-        "OR":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "OR": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "97526",
@@ -1791,11 +1759,9 @@
                     "city": "GRANTS PASS",
                     "State": "OR"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "97526",
@@ -1810,16 +1776,12 @@
                 }
             }
         },
-        "SC":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "SC": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "29550",
@@ -1832,11 +1794,9 @@
                     "city": "HARTSVILLE",
                     "State": "SC"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "29550",
@@ -1851,16 +1811,12 @@
                 }
             }
         },
-        "AR":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "AR": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "72143",
@@ -1873,11 +1829,9 @@
                     "city": "SEARCY",
                     "State": "AR"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "72143",
@@ -1892,16 +1846,12 @@
                 }
             }
         },
-        "HI":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "HI": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "96748",
@@ -1914,11 +1864,9 @@
                     "city": "KAUNAKAKAI",
                     "State": "HI"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "96748",
@@ -1933,16 +1881,12 @@
                 }
             }
         },
-        "IA":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "IA": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "50312",
@@ -1955,11 +1899,9 @@
                     "city": "DES MOINES",
                     "State": "IA"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "50312",
@@ -1974,16 +1916,12 @@
                 }
             }
         },
-        "ID":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "ID": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "83402",
@@ -1996,11 +1934,9 @@
                     "city": "IDAHO FALLS",
                     "State": "ID"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "83402",
@@ -2015,16 +1951,12 @@
                 }
             }
         },
-        "NE":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "NE": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "68131",
@@ -2037,11 +1969,9 @@
                     "city": "OMAHA",
                     "State": "NE"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "68131",
@@ -2056,16 +1986,12 @@
                 }
             }
         },
-        "ND":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "ND": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "58102",
@@ -2078,11 +2004,9 @@
                     "city": "FARGO",
                     "State": "ND"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "58102",
@@ -2097,16 +2021,12 @@
                 }
             }
         },
-        "SD":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "SD": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "57108",
@@ -2119,11 +2039,9 @@
                     "city": "SIOUX FALLS",
                     "State": "SD"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "57108",
@@ -2138,16 +2056,12 @@
                 }
             }
         },
-        "WI":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "WI": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "53206",
@@ -2160,11 +2074,9 @@
                     "city": "MILWAUKEE",
                     "State": "WI"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "53206",
@@ -2179,16 +2091,12 @@
                 }
             }
         },
-        "WY":
-        {
-            "products":
-            {
-                
-                "APPOA":
-                {
+        "WY": {
+            "products": {
+
+                "APPOA": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan A",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "82501",
@@ -2201,11 +2109,9 @@
                     "city": "RIVERTON",
                     "State": "WY"
                 },
-                "APPOB":
-                {
+                "APPOB": {
                     "product": "AARP",
-                    "enrollData":
-                    {
+                    "enrollData": {
                         "PlanName": "PPO Plan B",
                         "CoverageStartDate": "12/10/2017",
                         "ZIPcode": "82501",
@@ -2217,6 +2123,410 @@
                     "fieldHomeAddr": "525 BUCKBOARD",
                     "city": "RIVERTON",
                     "State": "WY"
+                }
+            }
+        },
+        "DC": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20005",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1150 K St NW Apt 809",
+                    "city": "Washington",
+                    "State": "DC"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20005",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1150 K St NW Apt 809",
+                    "city": "Washington",
+                    "State": "DC"
+                },
+
+                "APPOA": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20005",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1150 K St NW Apt 809",
+                    "city": "Washington",
+                    "State": "DC"
+                },
+                "APPOB": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20005",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1150 K St NW Apt 809",
+                    "city": "Washington",
+                    "State": "DC"
+                }
+            }
+        },
+        "LA": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "70079",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "843 Good Hope St",
+                    "city": "Norco",
+                    "State": "LA"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "70079",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "843 Good Hope St",
+                    "city": "Norco",
+                    "State": "LA"
+                },
+
+                "APPOA": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "70079",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "843 Good Hope St",
+                    "city": "Norco",
+                    "State": "LA"
+                },
+                "APPOB": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "70079",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "843 Good Hope St",
+                    "city": "Norco",
+                    "State": "LA"
+                }
+            }
+        },
+        "MD": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20716",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "15600 Everglade Ln APT 202",
+                    "city": "Bowie",
+                    "State": "MD"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20716",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "15600 Everglade Ln APT 202",
+                    "city": "Bowie",
+                    "State": "MD"
+                },
+
+                "APPOA": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20716",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "15600 Everglade Ln APT 202",
+                    "city": "Bowie",
+                    "State": "MD"
+                },
+                "APPOB": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20716",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "15600 Everglade Ln APT 202",
+                    "city": "Bowie",
+                    "State": "MD"
+                }
+            }
+        },
+        "PR": {
+            "products": {
+
+                "APPOA": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "00901",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "275 Calle Sol",
+                    "city": "San Juan",
+                    "State": "PR"
+                },
+                "APPOB": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "00901",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "275 Calle Sol",
+                    "city": "San Juan",
+                    "State": "PR"
+                }
+            }
+        },
+        "TN": {
+            "products": {
+
+                "APPOA": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "37040",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "499 N 1st St",
+                    "city": "Clarksville",
+                    "State": "TN"
+                },
+                "APPOB": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "37040",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "499 N 1st St",
+                    "city": "Clarksville",
+                    "State": "TN"
+                }
+            }
+        },
+        "VI": {
+            "products": {
+
+                "APPOA": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "00840",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "29, Estate Grove Pl",
+                    "city": "Frederiksted",
+                    "State": "VI"
+                },
+                "APPOB": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "00840",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "29, Estate Grove Pl",
+                    "city": "Frederiksted",
+                    "State": "VI"
+                }
+            }
+        },
+        "AK": {
+            "products": {
+
+                "APPOA": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "99507",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1633 Woodroe Ln",
+                    "city": "Anchorage",
+                    "State": "AK"
+                },
+                "APPOB": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "99507",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1633 Woodroe Ln",
+                    "city": "Anchorage",
+                    "State": "AK"
+                }
+            }
+        },
+        "AL": {
+            "products": {
+
+                "DPPOA": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "35216",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "2827 Georgetown Dr Apt D",
+                    "city": "Birmingham",
+                    "State": "AL"
+                },
+                "DPPOB": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Individual - Premium Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "35216",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "2827 Georgetown Dr Apt D",
+                    "city": "Birmingham",
+                    "State": "AL"
+                },
+
+                "APPOA": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan A",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "35216",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "2827 Georgetown Dr Apt D",
+                    "city": "Birmingham",
+                    "State": "AL"
+                },
+                "APPOB": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "35216",
+                        "CoverageType": "Self",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "2827 Georgetown Dr Apt D",
+                    "city": "Birmingham",
+                    "State": "AL"
                 }
             }
         }

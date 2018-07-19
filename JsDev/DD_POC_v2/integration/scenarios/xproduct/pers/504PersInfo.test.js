@@ -25,27 +25,27 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     // Fill the Enroll page with valid data and verify the navigation
                     it('Step-1: should complete the Enroll Page', function() {
                         enrollPage.enterHomePageDetails(tData.enrollData);
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verifies that user is in personal info page and "First Name" field is displayed');
                     });
                     // Verify the Broker fields are displayed
                     it('Step-2:Validate all fields are present and displayed', function() {
-                        expect(perInfo.RadBtnBrokerNo.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.RadBtnBrokerYes.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.RadBtnBrokerNo.isPresentAndDisplayed()).toBeTruthy('Verifies that Broker Number radio button is displayed');
+                        expect(perInfo.RadBtnBrokerYes.isPresentAndDisplayed()).toBeTruthy('Verifies that Broker Number radio button is displayed');
                         Utility.scrollToBottom();
-                        expect(perInfo.hiddenfieldBrokerNum.isPresentAndDisplayed()).toBeFalsy();
+                        expect(perInfo.hiddenfieldBrokerNum.isPresentAndDisplayed()).toBeFalsy('Verifies that hidden Broker Number field is not displayed');
                         perInfo.RadBtnBrokerYes.select();
                         perInfo.RadBtnBrokerYes.select();
-                        expect(perInfo.hiddenfieldBrokerNum.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.brokerToolTip.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.hiddenfieldBrokerNum.isPresentAndDisplayed()).toBeTruthy('Verifies that hidden Broker Number field is displayed');
+                        expect(perInfo.brokerToolTip.isPresentAndDisplayed()).toBeTruthy('Verifies that Broker ToolTip is displayed');
                     });
                     // Verify the Broker field Help Text
                     it('Step-3:Validate by selecting WhatisThis_Broker the helptext has to be display and viceversa', function() {
                         perInfo.hiddenfieldBrokerNum.setText('');
                         perInfo.brokerToolTip.click();
-                        expect(perInfo.brokerToolTipText.isPresentAndDisplayed()).toBeTruthy();
-                        expect(perInfo.brokerToolTipText.getText()).toContain(TestData.brokerToolTipText);
+                        expect(perInfo.brokerToolTipText.isPresentAndDisplayed()).toBeTruthy('Verifies that Broker ToolTip is displayed');
+                        expect(perInfo.brokerToolTipText.getText()).toContain(TestData.brokerToolTipText,'Verifies that "Broker Tool Tip" text should be '+TestData.brokerToolTipText);
                         perInfo.brokerToolTip.click();
-                        expect(perInfo.brokerToolTipText.isPresentAndDisplayed()).toBeFalsy();
+                        expect(perInfo.brokerToolTipText.isPresentAndDisplayed()).toBeFalsy('Verifies that Broker ToolTip is not displayed');
                     });
 
                     //Verify the Broker field with set of Data
@@ -53,14 +53,14 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         if (data.ExecutionFlag) {
                             it('Validate Broker field with value :- "' + data.Broker + '"', function() {
                                 perInfo.hiddenfieldBrokerNum.setText(data.Broker + '\t');
-                                expect(perInfo.hiddenbrokerName.isPresentAndDisplayed()).toBeTruthy();
-                                expect(perInfo.hiddenbrokerName.getValue()).toContain(data.BrokerName);
+                                expect(perInfo.hiddenbrokerName.isPresentAndDisplayed()).toBeTruthy('Verifies that "Broker Name field" is displayed');
+                                expect(perInfo.hiddenbrokerName.getValue()).toContain(data.BrokerName, 'Verifies that "Broker Name" fieldshould be'+data.BrokerName);
                             });
                         };
                     });
                     it('Validate by selecting No the Broker Number text box has to be Disappear', function() {
                         perInfo.RadBtnBrokerNo.select();
-                        expect(perInfo.hiddenfieldBrokerNum.isPresentAndDisplayed()).toBeFalsy();
+                        expect(perInfo.hiddenfieldBrokerNum.isPresentAndDisplayed()).toBeFalsy('Verifies that hidden Broker Number field is not displayed');
                     });
 
                 });

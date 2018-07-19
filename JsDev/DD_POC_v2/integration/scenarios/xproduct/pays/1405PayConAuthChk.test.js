@@ -11,24 +11,24 @@ var enrollPage = new(require('../../../pageObjects/cxinit/enroll-page.js'));
 var statesData = require('../../../testData/' + testDataEnv + '/statesAndProducts.json');
 
 //To Navigate Personla Info Page
-dataProvider(statesData.states, function (sData, sdescription) {
+dataProvider(statesData.states, function(sData, sdescription) {
     if (states.indexOf(sdescription) != -1) {
         dataProvider(sData.products, function(tData, pdescription) {
             if (product.indexOf(pdescription) != -1) {
 
-                describe('1405- Payment Page: State: ||State:' + sdescription + '||Product:' + pdescription + '||', function () {
+                describe('1405- Payment Page: State: ||State:' + sdescription + '||Product:' + pdescription + '||', function() {
                     // Pre-condition: User navigated to Payment Page
                     beforeEach(function() {
                         jasmine.addMatchers(custommatcher.customMatchers);
                         Utility.openApplication('', tData.product);
                         enrollPage.enterHomePageDetails(tData.enrollData);
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verify that "First Name" field in personal info page is displayed');
                         TestData.firstname = Utility.randomNo('String', 8);
                         TestData.lastname = Utility.randomNo('String', 8);
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            TestData.MemberId = false;                            
+                            TestData.MemberId = false;
                             var ssn = Utility.randomNo('Number', 8);
-                            TestData.ssn = '1' + ssn.toString();                            
+                            TestData.ssn = '1' + ssn.toString();
                             TestData.alternateid = "test@test.com";
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
@@ -46,13 +46,13 @@ dataProvider(statesData.states, function (sData, sdescription) {
                             perInfo.referralSource.selectByText(TestData.referralSource);
                             perInfo.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.dependentPageTitle, 'Verfiy "Dependent Page" is Displayed and the title is Equal as' + TestData.dependentPageTitle);
                         depInfo.next.click();
                         if (pdescription == 'DHMO' || pdescription == 'AHMO') {
-                        facilities.selectFacility();
-                        facilities.next.click();
+                            facilities.selectFacility();
+                            facilities.next.click();
                         }
-                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.paymentPageTitle, 'Verify "Payment" page is displayed and the title is Equal as' + TestData.paymentPageTitle);
                         payment.nameOnCard.setText(TestData.nameOnCard);
                         payment.cardNumber.setText(TestData.cardNumber);
                         payment.expMonth.setText(TestData.expMonth);
@@ -66,13 +66,18 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('Step-1: Validate the Error displayed with out Authentication in the Payment page', function() {
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             payment.frequencyAnnualy.select();
+                            payment.purchaseNow.click();
                         }
-                        payment.purchaseNow.click();
+                        if (pdescription == 'DHMO' || pdescription == 'DPPO') {
+                            payment.next.click();
+                            payment.purchaseNow.click();
+                        }
+
                         Utility.scrollToTop();
                         expect(payment.serErrAuth.getText()).toEqual('Please check to confirm you have read authorization statement');
                         payment.authChkBox.check();
                         payment.purchaseNow.click();
-                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle);
+                        expect(browser.getTitle()).toEqual(TestData.receiptPageTitle, 'Verify "Receipt" Page is displayed and the Tilte is Equal as' + TestData.receiptPageTitle);
 
 
                     });

@@ -36,6 +36,8 @@ class PersonalInfoPage extends ControlBase {
         this.fieldSsn                   = new TextBox(this.pageObjects.fieldSsn);
         this.coverageStartDate          = new Select(this.pageObjects.coverageStartDate);
         this.errMsgSsn                  = new Label(this.pageObjects.errMsgSsn);
+        this.fieldCostcoMemberId        = new TextBox(this.pageObjects.fieldCostcoMemberId);
+        this.errMsgCostcoMemberId       = new Label(this.pageObjects.errMsgCostcoMemberId);
         this.errMsgMemberId             = new Label(this.pageObjects.errMsgMemberId);
         this.fieldHomeAddr              = new TextBox(this.pageObjects.fieldHomeAddr);
         this.errMsgHomeAddr             = new Label(this.pageObjects.errMsgHomeAddr);
@@ -85,6 +87,7 @@ class PersonalInfoPage extends ControlBase {
         this.serverErrMsgGenderSelect   = new Label(this.pageObjects.serverErrMsgGenderSelect);
         this.serverErrMsgSsn            = new Label(this.pageObjects.serverErrMsgSsn);
         this.serverErrMsgMemberId       = new Label(this.pageObjects.serverErrMsgMemberId);
+        this.serverErrMsgCostcoMemberId = new Label(this.pageObjects.serverErrMsgCostcoMemberId);        
         this.serverErrMsgStreetAddress  = new Label(this.pageObjects.serverErrMsgStreetAddress);
         this.serverErrMsgCity           = new Label(this.pageObjects.serverErrMsgCity);
         this.serverErrMsgState          = new Label(this.pageObjects.serverErrMsgState);
@@ -115,6 +118,8 @@ class PersonalInfoPage extends ControlBase {
         this.alternateTooltip           = new Label(this.pageObjects.alternateTooltip);
         this.alternateHelpopUp          = new Label(this.pageObjects.alternateHelpopUp);
         this.alternateidPopExit         = new Label(this.pageObjects.alternateidPopExit);
+        this.cancel                     = new Label(this.pageObjects.cancel);
+        this.update                     = new Label(this.pageObjects.update);
     }
 
     enrollStatus(breadcrumbheader) {
@@ -189,17 +194,18 @@ class PersonalInfoPage extends ControlBase {
             self.fieldBdYyyy.setText(datesplit[2]);
             self.fieldBdMM.setText(datesplit[0]);
             if (perinfo.MemberId) self.memberId.setText(perinfo.MemberId);
+            if (perinfo.costcomemberid) self.fieldCostcoMemberId.setText(perinfo.costcomemberid);
             if (perinfo.ssn) self.fieldSsn.setText(perinfo.ssn);
             if (perinfo.alternateid) self.fieldAlternateId.setText('');
             if (perinfo.alternateid) self.fieldAlternateId.setText(perinfo.alternateid);
             self.fieldHomeAddr.setText('');
-            expect(self.fieldFirstName.getAttribute("class")).toContain(perinfo.ariainvalid);
-            expect(self.fieldMidInitial.getAttribute("class")).toContain(perinfo.ariainvalid);
-            expect(self.fieldLastName.getAttribute("class")).toContain(perinfo.ariainvalid);
-            expect(self.fieldBdMM.getAttribute("class")).toContain(perinfo.ariainvalid);
-            expect(self.fieldBdDD.getAttribute("class")).toContain(perinfo.ariainvalid);
-            expect(self.fieldBdYyyy.getAttribute("class")).toContain(perinfo.ariainvalid);
-            if (perinfo.ssn) expect(self.fieldSsn.getAttribute("class")).toContain(perinfo.ariainvalid);
+            expect(self.fieldFirstName.getAttribute("class")).toContain(perinfo.ariainvalid,"Verify that error is not displayed for First Name field when enter valid data");
+            expect(self.fieldMidInitial.getAttribute("class")).toContain(perinfo.ariainvalid,"Verify that error is not displayed for Midle Name field when enter valid data");
+            expect(self.fieldLastName.getAttribute("class")).toContain(perinfo.ariainvalid,"Verify that error is not displayed for Last Name field when enter valid data");
+            expect(self.fieldBdMM.getAttribute("class")).toContain(perinfo.ariainvalid,"Verify that error is not displayed for Month field when enter valid data");
+            expect(self.fieldBdDD.getAttribute("class")).toContain(perinfo.ariainvalid,"Verify that error is not displayed for Date field when enter valid data");
+            expect(self.fieldBdYyyy.getAttribute("class")).toContain(perinfo.ariainvalid,"Verify that error is not displayed for year field when enter valid data");
+            if (perinfo.ssn) expect(self.fieldSsn.getAttribute("class")).toContain(perinfo.ariainvalid,"Verify that error is not displayed for SSN field when enter valid data");
         });
     };
 
@@ -242,10 +248,10 @@ class PersonalInfoPage extends ControlBase {
             //expect(self.fieldPhoneSelect.getAttribute("class")).toContain(phno.ariainvalid);
             self.fieldPhoneNumber.setText(phno.phoneNumber);
             if (!phno.fieldEmailAddr) self.fieldEmailAddr.setText(phno.email);
-            self.fieldAlternateId.setText('');
+             if (!phno.fieldAlternateId) self.fieldAlternateId.setText('');
             self.fieldPhoneNumber.setText('', true);
-            expect(self.fieldPhoneNumber.getAttribute("class")).toContain(phno.ariainvalid);
-            expect(self.fieldEmailAddr.getAttribute("class")).toContain(phno.ariainvalid);
+            expect(self.fieldPhoneNumber.getAttribute("class")).toContain(phno.ariainvalid,"Verify that error is not displayed for Phone Number field when enter valid data");
+            expect(self.fieldEmailAddr.getAttribute("class")).toContain(phno.ariainvalid,"Verify that error is not displayed for Email field when enter valid data");
         });
     };
 
@@ -261,8 +267,8 @@ class PersonalInfoPage extends ControlBase {
                 self.next.click();
                 browser.sleep(2000);
             } else {
-                self.RadBtnBrokerYes.select();
-                self.hiddenfieldBrokerNum.setText(broker.brokernumber);
+                // self.RadBtnBrokerYes.select();
+                // self.hiddenfieldBrokerNum.setText(broker.brokernumber);
                 self.next.click();
                 browser.sleep(2000);
             }
@@ -292,6 +298,11 @@ class PersonalInfoPage extends ControlBase {
                 promises.push(self.serverErrMsgMemberId.getText());
             }
         })
+        this.serverErrMsgCostcoMemberId.isPresentAndDisplayed().then(function(displayed) {
+            if (displayed) {
+                promises.push(self.serverErrMsgCostcoMemberId.getText());
+            }
+        })
         return protractor.promise.all(promises);
     };
     /**
@@ -315,6 +326,11 @@ class PersonalInfoPage extends ControlBase {
         this.serverErrMsgMemberId.isPresentAndDisplayed().then(function(displayed) {
             if (displayed) {
                 promises.push(self.serverErrMsgMemberId.getText());
+            }
+        })
+       this.serverErrMsgCostcoMemberId.isPresentAndDisplayed().then(function(displayed) {
+            if (displayed) {
+                promises.push(self.serverErrMsgCostcoMemberId.getText());
             }
         })
 
@@ -379,6 +395,7 @@ class PersonalInfoPage extends ControlBase {
         promises.push(this.serverErrMsgLastName.getText());
         promises.push(self.serverErrMsgSsn.getText());
         promises.push(self.serverErrMsgMemberId.getText());
+        promises.push(self.serverErrMsgCostcoMemberId.getText());        
         promises.push(this.serverErrMsgStreetAddress.getText());
         promises.push(this.serverErrMsgCity.getText());
         promises.push(this.serverErrMsgContactNumber.getText());
@@ -396,6 +413,7 @@ class PersonalInfoPage extends ControlBase {
         promises.push(this.errMsgLastName.getText());
         promises.push(this.errMsgSsn.getText());
         promises.push(self.errMsgMemberId.getText());
+        promises.push(self.errMsgCostcoMemberId.getText());
         promises.push(this.errMsgHomeAddr.getText());
         promises.push(this.errMsgCity.getText());
         promises.push(this.errMsgPhoneNumber.getText());

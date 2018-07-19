@@ -324,71 +324,71 @@
     "free_text"   : "Salameh"
             }
         },
-    "test21"      : {
-    "params"      : {
-    "zipcode"     : "94949",
-    "distance"    : "60",
-    "page"        : "0",
-    "per_page"    : "60000",
-    "max"         : "60000",
-    "free_text"   : "Elloway Norman I.",
-    "specialty"   : ["GENERAL DENTIST"],
-    "meta_data"   : false
-            },
-    "verify"      : {
-    "zipcode"     : "94949",
-    "free_text"   : "Elloway Norman I."
-            }
-        },
-
-    "test22"      : {
-    "params"      : {
-    "zipcode"     : "94949",
-    "distance"    : "60",
-    "page"        : "0",
-    "per_page"    : "60000",
-    "max"         : "60000",
-    "free_text"   : "I.",
-    "specialty"   : ["GENERAL DENTIST"],
-    "meta_data"   : false
-            },
-    "verify"      : {
-    "zipcode"     : "94949",
-    "free_text"   : "I."
-            }
-        },
-    "test23"      : {
-    "params"      : {
-    "zipcode"     : "94949",
-    "distance"    : "60",
-    "page"        : "0",
-    "per_page"    : "60000",
-    "max"         : "60000",
-    "free_text"   : "elloway I.",
-    "specialty"   : ["GENERAL DENTIST"],
-    "meta_data"   : false
-            },
-    "verify"      : {
-    "zipcode"     : "94949",
-    "free_text"   : "elloway I."
-            }
-        },
-    "test24"      : {
-    "params"      : {
-    "zipcode"     : "94110",
-    "distance"    : "60",
-    "page"        : "0",
-    "per_page"    : "60000",
-    "max"         : "60000",
-    "free_text"   : "Chavez-Grinde",
-    "specialty"   : ["GENERAL DENTIST"],
-    "meta_data"   : false
-            },
-    "verify"      : {
-    "zipcode"     : "94110",
-    "free_text"   : "Chavez-Grinde"
-            }
-        },
+        "test21"      : {
+                "params"      : {
+                "zipcode"     : "94949",
+                "distance"    : "60",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "free_text"   : "Elloway Norman I.",
+                "specialty"   : ["GENERAL DENTIST"],
+                "meta_data"   : false
+                        },
+                "verify"      : {
+                "zipcode"     : "94949",
+                "free_text"   : "Elloway Norman I."
+                        }
+                    },
+            
+                "test22"      : {
+                "params"      : {
+                "zipcode"     : "94949",
+                "distance"    : "60",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "free_text"   : "I.",
+                "specialty"   : ["GENERAL DENTIST"],
+                "meta_data"   : false
+                        },
+                "verify"      : {
+                "zipcode"     : "94949",
+                "free_text"   : "I."
+                        }
+                    },
+                "test23"      : {
+                "params"      : {
+                "zipcode"     : "94949",
+                "distance"    : "60",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "free_text"   : "elloway I.",
+                "specialty"   : ["GENERAL DENTIST"],
+                "meta_data"   : false
+                        },
+                "verify"      : {
+                "zipcode"     : "94949",
+                "free_text"   : "elloway I."
+                        }
+                    },
+                "test24"      : {
+                "params"      : {
+                "zipcode"     : "94110",
+                "distance"    : "60",
+                "page"        : "0",
+                "per_page"    : "60000",
+                "max"         : "60000",
+                "free_text"   : "Chavez-Grinde",
+                "specialty"   : ["GENERAL DENTIST"],
+                "meta_data"   : false
+                        },
+                "verify"      : {
+                "zipcode"     : "94110",
+                "free_text"   : "Chavez-Grinde"
+                        }
+                    },
     "test25"      : {
     "params"      : {
     "zipcode"     : "94949",
@@ -439,22 +439,6 @@
             }
         },
 
-    "test28"      : {
-    "params"      : {
-    "zipcode"     : "10013",
-    "distance"    : "60",
-    "page"        : "0",
-    "per_page"    : "60000",
-    "max"         : "60000",
-    "free_text"   : "3CK",
-    "specialty"   : ["GENERAL DENTIST"],
-    "meta_data"   : false
-            },
-    "verify"      : {
-    "zipcode"     : "10013",
-    "free_text"   : "3CK"
-            }
-        },
     "test29"      : {
     "params"      : {
     "zipcode"     : "94110",
@@ -1460,39 +1444,6 @@
     "verify"      : {
     "zipcode"     : "94110",
     "free_text"   : "Bangla"
-            }
-        },
-
-    "test91"      : {
-    "params"      : {
-    "zipcode"     : "94110",
-    "distance"    : "60",
-    "page"        : "0",
-    "per_page"    : "60000",
-    "max"         : "60000",
-    "free_text"   : "O'Connor",
-    "specialty"   : ["GENERAL DENTIST"],
-    "meta_data"   : false
-            },
-    "verify"      : {
-    "zipcode"     : "94110",
-    "free_text"   : "O'Connor"
-            }
-        },
-    "test92"      : {
-    "params"      : {
-    "zipcode"     : "94110",
-    "distance"    : "60",
-    "page"        : "0",
-    "per_page"    : "60000",
-    "max"         : "60000",
-    "free_text"   : "Sung-Pin",
-    "specialty"   : ["GENERAL DENTIST"],
-    "meta_data"   : false
-            },
-    "verify"      : {
-    "zipcode"     : "94110",
-    "free_text"   : "Sung-Pin"
             }
         }
     },

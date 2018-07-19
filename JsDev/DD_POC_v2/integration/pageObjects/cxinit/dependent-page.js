@@ -39,6 +39,8 @@ class DependentPage extends ControlBase {
         this.depError                 = new Label(this.pageObjects.depError);
         this.depPremiumChangepopupTxt = new Label(this.pageObjects.depPremiumChangepopupTxt);
         this.depChildmaxageerror      = new Label(this.pageObjects.depChildmaxageerror);
+        this.cancel                   = new Label(this.pageObjects.cancel);
+        this.update                   = new Label(this.pageObjects.update);
     }
 
     /**

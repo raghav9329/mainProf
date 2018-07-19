@@ -27,10 +27,10 @@ class PlanDetailsPage extends ControlBase {
         this.anualprice                         = new Label(this.pageObjects.anualprice);
         this.enroll_fee                         = new Label(this.pageObjects.enroll_fee);
         this.shopping_details_highlightsByIndex = function(index) {
-            new Label(this.pageObjects.shopping_details_highlightsByIndex(index));
+            return new Label(this.pageObjects.shopping_details_highlightsByIndex(index));
         };
         this.shopping_details_highlightsInfoBYIndex = function(index) {
-            new Label(this.pageObjects.shopping_details_highlightsInfoBYIndex(index));
+            return new Label(this.pageObjects.shopping_details_highlightsInfoBYIndex(index));
         };
         this.plan1                     = new Label(this.pageObjects.plan1);
         this.plan2                     = new Label(this.pageObjects.plan2);
@@ -40,6 +40,7 @@ class PlanDetailsPage extends ControlBase {
         this.benifitsSummary           = new Label(this.pageObjects.benifitsSummary);
         this.benifitsSummaryFrequency  = new Label(this.pageObjects.benifitsSummaryFrequency);
         this.shoppingFeatureDisclaimer = new Label(this.pageObjects.shoppingFeatureDisclaimer);
+        this.findLink                  = new Label(this.pageObjects.findLink);
         /**
          * Returns WebElement of plan details desclaimer
          * @param {String} planfeature Plan option
@@ -145,7 +146,6 @@ class PlanDetailsPage extends ControlBase {
             return providers[0];
         })
     }
-
 
 
 

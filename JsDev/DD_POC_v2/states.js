@@ -9,6 +9,10 @@ module.exports = {
         "phase4": ['NM', 'OK', 'KS', 'ME', 'RI', 'VT'],
         "phase5": ["MA", "AZ", "CO", "MI", "NC", "NJ", "VA", "IN", "MO", "OR"],
         "phase6": ["SC", "AR", "HI", "IA", "ID", "NE", "ND", "SD", "WI", "WY"],
-        "oneStateTest": ['CA']
+        "phase7": ["GA", "UT", "AL", "LA", "WV", "MS", "NV", "MT", "DC", "DE"],
+        "phase7MD": ["MD"],
+        "oneStateTest": ['CA'],
+        "regression":['CA','TX','NY','MD']
     }
 }
+

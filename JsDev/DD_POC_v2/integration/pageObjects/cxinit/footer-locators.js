@@ -9,7 +9,8 @@ class FooterLocators {
         this.languageAssistance = by.xpath('//a[text()="Language Assistance"]');
         this.joinAARP           = by.xpath('//a[text()="Join AARP"]');
         this.renewAARP          = by.xpath('//a[text()="Renew AARP"]');
-        this.aarporgHome        = by.xpath('//a[contains(text(),"AARP.org Home")]');
+        this.aarporgHome        = by.xpath('//a[contains(text(),"AARP Member Benefits")]');
+        //a[contains(text(),"AARP.org Home")]');
         this.disclaimer         = by.xpath('//p[@class="disclaimer"]');
         this.copyrightFooter    = by.xpath('//p[@class="copyright"]');
         this.footer             = by.xpath('//p[@class="disclaimer"]');

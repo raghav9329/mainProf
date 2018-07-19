@@ -239,29 +239,29 @@ describe('2899:Plan_Options', function() {
 
     it('step1:Verify all fields displayed in get a quote page', function() {
         shopping.Submit.click();
-        expect(shopping.Zipcode.isPresentAndDisplayed()).toBeTruthy();
-        expect(shopping.NoOFCovered_getAQuote.isPresentAndDisplayed()).toBeTruthy();
-        expect(shopping.addDependent.isPresentAndDisplayed()).toBeTruthy();
-        expect(shopping.removeDependent.isPresentAndDisplayed()).toBeTruthy();
-        expect(shopping.Showplans.isPresentAndDisplayed()).toBeTruthy();
+        expect(shopping.Zipcode.isPresentAndDisplayed()).toBeTruthy('Verifies that "ZIP Code" is displayed');
+        expect(shopping.NoOFCovered_getAQuote.isPresentAndDisplayed()).toBeTruthy('Verifies that "NoOFCovered_getAQuote" is displayed');
+        expect(shopping.addDependent.isPresentAndDisplayed()).toBeTruthy('Verifies that "addDependent" is displayed');
+        expect(shopping.removeDependent.isPresentAndDisplayed()).toBeTruthy('Verifies that "removeDependent" is displayed');
+        expect(shopping.Showplans.isPresentAndDisplayed()).toBeTruthy('Verifies that "Showplans" is displayed');
     });
     it('Step2:Verify the functionality of + and - buttons', function() {
         shopping.Submit.click();
-        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('0');
+        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('0','Verifies that "NoOFCovered in getAQuote" should be 0');
         shopping.addDependent.click();
-        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('1');
+        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('1','Verifies that "NoOFCovered in getAQuote" should be 1');
         shopping.removeDependent.click();
-        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('0');
+        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('0','Verifies that "NoOFCovered in getAQuote" should be 0');
         shopping.NoOFCovered_getAQuote.setText('15+\t');
         shopping.addDependent.click();
-        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('15');
+        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('15','Verifies that "NoOFCovered in getAQuote" should be 15');
         shopping.NoOFCovered_getAQuote.setText('1+\t');
         shopping.addDependent.click();
-        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('2');
+        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('2','Verifies that "NoOFCovered in getAQuote" should be 2');
         shopping.removeDependent.click();
-        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('1');
+        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('1','Verifies that "NoOFCovered in getAQuote" should be 1');
         shopping.removeDependent.click();
-        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('0');
+        expect(shopping.NoOFCovered_getAQuote.getAttribute('value')).toEqual('0','Verifies that "NoOFCovered in getAQuote" should be 0');
 
     })
 
@@ -271,8 +271,8 @@ describe('2899:Plan_Options', function() {
             shopping.Zipcode.setText(data.Zipcode);
             shopping.NoOFCovered_getAQuote.setText(data.NoOfCovered);
             shopping.Showplans.click();
-            expect(shopping.serverErrMsgnoofCovered.getText()).toEqual(data.ErrNoofCovered);
-            expect(shopping.serverErrMsgZipcode.getText()).toEqual(data.ErrZipCode);
+            expect(shopping.serverErrMsgnoofCovered.getText()).toEqual(data.ErrNoofCovered,'Verifies that "NoOFCovered" error message should be '+data.ErrNoofCovered);
+            expect(shopping.serverErrMsgZipcode.getText()).toEqual(data.ErrZipCode,'Verifies that "ErrZipCode" error message should be '+data.ErrZipCode);
 
         })
     })
@@ -290,26 +290,26 @@ describe('2899:Plan_Options', function() {
             shopping.NoOFCovered.selectByText(data.noofcovered);
             shopping.Cvgstartdate.setText(data.cvgstartdate);
             shopping.Submit.click();
-            expect(planOptions.planSummary.getText()).toContain(data.zipcode);
+            expect(planOptions.planSummary.getText()).toContain(data.zipcode,'Verifies that "zipcode" should be '+data.zipcode);
             expect(planOptions.edit.isPresentAndDisplayed()).toBe(true);
 
-            expect(planOptions.deltaDentalPlanHeader.getText()).toEqual(data.deltadentalheader);
-            expect(planOptions.deltaCarePlanHeader.getText()).toEqual(data.deltacareheader);
+            expect(planOptions.deltaDentalPlanHeader.getText()).toEqual(data.deltadentalheader,'Verifies that "deltadentalheader" should be '+data.deltadentalheader);
+            expect(planOptions.deltaCarePlanHeader.getText()).toEqual(data.deltacareheader,'Verifies that "deltacareheader" should be '+data.deltacareheader);
 
-            expect(planOptions.getdeltaDentalHighlights()).toEqual(data.deltadentalhighlights);
-            expect(planOptions.getdeltaCareHighlights()).toEqual(data.deltacarehighlights);
+            expect(planOptions.getdeltaDentalHighlights()).toEqual(data.deltadentalhighlights,'Verifies that "deltadentalhighlights" should be '+data.deltadentalhighlights);
+            expect(planOptions.getdeltaCareHighlights()).toEqual(data.deltacarehighlights,'Verifies that "deltacarehighlights" should be '+data.deltacarehighlights);
 
-            expect(planOptions.getPlanPrice(data.plan1).getText()).toEqual(data.ppoplanA_price);
-            expect(planOptions.getPlanContent(data.plan1).getText()).toEqual(data.ppoplanA_Content);
-            expect(planOptions.getPlanDetails(data.plan1).isPresentAndDisplayed()).toBe(true);
+            expect(planOptions.getPlanPrice(data.plan1).getText()).toEqual(data.ppoplanA_price,'Verifies that "ppoplanA_price" should be '+data.ppoplanA_price);
+            expect(planOptions.getPlanContent(data.plan1).getText()).toEqual(data.ppoplanA_Content,'Verifies that "ppoplanA_Content" should be '+data.ppoplanA_Content);
+            expect(planOptions.getPlanDetails(data.plan1).isPresentAndDisplayed()).toBe(true,'Verifies that plan1 is displayed');
 
-            expect(planOptions.getPlanPrice(data.plan2).getText()).toEqual(data.ppoplanB_price);
-            expect(planOptions.getPlanContent(data.plan2).getText()).toEqual(data.ppoplanB_Content);
-            expect(planOptions.getPlanDetails(data.plan2).isPresentAndDisplayed()).toBe(true);
+            expect(planOptions.getPlanPrice(data.plan2).getText()).toEqual(data.ppoplanB_price,'Verifies that "ppoplanB_price" should be '+data.ppoplanB_price);
+            expect(planOptions.getPlanContent(data.plan2).getText()).toEqual(data.ppoplanB_Content,'Verifies that "ppoplanB_Content" should be '+data.ppoplanB_Content);
+            expect(planOptions.getPlanDetails(data.plan2).isPresentAndDisplayed()).toBe(true,'Verifies that plan2 is displayed');
 
-            expect(planOptions.getPlanPrice(data.plan3).getText()).toEqual(data.DeltaCareUSAPlan15B_price);
-            expect(planOptions.getPlanContent(data.plan3).getText()).toEqual(data.DeltaCareUSAPlan15B_Content);
-            expect(planOptions.getPlanDetails(data.plan3).isPresentAndDisplayed()).toBe(true);
+            expect(planOptions.getPlanPrice(data.plan3).getText()).toEqual(data.DeltaCareUSAPlan15B_price,'Verifies that "DeltaCareUSAPlan15B_price" should be '+data.DeltaCareUSAPlan15B_price);
+            expect(planOptions.getPlanContent(data.plan3).getText()).toEqual(data.DeltaCareUSAPlan15B_Content,'Verifies that "DeltaCareUSAPlan15B_Content" should be '+data.DeltaCareUSAPlan15B_Content);
+            expect(planOptions.getPlanDetails(data.plan3).isPresentAndDisplayed()).toBe(true,'Verifies that plan3 is displayed');
 
             //  Verify that High plan is displayed first
             var prices = [];
@@ -318,13 +318,13 @@ describe('2899:Plan_Options', function() {
                     prices[index] = text;
                 });
             });
-            expect(prices.reverse()).toEqual(prices.sort());
+            expect(prices.reverse()).toEqual(prices.sort(),'Verifies that Prices Should be '+prices.sort());
 
             planOptions.edit.click();
-            expect(shopping.Zipcode.getAttribute('value')).toEqual(data.zipcode);
+            expect(shopping.Zipcode.getAttribute('value')).toEqual(data.zipcode,'Verifies that "zipcode" Should be '+data.zipcode);
             shopping.Showplans.click();
             planOptions.back.click();
-            expect(shopping.Zipcode.getAttribute('value')).toEqual(data.zipcode);
+            expect(shopping.Zipcode.getAttribute('value')).toEqual(data.zipcode,'Verifies that "zipcode" Should be '+data.zipcode);
 
         });
     });
@@ -338,11 +338,11 @@ describe('2899:Plan_Options', function() {
         planDetails.buyPlan.click();
         feedback.feedback.click();
         Utility.switchToFrame(feedback.feedbackFrame());
-        expect(feedback.feedbackTitle.getText()).toEqual('We want to hear from you');
-        expect(feedback.questionTitle.getText()).toEqual('1. Do you have any questions or comments? We want to hear from you.');
+        expect(feedback.feedbackTitle.getText()).toEqual('We want to hear from you','Verifies that Feedback Title should be We want to hear from you');
+        expect(feedback.questionTitle.getText()).toEqual('1. Do you have any questions or comments? We want to hear from you.','Verifies that questionTitle should be 1. Do you have any questions or comments? We want to hear from you.');
         feedback.answer.setText('test data');
         feedback.submit.click();
-        expect(feedback.thankyouMsg.getText()).toContain('Thank you for taking the time to let us hear from you.');
+        expect(feedback.thankyouMsg.getText()).toContain('Thank you for taking the time to let us hear from you.','Verifies that thankyouMsg should be Thank you for taking the time to let us hear from you.');
     })
 
     it('Navigate to personal info page', function() {
@@ -355,7 +355,7 @@ describe('2899:Plan_Options', function() {
 
         expect(planDetails.isAt()).toEqual(true);
         // expect(planDetails.planStartsHelpText.getText()).toEqual('-');
-        expect(planDetails.shoppingDetailsSummary.getText()).toEqual('You choose a primary care dentist facility and visit a dentist at this facility to receive benefits.');
+        expect(planDetails.shoppingDetailsSummary.getText()).toEqual('You choose a primary care dentist facility and visit a dentist at this facility to receive benefits.','Verifies that shoppingDetailsSummary should be You choose a primary care dentist facility and visit a dentist at this facility to receive benefits.');
         // expect(planDetails.planPrice.getText()).toEqual('-');
         // expect(planDetails.getPlanDetailsByKey('Annual deductible').getText()).toEqual('-');
         // expect(planDetails.getPlanDetailsByKey('feature text').getText()).toEqual('-');

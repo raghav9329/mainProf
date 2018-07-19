@@ -22,7 +22,7 @@ class ShoppingPage extends ControlBase {
         this.back                       = new Button(this.pageObjects.back);
         this.State                      = new TextBox(this.pageObjects.State);
         this.Zipcode                    = new TextBox(this.pageObjects.Zipcode);
-        this.NoOFCovered                = new Select(this.pageObjects.NoOFCovered);
+        this.NoOFCovered                = new TextBox(this.pageObjects.NoOFCovered);
         this.NoOFCovered_getAQuote      = new TextBox(this.pageObjects.noofdependents);
         this.Cvgstartdate               = new TextBox(this.pageObjects.Effcdate);
         this.Submit                     = new Button(this.pageObjects.Submit);
@@ -267,6 +267,21 @@ class ShoppingPage extends ControlBase {
             // return protractor.promise.all(promises);*/
             return promises;
         });
+    };
+
+    getDependentDOB(dependent) {
+        var self = this;
+        return browser.controlFlow().execute(function() {
+            // var d = getdate;
+            // var datesplit = (d.split('-'))
+            // console.log(datesplit);
+            self.dependentfieldDBMM(dependent).getValue();
+            self.dependentfieldDBDD(dependent).getValue();
+            self.dependentfieldDBYY(dependent).getValue();
+            return 
+            // self.Zipcode.click();
+
+        })
     };
 
 };

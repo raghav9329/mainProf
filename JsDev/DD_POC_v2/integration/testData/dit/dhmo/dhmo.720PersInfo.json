@@ -550,6 +550,2830 @@
                 "ZipCode": "94536",
                 "ErrorMsg": ""
             }
+        },
+
+        "DC": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA DCA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "20005",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "DC",
+                        "ZIPcode": "20005",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "DC",
+                        "ZIPcode": "20005",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "1150",
+                "FullAddress": "1150 K St NW Apt 809",
+                "City": "Washington",
+                "State": "DC",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "1150",
+                "FullAddress": "1150 K St NW Apt 809",
+                "City": "Washington",
+                "State": "DC",
+                "ZipCode": "20005",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "1150 K St NW Apt 809",
+                "City": "Washington",
+                "State": "DC",
+                "ZipCode": "20005",
+                "ErrorMsg": ""
+            }
+        },
+
+        "LA": {
+            "products": {
+
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "LA",
+                        "ZIPcode": "70079",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "LA",
+                        "ZIPcode": "70079",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "843",
+                "FullAddress": "843 Good Hope St",
+                "City": "Norco",
+                "State": "LA",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "843",
+                "FullAddress": "843 Good Hope St",
+                "City": "Norco",
+                "State": "LA",
+                "ZipCode": "70079",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "843 Good Hope St",
+                "City": "Norco",
+                "State": "LA",
+                "ZipCode": "70079",
+                "ErrorMsg": ""
+            }
+        },
+
+        "MD": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA MDA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "09/01/2018",
+                        "ZIPcode": "20716",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "01-28-1973"
+                    }
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "MD",
+                        "ZIPcode": "20716",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "MD",
+                        "ZIPcode": "20716",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "MD",
+                        "ZIPcode": "20716",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "15600",
+                "FullAddress": "15600 Everglade Ln APT 202",
+                "City": "Bowie",
+                "State": "MD",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "15600",
+                "FullAddress": "15600 Everglade Ln APT 202",
+                "City": "Bowie",
+                "State": "MD",
+                "ZipCode": "20716",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "15600 Everglade Ln APT 202",
+                "City": "Bowie",
+                "State": "MD",
+                "ZipCode": "20716",
+                "ErrorMsg": ""
+            }
+        },
+
+        "PR": {
+            "products": {
+
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "PR",
+                        "ZIPcode": "00901",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "275",
+                "FullAddress": "275 Calle Sol",
+                "City": "San Juan",
+                "State": "PR",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "275",
+                "FullAddress": "275 Calle Sol",
+                "City": "San Juan",
+                "State": "PR",
+                "ZipCode": "00901",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "275 Calle Sol",
+                "City": "San Juan",
+                "State": "PR",
+                "ZipCode": "00901",
+                "ErrorMsg": ""
+            }
+        },
+
+        "TN": {
+            "products": {
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "TN",
+                        "ZIPcode": "37040",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "TN",
+                        "ZIPcode": "37040",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "499",
+                "FullAddress": "499 N 1st St",
+                "City": "Clarksville",
+                "State": "TN",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "499",
+                "FullAddress": "499 N 1st St",
+                "City": "Clarksville",
+                "State": "TN",
+                "ZipCode": "37040",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "499 N 1st St",
+                "City": "Clarksville",
+                "State": "TN",
+                "ZipCode": "37040",
+                "ErrorMsg": ""
+            }
+        },
+
+        "VI": {
+            "products": {
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "VI",
+                        "ZIPcode": "00840",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "29,",
+                "FullAddress": "29, Estate Grove Pl",
+                "City": "Frederiksted",
+                "State": "VI",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "29,",
+                "FullAddress": "29, Estate Grove Pl",
+                "City": "Frederiksted",
+                "State": "VI",
+                "ZipCode": "00840",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "29, Estate Grove Pl",
+                "City": "Frederiksted",
+                "State": "VI",
+                "ZipCode": "00840",
+                "ErrorMsg": ""
+            }
+        },
+
+        "AK": {
+            "products": {
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "AK",
+                        "ZIPcode": "99507",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "1633",
+                "FullAddress": "1633 Woodroe Ln",
+                "City": "Anchorage",
+                "State": "AK",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "1633",
+                "FullAddress": "1633 Woodroe Ln",
+                "City": "Anchorage",
+                "State": "AK",
+                "ZipCode": "99507",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "1633 Woodroe Ln",
+                "City": "Anchorage",
+                "State": "AK",
+                "ZipCode": "99507",
+                "ErrorMsg": ""
+            }
+        },
+
+        "AL": {
+            "products": {
+
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "AL",
+                        "ZIPcode": "35216",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "AL",
+                        "ZIPcode": "35216",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "2827",
+                "FullAddress": "2827 Georgetown Dr Apt D",
+                "City": "Birmingham",
+                "State": "AL",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "2827",
+                "FullAddress": "2827 Georgetown Dr Apt D",
+                "City": "Birmingham",
+                "State": "AL",
+                "ZipCode": "35216",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "2827 Georgetown Dr Apt D",
+                "City": "Birmingham",
+                "State": "AL",
+                "ZipCode": "35216",
+                "ErrorMsg": ""
+            }
+        },
+
+        "DE": {
+            "products": {
+
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "DE",
+                        "ZIPcode": "19970",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "DE",
+                        "ZIPcode": "19970",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "14",
+                "FullAddress": "14 Wedgefield Blvd",
+                "City": "Ocean View",
+                "State": "DE",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "14",
+                "FullAddress": "14 Wedgefield Blvd",
+                "City": "Ocean View",
+                "State": "DE",
+                "ZipCode": "19970",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "14 Wedgefield Blvd",
+                "City": "Ocean View",
+                "State": "DE",
+                "ZipCode": "19970",
+                "ErrorMsg": ""
+            }
+        },
+
+        "GA": {
+            "products": {
+
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "GA",
+                        "ZIPcode": "31324",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "GA",
+                        "ZIPcode": "31324",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "14",
+                "FullAddress": "67 Port Dr",
+                "City": "Richmond Hill",
+                "State": "GA",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "14",
+                "FullAddress": "67 Port Dr",
+                "City": "Richmond Hill",
+                "State": "GA",
+                "ZipCode": "31324",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "67 Port Dr",
+                "City": "Richmond Hill",
+                "State": "GA",
+                "ZipCode": "31324",
+                "ErrorMsg": ""
+            }
+        },
+
+        "MS": {
+            "products": {
+
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "MS",
+                        "ZIPcode": "38951",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "MS",
+                        "ZIPcode": "38951",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "67",
+                "FullAddress": "67 Port Dr",
+                "City": "Pittsboro",
+                "State": "MS",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "67",
+                "FullAddress": "67 Port Dr",
+                "City": "Pittsboro",
+                "State": "MS",
+                "ZipCode": "38951",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "67 Port Dr",
+                "City": "Pittsboro",
+                "State": "MS",
+                "ZipCode": "38951",
+                "ErrorMsg": ""
+            }
+        },
+
+        "MT": {
+            "products": {
+
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "MT",
+                        "ZIPcode": "59405",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "MT",
+                        "ZIPcode": "59405",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "4448",
+                "FullAddress": "4448 3rd Ave N",
+                "City": "Great Falls",
+                "State": "MT",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "4448",
+                "FullAddress": "4448 3rd Ave N",
+                "City": "Great Falls",
+                "State": "MT",
+                "ZipCode": "59405",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "4448 3rd Ave N",
+                "City": "Great Falls",
+                "State": "MT",
+                "ZipCode": "59405",
+                "ErrorMsg": ""
+            }
+        },
+
+        "NV": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "NV DHMO Test Plan",
+                        "CoverageStartDate": "09/01/2018",
+                        "ZIPcode": "89109",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "01-28-1973"
+                    }
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "NV",
+                        "ZIPcode": "89109",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "NV",
+                        "ZIPcode": "89109",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "125",
+                "FullAddress": "125 E Harmon Ave Unit 20",
+                "City": "Las Vegas",
+                "State": "NV",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "125",
+                "FullAddress": "125 E Harmon Ave Unit 20",
+                "City": "Las Vegas",
+                "State": "NV",
+                "ZipCode": "89109",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "125 E Harmon Ave Unit 20",
+                "City": "Las Vegas",
+                "State": "NV",
+                "ZipCode": "89109",
+                "ErrorMsg": ""
+            }
+        },
+
+        "UT": {
+            "products": {
+                "DHMO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "DeltaCare® USA UTA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "09/01/2018",
+                        "ZIPcode": "84092",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "01-28-1973"
+                    }
+                },
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "UT",
+                        "ZIPcode": "84092",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "UT",
+                        "ZIPcode": "84092",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "9260",
+                "FullAddress": "9260 E Lodge Dr Apt 714",
+                "City": "Sandy",
+                "State": "UT",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "9260",
+                "FullAddress": "9260 E Lodge Dr Apt 714",
+                "City": "Sandy",
+                "State": "UT",
+                "ZipCode": "84092",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "9260 E Lodge Dr Apt 714",
+                "City": "Sandy",
+                "State": "UT",
+                "ZipCode": "84092",
+                "ErrorMsg": ""
+            }
+        },
+        "WV": {
+            "products": {
+
+                "DPPO": {
+                    "product": "DELTA",
+                    "enrollData": {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "PlanType": "PPO",
+                        "PlanCode": "PAA60",
+                        "CoverageStartDate": "12/10/2018",
+                        "State": "WV",
+                        "ZIPcode": "25314",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "80.76",
+                        "CoverageType": "Self",
+                        "PlanID": "70422",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "2",
+                        "dob": "05-10-1981"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "WV",
+                        "ZIPcode": "25314",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "1202",
+                "FullAddress": "1202 Hunters Ridge Rd",
+                "City": "Charleston",
+                "State": "WV",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "1202",
+                "FullAddress": "1202 Hunters Ridge Rd",
+                "City": "Charleston",
+                "State": "WV",
+                "ZipCode": "25314",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "1202 Hunters Ridge Rd",
+                "City": "Charleston",
+                "State": "WV",
+                "ZipCode": "25314",
+                "ErrorMsg": ""
+            }
+        },
+
+        "CT": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "CT",
+                        "ZIPcode": "06907",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "53",
+                "FullAddress": "53 Barholm Ave",
+                "City": "Stamford",
+                "State": "CT",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "53",
+                "FullAddress": "53 Barholm Ave",
+                "City": "Stamford",
+                "State": "CT",
+                "ZipCode": "06907",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "53 Barholm Ave",
+                "City": "Stamford",
+                "State": "CT",
+                "ZipCode": "06907",
+                "ErrorMsg": ""
+            }
+        },
+
+        "IL": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "IL",
+                        "ZIPcode": "61603",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "2135",
+                "FullAddress": "2135 N Peoria Ave",
+                "City": "Peoria",
+                "State": "IL",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "2135",
+                "FullAddress": "2135 N Peoria Ave",
+                "City": "Peoria",
+                "State": "IL",
+                "ZipCode": "61603",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "2135 N Peoria Ave",
+                "City": "Peoria",
+                "State": "IL",
+                "ZipCode": "61603",
+                "ErrorMsg": ""
+            }
+        },
+
+        "OH": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "OH",
+                        "ZIPcode": "44136",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "14293",
+                "FullAddress": "14293 Calderdale Ln",
+                "City": "Strongsville",
+                "State": "OH",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "14293",
+                "FullAddress": "14293 Calderdale Ln",
+                "City": "Strongsville",
+                "State": "OH",
+                "ZipCode": "44136",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "14293 Calderdale Ln",
+                "City": "Strongsville",
+                "State": "OH",
+                "ZipCode": "44136",
+                "ErrorMsg": ""
+            }
+        },
+
+        "WA": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "WA",
+                        "ZIPcode": "98226",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "4566",
+                "FullAddress": "4566 Anderson Way",
+                "City": "Bellingham",
+                "State": "WA",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "4566",
+                "FullAddress": "4566 Anderson Way",
+                "City": "Bellingham",
+                "State": "WA",
+                "ZipCode": "98226",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "4566 Anderson Way",
+                "City": "Bellingham",
+                "State": "WA",
+                "ZipCode": "98226",
+                "ErrorMsg": ""
+            }
+        },
+
+        "KY": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "KY",
+                        "ZIPcode": "40391",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "221",
+                "FullAddress": "221 Moundale Ave",
+                "City": "Winchester",
+                "State": "KY",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "221",
+                "FullAddress": "221 Moundale Ave",
+                "City": "Winchester",
+                "State": "KY",
+                "ZipCode": "40391",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "221 Moundale Ave",
+                "City": "Winchester",
+                "State": "KY",
+                "ZipCode": "40391",
+                "ErrorMsg": ""
+            }
+        },
+
+        "MN": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "MN",
+                        "ZIPcode": "56511",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "20612",
+                "FullAddress": "20612 Moe Lake Rd",
+                "City": "Audubon",
+                "State": "MN",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "20612",
+                "FullAddress": "20612 Moe Lake Rd",
+                "City": "Audubon",
+                "State": "MN",
+                "ZipCode": "56511",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "20612 Moe Lake Rd",
+                "City": "Audubon",
+                "State": "MN",
+                "ZipCode": "56511",
+                "ErrorMsg": ""
+            }
+        },
+
+        "NH": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "NH",
+                        "ZIPcode": "03246",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "193",
+                "FullAddress": "193 Pleasant St Apt 3",
+                "City": "Laconia",
+                "State": "NH",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "193",
+                "FullAddress": "193 Pleasant St Apt 3",
+                "City": "Laconia",
+                "State": "NH",
+                "ZipCode": "03246",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "193 Pleasant St Apt 3",
+                "City": "Laconia",
+                "State": "NH",
+                "ZipCode": "03246",
+                "ErrorMsg": ""
+            }
+        },
+
+        "NM": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "NM",
+                        "ZIPcode": "87114",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "5900",
+                "FullAddress": "5900 TAURUS AVE NW",
+                "City": "ALBUQUERQUE",
+                "State": "NM",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "5900",
+                "FullAddress": "5900 TAURUS AVE NW",
+                "City": "ALBUQUERQUE",
+                "State": "NM",
+                "ZipCode": "87114",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "5900 TAURUS AVE NW",
+                "City": "ALBUQUERQUE",
+                "State": "NM",
+                "ZipCode": "87114",
+                "ErrorMsg": ""
+            }
+        },
+
+        "OK": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "OK",
+                        "ZIPcode": "74105",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "6009",
+                "FullAddress": "6009 S ATLANTA AVE # 2",
+                "City": "TULSA",
+                "State": "OK",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "6009",
+                "FullAddress": "6009 S ATLANTA AVE # 2",
+                "City": "TULSA",
+                "State": "OK",
+                "ZipCode": "74105",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "6009 S ATLANTA AVE # 2",
+                "City": "TULSA",
+                "State": "OK",
+                "ZipCode": "74105",
+                "ErrorMsg": ""
+            }
+        },
+
+        "KS": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "KS",
+                        "ZIPcode": "67217",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "3210",
+                "FullAddress": "3210 S HANDLEY ST APT 304",
+                "City": "WICHITA",
+                "State": "KS",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "3210",
+                "FullAddress": "3210 S HANDLEY ST APT 304",
+                "City": "WICHITA",
+                "State": "KS",
+                "ZipCode": "67217",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "3210 S HANDLEY ST APT 304",
+                "City": "WICHITA",
+                "State": "KS",
+                "ZipCode": "67217",
+                "ErrorMsg": ""
+            }
+        },
+
+        "ME": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "ME",
+                        "ZIPcode": "04106",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "757",
+                "FullAddress": "757 MAIN ST APT 58",
+                "City": "SOUTH PORTLAND",
+                "State": "ME",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "757",
+                "FullAddress": "757 MAIN ST APT 58",
+                "City": "SOUTH PORTLAND",
+                "State": "ME",
+                "ZipCode": "04106",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "757 MAIN ST APT 58",
+                "City": "SOUTH PORTLAND",
+                "State": "ME",
+                "ZipCode": "04106",
+                "ErrorMsg": ""
+            }
+        },
+
+        "RI": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "RI",
+                        "ZIPcode": "02906",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "21",
+                "FullAddress": "21 FOREST ST",
+                "City": "PROVIDENCE",
+                "State": "RI",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "21",
+                "FullAddress": "21 FOREST ST",
+                "City": "PROVIDENCE",
+                "State": "RI",
+                "ZipCode": "02906",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "21 FOREST ST",
+                "City": "PROVIDENCE",
+                "State": "RI",
+                "ZipCode": "02906",
+                "ErrorMsg": ""
+            }
+        },
+
+        "VT": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "VT",
+                        "ZIPcode": "05401",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "166",
+                "FullAddress": "166 PARK ST",
+                "City": "BURLINGTON ",
+                "State": "VT",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "166",
+                "FullAddress": "166 PARK ST",
+                "City": "BURLINGTON ",
+                "State": "VT",
+                "ZipCode": "05401",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "166 PARK ST",
+                "City": "BURLINGTON ",
+                "State": "VT",
+                "ZipCode": "05401",
+                "ErrorMsg": ""
+            }
+        },
+
+        "MA": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "MA",
+                        "ZIPcode": "02072",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "76C KIM",
+                "FullAddress": "76C KIM TER # C",
+                "City": "STOUGHTON",
+                "State": "MA",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "76C KIM",
+                "FullAddress": "76C KIM TER # C",
+                "City": "STOUGHTON",
+                "State": "MA",
+                "ZipCode": "02072",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "76C KIM TER # C",
+                "City": "STOUGHTON",
+                "State": "MA",
+                "ZipCode": "02072",
+                "ErrorMsg": ""
+            }
+        },
+
+        "AZ": {
+            "products": {
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "USA Plan D89",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "AZ",
+                        "ZIPcode": "85012",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "AZ",
+                        "ZIPcode": "85012",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "355 E THOMAS",
+                "FullAddress": "355 E THOMAS RD UNIT B204",
+                "City": "PHOENIX",
+                "State": "AZ",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "355 E THOMAS",
+                "FullAddress": "355 E THOMAS RD UNIT B204",
+                "City": "PHOENIX",
+                "State": "AZ",
+                "ZipCode": "85012",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "355 E THOMAS RD UNIT B204",
+                "City": "PHOENIX",
+                "State": "AZ",
+                "ZipCode": "85012",
+                "ErrorMsg": ""
+            }
+        },
+
+        "CO": {
+            "products": {
+                "AHMO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "USA Plan 15B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "12/1/2018",
+                        "State": "CO",
+                        "ZIPcode": "80014",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                },
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "CO",
+                        "ZIPcode": "80014",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "3022 S WHEELING",
+                "FullAddress": "3022 S WHEELING WAY APT 312",
+                "City": "AURORA",
+                "State": "CO",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "3022 S WHEELING",
+                "FullAddress": "3022 S WHEELING WAY APT 312",
+                "City": "AURORA",
+                "State": "CO",
+                "ZipCode": "80014",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "3022 S WHEELING WAY APT 312",
+                "City": "AURORA",
+                "State": "CO",
+                "ZipCode": "80014",
+                "ErrorMsg": ""
+            }
+        },
+
+        "MI": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "MI",
+                        "ZIPcode": "02072",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "209 MONROE",
+                "FullAddress": "209 MONROE AVE",
+                "City": "BIG RAPIDS",
+                "State": "MI",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "209 MONROE",
+                "FullAddress": "209 MONROE AVE",
+                "City": "BIG RAPIDS",
+                "State": "MI",
+                "ZipCode": "02072",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "209 MONROE AVE",
+                "City": "BIG RAPIDS",
+                "State": "MI",
+                "ZipCode": "02072",
+                "ErrorMsg": ""
+            }
+        },
+
+        "NC": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "NC",
+                        "ZIPcode": "27604",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "531 N PERS",
+                "FullAddress": "531 N PERSON ST APT 205",
+                "City": "RALEIGH ",
+                "State": "NC",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "531 N PERS",
+                "FullAddress": "531 N PERSON ST APT 205",
+                "City": "RALEIGH ",
+                "State": "NC",
+                "ZipCode": "27604",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "531 N PERSON ST APT 205",
+                "City": "RALEIGH ",
+                "State": "NC",
+                "ZipCode": "27604",
+                "ErrorMsg": ""
+            }
+        },
+
+        "NJ": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "NJ",
+                        "ZIPcode": "07514",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "557 11TH",
+                "FullAddress": "557 11TH AVE # 559",
+                "City": "PATERSON",
+                "State": "NJ",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "557 11TH",
+                "FullAddress": "557 11TH AVE # 559",
+                "City": "PATERSON",
+                "State": "NJ",
+                "ZipCode": "07514",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "557 11TH AVE # 559",
+                "City": "PATERSON",
+                "State": "NJ",
+                "ZipCode": "07514",
+                "ErrorMsg": ""
+            }
+        },
+
+        "VA": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "VA",
+                        "ZIPcode": "23456",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "3821 SHOOTING",
+                "FullAddress": "3821 SHOOTING STAR DR",
+                "City": "VIRGINIA BEACH",
+                "State": "VA",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "3821 SHOOTING",
+                "FullAddress": "3821 SHOOTING STAR DR",
+                "City": "VIRGINIA BEACH",
+                "State": "VA",
+                "ZipCode": "23456",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "3821 SHOOTING STAR DR",
+                "City": "VIRGINIA BEACH",
+                "State": "VA",
+                "ZipCode": "23456",
+                "ErrorMsg": ""
+            }
+        },
+
+        "IN": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "IN",
+                        "ZIPcode": "46204",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "230 E 9TH",
+                "FullAddress": "230 E 9TH ST APT 411",
+                "City": "INDIANAPOLIS",
+                "State": "IN",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "230 E 9TH",
+                "FullAddress": "230 E 9TH ST APT 411",
+                "City": "INDIANAPOLIS",
+                "State": "IN",
+                "ZipCode": "46204",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "230 E 9TH ST APT 411",
+                "City": "INDIANAPOLIS",
+                "State": "IN",
+                "ZipCode": "46204",
+                "ErrorMsg": ""
+            }
+        },
+
+        "MO": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "MO",
+                        "ZIPcode": "63113",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "4662 SAINT",
+                "FullAddress": "4662 SAINT FERDINAND AVE",
+                "City": "SAINT LOUIS",
+                "State": "MO",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "4662 SAINT",
+                "FullAddress": "4662 SAINT FERDINAND AVE",
+                "City": "SAINT LOUIS",
+                "State": "MO",
+                "ZipCode": "63113",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "4662 SAINT FERDINAND AVE",
+                "City": "SAINT LOUIS",
+                "State": "MO",
+                "ZipCode": "63113",
+                "ErrorMsg": ""
+            }
+        },
+
+        "OR": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "OR",
+                        "ZIPcode": "97526",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "410 NE ANDERSON",
+                "FullAddress": "410 NE ANDERSON ST APT A",
+                "City": "GRANTS PASS",
+                "State": "OR",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "410 NE ANDERSON",
+                "FullAddress": "410 NE ANDERSON ST APT A",
+                "City": "GRANTS PASS",
+                "State": "OR",
+                "ZipCode": "97526",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "410 NE ANDERSON ST APT A",
+                "City": "GRANTS PASS",
+                "State": "OR",
+                "ZipCode": "97526",
+                "ErrorMsg": ""
+            }
+        },
+
+        "SC": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "SC",
+                        "ZIPcode": "29550",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "411 MARLBORO",
+                "FullAddress": "411 MARLBORO AVE",
+                "City": "HARTSVILLE",
+                "State": "SC",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "411 MARLBORO",
+                "FullAddress": "411 MARLBORO AVE",
+                "City": "HARTSVILLE",
+                "State": "SC",
+                "ZipCode": "29550",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "411 MARLBORO AVE",
+                "City": "HARTSVILLE",
+                "State": "SC",
+                "ZipCode": "29550",
+                "ErrorMsg": ""
+            }
+        },
+
+        "AR": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "AR",
+                        "ZIPcode": "72143",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "587 HONEY",
+                "FullAddress": "587 HONEY HILL RD",
+                "City": "SEARCY",
+                "State": "AR",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "587 HONEY",
+                "FullAddress": "587 HONEY HILL RD",
+                "City": "SEARCY",
+                "State": "AR",
+                "ZipCode": "72143",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "587 HONEY HILL RD",
+                "City": "SEARCY",
+                "State": "AR",
+                "ZipCode": "72143",
+                "ErrorMsg": ""
+            }
+        },
+
+        "HI": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "HI",
+                        "ZIPcode": "96748",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "1000 KAMEHAMEHA",
+                "FullAddress": "1000 KAMEHAMEHA V HWY",
+                "City": "KAUNAKAKAI",
+                "State": "HI",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "1000 KAMEHAMEHA",
+                "FullAddress": "1000 KAMEHAMEHA V HWY",
+                "City": "KAUNAKAKAI",
+                "State": "HI",
+                "ZipCode": "96748",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "1000 KAMEHAMEHA V HWY",
+                "City": "KAUNAKAKAI",
+                "State": "HI",
+                "ZipCode": "96748",
+                "ErrorMsg": ""
+            }
+        },
+
+        "IA": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "IA",
+                        "ZIPcode": "50312",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "3930 GRAND",
+                "FullAddress": "3930 GRAND AVE APT 409",
+                "City": "DES MOINES",
+                "State": "IA",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "3930 GRAND",
+                "FullAddress": "3930 GRAND AVE APT 409",
+                "City": "DES MOINES",
+                "State": "IA",
+                "ZipCode": "50312",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "3930 GRAND AVE APT 409",
+                "City": "DES MOINES",
+                "State": "IA",
+                "ZipCode": "50312",
+                "ErrorMsg": ""
+            }
+        },
+
+        "ID": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "ID",
+                        "ZIPcode": "83402",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "500 WALNUT",
+                "FullAddress": "500 WALNUT ST",
+                "City": "IDAHO FALLS",
+                "State": "ID",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "500 WALNUT",
+                "FullAddress": "500 WALNUT ST",
+                "City": "IDAHO FALLS",
+                "State": "ID",
+                "ZipCode": "83402",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "500 WALNUT ST",
+                "City": "IDAHO FALLS",
+                "State": "ID",
+                "ZipCode": "83402",
+                "ErrorMsg": ""
+            }
+        },
+
+        "NE": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "NE",
+                        "ZIPcode": "68131",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "200 S 31ST",
+                "FullAddress": "200 S 31ST AVE APT 4204",
+                "City": "OMAHA",
+                "State": "NE",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "200 S 31ST",
+                "FullAddress": "200 S 31ST AVE APT 4204",
+                "City": "OMAHA",
+                "State": "NE",
+                "ZipCode": "68131",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "200 S 31ST AVE APT 4204",
+                "City": "OMAHA",
+                "State": "NE",
+                "ZipCode": "68131",
+                "ErrorMsg": ""
+            }
+        },
+
+        "ND": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "ND",
+                        "ZIPcode": "58102",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "508 20TH",
+                "FullAddress": "508 20TH ST N",
+                "City": "FARGO",
+                "State": "ND",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "508 20TH",
+                "FullAddress": "508 20TH ST N",
+                "City": "FARGO",
+                "State": "ND",
+                "ZipCode": "58102",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "508 20TH ST N",
+                "City": "FARGO",
+                "State": "ND",
+                "ZipCode": "58102",
+                "ErrorMsg": ""
+            }
+        },
+
+        "SD": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "SD",
+                        "ZIPcode": "57108",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "5101 E 6",
+                "FullAddress": "5101 E 61ST ST",
+                "City": "SIOUX FALLS",
+                "State": "SD",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "5101 E 6",
+                "FullAddress": "5101 E 61ST ST",
+                "City": "SIOUX FALLS",
+                "State": "SD",
+                "ZipCode": "57108",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "5101 E 61ST ST",
+                "City": "SIOUX FALLS",
+                "State": "SD",
+                "ZipCode": "57108",
+                "ErrorMsg": ""
+            }
+        },
+
+        "WI": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "WI",
+                        "ZIPcode": "53206",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "3139 N 26",
+                "FullAddress": "3139 N 26TH ST # 3141",
+                "City": "MILWAUKEE",
+                "State": "WI",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "3139 N 26",
+                "FullAddress": "3139 N 26TH ST # 3141",
+                "City": "MILWAUKEE",
+                "State": "WI",
+                "ZipCode": "53206",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "3139 N 26TH ST # 3141",
+                "City": "MILWAUKEE",
+                "State": "WI",
+                "ZipCode": "53206",
+                "ErrorMsg": ""
+            }
+        },
+
+        "WY": {
+            "products": {
+
+                "APPO": {
+                    "product": "AARP",
+                    "enrollData": {
+                        "PlanName": "PPO Plan B",
+                        "PlanType": "DHMO",
+                        "PlanCode": "PLN15B",
+                        "CoverageStartDate": "08/01/2018",
+                        "State": "WY",
+                        "ZIPcode": "53206",
+                        "Country": "USA",
+                        "EnrollmentFee": "0.00",
+                        "AnnualCost": "342.96",
+                        "CoverageType": "Self",
+                        "PlanID": "4546969",
+                        "IssuerCode": "AARP",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-05-1988"
+                    }
+                }
+
+            },
+            "PartialAddress_Suggestion": {
+                "PartialAddress": "525 BUCK",
+                "FullAddress": "525 BUCKBOARD",
+                "City": "RIVERTON",
+                "State": "WY",
+                "ZipCode": "",
+                "ErrorMsg": "",
+                "ExecutionFlag": true
+            },
+
+            "FullAddress_Suggestion": {
+                "HomeAddress": "525 BUCK",
+                "FullAddress": "525 BUCKBOARD",
+                "City": "RIVERTON",
+                "State": "WY",
+                "ZipCode": "53206",
+                "ErrorMsg": "Please enter a street address",
+                "ExecutionFlag": true
+            },
+            "MockAddress_Suggestion": {
+                "HomeAddress": "525 BUCKBOARD",
+                "City": "RIVERTON",
+                "State": "WY",
+                "ZipCode": "53206",
+                "ErrorMsg": ""
+            }
         }
+
+
+
     }
 }

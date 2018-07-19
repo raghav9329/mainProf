@@ -87,6 +87,13 @@ class PaymentLocators {
         this.billingFreqAnnuallyTxt     = by.xpath('//div[contains(text(),"Annually:")]');
         this.billingStreetaddressTxt    = by.id('sb_street');
         this.billingLocalityTxt         = by.id('sb_locality');
+        this.paymentLater               = by.xpath('//form[@id="payment_form"]//div[@id="payment-summary"]//div[@id="paymentLater"]');
+        this.paymentLaterHeading        = by.xpath('//div[@id="paymentLater"]/h3');
+        this.payNow                     = by.id('payNow');
+        this.payLater                   = by.id('PayLater');
+        this.next                       = by.id('nextButton');
+        this.cancel                    = by.xpath('//a[text()="Cancel"]');
+        this.update                    = by.id('nextButton');  
     }
 
 }

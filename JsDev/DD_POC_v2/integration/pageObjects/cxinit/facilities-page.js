@@ -40,6 +40,8 @@ class FacilitiesPage extends ControlBase {
         this.facilityZipCode        = new Label(this.pageObjects.facilityZipCode);
         this.facilityPhone          = new Label(this.pageObjects.facilityPhone);
         this.facilitySelectiontext  = new Label(this.pageObjects.facilitySelectiontext);
+        this.cancel                 = new Label(this.pageObjects.cancel);
+        this.update                 = new Label(this.pageObjects.update);
     };
     /**
      * Is used to verify that user in Facilities page or not
@@ -83,7 +85,7 @@ class FacilitiesPage extends ControlBase {
         var self = this;
         if (facility) {
             return browser.controlFlow().execute(function() {
-                vartimeout = typeof timeout !== 'undefined' ? timeout : 50000;
+                var timeout = typeof timeout !== 'undefined' ? timeout : 50000;
                 return browser.wait(function() {
                     return self.selectFacilityLocator(facility).isPresentAndDisplayed().then(function(status) {
                         if (!status) self.moreResults.click();

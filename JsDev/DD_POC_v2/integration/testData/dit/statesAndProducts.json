@@ -65,7 +65,7 @@
                         "Xrays": "0%",
                         "Cleanings": "0%",
                         "Fillings": "50%",
-                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Rootcanals": "100%",
                         "Gumtreatment": "100%",
                         "Extractions": "100%",
                         "Denturerepair": "100%",
@@ -140,6 +140,31 @@
                         "Crowns": "50%",
                         "Orthodontics": "Not a covered benefit"
                     }
+                },
+                "CDHMO":
+                {
+                    "product": "COSTCO",
+                    "enrollData":
+                    {
+                        "PlanName": "Costco DeltaCare USA Dental HMO Program Executive Member",
+                        "PlanType": "DHMO",
+                        "PlanCode": "CAD15",
+                        "CoverageStartDate": "10/1/2018",
+                        "State": "CA",
+                        "ZIPcode": "94105",
+                        "Country": "USA",
+                        "EnrollmentFee": "10.00",
+                        "AnnualCost": "85.56",
+                        "CoverageType": "Self",
+                        "PlanID": "2170440",
+                        "IssuerCode": "COSTCO",
+                        "NoOfPeopleCovered": "1",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "100 1st St Fl 4",
+                    "city": "San Francisco",
+                    "State": "CA",
+                    "discloser": "Delta_CA_DHMO_CAA55"
                 }
             },
             "secondaryAddress":
@@ -288,6 +313,40 @@
                         "Denturerepair": "50%",
                         "Crowns": "50%",
                         "Orthodontics": "Not a covered benefit"
+                    }
+                },
+                "CDHMO":
+                {
+                    "product": "COSTCO",
+                    "enrollData":
+                    {
+                        "PlanName": "Costco DeltaCare USA Dental HMO Program Non-Executive Member",
+                        "CoverageStartDate": "10/15/2018",
+                        "ZIPcode": "78251",
+                        "CoverageType": "Self",
+                        "IssuerCode": "COSTCO",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "01-28-1973"
+                    },
+                    "fieldHomeAddr": "10800 State Highway 151 Apt 236",
+                    "city": "San Antonio",
+                    "State": "TX",
+                    "discloser": "Delta_TX_DHMO_TXA70",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$10",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$20",
+                        "Fillings": "$25-$120",
+                        "Rootcanals": "$240-$400",
+                        "Gumtreatment": "$64-$650",
+                        "Extractions": "$30-$230",
+                        "Denturerepair": "$40-$75",
+                        "Crowns": "$125-$495",
+                        "Orthodontics": "75%"
                     }
                 }
             },
@@ -438,6 +497,40 @@
                         "Crowns": "50%",
                         "Orthodontics": "Not a covered benefit"
                     }
+                },
+                "CDHMO":
+                {
+                    "product": "COSTCO",
+                    "enrollData":
+                    {
+                        "PlanName": "Costco DeltaCare USA Prepaid Dental Plan Program Executive Member",
+                        "CoverageStartDate": "10/13/2018",
+                        "ZIPcode": "15001",
+                        "CoverageType": "Self",
+                        "IssuerCode": "COSTCO",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "01-28-1973"
+                    },
+                    "fieldHomeAddr": "3212 Brodhead Rd",
+                    "city": "Aliquippa",
+                    "State": "PA",
+                    "discloser": "Delta_PA_Prepaid_Plan_PAA60",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$10",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$20",
+                        "Fillings": "$25-$120",
+                        "Rootcanals": "$240-$400",
+                        "Gumtreatment": "$64-$650",
+                        "Extractions": "$30-$230",
+                        "Denturerepair": "$40-$75",
+                        "Crowns": "$125-$495",
+                        "Orthodontics": "$1400-$2800"
+                    }
                 }
             },
             "secondaryAddress":
@@ -586,6 +679,40 @@
                         "Denturerepair": "50%",
                         "Crowns": "50%",
                         "Orthodontics": "Not a covered benefit"
+                    }
+                },
+                "PLHSO":
+                {
+                    "product": "COSTCO",
+                    "enrollData":
+                    {
+                        "PlanName": "Costco DeltaCare USA Dental PLHSO Prepaid Limited Health Service Organization Executive Member",
+                        "CoverageStartDate": "10/3/2018",
+                        "ZIPcode": "32003",
+                        "CoverageType": "Self",
+                        "IssuerCode": "COSTCO",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "639 Hibernia Oaks Dr",
+                    "city": "Fleming Island",
+                    "State": "FL",
+                    "discloser": "Delta_FL_Prepaid_Plan_FLA70",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$10",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$20",
+                        "Fillings": "$25-$120",
+                        "Rootcanals": "$240-$400",
+                        "Gumtreatment": "$64-$650",
+                        "Extractions": "$30-$230",
+                        "Denturerepair": "$40-$75",
+                        "Crowns": "$125-$495",
+                        "Orthodontics": "75%"
                     }
                 }
             },
@@ -750,6 +877,77 @@
         {
             "products":
             {
+
+                "DHMO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "DeltaCare® USA DCA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "20005",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1150 K St NW Apt 809",
+                    "city": "Washington",
+                    "State": "DC",
+                    "discloser": "Delta_CA_DHMO_CAA55",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$15",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$25",
+                        "Fillings": "$30 - $125",
+                        "Rootcanals": "$240 - $400",
+                        "Gumtreatment": "$70 - $650",
+                        "Extractions": "$45 - $210",
+                        "Denturerepair": "$55",
+                        "Crowns": "$325 - $425",
+                        "Orthodontics": "$2,700 - $2,900"
+                    }
+                },
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20005",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1150 K St NW Apt 809",
+                    "city": "Washington",
+                    "State": "DC",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
+
                 "APPO":
                 {
                     "product": "AARP",
@@ -797,6 +995,42 @@
         {
             "products":
             {
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "70079",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "843 Good Hope St",
+                    "city": "Norco",
+                    "State": "LA",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
+
                 "APPO":
                 {
                     "product": "AARP",
@@ -844,6 +1078,77 @@
         {
             "products":
             {
+
+                "DHMO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "DeltaCare® USA MDA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "20716",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "15600 Everglade Ln APT 202",
+                    "city": "Bowie",
+                    "State": "MD",
+                    "discloser": "Delta_MD_DHMO_CAA55",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$15",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$25",
+                        "Fillings": "$30 - $125",
+                        "Rootcanals": "$240 - $400",
+                        "Gumtreatment": "$70 - $650",
+                        "Extractions": "$45 - $210",
+                        "Denturerepair": "$55",
+                        "Crowns": "$325 - $425",
+                        "Orthodontics": "$2,700 - $2,900"
+                    }
+                },
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "20716",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "15600 Everglade Ln APT 202",
+                    "city": "Bowie",
+                    "State": "MD",
+                    "discloser": "Delta_MD_PPO_Basic00001_DisclosureFormandContract",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
+
                 "AHMO":
                 {
                     "product": "AARP",
@@ -910,6 +1215,40 @@
                         "Denturerepair": "50%",
                         "Crowns": "50%",
                         "Orthodontics": "Not a covered benefit"
+                    }
+                },
+                "CDHMO":
+                {
+                    "product": "COSTCO",
+                    "enrollData":
+                    {
+                        "PlanName": "Costco DeltaCare USA Dental HMO Program Executive Member",
+                        "CoverageStartDate": "10/7/2018",
+                        "ZIPcode": "20716",
+                        "CoverageType": "Self",
+                        "IssuerCode": "COSTCO",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "15600 Everglade Ln APT 202",
+                    "city": "Bowie",
+                    "State": "MD",
+                    "discloser": "Delta_MD_DHMO_CAA55",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$15",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$25",
+                        "Fillings": "$30 - $125",
+                        "Rootcanals": "$240 - $400",
+                        "Gumtreatment": "$70 - $650",
+                        "Extractions": "$45 - $210",
+                        "Denturerepair": "$55",
+                        "Crowns": "$325 - $425",
+                        "Orthodontics": "$2,700 - $2,900"
                     }
                 }
             },
@@ -1147,6 +1486,41 @@
         {
             "products":
             {
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "35216",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "2827 Georgetown Dr Apt D",
+                    "city": "Birmingham",
+                    "State": "AL",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
                 "APPO":
                 {
                     "product": "AARP",
@@ -1194,6 +1568,42 @@
         {
             "products":
             {
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "19970",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "14 Wedgefield Blvd",
+                    "city": "Ocean View",
+                    "State": "DE",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
+
                 "APPO":
                 {
                     "product": "AARP",
@@ -1241,6 +1651,40 @@
         {
             "products":
             {
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "31324",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "67 Port Dr",
+                    "city": "Richmond Hill",
+                    "State": "GA",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
                 "APPO":
                 {
                     "product": "AARP",
@@ -1288,6 +1732,42 @@
         {
             "products":
             {
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "38951",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "199 N Murphree St",
+                    "city": "Pittsboro",
+                    "State": "MS",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
+
                 "APPO":
                 {
                     "product": "AARP",
@@ -1335,6 +1815,42 @@
         {
             "products":
             {
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "59405",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "4448 3rd Ave N",
+                    "city": "Great Falls",
+                    "State": "MT",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
+
                 "APPO":
                 {
                     "product": "AARP",
@@ -1382,6 +1898,77 @@
         {
             "products":
             {
+
+                "DHMO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "NV DHMO Test Plan",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "89109",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "125 E Harmon Ave Unit 20",
+                    "city": "Las Vegas",
+                    "State": "NV",
+                    "discloser": "Delta_NV_DHMO_CAA55",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$15",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$25",
+                        "Fillings": "$30 - $125",
+                        "Rootcanals": "$240 - $400",
+                        "Gumtreatment": "$70 - $650",
+                        "Extractions": "$45 - $210",
+                        "Denturerepair": "$55",
+                        "Crowns": "$325 - $425",
+                        "Orthodontics": "$2,700 - $2,900"
+                    }
+                },
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "89109",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "125 E Harmon Ave Unit 20",
+                    "city": "Las Vegas",
+                    "State": "NV",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
+
                 "APPO":
                 {
                     "product": "AARP",
@@ -1415,6 +2002,40 @@
                         "Crowns": "50%",
                         "Orthodontics": "Not a covered benefit"
                     }
+                },
+                "CDHMO":
+                {
+                    "product": "COSTCO",
+                    "enrollData":
+                    {
+                        "PlanName": "Costco DeltaCare USA Dental HMO Program Executive Member",
+                        "CoverageStartDate": "10/9/2018",
+                        "ZIPcode": "89109",
+                        "CoverageType": "Self",
+                        "IssuerCode": "COSTCO",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "125 E Harmon Ave Unit 20",
+                    "city": "Las Vegas",
+                    "State": "NV",
+                    "discloser": "Delta_NV_DHMO_CAA55",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$15",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$25",
+                        "Fillings": "$30 - $125",
+                        "Rootcanals": "$240 - $400",
+                        "Gumtreatment": "$70 - $650",
+                        "Extractions": "$45 - $210",
+                        "Denturerepair": "$55",
+                        "Crowns": "$325 - $425",
+                        "Orthodontics": "$2,700 - $2,900"
+                    }
                 }
             },
             "secondaryAddress":
@@ -1429,6 +2050,76 @@
         {
             "products":
             {
+
+                "DHMO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "DeltaCare® USA UTA60 Individual/Family Dental Program",
+                        "CoverageStartDate": "12/5/2017",
+                        "ZIPcode": "84092",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "9260 E Lodge Dr Apt 714",
+                    "city": "Sandy",
+                    "State": "UT",
+                    "discloser": "Delta_CA_DHMO_CAA55",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$15",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$25",
+                        "Fillings": "$30 - $125",
+                        "Rootcanals": "$240 - $400",
+                        "Gumtreatment": "$70 - $650",
+                        "Extractions": "$45 - $210",
+                        "Denturerepair": "$55",
+                        "Crowns": "$325 - $425",
+                        "Orthodontics": "$2,700 - $2,900"
+                    }
+                },
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "84092",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "9260 E Lodge Dr Apt 714",
+                    "city": "Sandy",
+                    "State": "UT",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
                 "APPO":
                 {
                     "product": "AARP",
@@ -1476,6 +2167,42 @@
         {
             "products":
             {
+
+                "DPPO":
+                {
+                    "product": "DELTA",
+                    "enrollData":
+                    {
+                        "PlanName": "Delta Dental PPO Basic Plan",
+                        "CoverageStartDate": "12/10/2017",
+                        "ZIPcode": "25314",
+                        "CoverageType": "Self",
+                        "IssuerCode": "DELTA",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "1202 Hunters Ridge Rd",
+                    "city": "Charleston",
+                    "State": "WV",
+                    "discloser": "Delta_CA_PPO_Basic00001",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$50.00",
+                        "Max_per_calendar": "$1,000.00",
+                        "Officevisit": "0%",
+                        "Exams": "0%",
+                        "Xrays": "0%",
+                        "Cleanings": "0%",
+                        "Fillings": "50%",
+                        "Rootcanals": "100% Theraputic Pulpotomy - 50% Pulpal Therapy - 50%",
+                        "Gumtreatment": "100%",
+                        "Extractions": "100%",
+                        "Denturerepair": "100%",
+                        "Crowns": "100%",
+                        "Orthodontics": "NA"
+                    }
+                },
+
                 "APPO":
                 {
                     "product": "AARP",
@@ -2181,6 +2908,7 @@
         {
             "products":
             {
+
                 "AHMO":
                 {
                     "product": "AARP",
@@ -2247,6 +2975,40 @@
                         "Denturerepair": "50%",
                         "Crowns": "50%",
                         "Orthodontics": "Not a covered benefit"
+                    }
+                },
+                "CDHMO":
+                {
+                    "product": "COSTCO",
+                    "enrollData":
+                    {
+                        "PlanName": "Costco DeltaCare USA Dental HMO Program Executive Member",
+                        "CoverageStartDate": "10/5/2018",
+                        "ZIPcode": "85012",
+                        "CoverageType": "Self",
+                        "IssuerCode": "COSTCO",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "355 E THOMAS RD UNIT B204",
+                    "city": "PHOENIX",
+                    "State": "AZ",
+                    "discloser": "Delta_NY_Prepaid_Plan_NYA60",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$10",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$20",
+                        "Fillings": "$25-$120",
+                        "Rootcanals": "$240-$400",
+                        "Gumtreatment": "$64-$650",
+                        "Extractions": "$30-$230",
+                        "Denturerepair": "$40-$75",
+                        "Crowns": "$125-$495",
+                        "Orthodontics": "$1400-$2800"
                     }
                 }
             },
@@ -2657,6 +3419,40 @@
                         "Denturerepair": "50%",
                         "Crowns": "50%",
                         "Orthodontics": "Not a covered benefit"
+                    }
+                },
+                "CDHMO":
+                {
+                    "product": "COSTCO",
+                    "enrollData":
+                    {
+                        "PlanName": "Costco DeltaCare USA Dental HMO Program Executive Member",
+                        "CoverageStartDate": "10/11/2018",
+                        "ZIPcode": "97526",
+                        "CoverageType": "Self",
+                        "IssuerCode": "COSTCO",
+                        "NoOfPeopleCovered": "0",
+                        "dob": "05-10-1981"
+                    },
+                    "fieldHomeAddr": "410 NE ANDERSON ST APT A",
+                    "city": "GRANTS PASS",
+                    "State": "OR",
+                    "discloser": "Delta_MD_DHMO_CAA55",
+                    "planSummary":
+                    {
+                        "Deductible_per_calendar": "$0",
+                        "Max_per_calendar": "$0",
+                        "Officevisit": "$15",
+                        "Exams": "$0",
+                        "Xrays": "$0",
+                        "Cleanings": "$25",
+                        "Fillings": "$30 - $125",
+                        "Rootcanals": "$240 - $400",
+                        "Gumtreatment": "$70 - $650",
+                        "Extractions": "$45 - $210",
+                        "Denturerepair": "$55",
+                        "Crowns": "$325 - $425",
+                        "Orthodontics": "$2,700 - $2,900"
                     }
                 }
             },

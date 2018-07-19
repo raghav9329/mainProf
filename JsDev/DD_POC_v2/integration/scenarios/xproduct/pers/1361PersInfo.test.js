@@ -28,7 +28,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
 
                     it('Dependents Max_Step-1:should complete the Enroll Page', function () {
                         enrollPage.enterHomePageDetails(tData.enrollData);
-                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy();
+                        expect(perInfo.fieldFirstName.isPresentAndDisplayed()).toBeTruthy('Verifies that user is in personal info page and "First Name" field is displayed');
                     });
 
                     //Verify and Validate the field Errors of the Personal Info page with Null values
@@ -39,20 +39,20 @@ dataProvider(statesData.states, function (sData, sdescription) {
                         perInfo.fieldBdDD.setText('');
                         perInfo.fieldBdYyyy.setText('');
                         perInfo.fieldLastName.click();
-                        expect(perInfo.enrollStatus('Personal Info').getAttribute('class')).toContain(TestData.applicationStatus);
+                        expect(perInfo.enrollStatus('Personal Info').getAttribute('class')).toContain(TestData.applicationStatus,'Verifies that "EnrollStatus" should be '+TestData.applicationStatus);
                         Utility.scrollToBottom();
                         perInfo.next.click();
                         // perInfo.next.click();
 
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(perInfo.getProfileValidationMessages()).toEqual(TestData.personalInfoerror);
-                            expect(perInfo.getServerProfileValidationMessages()).toEqual(TestData.personalInfoerror);
+                            expect(perInfo.getProfileValidationMessages()).toEqual(TestData.personalInfoerror,'Verifies that "Profile Validation Messages" should be '+TestData.personalInfoerror);
+                            expect(perInfo.getServerProfileValidationMessages()).toEqual(TestData.personalInfoerror,'Verifies that "Profile Validation Messages" should be '+TestData.personalInfoerror);
                         }
 
 
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
-                            expect(perInfo.getProfileValidationMessages()).toEqual(TestData.personalInfoerroraarp);
-                            expect(perInfo.getServerProfileValidationMessages()).toEqual(TestData.personalInfoerroraarp);
+                            expect(perInfo.getProfileValidationMessages()).toEqual(TestData.personalInfoerroraarp,'Verifies that "Profile Validation Messages" should be '+TestData.personalInfoerroraarp);
+                            expect(perInfo.getServerProfileValidationMessages()).toEqual(TestData.personalInfoerroraarp,'Verifies that "Profile Validation Messages" should be '+TestData.personalInfoerroraarp);
 
                         }
                     });
@@ -84,8 +84,8 @@ dataProvider(statesData.states, function (sData, sdescription) {
                             perInfo.next.click();
                         }
 
-                        expect(browser.getTitle()).toEqual(TestData.DependentTitle);
-                        expect(perInfo.enrollStatus('Dependents').getAttribute('class')).toContain(TestData.applicationStatus);
+                        expect(browser.getTitle()).toEqual(TestData.DependentTitle,'Verifies that "Dependent Title" should be '+TestData.DependentTitle);
+                        expect(perInfo.enrollStatus('Dependents').getAttribute('class')).toContain(TestData.applicationStatus,'Verifies that "Enroll Status" should be '+TestData.applicationStatus);
                     });
 
                     //Validate user could Navigate back to the Personal Info page using Back
@@ -94,7 +94,7 @@ dataProvider(statesData.states, function (sData, sdescription) {
                     it('Verifying Data in the Personal-Info Page by CTA BACK', function () {
                         depInfo.back.click();
                         if (pdescription == 'DHMO' || pdescription == 'DPPO') {
-                            expect(perInfo.fieldSsn.getValue()).toEqual('');
+                            expect(perInfo.fieldSsn.getValue()).toEqual('','Verifies that "SSN" should be '+ '');
                         }
                         if (pdescription == 'AHMO' || pdescription == 'APPO') {
                             var cast = TestData.MemberId.toString(10).split('');
@@ -102,9 +102,9 @@ dataProvider(statesData.states, function (sData, sdescription) {
                             expect(perInfo.memberId.getValue()).toEqual(memID);
                         }
 
-                        expect(perInfo.fieldFirstName.getValue()).toEqual(TestData.firstname);
-                        expect(perInfo.fieldPhoneNumber.getValue()).toEqual(TestData.phoneNumber);
-                        expect(perInfo.enrollStatus('Personal Info').getAttribute('class')).toContain(TestData.applicationStatus);
+                        expect(perInfo.fieldFirstName.getValue()).toEqual(TestData.firstname,'Verifies that "First Name" should be '+TestData.firstname);
+                        expect(perInfo.fieldPhoneNumber.getValue()).toEqual(TestData.phoneNumber,'Verifies that "Phone Number" should be '+TestData.phoneNumber);
+                        expect(perInfo.enrollStatus('Personal Info').getAttribute('class')).toContain(TestData.applicationStatus,'Verifies that "Enroll Status" should be '+TestData.applicationStatus);
 
                     });
 
