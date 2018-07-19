@@ -1,0 +1,336 @@
+{
+    "UUtestdata":
+    {
+        "UU1":
+        {
+            "Test Description": "When provided valid contractId and personId",
+            "ClientKey": "12345",
+            "personId": "0358980916542245",
+            "memberId": "01",
+            "enrolleeId": "100487195001",
+            "contractId": "1004871950",
+            "memberName": "Terrance HOLLISTER",
+            "planYearType": "CAYR",
+            "planStartDate": "01-01-2018",
+            "planEndDate": "12-31-2018",
+            "planYearDescription": "Eff Date In a Calendar Year",
+            "procedureName": "Prophylaxis",
+            "totalAllowed": 2,
+            "totalRemaining": 1,
+            "contributingProcedureCodes": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+            "procedureCode": "D1110",
+            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+            "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+            "totalUsed": 1
+        }
+    },
+    "UU2":
+    {
+        "Test Description": "Given Primary member and person is not part of the contract",
+        "ClientKey": "12345",
+        "personId": "0358980916542245",
+        "contractId": "1004571940",
+        "shortDescription": "Possible Omnibus violation. Error from omnibus rules service.",
+        "detailedDescription": "Unable to retrieve omnibus rules and permission for the given contract 1004571940 and person 1004571940"
+    },
+    "UU3":
+    {
+        "Test Description": "Given Adult member and person is not part of the contract",
+        "ClientKey": "12345",
+        "personId": "0002580916542268",
+        "contractId": "1004571940",
+        "shortDescription": "Possible Omnibus violation. Error from omnibus rules service.",
+        "detailedDescription": "Unable to retrieve omnibus rules and permission for the given contract 1004571940 and person 1004571940"
+    },
+    "UU4":
+    {
+        "Test Description": "Given child member and person is not part of the contract",
+        "ClientKey": "12345",
+        "personId": "0656241316550777",
+        "contractId": "1004571940",
+        "shortDescription": "Possible Omnibus violation. Error from omnibus rules service.",
+        "detailedDescription": "Unable to retrieve omnibus rules and permission for the given contract 1004571940 and person 1004571940"
+    },
+    "UU5":
+    {
+        "Test Description": "invalid Person id",
+        "ClientKey": "12345",
+        "personId": "1002580916542268",
+        "contractId": "1004571940",
+        "shortDescription": "Possible Omnibus violation. Error from omnibus rules service.",
+        "detailedDescription": "Unable to retrieve omnibus rules and permission for the given contract 1004571940 and person 1004571940"
+    },
+    "UU6":
+    {
+        "Test Description": "Requester is Primary Member of the contract",
+        "ClientKey": "12345",
+        "personId": "0358980916542245",
+        "contractId": "1004871950"
+    },
+    "UU7":
+    {
+        "Test Description": "Requester is Non-Primary Member of the contract tried to view other adult records",
+        "ClientKey": "12345",
+        "personId": "0002580916542268",
+        "contractId": "1004871950"
+    },
+    "UU8":
+    {
+        "Test Description": "Requester is Non-Primary Member of the contract tried to view other child records",
+        "ClientKey": "12345",
+        "personId": "5080000001396320",
+        "contractId": "0081607978",
+        "params":
+        {
+            "rule-types": "omnibus"
+        }
+    },
+    "UU9":
+    {
+        "testCaseDes": " Given a CHILD member WHEN requesting to view his/her usage in the contract that he/she is part of THEN should be allowed to view usage records",
+        "ClientKey": "12345",
+        "personId": "5080000001392746",
+        "contractId": "0081607978",
+        "verify": [
+        {
+            "memberInfo":
+            {
+                "personId": "5080000001392746",
+                "memberId": "04",
+                "enrolleeId": "008160797804",
+                "contractId": "0081607978",
+                "memberName": "Kristel MCDOWELL"
+            },
+            "planInfo":
+            {
+                "planYearType": "CAYR",
+                "planStartDate": "01/01/2018",
+                "planEndDate": "12/31/2018",
+                "planYearDescription": "Eff Date In a Calendar Year"
+            },
+            "usageInfo":
+            {
+                "procedureDetail": [
+                {
+                    "procedureName": "Prophylaxis",
+                    "totalAllowed": 1,
+                    "totalUsed": 2,
+                    "totalRemaining": -1,
+                    "contributingProcedureCodes": [
+                        "D4346",
+                        "D4355",
+                        "D1110",
+                        "D1120",
+                        "D4910"
+                    ],
+                    "planFrequency": null,
+                    "procedureCodes": [
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                        "totalUsed": 2
+                    }]
+                }]
+            },
+            "message": null,
+            "lastCalculatedDate": "07/02/2018 03:07"
+        },
+        {
+            "memberInfo":
+            {
+                "personId": "5080000001396320",
+                "memberId": "02",
+                "enrolleeId": "008160797802",
+                "contractId": "0081607978",
+                "memberName": "Alphonse MCDOWELL"
+            },
+            "planInfo": null,
+            "usageInfo": null,
+            "message": "Omnibus-rule:Person is a child. A Child can't see other members records.",
+            "lastCalculatedDate": null
+        },
+        {
+            "memberInfo":
+            {
+                "personId": "5080000001392746",
+                "memberId": "04",
+                "enrolleeId": "008160797804",
+                "contractId": "0081607978",
+                "memberName": "Kristel MCDOWELL"
+            },
+            "planInfo":
+            {
+                "planYearType": "CAYR",
+                "planStartDate": "01/01/2018",
+                "planEndDate": "12/31/2018",
+                "planYearDescription": "Eff Date In a Calendar Year"
+            },
+            "usageInfo":
+            {
+                "procedureDetail": [
+                {
+                    "procedureName": "Prophylaxis",
+                    "totalAllowed": 2,
+                    "totalUsed": 2,
+                    "totalRemaining": 0,
+                    "contributingProcedureCodes": [
+                        "D4346",
+                        "D4355",
+                        "D1110",
+                        "D1120",
+                        "D4910"
+                    ],
+                    "planFrequency": null,
+                    "procedureCodes": [
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                        "totalUsed": 2
+                    }]
+                }]
+            },
+            "message": null,
+            "lastCalculatedDate": "07/02/2018 03:07"
+        },
+        {
+            "memberInfo":
+            {
+                "personId": "5080000001396320",
+                "memberId": "02",
+                "enrolleeId": "008160797802",
+                "contractId": "0081607978",
+                "memberName": "Alphonse MCDOWELL"
+            },
+            "planInfo": null,
+            "usageInfo": null,
+            "message": "Omnibus-rule:Person is a child. A Child can't see other members records.",
+            "lastCalculatedDate": null
+        }]
+    },
+    "UU10":
+    {
+        "testCaseDes": " Given a Primary member WHEN requesting to view his/her child usage in the contract that he/she is part of THEN should be allowed to view usage records based on the business rules",
+        "ClientKey": "12345",
+        "personId": "5080000001396320",
+        "contractId": "0081607978",
+        "verify": [
+        {
+            "memberInfo":
+            {
+                "personId": "5080000001392746",
+                "memberId": "04",
+                "enrolleeId": "008160797804",
+                "contractId": "0081607978",
+                "memberName": "Kristel MCDOWELL"
+            },
+            "planInfo": null,
+            "usageInfo": null,
+            "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details.",
+            "lastCalculatedDate": null
+        },
+        {
+            "memberInfo":
+            {
+                "personId": "5080000001396320",
+                "memberId": "02",
+                "enrolleeId": "008160797802",
+                "contractId": "0081607978",
+                "memberName": "Alphonse MCDOWELL"
+            },
+            "planInfo":
+            {
+                "planYearType": "CAYR",
+                "planStartDate": "01/01/2018",
+                "planEndDate": "12/31/2018",
+                "planYearDescription": "Eff Date In a Calendar Year"
+            },
+            "usageInfo":
+            {
+                "procedureDetail": [
+                {
+                    "procedureName": "Prophylaxis",
+                    "totalAllowed": 1,
+                    "totalUsed": 2,
+                    "totalRemaining": -1,
+                    "contributingProcedureCodes": [
+                        "D4346",
+                        "D4355",
+                        "D1110",
+                        "D1120",
+                        "D4910"
+                    ],
+                    "planFrequency": null,
+                    "procedureCodes": [
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                        "totalUsed": 2
+                    }]
+                }]
+            },
+            "message": null,
+            "lastCalculatedDate": "07/02/2018 07:07"
+        },
+        {
+            "memberInfo":
+            {
+                "personId": "5080000001392746",
+                "memberId": "04",
+                "enrolleeId": "008160797804",
+                "contractId": "0081607978",
+                "memberName": "Kristel MCDOWELL"
+            },
+            "planInfo": null,
+            "usageInfo": null,
+            "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details.",
+            "lastCalculatedDate": null
+        },
+        {
+            "memberInfo":
+            {
+                "personId": "5080000001396320",
+                "memberId": "02",
+                "enrolleeId": "008160797802",
+                "contractId": "0081607978",
+                "memberName": "Alphonse MCDOWELL"
+            },
+            "planInfo":
+            {
+                "planYearType": "CAYR",
+                "planStartDate": "01/01/2018",
+                "planEndDate": "12/31/2018",
+                "planYearDescription": "Eff Date In a Calendar Year"
+            },
+            "usageInfo":
+            {
+                "procedureDetail": [
+                {
+                    "procedureName": "Prophylaxis",
+                    "totalAllowed": 2,
+                    "totalUsed": 2,
+                    "totalRemaining": 0,
+                    "contributingProcedureCodes": [
+                        "D4346",
+                        "D4355",
+                        "D1110",
+                        "D1120",
+                        "D4910"
+                    ],
+                    "planFrequency": null,
+                    "procedureCodes": [
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                        "totalUsed": 2
+                    }]
+                }]
+            },
+            "message": null,
+            "lastCalculatedDate": "07/02/2018 07:07"
+        }]
+    }
+}

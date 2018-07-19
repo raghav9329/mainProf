@@ -1,0 +1,304 @@
+[
+  {
+    "description": "Enroll API:  TC: Test 1: GIVEN Primary Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records Person ID: 0358980916542245 Enrollee Id100487195001 Client Key12345",
+    "assertions": [
+      {
+        "passed": false,
+        "errorMsg": "Expected 20180096091635, but it is 20170626097060 [Verify that the 'claimId' Should be: 20170626097060]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:40:58\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected 20170626097060, but it is 20180096091635 [Verify that the 'claimId' Should be: 20180096091635]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:40:58\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      }
+    ],
+    "duration": 723
+  },
+  {
+    "description": "Enroll API:  TC: Test 2: GIVEN Adult Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records Person ID: 7997000007699287 Enrollee Id239973584302 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 535
+  },
+  {
+    "description": "Enroll API:  TC: Test 3: GIVEN Child Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records. Person ID: 0431041316550753 Enrollee Id116379857503 Client Key12345",
+    "assertions": [
+      {
+        "passed": false,
+        "errorMsg": "Expected D0120, but it is D1208 [Verify that the 'procedureCode' Should be: D1208]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:56:79\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:54:63\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected D1208, but it is D0120 [Verify that the 'procedureCode' Should be: D0120]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:56:79\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:54:63\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      }
+    ],
+    "duration": 426
+  },
+  {
+    "description": "Enroll API:  TC: Test 4: GIVEN Primary Adult Member, WHEN requesting to view his or her Child's claim records & THEN should be able to view all his claim records. Person ID: 0709841316550733 Enrollee Id116379857503 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 368
+  },
+  {
+    "description": "Enroll API:  TC: Test 5: GIVEN Non-Primary Adult Member, WHEN requesting to view a Child's claim records in the plan & THEN should NOT be able to view all his claim records. Person ID: 0661141316550746 Enrollee Id116379857506 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 222
+  },
+  {
+    "description": "Enroll API:  TC: Test 6: GIVEN Child Member, WHEN requesting to view other Child's claim records & THEN should NOT be allowed to view other child's claim record. Person ID: 0785941316550767 Enrollee Id116379857506 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 134
+  },
+  {
+    "description": "Enroll API:  TC: Test 7: Given Primary member (Omnibus rule), WHEN requesting to view other Adult member who has granted permission (Omnibus rule) & THEN should be allowed to view claim records Person ID: 0358980916542245 Enrollee Id100487195002 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 134
+  },
+  {
+    "description": "Enroll API:  TC: Test 8: Given Primary member (Omnibus rule), WHEN requesting to view other Adult member who has granted permission (Omnibus rule) & THEN should be allowed to view claim records Person ID: 0358980916542245 Enrollee Id100487195003 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 129
+  },
+  {
+    "description": "Enroll API:  TC: Test 9: Given Primary member (Omnibus rule), WHEN requesting to view other Adult member who have NOT granted permission (Omnibus rule) & THEN should NOT be allowed to view claim records Person ID: 0358980916542245 Enrollee Id100487195004 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 138
+  },
+  {
+    "description": "Enroll API:  TC: Test 10: Given an ADULT dependent (Omnibus rule), WHEN requesting to view other Adult member claims & THEN should NOT be allowed to view claim records Person ID: 0002580916542268 Enrollee Id100487195003 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 123
+  },
+  {
+    "description": "Enroll API:  TC: Test 11: Given a PRIMARY member, WHEN requesting to view other Adult member who is not part of the same contract as PRIMARY & THEN should NOT be allowed to view claim records and indicate the person is not part of the contract Person ID: 0358980916542245 Enrollee Id100487194004 Client Key12345",
+    "assertions": [
+      {
+        "passed": false,
+        "errorMsg": "Expected CLAIMS009, but it is CLAIMS010 [Verify that the 'ErrorCode' Should be:CLAIMS010]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:91:56\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected Interservice communication error. Error from omnibus rules service., but it is UnAuthorized Access. [Verify that the 'shortDescription' Should be: UnAuthorized Access.]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:92:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected Unable to retrieve omnibus rules and permission for the given contract 1004871940 and person 0358980916542245, but it is omnibus rules declined the permission for the given contract 1004871940 and person 0358980916542245 [Verify that the 'detailedDescription' Should be: omnibus rules declined the permission for the given contract 1004871940 and person 0358980916542245]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:93:66\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      }
+    ],
+    "duration": 138
+  },
+  {
+    "description": "Enroll API:  TC: Test 12: Given Adult member, WHEN requesting to view other members NOT in this current contract & THEN should NOT be allowed to view claim records and should raise security alert. Person ID: 0002580916542268 Enrollee Id100487795003 Client Key12345",
+    "assertions": [
+      {
+        "passed": false,
+        "errorMsg": "Expected CLAIMS009, but it is CLAIMS010 [Verify that the 'ErrorCode' Should be:CLAIMS010]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:91:56\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected Interservice communication error. Error from omnibus rules service., but it is UnAuthorized Access. [Verify that the 'shortDescription' Should be: UnAuthorized Access.]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:92:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected Unable to retrieve omnibus rules and permission for the given contract 1004877950 and person 0002580916542268, but it is omnibus rules declined the permission for the given contract 1004877950 and person 0002580916542268 [Verify that the 'detailedDescription' Should be: omnibus rules declined the permission for the given contract 1004877950 and person 0002580916542268]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:93:66\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      }
+    ],
+    "duration": 147
+  },
+  {
+    "description": "Enroll API:  TC: Test 13: Invalid Person ID or Enrollee ID Person ID: 1002580916542268 Enrollee Id00487795003 Client Key12345",
+    "assertions": [
+      {
+        "passed": false,
+        "errorMsg": "Expected CLAIMS009, but it is CLAIMS010 [Verify that the 'ErrorCode' Should be:CLAIMS010]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:91:56\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected Interservice communication error. Error from omnibus rules service., but it is UnAuthorized Access. [Verify that the 'shortDescription' Should be: UnAuthorized Access.]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:92:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected Unable to retrieve omnibus rules and permission for the given contract 004877950 and person 1002580916542268, but it is omnibus rules declined the permission for the given contract 004877950 and person 1002580916542268 [Verify that the 'detailedDescription' Should be: omnibus rules declined the permission for the given contract 004877950 and person 1002580916542268]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:93:66\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      }
+    ],
+    "duration": 137
+  },
+  {
+    "description": "Enroll API:  TC: Test 14: Person ID mandatory scenario Person ID: 1 Enrollee Id100487795003 Client Key12345",
+    "assertions": [
+      {
+        "passed": false,
+        "errorMsg": "Expected CLAIMS009, but it is CLAIMS010 [Verify that the 'ErrorCode' Should be:CLAIMS010]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:91:56\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected Interservice communication error. Error from omnibus rules service., but it is UnAuthorized Access. [Verify that the 'shortDescription' Should be: UnAuthorized Access.]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:92:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected Unable to retrieve omnibus rules and permission for the given contract 1004877950 and person 1, but it is omnibus rules declined the permission for the given contract 1004877950 and person 1 [Verify that the 'detailedDescription' Should be: omnibus rules declined the permission for the given contract 1004877950 and person 1]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:93:66\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      }
+    ],
+    "duration": 134
+  },
+  {
+    "description": "Enroll API:  TC: Test 15: Enrollee ID mandatory scenario Person ID: 0002580916542268 Enrollee Id1 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 120
+  },
+  {
+    "description": "Enroll API:  TC: Test 16: Given Primary member (Omnibus rule), WHEN requesting to view other Adult member who has granted permission (Omnibus rule) & THEN should be allowed to view claim records Person ID: 7997000007729429 Enrollee Id239964610302 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 428
+  },
+  {
+    "description": "Enroll API:  TC: Test 17: GIVEN Primary Member with PHI Flag, WHEN requesting to view his or her claim records & THEN should NOT be able to view any informatio Person ID: 5047000004566430 Enrollee Id004579377801 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 180
+  },
+  {
+    "description": "Enroll API:  TC: Test 18: GIVEN Primary Member with PHI Flag, WHEN requesting to view the ADULT dependent claim records & THEN should NOT be able to view any information Person ID: 5047000004566430 Enrollee Id004579377802 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 128
+  },
+  {
+    "description": "Enroll API:  TC: Test 19: GIVEN an ADULT member Without PHI Flag, WHEN requesting to his/her own claim records & THEN should be able to view the information Person ID: 5047000004555079 Enrollee Id004579377802 Client Key12345",
+    "assertions": [
+      {
+        "passed": false,
+        "errorMsg": "Expected 201802149051313, but it is 201709062094222 [Verify that the 'claimId' Should be: 201709062094222]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:40:58\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected 201709062094222, but it is 201708092904559 [Verify that the 'claimId' Should be: 201708092904559]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:40:58\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected 201708092904559, but it is 201802149051313 [Verify that the 'claimId' Should be: 201802149051313]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:40:58\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      }
+    ],
+    "duration": 403
+  },
+  {
+    "description": "Enroll API:  TC: Test 20: GIVEN an ADULT member Without PHI Flag, WHEN requesting the PRIMARY claim records & THEN should NOT be able to view the information Person ID: 5047000004555079 Enrollee Id004579377801 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 128
+  },
+  {
+    "description": "Enroll API:  TC: Test 21: GIVEN Primary Member Without PHI Flag, WHEN requesting to view his or her claim records & THEN should be able to view their information Person ID: 5047000004555079 Enrollee Id004578460901 Client Key12345",
+    "assertions": [
+      {
+        "passed": false,
+        "errorMsg": "Expected 20180456058750, but it is 20172496050442 [Verify that the 'claimId' Should be: 20172496050442]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:40:58\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected 20172496050442, but it is 20172216085352 [Verify that the 'claimId' Should be: 20172216085352]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:40:58\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      },
+      {
+        "passed": false,
+        "errorMsg": "Expected 20172216085352, but it is 20180456058750 [Verify that the 'claimId' Should be: 20180456058750]",
+        "stackTrace": "Error: Failed expectation\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:40:58\n    at Array.forEach (native)\n    at C:\\DD_repos\\dd-cx-testApi\\integration\\scenarios\\enrollClaimApi\\enroll.test.js:38:63\n    at _fetch._fetch.then.response (C:\\DD_repos\\dd-cx-testApi\\node_modules\\frisby\\src\\frisby\\spec.js:214:34)\n    at process._tickCallback (internal/process/next_tick.js:109:7)"
+      }
+    ],
+    "duration": 413
+  },
+  {
+    "description": "Enroll API:  TC: Test 22: GIVEN Primary Member with PHI Flag, WHEN requesting to view the ADULT dependent claim records & THEN should NOT be able to view any information Person ID: 5047000004555079 Enrollee Id004578460902 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 130
+  },
+  {
+    "description": "Enroll API:  TC: Test 23: GIVEN Adult Dependent with PHI Flag, WHEN requesting to view their own claim records & THEN should NOT be able to view their information Person ID: 5047000004566430 Enrollee Id004578460902 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 133
+  },
+  {
+    "description": "Enroll API:  TC: Test 24: GIVEN Adult Dependent with PHI Flag, WHEN requesting to view the PRIMARY's claim records & THEN should NOT be able to view any information Person ID: 5047000004566430 Enrollee Id004578460901 Client Key12345",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 124
+  }
+]

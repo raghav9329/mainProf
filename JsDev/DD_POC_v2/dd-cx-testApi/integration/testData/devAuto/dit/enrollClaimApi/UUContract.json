@@ -1,0 +1,223 @@
+{
+    "testdata": {
+        "test1": {
+            "testCaseDes": "Test 1: Given a PRIMARY member WHEN requesting to view the usage of all members in the contract that he is part of THEN should be allowed to view usage records of members only if the permission is granted",
+            "contractId": "1004871950",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "0358980916542245",
+                    "memberId": "01",
+                    "enrolleeId": "100487195001",
+                    "contractId": "1004871950",
+                    "memberName": "Terrance HOLLISTER"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 1,
+                        "totalRemaining": 1,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "06/11/2018 01:06"
+            }]
+        },
+        "test2": {
+            "testCaseDes": "Test 2:Given an ADULT member WHEN requesting to view the usage of all members in the contract that he is part of THEN should be allowed to view usage records of members based on the Omnibus rule",
+            "contractId": "1004871950",
+            "personId": "0002580916542268",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "0358980916542245",
+                    "memberId": "01",
+                    "enrolleeId": "100487195001",
+                    "contractId": "1004871950",
+                    "memberName": "Terrance HOLLISTER"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records.",
+                "lastCalculatedDate": null
+            }]
+        },
+
+        "test3": {
+            "testCaseDes": "Test 3: Given a CHILD member WHEN requesting to view the usage of all members in the contract that he is part of THEN should be allowed to view usage records of members based on the Omnibus rule",
+            "contractId": "1163798575",
+            "personId": "0431041316550753",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test4": {
+            "testCaseDes": "Test 4: Given a PRIMARY member WHEN requesting to view the usage in the contract that he is NOT part of THEN should NOT be allowed to view usage records and indicate the person is not part of the contract",
+            "contractId": "1004571940",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 500
+            }
+
+        },
+        "test5": {
+            "testCaseDes": "Test 5: Given an ADULT member WHEN requesting to view the usage in the contract that he/she is NOT part of THEN should NOT be allowed to view usage records and indicate the person is not part of the contract",
+            "contractId": "1004571940",
+            "personId": "0002580916542268",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 500
+            }
+        },
+        "test6": {
+            "testCaseDes": "Test 6: Given an CHILD member WHEN requesting to view the usage in the contract that he/she is NOT part of THEN should NOT be allowed to view usage records and indicate the person is not part of the contract",
+            "contractId": "1004571940",
+            "personId": "0656241316550777",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 500
+            }
+        },
+        "test7": {
+            "testCaseDes": "Test 7: Invalid Person ID",
+            "contractId": "1004571940",
+            "personId": "1002580916542268",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 500
+            }
+        },
+        "test8": {
+            "testCaseDes": "Test 8: Valid Person ID",
+            "contractId": "0081607978",
+            "personId": "5080000001392746",
+            "ClientKey": "12345",
+            "verify": [{
+                "memberInfo": {
+                    "personId": "5080000001392746",
+                    "memberId": "04",
+                    "enrolleeId": "008160797804",
+                    "contractId": "0081607978",
+                    "memberName": "Kristel MCDOWELL"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 2,
+                        "totalRemaining": 0,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                            "totalUsed": 2
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "07/02/2018 04:07"
+            }, {
+                "memberInfo": {
+                    "personId": "5080000001392746",
+                    "memberId": "04",
+                    "enrolleeId": "008160797804",
+                    "contractId": "0081607978",
+                    "memberName": "Kristel MCDOWELL"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 1,
+                        "totalUsed": 2,
+                        "totalRemaining": -1,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                            "totalUsed": 2
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "07/02/2018 04:07"
+            }, {
+                "memberInfo": {
+                    "personId": "5080000001396320",
+                    "memberId": "02",
+                    "enrolleeId": "008160797802",
+                    "contractId": "0081607978",
+                    "memberName": "Alphonse MCDOWELL"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "message": "Omnibus-rule:Person is a child. A Child can't see other members records.",
+                "lastCalculatedDate": null
+            }, {
+                "memberInfo": {
+                    "personId": "5080000001396320",
+                    "memberId": "02",
+                    "enrolleeId": "008160797802",
+                    "contractId": "0081607978",
+                    "memberName": "Alphonse MCDOWELL"
+                },
+                "planInfo": null,
+                "usageInfo": null,
+                "message": "Omnibus-rule:Person is a child. A Child can't see other members records.",
+                "lastCalculatedDate": null
+            }]
+        }
+    }
+
+}

@@ -1,0 +1,275 @@
+{
+    "enrolleeTestData":
+    {
+        "test1":
+        {
+            "enrolleeId": "100487195001",
+            "PersonId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "enrolleeId": "100487195001",
+                "enrolleeName": "Terrance AUGUSTA HOLLISTER",
+                "enrolleeType": "Primary",
+                "enrolleeClaimSummaryList": [
+                {
+                    "personId": "0358980916542245",
+                    "claimId": "20170626097060",
+                    "claimStatus": "Claim Paid",
+                    "dateOfService": "12-20-2016",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240764119240764119001PRV50998902100",
+                        "providerName": null,
+                        "active": false,
+                        "gender": null,
+                        "phoneNumber": null
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1206",
+                        "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE VARNISH",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 20
+                },
+                {
+                    "personId": "0358980916542245",
+                    "claimId": "20172376088994",
+                    "claimStatus": "Claim Paid",
+                    "dateOfService": "08-25-2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240764119240764119001PRV25390000400",
+                        "providerName": null,
+                        "active": false,
+                        "gender": null,
+                        "phoneNumber": null
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D2331",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - TWO SURFACES, ANTERIOR TOOTH",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D2150",
+                        "procedureDescription": "AMALGAM - TWO SURFACES, PRIMARY OR PERMANENT TOOTH",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 72.6
+                },
+                {
+                    "personId": "0358980916542245",
+                    "claimId": "20172152406875",
+                    "claimStatus": "Claim Paid",
+                    "dateOfService": "07-31-2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240764119240764119001PRV25390000400",
+                        "providerName": null,
+                        "active": false,
+                        "gender": null,
+                        "phoneNumber": null
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D2740",
+                        "procedureDescription": "CROWN - PORCELAIN/CERAMIC",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 413
+                },
+                {
+                    "personId": "0358980916542245",
+                    "claimId": "20171876056593",
+                    "claimStatus": "Claim Paid",
+                    "dateOfService": "07-05-2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240764119240764119001PRV25390000400",
+                        "providerName": null,
+                        "active": false,
+                        "gender": null,
+                        "phoneNumber": null
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1206",
+                        "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE VARNISH",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0330",
+                        "procedureDescription": "PANORAMIC RADIOGRAPHIC IMAGE",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 20
+                },
+                {
+                    "personId": "0358980916542245",
+                    "claimId": "20180096091635",
+                    "claimStatus": "Claim Paid",
+                    "dateOfService": "01-09-2018",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP019284956019284956001PRV50998902100",
+                        "providerName": null,
+                        "active": false,
+                        "gender": null,
+                        "phoneNumber": null
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1206",
+                        "procedureDescription": "TOPICAL APPLICATION OF FLUORIDE VARNISH",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 20
+                }]
+            }
+        },
+        "test2":
+        {
+            "enrolleeId": "100487195001",
+            "PersonId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "enrolleeId": "239973584302",
+                "enrolleeName": "Lissa  KOESTER",
+                "enrolleeType": "Dependent",
+                "enrolleeClaimSummaryList": [
+                {
+                    "personId": "7997000007699287",
+                    "claimId": "20172356027125",
+                    "claimStatus": "Claim Paid",
+                    "dateOfService": "08-22-2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP299530028299530028001PRV29953002200",
+                        "providerName": null,
+                        "active": false,
+                        "gender": null,
+                        "phoneNumber": null
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 0
+                },
+                {
+                    "personId": "7997000007699287",
+                    "claimId": "20170536005443",
+                    "claimStatus": "Claim Paid",
+                    "dateOfService": "02-21-2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP299530028299530028001PRV29953002200",
+                        "providerName": null,
+                        "active": false,
+                        "gender": null,
+                        "phoneNumber": null
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D2331",
+                        "procedureDescription": "RESIN-BASED COMPOSITE - TWO SURFACES, ANTERIOR TOOTH",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 0
+                },
+                {
+                    "personId": "7997000007699287",
+                    "claimId": "20170396012731",
+                    "claimStatus": "Claim Paid",
+                    "dateOfService": "02-07-2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP299530028299530028001PRV29953002200",
+                        "providerName": null,
+                        "active": false,
+                        "gender": null,
+                        "phoneNumber": null
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D0274",
+                        "procedureDescription": "BITEWINGS - FOUR RADIOGRAPHIC IMAGES",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 0
+                }]
+            }
+        }
+    },
+    "negativeEnrolleeTestData":
+    {
+        "test1":
+        {
+            "claimId": "201706260970601 ",
+            "personId": "0358980916542245",
+            "errorCode": "CLAIMS005",
+            "shortDescription": "Error in retrieving claims details for the given claim id: 201706260970601 .",
+            "detailedDescription": "Error in retrieving claims details for the given claim id: 201706260970601 ."
+        }
+    }
+}

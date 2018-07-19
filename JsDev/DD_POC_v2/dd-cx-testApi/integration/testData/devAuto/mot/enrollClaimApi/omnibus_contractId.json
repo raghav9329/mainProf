@@ -1,0 +1,58 @@
+{
+    "positiveTestData":
+    {
+        "test1":
+        {
+            "personId": "0358980916542245",
+            "contractId": "1004871950",
+            "memberInfo": [
+            {
+                "memberId": "04",
+                "memberName": "ZULEMA HOLLISTER",
+                "memberAge": 21,
+                "permissionGranted": false,
+                "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details.NOT OK to allow it."
+            },
+            {
+                "memberId": "03",
+                "memberName": "CANDIS HOLLISTER",
+                "memberAge": 22,
+                "permissionGranted": true,
+                "message": "Omnibus-rule: Adult enrollee granted permission to primary member. OK to view enrollee's  records."
+            },
+            {
+                "memberId": "02",
+                "memberName": "JOLINE HOLLISTER",
+                "memberAge": 62,
+                "permissionGranted": true,
+                "message": "Omnibus-rule: Adult enrollee granted permission to primary member. OK to view enrollee's  records."
+            },
+            {
+                "memberId": "01",
+                "memberName": "TERRANCE HOLLISTER",
+                "memberAge": 55,
+                "permissionGranted": true,
+                "message": "Omnibus-rule:Person is requesting for his or her records. OK to allow it."
+            }]
+        }
+    },
+    "negativeTestData":
+    {
+        "test2":
+        {
+            "personId": "03589809165422451",
+            "contractId": "1004871950",
+            "errorCode": "OMNIBUS_ERROR_RULE005",
+            "shortDescription": "Unauthorized access.",
+            "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+        },
+        "test3":
+        {
+            "personId": "0358980916542245",
+            "contractId": "10048719501",
+            "errorCode": "OMNIBUS_ERROR_RULE004",
+            "shortDescription": "Bad Request Exception.",
+            "detailedDescription": "There are no enrollee's available in the given contract."
+        }
+    }
+}

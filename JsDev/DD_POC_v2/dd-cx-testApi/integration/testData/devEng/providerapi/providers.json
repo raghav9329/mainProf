@@ -1,0 +1,645 @@
+{
+    "test1":
+    {
+        "params":
+        {
+            "distance": "60",
+            "page": "0",
+            "per_page": "10",
+            "max": "1500",
+            "meta_data": false
+        },
+        "verify":
+        {
+            "errorCode": "PDS000",
+            "shortDescription": "General exception.",
+            "detailedDescription": "General exception."
+        }
+    },
+    "testdata1":
+    {
+        "test1":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "specialty": "General Dentist",
+                "max": "1500",
+                "meta_data": false
+            }
+        },
+        "test2":
+        {
+            "params":
+            {
+                "zipcode": "96002",
+                "distance": "60",
+                "page": "0",
+                "specialty": "General Dentist",
+                "per_page": "10",
+                "max": "1500",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "Redding",
+                "state": "CA"
+            }
+        },
+        "test3":
+        {
+            "params":
+            {
+                "lat": 37,
+                "long": -112,
+                "distance": "60",
+                "specialty": "General Dentist",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "meta_data": false
+            }
+        },
+        "test4":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "General Dentist",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "speciality": "General Dentist"
+            }
+        },
+        "test5":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "General Dentist",
+                "meta_data": true
+            },
+
+            "verify":
+            {
+                "numberOfProviders": 8328,
+                "numberOfFacilities": 372,
+                "numberOfOffices": 4667
+            }
+        },
+        "test6":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "General Dentist",
+                "network": "2PREMIER",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "speciality": "General Dentist",
+                "networkID": "2PREMIER"
+            }
+        },
+        "test7":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "5",
+                "specialty": "General Dentist",
+                "max": "1500",
+                "free_text": "Ortho",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "specialty": "Orthodontist"
+            }
+        },
+        "test8":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "specialty": "General Dentist",
+                "max": "1500",
+                "boardCertified": true,
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "boardCertified": true,
+                "city": "San Francisco",
+                "state": "CA",
+                "specialty": "Orthodontist"
+            }
+        },
+        "test9":
+        {
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "distance": "60",
+                "page": "0",
+                "per_page": "20",
+                "specialty": "General Dentist",
+                "max": "1500",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2PREMIER"
+            },
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "network": "2PREMIER"
+
+
+            }
+        },
+        "test10":
+        {
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "distance": "60",
+                "page": "0",
+                "per_page": "20",
+                "specialty": "General Dentist",
+                "max": "1500",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2NYPPO"
+            },
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "network": "2NYPPO"
+
+
+            }
+        },
+        "test11":
+        {
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "distance": "60",
+                "page": "0",
+                "per_page": "20",
+                "specialty": "General Dentist",
+                "max": "1500",
+                "sort_field": "distance",
+                "sort_order": "desc"
+            },
+            "verify":
+            {
+                "status": 200
+
+            }
+        },
+        "test12":
+        {
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "distance": "60",
+                "page": "0",
+                "per_page": "20",
+                "specialty": "General Dentist",
+                "max": "1500",
+                "sort_field": "distance",
+                "sort_order": "asc"
+            },
+            "verify":
+            {
+                "status": 200
+
+            }
+        },
+        "test13":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "free_text": "richard",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "94110",
+                "status": 200,
+                "free_text": "Richard"
+            }
+        },
+        "test14":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "free_text": "Salameh-Punch",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "94110",
+                "status": 200,
+                "free_text": "Salameh-Punch"
+            }
+        },
+        "test15":
+        {
+            "params":
+            {
+                "zipcode": "10013",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "3CK",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "10013",
+                "status": 200,
+                "free_text": "3CK"
+            }
+        },
+        "test16":
+        {
+            "params":
+            {
+                "zipcode": "94568",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "1376627687",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "94568",
+                "status": 200,
+                "free_text": "1376627687"
+            }
+        },
+        "test17":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "Marathi",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "94110",
+                "status": 200,
+                "free_text": "Marathi"
+            }
+        },
+        "test18":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "O'Connor",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "94110",
+                "status": 200,
+                "free_text": "O'Connor"
+            }
+        },
+        "test19":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "48130",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "94110",
+                "status": 200,
+                "free_text": "48130"
+            }
+        },
+        "test20":
+        {
+            "params":
+            {
+                "zipcode": "94110",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "2PPO",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "94110",
+                "status": 200,
+                "free_text": "2PPO"
+            }
+        },
+        "test21":
+        {
+            "params":
+            {
+                "zipcode": "32225",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "60000",
+                "free_text": "Greenberg Dental ",
+                "specialty": "GENERAL DENTIST",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "32225",
+                "status": 200,
+                "free_text": "Greenberg Dental"
+            }
+        },
+        "test22":
+        {
+            "params":
+            {
+                "zipcode": "95336",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "1063893899",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "95336",
+                "status": 200,
+                "free_text": "1063893899"
+            }
+        },
+        "test23":
+        {
+            "params":
+            {
+                "zipcode": "95336",
+                "distance": "60",
+                "page": "0",
+                "per_page": "60000",
+                "max": "60000",
+                "free_text": "Hebrew",
+                "meta_data": false
+            },
+            "verify":
+            {
+                "zipcode": "95336",
+                "status": 200,
+                "free_text": "Hebrew"
+            }
+        },
+        "test24":
+        {
+            "params":
+            {
+                "lat": "42.7135658",
+                "long": "-73.8134003",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "specialty": "General Dentist",
+                "max": "1500",
+                "sourceNetwork": "2NYCHPLUS",
+                "targetNetwork": "2NYCHPLUS"
+            },
+            "verify":
+            {
+                "status": 200,
+                "network": "2NYCHPLUS"
+            }
+        }
+    },
+    "testdata2":
+    {
+        "test1":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "General Dentist",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "General Dentist"
+            }
+        },
+        "test2":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "Oral Surgeon",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "Oral Surgeon"
+            }
+        },
+        "test3":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "Periodontist",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "Periodontist"
+            }
+        },
+        "test4":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "Endodontist",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "Endodontist"
+            }
+        },
+        "test5":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "Orthodontist",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "Orthodontist"
+            }
+        },
+        "test6":
+        {
+            "params":
+            {
+                "zipcode": "94105",
+                "distance": "60",
+                "page": "0",
+                "per_page": "10",
+                "max": "1500",
+                "specialty": "General Dentist",
+                "network": "2PREMIER",
+                "meta_data": false
+            },
+
+            "verify":
+            {
+                "status": 200,
+                "distance": 60,
+                "city": "San Francisco",
+                "state": "CA",
+                "Speciality": "General Dentist",
+                "networkID": "2PREMIER"
+            }
+        }
+    }
+
+}

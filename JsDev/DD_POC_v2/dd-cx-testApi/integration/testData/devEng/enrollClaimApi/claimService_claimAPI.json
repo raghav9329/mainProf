@@ -1,0 +1,150 @@
+{
+    "claimTestData":
+    {
+        "test1":
+        {
+            "claimId": "20170626097060 ",
+            "personId": "0358980916542245",
+            "verify":
+            {
+                "claimId": "20170626097060 ",
+                "claimType": "DE",
+                "contractId": "1004871950               ",
+                "claims":
+                {
+                    "claimSource": "2",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails":
+                {
+                    "personId": "0358980916542245",
+                    "firstName": "Terrance",
+                    "middleName": "Augusta",
+                    "lastName": "Hollister",
+                    "birthDate": "1962-08-06 00:00:00"
+                },
+                "providerDetail":
+                {
+                    "providerKey": "GRP240764119240764119001PRV50998902100",
+                    "providerName": "TERA M MOELLER",
+                    "active": false,
+                    "gender": null,
+                    "phoneNumber": null
+                },
+                "procedureDetails": [
+                {
+                    "serviceLine": "1",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "procedureItems": [
+                    {
+                        "procedureCode": "D0120",
+                        "procDescription": "periodic oral evaluation - established patient",
+                        "toothCd": "  ",
+                        "submittedAmount": 53,
+                        "acceptedAmount": 25,
+                        "paidByDeltaAmount": 25,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 25,
+                        "contractBenefitLevel": 100
+                    }]
+                },
+                {
+                    "serviceLine": "2",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "procedureItems": [
+                    {
+                        "procedureCode": "D0274",
+                        "procDescription": "bitewings - four radiographic images",
+                        "toothCd": "  ",
+                        "submittedAmount": 68,
+                        "acceptedAmount": 34,
+                        "paidByDeltaAmount": 34,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 34,
+                        "contractBenefitLevel": 100
+                    }]
+                },
+                {
+                    "serviceLine": "3",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "procedureItems": [
+                    {
+                        "procedureCode": "D1110",
+                        "procDescription": "prophylaxis (cleaning) - adult",
+                        "toothCd": "  ",
+                        "submittedAmount": 96,
+                        "acceptedAmount": 48,
+                        "paidByDeltaAmount": 48,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 48,
+                        "contractBenefitLevel": 100
+                    }]
+                },
+                {
+                    "serviceLine": "4",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "procedureItems": [
+                    {
+                        "procedureCode": "D1206",
+                        "procDescription": "topical application of fluoride varnish",
+                        "toothCd": "  ",
+                        "submittedAmount": 30,
+                        "acceptedAmount": 20,
+                        "paidByDeltaAmount": 0,
+                        "paidByPatientAmount": 20,
+                        "deductibleAmount": 0,
+                        "explnCode": "757",
+                        "explnDescription": "The patient exceeds the program's age limit for this procedure. Therefore, the patient is responsible for the amount indicated as \"Patient Pays.\"",
+                        "maxContractAllowance": 20,
+                        "contractBenefitLevel": 100
+                    }]
+                }],
+                "claimProcesingTime":
+                {
+                    "receivedTime": "2017-03-07 19:18:46.829009",
+                    "statusTime": "2017-03-03 00:00:01",
+                    "paidTime": "2017-03-10 19:17:01"
+                },
+                "visitSummary":
+                {
+                    "totalSubmittedAmount": 247,
+                    "totalAcceptedAmount": 127,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 20,
+                    "totalPaidByDeltaAmount": 107,
+                    "totalDeductibleAmount": 0
+                }
+            }
+        }
+    },
+    "negativeClaimTestData":
+    {
+        "test1":
+        {
+            "claimId": "201706260970601 ",
+            "personId": "0358980916542245",
+            "errorCode": "CLAIMS005",
+            "shortDescription": "Error in retrieving claims details for the given claim id: 201706260970601 .",
+            "detailedDescription": "Error in retrieving claims details for the given claim id: 201706260970601 ."
+        }
+    }
+}

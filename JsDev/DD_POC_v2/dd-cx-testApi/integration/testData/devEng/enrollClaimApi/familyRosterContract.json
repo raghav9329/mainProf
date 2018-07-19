@@ -1,0 +1,69 @@
+{
+    "contracttestdata":
+    {
+        "test1":
+        {
+            "testCaseDesc": "GIVEN Valid PersonID, WHEN requesting to view Contract details & THEN should be able to view contract details of the person.",
+            "contractId": "2709600291",
+            "ClientKey": "12345",
+            "personId": "6107000007143442",
+            "person_Id": "6107000007143442",
+            "benefitId": "DCAA5400",
+            "bl7Flag": "DLTACARE USA",
+            "networkIdMapping": "DLTACARE USA",
+            "groupId": "70116",
+            "groupTypeId": "INDIVIDUAL",
+            "divisionId": "00007",
+            "groupSurrogateId": "5310",
+            "healthCareContractHolderId": "DDIC DHMO",
+            "divisionSurrogateId": "28927",
+            "active": true,
+            "startDate": "02/01/2017",
+            "endDate": "12/31/9999",
+            "groupDescription": "INDIV CA FAMILY",
+            "divisionDescription": "INDIV CA FAMILY-CAA54",
+            "planName": "DELTACARE",
+            "planType": "INDIVIDUAL",
+            "state": "CA"
+        }
+    },
+    "contracttestdata1":
+    {
+        "test2":
+        {
+            "testCaseDesc": "GIVEN invalid PersonID, WHEN requesting to view Contract details & THEN should be able to view Invalid person id.",
+            "contractId": "1138726092",
+            "person_Id": "07746223142006",
+            "personId": "0774622314200620",
+            "ClientKey": "12345",
+            "shortDescription": "Invalid person id",
+            "detailedDescription": "Invalid person id"
+        },
+        "test3":
+        {
+            "testCaseDesc": "GIVEN empty PersonID, WHEN requesting to view Contract details & THEN should be able to view Invalid person id.",
+            "person_Id": "{person-id}",
+            "personId": "0774622314200620",
+            "ClientKey": "12345",
+            "shortDescription": "Invalid person id",
+            "detailedDescription": "Invalid person id"
+        },
+        "test4":
+        {
+            "testCaseDesc": "GIVEN  valid PersonID and empty personId in header, WHEN requesting to view Contract details & THEN should be able to view headers are missing.",
+            "person_Id": "0774622314200620",
+            "ClientKey": "12345",
+            "error": "Bad Request",
+            "message": "Security violation. Expected security headers are missing."
+        },
+        "test5":
+        {
+            "testCaseDesc": "GIVEN valid PersonID and iinvalid clientkey, WHEN requesting to view Contract details & THEN should be able to view invalid clientkey.",
+            "person_Id": "0774622314200620",
+            "personId": "0774622314200620",
+            "ClientKey": "1234",
+            "error": "Unauthorized",
+            "message": "Security violation. Invalid Client Key"
+        }
+    }
+}

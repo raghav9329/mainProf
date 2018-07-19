@@ -1,0 +1,90 @@
+{
+    "positiveTestData":
+    {
+        "test1":
+        {
+            "personId": "0358980916542245",
+            "contractId": "1004871950",
+            "ClientKey": "12345",
+            "params":
+            {
+                "rule-types": "omnibus"
+            },
+            "memberInfo": [
+            {
+                "memberId": "02",
+                "memberName": "JOLINE HOLLISTER",
+                "memberAge": 62,
+                "omnibusInfo":
+                {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records. Not OK to allow it"
+                },
+                "phiEnabled": false
+            },
+            {
+                "memberId": "03",
+                "memberName": "CANDIS HOLLISTER",
+                "memberAge": 22,
+                "omnibusInfo":
+                {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records. Not OK to allow it"
+                },
+                "phiEnabled": false
+            },
+            {
+                "memberId": "04",
+                "memberName": "ZULEMA HOLLISTER",
+                "memberAge": 21,
+                "omnibusInfo":
+                {
+                    "permissionGranted": false,
+                    "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records. Not OK to allow it"
+                },
+                "phiEnabled": false
+            },
+            {
+                "memberId": "01",
+                "memberName": "TERRANCE HOLLISTER",
+                "memberAge": 55,
+                "omnibusInfo":
+                {
+                    "permissionGranted": true,
+                    "message": "Omnibus-rule:Person is requesting for his or her records. OK to allow it."
+                },
+                "phiEnabled": false
+            }]
+        }
+    },
+    "negativeTestData":
+    {
+        "test2":
+        {
+            "personId": "03589809165422451",
+            "contractId": "1004871950",
+            "ClientKey": "12345",
+            "params":
+            {
+                "rule-types": "omnibus"
+            },
+            "errorCode": "OMNIBUS_ERROR_RULE005",
+            "shortDescription": "Unauthorized access.",
+            "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+        },
+        "test3":
+        {
+            "personId": "0358980916542245",
+            "contractId": "10048719501",
+            "ClientKey": "12345",
+            "params":
+            {
+                "rule-types": "omnibus"
+            },
+            "errorCode": "OMNIBUS_ERROR_RULE005",
+            "shortDescription": "Unauthorized access.",
+            "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+            
+        }
+    }
+}

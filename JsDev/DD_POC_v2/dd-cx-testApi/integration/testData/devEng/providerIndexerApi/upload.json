@@ -1,0 +1,72 @@
+[
+{
+"providerKey": "GRP243755362243755362015PRV24068494500",
+"yelpReviewCount": 2,
+"yelpRating": 5,
+"yelpUrl": "https://www.yelp.com/biz/lie-ying-periu-dmd-melbourne?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+"yelpId": "lie-ying-periu-dmd-melbourne",
+"newlyAdded": false,
+"yelpQualityIndex": 0,
+"lastUpdatedDate": "2017-12-13T22:27:38.067Z"
+},
+{
+"providerKey": "GRP240294063240294063003PRV24029694500",
+"yelpReviewCount": 72,
+"yelpRating": 4.5,
+"yelpUrl": "https://www.yelp.com/biz/briargrove-smiles-dentistry-houston?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+"yelpId": "briargrove-smiles-dentistry-houston",
+"newlyAdded": false,
+"yelpQualityIndex": 0,
+"lastUpdatedDate": "2017-12-13T22:27:38.067Z"
+},
+{
+"providerKey": "GRP240588113240588113001PRV24067449915",
+"yelpReviewCount": 70,
+"yelpRating": 3,
+"yelpUrl": "https://www.yelp.com/biz/gentle-dental-costa-mesa-costa-mesa-2?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+"yelpId": "gentle-dental-costa-mesa-costa-mesa-2",
+"newlyAdded": false,
+"yelpQualityIndex": 0,
+"lastUpdatedDate": "2017-12-13T22:27:38.067Z"
+},
+{
+"providerKey": "GRP240619836240619836001PRV24069905901",
+"yelpQualityIndex": -1,
+"lastUpdatedDate": "2017-12-13T22:27:38.067Z"
+},
+{
+"providerKey": "GRP240619836240619836001PRV24069905900",
+"yelpQualityIndex": -1,
+"lastUpdatedDate": "2017-12-13T23:36:18.883Z"
+},
+{
+"providerKey": "GRP240637191240637191001PRV24070463900",
+"yelpQualityIndex": -1,
+"lastUpdatedDate": "2017-12-13T22:27:38.067Z"
+},
+{
+"providerKey": "GRP240602957240602957001PRV24073301800",
+"yelpQualityIndex": -1,
+"lastUpdatedDate": "2017-12-13T23:36:18.883Z"
+},
+{
+"providerKey": "GRP240579848240579848014PRV74146467400",
+"yelpQualityIndex": -1,
+"lastUpdatedDate": "2017-12-13T23:36:18.883Z"
+},
+{
+"providerKey": "GRP233460013233460013001PRV51000283020",
+"yelpQualityIndex": -1,
+"lastUpdatedDate": "2017-12-13T23:36:18.883Z"
+},
+{
+"providerKey": "GRP240619836240619836001PRV24069905902",
+"yelpReviewCount": 41,
+"yelpRating": 4,
+"yelpUrl": "https://www.yelp.com/biz/leong-dental-san-francisco?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+"yelpId": "leong-dental-san-francisco",
+"newlyAdded": false,
+"yelpQualityIndex": 0,
+"lastUpdatedDate": "2017-12-13T23:40:37.627Z"
+}
+]

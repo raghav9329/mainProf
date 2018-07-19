@@ -1,0 +1,49 @@
+{  
+   "enrolleetestdata":{  
+      "enrollee1":{  
+         "ClientKey":"12345",
+         "enrolleeId":"100487195001",
+         "personId":"0358980916542245"
+      }
+   },
+   "enrolleetestdata1":
+    {
+        "enrollee1":
+        {
+            "testCaseDes": "Invalid EnrolleeId",
+            "ClientKey": "12345",            
+            "enrolleeId": "1004871950012",
+            "personId": "0358980916542245",
+            "errorCode": "USAGE000",
+            "shortDescription": "Generic Application Exception",
+            "detailedDescription": "Generic Application Exception. {0}"
+        },
+        "enrollee2":
+        {
+            "testCaseDes": "Invalid PersonId",
+            "ClientKey": "12345",            
+            "enrolleeId": "100487195001",
+            "personId": "03589809165422456",
+            "errorCode": "USAGE000",
+            "shortDescription": "Generic Application Exception",
+            "detailedDescription": "Generic Application Exception. {0}"
+        },
+        "enrollee3":
+        {
+            "testCaseDes": "Empty PersonId",
+            "ClientKey": "12345",            
+            "enrolleeId": "100487195001",
+            "error": "Bad Request",
+            "message": "Security violation. Expected security headers are missing."
+        },
+        "enrollee4":
+        {
+            "testCaseDes": "Invalid ClientKey",
+            "ClientKey": "1234",            
+            "enrolleeId": "100487195001",
+            "personId": "03589809165422456",
+            "error": "Unauthorized",
+            "message": "Security violation. Invalid Client Key"
+        }
+    }
+}

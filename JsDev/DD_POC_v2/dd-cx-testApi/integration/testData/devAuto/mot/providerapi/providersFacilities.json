@@ -1,0 +1,323 @@
+{
+    "testdata":
+    {
+        "test1":
+        {
+            "facilityId": "035363",
+            "params":
+            {
+                "lat": "37",
+                "long": "-122"
+            },
+            "verify":
+            {
+                "facilityId": "035363",
+                "name": "Alex Rabinovich, Md, Inc",
+                "address":
+                {
+                    "addressLine": "129 Sacramento St, ",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94111-4001",
+                    "latitude": 37.7944756,
+                    "longitude": -122.3971176
+                },
+                "license":
+                {
+                    "licenseNumber": "48850",
+                    "licenseState": "CA"
+                }
+            },
+            "isExecution": true
+        },
+        "test2":
+        {
+            "facilityId": "022886",
+            "params":
+            {
+                "sourceNetwork": "2PPO",
+                "targetNetwork": "2AMGEN",
+                "lat": "34",
+                "long": "-117"
+            },
+            "verify":
+            {
+                "facilityId": "022886",
+                "name": "Monet Dental Group",
+                "address":
+                {
+                    "addressLine": "12455 Victoria Gardens Ln Ste 190, ",
+                    "city": "Rancho Cucamonga",
+                    "state": "CA",
+                    "zipcode": "91739-7534",
+                    "latitude": 34.1077271,
+                    "longitude": -117.5337753
+                },
+                "license":
+                {
+                    "licenseNumber": "38682",
+                    "licenseState": "CA"
+                }
+            },
+            "isExecution": true
+        },
+        "test3":
+        {
+            "facilityId": "008039",
+            "params":
+            {
+                "sourceNetwork": "2PREMIER",
+                "targetNetwork": "2AMGEN",
+                "lat": "26",
+                "long": "-80"
+            },
+            "verify":
+            {
+                "facilityId": "008039",
+                "name": "Oakland Dental Llc",
+                "address":
+                {
+                    "addressLine": "4416 W Oakland Park Blvd",
+                    "city": "Laud Lakes",
+                    "state": "FL",
+                    "zipcode": "33313-1819",
+                    "latitude": 26.1645164,
+                    "longitude": -80.208107
+                },
+                "license":
+                {
+                    "licenseNumber": "11026",
+                    "licenseState": "FL"
+                }
+            },
+            "isExecution": true
+        },
+        "test4":
+        {
+            "facilityId": "041026",
+            "params":
+            {
+                "sourceNetwork": "2PREMIER",
+                "targetNetwork": "2AMGEN",
+                "lat": "40",
+                "long": "-76"
+            },
+            "verify":
+            {
+                "facilityId": "041026",
+                "name": "Lancaster Dental Arts Pc",
+                "address":
+                {
+                    "addressLine": "60 W Walnut St, ",
+                    "city": "Lancaster",
+                    "state": "PA",
+                    "zipcode": "17603-3015",
+                    "latitude": 40.042202,
+                    "longitude": -76.3078232
+                },
+                "license":
+                {
+                    "licenseNumber": "39163",
+                    "licenseState": "PA"
+                }
+            },
+            "isExecution": true
+        },
+        "test5":
+        {
+            "facilityId": "040523",
+            "params":
+            {
+                "sourceNetwork": "2PPO",
+                "targetNetwork": "2AMGEN"
+            },
+            "verify":
+            {
+                "facilityId": "040523",
+                "name": "Arcady Sniper DDS",
+                "address":
+                {
+                    "addressLine": "807A Utica Ave, ",
+                    "city": "Brooklyn",
+                    "state": "NY",
+                    "zipcode": "11203-3410",
+                    "latitude": 40.6533623,
+                    "longitude": -73.9303818
+                },
+                "license":
+                {
+                    "licenseNumber": "38306",
+                    "licenseState": "NY"
+                }
+            },
+            "isExecution": true
+        }
+    },
+    "negativetestdata":
+    {
+        "negativetest1":
+        {
+            "facilityId": "0353634",
+            "params":
+            {
+                "lat": "37",
+                "long": "-122"
+            },
+            "verify":
+            {
+                "facilityId": null,
+                "name": null,
+                "address":
+                {
+                    "addressLine": null
+                },
+                "license": null
+            },
+            "isExecution": true
+        },
+        "negativetest2":
+        {
+            "facilityId": "",
+            "params":
+            {
+                "lat": "37",
+                "long": "-122"
+            },
+            "verify":
+            {
+                "errorCode": "PDS008",
+                "shortDescription": "Solr exception. Unable to retrieve facility details for the facility id:{facilityId}",
+                "detailedDescription": "Solr exception. Unable to retrieve facility details for the facility id:{facilityId}"
+            },
+            "isExecution": true
+        }
+
+    },
+    "amgentestdata":
+    {
+        "amgen1":
+        {
+            "facilityId": "026971",
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2DELTACARE"
+            },
+            "verify":
+            {
+                "facilityId": "026971",
+                "name": "American Dental Offices Pllc",
+                "address":
+                {
+                    "addressLine": "241 W 30th St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zipcode": "10001-2823",
+                    "latitude": 40.7491951,
+                    "longitude": -73.993927
+                },
+                "license":
+                {
+                    "licenseNumber": "56090",
+                    "licenseState": "NY"
+                }
+            },
+            "isExecution": true
+        },
+        "amgen2":
+        {
+            "facilityId": "026971",
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2PREMIER"
+            },
+            "verify":
+            {
+                "facilityId": "026971",
+                "name": "American Dental Offices Pllc",
+                "address":
+                {
+                    "addressLine": "241 W 30th St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zipcode": "10001-2823",
+                    "latitude": 40.7491951,
+                    "longitude": -73.993927
+                },
+                "license":
+                {
+                    "licenseNumber": "56090",
+                    "licenseState": "NY"
+                }
+            },
+            "isExecution": true
+        },
+        "amgen3":
+        {
+            "facilityId": "026971",
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2PPO"
+            },
+            "verify":
+            {
+                "facilityId": "026971",
+                "name": "American Dental Offices Pllc",
+                "address":
+                {
+                    "addressLine": "241 W 30th St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zipcode": "10001-2823",
+                    "latitude": 40.7491951,
+                    "longitude": -73.993927
+                },
+                "license":
+                {
+                    "licenseNumber": "56090",
+                    "licenseState": "NY"
+                }
+            },
+            "isExecution": true
+        },
+        "amgen4":
+        {
+            "facilityId": "026971",
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2NYPPO"
+            },
+            "verify":
+            {
+                "facilityId": "026971",
+                "name": "American Dental Offices Pllc",
+                "address":
+                {
+                    "addressLine": "241 W 30th St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zipcode": "10001-2823",
+                    "latitude": 40.7491951,
+                    "longitude": -73.993927
+                },
+                "license":
+                {
+                    "licenseNumber": "56090",
+                    "licenseState": "NY"
+                }
+            },
+            "isExecution": true
+        }
+    }
+}

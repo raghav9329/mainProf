@@ -1,0 +1,9 @@
+{
+    "indexeryelptestdata":
+    {
+        "error": null,
+        "startTime": "Wed May 23 19:05:51 IST 2018",
+        "endTime": "Wed May 23 19:05:51 IST 2018",
+        "desc": "Successfully Processed yelp data to the yelp collection"
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "testdata":
+    {
+
+        "test1":
+        {
+            "params":
+            {
+
+                "text": "Ortho"
+            },
+            "verify": "ORTHO"
+        },
+        "test2":
+        {
+            "params":
+            {
+
+                "text": "Endo"
+            },
+
+            "verify": "Endo"
+        },
+        "test3":
+        {
+            "params":
+            {
+                "text": "Pedi"
+            },
+
+            "verify": "Pedi"
+        },
+        "test4":
+        {
+            "params":
+            {
+                "text": "Prosth"
+            },
+
+            "verify": "Prosth"
+        },
+        "test5":
+        {
+            "params":
+            {
+                "text": "Dentist"
+            },
+
+            "verify": "Dentist"
+        }
+    },
+    "test6":
+    {
+        "params":
+        {
+            "text": "John"
+
+        },
+
+        "verify": "John"
+    },
+    "test7":
+    {
+        "params":
+        {
+            "text": "John",
+            "lat" :37,
+            "long":-112
+
+        },
+
+        "verify": "John"
+    },
+    "test8":
+    {
+        "params":
+        {
+            "text": "gen",
+            "lat" :37,
+            "long":-112
+
+        },
+
+        "verify": "Gen"
+    }
+    ,
+    "test9":
+    {
+        "params":
+        {
+            
+            "lat" :37,
+            "long":-112,
+            "distance":60
+
+        },
+
+        "verify": {
+            "message": "Required String parameter 'text' is not present"
+        }
+    }
+
+}

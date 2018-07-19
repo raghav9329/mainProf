@@ -1,0 +1,959 @@
+{
+    "testdata":
+    {
+
+        "PK1":
+        {
+            "providerKey": "GRP240645139240645139001PRV24072991700",
+            "params":
+            {
+                "latitude": 37.7931023,
+                "longitude": -122.3924255
+            },
+            "verify":
+            {
+                "providerKey": "GRP240645139240645139001PRV24072991700",
+                "firstName": "Yvette",
+                "middleName": "D",
+                "lastName": "Marquis",
+                "fullName": "Yvette Marquis",
+                "specialty": "General Dentist",
+                "officeName": "Yvette Danielle Marquis  DDS",
+                "practiceLocationNumber": "240645139001",
+                "officePhone": "(415) 777-5115",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": null,
+                "website": null,
+                "address":
+                {
+                    "addressLine": "131 Steuart St Ste 323",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1241",
+                    "latitude": 37.7931023,
+                    "longitude": -122.3924255
+                },
+                "distance": 0,
+                "providerNetworks": [
+                {
+                    "networkId": "2PREMIER",
+                    "networkName": "Premier Network",
+                    "acceptsNewPatients": "Y"
+                },
+                {
+                    "networkId": "2PPO",
+                    "networkName": "PPO Network",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "yelp":
+                {
+                    "yelpId": "san-francisco-dental-office-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/san-francisco-dental-office-san-francisco?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+                    "yelpReviewCount": 73,
+                    "yelpRating": 3.5,
+                    "yelpDeltaDentalId": null
+                },
+                "gender": "F",
+                "npi": "1083804132",
+                "license":
+                {
+                    "licenseNumber": "44613",
+                    "licenseState": "CA"
+                },
+                "education": [
+                {
+                    "institute": "UCSF School of Dentistry",
+                    "year": "1997"
+                },
+                {
+                    "institute": "Harvard School of Public Health",
+                    "year": "2004"
+                }],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "Cantonese",
+                    "Mandarin",
+                    "Russian",
+                    "English",
+                    "Spanish",
+                    "Tagalog/Filipino"
+                ],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    }
+                },
+                "accessibility":
+                {
+                    "freeParking": "No",
+                    "wheelChairAccess": "No",
+                    "publicTransitAccess": "No",
+                    "internetAccess": "No"
+                },
+                "patientConsiderations":
+                {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "PK2":
+        {
+            "providerKey": "GRP240603555240603555001PRV24001043400",
+            "params":
+            {
+                "sourceNetwork": "2PREMIER"
+            },
+            "verify":
+            {
+                "providerKey": "GRP240603555240603555001PRV24001043400",
+                "firstName": "Hung",
+                "middleName": "Quang",
+                "lastName": "Vo",
+                "fullName": "Hung Vo",
+                "specialty": "General Dentist",
+                "officeName": "Esthethics Dental",
+                "practiceLocationNumber": "240603555001",
+                "officePhone": "(415) 348-1100",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": "(415) 348-1103",
+                "website": null,
+                "address":
+                {
+                    "addressLine": "500 Howard St Ste 101",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-3031",
+                    "latitude": 37.7884445,
+                    "longitude": -122.3967133
+                },
+                "distance": 0,
+                "providerNetworks": [
+                {
+                    "networkId": "2PREMIER",
+                    "networkName": "Premier Network",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "yelp":
+                {
+                    "yelpId": "hung-vo-dmd-esthetics-dental-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/hung-vo-dmd-esthetics-dental-san-francisco?adjust_creative=CEYLdeFm-ZCbM2th0XE_xw&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=CEYLdeFm-ZCbM2th0XE_xw",
+                    "yelpReviewCount": 82,
+                    "yelpRating": 4.5,
+                    "yelpDeltaDentalId": null
+                },
+                "gender": "M",
+                "npi": "1154456606",
+                "license":
+                {
+                    "licenseNumber": "50009",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "English"
+                ],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:30 AM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:30 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:30 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "10:00 AM ",
+                        "closeTime": " 06:30 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 05:30 PM",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Call For Details"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
+                },
+                "accessibility":
+                {
+                    "freeParking": "No",
+                    "wheelChairAccess": "No",
+                    "publicTransitAccess": "No",
+                    "internetAccess": "No"
+                },
+                "patientConsiderations":
+                {
+                    "treatsChildren": "Yes",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "PK3":
+        {
+            "providerKey": "GRP841324779841324779001PRV24067084210",
+            "params":
+            {
+                "latitude": 37.7892418
+            },
+            "verify":
+            {
+                "providerKey": "GRP841324779841324779001PRV24067084210",
+                "firstName": "Nima",
+                "middleName": "Sayed",
+                "lastName": "Massoomi",
+                "fullName": "Nima Massoomi",
+                "specialty": "Oral Surgeon",
+                "officeName": "San Francisco Surgical Arts",
+                "practiceLocationNumber": "841324779001",
+                "officePhone": "(415) 813-6400",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": "(415) 813-6401",
+                "website": null,
+                "address":
+                {
+                    "addressLine": "301 Main St Unt 1A, ",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-5032",
+                    "latitude": 37.7892418,
+                    "longitude": -122.3914108
+                },
+                "distance": 0,
+                "providerNetworks": [
+                {
+                    "networkId": "2PPO",
+                    "networkName": "PPO Network",
+                    "acceptsNewPatients": "Y"
+                },
+                {
+                    "networkId": "2PREMIER",
+                    "networkName": "Premier Network",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "yelp":
+                {
+                    "yelpId": "san-francisco-surgical-arts-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/san-francisco-surgical-arts-san-francisco?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+                    "yelpReviewCount": 40,
+                    "yelpRating": 4.5,
+                    "yelpDeltaDentalId": null
+                },
+                "gender": "F",
+                "npi": "1346397221",
+                "license":
+                {
+                    "licenseNumber": "81",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "English"
+                ],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
+                },
+                "accessibility":
+                {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "No",
+                    "internetAccess": "No"
+                },
+                "patientConsiderations":
+                {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "PK4":
+        {
+            "providerKey": "GRP841324779841324779001PRV24065326910",
+            "params":
+            {
+                "longitude": -122.3914108
+            },
+            "verify":
+            {
+                "providerKey": "GRP841324779841324779001PRV24065326910",
+                "firstName": "Alireza",
+                "middleName": "M",
+                "lastName": "Sodeifi",
+                "fullName": "Alireza Sodeifi",
+                "specialty": "Oral Surgeon",
+                "officeName": "San Francisco Surgical Arts",
+                "practiceLocationNumber": "841324779001",
+                "officePhone": "(415) 813-6400",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": "(415) 813-6401",
+                "website": null,
+                "address":
+                {
+                    "addressLine": "301 Main St Unt 1A, ",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-5032",
+                    "latitude": 37.7892418,
+                    "longitude": -122.3914108
+                },
+                "distance": 0,
+                "providerNetworks": [
+                {
+                    "networkId": "2PPO",
+                    "networkName": "PPO Network",
+                    "acceptsNewPatients": "Y"
+                },
+                {
+                    "networkId": "2PREMIER",
+                    "networkName": "Premier Network",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "yelp":
+                {
+                    "yelpId": "san-francisco-surgical-arts-san-francisco",
+                    "yelpUrl": "https://www.yelp.com/biz/san-francisco-surgical-arts-san-francisco?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+                    "yelpReviewCount": 40,
+                    "yelpRating": 4.5,
+                    "yelpDeltaDentalId": null
+                },
+                "gender": "M",
+                "npi": "1851407753",
+                "license":
+                {
+                    "licenseNumber": "55700",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "English"
+                ],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "0900",
+                        "closeTime": "0500",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": "Closed"
+                    }
+                },
+                "accessibility":
+                {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "No",
+                    "internetAccess": "No"
+                },
+                "patientConsiderations":
+                {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "PK5":
+        {
+            "providerKey": "GRP166984312166984312002PRV68446366800",
+
+            "verify":
+            {
+                "providerKey": "GRP166984312166984312002PRV68446366800",
+                "firstName": "Josh",
+                "middleName": " ",
+                "lastName": "Berd",
+                "fullName": "Josh Berd",
+                "specialty": "General Dentist",
+                "officeName": "Josh Berd DDS",
+                "practiceLocationNumber": "166984312002",
+                "officePhone": "(415) 706-7687",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": null,
+                "website": null,
+                "address":
+                {
+                    "addressLine": "188 Spear St Ste 105",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1750",
+                    "latitude": 37.7914467,
+                    "longitude": -122.3929672
+                },
+                "distance": 0,
+                "providerNetworks": [
+                {
+                    "networkId": "2PREMIER",
+                    "networkName": "Premier Network",
+                    "acceptsNewPatients": "Y"
+                },
+                {
+                    "networkId": "2PPO",
+                    "networkName": "PPO Network",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "yelp":
+                {
+                    "yelpId": "josh-berd-dds-san-francisco-3",
+                    "yelpUrl": "https://www.yelp.com/biz/josh-berd-dds-san-francisco-3?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+                    "yelpReviewCount": 121,
+                    "yelpRating": 5,
+                    "yelpDeltaDentalId": null
+                },
+                "gender": "M",
+                "npi": "1477866218",
+                "license":
+                {
+                    "licenseNumber": "59483",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "English"
+                ],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "08:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    }
+                },
+                "accessibility":
+                {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "Yes",
+                    "internetAccess": "No"
+                },
+                "patientConsiderations":
+                {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "PK6":
+        {
+            "providerKey": "GRP166984312166984312002PRV68446366800",
+            "params":
+            {
+                "latitude": 37.7914467,
+                "longitude": -122.3929672,
+                "sourceNetwork": "2PPO"
+
+            },
+            "verify":
+            {
+                "providerKey": "GRP166984312166984312002PRV68446366800",
+                "firstName": "Josh",
+                "middleName": " ",
+                "lastName": "Berd",
+                "fullName": "Josh Berd",
+                "specialty": "General Dentist",
+                "officeName": "Josh Berd DDS",
+                "practiceLocationNumber": "166984312002",
+                "officePhone": "(415) 706-7687",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": null,
+                "website": null,
+                "address":
+                {
+                    "addressLine": "188 Spear St Ste 105",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1750",
+                    "latitude": 37.7914467,
+                    "longitude": -122.3929672
+                },
+                "distance": 0,
+                "providerNetworks": [
+                {
+                    "networkId": "2PREMIER",
+                    "networkName": "Premier Network",
+                    "acceptsNewPatients": "Y"
+                },
+                {
+                    "networkId": "2PPO",
+                    "networkName": "PPO Network",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "yelp":
+                {
+                    "yelpId": "josh-berd-dds-san-francisco-3",
+                    "yelpUrl": "https://www.yelp.com/biz/josh-berd-dds-san-francisco-3?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+                    "yelpReviewCount": 121,
+                    "yelpRating": 5,
+                    "yelpDeltaDentalId": null
+                },
+                "gender": "M",
+                "npi": "1477866218",
+                "license":
+                {
+                    "licenseNumber": "59483",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "English"
+                ],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "08:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    }
+                },
+                "accessibility":
+                {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "Yes",
+                    "internetAccess": "No"
+                },
+                "patientConsiderations":
+                {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "PK7":
+        {
+            "providerKey": "GRP166984312166984312002PRV68446366800",
+            "params":
+            {
+                "latitude": 37.7914467,
+                "longitude": -122.3929672,
+                "sourceNetwork": "2PREMIER",
+                "targetNetwork": "2PPO"
+
+            },
+            "verify":
+            {
+                "providerKey": "GRP166984312166984312002PRV68446366800",
+                "firstName": "Josh",
+                "middleName": " ",
+                "lastName": "Berd",
+                "fullName": "Josh Berd",
+                "specialty": "General Dentist",
+                "officeName": "Josh Berd DDS",
+                "practiceLocationNumber": "166984312002",
+                "officePhone": "(415) 706-7687",
+                "facilityId": null,
+                "emailAddress": null,
+                "faxNumber": null,
+                "website": null,
+                "address":
+                {
+                    "addressLine": "188 Spear St Ste 105",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1750",
+                    "latitude": 37.7914467,
+                    "longitude": -122.3929672
+                },
+                "distance": 0,
+                "providerNetworks": [
+                {
+                    "networkId": "2PREMIER",
+                    "networkName": "Premier Network",
+                    "acceptsNewPatients": "Y"
+                },
+                {
+                    "networkId": "2PPO",
+                    "networkName": "PPO Network",
+                    "acceptsNewPatients": "Y"
+                }],
+                "boardCertified": false,
+                "referral": false,
+                "yelp":
+                {
+                    "yelpId": "josh-berd-dds-san-francisco-3",
+                    "yelpUrl": "https://www.yelp.com/biz/josh-berd-dds-san-francisco-3?adjust_creative=J0ptyfjEWaZma0gv_x9-tA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=J0ptyfjEWaZma0gv_x9-tA",
+                    "yelpReviewCount": 121,
+                    "yelpRating": 5,
+                    "yelpDeltaDentalId": null
+                },
+                "gender": "M",
+                "npi": "1477866218",
+                "license":
+                {
+                    "licenseNumber": "59483",
+                    "licenseState": "CA"
+                },
+                "education": [],
+                "providerLanguages": [],
+                "practiceLocationLanguages": [
+                    "English"
+                ],
+                "practiceHours":
+                {
+                    "mondayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "tuesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "wednesdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "thursdayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "09:00 AM ",
+                        "closeTime": " 06:00 PM",
+                        "officeMessage": ""
+                    },
+                    "fridayHours":
+                    {
+                        "isOpen": true,
+                        "openTime": "08:00 AM ",
+                        "closeTime": " 05:00 PM",
+                        "officeMessage": ""
+                    },
+                    "saturdayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    },
+                    "sundayHours":
+                    {
+                        "isOpen": false,
+                        "openTime": "",
+                        "closeTime": "",
+                        "officeMessage": null
+                    }
+                },
+                "accessibility":
+                {
+                    "freeParking": "No",
+                    "wheelChairAccess": "Yes",
+                    "publicTransitAccess": "Yes",
+                    "internetAccess": "No"
+                },
+                "patientConsiderations":
+                {
+                    "treatsChildren": "No",
+                    "treatsDisabledAdults": "No",
+                    "treatsDisabledChildren": "No"
+                }
+            }
+        },
+        "PK8":
+        {
+            "providerKey": "{providerKey}",
+
+            "verify":
+            {
+                "shortDescription": "Solr exception. Unable to retrieve provider details for the provider key:{providerKey}",
+                "detailedDescription": "Solr exception. Unable to retrieve provider details for the provider key:{providerKey}"
+            }
+
+        },
+        "PK9":
+        {
+            "providerKey": "12545282"
+
+        }
+    }
+}

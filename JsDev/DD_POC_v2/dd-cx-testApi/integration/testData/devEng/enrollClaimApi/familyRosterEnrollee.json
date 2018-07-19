@@ -1,0 +1,94 @@
+{
+    "enrolleetestdata":
+    {
+        "enrollee1":
+        {
+            "params":
+            {
+                "group-id": "18843",
+                "division-id": "01011"
+            },
+            "testCaseDesc": "Given a valid Person who is PRIMARY, Contract, Group and Division, display all the enrollees with their information",
+            "ClientKey": "12345",
+            "contractId": "1138726092",
+            "enrolleeId": "113872609201",
+            "personId": "0776422314200516"
+        }
+    },
+
+    "enrolleetestdata1":
+    {
+        "enrollee1":
+        {
+            "params":
+            {
+                "group-id": "18843",
+                "division-id": "01011"
+            },
+            "ClientKey": "12345",
+            "contractId": "11387260921",
+            "enrolleeId": "113872609201",
+            "personId": "0776422314200516",
+            "testCaseDesc": "Given a valid Person who is PRIMARY, Group and Division and Invalid contract id, display all the enrollees with their information",
+            "shortDescription": "Unable to retrieve enrollee details for the given contract id:11387260921",
+            "detailedDescription": "Unable to retrieve enrollee details for the given contract id:11387260921"
+        },
+        "enrollee2":
+        {
+            "params":
+            {
+                "group-id": "188434",
+                "division-id": "01011"
+            },
+            "ClientKey": "12345",
+            "contractId": "1138726092",
+            "enrolleeId": "113872609201",
+            "personId": "0776422314200516",
+            "testCaseDesc": "Given a valid Person who is PRIMARY, Group and Division and Invalid contract id, display all the enrollees with their information",
+            "shortDescription": "Unable to retrieve enrollee details for the given contract id:1138726092",
+            "detailedDescription": "Unable to retrieve enrollee details for the given contract id:1138726092"
+        },
+        "enrollee3":
+        {
+            "params":
+            {
+                "group-id": "18843",
+                "division-id": "010112"
+            },
+            "ClientKey": "12345",
+            "contractId": "1138726092",
+            "enrolleeId": "113872609201",
+            "personId": "0776422314200516",
+            "testCaseDesc": "Given a valid Person who is PRIMARY, Group , Division and  contract id, display all the enrollees with their information",
+            "shortDescription": "Unable to retrieve enrollee details for the given contract id:1138726092",
+            "detailedDescription": "Unable to retrieve enrollee details for the given contract id:1138726092"
+        },
+        "enrollee4":
+        {
+            "params":
+            {
+                "division-id": "01011"
+            },
+            "ClientKey": "12345",
+            "contractId": "1138726092",
+            "enrolleeId": "113872609201",
+            "personId": "0776422314200516",
+            "testCaseDesc": "Given a valid Person who is PRIMARY, Division, contract id and empty group-id, display all the enrollees with their information",
+            "message": "Required String parameter 'group-id' is not present"
+        },
+        "enrollee5":
+        {
+            "params":
+            {
+                "group-id": "18843"
+            },
+            "ClientKey": "12345",
+            "contractId": "1138726092",
+            "enrolleeId": "113872609201",
+            "personId": "0776422314200516",
+            "testCaseDesc": "Given a valid Person who is PRIMARY, Division, contract id and empty division-id, display all the enrollees with their information",
+            "message": "Required String parameter 'division-id' is not present"
+        }
+    }
+
+}

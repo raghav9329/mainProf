@@ -1,0 +1,718 @@
+{
+    "testData": {
+        "test1": {
+            "testCaseDesc": "Test:1 GIVEN Primary Member WHEN requesting to view his or her claim records THEN should be able to view all his claim records.",
+            "personId": "0358980916542245",
+            "contractId": "1004871950",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "0358980916542245",
+                "contractId": "1004871950",
+                "memberInfo": [{
+                    "memberId": "02",
+                    "memberName": "JOLINE HOLLISTER",
+                    "memberAge": 62,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "03",
+                    "memberName": "CANDIS HOLLISTER",
+                    "memberAge": 22,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "04",
+                    "memberName": "ZULEMA HOLLISTER",
+                    "memberAge": 21,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "TERRANCE HOLLISTER",
+                    "memberAge": 55,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test2": {
+            "testCaseDesc": "Test:2  GIVEN Adult Member WHEN requesting to view his or her claim records THEN should be able to view all his claim records — Multiple Procedure Count scenario ",
+            "personId": "7997000007699287",
+            "contractId": "2209677847",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "errorCode": "OMNIBUS_ERROR_RULE005",
+                "shortDescription": "Unauthorized access.",
+                "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+            }
+        },
+        "test3": {
+            "testCaseDesc": "Test:3  GIVEN Child Member WHEN requesting to view his or her claim records THEN should be able to view all his claim records",
+            "personId": "0431041316550753",
+            "contractId": "1163798575",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "0431041316550753",
+                "contractId": "1163798575",
+                "memberInfo": [{
+                    "memberId": "03",
+                    "memberName": "ANGLA DORE",
+                    "memberAge": 13,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "04",
+                    "memberName": "MARGARET DORE",
+                    "memberAge": 3,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "05",
+                    "memberName": "THAO DORE",
+                    "memberAge": 10,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "ALLEEN DORE",
+                    "memberAge": 39,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "02",
+                    "memberName": "TORY DORE",
+                    "memberAge": 42,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "06",
+                    "memberName": "IMOGENE DORE",
+                    "memberAge": 6,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test4": {
+            "testCaseDesc": "Test:4 GIVEN Adult Member WHEN requesting to view his or her claim records THEN should be able to view all his claim records",
+            "personId": "7997000007699287",
+            "contractId": "2399735843",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "7997000007699287",
+                "contractId": "2399735843",
+                "memberInfo": [{
+                    "memberId": "01",
+                    "memberName": "VAL KOESTER",
+                    "memberAge": 73,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "02",
+                    "memberName": "LISSA KOESTER",
+                    "memberAge": 74,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test5": {
+            "testCaseDesc": "Test:5 GIVEN Primary Adult Member WHEN requesting to view his or her Child's claim records THEN should be able to view all his claim records.",
+            "personId": "0709841316550733",
+            "contractId": "1163798575",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "0709841316550733",
+                "contractId": "1163798575",
+                "memberInfo": [{
+                    "memberId": "03",
+                    "memberName": "ANGLA DORE",
+                    "memberAge": 13,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule: Person is an Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "04",
+                    "memberName": "MARGARET DORE",
+                    "memberAge": 3,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule: Person is an Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "05",
+                    "memberName": "THAO DORE",
+                    "memberAge": 10,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule: Person is an Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "ALLEEN DORE",
+                    "memberAge": 39,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "02",
+                    "memberName": "TORY DORE",
+                    "memberAge": 42,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "06",
+                    "memberName": "IMOGENE DORE",
+                    "memberAge": 6,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule: Person is an Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test6": {
+            "testCaseDesc": "Test:6 GIVEN Non-Primary Adult Member WHEN requesting to view a Child's claim records in the plan THEN should NOT be able to view all his claim records.",
+            "personId": "0661141316550746",
+            "contractId": "1163798575",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "0661141316550746",
+                "contractId": "1163798575",
+                "memberInfo": [{
+                    "memberId": "03",
+                    "memberName": "ANGLA DORE",
+                    "memberAge": 13,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "04",
+                    "memberName": "MARGARET DORE",
+                    "memberAge": 3,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "05",
+                    "memberName": "THAO DORE",
+                    "memberAge": 10,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "ALLEEN DORE",
+                    "memberAge": 39,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "02",
+                    "memberName": "TORY DORE",
+                    "memberAge": 42,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "06",
+                    "memberName": "IMOGENE DORE",
+                    "memberAge": 6,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a primary member. However, this member has no permission to view this enrollee's details."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test7": {
+            "testCaseDesc": "Test:7 GIVEN Child Member WHEN requesting to view other Child's claim records THEN should NOT be allowed to view other child's claim record.",
+            "personId": "0785941316550767",
+            "contractId": "1163798575",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "0785941316550767",
+                "contractId": "1163798575",
+                "memberInfo": [{
+                    "memberId": "03",
+                    "memberName": "ANGLA DORE",
+                    "memberAge": 13,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "04",
+                    "memberName": "MARGARET DORE",
+                    "memberAge": 3,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "05",
+                    "memberName": "THAO DORE",
+                    "memberAge": 10,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "ALLEEN DORE",
+                    "memberAge": 39,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "02",
+                    "memberName": "TORY DORE",
+                    "memberAge": 42,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "06",
+                    "memberName": "IMOGENE DORE",
+                    "memberAge": 6,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test8": {
+            "testCaseDesc": "Test:8 Given Primary member (Omnibus rule) WHEN requesting to view other Adult member who has granted permission (Omnibus rule) THEN should be allowed to view claim records ",
+            "personId": "0358980916542245",
+            "contractId": "1004871950",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "0358980916542245",
+                "contractId": "1004871950",
+                "memberInfo": [{
+                    "memberId": "02",
+                    "memberName": "JOLINE HOLLISTER",
+                    "memberAge": 62,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "03",
+                    "memberName": "CANDIS HOLLISTER",
+                    "memberAge": 22,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "04",
+                    "memberName": "ZULEMA HOLLISTER",
+                    "memberAge": 21,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "TERRANCE HOLLISTER",
+                    "memberAge": 55,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test9": {
+            "testCaseDesc": "Test:9 Given Primary member (Omnibus rule) WHEN requesting to view other Adult member who have NOT granted permission (Omnibus rule) THEN should NOT be allowed to view claim records",
+            "personId": "0358980916542245",
+            "contractId": "1004871950",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "0358980916542245",
+                "contractId": "1004871950",
+                "memberInfo": [{
+                    "memberId": "02",
+                    "memberName": "JOLINE HOLLISTER",
+                    "memberAge": 62,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "03",
+                    "memberName": "CANDIS HOLLISTER",
+                    "memberAge": 22,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "04",
+                    "memberName": "ZULEMA HOLLISTER",
+                    "memberAge": 21,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule: Person is not an primary Adult and is requesting for child dependent's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "TERRANCE HOLLISTER",
+                    "memberAge": 55,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test10": {
+            "testCaseDesc": "Test:10 Given an ADULT dependent (Omnibus rule) WHEN requesting to view other Adult member claims THEN should NOT be allowed to view claim records",
+            "personId": "0002580916542268",
+            "contractId": "1004871950",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "0002580916542268",
+                "contractId": "1004871950",
+                "memberInfo": [{
+                    "memberId": "02",
+                    "memberName": "JOLINE HOLLISTER",
+                    "memberAge": 62,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "03",
+                    "memberName": "CANDIS HOLLISTER",
+                    "memberAge": 22,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "04",
+                    "memberName": "ZULEMA HOLLISTER",
+                    "memberAge": 21,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "TERRANCE HOLLISTER",
+                    "memberAge": 55,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test11": {
+            "testCaseDesc": "Test:11 Given a PRIMARY member WHEN requesting to view other Adult member who is not part of the same contract as PRIMARY THEN should NOT be allowed to view claim records and indicate the person is not part of the contract",
+            "personId": "0358980916542245",
+            "contractId": "1004871940",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "errorCode": "OMNIBUS_ERROR_RULE005",
+                "shortDescription": "Unauthorized access.",
+                "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+            }
+        },
+        "test12": {
+            "testCaseDesc": "Test:12 Given Adult member WHEN requesting to view other members NOT in this current contract THEN should NOT be allowed to view claim records and should raise security alert.",
+            "personId": "0002580916542268",
+            "contractId": "1004877950",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "errorCode": "OMNIBUS_ERROR_RULE005",
+                "shortDescription": "Unauthorized access.",
+                "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+            }
+        },
+        "test13": {
+            "testCaseDesc": "Test:13 Invalid Person ID or Contract Id",
+            "personId": "1002580916542268",
+            "contractId": "004877950",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+           "verify": {
+                "errorCode": "OMNIBUS_ERROR_RULE005",
+                "shortDescription": "Unauthorized access.",
+                "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+            }
+        },
+        "test14": {
+            "testCaseDesc": "Test:14 Person ID mandatory scenario",
+            "personId": "",
+            "contractId": "1004877950",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "error": "Internal Server Error",
+                "message": "Security violation. Expected security headers are missing."
+            }
+        },
+        "test15": {
+            "testCaseDesc": "Test:15 Contract ID mandatory scenario",
+            "personId": "0002580916542268",
+            "contractId": "1",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+             "verify": {
+                "errorCode": "OMNIBUS_ERROR_RULE005",
+                "shortDescription": "Unauthorized access.",
+                "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+            }
+        },
+        "test16": {
+            "testCaseDesc": "Test:16 Inactive Provider Scenario in DIT",
+            "personId": "7107000006549959",
+            "contractId": "2209677847",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "7107000006549959",
+                "contractId": "2209677847",
+                "memberInfo": [{
+                    "memberId": "02",
+                    "memberName": "ZACHARIAH ARONSON",
+                    "memberAge": 25,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "02",
+                    "memberName": "ZACHARIAH ARONSON",
+                    "memberAge": 25,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "CHRISTINA OTTINGER",
+                    "memberAge": 52,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "05",
+                    "memberName": "CLIFFORD ARONSON",
+                    "memberAge": 23,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "04",
+                    "memberName": "CLASSIE ARONSON",
+                    "memberAge": 21,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "CHRISTINA OTTINGER",
+                    "memberAge": 52,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "02",
+                    "memberName": "ZACHARIAH ARONSON",
+                    "memberAge": 25,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "03",
+                    "memberName": "VALRIE ARONSON",
+                    "memberAge": 27,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is not a primary member. He/She can't view other adult enrollee's records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        },
+        "test17": {
+            "testCaseDesc": "Test:17 Inactive Provider Scenario in DIT",
+            "personId": "0562251312405202",
+            "contractId": "1152679786",
+            "ClientKey": "12345",
+            "params": {
+                "rule-types": "phi"
+            },
+            "verify": {
+                "requester": "0562251312405202",
+                "contractId": "1152679786",
+                "memberInfo": [{
+                    "memberId": "02",
+                    "memberName": "HANK GRAFTON",
+                    "memberAge": 9,
+                    "omnibusInfo": {
+                        "permissionGranted": true,
+                        "message": "Omnibus-rule:Person is requesting for his or her records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "03",
+                    "memberName": "CARISA GRAFTON",
+                    "memberAge": 10,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }, {
+                    "memberId": "01",
+                    "memberName": "ROMAN MONDRAGON",
+                    "memberAge": 40,
+                    "omnibusInfo": {
+                        "permissionGranted": false,
+                        "message": "Omnibus-rule:Person is a child. A Child can't see other members records."
+                    },
+                    "phiEnabled": false
+                }]
+            }
+        }
+    }
+}

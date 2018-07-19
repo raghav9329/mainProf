@@ -1,0 +1,464 @@
+{
+    "testdata": {
+        "test1": {
+            "testCaseDes": "Test 1:  GIVEN Primary Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records",
+            "enrolleeId": "100487195001",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "memberInfo": {
+                    "personId": "0358980916542245",
+                    "memberId": "01",
+                    "enrolleeId": "100487195001",
+                    "contractId": "1004871950",
+                    "memberName": "Terrance HOLLISTER"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 1,
+                        "totalRemaining": 1,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "06/19/2018 04:06"
+            }
+        },
+        "test2": {
+            "testCaseDes": "Test 2: GIVEN Adult Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records",
+            "enrolleeId": "239973584302",
+            "personId": "7997000007699287",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test3": {
+            "testCaseDes": "Test 3: GIVEN Child Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "enrolleeId": "116379857503",
+            "personId": "0431041316550753",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test4": {
+            "testCaseDes": "Test 4: GIVEN Primary Adult Member, WHEN requesting to view his or her Child's claim records & THEN should be able to view all his claim records.",
+            "enrolleeId": "116379857503",
+            "personId": "0709841316550733",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test5": {
+            "testCaseDes": "Test 5: GIVEN Non-Primary Adult Member, WHEN requesting to view a Child's claim records in the plan & THEN should NOT be able to view all his claim records.",
+            "enrolleeId": "116379857506",
+            "personId": "0661141316550746",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test6": {
+            "testCaseDes": "Test 6: GIVEN Child Member, WHEN requesting to view other Child's claim records & THEN should NOT be allowed to view other child's claim record.",
+            "enrolleeId": "116379857506",
+            "personId": "0785941316550767",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test7": {
+            "testCaseDes": "Test 7: Given Primary member (Omnibus rule), WHEN requesting to view other Adult member who has granted permission (Omnibus rule) & THEN should be allowed to view claim records",
+            "enrolleeId": "100487195002",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test8": {
+            "testCaseDes": "Test 8: Given Primary member (Omnibus rule), WHEN requesting to view other Adult member who has granted permission (Omnibus rule) & THEN should be allowed to view claim records",
+            "enrolleeId": "100487195003",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test9": {
+            "testCaseDes": "Test 9: Given Primary member (Omnibus rule), WHEN requesting to view other Adult member who have NOT granted permission (Omnibus rule) & THEN should NOT be allowed to view claim records",
+            "enrolleeId": "100487195004",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test10": {
+            "testCaseDes": "Test 10: Given an ADULT dependent (Omnibus rule), WHEN requesting to view other Adult member claims & THEN should NOT be allowed to view claim records",
+            "enrolleeId": "100487195003",
+            "personId": "0002580916542268",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test11": {
+            "testCaseDes": "Test 11: Given a PRIMARY member, WHEN requesting to view other Adult member who is not part of the same contract as PRIMARY & THEN should NOT be allowed to view claim records and indicate the person is not part of the contract",
+            "enrolleeId": "100487194004",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test12": {
+            "testCaseDes": "Test 12: Given Adult member, WHEN requesting to view other members NOT in this current contract & THEN should NOT be allowed to view claim records and should raise security alert.",
+            "enrolleeId": "100487795003",
+            "personId": "0002580916542268",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test13": {
+            "testCaseDes": "Test 13: Invalid Person ID or Enrollee ID",
+            "enrolleeId": "00487795003",
+            "personId": "1002580916542268",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test14": {
+            "testCaseDes": "Test 14: Person ID mandatory scenario",
+            "enrolleeId": "100487795003",
+            "personId": "1",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test15": {
+            "testCaseDes": "Test 15: Enrollee ID mandatory scenario",
+            "enrolleeId": "1",
+            "personId": "0002580916542268",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 500
+            }
+        },
+        "test16": {
+            "testCaseDes": "Test 16: Given Primary member (Omnibus rule), WHEN requesting to view other Adult member who has granted permission (Omnibus rule) & THEN should be allowed to view claim records",
+            "enrolleeId": "239964610302",
+            "personId": "7997000007729429",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test17": {
+            "testCaseDes": "Test 17: GIVEN Primary Member with PHI Flag, WHEN requesting to view his or her claim records & THEN should NOT be able to view any informatio",
+            "enrolleeId": "004579377801",
+            "personId": "5047000004566430",
+            "ClientKey": "12345",
+            "verify": {
+                "memberInfo": {
+                    "personId": "5047000004566430",
+                    "memberId": "01",
+                    "enrolleeId": "004579377801",
+                    "contractId": "0045793778",
+                    "memberName": "Cole FORTIN"
+                },
+                "planInfo": {
+                    "planYearType": "RODY",
+                    "planStartDate": "11/03/2017",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "EFF DATE BACKWARDS IN 6 ROLLING MONTHS"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 1,
+                        "totalUsed": 1,
+                        "totalRemaining": 0,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D1110",
+                            "D1120"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "REGULAR PROPHYLAXIS: D1110/20,D4346  1/6M",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "06/20/2018 12:06"
+            }
+        },
+        "test18": {
+            "testCaseDes": "Test 18: GIVEN Primary Member with PHI Flag, WHEN requesting to view the ADULT dependent claim records & THEN should NOT be able to view any information",
+            "enrolleeId": "004579377802",
+            "personId": "5047000004566430",
+            "ClientKey": "12345",
+            "verify": {
+                "memberInfo": {
+                    "personId": "5047000004555079",
+                    "memberId": "02",
+                    "enrolleeId": "004579377802",
+                    "contractId": "0045793778",
+                    "memberName": "Pearline FORTIN"
+                },
+                "planInfo": {
+                    "planYearType": "RODY",
+                    "planStartDate": "11/03/2017",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "EFF DATE BACKWARDS IN 6 ROLLING MONTHS"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 1,
+                        "totalUsed": 1,
+                        "totalRemaining": 0,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D1110",
+                            "D1120"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "REGULAR PROPHYLAXIS: D1110/20,D4346  1/6M",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "06/20/2018 12:06"
+            }
+        },
+        "test19": {
+            "testCaseDes": "Test 19: GIVEN an ADULT member Without PHI Flag, WHEN requesting to his/her own claim records & THEN should be able to view the information",
+            "enrolleeId": "004579377802",
+            "personId": "5047000004555079",
+            "ClientKey": "12345",
+            "verify": {
+                "memberInfo": {
+                    "personId": "5047000004555079",
+                    "memberId": "02",
+                    "enrolleeId": "004579377802",
+                    "contractId": "0045793778",
+                    "memberName": "Pearline FORTIN"
+                },
+                "planInfo": {
+                    "planYearType": "RODY",
+                    "planStartDate": "11/03/2017",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "EFF DATE BACKWARDS IN 6 ROLLING MONTHS"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 1,
+                        "totalUsed": 1,
+                        "totalRemaining": 0,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D1110",
+                            "D1120"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "REGULAR PROPHYLAXIS: D1110/20,D4346  1/6M",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "06/20/2018 12:06"
+            }
+        },
+        "test20": {
+            "testCaseDes": "Test 20: GIVEN an ADULT member Without PHI Flag, WHEN requesting the PRIMARY claim records & THEN should NOT be able to view the information",
+            "enrolleeId": "004579377801",
+            "personId": "5047000004555079",
+            "ClientKey": "12345",
+            "verify": {
+                "memberInfo": {
+                    "personId": "5047000004566430",
+                    "memberId": "01",
+                    "enrolleeId": "004579377801",
+                    "contractId": "0045793778",
+                    "memberName": "Cole FORTIN"
+                },
+                "planInfo": {
+                    "planYearType": "RODY",
+                    "planStartDate": "11/03/2017",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "EFF DATE BACKWARDS IN 6 ROLLING MONTHS"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 1,
+                        "totalUsed": 1,
+                        "totalRemaining": 0,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D1110",
+                            "D1120"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "REGULAR PROPHYLAXIS: D1110/20,D4346  1/6M",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "06/20/2018 12:06"
+            }
+        },
+        "test21": {
+            "testCaseDes": "Test 21: GIVEN Primary Member Without PHI Flag, WHEN requesting to view his or her claim records & THEN should be able to view their information",
+            "enrolleeId": "004578460901",
+            "personId": "5047000004555079",
+            "ClientKey": "12345",
+            "verify": {
+                "memberInfo": {
+                    "personId": "5047000004555079",
+                    "memberId": "01",
+                    "enrolleeId": "004578460901",
+                    "contractId": "0045784609",
+                    "memberName": "Pearline FORTIN"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 1,
+                        "totalRemaining": 1,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "06/20/2018 12:06"
+            }
+        },
+        "test22": {
+            "testCaseDes": "Test 22: GIVEN Primary Member with PHI Flag, WHEN requesting to view the ADULT dependent claim records & THEN should NOT be able to view any information",
+            "enrolleeId": "004578460902",
+            "personId": "5047000004555079",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test23": {
+            "testCaseDes": "Test 23: GIVEN Adult Dependent with PHI Flag, WHEN requesting to view their own claim records & THEN should NOT be able to view their information",
+            "enrolleeId": "004578460902",
+            "personId": "5047000004566430",
+            "ClientKey": "12345",
+            "verify": {
+                "status": 404
+            }
+        },
+        "test24": {
+            "testCaseDes": "Test 24: GIVEN Adult Dependent with PHI Flag, WHEN requesting to view the PRIMARY's claim records & THEN should NOT be able to view any information",
+            "enrolleeId": "004578460901",
+            "personId": "5047000004566430",
+            "ClientKey": "12345",
+            "verify": {
+                "memberInfo": {
+                    "personId": "5047000004555079",
+                    "memberId": "01",
+                    "enrolleeId": "004578460901",
+                    "contractId": "0045784609",
+                    "memberName": "Pearline FORTIN"
+                },
+                "planInfo": {
+                    "planYearType": "CAYR",
+                    "planStartDate": "01/01/2018",
+                    "planEndDate": "12/31/2018",
+                    "planYearDescription": "Eff Date In a Calendar Year"
+                },
+                "usageInfo": {
+                    "procedureDetail": [{
+                        "procedureName": "Prophylaxis",
+                        "totalAllowed": 2,
+                        "totalUsed": 1,
+                        "totalRemaining": 1,
+                        "contributingProcedureCodes": [
+                            "D4346",
+                            "D4355",
+                            "D1110",
+                            "D1120",
+                            "D4910"
+                        ],
+                        "planFrequency": null,
+                        "procedureCodes": [{
+                            "procedureCode": "D1110",
+                            "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                            "procedureDetailDescription": "ALL PROPHYLAXIS: D1110/20, D4346, D4355,D4910 2/CY",
+                            "totalUsed": 1
+                        }]
+                    }]
+                },
+                "message": null,
+                "lastCalculatedDate": "06/20/2018 12:06"
+            }
+        }
+    }
+}

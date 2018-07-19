@@ -1,0 +1,248 @@
+{
+    "testdata": {
+        "test1": {
+            "testCaseDesc": "Test 1: Given an INDIVIDUAL member and all the contracts active/inactive associated with the member have to be displayed",
+            "personId": "6107000007143442",
+            "ClientKey": "12345",
+            "statusCode": 200,
+            "verify": [{
+                "contractId": "2709600291",
+                "personId": "6107000007143442",
+                "benefitId": "DCAA5400",
+                "networkIdMapping": "DLTACARE USA",
+                "groupId": "70116",
+                "groupTypeId": "INDIVIDUAL",
+                "divisionId": "00007",
+                "groupSurrogateId": "5310",
+                "healthCareContractHolderId": "DDIC DHMO",
+                "divisionSurrogateId": "28927",
+                "active": true,
+                "startDate": "02/01/2017",
+                "endDate": "12/31/9999",
+                "groupDescription": "INDIV CA FAMILY",
+                "divisionDescription": "INDIV CA FAMILY-CAA54",
+                "planName": "DELTACARE",
+                "planType": "INDIVIDUAL",
+                "state": "CA"
+            }]
+
+        },
+        "test2": {
+            "testCaseDesc": "Test 2: This person has 2 contracts. validate that 2 contracts are displayed in the response.",
+            "personId": "0956473113365658",
+            "ClientKey": "12345",
+            "statusCode": 200,
+            "verify": [{
+                "contractId": "1143734454",
+                "personId": "0956473113365658",
+                "benefitId": "PDN06036",
+                "bl7Flag": "PPO",
+                "networkIdMapping": "Delta Dental PPO",
+                "groupId": "03859",
+                "groupTypeId": "GROUP",
+                "divisionId": "06105",
+                "groupSurrogateId": "7383980",
+                "healthCareContractHolderId": "DDIC",
+                "divisionSurrogateId": "1529410",
+                "active": false,
+                "startDate": "09/01/2015",
+                "endDate": "08/31/2016",
+                "groupDescription": "BAI DENTAL FOR EVERYONE",
+                "divisionDescription": "BAI DENTAL FOR EVERYONE",
+                "planName": "DELTA DENTAL GROUP",
+                "planType": "GROUP",
+                "state": "MS"
+            }, {
+                "contractId": "1143734454",
+                "personId": "0956473113365658",
+                "benefitId": "PDN06037",
+                "bl7Flag": "PPO",
+                "networkIdMapping": "Delta Dental PPO",
+                "groupId": "03859",
+                "groupTypeId": "GROUP",
+                "divisionId": "06205",
+                "groupSurrogateId": "7383980",
+                "healthCareContractHolderId": "DDIC",
+                "divisionSurrogateId": "1529420",
+                "active": false,
+                "startDate": "09/01/2016",
+                "endDate": "08/31/2017",
+                "groupDescription": "BAI DENTAL FOR EVERYONE",
+                "divisionDescription": "BAI DENTAL FOR EVERYONE",
+                "planName": "DELTA DENTAL GROUP",
+                "planType": "GROUP",
+                "state": "MS"
+            }, {
+                "contractId": "1159674348",
+                "personId": "0956473113365658",
+                "benefitId": "60000710",
+                "bl7Flag": "E NOFQLT",
+                "networkIdMapping": "Delta Dental PPO",
+                "groupId": "50250",
+                "groupTypeId": "INDIVIDUAL",
+                "divisionId": "10004",
+                "groupSurrogateId": "2716837",
+                "healthCareContractHolderId": "DDC",
+                "divisionSurrogateId": "7677607",
+                "active": true,
+                "startDate": "01/01/2017",
+                "endDate": "12/31/2018",
+                "groupDescription": "California Individual Exchange",
+                "divisionDescription": "California Individual Exchange",
+                "planName": "DELTA DENTAL INDVL",
+                "planType": "INDIVIDUAL",
+                "state": "CA"
+            }, {
+                "contractId": "1143734454",
+                "personId": "0956473113365658",
+                "benefitId": "PDN06038",
+                "bl7Flag": "PPO",
+                "networkIdMapping": "Delta Dental PPO",
+                "groupId": "03859",
+                "groupTypeId": "GROUP",
+                "divisionId": "06305",
+                "groupSurrogateId": "7383980",
+                "healthCareContractHolderId": "DDIC",
+                "divisionSurrogateId": "1529430",
+                "active": true,
+                "startDate": "09/01/2017",
+                "endDate": "12/31/9999",
+                "groupDescription": "BAI DENTAL FOR EVERYONE",
+                "divisionDescription": "BAI DENTAL FOR EVERYONE",
+                "planName": "DELTA DENTAL GROUP",
+                "planType": "GROUP",
+                "state": "MS"
+            }]
+        },
+        "test3": {
+            "testCaseDesc": "Test 3: Given a GROUP member THEN All the contracts active/inactive associated with the member have to be displayed",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "statusCode": 200,
+            "verify": [{
+                "contractId": "1004871950",
+                "personId": "0358980916542245",
+                "benefitId": "P0012252",
+                "networkIdMapping": "Delta Dental PPO",
+                "groupId": "09161",
+                "groupTypeId": "GROUP",
+                "divisionId": "00101",
+                "groupSurrogateId": "1111587",
+                "healthCareContractHolderId": "DDP",
+                "divisionSurrogateId": "1123434",
+                "active": false,
+                "startDate": "08/10/2011",
+                "endDate": "11/01/2017",
+                "groupDescription": "Glatfelter",
+                "divisionDescription": "Glatfelter",
+                "planName": "DELTA DENTAL GROUP",
+                "planType": "GROUP",
+                "state": "PA"
+            }, {
+                "contractId": "1004871950",
+                "personId": "0358980916542245",
+                "benefitId": "P0012252",
+                "networkIdMapping": "Delta Dental PPO",
+                "groupId": "09161",
+                "groupTypeId": "GROUP",
+                "divisionId": "00103",
+                "groupSurrogateId": "1111587",
+                "healthCareContractHolderId": "DDP",
+                "divisionSurrogateId": "1123466",
+                "active": true,
+                "startDate": "11/02/2017",
+                "endDate": "12/31/9999",
+                "groupDescription": "Glatfelter",
+                "divisionDescription": "Glatfelter",
+                "planName": "DELTA DENTAL GROUP",
+                "planType": "GROUP",
+                "state": "PA"
+            }]
+        },
+        "test4": {
+            "testCaseDesc": "Test 4: Given a GROUP member THEN All the contracts active/inactive associated with the member have to be displayed",
+            "personId": "0598821214041280",
+            "ClientKey": "12345",
+            "statusCode": 200,
+            "verify": [{
+                "contractId": "1000889966",
+                "personId": "0598821214041280",
+                "benefitId": "PDN00300",
+                "bl7Flag": "PPO",
+                "networkIdMapping": "DPO",
+                "groupId": "05660",
+                "groupTypeId": "GROUP",
+                "divisionId": "00202",
+                "groupSurrogateId": "2864096",
+                "healthCareContractHolderId": "DDIC",
+                "divisionSurrogateId": "2406217",
+                "active": false,
+                "startDate": "01/01/2010",
+                "endDate": "06/26/2013",
+                "groupDescription": "Hewlett-Packard Company",
+                "divisionDescription": "Hewlett-Packard Company",
+                "planName": "DELTA DENTAL GROUP",
+                "planType": "GROUP",
+                "state": "TX"
+            }, {
+                "contractId": "1118662620",
+                "personId": "0598821214041280",
+                "benefitId": "P0029449",
+                "bl7Flag": "PPO",
+                "networkIdMapping": "Delta Dental PPO",
+                "groupId": "03005",
+                "groupTypeId": "GROUP",
+                "divisionId": "00002",
+                "groupSurrogateId": "1642",
+                "healthCareContractHolderId": "DDC",
+                "divisionSurrogateId": "4427",
+                "active": false,
+                "startDate": "07/01/2013",
+                "endDate": "03/31/2014",
+                "groupDescription": "HITACHI DATA SYSTEMS",
+                "divisionDescription": "HITACHI DATA SYSTEMS",
+                "planName": "DELTA DENTAL GROUP",
+                "planType": "GROUP",
+                "state": "CA"
+            }]
+        },
+        "test5": {
+            "testCaseDesc": "Test 5: Person ID Mandatory Scenario",
+            "personId": "",
+            "ClientKey": "12345",
+            "statusCode": 400,
+            "verify": {
+                "message": "Security violation. Expected security headers are missing."
+            }
+        },
+        "test6": {
+            "testCaseDesc": "Test 6: Person ID invalid Scenario",
+            "personId": "1223455h7890",
+            "ClientKey": "12345",
+            "statusCode": 403,
+            "verify": {
+                "message": "Person ID invalid Scenario"
+            }
+        },
+        "test7": {
+            "testCaseDesc": "Test 7: Client key validation Scenario",
+            "personId": "0598821214041280",
+            "ClientKey": "129908769",
+            "statusCode": 401,
+            "verify": {
+                "message": "Message should be displayed that Client key is not valid"
+            }
+
+        },
+        "test8": {
+            "testCaseDesc": "Test 8: Client key validation Scenario",
+            "personId": "0598821214041280",
+            "ClientKey": "",
+            "statusCode": 400,
+            "verify": {
+                "message": "Security violation. Expected security headers are missing."
+            }
+        }
+    }
+
+}

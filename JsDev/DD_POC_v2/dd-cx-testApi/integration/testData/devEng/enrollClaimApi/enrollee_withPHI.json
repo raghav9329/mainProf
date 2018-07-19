@@ -1,0 +1,349 @@
+{
+    "testdata":
+    {
+        "test1":
+        {
+            "testCaseDes": "GIVEN Primary Member with PHI Flag, WHEN requesting to view his or her claim records & THEN should NOT be able to view any informatio",
+            "enrolleeId": "004579377801",
+            "PersonId": "5047000004566430",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045793778 and person 5047000004566430"
+            }
+        },
+        "test2":
+        {
+            "testCaseDes": "GIVEN Primary Member with PHI Flag, WHEN requesting to view the ADULT dependent claim records & THEN should NOT be able to view any information",
+            "enrolleeId": "004579377802",
+            "PersonId": "5047000004566430",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045793778 and person 5047000004566430"
+            }
+        },
+        "test3":
+        {
+            "testCaseDes": "GIVEN an ADULT member Without PHI Flag, WHEN requesting to his/her own claim records & THEN should be able to view the information",
+            "enrolleeId": "004579377802",
+            "PersonId": "5047000004555079",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "enrolleeId": "004579377802",
+                "enrolleeName": "Pearline FORTIN",
+                "enrolleeType": "Dependent",
+                "enrolleeClaimSummaryList": [
+                {
+                    "personId": "5047000004555079",
+                    "claimId": "201802149051313",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "02/13/2018",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240610444240610444001PRV24072494300",
+                        "providerName": "John Sardella",
+                        "active": true,
+                        "gender": "Male",
+                        "contactNumber": [
+                        {
+                            "contactCode": "PHONE",
+                            "contactNumber": "610-383-4100"
+                        }]
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 0
+                },
+                {
+                    "personId": "5047000004555079",
+                    "claimId": "201709062094222",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "09/05/2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240610444240610444001PRV24072494300",
+                        "providerName": "John Sardella",
+                        "active": true,
+                        "gender": "Male",
+                        "contactNumber": [
+                        {
+                            "contactCode": "PHONE",
+                            "contactNumber": "610-383-4100"
+                        }]
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D2920",
+                        "procedureDescription": "RE-CEMENT OR RE-BOND CROWN",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 11.6
+                },
+                {
+                    "personId": "5047000004555079",
+                    "claimId": "201708092904559",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "08/08/2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240610444240610444001PRV24072494300",
+                        "providerName": "John Sardella",
+                        "active": true,
+                        "gender": "Male",
+                        "contactNumber": [
+                        {
+                            "contactCode": "PHONE",
+                            "contactNumber": "610-383-4100"
+                        }]
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 0
+                },
+                {
+                    "personId": "5047000004555079",
+                    "claimId": "201701097474272",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "01/04/2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240610444240610444001PRV24072494300",
+                        "providerName": "John Sardella",
+                        "active": true,
+                        "gender": "Male",
+                        "contactNumber": [
+                        {
+                            "contactCode": "PHONE",
+                            "contactNumber": "610-383-4100"
+                        }]
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 0
+                }]
+            }
+        },
+        "test4":
+        {
+            "testCaseDes": "GIVEN an ADULT member Without PHI Flag, WHEN requesting the PRIMARY claim records & THEN should NOT be able to view the information",
+            "enrolleeId": "004579377801",
+            "PersonId": "5047000004555079",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045793778 and person 5047000004555079"
+            }
+        },
+        "test5":
+        {
+            "testCaseDes": "GIVEN Primary Member Without PHI Flag, WHEN requesting to view his or her claim records & THEN should be able to view their information",
+            "enrolleeId": "004578460901",
+            "PersonId": "5047000004555079",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "enrolleeId": "004578460901",
+                "enrolleeName": "Pearline FORTIN",
+                "enrolleeType": "Primary",
+                "enrolleeClaimSummaryList": [
+                {
+                    "personId": "5047000004555079",
+                    "claimId": "20180456058750",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "02/13/2018",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240610444240610444001PRV24072494300",
+                        "providerName": "John Sardella",
+                        "active": true,
+                        "gender": "Male",
+                        "contactNumber": [
+                        {
+                            "contactCode": "PHONE",
+                            "contactNumber": "610-383-4100"
+                        }]
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 19
+                },
+                {
+                    "personId": "5047000004555079",
+                    "claimId": "20172496050442",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "09/05/2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240610444240610444001PRV24072494300",
+                        "providerName": "John Sardella",
+                        "active": true,
+                        "gender": "Male",
+                        "contactNumber": [
+                        {
+                            "contactCode": "PHONE",
+                            "contactNumber": "610-383-4100"
+                        }]
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D2920",
+                        "procedureDescription": "RE-CEMENT OR RE-BOND CROWN",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 58
+                },
+                {
+                    "personId": "5047000004555079",
+                    "claimId": "20172216085352",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "08/08/2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240610444240610444001PRV24072494300",
+                        "providerName": "John Sardella",
+                        "active": true,
+                        "gender": "Male",
+                        "contactNumber": [
+                        {
+                            "contactCode": "PHONE",
+                            "contactNumber": "610-383-4100"
+                        }]
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 19
+                },
+                {
+                    "personId": "5047000004555079",
+                    "claimId": "20170096074749",
+                    "claimStatus": "Claim Paid",
+                    "claimStatusCode": "Y",
+                    "dateOfService": "01/04/2017",
+                    "providerDetails":
+                    {
+                        "providerKey": "GRP240610444240610444001PRV24072494300",
+                        "providerName": "John Sardella",
+                        "active": true,
+                        "gender": "Male",
+                        "contactNumber": [
+                        {
+                            "contactCode": "PHONE",
+                            "contactNumber": "610-383-4100"
+                        }]
+                    },
+                    "procedureDetails": [
+                    {
+                        "procedureCode": "D0120",
+                        "procedureDescription": "PERIODIC ORAL EVALUATION - ESTABLISHED PATIENT",
+                        "procedureCount": 1
+                    },
+                    {
+                        "procedureCode": "D1110",
+                        "procedureDescription": "PROPHYLAXIS (CLEANING) - ADULT",
+                        "procedureCount": 1
+                    }],
+                    "enrolleeResponsibilityAmount": 19
+                }]
+            }
+        },
+        "test6":
+        {
+            "testCaseDes": "GIVEN Primary Member with PHI Flag, WHEN requesting to view the ADULT dependent claim records & THEN should NOT be able to view any information",
+            "enrolleeId": "004578460902",
+            "PersonId": "5047000004555079",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045784609 and person 5047000004555079"
+            }
+        },
+        "test7":
+        {
+            "testCaseDes": "GIVEN Adult Dependent with PHI Flag, WHEN requesting to view their own claim records & THEN should NOT be able to view their information",
+            "enrolleeId": "004578460902",
+            "PersonId": "5047000004566430",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045784609 and person 5047000004566430"
+            }
+        },
+        "test8":
+        {
+            "testCaseDes": "GIVEN Adult Dependent with PHI Flag, WHEN requesting to view the PRIMARY's claim records & THEN should NOT be able to view any information",
+            "enrolleeId": "004578460901",
+            "PersonId": "5047000004566430",
+            "ClientKey": "12345",
+            "verify":
+            {
+                "errorCode": "CLAIMS010",
+                "shortDescription": "UnAuthorized Access.",
+                "detailedDescription": "omnibus rules declined the permission for the given contract 0045784609 and person 5047000004566430"
+            }
+        }
+    }
+}

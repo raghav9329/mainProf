@@ -1,0 +1,128 @@
+{
+  "claimId": "20172286063197 ",
+  "claimType": "DE",
+  "contractId": "1131641499               ",
+  "claims": {
+    "claimSource": "2",
+    "claimStatus": "Y ",
+    "dateOfService": "2017-08-14 00:00:00",
+    "networkIndicator": "I"
+  },
+  "patientDetails": {
+    "personId": "0464210315454765",
+    "firstName": "Pearline",
+    "middleName": null,
+    "lastName": "Stillman",
+    "birthDate": "1977-02-08 00:00:00"
+  },
+  "providerDetail": {
+    "providerKey": "GRP542491127542491127001PRV79346117400",
+    "providerName": "Priscila A Donangelo",
+    "active": false,
+    "gender": null,
+    "phoneNumber": null
+  },
+  "procedureDetails": [
+    {
+      "serviceLine": "1",
+      "sequenceNumber": "0",
+      "surface": null,
+      "dateOfService": "2017-08-14 00:00:00",
+      "procedureItems": [
+        {
+          "procedureCode": "D0220",
+          "procDescription": "intraoral - periapical first radiographic image",
+          "toothCd": "  ",
+          "submittedAmount": 30,
+          "acceptedAmount": 15,
+          "paidByDeltaAmount": 15,
+          "paidByPatientAmount": 0,
+          "deductibleAmount": 0,
+          "explnCode": null,
+          "explnDescription": null,
+          "maxContractAllowance": 15,
+          "contractBenefitLevel": 100
+        }
+      ]
+    },
+    {
+      "serviceLine": "2",
+      "sequenceNumber": "0",
+      "surface": null,
+      "dateOfService": "2017-08-14 00:00:00",
+      "procedureItems": [
+        {
+          "procedureCode": "D0230",
+          "procDescription": "intraoral - periapical each additional radiographic image",
+          "toothCd": "  ",
+          "submittedAmount": 27,
+          "acceptedAmount": 12,
+          "paidByDeltaAmount": 12,
+          "paidByPatientAmount": 0,
+          "deductibleAmount": 0,
+          "explnCode": null,
+          "explnDescription": null,
+          "maxContractAllowance": 12,
+          "contractBenefitLevel": 100
+        }
+      ]
+    },
+    {
+      "serviceLine": "3",
+      "sequenceNumber": "0",
+      "surface": null,
+      "dateOfService": "2017-08-14 00:00:00",
+      "procedureItems": [
+        {
+          "procedureCode": "D0274",
+          "procDescription": "bitewings - four radiographic images",
+          "toothCd": "  ",
+          "submittedAmount": 68,
+          "acceptedAmount": 33,
+          "paidByDeltaAmount": 33,
+          "paidByPatientAmount": 0,
+          "deductibleAmount": 0,
+          "explnCode": null,
+          "explnDescription": null,
+          "maxContractAllowance": 33,
+          "contractBenefitLevel": 100
+        }
+      ]
+    },
+    {
+      "serviceLine": "4",
+      "sequenceNumber": "0",
+      "surface": null,
+      "dateOfService": "2017-08-14 00:00:00",
+      "procedureItems": [
+        {
+          "procedureCode": "D4910",
+          "procDescription": "periodontal maintenance",
+          "toothCd": "  ",
+          "submittedAmount": 159,
+          "acceptedAmount": 79,
+          "paidByDeltaAmount": 63.2,
+          "paidByPatientAmount": 15.8,
+          "deductibleAmount": 0,
+          "explnCode": null,
+          "explnDescription": null,
+          "maxContractAllowance": 79,
+          "contractBenefitLevel": 80
+        }
+      ]
+    }
+  ],
+  "claimProcesingTime": {
+    "receivedTime": "2017-08-20 16:13:27.134758",
+    "statusTime": "2017-08-16 00:00:01",
+    "paidTime": "2017-08-23 16:10:02"
+  },
+  "visitSummary": {
+    "totalSubmittedAmount": 284,
+    "totalAcceptedAmount": 139,
+    "totalPaidByAnotherPlanAmount": 0,
+    "totalPatientResponsibilityAmount": 15.8,
+    "totalPaidByDeltaAmount": 123.2,
+    "totalDeductibleAmount": 0
+  }
+}

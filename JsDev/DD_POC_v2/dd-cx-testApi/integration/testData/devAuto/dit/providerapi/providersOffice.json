@@ -1,0 +1,320 @@
+{
+    "testdata":
+    {
+
+        "test1":
+        {
+            "practiceLocationNumber": "139344028001",
+            "params":
+            {},
+            "verify":
+            {
+                "practiceLocationNumber": "139344028001",
+                "name": "Sage Dental of Royal Palm Beach PLLC",
+                "address":
+                {
+                    "addressLine": "137 S State Rd Ste 301",
+                    "city": "West Palm Beach",
+                    "state": "FL",
+                    "zipcode": "33414",
+                    "latitude": 26.6970921,
+                    "longitude": -80.2322311
+                }
+            }
+        },
+        "test2":
+        {
+            "practiceLocationNumber": "240620968001",
+            "params":
+            {},
+            "verify":
+            {
+                "practiceLocationNumber": "240620968001",
+                "name": "Michael J Perona",
+                "address":
+                {
+                    "addressLine": "188 Spear St Ste 105, ",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1503",
+                    "latitude": 37.7914467,
+                    "longitude": -122.3929672
+                }
+            }
+        },
+        "test3":
+        {
+            "practiceLocationNumber": "240615694001",
+            "params":
+            {},
+            "verify":
+            {
+                "practiceLocationNumber": "240615694001",
+                "name": "Leong Dental Inc",
+                "address":
+                {
+                    "addressLine": "199 Fremont St Ste 105",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-2287",
+                    "latitude": 37.7899399,
+                    "longitude": -122.3948441
+                }
+            }
+        },
+        "test4":
+        {
+            "practiceLocationNumber": "240637385001",
+            "params":
+            {},
+            "verify":
+            {
+                "practiceLocationNumber": "240637385001",
+                "name": "Steve Byun",
+                "address":
+                {
+                    "addressLine": "121 Spear St Ste B16",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1576",
+                    "latitude": 37.7919006,
+                    "longitude": -122.3928299
+                }
+            }
+        },
+        "test5":
+        {
+            "practiceLocationNumber": "240645139001",
+            "params":
+            {},
+            "verify":
+            {
+                "practiceLocationNumber": "240645139001",
+                "name": "Yvette Danielle Marquis  DDS",
+                "address":
+                {
+                    "addressLine": "131 Steuart St Ste 323",
+                    "city": "San Francisco",
+                    "state": "CA",
+                    "zipcode": "94105-1241",
+                    "latitude": 37.7931023,
+                    "longitude": -122.3924255
+                }
+            }
+        }
+    },
+    "negativetestdata":
+    {
+        "negativetest1":
+        {
+            "practiceLocationNumber": "240594664001",
+            "params":
+            {
+                "lat": "37",
+                "long": "-122"
+            },
+            "verify":
+            {
+                "practiceLocationNumber": null,
+                "name": null,
+                "address":
+                {
+                    "addressLine": null
+                },
+                "license": null
+            },
+            "isExecution": true
+        },
+        "negativetest2":
+        {
+            "practiceLocationNumber": "",
+            "params":
+            {
+                "lat": "37",
+                "long": "-122"
+            },
+            "verify":
+            {
+                "error": "Internal Server Error",
+                "exception": "com.deltadental.platform.common.exception.PlatformException"
+            },
+            "isExecution": true
+        }
+
+    },
+    "practiceLocationWithMultipleProviders":
+    {
+
+        "test1":
+        {
+            "practiceLocationNumber": "510192187028",
+            "params":
+            {},
+            "verify":
+            {
+                "practiceLocationNumber": "510192187028",
+                "name": "Greenberg Dental & Orthodontics",
+                "address":
+                {
+                    "addressLine": "620 Commerce Center Dr Unt 155, ",
+                    "city": "Jacksonville",
+                    "state": "FL",
+                    "zipcode": "32225-8803",
+                    "latitude": 30.3349533,
+                    "longitude": -81.5514832
+                }
+            }
+        },
+        "test2":
+        {
+            "practiceLocationNumber": "240001239127",
+            "params":
+            {
+                "lat": "34",
+                "long": "-117"
+            },
+            "verify":
+            {
+                "practiceLocationNumber": "240001239127",
+                "name": "Western Dental Services Inc",
+                "address":
+                {
+                    "addressLine": "8678 19th St Ste 140",
+                    "city": "Rch Cucamonga",
+                    "state": "CA",
+                    "zipcode": "91701-4559",
+                    "latitude": 34.133007,
+                    "longitude": -117.6167908
+                }
+            }
+        }
+    },
+    "amgentestdata":
+    {
+        "amgen1":
+        {
+            "facilityId": "026971",
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2DELTACARE"
+            },
+            "verify":
+            {
+                "facilityId": "026971",
+                "name": "American Dental Offices Pllc",
+                "address":
+                {
+                    "addressLine": "241 W 30th St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zipcode": "10001-2823",
+                    "latitude": 40.7491951,
+                    "longitude": -73.993927
+                },
+                "license":
+                {
+                    "licenseNumber": "56090",
+                    "licenseState": "NY"
+                }
+            },
+            "isExecution": true
+        },
+        "amgen2":
+        {
+            "facilityId": "026971",
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2PREMIER"
+            },
+            "verify":
+            {
+                "facilityId": "026971",
+                "name": "American Dental Offices Pllc",
+                "address":
+                {
+                    "addressLine": "241 W 30th St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zipcode": "10001-2823",
+                    "latitude": 40.7491951,
+                    "longitude": -73.993927
+                },
+                "license":
+                {
+                    "licenseNumber": "56090",
+                    "licenseState": "NY"
+                }
+            },
+            "isExecution": true
+        },
+        "amgen3":
+        {
+            "facilityId": "026971",
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2PPO"
+            },
+            "verify":
+            {
+                "facilityId": "026971",
+                "name": "American Dental Offices Pllc",
+                "address":
+                {
+                    "addressLine": "241 W 30th St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zipcode": "10001-2823",
+                    "latitude": 40.7491951,
+                    "longitude": -73.993927
+                },
+                "license":
+                {
+                    "licenseNumber": "56090",
+                    "licenseState": "NY"
+                }
+            },
+            "isExecution": true
+        },
+        "amgen4":
+        {
+            "facilityId": "026971",
+            "params":
+            {
+                "lat": "40.7491951",
+                "long": "-73.993927",
+                "sourceNetwork": "2NYPPO",
+                "targetNetwork": "2NYPPO"
+            },
+            "verify":
+            {
+                "facilityId": "026971",
+                "name": "American Dental Offices Pllc",
+                "address":
+                {
+                    "addressLine": "241 W 30th St",
+                    "city": "New York",
+                    "state": "NY",
+                    "zipcode": "10001-2823",
+                    "latitude": 40.7491951,
+                    "longitude": -73.993927
+                },
+                "license":
+                {
+                    "licenseNumber": "56090",
+                    "licenseState": "NY"
+                }
+            },
+            "isExecution": true
+        }
+    }
+
+}

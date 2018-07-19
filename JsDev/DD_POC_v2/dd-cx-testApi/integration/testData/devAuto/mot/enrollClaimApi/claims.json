@@ -1,0 +1,866 @@
+{
+    "testdata": {
+        "test1": {
+            "testCaseDesc": "GIVEN Primary Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "claimId": "20170626097060",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "claimId": "20170626097060 ",
+                "claimType": "DE",
+                "contractId": "1004871950               ",
+                "claims": {
+                    "claimSource": "2",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails": {
+                    "personId": "0358980916542245",
+                    "firstName": "Terrance",
+                    "middleName": "Augusta",
+                    "lastName": "Hollister",
+                    "birthDate": "1962-08-06 00:00:00"
+                },
+                "providerDetail": {
+                    "providerKey": "GRP240764119240764119001PRV50998902100",
+                    "providerName": "TERA M MOELLER",
+                    "active": false,
+                    "gender": null,
+                    "contactNumber": []
+                },
+                "procedureDetails": [{
+                    "serviceLine": "1",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0120",
+                        "procDescription": "periodic oral evaluation - established patient",
+                        "toothCd": "  ",
+                        "submittedAmount": 53,
+                        "acceptedAmount": 25,
+                        "paidByDeltaAmount": 25,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 25,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "2",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0274",
+                        "procDescription": "bitewings - four radiographic images",
+                        "toothCd": "  ",
+                        "submittedAmount": 68,
+                        "acceptedAmount": 34,
+                        "paidByDeltaAmount": 34,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 34,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "3",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1110",
+                        "procDescription": "prophylaxis (cleaning) - adult",
+                        "toothCd": "  ",
+                        "submittedAmount": 96,
+                        "acceptedAmount": 48,
+                        "paidByDeltaAmount": 48,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 48,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "4",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2016-12-20 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1206",
+                        "procDescription": "topical application of fluoride varnish",
+                        "toothCd": "  ",
+                        "submittedAmount": 30,
+                        "acceptedAmount": 20,
+                        "paidByDeltaAmount": 0,
+                        "paidByPatientAmount": 20,
+                        "deductibleAmount": 0,
+                        "explnCode": "757",
+                        "explnDescription": "The patient exceeds the program's age limit for this procedure. Therefore, the patient is responsible for the amount indicated as \"Patient Pays.\"",
+                        "maxContractAllowance": 20,
+                        "contractBenefitLevel": 100
+                    }]
+                }],
+                "claimProcesingTime": {
+                    "receivedTime": "2017-03-07 19:18:46.829009",
+                    "statusTime": "2017-03-03 00:00:01",
+                    "paidTime": "2017-03-10 19:17:01"
+                },
+                "visitSummary": {
+                    "totalSubmittedAmount": 247,
+                    "totalAcceptedAmount": 127,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 20,
+                    "totalPaidByDeltaAmount": 107,
+                    "totalDeductibleAmount": 0
+                }
+            }
+        },
+        "test2": {
+            "testCaseDesc": "GIVEN Primary Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "claimId": "20171876056593",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "claimId": "20171876056593 ",
+                "claimType": "DE",
+                "contractId": "1004871950               ",
+                "claims": {
+                    "claimSource": "2",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2017-07-05 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails": {
+                    "personId": "0358980916542245",
+                    "firstName": "Terrance",
+                    "middleName": "Augusta",
+                    "lastName": "Hollister",
+                    "birthDate": "1962-08-06 00:00:00"
+                },
+                "providerDetail": {
+                    "providerKey": "GRP240764119240764119001PRV25390000400",
+                    "providerName": "CHRISTOPHER M FRENCH",
+                    "active": false,
+                    "gender": null,
+                    "contactNumber": []
+                },
+                "procedureDetails": [{
+                    "serviceLine": "1",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-07-05 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0120",
+                        "procDescription": "periodic oral evaluation - established patient",
+                        "toothCd": "  ",
+                        "submittedAmount": 53,
+                        "acceptedAmount": 25,
+                        "paidByDeltaAmount": 25,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 25,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "2",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-07-05 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0330",
+                        "procDescription": "panoramic radiographic image",
+                        "toothCd": "  ",
+                        "submittedAmount": 119,
+                        "acceptedAmount": 62,
+                        "paidByDeltaAmount": 62,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 62,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "3",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-07-05 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1110",
+                        "procDescription": "prophylaxis (cleaning) - adult",
+                        "toothCd": "  ",
+                        "submittedAmount": 96,
+                        "acceptedAmount": 48,
+                        "paidByDeltaAmount": 48,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 48,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "4",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-07-05 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1206",
+                        "procDescription": "topical application of fluoride varnish",
+                        "toothCd": "  ",
+                        "submittedAmount": 30,
+                        "acceptedAmount": 20,
+                        "paidByDeltaAmount": 0,
+                        "paidByPatientAmount": 20,
+                        "deductibleAmount": 0,
+                        "explnCode": "757",
+                        "explnDescription": "The patient exceeds the program's age limit for this procedure. Therefore, the patient is responsible for the amount indicated as \"Patient Pays.\"",
+                        "maxContractAllowance": 20,
+                        "contractBenefitLevel": 100
+                    }]
+                }],
+                "claimProcesingTime": {
+                    "receivedTime": "2017-07-18 19:39:55.836006",
+                    "statusTime": "2017-07-06 00:00:01",
+                    "paidTime": "2017-07-21 19:38:32"
+                },
+                "visitSummary": {
+                    "totalSubmittedAmount": 298,
+                    "totalAcceptedAmount": 155,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 20,
+                    "totalPaidByDeltaAmount": 135,
+                    "totalDeductibleAmount": 0
+                }
+            }
+        },
+        "test3": {
+            "testCaseDesc": "GIVEN Primary Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "claimId": "20172152406875",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "claimId": "20172152406875 ",
+                "claimType": "DE",
+                "contractId": "1004871950               ",
+                "claims": {
+                    "claimSource": "P",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2017-07-31 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails": {
+                    "personId": "0358980916542245",
+                    "firstName": "Terrance",
+                    "middleName": "Augusta",
+                    "lastName": "Hollister",
+                    "birthDate": "1962-08-06 00:00:00"
+                },
+                "providerDetail": {
+                    "providerKey": "GRP240764119240764119001PRV25390000400",
+                    "providerName": "CHRISTOPHER M FRENCH",
+                    "active": false,
+                    "gender": null,
+                    "contactNumber": []
+                },
+                "procedureDetails": [{
+                    "serviceLine": "1",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-07-31 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D2740",
+                        "procDescription": "crown - porcelain/ceramic",
+                        "toothCd": "19",
+                        "submittedAmount": 1184,
+                        "acceptedAmount": 776,
+                        "paidByDeltaAmount": 363,
+                        "paidByPatientAmount": 413,
+                        "deductibleAmount": 50,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 776,
+                        "contractBenefitLevel": 50
+                    }]
+                }],
+                "claimProcesingTime": {
+                    "receivedTime": "2017-08-08 19:40:56.599355",
+                    "statusTime": "2017-08-03 00:00:01",
+                    "paidTime": "2017-08-11 19:39:55"
+                },
+                "visitSummary": {
+                    "totalSubmittedAmount": 1184,
+                    "totalAcceptedAmount": 776,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 413,
+                    "totalPaidByDeltaAmount": 363,
+                    "totalDeductibleAmount": 50
+                }
+            }
+        },
+        "test4": {
+            "testCaseDesc": "GIVEN Primary Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "claimId": "20172376088994",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "claimId": "20172376088994 ",
+                "claimType": "DE",
+                "contractId": "1004871950               ",
+                "claims": {
+                    "claimSource": "2",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2017-08-25 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails": {
+                    "personId": "0358980916542245",
+                    "firstName": "Terrance",
+                    "middleName": "Augusta",
+                    "lastName": "Hollister",
+                    "birthDate": "1962-08-06 00:00:00"
+                },
+                "providerDetail": {
+                    "providerKey": "GRP240764119240764119001PRV25390000400",
+                    "providerName": "CHRISTOPHER M FRENCH",
+                    "active": false,
+                    "gender": null,
+                    "contactNumber": []
+                },
+                "procedureDetails": [{
+                    "serviceLine": "2",
+                    "sequenceNumber": "0",
+                    "surface": "L,I,",
+                    "dateOfService": "2017-08-25 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D2331",
+                        "procDescription": "resin-based composite - two surfaces, anterior tooth",
+                        "toothCd": "24",
+                        "submittedAmount": 214,
+                        "acceptedAmount": 98,
+                        "paidByDeltaAmount": 78.4,
+                        "paidByPatientAmount": 19.6,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 98,
+                        "contractBenefitLevel": 80
+                    }]
+                }, {
+                    "serviceLine": "3",
+                    "sequenceNumber": "0",
+                    "surface": "O,D,",
+                    "dateOfService": "2017-08-25 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D2150",
+                        "procDescription": "amalgam - two surfaces, primary or permanent tooth",
+                        "toothCd": "04",
+                        "submittedAmount": 244,
+                        "acceptedAmount": 117,
+                        "paidByDeltaAmount": 64,
+                        "paidByPatientAmount": 53,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 80,
+                        "contractBenefitLevel": 80
+                    }]
+                }],
+                "claimProcesingTime": {
+                    "receivedTime": "2017-09-05 18:40:25.06002",
+                    "statusTime": "2017-08-25 00:00:01",
+                    "paidTime": "2017-09-08 18:40:01"
+                },
+                "visitSummary": {
+                    "totalSubmittedAmount": 458,
+                    "totalAcceptedAmount": 215,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 72.6,
+                    "totalPaidByDeltaAmount": 142.4,
+                    "totalDeductibleAmount": 0
+                }
+            }
+        },
+        "test5": {
+            "testCaseDesc": "GIVEN Primary Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "claimId": "20180096091635",
+            "personId": "0358980916542245",
+            "ClientKey": "12345",
+            "verify": {
+                "claimId": "20180096091635 ",
+                "claimType": "DE",
+                "contractId": "1004871950               ",
+                "claims": {
+                    "claimSource": "2",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2018-01-09 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails": {
+                    "personId": "0358980916542245",
+                    "firstName": "Terrance",
+                    "middleName": "Augusta",
+                    "lastName": "Hollister",
+                    "birthDate": "1962-08-06 00:00:00"
+                },
+                "providerDetail": {
+                    "providerKey": "GRP019284956019284956001PRV50998902100",
+                    "providerName": "TERA M MOELLER",
+                    "active": false,
+                    "gender": null,
+                    "contactNumber": []
+                },
+                "procedureDetails": [{
+                    "serviceLine": "1",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2018-01-09 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0120",
+                        "procDescription": "periodic oral evaluation - established patient",
+                        "toothCd": "  ",
+                        "submittedAmount": 53,
+                        "acceptedAmount": 25,
+                        "paidByDeltaAmount": 25,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 25,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "2",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2018-01-09 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0274",
+                        "procDescription": "bitewings - four radiographic images",
+                        "toothCd": "  ",
+                        "submittedAmount": 68,
+                        "acceptedAmount": 34,
+                        "paidByDeltaAmount": 34,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 34,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "3",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2018-01-09 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1110",
+                        "procDescription": "prophylaxis (cleaning) - adult",
+                        "toothCd": "  ",
+                        "submittedAmount": 96,
+                        "acceptedAmount": 48,
+                        "paidByDeltaAmount": 48,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 48,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "4",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2018-01-09 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1206",
+                        "procDescription": "topical application of fluoride varnish",
+                        "toothCd": "  ",
+                        "submittedAmount": 30,
+                        "acceptedAmount": 20,
+                        "paidByDeltaAmount": 0,
+                        "paidByPatientAmount": 20,
+                        "deductibleAmount": 0,
+                        "explnCode": "757",
+                        "explnDescription": "The patient exceeds the program's age limit for this procedure. Therefore, the patient is responsible for the amount indicated as \"Patient Pays.\"",
+                        "maxContractAllowance": 20,
+                        "contractBenefitLevel": 100
+                    }]
+                }],
+                "claimProcesingTime": {
+                    "receivedTime": "2018-01-09 19:54:05.467087",
+                    "statusTime": "2018-01-09 00:00:01",
+                    "paidTime": "2018-01-12 19:52:16"
+                },
+                "visitSummary": {
+                    "totalSubmittedAmount": 247,
+                    "totalAcceptedAmount": 127,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 20,
+                    "totalPaidByDeltaAmount": 107,
+                    "totalDeductibleAmount": 0
+                }
+            }
+        },
+        "test6": {
+            "testCaseDesc": "GIVEN Adult Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "claimId": "20172356027125",
+            "personId": "7997000007699287",
+            "ClientKey": "12345",
+            "verify": {
+                "claimId": "20172356027125 ",
+                "claimType": "DE",
+                "contractId": "2399735843               ",
+                "claims": {
+                    "claimSource": "1",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2017-08-22 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails": {
+                    "personId": "7997000007699287",
+                    "firstName": "Lissa",
+                    "middleName": null,
+                    "lastName": "Koester",
+                    "birthDate": "1943-07-20 00:00:00"
+                },
+                "providerDetail": {
+                    "providerKey": "GRP299530028299530028001PRV29953002200",
+                    "providerName": "ERIK P WATZ",
+                    "active": false,
+                    "gender": null,
+                    "contactNumber": []
+                },
+                "procedureDetails": [{
+                    "serviceLine": "1",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-08-22 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0120",
+                        "procDescription": "periodic oral evaluation - established patient",
+                        "toothCd": "  ",
+                        "submittedAmount": 45,
+                        "acceptedAmount": 33,
+                        "paidByDeltaAmount": 33,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 33,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "2",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-08-22 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1110",
+                        "procDescription": "prophylaxis (cleaning) - adult",
+                        "toothCd": "  ",
+                        "submittedAmount": 89,
+                        "acceptedAmount": 67,
+                        "paidByDeltaAmount": 67,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 67,
+                        "contractBenefitLevel": 100
+                    }]
+                }],
+                "claimProcesingTime": {
+                    "receivedTime": "2017-08-28 20:51:23.994517",
+                    "statusTime": "2017-08-23 00:00:01",
+                    "paidTime": "2017-08-31 20:49:03"
+                },
+                "visitSummary": {
+                    "totalSubmittedAmount": 134,
+                    "totalAcceptedAmount": 100,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 0,
+                    "totalPaidByDeltaAmount": 100,
+                    "totalDeductibleAmount": 0
+                }
+            }
+        },
+        "test7": {
+            "testCaseDesc": "GIVEN Adult Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "claimId": "20170536005443",
+            "personId": "7997000007699287",
+            "ClientKey": "12345",
+            "verify": {
+                "claimId": "20170536005443 ",
+                "claimType": "DE",
+                "contractId": "2399735843               ",
+                "claims": {
+                    "claimSource": "1",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2017-02-21 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails": {
+                    "personId": "7997000007699287",
+                    "firstName": "Lissa",
+                    "middleName": null,
+                    "lastName": "Koester",
+                    "birthDate": "1943-07-20 00:00:00"
+                },
+                "providerDetail": {
+                    "providerKey": "GRP299530028299530028001PRV29953002200",
+                    "providerName": "ERIK P WATZ",
+                    "active": false,
+                    "gender": null,
+                    "contactNumber": []
+                },
+                "procedureDetails": [{
+                    "serviceLine": "1",
+                    "sequenceNumber": "0",
+                    "surface": "D,L,",
+                    "dateOfService": "2017-02-21 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D2331",
+                        "procDescription": "resin-based composite - two surfaces, anterior tooth",
+                        "toothCd": "23",
+                        "submittedAmount": 232,
+                        "acceptedAmount": 121,
+                        "paidByDeltaAmount": 121,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 121,
+                        "contractBenefitLevel": 100
+                    }]
+                }],
+                "claimProcesingTime": {
+                    "receivedTime": "2017-02-27 23:28:41.550486",
+                    "statusTime": "2017-02-22 00:00:01",
+                    "paidTime": "2017-03-02 23:26:29"
+                },
+                "visitSummary": {
+                    "totalSubmittedAmount": 232,
+                    "totalAcceptedAmount": 121,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 0,
+                    "totalPaidByDeltaAmount": 121,
+                    "totalDeductibleAmount": 0
+                }
+            }
+        },
+        "test8": {
+            "testCaseDesc": "GIVEN Adult Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "claimId": "20170396012731",
+            "personId": "7997000007699287",
+            "ClientKey": "12345",
+            "verify": {
+                "claimId": "20170396012731 ",
+                "claimType": "DE",
+                "contractId": "2399735843               ",
+                "claims": {
+                    "claimSource": "1",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2017-02-07 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails": {
+                    "personId": "7997000007699287",
+                    "firstName": "Lissa",
+                    "middleName": null,
+                    "lastName": "Koester",
+                    "birthDate": "1943-07-20 00:00:00"
+                },
+                "providerDetail": {
+                    "providerKey": "GRP299530028299530028001PRV29953002200",
+                    "providerName": "ERIK P WATZ",
+                    "active": false,
+                    "gender": null,
+                    "contactNumber": []
+                },
+                "procedureDetails": [{
+                    "serviceLine": "1",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-02-07 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0120",
+                        "procDescription": "periodic oral evaluation - established patient",
+                        "toothCd": "  ",
+                        "submittedAmount": 45,
+                        "acceptedAmount": 33,
+                        "paidByDeltaAmount": 33,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 33,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "2",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-02-07 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0274",
+                        "procDescription": "bitewings - four radiographic images",
+                        "toothCd": "  ",
+                        "submittedAmount": 60,
+                        "acceptedAmount": 40,
+                        "paidByDeltaAmount": 40,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 40,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "3",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-02-07 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1110",
+                        "procDescription": "prophylaxis (cleaning) - adult",
+                        "toothCd": "  ",
+                        "submittedAmount": 89,
+                        "acceptedAmount": 67,
+                        "paidByDeltaAmount": 67,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 67,
+                        "contractBenefitLevel": 100
+                    }]
+                }],
+                "claimProcesingTime": {
+                    "receivedTime": "2017-02-13 20:29:36.384187",
+                    "statusTime": "2017-02-08 00:00:01",
+                    "paidTime": "2017-02-16 20:26:49"
+                },
+                "visitSummary": {
+                    "totalSubmittedAmount": 194,
+                    "totalAcceptedAmount": 140,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 0,
+                    "totalPaidByDeltaAmount": 140,
+                    "totalDeductibleAmount": 0
+                }
+            }
+        },
+        "test9": {
+            "testCaseDesc": "GIVEN Child Member, WHEN requesting to view his or her claim records & THEN should be able to view all his claim records.",
+            "claimId": "20172566038192",
+            "personId": "0431041316550753",
+            "ClientKey": "12345",
+            "verify": {
+                "claimId": "20172566038192 ",
+                "claimType": "DE",
+                "contractId": "1163798575               ",
+                "claims": {
+                    "claimSource": "3",
+                    "claimStatus": "Y ",
+                    "dateOfService": "2017-09-12 00:00:00",
+                    "networkIndicator": "I"
+                },
+                "patientDetails": {
+                    "personId": "0431041316550753",
+                    "firstName": "Angla",
+                    "middleName": null,
+                    "lastName": "Dore",
+                    "birthDate": "2004-09-16 00:00:00"
+                },
+                "providerDetail": {
+                    "providerKey": "GRP509989916509989916001PRV24089140000",
+                    "providerName": "ERIC  DANKOSKI",
+                    "active": false,
+                    "gender": null,
+                    "contactNumber": []
+                },
+                "procedureDetails": [{
+                    "serviceLine": "1",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-09-12 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D0120",
+                        "procDescription": "periodic oral evaluation - established patient",
+                        "toothCd": "  ",
+                        "submittedAmount": 50,
+                        "acceptedAmount": 30,
+                        "paidByDeltaAmount": 30,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 30,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "2",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-09-12 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1120",
+                        "procDescription": "prophylaxis (cleaning) - child",
+                        "toothCd": "  ",
+                        "submittedAmount": 67,
+                        "acceptedAmount": 43,
+                        "paidByDeltaAmount": 43,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 43,
+                        "contractBenefitLevel": 100
+                    }]
+                }, {
+                    "serviceLine": "3",
+                    "sequenceNumber": "0",
+                    "surface": null,
+                    "dateOfService": "2017-09-12 00:00:00",
+                    "procedureItems": [{
+                        "procedureCode": "D1208",
+                        "procDescription": "topical application of fluoride - excluding varnish",
+                        "toothCd": "  ",
+                        "submittedAmount": 37,
+                        "acceptedAmount": 24,
+                        "paidByDeltaAmount": 24,
+                        "paidByPatientAmount": 0,
+                        "deductibleAmount": 0,
+                        "explnCode": null,
+                        "explnDescription": null,
+                        "maxContractAllowance": 24,
+                        "contractBenefitLevel": 100
+                    }]
+                }],
+                "claimProcesingTime": {
+                    "receivedTime": "2017-09-17 15:49:21.589027",
+                    "statusTime": "2017-09-13 00:00:01",
+                    "paidTime": "2017-09-20 15:45:59"
+                },
+                "visitSummary": {
+                    "totalSubmittedAmount": 154,
+                    "totalAcceptedAmount": 97,
+                    "totalPaidByAnotherPlanAmount": 0,
+                    "totalPatientResponsibilityAmount": 0,
+                    "totalPaidByDeltaAmount": 97,
+                    "totalDeductibleAmount": 0
+                }
+            }
+        }
+
+    }
+}

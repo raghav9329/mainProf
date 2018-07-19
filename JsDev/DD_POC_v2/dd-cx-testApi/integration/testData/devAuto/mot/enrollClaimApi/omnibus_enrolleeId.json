@@ -1,0 +1,31 @@
+{
+    "positiveTestData":
+    {
+        "test1":
+        {
+            "enrolleeId": "100487195002",
+            "personId": "0358980916542245",
+            "permissionGranted": true,
+            "message": "Omnibus-rule: Adult enrollee granted permission to primary member. OK to view enrollee's  records."
+        }
+    },
+    "negativeTestData":
+    {
+        "test2":
+        {
+            "enrolleeId": "100487195002",
+            "personId": "03589809165422451",
+            "errorCode": "OMNIBUS_ERROR_RULE005",
+            "shortDescription": "Unauthorized access.",
+            "detailedDescription": "Person is not in the given contract. Person is not authorized to view the Enrollee's records."
+        },
+        "test3":
+        {
+            "enrolleeId": "100487195008",
+            "personId": "0358980916542245",
+            "errorCode": "OMNIBUS_ERROR_RULE006",
+            "shortDescription": "Unauthorized access.",
+            "detailedDescription": "Requested Enrollee is not in the given contract. Person is not authorized to view the Enrollee's records."
+        }
+    }
+}

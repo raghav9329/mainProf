@@ -1,0 +1,30 @@
+{  
+   "enrolleetestdata":{  
+      "enrollee1":{  
+         "ClientKey":"12345",
+         "enrolleeId":"100487195001",
+         "personId":"0358980916542245"
+      }
+   },
+   "enrolleetestdata1":
+    {
+        "enrollee1":
+        {
+            "ClientKey": "12345",            
+            "enrolleeId": "1004871950012",
+            "personId": "0358980916542245",
+            "errorCode": "USAGE000",
+            "shortDescription": "Generic Application Exception",
+            "detailedDescription": "Generic Application Exception. {0}"
+        },
+        "enrollee2":
+        {
+            "ClientKey": "12345",            
+            "enrolleeId": "100487195001",
+            "personId": "03589809165422456",
+            "errorCode": "USAGE000",
+            "shortDescription": "Generic Application Exception",
+            "detailedDescription": "Generic Application Exception. {0}"
+        }
+    }
+}

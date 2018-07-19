@@ -1,0 +1,41 @@
+{
+  "name": "delta-dental_CX_API_Test_Automation",
+  "version": "0.0.3",
+  "scripts": {
+    "pddev": "protractor conf.js  --params.apiurl http://aw-lx0244:19001",
+    "pddit": "protractor conf.js  --params.apiurl http://aw-lx0334:19002",
+    "pdmot": "protractor conf.js  --params.apiurl https://rc-lx842.ut.dentegra.lab:9443/providers",
+    "urlNote":"rc-lx842.ut.dentegra.lab:9443/providers was created by Steve Hansen Delta Git IT  in order to allow devConnect to reach MOT APIs",
+    "enrollClaimApidev": "protractor conf.js  --params.apiurl https://aw-lx0244 --params.testDataEnv dev",
+    "enrollClaimApidit": "protractor conf.js  --params.apiurl https://aw-lx0334  --params.testDataEnv dit",
+    "enrollClaimApimot": "protractor conf.js  --params.apiurl https://rc-lx1325.ut.dentegra.lab  --params.testDataEnv mot"
+  },
+  "author": "",
+  "license": "none",
+  "description": "Delta Dental Customer Experience REST API Test Automation",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "frisby": "^2.0.16",
+    "hat": "0.0.3",
+    "jasmine-core": "2.5.2",
+    "jasmine-data-provider": "^2.2.0",
+    "jasmine-spec-reporter": "2.4.0",
+    "log4js": "^1.1.1",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.22.1",
+    "node-cmd": "^3.0.0",
+    "protractor": "^5.3.2",
+    "protractor-jasmine2-html-reporter": "0.0.6",
+    "request": "^2.83.0",
+    "rimraf": "^2.6.2",
+    "string.prototype.startswith": "^0.2.0",
+    "vinyl-source-stream": "1.1.0",
+    "webdriver-manager": "10.2.6"
+  },
+  "dependencies": {
+    "log4js": "^1.1.1",
+    "moment": "^2.18.1",
+    "node-cmd": "^3.0.0",
+    "ps-node": "^0.1.6"
+  }
+}

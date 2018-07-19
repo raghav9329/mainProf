@@ -1,0 +1,900 @@
+{
+    "testdata": {
+        "test1": {
+            "testCaseDesc": "Test 1: GIVEN there is a valid PRIMARY who has 1 Active Contract, THEN all his member details for the contract, group and division should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "0000618464",
+            "personId": "5100000000018556",
+            "params": {
+                "group-id": "SMK",
+                "division-id": "60"
+            },
+            "verify": [
+                {
+                  "age": "25",
+                  "benefitCoverageLevelCode": "01",
+                  "birthDate": "05/27/1993",
+                  "contractId": "0000618464",
+                  "coverageSpanEffectiveDate": "12/14/2003",
+                  "coverageSpanEndDate": "12/31/2004",
+                  "eligibilityEffectiveDate": "12/14/2003",
+                  "eligibilityEndDate": "12/31/2004",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "2789 Illinois St",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "East Palo Alto",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "94303-1234",
+                        "addressType": "MA"
+                    },
+                    {
+                        "addressLine1": "2789 Illinois St",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "East Palo Alto",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "94303-1234",
+                        "addressType": "RE"
+                    }
+                ],
+                  "enrolleeId": "000061846401",
+                  "memberId": "01",
+                  "email": null,
+                  "firstName": "Stephanie",
+                  "middleName": "",
+                  "lastName": "Guttierrez",
+                  "language": "Spanish",
+                  "personId": "5100000000018556",
+                  "officePhone": null,
+                  "homePhone": "6507710226",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Female",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "Y",
+                  "phiFlag": false,
+                  "relationShip": "Child Subscriber",
+                  "relationShipCode": "12",
+                  "primary": true,
+                  "divisionId": "60",
+                  "groupId": "SMK"
+                }
+              ]
+        },
+        "test2": {
+            "testCaseDesc": "Test 2: GIVEN there is a valid PRIMARY and CHILD Dependent who have an Inactive Contract, THEN all their member details for the inactive contract, group and division should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "1135886939",
+            "personId": "0000010219300370",
+            "params": {
+                "group-id": "78536",
+                "division-id": "00011"
+            },
+            "verify": [
+                {
+                  "age": "42",
+                  "benefitCoverageLevelCode": "06",
+                  "birthDate": "11/11/1975",
+                  "contractId": "1135886939",
+                  "coverageSpanEffectiveDate": "01/01/2015",
+                  "coverageSpanEndDate": "12/31/2015",
+                  "eligibilityEffectiveDate": "01/01/2015",
+                  "eligibilityEndDate": "12/31/2015",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "MA"
+                    },
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "RE"
+                    }
+                  ],
+                  "enrolleeId": "113588693901",
+                  "memberId": "01",
+                  "email": null,
+                  "firstName": "Fatima",
+                  "middleName": "",
+                  "lastName": "Becirevic",
+                  "language": "English",
+                  "personId": "0000010219300370",
+                  "officePhone": "9163202096",
+                  "homePhone": "9163202096",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Female",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "Y",
+                  "phiFlag": false,
+                  "relationShip": "Non-Covered Subscriber",
+                  "relationShipCode": "13",
+                  "primary": true,
+                  "divisionId": "00011",
+                  "groupId": "78536"
+                },
+                {
+                  "age": "9",
+                  "benefitCoverageLevelCode": "06",
+                  "birthDate": "11/20/2008",
+                  "contractId": "1135886939",
+                  "coverageSpanEffectiveDate": "01/01/2015",
+                  "coverageSpanEndDate": "12/31/2015",
+                  "eligibilityEffectiveDate": "01/01/2015",
+                  "eligibilityEndDate": "12/31/2015",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "MA"
+                    },
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "RE"
+                    }
+                  ],
+                  "enrolleeId": "113588693902",
+                  "memberId": "02",
+                  "email": null,
+                  "firstName": "Eldin",
+                  "middleName": "",
+                  "lastName": "Becirevic",
+                  "language": "English",
+                  "personId": "0105210914163266",
+                  "officePhone": "9163202491",
+                  "homePhone": "9167224556",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Male",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "N",
+                  "phiFlag": false,
+                  "relationShip": "Child",
+                  "relationShipCode": "30",
+                  "primary": false,
+                  "divisionId": "00011",
+                  "groupId": "78536"
+                }
+              ]
+        },
+        "test3": {
+            "testCaseDesc": "Test 3: GIVEN there is a valid PRIMARY and a Child Dependent who have an Active Contract with two different Division IDs, THEN all their member details for the Active contract with the most recent Division ID should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "1146802185",
+            "personId": "0000010219300370",
+            "params": {
+                "group-id": "78536",
+                "division-id": "00010"
+            },
+            "verify": [
+                {
+                  "age": "42",
+                  "benefitCoverageLevelCode": "06",
+                  "birthDate": "11/11/1975",
+                  "contractId": "1146802185",
+                  "coverageSpanEffectiveDate": "01/01/2018",
+                  "coverageSpanEndDate": "12/31/9999",
+                  "eligibilityEffectiveDate": "01/01/2017",
+                  "eligibilityEndDate": "12/31/9999",
+                  "eligibilityStatus": "GREEN",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "MA"
+                    },
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "RE"
+                    }
+                  ],
+                  "enrolleeId": "114680218501",
+                  "memberId": "01",
+                  "email": null,
+                  "firstName": "Fatima",
+                  "middleName": "",
+                  "lastName": "Becirevic",
+                  "language": "English",
+                  "personId": "0000010219300370",
+                  "officePhone": "9163202096",
+                  "homePhone": "9163202096",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Female",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "Y",
+                  "phiFlag": false,
+                  "relationShip": "Non-Covered Subscriber",
+                  "relationShipCode": "13",
+                  "primary": true,
+                  "divisionId": "00010",
+                  "groupId": "78536"
+                },
+                {
+                  "age": "9",
+                  "benefitCoverageLevelCode": "06",
+                  "birthDate": "11/20/2008",
+                  "contractId": "1146802185",
+                  "coverageSpanEffectiveDate": "01/01/2018",
+                  "coverageSpanEndDate": "12/31/9999",
+                  "eligibilityEffectiveDate": "01/01/2017",
+                  "eligibilityEndDate": "12/31/9999",
+                  "eligibilityStatus": "GREEN",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "MA"
+                    },
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "RE"
+                    }
+                  ],
+                  "enrolleeId": "114680218502",
+                  "memberId": "02",
+                  "email": null,
+                  "firstName": "Eldin",
+                  "middleName": "",
+                  "lastName": "Becirevic",
+                  "language": "English",
+                  "personId": "0105210914163266",
+                  "officePhone": "9163202491",
+                  "homePhone": "9167224556",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Male",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "N",
+                  "phiFlag": false,
+                  "relationShip": "Child",
+                  "relationShipCode": "30",
+                  "primary": false,
+                  "divisionId": "00010",
+                  "groupId": "78536"
+                }
+              ]
+        },
+        "test4": {
+            "testCaseDesc": "Test 4: GIVEN there is a valid PRIMARY and a Child Dependent who have an Active Contract with two different Division IDs, THEN all their member details for the Active contract with the older Division ID should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "1146802185",
+            "personId": "0000010219300370",
+            "params": {
+                "group-id": "78536",
+                "division-id": "00011"
+            },
+            "verify": [
+                {
+                  "age": "42",
+                  "benefitCoverageLevelCode": "06",
+                  "birthDate": "11/11/1975",
+                  "contractId": "1146802185",
+                  "coverageSpanEffectiveDate": "01/01/2016",
+                  "coverageSpanEndDate": "12/31/2016",
+                  "eligibilityEffectiveDate": "01/01/2016",
+                  "eligibilityEndDate": "12/31/2016",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "MA"
+                    },
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "RE"
+                    }
+                  ],
+                  "enrolleeId": "114680218501",
+                  "memberId": "01",
+                  "email": null,
+                  "firstName": "Fatima",
+                  "middleName": "",
+                  "lastName": "Becirevic",
+                  "language": "English",
+                  "personId": "0000010219300370",
+                  "officePhone": "9163202096",
+                  "homePhone": "9163202096",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Female",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "Y",
+                  "phiFlag": false,
+                  "relationShip": "Non-Covered Subscriber",
+                  "relationShipCode": "13",
+                  "primary": true,
+                  "divisionId": "00011",
+                  "groupId": "78536"
+                },
+                {
+                  "age": "9",
+                  "benefitCoverageLevelCode": "06",
+                  "birthDate": "11/20/2008",
+                  "contractId": "1146802185",
+                  "coverageSpanEffectiveDate": "01/01/2016",
+                  "coverageSpanEndDate": "12/31/2016",
+                  "eligibilityEffectiveDate": "01/01/2016",
+                  "eligibilityEndDate": "12/31/2016",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "MA"
+                    },
+                    {
+                        "addressLine1": "7809 Abbington Way",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Antelope",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "95843-4660",
+                        "addressType": "RE"
+                    }
+                  ],
+                  "enrolleeId": "114680218502",
+                  "memberId": "02",
+                  "email": null,
+                  "firstName": "Eldin",
+                  "middleName": "",
+                  "lastName": "Becirevic",
+                  "language": "English",
+                  "personId": "0105210914163266",
+                  "officePhone": "9163202491",
+                  "homePhone": "9167224556",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Male",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "N",
+                  "phiFlag": false,
+                  "relationShip": "Child",
+                  "relationShipCode": "30",
+                  "primary": false,
+                  "divisionId": "00011",
+                  "groupId": "78536"
+                }
+            ]
+        },
+        "test5": {
+            "testCaseDesc": "Test 5: Given a valid Person who is PRIMARY, Contract, Group and Division, display all the enrollees with their information",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "2289617446",
+            "personId": "0000002104400189",
+            "params": {
+                "group-id": "02224",
+                "division-id": "00010"
+            },
+            "verify": [
+                {
+                  "age": "55",
+                  "benefitCoverageLevelCode": "03",
+                  "birthDate": "10/04/1962",
+                  "contractId": "2289617446",
+                  "coverageSpanEffectiveDate": "12/01/2011",
+                  "coverageSpanEndDate": "12/31/2011",
+                  "eligibilityEffectiveDate": "01/01/2010",
+                  "eligibilityEndDate": "12/31/2011",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "20331 Caron Cir",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Carson",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "90746-3151",
+                        "addressType": "MA"
+                    }
+                  ],
+                  "enrolleeId": "228961744601",
+                  "memberId": "01",
+                  "email": null,
+                  "firstName": "Foluke",
+                  "middleName": "D",
+                  "lastName": "Ayo-Ariyo",
+                  "language": "Not Provided",
+                  "personId": "7987000006209227",
+                  "officePhone": null,
+                  "homePhone": null,
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Female",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "Y",
+                  "phiFlag": false,
+                  "relationShip": "Primary",
+                  "relationShipCode": "10",
+                  "primary": true,
+                  "divisionId": "00010",
+                  "groupId": "02224"
+                },
+                {
+                  "age": "58",
+                  "benefitCoverageLevelCode": "03",
+                  "birthDate": "07/23/1959",
+                  "contractId": "2289617446",
+                  "coverageSpanEffectiveDate": "12/01/2011",
+                  "coverageSpanEndDate": "12/31/2011",
+                  "eligibilityEffectiveDate": "01/01/2010",
+                  "eligibilityEndDate": "12/31/2011",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "20331 Caron Cir",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Carson",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "90746-3151",
+                        "addressType": "MA"
+                    }
+                  ],
+                  "enrolleeId": "228961744602",
+                  "memberId": "02",
+                  "email": null,
+                  "firstName": "Bolade",
+                  "middleName": "G",
+                  "lastName": "Ayo-Ariyo",
+                  "language": "Not Provided",
+                  "personId": "7987000006444810",
+                  "officePhone": null,
+                  "homePhone": null,
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Male",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "N",
+                  "phiFlag": false,
+                  "relationShip": "Spouse",
+                  "relationShipCode": "20",
+                  "primary": false,
+                  "divisionId": "00010",
+                  "groupId": "02224"
+                },
+                {
+                  "age": "22",
+                  "benefitCoverageLevelCode": "03",
+                  "birthDate": "08/21/1995",
+                  "contractId": "2289617446",
+                  "coverageSpanEffectiveDate": "12/01/2011",
+                  "coverageSpanEndDate": "12/31/2011",
+                  "eligibilityEffectiveDate": "01/01/2010",
+                  "eligibilityEndDate": "12/31/2011",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "20331 Caron Cir",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Carson",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "90746-3151",
+                        "addressType": "MA"
+                    }
+                  ],
+                  "enrolleeId": "228961744603",
+                  "memberId": "03",
+                  "email": null,
+                  "firstName": "Toluwaloshe",
+                  "middleName": "",
+                  "lastName": "Ayo-Ariyo",
+                  "language": "Not Provided",
+                  "personId": "7987000006422739",
+                  "officePhone": null,
+                  "homePhone": "3107195777",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Female",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "N",
+                  "phiFlag": false,
+                  "relationShip": "Child",
+                  "relationShipCode": "30",
+                  "primary": false,
+                  "divisionId": "00010",
+                  "groupId": "02224"
+                },
+                {
+                  "age": "15",
+                  "benefitCoverageLevelCode": "03",
+                  "birthDate": "05/06/2003",
+                  "contractId": "2289617446",
+                  "coverageSpanEffectiveDate": "12/01/2011",
+                  "coverageSpanEndDate": "12/31/2011",
+                  "eligibilityEffectiveDate": "01/01/2010",
+                  "eligibilityEndDate": "12/31/2011",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                        "addressLine1": "20331 Caron Cir",
+                        "addressLine2": null,
+                        "addressLine3": null,
+                        "city": "Carson",
+                        "country": "USA",
+                        "state": "CA",
+                        "zipcode": "90746-3151",
+                        "addressType": "MA"
+                    }
+                  ],
+                  "enrolleeId": "228961744604",
+                  "memberId": "04",
+                  "email": null,
+                  "firstName": "Tobanimowa",
+                  "middleName": "M",
+                  "lastName": "Ayo-Ariyo",
+                  "language": "Not Provided",
+                  "personId": "7987000006389012",
+                  "officePhone": null,
+                  "homePhone": null,
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Male",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "N",
+                  "phiFlag": false,
+                  "relationShip": "Child",
+                  "relationShipCode": "30",
+                  "primary": false,
+                  "divisionId": "00010",
+                  "groupId": "02224"
+                },
+                {
+                  "age": "26",
+                  "benefitCoverageLevelCode": "03",
+                  "birthDate": "02/23/1992",
+                  "contractId": "2289617446",
+                  "coverageSpanEffectiveDate": "12/01/2011",
+                  "coverageSpanEndDate": "12/31/2011",
+                  "eligibilityEffectiveDate": "01/01/2010",
+                  "eligibilityEndDate": "12/31/2011",
+                  "eligibilityStatus": "GREY",
+                  "enrolleeAddresses": [
+                    {
+                      "addressLine1": "7651 Reseda Blvd Unit 27",
+                      "addressLine2": null,
+                      "addressLine3": null,
+                      "city": "Reseda",
+                      "country": "USA",
+                      "state": "CA",
+                      "zipcode": "913352844",
+                      "addressType": "MA"
+                    }
+                  ],
+                  "enrolleeId": "228961744605",
+                  "memberId": "05",
+                  "email": "teniayoariyo@gmail.com",
+                  "firstName": "Teninlanimi",
+                  "middleName": "",
+                  "lastName": "Ayo-Ariyo",
+                  "language": "Not Provided",
+                  "personId": "0000002104400189",
+                  "officePhone": null,
+                  "homePhone": "3105282777",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Female",
+                  "inGracePeriod": false,
+                  "primaryIndicator": "N",
+                  "phiFlag": false,
+                  "relationShip": "Child",
+                  "relationShipCode": "30",
+                  "primary": false,
+                  "divisionId": "00010",
+                  "groupId": "02224"
+                }
+              ]
+        },
+        "test6": {
+            "testCaseDesc": "Test 6: GIVEN an Invalid Contract ID Scenario, THEN a 404 error should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "10048719589",
+            "personId": "0000002104400189",
+            "params": {
+                "group-id": "02224",
+                "division-id": "00010"
+            },
+            "verify": {
+               "status": 404,
+               "errorCode": "FAMILYROSTER006",
+               "shortDescription": "Unable to retrieve enrollee details for the given contract id:10048719589",
+               "detailedDescription": "Unable to retrieve enrollee details for the given contract id:10048719589"
+            }
+        },
+        "test7": {
+            "testCaseDesc": "Test 7: Given an Invalid Group ID, THEN a 404 error should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "2289617446",
+            "personId": "0000002104400189",
+            "params": {
+                "group-id": "02225",
+                "division-id": "00010"
+            },
+            "verify": {
+                "status": 404,
+                "errorCode": "FAMILYROSTER006",
+                "shortDescription": "Unable to retrieve enrollee details for the given contract id:2289617446",
+                "detailedDescription": "Unable to retrieve enrollee details for the given contract id:2289617446"
+            }
+        },
+        "test8": {
+            "testCaseDesc": "Test 8: Given an Invalid Division ID, THEN a 404 error should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "2289617446",
+            "personId": "0000002104400189",
+            "params": {
+                "group-id": "02224",
+                "division-id": "00011"
+            },
+            "verify": {
+                "status": 404,
+                "errorCode": "FAMILYROSTER006",
+                "shortDescription": "Unable to retrieve enrollee details for the given contract id:2289617446",
+                "detailedDescription": "Unable to retrieve enrollee details for the given contract id:2289617446"
+            }
+        },
+        "test9": {
+            "testCaseDesc": "Test 9: Given an Empty Client Key, THEN an 400 error should be displayed",
+            "ClientKey": "",
+            "contractId": "2289617446",
+            "personId": "0000002104400189",
+            "params": {
+                "group-id": "02224",
+                "division-id": "00010"
+            },
+            "verify": {
+               "status": 400,
+               "error": "Unauthorized",
+               "message": "Security violation. Expected security headers are missing."
+            }
+        },
+        "test10": {
+            "testCaseDesc": "Test 10: Given an Invalid Client Key, THEN an 401 error should be displayed",
+            "ClientKey": "iwueydiuwehdiu",
+            "contractId": "2289617446",
+            "personId": "0000002104400189",
+            "params": {
+                "group-id": "02224",
+                "division-id": "00010"
+            },
+            "verify": {
+               "status": 401,
+               "error": "Unauthorized",
+               "message": "Security violation. Invalid Client Key"
+            }
+        },
+        "test11": {
+            "testCaseDesc": "Test 11: GIVEN an Empty Contract ID is given as Input, THEN a 404 error should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "",
+            "personId": "0598821214041280",
+            "params": {
+                "group-id": "02224",
+                "division-id": "00010"
+            },
+            "verify": {
+               "status": 404,
+               "errorCode": "FAMILYROSTER003",
+               "shortDescription": "Invalid contract id:{contract-id} or person id 0000002104400189",
+               "detailedDescription": "Invalid contract id:{contract-id} or person id 0000002104400189"
+            }
+        },
+        "test12": {
+            "testCaseDesc": "Test 12: GIVEN an Empty Person ID is given as Input, THEN a 400 error should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "2289617446",
+            "personId": "",
+            "params": {
+                "group-id": "02224",
+                "division-id": "00010"
+            },
+            "verify": {
+                "status": 400,
+                "message": "Security violation. Expected security headers are missing."
+            }
+        },
+        "test13": {
+            "testCaseDesc": "Test 13: Given an Empty Group ID, THEN a 404 error should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "2289617446",
+            "personId": "0000002104400189",
+            "params": {
+                "group-id": "",
+                "division-id": "00010"
+            },
+            "verify": {
+                "status": 404,
+                "error": "Bad Request",
+                "message": "Required String parameter 'group-id' is not present"
+            }
+        },
+        "test14": {
+            "testCaseDesc": "Test 13: Given an Empty Division ID, THEN a 404 error should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "2289617446",
+            "personId": "0000002104400189",
+            "params": {
+                "group-id": "02224",
+                "division-id": ""
+            },
+            "verify": {
+                "status": 404,
+                "error": "Bad Request",
+                "message": "Required String parameter 'division-id' is not present"
+            }
+        },
+        "test15": {
+            "testCaseDesc": "Test 15: GIVEN there is a valid PRIMARY who has 1 Inactive Contract, THEN all his member details for the contract, group and division should be displayed",
+            "ClientKey": "9c9934a3-9ea1-419d-bb56-8d5c325c6097",
+            "contractId": "1122844187",
+            "personId": "0607160809590612",
+            "params": {
+                "group-id": "50066",
+                "division-id": "10016"
+            },
+            "verify": [
+                {
+                  "age": "61",
+                  "benefitCoverageLevelCode": "02",
+                  "birthDate": "09/14/1956",
+                  "contractId": "1122844187",
+                  "coverageSpanEffectiveDate": "01/01/2018",
+                  "coverageSpanEndDate": "12/31/2018",
+                  "eligibilityEffectiveDate": "01/01/2018",
+                  "eligibilityEndDate": "12/31/2018",
+                  "eligibilityStatus": "GREEN",
+                  "enrolleeAddresses": [
+                    {
+                      "addressLine1": "319 S 5th St W",
+                      "addressLine2": null,
+                      "addressLine3": null,
+                      "city": "Missoula",
+                      "country": "USA",
+                      "state": "MT",
+                      "zipcode": "598012621",
+                      "addressType": "RA"
+                    },
+                    {
+                      "addressLine1": "319 S 5th St W",
+                      "addressLine2": null,
+                      "addressLine3": null,
+                      "city": "Missoula",
+                      "country": "USA",
+                      "state": "MT",
+                      "zipcode": "598012621",
+                      "addressType": "RA"
+                    }
+                  ],
+                  "enrolleeId": "112284418701",
+                  "memberId": "01",
+                  "email": "susan.estep@ehwcm.com",
+                  "firstName": "Susan",
+                  "middleName": "",
+                  "lastName": "Estep",
+                  "language": "Not Provided",
+                  "personId": "0607160809590612",
+                  "officePhone": "4062403566",
+                  "homePhone": "4067212875",
+                  "mobilePhone": "4068303289",
+                  "otherPhone": null,
+                  "gender": "Female",
+                  "inGracePeriod": true,
+                  "primaryIndicator": "Y",
+                  "phiFlag": false,
+                  "relationShip": "Primary",
+                  "relationShipCode": "10",
+                  "primary": true,
+                  "divisionId": "10016",
+                  "groupId": "50066"
+                },
+                {
+                  "age": "64",
+                  "benefitCoverageLevelCode": "02",
+                  "birthDate": "11/15/1953",
+                  "contractId": "1122844187",
+                  "coverageSpanEffectiveDate": "01/01/2018",
+                  "coverageSpanEndDate": "12/31/2018",
+                  "eligibilityEffectiveDate": "01/01/2018",
+                  "eligibilityEndDate": "12/31/2018",
+                  "eligibilityStatus": "GREEN",
+                  "enrolleeAddresses": [],
+                  "enrolleeId": "112284418702",
+                  "memberId": "02",
+                  "email": null,
+                  "firstName": "Mark",
+                  "middleName": "",
+                  "lastName": "Estep",
+                  "language": "Not Provided",
+                  "personId": "0231332218281741",
+                  "officePhone": "4062403566",
+                  "homePhone": "4067212875",
+                  "mobilePhone": null,
+                  "otherPhone": null,
+                  "gender": "Male",
+                  "inGracePeriod": true,
+                  "primaryIndicator": "N",
+                  "phiFlag": false,
+                  "relationShip": "Spouse",
+                  "relationShipCode": "20",
+                  "primary": false,
+                  "divisionId": "10016",
+                  "groupId": "50066"
+                }
+              ],
+              "bugNumber": "CXCORETECH-453"
+        }
+    }
+}
