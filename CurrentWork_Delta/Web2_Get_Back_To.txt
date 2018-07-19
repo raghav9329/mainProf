@@ -1,4 +1,79 @@
 
+7/19/18
+Some Good Node / Package.json information
+https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies
+
+G: win server why do I have a programdata/oracle/java installation
+https://www.google.com/search?q=win+server+why+do+I+have+a+programdata%2Foracle%2Fjava+installation&rlz=1C1CHBD_enUS756US756&oq=win+server+why+do+I+have+a+programdata%2Foracle%2Fjava+installation&aqs=chrome..69i57.18567j0j7&sourceid=chrome&ie=UTF-8&safe=active
+http://marxsoftware.blogspot.com/2015/07/windows-oracle-java-path.html
+https://stackoverflow.com/questions/26864662/how-to-solve-the-error-the-system-cannot-find-the-file-c-programdata-oracle-ja/27572837#27572837
+
+
+
+
+G:When a jenkins slave starts a job, why is it looking for java.exe in c:\programdata\Oracle\java\javapath\bin
+https://www.google.com/search?q=When+a+jenkins+slave+starts+a+job%2C+why+is+it+looking+for+java.exe+in+c%3A%5Cprogramdata%5COracle%5Cjava%5Cjavapath%5Cbin&rlz=1C1CHBD_enUS756US756&oq=When+a+jenkins+slave+starts+a+job%2C+why+is+it+looking+for+java.exe+in+c%3A%5Cprogramdata%5COracle%5Cjava%5Cjavapath%5Cbin+&aqs=chrome..69i57.36719j0j7&sourceid=chrome&ie=UTF-8&safe=active
+https://issues.jenkins-ci.org/browse/JENKINS-26078
+https://issues.jenkins-ci.org/browse/JENKINS-47770
+
+
+G: windows command line uncompress zip
+https://www.google.com/search?safe=active&rlz=1C1CHBD_enUS756US756&ei=E_5IW5bNH4uu0gLgrIvoAw&q=windows+command+line+uncompress+zip&oq=windows+command+line+how+to+uncom&gs_l=psy-ab.1.0.0i22i30k1l4.265910.272363.0.275033.37.29.1.0.0.0.265.3793.0j13j8.21.0....0...1c.1.64.psy-ab..15.22.3796...0j35i39k1j0i67k1j0i20i263k1j0i131i20i264k1j0i20i263i264k1j0i131k1j33i160k1.0.NzMDhFw4Z3I
+https://community.spiceworks.com/topic/297666-command-prompt-zip-and-unzip
+https://www.tenforums.com/tutorials/44101-unzip-files-zipped-folder-windows-10-a.html
+
+      :::::::::::::::::::::::::::::::::::::
+      :::  This Site Shows some promise :::
+http://stahlworks.com/dev/index.php?tool=zipunzip
+
+
+
+https://atlassian/confluence/display/ADEDIC/Automation+Testing+Knowledge+Base?preview=%2F31920228%2F31920366%2Fgithub-git-cheat-sheet.pdf
+G: warning about Ninite software  ::  I was checking on Ninite sofware and found other good info in the G_URL below
+https://www.google.com/search?q=warning+about+Ninite+software&rlz=1C1CHBD_enUS756US756&oq=warning+about+Ninite+software&aqs=chrome..69i57.11719j0j7&sourceid=chrome&ie=UTF-8&safe=active
+
+https://www.makeuseof.com/tag/9-cleanest-safest-websites-download-free-software-windows/
+https://davescomputertips.com/more-ways-to-avoid-unwanted-crapware/
+https://www.howtogeek.com/218764/warning-don%E2%80%99t-download-software-from-sourceforge-if-you-can-help-it/
+https://www.theguardian.com/technology/askjack/2015/jan/29/are-there-any-trustworthy-sources-for-downloading-software
+https://ninite.com/
+https://www.howtogeek.com/80058/analyze-and-manage-hard-drive-space-with-windirstat-2/     This uses NINITE right above
+      :::::::::::::::::::::::::::::::::::::
+      :::  Free up Win Hard Disk Space  :::
+https://www.howtogeek.com/125923/7-ways-to-free-up-hard-disk-space-on-windows/
+
+G: grep recursively into directories
+https://www.google.com/search?q=grep+recursively+into+directories&rlz=1C1CHBD_enUS756US756&oq=grep+recursively+in+directories&aqs=chrome.3.69i57j0l5.10719j0j7&sourceid=chrome&ie=UTF-8&safe=active
+https://stackoverflow.com/questions/1987926/how-do-i-grep-recursively       ::::This had a really good "find" example that worked::::
+https://alvinalexander.com/linux-unix/recursive-grep-r-searching-egrep-find
+https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories    :::Promising:::      
+
+      :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+      :::  I had to fix WinSrv2012 Symbolic Links in the Jenkins Integration config :::
+http://schinagl.priv.at                This site made available a File Mgr Shell extension  Link Shell Extension
+G: windows 2012 server how to edit a symbolic link
+https://www.google.com/search?q=windows+2012+server+how+to+edit+a+symbolic+link&rlz=1C1CHBD_enUS756US756&oq=windows+2012+server+how+to+edit+a+symbolic+link&aqs=chrome..69i57.17057j0j7&sourceid=chrome&ie=UTF-8&safe=active
+https://superuser.com/questions/444016/how-do-i-change-target-of-symlink-in-windows
+https://social.technet.microsoft.com/Forums/windowsserver/en-US/a248f945-7908-4f12-bca7-755f424b899f/problems-sharing-symbolic-link?forum=winserverfiles
+https://docs.microsoft.com/en-us/windows/desktop/fileio/hard-links-and-junctions
+-- I think schinagl  belongs in this list. not pos
+
+
+
+      
+
+7/17/18  Something that Arnab suggested in a roundabout discusison
+G: fundamentals of restful api design
+https://www.google.com/search?safe=active&rlz=1C1CHBD_enUS756US756&ei=12H_WvW-HsjujwPx6ZroBw&q=fundamentals+of+restful+api+design&oq=fundamentals+of+REST&gs_l=psy-ab.1.0.0l5j0i22i30k1l5.1062.8085.0.14107.14.12.2.0.0.0.190.1285.0j9.9.0....0...1.1.64.psy-ab..3.11.1290...0i67k1j0i20i264k1j0i10k1.0._9UoV5nPasU
+https://academy.apigee.com/index.php/courses/elearning/fundamentals-restful-api-design
+
+
+7/17/18 Arguments for and against global vs local Node&NodePackages installations
+https://codeburst.io/maybe-dont-globally-install-that-node-js-package-f1ea20f94a00
+https://hackernoon.com/avoiding-the-npm-global-flag-in-package-json-based-projects-5a1e7a50706
+https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/
+https://spin.atomicobject.com/2016/02/22/npm-install-dangerous/
+https://arui.tech/en/why-locally-install-is-much-better-than-globally-in-npm/
 
 7/9/18
 What ever I was doing a couple of weeks ago I stumbled across 
