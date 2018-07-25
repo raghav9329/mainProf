@@ -29,3 +29,7 @@ TestAutoAdmin
 !!TestAutoAdmin
 
 Test Automation Administrator       Test Automation Administrator
+
+
+Git Hub from AWS:
+https://rc-lx842.ut.dentegra.lab/DEVPROJECTS/dd-cx-testApi
